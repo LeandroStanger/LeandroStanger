@@ -114,8 +114,6 @@ LeandroStanger/
 **Leandro Stanger**  
 - GitHub: [@LeandroStanger](https://github.com/LeandroStanger)
 - Portfólio: [leandrostanger.github.io/LeandroStanger](https://leandrostanger.github.io/LeandroStanger/)
-- LinkedIn: [Perfil LinkedIn](https://linkedin.com/in/leandrostanger) *(se aplicável)*
-
 ---
 
 **⭐ Gostou do meu trabalho? Deixe uma estrela nos repositórios que mais gostou!**
