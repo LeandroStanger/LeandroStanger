@@ -1,123 +1,84 @@
-# 👨‍💻 Leandro Stanger - Portfólio Pessoal
+# 👨‍💻 Leandro Stanger - Desenvolvedor Front-end
 
-[![GitHub Pages](https://img.shields.io/badge/🌐-Portfólio%20Online-blue?style=for-the-badge)](https://leandrostanger.github.io/LeandroStanger/)
-[![GitHub](https://img.shields.io/badge/📂-Repositório-black?style=for-the-badge)](https://github.com/LeandroStanger/LeandroStanger)
+[![GitHub Pages](https://img.shields.io/badge/🌐_Portfólio_Online-000000?style=for-the-badge&logo=github&logoColor=white)](https://leandrostanger.github.io/LeandroStanger/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/leandrostanger)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LeandroStanger)
 
-Site de portfólio pessoal apresentando os projetos, habilidades e informações de contato de Leandro Stanger, desenvolvedor front-end.
+## 🚀 Sobre Mim
 
-## ✨ Sobre o Portfólio
+Desenvolvedor Front-end apaixonado por criar interfaces modernas, responsivas e com excelente experiência do usuário. Constantemente aprendendo novas tecnologias e melhorando minhas habilidades.
 
-- **🎯 Apresentação Pessoal:** Informações profissionais e de contato
-- **🚀 Galeria de Projetos:** Exibição dos principais trabalhos desenvolvidos
-- **💻 Habilidades Técnicas:** Tecnologias e ferramentas dominadas
-- **📱 Design Responsivo:** Layout adaptável para todos os dispositivos
-- **🎨 Interface Moderna:** Design clean e profissional
-- **📞 Seção de Contato:** Formas de entrar em contato
-
-## 🚀 Como Acessar
-
-### Portfólio Online
-Acesse o portfólio diretamente:  
-**[https://leandrostanger.github.io/LeandroStanger/](https://leandrostanger.github.io/LeandroStanger/)**
-
-### Navegação no Site
-
-1. **Início:**
-   - Apresentação pessoal e resumo profissional
-   - Links rápidos para as principais seções
-
-2. **Projetos:**
-   - Galeria com projetos desenvolvidos
-   - Links para repositórios e demonstrações
-   - Descrição das tecnologias utilizadas
-
-3. **Habilidades:**
-   - Lista de tecnologias e ferramentas
-   - Nível de experiência em cada área
-
-4. **Contato:**
-   - Informações para networking
-   - Links para redes sociais e GitHub
-
-## 💻 Execução Local
-
-```bash
-# Clone o repositório
-git clone https://github.com/LeandroStanger/LeandroStanger.git
-
-# Acesse a pasta do projeto
-cd LeandroStanger
-
-# Abra o arquivo index.html no navegador
-# Ou use um servidor local:
-python -m http.server 8000
-# ou
-npx http-server
+```javascript
+const leandro = {
+  nome: "Leandro Stanger",
+  area: "Desenvolvimento Front-end",
+  tecnologias: ["HTML5", "CSS3", "JavaScript", "React", "Git"],
+  foco: ["Interfaces Responsivas", "UX/UI", "Performance Web"],
+  hobbies: ["Coding", "Tecnologia", "Games", "Música"]
+};
 ```
 
-## 🛠 Tecnologias Utilizadas
+## 💼 Projetos em Destaque
 
-- **HTML5** - Estrutura semântica
-- **CSS3** - Estilização moderna e responsiva
-- **JavaScript** - Interatividade e dinamismo
-- **GitHub Pages** - Hospedagem do portfólio
+### 🎯 [Gerenciador de Lista](https://github.com/LeandroStanger/GerenciadorDeLista)
+[![Site](https://img.shields.io/badge/🌐_Site-Live-green)](https://leandrostanger.github.io/GerenciadorDeLista/)
+Sistema para gerenciamento de listas de pessoas com armazenamento local.
 
-## 📁 Estrutura do Projeto
+### 🔐 [Sistema de Login](https://github.com/LeandroStanger/SistemaDeLogin)
+[![Site](https://img.shields.io/badge/🌐_Site-Live-green)](https://leandrostanger.github.io/SistemaDeLogin/)
+Sistema completo de autenticação com validação e registro de usuários.
 
-```
-LeandroStanger/
-├── index.html              # Página principal
-├── style.css               # Estilos do portfólio
-├── script.js               # Interatividade e animações
-└── README.md               # Documentação
-```
+### 🌡️ [Cidades com Altas Temperaturas](https://github.com/LeandroStanger/CidadesComAltasTemperaturas)
+[![Site](https://img.shields.io/badge/🌐_Site-Live-green)](https://leandrostanger.github.io/CidadesComAltasTemperaturas/)
+Aplicação com dados climáticos fictícios de cidades quentes.
 
-## 🎯 Seções do Portfólio
+### 🏎️ [Corrida de Carro](https://github.com/LeandroStanger/CorridaDeCarro)
+[![Site](https://img.shields.io/badge/🌐_Site-Live-green)](https://leandrostanger.github.io/CorridaDeCarro/)
+Simulador de apostas em corridas com escolha de números.
 
-### 🏠 Início
-- Apresentação pessoal
-- Breve resumo profissional
-- Chamada para ação (call-to-action)
+### 📝 [Formulário de Feedback](https://github.com/LeandroStanger/FormularioDeFeedback)
+[![Site](https://img.shields.io/badge/🌐_Site-Live-green)](https://leandrostanger.github.io/FormularioDeFeedback/)
+Formulário interativo para coleta de feedback com validação.
 
-### 💼 Projetos
-- Cards com projetos destacados
-- Tecnologias utilizadas em cada projeto
-- Links para demonstração e código fonte
+### 🦁 [Animais no Zoológico](https://github.com/LeandroStanger/AnimaisNoZoologico)
+[![Site](https://img.shields.io/badge/🌐_Site-Live-green)](https://leandrostanger.github.io/AnimaisNoZoologico/)
+Site educativo sobre animais com dados inventados para demonstração.
 
-### ⚡ Habilidades
-- Front-end Development
-- Ferramentas e tecnologias
-- Habilidades complementares
+## 🛠️ Tecnologias e Ferramentas
 
-### 📞 Contato
-- Formulário de contato ou informações
-- Links para redes sociais
-- GitHub e outros perfis profissionais
+### Front-end
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-## 🌟 Projetos em Destaque
+### Ferramentas
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 
-- **Gerenciador de Lista** - Sistema de gerenciamento de tarefas
-- **Sistema de Login** - Autenticação de usuários
-- **Formulário de Feedback** - Coleta de opiniões
-- **Dados Climáticos** - Aplicação meteorológica
-- **Entre outros projetos desenvolvidos**
+## 📊 Estatísticas do GitHub
 
-## 🎨 Características do Design
+![Leandro's GitHub Stats](https://github-readme-stats.vercel.app/api?username=leandrostanger&show_icons=true&theme=radical)
 
-- **Paleta de Cores Profissional:** Combinações que refletem profissionalismo
-- **Tipografia Legível:** Fontes modernas e de fácil leitura
-- **Navegação Intuitiva:** Menu claro e de fácil acesso
-- **Otimização SEO:** Estrutura semântica para melhor indexação
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=leandrostanger&layout=compact&theme=radical)
 
-## 👨‍💻 Autor
+## 🌐 Portfólio Completo
 
-**Leandro Stanger**  
-- GitHub: [@LeandroStanger](https://github.com/LeandroStanger)
-- Portfólio: [leandrostanger.github.io/LeandroStanger](https://leandrostanger.github.io/LeandroStanger/)
----
+**Visite meu portfólio online para ver todos os projetos em detalhes:**
+### 🔗 [leandrostanger.github.io/LeandroStanger](https://leandrostanger.github.io/LeandroStanger/)
 
-**⭐ Gostou do meu trabalho? Deixe uma estrela nos repositórios que mais gostou!**
+## 📫 Contato
+
+- **Email:** [leandrostanger@hotmail.com]
+- **LinkedIn:** [linkedin.com/in/leandrostanger](https://linkedin.com/in/leandrostanger)
+- **GitHub:** [github.com/LeandroStanger](https://github.com/LeandroStanger)
 
 ---
 
-*Portfólio desenvolvido para demonstrar habilidades em desenvolvimento front-end e apresentar projetos pessoais de forma profissional e organizada.*
+<div align="center">
+
+### ⭐ Não esqueça de dar uma estrela nos repositórios que você gostou!
+
+![Visitor Count](https://komarev.com/ghpvc/?username=leandrostanger&color=blueviolet)
+
+</div>
