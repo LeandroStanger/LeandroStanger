@@ -37,4 +37,40 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(section);
     });
+    
+    // Adicionar animação para os itens da timeline
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const timelineObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateX(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    timelineItems.forEach(item => {
+        item.style.opacity = 0;
+        item.style.transform = 'translateX(-20px)';
+        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        timelineObserver.observe(item);
+    });
+    
+    // Adicionar animação para os itens de experiência
+    const experienciaItems = document.querySelectorAll('.experiencia-item');
+    const experienciaObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateX(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    experienciaItems.forEach(item => {
+        item.style.opacity = 0;
+        item.style.transform = 'translateX(20px)';
+        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        experienciaObserver.observe(item);
+    });
 });
