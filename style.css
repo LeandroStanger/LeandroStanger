@@ -593,3 +593,89 @@ footer {
         padding-left: 15px;
     }
 }
+
+/* 1. Efeito de "Glassmorphism" mais suave para os cards */
+.projeto-card, .objetivo-area, section {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* 2. Gradiente animado sutil nos cabeçalhos das seções */
+h2 {
+    background: linear-gradient(90deg, var(--primary), #9d4edd, var(--primary));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+    100% { background-position: 0% center; }
+}
+
+/* 3. Melhorar os botões */
+.btn {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(74, 108, 247, 0.5);
+}
+
+/* Efeito de "brilho" ao passar o mouse no botão */
+.btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+    transition: all 0.5s ease;
+}
+
+.btn:hover::after {
+    left: 140%;
+}
+
+/* 4. Estilo para um segundo botão (usado no projeto online) */
+.btn-secundario {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    display: block;
+    width: 100%;
+}
+
+/* 5. Efeito de flutuação sutil para as imagens de tecnologia */
+.tecEFer img {
+    transition: all 0.5s ease;
+}
+
+.tecEFer img:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(106, 17, 203, 0.4);
+}
+
+/* 6. Melhorar a legibilidade dos textos longos */
+.sobre-mim p, .curriculo-section p, .experiencia-item li {
+    line-height: 1.7;
+    color: rgba(245, 247, 250, 0.9);
+}
+
+/* 7. Ajustes para telas muito grandes (Desktop Wide) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1300px;
+    }
+    .projetos-container {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 30px;
+    }
+}
