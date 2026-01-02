@@ -74,3 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         experienciaObserver.observe(item);
     });
 });
+
+const ano = document.getElementById("mostrarAnoAtual");
+const anoAtual = new Date();
+ano.innerHTML = anoAtual.getFullYear();
