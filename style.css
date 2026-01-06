@@ -785,10 +785,8 @@ h2 {
 .slick-next:hover:before {
     color: white;
 }
-
+/*
 .slick-dots {
-    position: relative;
-    bottom: 0;
     list-style: none;
     display: flex !important;
     justify-content: center;
@@ -822,7 +820,7 @@ h2 {
     background: var(--primary);
     transform: scale(1.2);
 }
-
+*/
 .projetos-slider .projeto-card h3 {
     min-height: 60px;
     margin-bottom: 15px;
@@ -917,12 +915,12 @@ h2 {
     .slick-next:before {
         font-size: 18px;
     }
-
+/*
     .slick-dots li button {
         width: 10px;
         height: 10px;
     }
-
+*/
     .projetos-slider .slick-slide {
         padding: 0 10px;
     }
