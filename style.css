@@ -785,42 +785,6 @@ h2 {
 .slick-next:hover:before {
     color: white;
 }
-/*
-.slick-dots {
-    list-style: none;
-    display: flex !important;
-    justify-content: center;
-    padding: 0;
-    margin: 25px 0 5px 0;
-}
-
-.slick-dots li {
-    margin: 0 6px;
-}
-
-.slick-dots li button {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    border: none;
-    padding: 0;
-    font-size: 0;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.slick-dots li.slick-active button {
-    background: var(--primary);
-    transform: scale(1.3);
-    box-shadow: 0 0 10px rgba(74, 108, 247, 0.6);
-}
-
-.slick-dots li button:hover {
-    background: var(--primary);
-    transform: scale(1.2);
-}
-*/
 .projetos-slider .projeto-card h3 {
     min-height: 60px;
     margin-bottom: 15px;
@@ -915,12 +879,7 @@ h2 {
     .slick-next:before {
         font-size: 18px;
     }
-/*
-    .slick-dots li button {
-        width: 10px;
-        height: 10px;
-    }
-*/
+    
     .projetos-slider .slick-slide {
         padding: 0 10px;
     }
