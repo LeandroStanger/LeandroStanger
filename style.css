@@ -387,23 +387,12 @@ h2::after {
     gap: 8px;
     background: linear-gradient(to right, var(--success), #27ae60);
     margin-top: 20px;
+    text-decoration: none;
 }
 
 .btn-download:hover {
     background: linear-gradient(to right, #27ae60, #219653);
-}
-
-.btn.disabled {
-    background: var(--disabled);
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
-}
-
-.btn.disabled:hover {
-    transform: none;
-    box-shadow: none;
-    background: var(--disabled);
+    text-decoration: none;
 }
 
 .tecEFer {
