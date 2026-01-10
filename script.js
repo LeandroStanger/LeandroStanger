@@ -1,4 +1,3 @@
-// Efeito de digitação no título
 document.addEventListener('DOMContentLoaded', function () {
     const title = document.querySelector('h1');
     const originalText = title.textContent;
@@ -15,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setTimeout(typeWriter, 500);
 
-    // Animação de entrada para as seções
     const sections = document.querySelectorAll('section');
     const observerOptions = {
         threshold: 0.1,
@@ -38,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(section);
     });
 
-    // Adicionar animação para os itens da timeline
     const timelineItems = document.querySelectorAll('.timeline-item');
     const timelineObserver = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
@@ -56,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
         timelineObserver.observe(item);
     });
 
-    // Adicionar animação para os itens de experiência
     const experienciaItems = document.querySelectorAll('.experiencia-item');
     const experienciaObserver = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
