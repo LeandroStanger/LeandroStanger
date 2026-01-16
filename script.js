@@ -132,22 +132,38 @@ $(document).ready(function () {
 });
 
 const inicio = new Date('2025-08');
-        
-        function calcularTempo() {
-            const agora = new Date();
-            const diferenca = agora - inicio;
-            
-            const segundos = Math.floor(diferenca / 1000);
-            const minutos = Math.floor(segundos / 60);
-            const horas = Math.floor(minutos / 60);
-            const dias = Math.floor(horas / 24);
-            
-            const anos = Math.floor(dias / 365);
-            const meses = Math.floor((dias % 365) / 30);
-            const diasRestantes = dias % 365;
-            
-            const resultado = `ago de 2025 - o momento · ${meses} meses`;
-            document.getElementById('resultado').textContent = resultado;
-        }
-        
-        calcularTempo();
+const inicio1 = new Date('2020-01-21');
+
+function calcularTempo() {
+    const agora = new Date();
+    const diferenca = agora - inicio
+    const diferenca1 = agora - inicio1
+
+
+    const segundos = Math.floor(diferenca / 1000);
+    const segundos1 = Math.floor(diferenca1 / 1000);
+    const minutos = Math.floor(segundos / 60);
+    const minutos1 = Math.floor(segundos1 / 60);
+    const horas = Math.floor(minutos / 60);
+    const horas1 = Math.floor(minutos1 / 60);
+    const dias = Math.floor(horas / 24);
+    const dias1 = Math.floor(horas1 / 24);
+
+    const anos = Math.floor(dias / 365);
+    const anos1 = Math.floor(dias1 / 365);
+    const meses = Math.floor((dias % 365) / 30);
+    const meses1 = Math.floor((dias1 % 365) / 30);
+    const diasRestantes = dias % 365;
+    const diasRestantes1 = dias1 % 365;
+
+
+    const resultado = `ago de 2025 - o momento · ${meses} meses`;
+    document.getElementById('resultado').textContent = resultado;
+    const resultado1 = `jan de 2020 - o momento · ${anos1} anos, ${meses1} meses`;
+    document.getElementById('resultado1').textContent = resultado1;
+
+
+}
+
+calcularTempo();
+
