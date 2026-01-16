@@ -774,6 +774,7 @@ h2 {
 .slick-next:hover:before {
     color: white;
 }
+
 .projetos-slider .projeto-card h3 {
     min-height: 60px;
     margin-bottom: 15px;
@@ -868,7 +869,7 @@ h2 {
     .slick-next:before {
         font-size: 18px;
     }
-    
+
     .projetos-slider .slick-slide {
         padding: 0 10px;
     }
@@ -901,4 +902,3 @@ h2 {
 section.projetos .projetos-container {
     display: none;
 }
-

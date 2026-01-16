@@ -161,8 +161,6 @@ function calcularTempo() {
     document.getElementById('resultado').textContent = resultado;
     const resultado1 = `jan de 2020 - o momento · ${anos1} anos, ${meses1} meses`;
     document.getElementById('resultado1').textContent = resultado1;
-
-
 }
 
 calcularTempo();
