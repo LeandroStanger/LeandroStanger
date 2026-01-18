@@ -70,7 +70,9 @@ Site educativo sobre animais com dados inventados para demonstração.
 ![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 
-
+### Sistema Operacional
+![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)
+![BigLinux](https://img.shields.io/badge/BigLinux-2865A3?style=for-the-badge&logo=tux&logoColor=white)
 
 ## 📊 Estatísticas do GitHub
 
