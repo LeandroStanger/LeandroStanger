@@ -60,7 +60,7 @@ Site educativo sobre animais com dados inventados para demonstração.
 ![WinBoat](https://img.shields.io/badge/WinBoat-7153dd?style=for-the-badge)
 
 ### Databases
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-ef4750?style=for-the-badge&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge)
 ![Azure Data Studio](https://img.shields.io/badge/Azure_Data_Studio-0078D7?style=for-the-badge)
