@@ -1,7 +1,7 @@
 # 👨‍💻 Leandro Stanger - Desenvolvedor Front-end
 
 [![GitHub Pages](https://img.shields.io/badge/🌐_Portfólio_Online-000000?style=for-the-badge&logo=github&logoColor=white)](https://leandrostanger.github.io/LeandroStanger/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/leandrostanger1)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=logmein&logoColor=white)](https://linkedin.com/in/leandrostanger1)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LeandroStanger)
 
 ## 🚀 Sobre Mim
