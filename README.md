@@ -48,7 +48,7 @@ Site educativo sobre animais com dados inventados para demonstração.
 
 ### Front-end
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ### Backend
@@ -56,23 +56,23 @@ Site educativo sobre animais com dados inventados para demonstração.
 
 ### DevOps
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Podman](https://img.shields.io/badge/Podman-892CA0?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB...K)
-![WinBoat](https://img.shields.io/badge/WinBoat-7153dd?style=for-the-badge)
+![Podman](https://img.shields.io/badge/Podman-892CA0?style=for-the-badge&logo=podman&logoColor=white)
+![WinBoat](https://img.shields.io/badge/WinBoat-7153dd?style=for-the-badge&logo=corsair&logoColor=white)
 
 ### Databases
-![SQL](https://img.shields.io/badge/SQL-ef4750?style=for-the-badge&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-ef4750?style=for-the-badge&logo=databricks&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge)
-![Azure Data Studio](https://img.shields.io/badge/Azure_Data_Studio-0078D7?style=for-the-badge)
+![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=databricks&logoColor=white)
+![Azure Data Studio](https://img.shields.io/badge/Azure_Data_Studio-0078D7?style=for-the-badge&logo=icloud&logoColor=white)
 
 ### Ferramentas
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=vscodium&logoColor=white)
 
 ### Sistema Operacional
 ![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)
-![BigLinux](https://img.shields.io/badge/BigLinux-2865A3?style=for-the-badge&logo=tux&logoColor=white)
+![BigLinux](https://img.shields.io/badge/BigLinux-2865A3?style=for-the-badge&logo=archlinux&logoColor=white)
 
 ## 📊 Estatísticas do GitHub
 
