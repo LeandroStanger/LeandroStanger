@@ -70,7 +70,7 @@ Site educativo sobre animais com dados inventados para demonstração.
 ## 📫 Contato
 
 - **Email:** [leandrostanger@hotmail.com](leandrostanger@hotmail.com)
-- **LinkedIn:** [linkedin.com/in/leandrostanger](https://linkedin.com/in/leandrostanger)
+- **LinkedIn:** [linkedin.com/in/leandrostanger1](https://linkedin.com/in/leandrostanger1)
 - **GitHub:** [github.com/LeandroStanger](https://github.com/LeandroStanger)
 
 ---
