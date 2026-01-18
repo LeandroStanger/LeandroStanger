@@ -12,7 +12,7 @@ Desenvolvedor Front-end apaixonado por criar interfaces modernas, responsivas e 
 const leandro = {
   nome: "Leandro Stanger",
   area: "Desenvolvimento Front-end",
-  tecnologias: ["HTML5", "CSS3", "JavaScript", "Git"],
+  tecnologias: ["HTML5", "CSS3", "JavaScript", "Git", "SQL"],
   foco: ["Interfaces Responsivas", "UX/UI", "Performance Web"],
   hobbies: ["Coding", "Tecnologia", "Games"]
 };
