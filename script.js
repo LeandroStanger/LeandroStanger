@@ -173,11 +173,11 @@ function calcularTempo() {
     const diasRestantes2 = dias2 % 365;
 
 
-    const resultado = `ago de 2025 - o momento · ${meses} meses`;
+    const resultado = `ago de 2025 - em amdamento · ${meses} meses`;
     document.getElementById('resultado').textContent = resultado;
-    const resultado1 = `21 - jan de 2020 - o momento · ${anos1} anos, ${meses1} meses`;
+    const resultado1 = `21 - jan de 2020 - em amdamento · ${anos1} anos, ${meses1} meses`;
     document.getElementById('resultado1').textContent = resultado1;
-    const resultado2 = `Jan/2014 - o momento · ${anos2} anos, ${meses2} meses`;
+    const resultado2 = `Jan/2014 - em amdamento · ${anos2} anos, ${meses2} meses`;
     document.getElementById('resultado2').textContent = resultado2;
 }
 
