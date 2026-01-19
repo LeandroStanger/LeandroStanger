@@ -1,4 +1,4 @@
-# 👨‍💻 Leandro Stanger - Desenvolvedor Front-end
+# 👨‍💻 Leandro Stanger - Desenvolvedor Full-Stack
 
 [![GitHub Pages](https://img.shields.io/badge/Portfólio_Online-000000?style=for-the-badge&logo=opsgenie&logoColor=white)](https://leandrostanger.github.io/LeandroStanger/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=logmein&logoColor=white)](https://linkedin.com/in/leandrostanger1)
@@ -6,15 +6,19 @@
 
 ## 🚀 Sobre Mim
 
-Desenvolvedor Front-end apaixonado por criar interfaces modernas, responsivas e com excelente experiência do usuário. Constantemente aprendendo novas tecnologias e melhorando minhas habilidades.
-
+Desenvolvedor Full-Stack apaixonado por criar aplicações web modernas, escaláveis e com excelente experiência do usuário, desde a interface até a infraestrutura do servidor. Constantemente aprendendo novas tecnologias e melhorando minhas habilidades.
 ```javascript
 const leandro = {
   nome: "Leandro Stanger",
-  area: "Desenvolvimento Front-end",
-  tecnologias: ["HTML5", "CSS3", "JavaScript", "Git", "SQL"],
-  foco: ["Interfaces Responsivas", "UX/UI", "Performance Web", "Banco de Dados"],
-  hobbies: ["Coding", "Tecnologia", "Games"]
+  area: "Desenvolvimento Full-Stack",
+  tecnologias: {
+    frontend: ["HTML5", "CSS3", "JavaScript"],
+    backend: ["Node.js"],
+    bancoDados: ["MySQL", "Databricks"],
+    ferramentas: ["Git", "Docker", "Podman", "WinBoat"]
+  },
+  foco: ["Arquitetura de Software", "Interfaces Responsivas", "UX/UI", "Performance Web"],
+  hobbies: ["Coding", "Tecnologia", "Games", "Open Source"]
 };
 ```
 
