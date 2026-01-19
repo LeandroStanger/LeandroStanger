@@ -21,27 +21,27 @@ const leandro = {
 ## 💼 Projetos em Destaque
 
 ### 🎯 [Gerenciador de Lista](https://github.com/LeandroStanger/GerenciadorDeLista)
-[![Site](https://img.shields.io/badge/🌐_Site-Live-green)](https://leandrostanger.github.io/GerenciadorDeLista/)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge)](https://leandrostanger.github.io/GerenciadorDeLista/)
 Sistema para gerenciamento de listas de pessoas com armazenamento local.
 
 ### 🔐 [Sistema de Login](https://github.com/LeandroStanger/SistemaDeLogin)
-[![Site](https://img.shields.io/badge/🌐_Site-Live-green)](https://leandrostanger.github.io/SistemaDeLogin/)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge)](https://leandrostanger.github.io/SistemaDeLogin/)
 Sistema completo de autenticação com validação e registro de usuários.
 
 ### 🌡️ [Cidades com Altas Temperaturas](https://github.com/LeandroStanger/CidadesComAltasTemperaturas)
-[![Site](https://img.shields.io/badge/🌐_Site-Live-green)](https://leandrostanger.github.io/CidadesComAltasTemperaturas/)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge)](https://leandrostanger.github.io/CidadesComAltasTemperaturas/)
 Aplicação com dados climáticos fictícios de cidades quentes.
 
 ### 🏎️ [Corrida de Carro](https://github.com/LeandroStanger/CorridaDeCarro)
-[![Site](https://img.shields.io/badge/🌐_Site-Live-green)](https://leandrostanger.github.io/CorridaDeCarro/)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge)](https://leandrostanger.github.io/CorridaDeCarro/)
 Simulador de apostas em corridas com escolha de números.
 
 ### 📝 [Formulário de Feedback](https://github.com/LeandroStanger/FormularioDeFeedback)
-[![Site](https://img.shields.io/badge/🌐_Site-Live-green)](https://leandrostanger.github.io/FormularioDeFeedback/)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge)](https://leandrostanger.github.io/FormularioDeFeedback/)
 Formulário interativo para coleta de feedback com validação.
 
 ### 🦁 [Animais no Zoológico](https://github.com/LeandroStanger/AnimaisNoZoologico)
-[![Site](https://img.shields.io/badge/🌐_Site-Live-green)](https://leandrostanger.github.io/AnimaisNoZoologico/)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge)](https://leandrostanger.github.io/AnimaisNoZoologico/)
 Site educativo sobre animais com dados inventados para demonstração.
 
 ## 🛠️ Tecnologias e Ferramentas
