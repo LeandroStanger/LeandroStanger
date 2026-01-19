@@ -17,7 +17,7 @@ const leandro = {
     bancoDados: ["MySQL", "Databricks"],
     ferramentas: ["Git", "Docker", "Podman", "WinBoat"]
   },
-  foco: ["Arquitetura de Software", "Interfaces Responsivas", "UX/UI", "Performance Web"],
+  foco: ["Interfaces Responsivas", "UX/UI", "Performance Web", "Banco de Dados"],
   hobbies: ["Coding", "Tecnologia", "Games", "Open Source"]
 };
 ```
