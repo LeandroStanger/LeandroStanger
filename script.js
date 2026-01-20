@@ -1,4 +1,3 @@
-// Efeito de digitação no título
 document.addEventListener('DOMContentLoaded', function () {
     const title = document.querySelector('h1');
     const originalText = title.textContent;
@@ -15,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setTimeout(typeWriter, 500);
 
-    // Animação de entrada para as seções
     const sections = document.querySelectorAll('section');
     const observerOptions = {
         threshold: 0.1,
@@ -38,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(section);
     });
 
-    // Adicionar animação para os itens da timeline
     const timelineItems = document.querySelectorAll('.timeline-item');
     const timelineObserver = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
@@ -56,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
         timelineObserver.observe(item);
     });
 
-    // Adicionar animação para os itens de experiência
     const experienciaItems = document.querySelectorAll('.experiencia-item');
     const experienciaObserver = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
@@ -134,3 +130,56 @@ $(document).ready(function () {
     $('.slick-prev').attr('aria-label', 'Projetos anteriores');
     $('.slick-next').attr('aria-label', 'Próximos projetos');
 });
+
+const inicio = new Date('2025-08');
+const inicio1 = new Date('2020-01-21');
+const inicio2 = new Date('2014-01');
+
+function calcularTempo() {
+    const agora = new Date();
+    const diferenca = agora - inicio
+    const diferenca1 = agora - inicio1
+    const diferenca2 = agora - inicio2
+
+
+
+    const segundos = Math.floor(diferenca / 1000);
+    const segundos1 = Math.floor(diferenca1 / 1000);
+    const segundos2 = Math.floor(diferenca2 / 1000);
+
+    const minutos = Math.floor(segundos / 60);
+    const minutos1 = Math.floor(segundos1 / 60);
+    const minutos2 = Math.floor(segundos2 / 60);
+
+    const horas = Math.floor(minutos / 60);
+    const horas1 = Math.floor(minutos1 / 60);
+    const horas2 = Math.floor(minutos2 / 60);
+
+    const dias = Math.floor(horas / 24);
+    const dias1 = Math.floor(horas1 / 24);
+    const dias2 = Math.floor(horas2 / 24);
+
+
+    const anos = Math.floor(dias / 365);
+    const anos1 = Math.floor(dias1 / 365);
+    const anos2 = Math.floor(dias2 / 365);
+
+    const meses = Math.floor((dias % 365) / 30);
+    const meses1 = Math.floor((dias1 % 365) / 30);
+    const meses2 = Math.floor((dias2 % 365) / 30);
+
+    const diasRestantes = dias % 365;
+    const diasRestantes1 = dias1 % 365;
+    const diasRestantes2 = dias2 % 365;
+
+
+    const resultado = `ago de 2025 - em amdamento (${meses} meses)`;
+    document.getElementById('resultado').textContent = resultado;
+    const resultado1 = `21 - jan de 2020 - em amdamento (${anos1} anos, ${meses1} meses)`;
+    document.getElementById('resultado1').textContent = resultado1;
+    const resultado2 = `Jan/2014 - em amdamento · (${anos2} anos, ${meses2} meses)`;
+    document.getElementById('resultado2').textContent = resultado2;
+}
+
+calcularTempo();
+
