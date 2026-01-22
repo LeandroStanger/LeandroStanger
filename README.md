@@ -14,7 +14,7 @@ const leandro = {
   tecnologias: {
     frontend: ["HTML5", "CSS3", "JavaScript"],
     backend: ["Node.js"],
-    bancoDados: ["MySQL", "Databricks"],
+    bancoDados: ["MySQL", "Databricks", "Microsoft SQL Server"],
     ferramentas: ["Git", "Docker", "Podman", "WinBoat"]
   },
   foco: ["Interfaces Responsivas", "UX/UI", "Performance Web", "Banco de Dados"],
@@ -68,6 +68,7 @@ Site educativo sobre animais com dados inventados para demonstração.
 [![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=databricks&logoColor=white)](https://www.databricks.com/)
 [![Azure Data Studio](https://img.shields.io/badge/Azure_Data_Studio-0078D7?style=for-the-badge&logo=icloud&logoColor=white)](https://learn.microsoft.com/azure-data-studio/)
+[![Microsoft SQL Server](https://img.shields.io/badge/Microsoft_SQL_Server-00A2FF?style=for-the-badge&logo=sublimetext&logoColor=white)](https://www.microsoft.com/sql-server/)
 
 ### Ferramentas
 [![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)
