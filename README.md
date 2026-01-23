@@ -15,7 +15,7 @@ const leandro = {
     frontend: ["HTML5", "CSS3", "JavaScript"],
     backend: ["Node.js"],
     bancoDados: ["MySQL", "Databricks", "Microsoft SQL Server"],
-    ferramentas: ["Git", "Docker", "Podman", "WinBoat"]
+    ferramentas: ["Git", "Docker", "Podman", "WinBoat", "Microsoft Excel"]
   },
   foco: ["Interfaces Responsivas", "UX/UI", "Performance Web", "Banco de Dados"],
   hobbies: ["Coding", "Tecnologia", "Games", "Open Source"]
@@ -74,6 +74,7 @@ Site educativo sobre animais com dados inventados para demonstração.
 [![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
 [![Visual Studio Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=vscodium&logoColor=white)](https://code.visualstudio.com/)
+![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=xstate&logoColor=white)
 
 ### Sistema Operacional
 [![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)](https://archlinux.org/)
