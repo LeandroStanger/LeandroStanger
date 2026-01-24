@@ -13,7 +13,7 @@ const leandro = {
   area: "Desenvolvimento Full-Stack",
   tecnologias: {
     frontend: ["HTML5", "CSS3", "JavaScript"],
-    backend: ["Node.js"],
+    backend: ["Node.js", "C"],
     bancoDados: ["MySQL", "Databricks", "Microsoft SQL Server"],
     ferramentas: ["Git", "Docker", "Podman", "WinBoat", "Microsoft Excel"]
   },
