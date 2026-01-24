@@ -50,34 +50,34 @@ Site educativo sobre animais com dados inventados para demonstração.
 
 ## 🛠️ Tecnologias e Ferramentas
 
-### Front-end
+### 🧑‍🎨 Front-end
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://wikipedia.org/wiki/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=white)](https://wikipedia.org/wiki/CSS3)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://pt.wikipedia.org/wiki/JavaScript)
 
-### Backend
+### 👷 Backend
 [![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)
 [![C](https://img.shields.io/badge/c-A8B9CC?style=for-the-badge&logo=c&logoColor=white)](https://wikipedia.org/wiki/C_(programming_language))
 
-### DevOps
+### 🧰 DevOps
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 [![Podman](https://img.shields.io/badge/Podman-892CA0?style=for-the-badge&logo=podman&logoColor=white)](https://podman.io/)
 [![WinBoat](https://img.shields.io/badge/WinBoat-7153dd?style=for-the-badge&logo=corsair&logoColor=white)](https://www.winboat.app/)
 
-### Databases
+### 📊 Databases
 [![SQL](https://img.shields.io/badge/SQL-ef4750?style=for-the-badge&logo=databricks&logoColor=white)](https://wikipedia.org/wiki/SQL)
 [![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=databricks&logoColor=white)](https://www.databricks.com/)
 [![Azure Data Studio](https://img.shields.io/badge/Azure_Data_Studio-0078D7?style=for-the-badge&logo=icloud&logoColor=white)](https://learn.microsoft.com/azure-data-studio/)
 [![Microsoft SQL Server](https://img.shields.io/badge/Microsoft_SQL_Server-00A2FF?style=for-the-badge&logo=sublimetext&logoColor=white)](https://www.microsoft.com/sql-server/)
 
-### Ferramentas
+### 🛠️ Ferramentas
 [![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
 [![Visual Studio Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=vscodium&logoColor=white)](https://code.visualstudio.com/)
 [![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=xstate&logoColor=white)](https://www.microsoft.com/microsoft-365/excel)
 
-### Sistema Operacional
+### 🐧 Sistema Operacional
 [![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)](https://archlinux.org/)
 [![BigLinux](https://img.shields.io/badge/BigLinux-2865A3?style=for-the-badge&logo=archlinux&logoColor=white)](https://www.biglinux.com.br/)
 
