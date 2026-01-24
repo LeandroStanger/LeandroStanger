@@ -83,7 +83,7 @@ Site educativo sobre animais com dados inventados para demonstração.
 
 ## 📊 Estatísticas do GitHub
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=LeandroStanger&theme=highcontrast&show_icons=true&hide_border=true&count_private=true&locale=pt-br)![GitHub Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=LeandroStanger&theme=highcontrast&show_icons=true&hide_border=true&layout=compact&locale=pt-br)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=LeandroStanger&theme=highcontrast&show_icons=true&hide_border=true&count_private=true&locale=pt-br) ![GitHub Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=LeandroStanger&theme=highcontrast&show_icons=true&hide_border=true&layout=compact&locale=pt-br)
 
 ## 🌐 Portfólio Completo
 
