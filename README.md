@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?weight=500&size=30&pause=1000&color=00FF00&width=1000&height=80&lines=%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB+Leandro+Stanger+-+Desenvolvedor+Full-Stack)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?weight=500&size=30&pause=100000&color=00FF00&width=1000&height=80&lines=%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB+Leandro+Stanger+-+Desenvolvedor+Full-Stack)](https://git.io/typing-svg)
 
 [![GitHub Pages](https://img.shields.io/badge/Portfólio_Online-000000?style=for-the-badge&logo=opsgenie&logoColor=white)](https://leandrostanger.github.io/LeandroStanger/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=logmein&logoColor=white)](https://linkedin.com/in/leandrostanger1)
