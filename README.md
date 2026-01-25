@@ -114,7 +114,7 @@ Coleção de meus primeiros projetos de programação na linguagem C, demonstran
 
 ### ⭐ Não esqueça de dar uma estrela nos repositórios que você gostou!
 
-![Visitor Count](https://komarev.com/ghpvc/?username=leandrostanger&color=brightgreen&style=for-the-badge)
+![Visitor Count](https://komarev.com/ghpvc/?username=leandrostanger&color=blueviolet&style=for-the-badge)
 
 </div>
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=00ff00&height=120&section=footer"/>
