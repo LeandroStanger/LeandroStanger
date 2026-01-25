@@ -8,7 +8,7 @@
 
 ## 🚀 Sobre Mim
 
-Desenvolvedor Full-Stack apaixonado por criar aplicações web modernas, escaláveis e com excelente experiência do usuário, desde a interface até a infraestrutura do servidor. Constantemente aprendendo novas tecnologias e melhorando minhas habilidades.
+Desenvolvedor Full-Stack apaixonado por criar aplicações web modernas e escaláveis, com foco na experiência do usuário desde a interface até a infraestrutura do servidor. Busco uma posição em TI onde possa aplicar e ampliar meus conhecimentos, combinando minhas habilidades em desenvolvimento de software, administração de sistemas, gerenciamento de bancos de dados, suporte técnico, manutenção de computadores e redes. Constantemente aprendendo novas tecnologias e evoluindo minhas competências para entregar soluções robustas e de alto desempenho.
 ```javascript
 const leandro = {
   nome: "Leandro Stanger",
