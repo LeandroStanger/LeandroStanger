@@ -48,6 +48,16 @@ Formulário interativo para coleta de feedback com validação.
 [![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge)](https://leandrostanger.github.io/AnimaisNoZoologico/)
 Site educativo sobre animais com dados inventados para demonstração.
 
+## 🧑‍🏫 Repositórios dedicado ao aprendizado e prática dos fundamentos!
+
+### 📑 [Projetos-iniciais](https://github.com/LeandroStanger/Projetos-iniciais)
+[![Estudo Em andamento](https://img.shields.io/badge/Estudo-Em_andamento-green?style=for-the-badge)](https://github.com/LeandroStanger/Projetos-iniciais)
+Coleção de meus primeiros projetos de programação, demonstrando minha evolução como desenvolvedor.
+
+### 📑 [Projetos Iniciais (Linguagem C)](https://github.com/LeandroStanger/Projetos-iniciais-C)
+[![Estudo Em andamento](https://img.shields.io/badge/Estudo-Em_andamento-green?style=for-the-badge)](https://github.com/LeandroStanger/Projetos-iniciais-C)
+Coleção de meus primeiros projetos de programação na linguagem C, demonstrando minha evolução como desenvolvedor.
+
 ## 🛠️ Tecnologias e Ferramentas
 
 ### 🧑‍🎨 Front-end
