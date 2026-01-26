@@ -95,7 +95,7 @@ Coleção de meus primeiros projetos de programação na linguagem C, demonstran
 
 ## 📊 Estatísticas do GitHub
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=LeandroStanger&theme=highcontrast&show_icons=true&hide_border=true&count_private=true&locale=pt-br) ![GitHub Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=LeandroStanger&theme=highcontrast&show_icons=true&hide_border=true&layout=compact&locale=pt-br)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=LeandroStanger&theme=chartreuse-dark&show_icons=true&hide_border=true&count_private=true&locale=pt-br) ![GitHub Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=LeandroStanger&theme=chartreuse-dark&show_icons=true&hide_border=true&layout=compact&locale=pt-br)
 
 ## 🌐 Portfólio Completo
 
