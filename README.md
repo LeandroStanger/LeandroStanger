@@ -2,9 +2,9 @@
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?weight=500&size=30&pause=10000&color=00FF00&width=1000&height=80&lines=%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB+Leandro+Stanger+-+Desenvolvedor+Full-Stack)](https://git.io/typing-svg)
 
-[![GitHub Pages](https://img.shields.io/badge/Portfólio_Online-4a6cf7?style=for-the-badge&logo=opsgenie&logoColor=4a6cf7&labelColor=0D1117)](https://leandrostanger.github.io/LeandroStanger/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=logmein&logoColor=0077B5&labelColor=0D1117)](https://linkedin.com/in/leandrostanger1)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117)](https://github.com/LeandroStanger)
+[![GitHub Pages](https://img.shields.io/badge/Portfólio_Online-4a6cf7?style=for-the-badge&logo=opsgenie&logoColor=4a6cf7&labelColor=000000)](https://leandrostanger.github.io/LeandroStanger/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=logmein&logoColor=0077B5&labelColor=000000)](https://linkedin.com/in/leandrostanger1)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=000000)](https://github.com/LeandroStanger)
 
 ## 🚀 Sobre Mim
 
@@ -63,35 +63,35 @@ Coleção de meus primeiros projetos de programação na linguagem C, demonstran
 ## 🛠️ Tecnologias e Ferramentas
 
 ### 🧑‍🎨 Front-end
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=E34F26&labelColor=0D1117)](https://wikipedia.org/wiki/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=1572B6&labelColor=0D1117)](https://wikipedia.org/wiki/CSS3)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=F7DF1E&labelColor=0D1117)](https://pt.wikipedia.org/wiki/JavaScript)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=E34F26&labelColor=000000)](https://wikipedia.org/wiki/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=1572B6&labelColor=000000)](https://wikipedia.org/wiki/CSS3)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=F7DF1E&labelColor=000000)](https://pt.wikipedia.org/wiki/JavaScript)
 
 ### 👷 Backend
-[![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=43853D&labelColor=0D1117)](https://nodejs.org)
-[![C](https://img.shields.io/badge/c-A8B9CC?style=for-the-badge&logo=c&logoColor=A8B9CC&labelColor=0D1117)](https://wikipedia.org/wiki/C_(programming_language))
+[![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=43853D&labelColor=000000)](https://nodejs.org)
+[![C](https://img.shields.io/badge/c-A8B9CC?style=for-the-badge&logo=c&logoColor=A8B9CC&labelColor=000000)](https://wikipedia.org/wiki/C_(programming_language))
 
 ### 🧰 DevOps
-[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=2496ED&labelColor=0D1117)](https://www.docker.com/)
-[![Podman](https://img.shields.io/badge/Podman-892CA0?style=for-the-badge&logo=podman&logoColor=892CA0&labelColor=0D1117)](https://podman.io/)
-[![WinBoat](https://img.shields.io/badge/WinBoat-7153dd?style=for-the-badge&logo=corsair&logoColor=7153dd&labelColor=0D1117)](https://www.winboat.app/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=2496ED&labelColor=000000)](https://www.docker.com/)
+[![Podman](https://img.shields.io/badge/Podman-892CA0?style=for-the-badge&logo=podman&logoColor=892CA0&labelColor=000000)](https://podman.io/)
+[![WinBoat](https://img.shields.io/badge/WinBoat-7153dd?style=for-the-badge&logo=corsair&logoColor=7153dd&labelColor=000000)](https://www.winboat.app/)
 
 ### 📊 Databases
-[![SQL](https://img.shields.io/badge/SQL-ef4750?style=for-the-badge&logo=databricks&logoColor=ef4750&labelColor=0D1117)](https://wikipedia.org/wiki/SQL)
-[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=4479A1&labelColor=0D1117)](https://www.mysql.com/)
-[![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=databricks&logoColor=FF3621&labelColor=0D1117)](https://www.databricks.com/)
-[![Azure Data Studio](https://img.shields.io/badge/Azure_Data_Studio-0078D7?style=for-the-badge&logo=icloud&logoColor=0078D7&labelColor=0D1117)](https://learn.microsoft.com/azure-data-studio/)
-[![Microsoft SQL Server](https://img.shields.io/badge/Microsoft_SQL_Server-00A2FF?style=for-the-badge&logo=sublimetext&logoColor=00A2FF&labelColor=0D1117)](https://www.microsoft.com/sql-server/)
+[![SQL](https://img.shields.io/badge/SQL-ef4750?style=for-the-badge&logo=databricks&logoColor=ef4750&labelColor=000000)](https://wikipedia.org/wiki/SQL)
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=4479A1&labelColor=000000)](https://www.mysql.com/)
+[![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=databricks&logoColor=FF3621&labelColor=000000)](https://www.databricks.com/)
+[![Azure Data Studio](https://img.shields.io/badge/Azure_Data_Studio-0078D7?style=for-the-badge&logo=icloud&logoColor=0078D7&labelColor=000000)](https://learn.microsoft.com/azure-data-studio/)
+[![Microsoft SQL Server](https://img.shields.io/badge/Microsoft_SQL_Server-00A2FF?style=for-the-badge&logo=sublimetext&logoColor=00A2FF&labelColor=000000)](https://www.microsoft.com/sql-server/)
 
 ### 🛠️ Ferramentas
-[![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=F05032&labelColor=0D1117)](https://git-scm.com/)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117)](https://github.com/)
-[![Visual Studio Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=vscodium&logoColor=0078D4&labelColor=0D1117)](https://code.visualstudio.com/)
-[![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=xstate&logoColor=217346&labelColor=0D1117)](https://www.microsoft.com/microsoft-365/excel)
+[![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=F05032&labelColor=000000)](https://git-scm.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=000000)](https://github.com/)
+[![Visual Studio Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=vscodium&logoColor=0078D4&labelColor=000000)](https://code.visualstudio.com/)
+[![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=xstate&logoColor=217346&labelColor=000000)](https://www.microsoft.com/microsoft-365/excel)
 
 ### 🐧 Sistema Operacional
-[![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=1793D1&labelColor=0D1117)](https://archlinux.org/)
-[![BigLinux](https://img.shields.io/badge/BigLinux-2865A3?style=for-the-badge&logo=archlinux&logoColor=2865A3&labelColor=0D1117)](https://www.biglinux.com.br/)
+[![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=1793D1&labelColor=000000)](https://archlinux.org/)
+[![BigLinux](https://img.shields.io/badge/BigLinux-2865A3?style=for-the-badge&logo=archlinux&logoColor=2865A3&labelColor=000000)](https://www.biglinux.com.br/)
 
 ## 📊 Estatísticas do GitHub
 
