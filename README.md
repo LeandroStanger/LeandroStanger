@@ -2,9 +2,12 @@
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?weight=500&size=30&pause=10000&color=00FF00&width=1000&height=80&lines=%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB+Leandro+Stanger+-+Desenvolvedor+Full-Stack)](https://git.io/typing-svg)
 
+<div align="center">
+  
 [![GitHub Pages](https://img.shields.io/badge/Portfólio_Online-4a6cf7?style=for-the-badge&logo=opsgenie&logoColor=4a6cf7&labelColor=000000)](https://leandrostanger.github.io/LeandroStanger/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=logmein&logoColor=0077B5&labelColor=000000)](https://linkedin.com/in/leandrostanger1)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=000000)](https://github.com/LeandroStanger)
+</div>
 
 ## 🚀 Sobre Mim
 
@@ -60,6 +63,8 @@ Coleção de meus primeiros projetos de programação, demonstrando minha evolu�
 [![Estudo Em andamento](https://img.shields.io/badge/Estudo-Em_andamento-1572B6?style=for-the-badge)](https://github.com/LeandroStanger/Projetos-iniciais-C)
 Coleção de meus primeiros projetos de programação na linguagem C, demonstrando minha evolução como desenvolvedor.
 
+<div align="center">
+  
 ## 🛠️ Tecnologias e Ferramentas
 
 ### 🧑‍🎨 Front-end
@@ -97,6 +102,7 @@ Coleção de meus primeiros projetos de programação na linguagem C, demonstran
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=LeandroStanger&theme=chartreuse-dark&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&show_icons=true&locale=pt-br) 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=LeandroStanger&theme=chartreuse-dark&layout=pie&count_private=true&locale=pt-br)
+</div>
 
 ## 🌐 Portfólio Completo
 
