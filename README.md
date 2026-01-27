@@ -85,7 +85,7 @@ Coleção de meus primeiros projetos de programação na linguagem C, demonstran
 
 ### 🛠️ Ferramentas
 [![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=F05032&labelColor=0D1117)](https://git-scm.com/)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=100000&labelColor=0D1117)](https://github.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117)](https://github.com/)
 [![Visual Studio Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=vscodium&logoColor=0078D4&labelColor=0D1117)](https://code.visualstudio.com/)
 [![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=xstate&logoColor=217346&labelColor=0D1117)](https://www.microsoft.com/microsoft-365/excel)
 
