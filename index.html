@@ -1,489 +1,1173 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="no-js">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfólio profissional de Leandro Stanger - Desenvolvedor e Estudante de Engenharia da Computação">
+    <meta name="keywords"
+        content="desenvolvedor, programador, engenharia da computação, portfolio, HTML, CSS, JavaScript">
+    <meta name="author" content="Leandro Stanger">
+    <meta name="theme-color" content="#10b981">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Leandro Stanger - Portfólio Profissional">
+    <meta property="og:description" content="Desenvolvedor Full-Stack e Estudante de Engenharia da Computação">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/perfil.jpg">
+
     <link rel="shortcut icon" href="img/perfil.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/perfil.jpg">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Carousel -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <!-- CSS Principal -->
     <link rel="stylesheet" href="style.css">
+
     <title>Leandro Stanger - Portfólio</title>
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Leandro Stanger</h1>
-            <p class="tagline">Desenvolvedor e Estudante de Engenharia da Computação!</p>
+    <!-- Skip Navigation para acessibilidade -->
+    <a href="#main-content" class="skip-nav">Ir para conteúdo principal</a>
 
-            <div class="perfil">
-                <img src="img/perfil.jpg" alt="Foto de perfil do Leandro">
-            </div>
-        </header>
+    <!-- Header Principal -->
+    <header id="inicio" class="main-header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1 class="main-title">
+                        <span class="title-line">Leandro Stanger</span>
+                    </h1>
 
-        <section class="sobre-mim">
-            <h2>👨‍💻 Sobre Mim</h2>
-            <p>📚 Estudante de Engenharia da Computação pela <a href="https://www.unopar.com.br/" target="_blank">UNOPAR
-                    - Universidade Norte do Paraná.</a></p>
-            <p>🧗‍♂️ Estou em constante evolução na área de tecnologia, sempre buscando novos conhecimentos e desafios.
-            </p>
-            <p>🧠 Apaixonado por programação, tecnologia e aprendizado contínuo. Acredito que a tecnologia tem o poder
-                de transformar o mundo.</p>
-            <p>🥋 Praticante de Jiu-jitsu, esporte que me ensina disciplina, resiliência e estratégia - qualidades que
-                aplico no desenvolvimento de software.</p>
-        </section>
+                    <p class="tagline" role="doc-subtitle">
+                        <span class="tagline-text">• Desenvolvedor Full-Stack</span>
+                        <span class="tagline-text">• Estudante de Engenharia da Computação!</span>
+                    </p>
 
-        <section class="curriculo">
-            <h2>📄 Currículo</h2>
-            <div class="curriculo-content">
-                <div class="curriculo-section">
-                    <h3>🎯 Objetivo Profissional</h3>
-                    <p>Busco uma posição na área de TI como <strong>Desenvolvedor</strong> ou <strong>Analista de Banco
-                            de Dados</strong>, onde possa aplicar meus conhecimentos em manutenção de computadores e
-                        redes, além de continuar desenvolvendo minhas habilidades em suporte técnico, administração de
-                        sistemas, desenvolvimento de software e gerenciamento de bancos de dados.</p>
-                    <div class="objetivo-detalhes">
-                        <div class="objetivo-area">
-                            <h4>🚀 Desenvolvedor</h4>
-                            <p>Interesse em atuar no desenvolvimento de aplicações web e sistemas, utilizando
-                                tecnologias modernas e seguindo as melhores práticas de programação.</p>
-                        </div>
-                        <div class="objetivo-area">
-                            <h4>🗃️ Banco de Dados</h4>
-                            <p>Desejo trabalhar com modelagem, administração e otimização de bancos de dados, garantindo
-                                a integridade e performance dos sistemas.</p>
-                        </div>
+                    <div class="header-actions">
+                        <a href="#contato" class="btn btn-primary" aria-label="Entre em contato comigo">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            Entrar em Contato
+                        </a>
+                        <a href="#curriculo" class="btn btn-secondary" aria-label="Ver meu currículo">
+                            <i class="fas fa-file-alt" aria-hidden="true"></i>
+                            Ver Currículo
+                        </a>
                     </div>
                 </div>
 
-                <div class="curriculo-section">
-                    <h3>🎓 Educação</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-date">Em andamento (início: fev/2025)</div>
-                            <div class="timeline-content">
-                                <h4>Graduação em Engenharia de Computação</h4>
-                                <p>Unopar</p>
-                                <div class="status-container">
-                                    <span class="status-badge concluido">1º Semestre - Concluído</span>
-                                    <span class="status-badge concluido">2º Semestre - Concluído</span>
-                                    <span class="status-badge andamento">3º Semestre - Em Andamento</span>
+                <div class="profile-container" aria-label="Foto de perfil do Leandro">
+                    <div class="profile-frame">
+                        <img src="img/perfil.jpg" alt="Leandro Stanger - Foto profissional" class="profile-image"
+                            width="280" height="280">
+                        <div class="profile-decoration"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Indicador de scroll -->
+        <div class="scroll-indicator" aria-hidden="true">
+            <span class="scroll-text">Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main id="main-content" class="main-content" role="main">
+        <!-- Sobre Mim -->
+        <section id="sobre" class="section sobre-mim" aria-labelledby="sobre-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label" aria-hidden="true">01</span>
+                    <h2 id="sobre-title" class="section-title">
+                        <i class="fas fa-user" aria-hidden="true"></i>
+                        Sobre Mim
+                    </h2>
+                    <p class="section-subtitle">Minha trajetória, paixões e objetivos</p>
+                </div>
+
+                <div class="sobre-content">
+                    <div class="sobre-grid">
+                        <article class="sobre-card" aria-label="Formação acadêmica">
+                            <div class="sobre-card-header">
+                                <div class="sobre-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h3 class="sobre-card-title">Formação Acadêmica</h3>
+                            </div>
+                            <div class="sobre-card-body">
+                                <p>Estudante de Engenharia da Computação pela <a href="https://www.unopar.com.br/"
+                                        target="_blank" rel="noopener noreferrer" class="highlight-link">UNOPAR -
+                                        Universidade Norte do Paraná</a>. Em constante evolução na área de tecnologia,
+                                    sempre buscando novos conhecimentos e desafios para crescimento profissional.</p>
+                            </div>
+                        </article>
+
+                        <article class="sobre-card" aria-label="Paixão por tecnologia">
+                            <div class="sobre-card-header">
+                                <div class="sobre-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h3 class="sobre-card-title">Paixão por Tecnologia</h3>
+                            </div>
+                            <div class="sobre-card-body">
+                                <p>Apaixonado por programação, tecnologia e aprendizado contínuo. Acredito que a
+                                    tecnologia tem o poder de transformar o mundo e busco contribuir para essa
+                                    transformação através do desenvolvimento de soluções inovadoras.</p>
+                            </div>
+                        </article>
+
+                        <article class="sobre-card" aria-label="Hobbies e interesses">
+                            <div class="sobre-card-header">
+                                <div class="sobre-icon">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                                <h3 class="sobre-card-title">Jiu-jitsu & Disciplina</h3>
+                            </div>
+                            <div class="sobre-card-body">
+                                <p>Praticante de Jiu-jitsu, esporte que me ensina disciplina, resiliência e estratégia -
+                                    qualidades que aplico diretamente no desenvolvimento de software e na resolução de
+                                    problemas complexos.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Currículo -->
+        <section id="curriculo" class="section curriculo" aria-labelledby="curriculo-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label" aria-hidden="true">02</span>
+                    <h2 id="curriculo-title" class="section-title">
+                        <i class="fas fa-file-alt" aria-hidden="true"></i>
+                        Currículo
+                    </h2>
+                    <p class="section-subtitle">Minha jornada profissional e acadêmica</p>
+                </div>
+
+                <div class="curriculo-content">
+                    <!-- Objetivo Profissional -->
+                    <article class="curriculo-section" aria-labelledby="objetivo-title">
+                        <header class="curriculo-section-header">
+                            <h3 id="objetivo-title" class="curriculo-section-title">
+                                <i class="fas fa-bullseye" aria-hidden="true"></i>
+                                Objetivo Profissional
+                            </h3>
+                        </header>
+
+                        <div class="objetivo-content">
+                            <p class="objetivo-text">
+                                Busco uma posição na área de TI como <strong>Desenvolvedor</strong> ou
+                                <strong>Analista de Banco de Dados</strong>, onde possa aplicar meus
+                                conhecimentos em manutenção de computadores e redes, além de continuar
+                                desenvolvendo minhas habilidades em suporte técnico, administração de
+                                sistemas, desenvolvimento de software e gerenciamento de bancos de dados.
+                            </p>
+
+                            <div class="objetivo-grid">
+                                <div class="objetivo-area" aria-label="Objetivo como Desenvolvedor">
+                                    <div class="objetivo-area-icon" aria-hidden="true">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                    <h4 class="objetivo-area-title">Desenvolvedor</h4>
+                                    <p class="objetivo-area-text">
+                                        Interesse em atuar no desenvolvimento de aplicações web e sistemas,
+                                        utilizando tecnologias modernas e seguindo as melhores práticas de programação.
+                                    </p>
+                                </div>
+
+                                <div class="objetivo-area" aria-label="Objetivo em Banco de Dados">
+                                    <div class="objetivo-area-icon" aria-hidden="true">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <h4 class="objetivo-area-title">Banco de Dados</h4>
+                                    <p class="objetivo-area-text">
+                                        Desejo trabalhar com modelagem, administração e otimização de bancos
+                                        de dados, garantindo a integridade e performance dos sistemas.
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">fev/2024 a jun/2025</div>
-                            <div class="timeline-content">
-                                <h4>Técnico em Manutenção e Suporte em Informática</h4>
-                                <p>AMPLI</p>
-                                <span class="status-badge concluido">Concluído</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">Abr/2016 a Out/2016</div>
-                            <div class="timeline-content">
-                                <h4>Curso de Montagem e Manutenção de Computadores e Redes</h4>
-                                <p>YesBras</p>
-                                <span class="status-badge concluido">Concluído</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">Set/2014 a Set/2015</div>
-                            <div class="timeline-content">
-                                <h4>Curso APP – Administrativo Pessoal e Profissional</h4>
-                                <p>Escola de Informática Unisoft</p>
-                                <span class="status-badge concluido">Concluído</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">Set/2013 a Set/2014</div>
-                            <div class="timeline-content">
-                                <h4>Curso QIT – Qualificação em Informática e Tecnologia</h4>
-                                <p>Escola de Informática Unisoft</p>
-                                <span class="status-badge concluido">Concluído</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">Concluído em 2017</div>
-                            <div class="timeline-content">
-                                <h4>Ensino Médio</h4>
-                                <p>Sesi</p>
-                                <span class="status-badge concluido">Concluído</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </article>
 
-                <div class="curriculo-section">
-                    <h3>💼 Experiência Profissional</h3>
-                    <div class="experiencia">
-                        <div class="experiencia-item">
-                            <h4>Confecções Vanelise</h4>
-                            <p id="resultado1" class="periodo"></p>
-                            <p class="cargo">Auxiliar de Expedição Nível 2 (Tecido Plano)</p>
-                            <p id="resultado" class="periodo">ago de 2025 - em andamento · </p>
-                            <ul>
-                                <li>Promovido para nível 2 com maiores responsabilidades</li>
-                                <li>Treinamento de novos funcionários</li>
-                                <li>Gestão avançada de estoque da caixaria</li>
-                                <li>Controle de qualidade dos processos de expedição</li>
-                            </ul>
-                            <p class="cargo">Auxiliar de Expedição (Tecido Plano)</p>
-                            <p class="periodo">jan de 2020 a ago de 2025 (5 anos, 8 meses)</p>
-                            <ul>
-                                <li>Recebimento e organização de paletes de conserto</li>
-                                <li>Abastecimento de revisão e armazenamento de peças</li>
-                                <li>Gestão de estoque e organização de materiais</li>
-                                <li>Controle de qualidade inicial dos produtos</li>
-                            </ul>
-                        </div>
-                        <div class="experiencia-item">
-                            <h4>Manutenção de Computadores – Autônomo</h4>
-                            <p class="cargo">Técnico em Manutenção</p>
-                            <p id="resultado2" class="periodo">Jan/2014 – em andamento</p>
-                            <ul>
-                                <li>Formatação, troca de peças e atualização de software</li>
-                                <li>Atendimento a clientes e suporte técnico remoto e presencial</li>
-                                <li>Instalação e configuração de sistemas operacionais</li>
-                                <li>Manutenção preventiva e corretiva de hardware</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                    <!-- Educação -->
+                    <article class="curriculo-section" aria-labelledby="educacao-title">
+                        <header class="curriculo-section-header">
+                            <h3 id="educacao-title" class="curriculo-section-title">
+                                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                                Educação
+                            </h3>
+                        </header>
 
-                <div class="curriculo-section">
-                    <h3>🛠️ Habilidades</h3>
-                    <div class="habilidades">
-                        <div class="habilidades-categoria">
-                            <h4>Técnicas</h4>
-                            <div class="habilidades-lista">
-                                <span class="habilidade-tag">Manutenção de computadores (hardware e software)</span>
-                                <span class="habilidade-tag">Linux (intermediário)</span>
-                                <span class="habilidade-tag">JavaScript (intermediário)</span>
-                                <span class="habilidade-tag">Microsoft Office (Excel, Word e PowerPoint)</span>
-                                <span class="habilidade-tag">C</span>
-                                <span class="habilidade-tag">Redes de computadores</span>
-                                <span class="habilidade-tag">Suporte técnico</span>
-                                <span class="habilidade-tag">HTML</span>
-                                <span class="habilidade-tag">Administração de sistemas</span>
-                                <span class="habilidade-tag">CSS</span>
-                                <span class="habilidade-tag">Banco de Dados SQL</span>
-                                <span class="habilidade-tag">Desenvolvimento Web</span>
-                                <span class="habilidade-tag">Git e controle de versão</span>
+                        <div class="timeline">
+                            <!-- Timeline Item 1 -->
+                            <div class="timeline-item" role="listitem">
+                                <div class="timeline-marker" aria-hidden="true"></div>
+                                <div class="timeline-content">
+                                    <time class="timeline-date" datetime="2025-02">Em andamento (início:
+                                        fev/2025)</time>
+                                    <h4 class="timeline-title">Graduação em Engenharia de Computação</h4>
+                                    <p class="timeline-subtitle">Unopar</p>
+                                    <div class="status-container">
+                                        <span class="status-badge status-concluido" aria-label="1º Semestre Concluído">
+                                            1º Semestre - Concluído
+                                        </span>
+                                        <span class="status-badge status-concluido" aria-label="2º Semestre Concluído">
+                                            2º Semestre - Concluído
+                                        </span>
+                                        <span class="status-badge status-andamento"
+                                            aria-label="3º Semestre em Andamento">
+                                            3º Semestre - Em Andamento
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Timeline Items restantes -->
+                            <div class="timeline-item" role="listitem">
+                                <div class="timeline-marker" aria-hidden="true"></div>
+                                <div class="timeline-content">
+                                    <time class="timeline-date" datetime="2024-02/2025-06">fev/2024 a jun/2025</time>
+                                    <h4 class="timeline-title">Técnico em Manutenção e Suporte em Informática</h4>
+                                    <p class="timeline-subtitle">AMPLI</p>
+                                    <span class="status-badge status-concluido">Concluído</span>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item" role="listitem">
+                                <div class="timeline-marker" aria-hidden="true"></div>
+                                <div class="timeline-content">
+                                    <time class="timeline-date" datetime="2016-04/2016-10">Abr/2016 a Out/2016</time>
+                                    <h4 class="timeline-title">Curso de Montagem e Manutenção de Computadores e Redes
+                                    </h4>
+                                    <p class="timeline-subtitle">YesBras</p>
+                                    <span class="status-badge status-concluido">Concluído</span>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item" role="listitem">
+                                <div class="timeline-marker" aria-hidden="true"></div>
+                                <div class="timeline-content">
+                                    <time class="timeline-date" datetime="2014-09/2015-09">Set/2014 a Set/2015</time>
+                                    <h4 class="timeline-title">Curso APP – Administrativo Pessoal e Profissional</h4>
+                                    <p class="timeline-subtitle">Escola de Informática Unisoft</p>
+                                    <span class="status-badge status-concluido">Concluído</span>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item" role="listitem">
+                                <div class="timeline-marker" aria-hidden="true"></div>
+                                <div class="timeline-content">
+                                    <time class="timeline-date" datetime="2013-09/2014-09">Set/2013 a Set/2014</time>
+                                    <h4 class="timeline-title">Curso QIT – Qualificação em Informática e Tecnologia</h4>
+                                    <p class="timeline-subtitle">Escola de Informática Unisoft</p>
+                                    <span class="status-badge status-concluido">Concluído</span>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item" role="listitem">
+                                <div class="timeline-marker" aria-hidden="true"></div>
+                                <div class="timeline-content">
+                                    <time class="timeline-date" datetime="2017">Concluído em 2017</time>
+                                    <h4 class="timeline-title">Ensino Médio</h4>
+                                    <p class="timeline-subtitle">Sesi</p>
+                                    <span class="status-badge status-concluido">Concluído</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="habilidades-categoria">
-                            <h4>Interpessoais</h4>
-                            <div class="habilidades-lista">
-                                <span class="habilidade-tag">Pontualidade</span>
-                                <span class="habilidade-tag">Responsabilidade</span>
-                                <span class="habilidade-tag">Atendimento ao cliente</span>
-                                <span class="habilidade-tag">Trabalho em equipe</span>
-                                <span class="habilidade-tag">Resolução de problemas</span>
-                                <span class="habilidade-tag">Comunicação eficaz</span>
-                                <span class="habilidade-tag">Liderança</span>
-                                <span class="habilidade-tag">Gestão de tempo</span>
+                    </article>
+
+                    <!-- Experiência Profissional -->
+                    <article class="curriculo-section" aria-labelledby="experiencia-title">
+                        <header class="curriculo-section-header">
+                            <h3 id="experiencia-title" class="curriculo-section-title">
+                                <i class="fas fa-briefcase" aria-hidden="true"></i>
+                                Experiência Profissional
+                            </h3>
+                        </header>
+
+                        <div class="experiencia">
+                            <!-- Experiência 1 -->
+                            <div class="experiencia-item" role="listitem">
+                                <div class="experiencia-header">
+                                    <h4 class="experiencia-empresa">Confecções Vanelise</h4>
+                                    <div class="experiencia-periodo">
+                                        <span id="resultado1" class="periodo-detalhes"></span>
+                                    </div>
+                                </div>
+
+                                <div class="experiencia-cargo">
+                                    <h5 class="cargo-title">Auxiliar de Expedição Nível 2 (Tecido Plano)</h5>
+                                    <div class="cargo-periodo">
+                                        <span id="resultado" class="periodo-detalhes">ago de 2025 - em andamento ·
+                                        </span>
+                                    </div>
+                                    <ul class="cargo-responsabilidades" role="list">
+                                        <li>Promovido para nível 2 com maiores responsabilidades</li>
+                                        <li>Treinamento de novos funcionários</li>
+                                        <li>Gestão avançada de estoque da caixaria</li>
+                                        <li>Controle de qualidade dos processos de expedição</li>
+                                    </ul>
+                                </div>
+
+                                <div class="experiencia-cargo">
+                                    <h5 class="cargo-title">Auxiliar de Expedição (Tecido Plano)</h5>
+                                    <div class="cargo-periodo">
+                                        <span class="periodo-detalhes">jan de 2020 a ago de 2025 (5 anos, 8
+                                            meses)</span>
+                                    </div>
+                                    <ul class="cargo-responsabilidades" role="list">
+                                        <li>Recebimento e organização de paletes de conserto</li>
+                                        <li>Abastecimento de revisão e armazenamento de peças</li>
+                                        <li>Gestão de estoque e organização de materiais</li>
+                                        <li>Controle de qualidade inicial dos produtos</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Experiência 2 -->
+                            <div class="experiencia-item" role="listitem">
+                                <div class="experiencia-header">
+                                    <h4 class="experiencia-empresa">Manutenção de Computadores – Autônomo</h4>
+                                    <div class="experiencia-periodo">
+                                        <span id="resultado2" class="periodo-detalhes">Jan/2014 – em andamento</span>
+                                    </div>
+                                </div>
+
+                                <div class="experiencia-cargo">
+                                    <h5 class="cargo-title">Técnico em Manutenção</h5>
+                                    <ul class="cargo-responsabilidades" role="list">
+                                        <li>Formatação, troca de peças e atualização de software</li>
+                                        <li>Atendimento a clientes e suporte técnico remoto e presencial</li>
+                                        <li>Instalação e configuração de sistemas operacionais</li>
+                                        <li>Manutenção preventiva e corretiva de hardware</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
+                    </article>
+
+                    <!-- Habilidades -->
+                    <article class="curriculo-section" aria-labelledby="habilidades-title">
+                        <header class="curriculo-section-header">
+                            <h3 id="habilidades-title" class="curriculo-section-title">
+                                <i class="fas fa-tools" aria-hidden="true"></i>
+                                Habilidades
+                            </h3>
+                        </header>
+
+                        <div class="habilidades-grid">
+                            <div class="habilidades-categoria" aria-labelledby="tecnicas-title">
+                                <h4 id="tecnicas-title" class="habilidades-categoria-title">
+                                    <i class="fas fa-code" aria-hidden="true"></i>
+                                    Técnicas
+                                </h4>
+                                <div class="habilidades-lista">
+                                    <span class="habilidade-tag">Manutenção de computadores (hardware e software)</span>
+                                    <span class="habilidade-tag">Linux (intermediário)</span>
+                                    <span class="habilidade-tag">JavaScript (intermediário)</span>
+                                    <span class="habilidade-tag">Microsoft Office (Excel, Word e PowerPoint)</span>
+                                    <span class="habilidade-tag">C</span>
+                                    <span class="habilidade-tag">Redes de computadores</span>
+                                    <span class="habilidade-tag">Suporte técnico</span>
+                                    <span class="habilidade-tag">HTML</span>
+                                    <span class="habilidade-tag">Administração de sistemas</span>
+                                    <span class="habilidade-tag">CSS</span>
+                                    <span class="habilidade-tag">Banco de Dados SQL</span>
+                                    <span class="habilidade-tag">Desenvolvimento Web</span>
+                                    <span class="habilidade-tag">Git e controle de versão</span>
+                                </div>
+                            </div>
+
+                            <div class="habilidades-categoria" aria-labelledby="interpessoais-title">
+                                <h4 id="interpessoais-title" class="habilidades-categoria-title">
+                                    <i class="fas fa-users" aria-hidden="true"></i>
+                                    Interpessoais
+                                </h4>
+                                <div class="habilidades-lista">
+                                    <span class="habilidade-tag">Pontualidade</span>
+                                    <span class="habilidade-tag">Responsabilidade</span>
+                                    <span class="habilidade-tag">Atendimento ao cliente</span>
+                                    <span class="habilidade-tag">Trabalho em equipe</span>
+                                    <span class="habilidade-tag">Resolução de problemas</span>
+                                    <span class="habilidade-tag">Comunicação eficaz</span>
+                                    <span class="habilidade-tag">Liderança</span>
+                                    <span class="habilidade-tag">Gestão de tempo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Botão de Download Centralizado -->
+                    <div class="curriculo-actions">
+                        <a href="https://github.com/LeandroStanger/LeandroStanger/blob/main/curriculo/Curriculo%20Leandro%20Stanger.pdf"
+                            target="_blank" rel="noopener noreferrer" class="btn btn-download" download
+                            aria-label="Baixar currículo completo em PDF">
+                            <i class="fas fa-download" aria-hidden="true"></i>
+                            Baixar Currículo Completo (PDF)
+                        </a>
                     </div>
                 </div>
             </div>
-            <a href="https://github.com/LeandroStanger/LeandroStanger/blob/main/curriculo/Curriculo%20Leandro%20Stanger.pdf"
-                target="_blank" class="btn btn-download" download>
-                <i class="fas fa-download"></i> Baixar Currículo Completo (PDF)
-            </a>
         </section>
 
-        <section class="tecnologias">
-            <h2>🚀 Tecnologias e Ferramentas</h2>
-            <br>
-            <h2>🧑‍🎨 Front-end</h2>
-            <div class="tecEFer">
-                <img src="img/img2.png" alt="HTML" title="HTML">
-                <img src="img/img3.png" alt="CSS" title="CSS">
-                <img src="img/img.jpg" alt="JavaScript" title="JavaScript">
-            </div>
+        <!-- Tecnologias -->
+        <section id="tecnologias" class="section tecnologias" aria-labelledby="tecnologias-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label" aria-hidden="true">03</span>
+                    <h2 id="tecnologias-title" class="section-title">
+                        <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                        Tecnologias & Ferramentas
+                    </h2>
+                    <p class="section-subtitle">Stack tecnológico e ferramentas que utilizo</p>
+                </div>
 
-            <h2>👷 Backend</h2>
-            <div class="tecEFer">
-                <img src="img/img18.png" alt="Node.js" title="Node.js">
-                <img src="img/img19.png" alt="C (Linguagem de Programação)" title="C (Linguagem de Programação)">
-            </div>
+                <div class="tecnologias-grid">
+                    <!-- Frontend -->
+                    <article class="tecnologia-categoria" aria-labelledby="frontend-title">
+                        <header class="tecnologia-categoria-header">
+                            <h3 id="frontend-title" class="tecnologia-categoria-title">
+                                <i class="fas fa-palette" aria-hidden="true"></i>
+                                Front-end
+                            </h3>
+                        </header>
+                        <div class="tecnologia-icons">
+                            <div class="tecnologia-icon" aria-label="HTML">
+                                <img src="img/img2.png" alt="HTML5" width="64" height="64">
+                                <span class="tecnologia-label">HTML</span>
+                            </div>
+                            <div class="tecnologia-icon" aria-label="CSS">
+                                <img src="img/img3.png" alt="CSS3" width="64" height="64">
+                                <span class="tecnologia-label">CSS</span>
+                            </div>
+                            <div class="tecnologia-icon" aria-label="JavaScript">
+                                <img src="img/img.jpg" alt="JavaScript" width="64" height="64">
+                                <span class="tecnologia-label">JavaScript</span>
+                            </div>
+                        </div>
+                    </article>
 
-            <h2>🧰 DevOps</h2>
-            <div class="tecEFer">
-                <img src="img/img13.png" alt="Docker" title="Docker">
-                <img src="img/img14.png" alt="Podman" title="Podman">
-                <img src="img/img15.png" alt="WinBoat" title="WinBoat">
-            </div>
+                    <!-- Backend -->
+                    <article class="tecnologia-categoria" aria-labelledby="backend-title">
+                        <header class="tecnologia-categoria-header">
+                            <h3 id="backend-title" class="tecnologia-categoria-title">
+                                <i class="fas fa-server" aria-hidden="true"></i>
+                                Backend
+                            </h3>
+                        </header>
+                        <div class="tecnologia-icons">
+                            <div class="tecnologia-icon" aria-label="Node.js">
+                                <img src="img/img18.png" alt="Node.js" width="64" height="64">
+                                <span class="tecnologia-label">Node.js</span>
+                            </div>
+                            <div class="tecnologia-icon" aria-label="C">
+                                <img src="img/img19.png" alt="C" width="64" height="64">
+                                <span class="tecnologia-label">C</span>
+                            </div>
+                        </div>
+                    </article>
 
-            <h2>📊 Databases</h2>
-            <div class="tecEFer">
-                <img src="img/img7.png" alt="SQL" title="SQL">
-                <img src="img/img9.png" alt="MySQL" title="MySQL">
-                <img src="img/img8.png" alt="Databricks" title="Databricks">
-                <img src="img/img12.png" alt="Azure Data Studio" title="Azure Data Studio">
-                <img src="img/img11.png" alt="Microsoft SQL Server" title="Microsoft SQL Server">
-            </div>
+                    <!-- DevOps -->
+                    <article class="tecnologia-categoria" aria-labelledby="devops-title">
+                        <header class="tecnologia-categoria-header">
+                            <h3 id="devops-title" class="tecnologia-categoria-title">
+                                <i class="fas fa-cloud" aria-hidden="true"></i>
+                                DevOps
+                            </h3>
+                        </header>
+                        <div class="tecnologia-icons">
+                            <div class="tecnologia-icon" aria-label="Docker">
+                                <img src="img/img13.png" alt="Docker" width="64" height="64">
+                                <span class="tecnologia-label">Docker</span>
+                            </div>
+                            <div class="tecnologia-icon" aria-label="Podman">
+                                <img src="img/img14.png" alt="Podman" width="64" height="64">
+                                <span class="tecnologia-label">Podman</span>
+                            </div>
+                            <div class="tecnologia-icon" aria-label="WinBoat">
+                                <img src="img/img15.png" alt="WinBoat" width="64" height="64">
+                                <span class="tecnologia-label">WinBoat</span>
+                            </div>
+                        </div>
+                    </article>
 
-            <h2>🛠️ Ferramentas</h2>
-            <div class="tecEFer">
-                <img src="img/img4.png" alt="Git" title="Git">
-                <img src="img/img6.png" alt="GitHub" title="GitHub">
-                <img src="img/img5.png" alt="Visual Studio Code" title="Visual Studio Code">
-                <img src="img/img10.png" alt="Microsoft Excel" title="Microsoft Excel">
-                <img src="img/img20.png" alt="Code::Blocks" title="Code::Blocks">
-            </div>
+                    <!-- Databases -->
+                    <article class="tecnologia-categoria" aria-labelledby="databases-title">
+                        <header class="tecnologia-categoria-header">
+                            <h3 id="databases-title" class="tecnologia-categoria-title">
+                                <i class="fas fa-database" aria-hidden="true"></i>
+                                Databases
+                            </h3>
+                        </header>
+                        <div class="tecnologia-icons">
+                            <div class="tecnologia-icon" aria-label="SQL">
+                                <img src="img/img7.png" alt="SQL" width="64" height="64">
+                                <span class="tecnologia-label">SQL</span>
+                            </div>
+                            <div class="tecnologia-icon" aria-label="MySQL">
+                                <img src="img/img9.png" alt="MySQL" width="64" height="64">
+                                <span class="tecnologia-label">MySQL</span>
+                            </div>
+                            <div class="tecnologia-icon" aria-label="Databricks">
+                                <img src="img/img8.png" alt="Databricks" width="64" height="64">
+                                <span class="tecnologia-label">Databricks</span>
+                            </div>
+                            <div class="tecnologia-icon" aria-label="Azure Data Studio">
+                                <img src="img/img12.png" alt="Azure Data Studio" width="64" height="64">
+                                <span class="tecnologia-label">Azure Data Studio</span>
+                            </div>
+                            <div class="tecnologia-icon" aria-label="Microsoft SQL Server">
+                                <img src="img/img11.png" alt="Microsoft SQL Server" width="64" height="64">
+                                <span class="tecnologia-label">SQL Server</span>
+                            </div>
+                        </div>
+                    </article>
 
-            <h2>🐧Sistema Operacional</h2>
-            <div class="tecEFer">
-                <img src="img/img16.png" alt="Arch Linux" title="Arch Linux">
-                <img src="img/img17.png" alt="BigLinux" title="BigLinux">
+                    <!-- Ferramentas -->
+                    <article class="tecnologia-categoria" aria-labelledby="ferramentas-title">
+                        <header class="tecnologia-categoria-header">
+                            <h3 id="ferramentas-title" class="tecnologia-categoria-title">
+                                <i class="fas fa-tools" aria-hidden="true"></i>
+                                Ferramentas
+                            </h3>
+                        </header>
+                        <div class="tecnologia-icons">
+                            <div class="tecnologia-icon" aria-label="Git">
+                                <img src="img/img4.png" alt="Git" width="64" height="64">
+                                <span class="tecnologia-label">Git</span>
+                            </div>
+                            <div class="tecnologia-icon" aria-label="GitHub">
+                                <img src="img/img6.png" alt="GitHub" width="64" height="64">
+                                <span class="tecnologia-label">GitHub</span>
+                            </div>
+                            <div class="tecnologia-icon" aria-label="Visual Studio Code">
+                                <img src="img/img5.png" alt="Visual Studio Code" width="64" height="64">
+                                <span class="tecnologia-label">VS Code</span>
+                            </div>
+                            <div class="tecnologia-icon" aria-label="Microsoft Excel">
+                                <img src="img/img10.png" alt="Microsoft Excel" width="64" height="64">
+                                <span class="tecnologia-label">Excel</span>
+                            </div>
+                            <div class="tecnologia-icon" aria-label="Code::Blocks">
+                                <img src="img/img20.png" alt="Code::Blocks" width="64" height="64">
+                                <span class="tecnologia-label">Code::Blocks</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Sistema Operacional -->
+                    <article class="tecnologia-categoria" aria-labelledby="so-title">
+                        <header class="tecnologia-categoria-header">
+                            <h3 id="so-title" class="tecnologia-categoria-title">
+                                <i class="fas fa-desktop" aria-hidden="true"></i>
+                                Sistema Operacional
+                            </h3>
+                        </header>
+                        <div class="tecnologia-icons">
+                            <div class="tecnologia-icon" aria-label="Arch Linux">
+                                <img src="img/img16.png" alt="Arch Linux" width="64" height="64">
+                                <span class="tecnologia-label">Arch Linux</span>
+                            </div>
+                            <div class="tecnologia-icon" aria-label="BigLinux">
+                                <img src="img/img17.png" alt="BigLinux" width="64" height="64">
+                                <span class="tecnologia-label">BigLinux</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <section class="projetos">
-            <h2>🏗️ Projetos</h2>
-            <div class="projetos-slider">
-                <div class="projeto-card">
-                    <h3>Animais no Zoológico 2</h3>
-                    <p>Uma aplicação web interativa para gerenciamento e visualização de animais em um zoológico
-                        virtual.</p>
-                    <div class="tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                    </div>
-                    <a href="https://github.com/LeandroStanger/AnimaisNoZoologico2" target="_blank" class="btn">Ver
-                        Código</a>
-                    <a href="https://leandrostanger.github.io/AnimaisNoZoologico2/" target="_blank"
-                        class="btn btn-secundario" style="margin-top: 8px;">
-                        <i class="fas fa-external-link-alt"></i> Ver Projeto Online </a>
+        <!-- Projetos -->
+        <section id="projetos" class="section projetos" aria-labelledby="projetos-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label" aria-hidden="true">04</span>
+                    <h2 id="projetos-title" class="section-title">
+                        <i class="fas fa-project-diagram" aria-hidden="true"></i>
+                        Projetos
+                    </h2>
+                    <p class="section-subtitle">Meus projetos desenvolvidos e em desenvolvimento</p>
                 </div>
 
-                <div class="projeto-card">
-                    <h3>Dados Climáticos</h3>
-                    <p>Sistema para coleta, processamento e visualização de dados meteorológicos de diferentes fontes.
+                <!-- Cabeçalho da Grade de Projetos -->
+                <div class="projetos-header">
+                    <h3 class="projetos-categoria-title">Portfólio de Desenvolvimento</h3>
+                    <p class="projetos-categoria-desc">
+                        Explore meus projetos front-end, back-end e experimentos de programação.
                     </p>
-                    <div class="tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">API</span>
-                        <span class="tag">CSS</span>
-                    </div>
-                    <a href="https://github.com/LeandroStanger/DadosClimaticos" target="_blank" class="btn">Ver
-                        Código</a>
-                    <a href="https://leandrostanger.github.io/DadosClimaticos/" target="_blank"
-                        class="btn btn-secundario" style="margin-top: 8px;">
-                        <i class="fas fa-external-link-alt"></i> Ver Projeto Online </a>
                 </div>
 
-                <div class="projeto-card">
-                    <h3>Formulário de Feedback</h3>
-                    <p>Formulário interativo para coleta de feedback de usuários com validação de dados.</p>
-                    <div class="tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                    </div>
-                    <a href="https://github.com/LeandroStanger/FormularioDeFeedback" target="_blank" class="btn">Ver
-                        Código</a>
-                    <a href="https://leandrostanger.github.io/FormularioDeFeedback/" target="_blank"
-                        class="btn btn-secundario" style="margin-top: 8px;">
-                        <i class="fas fa-external-link-alt"></i> Ver Projeto Online </a>
+                <div class="projetos-grid">
+                    <!-- Projeto 1 -->
+                    <article class="projeto-card" role="listitem">
+                        <header class="projeto-header">
+                            <h3 class="projeto-title">Animais no Zoológico 2</h3>
+                            <p class="projeto-descricao">
+                                Uma aplicação web interativa para gerenciamento e visualização de animais em um
+                                zoológico virtual.
+                            </p>
+                        </header>
+
+                        <div class="projeto-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+
+                        <footer class="projeto-actions">
+                            <a href="https://github.com/LeandroStanger/AnimaisNoZoologico2" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto"
+                                aria-label="Ver código do projeto Animais no Zoológico 2">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                Ver Código
+                            </a>
+                            <a href="https://leandrostanger.github.io/AnimaisNoZoologico2/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto-secundario"
+                                aria-label="Ver projeto online Animais no Zoológico 2">
+                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                Ver Online
+                            </a>
+                        </footer>
+                    </article>
+
+                    <!-- Projeto 2 -->
+                    <article class="projeto-card" role="listitem">
+                        <header class="projeto-header">
+                            <h3 class="projeto-title">Dados Climáticos</h3>
+                            <p class="projeto-descricao">
+                                Sistema para coleta, processamento e visualização de dados meteorológicos de diferentes
+                                fontes.
+                            </p>
+                        </header>
+
+                        <div class="projeto-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">API</span>
+                            <span class="tag">CSS</span>
+                        </div>
+
+                        <footer class="projeto-actions">
+                            <a href="https://github.com/LeandroStanger/DadosClimaticos" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto"
+                                aria-label="Ver código do projeto Dados Climáticos">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                Ver Código
+                            </a>
+                            <a href="https://leandrostanger.github.io/DadosClimaticos/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto-secundario"
+                                aria-label="Ver projeto online Dados Climáticos">
+                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                Ver Online
+                            </a>
+                        </footer>
+                    </article>
+
+                    <!-- Projeto 3 -->
+                    <article class="projeto-card" role="listitem">
+                        <header class="projeto-header">
+                            <h3 class="projeto-title">Formulário de Feedback</h3>
+                            <p class="projeto-descricao">
+                                Formulário interativo para coleta de feedback de usuários com validação de dados.
+                            </p>
+                        </header>
+
+                        <div class="projeto-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+
+                        <footer class="projeto-actions">
+                            <a href="https://github.com/LeandroStanger/FormularioDeFeedback" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto"
+                                aria-label="Ver código do projeto Formulário de Feedback">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                Ver Código
+                            </a>
+                            <a href="https://leandrostanger.github.io/FormularioDeFeedback/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto-secundario"
+                                aria-label="Ver projeto online Formulário de Feedback">
+                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                Ver Online
+                            </a>
+                        </footer>
+                    </article>
+
+                    <!-- Projeto 4 -->
+                    <article class="projeto-card" role="listitem">
+                        <header class="projeto-header">
+                            <h3 class="projeto-title">Carros Divertidos</h3>
+                            <p class="projeto-descricao">
+                                Jogo interativo com carros em um ambiente 2D, desenvolvido para praticar conceitos de
+                                programação.
+                            </p>
+                        </header>
+
+                        <div class="projeto-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                        </div>
+
+                        <footer class="projeto-actions">
+                            <a href="https://github.com/LeandroStanger/CarrosDivertidos" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto"
+                                aria-label="Ver código do projeto Carros Divertidos">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                Ver Código
+                            </a>
+                            <a href="https://leandrostanger.github.io/CarrosDivertidos/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto-secundario"
+                                aria-label="Ver projeto online Carros Divertidos">
+                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                Ver Online
+                            </a>
+                        </footer>
+                    </article>
+
+                    <!-- Projeto 5 -->
+                    <article class="projeto-card" role="listitem">
+                        <header class="projeto-header">
+                            <h3 class="projeto-title">Corrida de Carro</h3>
+                            <p class="projeto-descricao">
+                                Simulação de corrida de carros com controles interativos e sistema de pontuação.
+                            </p>
+                        </header>
+
+                        <div class="projeto-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Canvas</span>
+                            <span class="tag">HTML5</span>
+                        </div>
+
+                        <footer class="projeto-actions">
+                            <a href="https://github.com/LeandroStanger/CorridaDeCarro" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto"
+                                aria-label="Ver código do projeto Corrida de Carro">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                Ver Código
+                            </a>
+                            <a href="https://leandrostanger.github.io/CorridaDeCarro/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto-secundario"
+                                aria-label="Ver projeto online Corrida de Carro">
+                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                Ver Online
+                            </a>
+                        </footer>
+                    </article>
+
+                    <!-- Projeto 6 -->
+                    <article class="projeto-card" role="listitem">
+                        <header class="projeto-header">
+                            <h3 class="projeto-title">Animais no Zoológico</h3>
+                            <p class="projeto-descricao">
+                                Versão inicial do sistema de gerenciamento de zoológico, com foco em aprendizado de
+                                JavaScript.
+                            </p>
+                        </header>
+
+                        <div class="projeto-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+
+                        <footer class="projeto-actions">
+                            <a href="https://github.com/LeandroStanger/AnimaisNoZoologico" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto"
+                                aria-label="Ver código do projeto Animais no Zoológico">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                Ver Código
+                            </a>
+                            <a href="https://leandrostanger.github.io/AnimaisNoZoologico/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto-secundario"
+                                aria-label="Ver projeto online Animais no Zoológico">
+                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                Ver Online
+                            </a>
+                        </footer>
+                    </article>
+
+                    <!-- Projeto 7 -->
+                    <article class="projeto-card" role="listitem">
+                        <header class="projeto-header">
+                            <h3 class="projeto-title">Site com Loop</h3>
+                            <p class="projeto-descricao">
+                                Site demonstrativo com efeitos visuais em loop e animações CSS/JavaScript.
+                            </p>
+                        </header>
+
+                        <div class="projeto-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+
+                        <footer class="projeto-actions">
+                            <a href="https://github.com/LeandroStanger/SiteComLoop" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto"
+                                aria-label="Ver código do projeto Site com Loop">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                Ver Código
+                            </a>
+                            <a href="https://leandrostanger.github.io/SiteComLoop/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto-secundario"
+                                aria-label="Ver projeto online Site com Loop">
+                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                Ver Online
+                            </a>
+                        </footer>
+                    </article>
+
+                    <!-- Projeto 8 -->
+                    <article class="projeto-card" role="listitem">
+                        <header class="projeto-header">
+                            <h3 class="projeto-title">Sistema de Login</h3>
+                            <p class="projeto-descricao">
+                                Sistema de autenticação de usuários com validação de credenciais e interface responsiva.
+                            </p>
+                        </header>
+
+                        <div class="projeto-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+
+                        <footer class="projeto-actions">
+                            <a href="https://github.com/LeandroStanger/SistemaDeLogin" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto"
+                                aria-label="Ver código do projeto Sistema de Login">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                Ver Código
+                            </a>
+                            <a href="https://leandrostanger.github.io/SistemaDeLogin/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto-secundario"
+                                aria-label="Ver projeto online Sistema de Login">
+                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                Ver Online
+                            </a>
+                        </footer>
+                    </article>
+
+                    <!-- Projeto 9 -->
+                    <article class="projeto-card" role="listitem">
+                        <header class="projeto-header">
+                            <h3 class="projeto-title">Gerenciador de Lista</h3>
+                            <p class="projeto-descricao">
+                                Aplicação para criar, editar e excluir itens de listas, com armazenamento local.
+                            </p>
+                        </header>
+
+                        <div class="projeto-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">LocalStorage</span>
+                            <span class="tag">CSS</span>
+                        </div>
+
+                        <footer class="projeto-actions">
+                            <a href="https://github.com/LeandroStanger/GerenciadorDeLista" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto"
+                                aria-label="Ver código do projeto Gerenciador de Lista">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                Ver Código
+                            </a>
+                            <a href="https://leandrostanger.github.io/GerenciadorDeLista/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto-secundario"
+                                aria-label="Ver projeto online Gerenciador de Lista">
+                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                Ver Online
+                            </a>
+                        </footer>
+                    </article>
+
+                    <!-- Projeto 10 -->
+                    <article class="projeto-card" role="listitem">
+                        <header class="projeto-header">
+                            <h3 class="projeto-title">Projetos Iniciais</h3>
+                            <p class="projeto-descricao">
+                                Coleção de meus primeiros projetos de programação, demonstrando minha evolução como
+                                desenvolvedor.
+                            </p>
+                        </header>
+
+                        <div class="projeto-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+
+                        <footer class="projeto-actions">
+                            <a href="https://github.com/LeandroStanger/Projetos-iniciais" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto"
+                                aria-label="Ver código do projeto Projetos Iniciais">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                Ver Código
+                            </a>
+                        </footer>
+                    </article>
+
+                    <!-- Projeto 11 -->
+                    <article class="projeto-card" role="listitem">
+                        <header class="projeto-header">
+                            <h3 class="projeto-title">Leandro Stanger Portfólio</h3>
+                            <p class="projeto-descricao">
+                                Repositório principal com perfil, README detalhado e links para todos os projetos. Foco
+                                em desenvolvimento Front-end com HTML, CSS e JavaScript.
+                            </p>
+                        </header>
+
+                        <div class="projeto-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Git</span>
+                        </div>
+
+                        <footer class="projeto-actions">
+                            <a href="https://github.com/LeandroStanger/LeandroStanger" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto"
+                                aria-label="Ver código do projeto Portfólio">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                Ver Código
+                            </a>
+                            <a href="https://leandrostanger.github.io/LeandroStanger/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto-secundario"
+                                aria-label="Ver projeto online Portfólio">
+                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                Ver Online
+                            </a>
+                        </footer>
+                    </article>
+
+                    <!-- Projeto 12 -->
+                    <article class="projeto-card" role="listitem">
+                        <header class="projeto-header">
+                            <h3 class="projeto-title">Cidades com Altas Temperaturas</h3>
+                            <p class="projeto-descricao">
+                                Aplicação web interativa que exibe e filtra dados sobre cidades com climas extremos.
+                                Inclui mapa, dashboard e visualização de dados climáticos.
+                            </p>
+                        </header>
+
+                        <div class="projeto-tags">
+                            <span class="tag">JavaScript (ES6+)</span>
+                            <span class="tag">API</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">Data Visualization</span>
+                        </div>
+
+                        <footer class="projeto-actions">
+                            <a href="https://github.com/LeandroStanger/CidadesComAltasTemperaturas" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto"
+                                aria-label="Ver código do projeto Cidades com Altas Temperaturas">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                Ver Código
+                            </a>
+                            <a href="https://leandrostanger.github.io/CidadesComAltasTemperaturas/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto-secundario"
+                                aria-label="Ver projeto online Cidades com Altas Temperaturas">
+                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                Ver Online
+                            </a>
+                        </footer>
+                    </article>
+
+                    <!-- Projeto 13 -->
+                    <article class="projeto-card" role="listitem">
+                        <header class="projeto-header">
+                            <h3 class="projeto-title">Site com Loop Hack</h3>
+                            <p class="projeto-descricao">
+                                Site experimental com efeitos visuais em loop, animações criativas e técnicas avançadas
+                                de CSS/JavaScript. Demonstra habilidades em animações e design interativo.
+                            </p>
+                        </header>
+
+                        <div class="projeto-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Animações</span>
+                            <span class="tag">Experimentos Web</span>
+                        </div>
+
+                        <footer class="projeto-actions">
+                            <a href="https://github.com/LeandroStanger/SiteComLoopHack" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto"
+                                aria-label="Ver código do projeto Site com Loop Hack">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                Ver Código
+                            </a>
+                            <a href="https://leandrostanger.github.io/SiteComLoopHack/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto-secundario"
+                                aria-label="Ver projeto online Site com Loop Hack">
+                                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                Ver Online
+                            </a>
+                        </footer>
+                    </article>
+
+                    <!-- Projeto 14 -->
+                    <article class="projeto-card" role="listitem">
+                        <header class="projeto-header">
+                            <h3 class="projeto-title">Projetos Iniciais (Linguagem C)</h3>
+                            <p class="projeto-descricao">
+                                Coleção de meus primeiros projetos de programação na linguagem C, demonstrando minha
+                                evolução como desenvolvedor.
+                            </p>
+                        </header>
+
+                        <div class="projeto-tags">
+                            <span class="tag">C</span>
+                            <span class="tag">GCC</span>
+                        </div>
+
+                        <footer class="projeto-actions">
+                            <a href="https://github.com/LeandroStanger/Projetos-iniciais-C" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-projeto"
+                                aria-label="Ver código do projeto Projetos Iniciais em C">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                Ver Código
+                            </a>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="section contato-section" aria-labelledby="contato-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label" aria-hidden="true">05</span>
+                    <h2 id="contato-title" class="section-title">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        Entre em Contato
+                    </h2>
+                    <p class="section-subtitle">Estou sempre aberto a novas oportunidades e colaborações</p>
                 </div>
 
-                <div class="projeto-card">
-                    <h3>Carros Divertidos</h3>
-                    <p>Jogo interativo com carros em um ambiente 2D, desenvolvido para praticar conceitos de
-                        programação.</p>
-                    <div class="tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                    </div>
-                    <a href="https://github.com/LeandroStanger/CarrosDivertidos" target="_blank" class="btn">Ver
-                        Código</a>
-                    <a href="https://leandrostanger.github.io/CarrosDivertidos/" target="_blank"
-                        class="btn btn-secundario" style="margin-top: 8px;">
-                        <i class="fas fa-external-link-alt"></i> Ver Projeto Online </a>
-                </div>
-
-                <div class="projeto-card">
-                    <h3>Corrida de Carro</h3>
-                    <p>Simulação de corrida de carros com controles interativos e sistema de pontuação.</p>
-                    <div class="tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Canvas</span>
-                        <span class="tag">HTML5</span>
-                    </div>
-                    <a href="https://github.com/LeandroStanger/CorridaDeCarro" target="_blank" class="btn">Ver
-                        Código</a>
-                    <a href="https://leandrostanger.github.io/CorridaDeCarro/" target="_blank"
-                        class="btn btn-secundario" style="margin-top: 8px;">
-                        <i class="fas fa-external-link-alt"></i> Ver Projeto Online </a>
-                </div>
-
-                <div class="projeto-card">
-                    <h3>Animais no Zoológico</h3>
-                    <p>Versão inicial do sistema de gerenciamento de zoológico, com foco em aprendizado de JavaScript.
+                <div class="contato-content">
+                    <p class="contato-intro">
+                        Vamos conversar sobre projetos, oportunidades ou apenas trocar ideias sobre tecnologia!
                     </p>
-                    <div class="tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
+
+                    <div class="contato-grid">
+                        <div class="contato-info">
+                            <h3 class="contato-info-title">Vamos nos conectar</h3>
+                            <p class="contato-info-text">
+                                Você pode me encontrar nas seguintes plataformas ou enviar um email direto.
+                            </p>
+                        </div>
+
+                        <div class="contato-links" role="list">
+                            <a href="https://www.linkedin.com/in/leandrostanger1/" target="_blank"
+                                rel="noopener noreferrer" class="contato-link" aria-label="Meu perfil no LinkedIn"
+                                role="listitem">
+                                <div class="contato-link-icon">
+                                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                </div>
+                                <div class="contato-link-content">
+                                    <span class="contato-link-platform">LinkedIn</span>
+                                    <span class="contato-link-desc">Conecte-se profissionalmente</span>
+                                </div>
+                            </a>
+
+                            <a href="https://github.com/LeandroStanger" target="_blank" rel="noopener noreferrer"
+                                class="contato-link" aria-label="Meu perfil no GitHub" role="listitem">
+                                <div class="contato-link-icon">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </div>
+                                <div class="contato-link-content">
+                                    <span class="contato-link-platform">GitHub</span>
+                                    <span class="contato-link-desc">Veja meus projetos</span>
+                                </div>
+                            </a>
+
+                            <a href="mailto:leandrostanger@hotmail.com" class="contato-link"
+                                aria-label="Enviar email para Leandro" role="listitem">
+                                <div class="contato-link-icon">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                </div>
+                                <div class="contato-link-content">
+                                    <span class="contato-link-platform">Email</span>
+                                    <span class="contato-link-desc">leandrostanger@hotmail.com</span>
+                                </div>
+                            </a>
+
+                            <a href="https://wa.me/554896446508" target="_blank" rel="noopener noreferrer"
+                                class="contato-link" aria-label="Meu WhatsApp" role="listitem">
+                                <div class="contato-link-icon">
+                                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                </div>
+                                <div class="contato-link-content">
+                                    <span class="contato-link-platform">WhatsApp</span>
+                                    <span class="contato-link-desc">+55 (48) 9644-6508</span>
+                                </div>
+                            </a>
+
+                            <a href="https://www.99freelas.com.br/user/leandrostanger" target="_blank"
+                                rel="noopener noreferrer" class="contato-link" aria-label="Meu perfil no 99freelas"
+                                role="listitem">
+                                <div class="contato-link-icon">
+                                    <i class="fas fa-briefcase" aria-hidden="true"></i>
+                                </div>
+                                <div class="contato-link-content">
+                                    <span class="contato-link-platform">99freelas</span>
+                                    <span class="contato-link-desc">Perfil profissional</span>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <a href="https://github.com/LeandroStanger/AnimaisNoZoologico" target="_blank" class="btn">Ver
-                        Código</a>
-                    <a href="https://leandrostanger.github.io/AnimaisNoZoologico/" target="_blank"
-                        class="btn btn-secundario" style="margin-top: 8px;">
-                        <i class="fas fa-external-link-alt"></i> Ver Projeto Online </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <p class="footer-logo">Leandro Stanger</p>
+                    <p class="footer-tagline">Desenvolvedor Full-Stack e Estudante de Engenharia da Computação</p>
                 </div>
 
-                <div class="projeto-card">
-                    <h3>Site com Loop</h3>
-                    <p>Site demonstrativo com efeitos visuais em loop e animações CSS/JavaScript.</p>
-                    <div class="tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                    </div>
-                    <a href="https://github.com/LeandroStanger/SiteComLoop" target="_blank" class="btn">Ver Código</a>
-                    <a href="https://leandrostanger.github.io/SiteComLoop/" target="_blank" class="btn btn-secundario"
-                        style="margin-top: 8px;">
-                        <i class="fas fa-external-link-alt"></i> Ver Projeto Online </a>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 - <span id="mostrarAnoAtual"></span> Leandro Stanger. Todos os direitos reservados.
+                    </p>
                 </div>
 
-                <div class="projeto-card">
-                    <h3>Sistema de Login</h3>
-                    <p>Sistema de autenticação de usuários com validação de credenciais e interface responsiva.</p>
-                    <div class="tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                    </div>
-                    <a href="https://github.com/LeandroStanger/SistemaDeLogin" target="_blank" class="btn">Ver
-                        Código</a>
-                    <a href="https://leandrostanger.github.io/SistemaDeLogin/" target="_blank"
-                        class="btn btn-secundario" style="margin-top: 8px;">
-                        <i class="fas fa-external-link-alt"></i> Ver Projeto Online </a>
-                </div>
-
-                <div class="projeto-card">
-                    <h3>Gerenciador de Lista</h3>
-                    <p>Aplicação para criar, editar e excluir itens de listas, com armazenamento local.</p>
-                    <div class="tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">LocalStorage</span>
-                        <span class="tag">CSS</span>
-                    </div>
-                    <a href="https://github.com/LeandroStanger/GerenciadorDeLista" target="_blank" class="btn">Ver
-                        Código</a>
-                    <a href="https://leandrostanger.github.io/GerenciadorDeLista/" target="_blank"
-                        class="btn btn-secundario" style="margin-top: 8px;">
-                        <i class="fas fa-external-link-alt"></i> Ver Projeto Online </a>
-                </div>
-
-                <div class="projeto-card">
-                    <h3>Projetos Iniciais</h3>
-                    <p>Coleção de meus primeiros projetos de programação, demonstrando minha evolução como
-                        desenvolvedor.</p>
-                    <div class="tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                    </div>
-                    <a href="https://github.com/LeandroStanger/Projetos-iniciais" target="_blank" class="btn">Ver
-                        Código</a>
-                </div>
-                <div class="projeto-card">
-                    <h3>Leandro Stanger Portfólio</h3>
-                    <p>Repositório principal com perfil, README detalhado e links para todos os projetos. Foco em
-                        desenvolvimento Front-end com HTML, CSS e JavaScript.</p>
-                    <div class="tags">
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Git</span>
-                    </div>
-                    <a href="https://github.com/LeandroStanger/LeandroStanger" target="_blank" class="btn">Ver
-                        Código</a>
-                    <a href="https://leandrostanger.github.io/LeandroStanger/" target="_blank"
-                        class="btn btn-secundario" style="margin-top: 8px;">
-                        <i class="fas fa-external-link-alt"></i> Ver Projeto Online </a>
-                </div>
-
-                <div class="projeto-card">
-                    <h3>Cidades com Altas Temperaturas</h3>
-                    <p>Aplicação web interativa que exibe e filtra dados sobre cidades com climas extremos. Inclui mapa,
-                        dashboard e visualização de dados climáticos.</p>
-                    <div class="tags">
-                        <span class="tag">JavaScript (ES6+)</span>
-                        <span class="tag">API</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">Data Visualization</span>
-                    </div>
-                    <a href="https://github.com/LeandroStanger/CidadesComAltasTemperaturas" target="_blank"
-                        class="btn">Ver Código</a>
-                    <a href="https://leandrostanger.github.io/CidadesComAltasTemperaturas/" target="_blank"
-                        class="btn btn-secundario" style="margin-top: 8px;">
-                        <i class="fas fa-external-link-alt"></i> Ver Projeto Online
+                <div class="footer-back">
+                    <a href="#inicio" class="btn-back-top" aria-label="Voltar ao topo da página">
+                        <i class="fas fa-arrow-up" aria-hidden="true"></i>
                     </a>
                 </div>
-                <div class="projeto-card">
-                    <h3>Site com Loop Hack</h3>
-                    <p>Site experimental com efeitos visuais em loop, animações criativas e técnicas avançadas de
-                        CSS/JavaScript. Demonstra habilidades em animações e design interativo.</p>
-                    <div class="tags">
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Animações</span>
-                        <span class="tag">Experimentos Web</span>
-                    </div>
-                    <a href="https://github.com/LeandroStanger/SiteComLoopHack" target="_blank" class="btn">Ver
-                        Código</a>
-                    <a href="https://leandrostanger.github.io/SiteComLoopHack/" target="_blank"
-                        class="btn btn-secundario" style="margin-top: 8px;">
-                        <i class="fas fa-external-link-alt"></i> Ver Projeto Online
-                    </a>
-                </div>
-                <div class="projeto-card">
-                    <h3>Projetos Iniciais (Linguagem C)</h3>
-                    <p>Coleção de meus primeiros projetos de programação na linguagem C, demonstrando minha evolução
-                        como desenvolvedor.</p>
-                    <div class="tags">
-                        <span class="tag">C</span>
-                        <span class="tag">GCC</span>
-                    </div>
-                    <a href="https://github.com/LeandroStanger/Projetos-iniciais-C" target="_blank" class="btn">Ver
-                        Código</a>
-                </div>
-        </section>
-
-        <section class="contato-section">
-            <h2>📞 Entre em Contato</h2>
-            <p>Estou sempre aberto a novas oportunidades e colaborações.</p>
-            <div class="contato">
-                <a href="https://www.linkedin.com/in/leandrostanger1/" target="_blank" title="LinkedIn"><i
-                        class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/LeandroStanger" target="_blank" title="GitHub"><i
-                        class="fab fa-github"></i></a>
-                <a href="mailto:leandrostanger@hotmail.com" title="E-mail"><i class="far fa-envelope"></i></a>
-                <a href="https://wa.me/554896446508" target="_blank" title="WhatsApp"><i
-                        class="fab fa-whatsapp"></i></a>
-                <a href="https://www.99freelas.com.br/user/leandrostanger" target="_blank" title="99freelas">
-                    <i class="fas fa-briefcase"></i>
-                </a>
             </div>
-        </section>
+        </div>
+    </footer>
 
-        <footer>
-            <p>&copy; 2025 - <span id="mostrarAnoAtual"></span> Leandro Stanger. Todos os direitos reservados.</p>
-        </footer>
-    </div>
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="script.js"></script>

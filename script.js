@@ -181,5 +181,22 @@ function calcularTempo() {
     document.getElementById('resultado2').textContent = resultado2;
 }
 
+       // Remove classe no-js quando JS estiver disponível
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+
+        // Smooth scroll para âncoras internas
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 calcularTempo();
 
