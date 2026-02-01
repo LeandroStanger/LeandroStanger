@@ -1,6 +1,6 @@
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=00ff00&height=120&section=header"/>
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=10b981&height=120&section=header"/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?weight=500&size=30&pause=10000&color=00FF00&width=1000&height=80&lines=%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB+Leandro+Stanger+-+Desenvolvedor+Full-Stack)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?weight=500&size=30&pause=10000&color=10b981&width=1000&height=80&lines=%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB+Leandro+Stanger+-+Desenvolvedor+Full-Stack)](https://git.io/typing-svg)
 
 <div align="center">
   
@@ -126,4 +126,4 @@ Coleção de meus primeiros projetos de programação na linguagem C, demonstran
 ![Visitor Count](https://komarev.com/ghpvc/?username=leandrostanger&color=blueviolet&style=for-the-badge)
 
 </div>
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=00ff00&height=120&section=footer"/>
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=10b981&height=120&section=footer"/>
