@@ -4,7 +4,7 @@
 
 <div align="center">
   
-[![GitHub Pages](https://img.shields.io/badge/Portfólio_Online-4a6cf7?style=for-the-badge&logo=opsgenie&logoColor=4a6cf7&labelColor=000000)](https://leandrostanger.github.io/LeandroStanger/)
+[![GitHub Pages](https://img.shields.io/badge/Portfólio_Online-10b981?style=for-the-badge&logo=opsgenie&logoColor=10b981&labelColor=000000)](https://leandrostanger.github.io/LeandroStanger/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=logmein&logoColor=0077B5&labelColor=000000)](https://linkedin.com/in/leandrostanger1)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=000000)](https://github.com/LeandroStanger)
 </div>
