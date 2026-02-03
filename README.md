@@ -134,7 +134,7 @@ Vamos conversar sobre projetos, oportunidades ou apenas trocar ideias sobre tecn
 
 ### Não esqueça de dar uma estrela nos repositórios que você gostou!
 
-![Visitor Count](https://komarev.com/ghpvc/?username=leandrostanger&color=blueviolet&style=for-the-badge)
+[![Visitor Count](https://komarev.com/ghpvc/?username=leandrostanger&color=blueviolet&style=for-the-badge)](https://leandrostanger.github.io/LeandroStanger)
 
 </div>
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=10b981&height=120&section=footer"/>
