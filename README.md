@@ -103,7 +103,7 @@ Coleção de meus primeiros projetos de programação na linguagem C, demonstran
 ## Estatísticas do GitHub
 
 [![GitHub Stats](https://helio-github-stats.vercel.app/api?username=LeandroStanger&custom_title=GitHub+Stats&theme=dark&title_color=10b981&text_color=10b981&icon_color=10b981&ring_color=10b981&border_color=e4e2e2&hide_border=true&locale=pt-br&border_radius=4.5&card_width=466&hide_title=false&hide_rank=false&rank_icon=default&show_icons=true&include_all_commits=true&line_height=25&text_bold=true&disable_animations=false&number_format=short&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)](https://github.com/LeandroStanger)
-[![Linguagens mais usadas](https://helio-github-stats.vercel.app/api/top-langs?username=LeandroStanger&layout=pie&stats_format=percentages&&theme=dark&title_color=10b981&text_color=10b981&icon_color=10b981&ring_color=10b981&border_color=e4e2e2&hide_border=true&border_radius=4.5&card_width=466&locale=pt-br&custom_title=Linguagens+mais+usadas)](https://github.com/LeandroStanger)
+[![Linguagens mais usadas](https://helio-github-stats.vercel.app/api/top-langs?username=LeandroStanger&layout=pie&stats_format=percentages&&theme=dark&title_color=10b981&text_color=10b981&icon_color=10b981&ring_color=10b981&border_color=e4e2e2&hide_border=true&border_radius=4.5&card_width=240&locale=pt-br&custom_title=Linguagens+mais+usadas)](https://github.com/LeandroStanger)
 </div>
 
 ## Portfólio Completo
