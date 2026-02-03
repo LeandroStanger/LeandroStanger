@@ -114,14 +114,16 @@ Coleção de meus primeiros projetos de programação na linguagem C, demonstran
 ### [leandrostanger.github.io/LeandroStanger](https://leandrostanger.github.io/LeandroStanger/)
 
 ## Contato
+<div align="center">
 
-- **Email:** [leandrostanger@hotmail.com](leandrostanger@hotmail.com)
-- **LinkedIn:** [linkedin.com/in/leandrostanger1](https://linkedin.com/in/leandrostanger1)
-- **GitHub:** [github.com/LeandroStanger](https://github.com/LeandroStanger)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=logmein&logoColor=0077B5&labelColor=000000)](https://linkedin.com/in/leandrostanger1)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=000000)](https://github.com/LeandroStanger)
+[![Instagram](https://img.shields.io/badge/Instagram-FF0069?style=for-the-badge&logo=instagram&logoColor=FF0069&labelColor=000000)](https://www.instagram.com/leandrostanger/)
+[![E-Mail](https://img.shields.io/badge/EMail-005FF9?style=for-the-badge&logo=gmail&logoColor=005FF9&labelColor=000000)](leandrostanger@hotmail.com)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=25D366&labelColor=000000)](https://wa.me/554896446508)
+[![99freelas](https://img.shields.io/badge/99-99freelas-40AEF0?style=for-the-badge&logo=&logoColor=40AEF0&labelColor=000000)](https://www.99freelas.com.br/user/leandrostanger)
 
 ---
-
-<div align="center">
 
 ### Não esqueça de dar uma estrela nos repositórios que você gostou!
 
