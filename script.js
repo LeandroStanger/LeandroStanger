@@ -198,5 +198,128 @@ function calcularTempo() {
                 }
             });
         });
-calcularTempo();
 
+// Formulário de contato com Formspree
+const contactForm = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Desabilita o botão de envio
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+        
+        // Remove mensagens anteriores
+        if (formStatus) {
+            formStatus.textContent = '';
+            formStatus.className = 'form-status';
+        }
+        
+        try {
+            const formData = new FormData(contactForm);
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                // Sucesso
+                if (formStatus) {
+                    formStatus.textContent = '✅ Mensagem enviada com sucesso! Entrarei em contato em breve.';
+                    formStatus.classList.add('success');
+                }
+                
+                // Reset do formulário
+                contactForm.reset();
+                
+                // Feedback visual
+                contactForm.classList.add('success');
+                setTimeout(() => {
+                    contactForm.classList.remove('success');
+                }, 2000);
+                
+            } else {
+                // Erro do servidor
+                if (formStatus) {
+                    formStatus.textContent = '❌ Ocorreu um erro ao enviar a mensagem. Tente novamente.';
+                    formStatus.classList.add('error');
+                }
+                
+                // Feedback visual de erro
+                contactForm.classList.add('shake');
+                setTimeout(() => {
+                    contactForm.classList.remove('shake');
+                }, 600);
+                
+                throw new Error('Form submission failed');
+            }
+            
+        } catch (error) {
+            // Erro de rede
+            if (formStatus) {
+                formStatus.textContent = '❌ Erro de conexão. Verifique sua internet e tente novamente.';
+                formStatus.classList.add('error');
+            }
+            
+            // Feedback visual de erro
+            contactForm.classList.add('shake');
+            setTimeout(() => {
+                contactForm.classList.remove('shake');
+            }, 600);
+            
+            console.error('Erro no formulário:', error);
+            
+        } finally {
+            // Reabilita o botão
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar Mensagem';
+            }, 2000);
+            
+            // Limpa a mensagem de status após 5 segundos
+            setTimeout(() => {
+                if (formStatus) {
+                    formStatus.textContent = '';
+                    formStatus.className = 'form-status';
+                }
+            }, 5000);
+        }
+    });
+    
+    // Validação em tempo real
+    const inputs = contactForm.querySelectorAll('input, textarea');
+    inputs.forEach(input => {
+        input.addEventListener('blur', function() {
+            if (this.value.trim() === '' && this.hasAttribute('required')) {
+                this.style.borderColor = 'var(--color-error)';
+            } else if (this.type === 'email' && this.value) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(this.value)) {
+                    this.style.borderColor = 'var(--color-error)';
+                } else {
+                    this.style.borderColor = 'var(--color-success)';
+                }
+            } else if (this.value) {
+                this.style.borderColor = 'var(--color-success)';
+            } else {
+                this.style.borderColor = 'var(--color-dark-600)';
+            }
+        });
+        
+        input.addEventListener('input', function() {
+            if (this.value.trim() !== '') {
+                this.style.borderColor = 'var(--color-primary)';
+            } else {
+                this.style.borderColor = 'var(--color-dark-600)';
+            }
+        });
+    });
+}
+
+calcularTempo();

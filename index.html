@@ -1078,6 +1078,29 @@
                             <p class="contato-info-text">
                                 Você pode me encontrar nas seguintes plataformas ou enviar um email direto.
                             </p>
+                     <form id="contact-form" class="form" action="https://formspree.io/f/xjgevgvg" method="POST">
+                        <div class="form-input-group">
+                            <label for="name" class="form-label sr-only">Seu Nome</label>
+                            <input type="text" id="name" name="name" placeholder="Seu Nome" class="input" required>
+                        </div>
+                        
+                        <div class="form-input-group">
+                            <label for="email" class="form-label sr-only">Seu E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="Seu E-mail" class="input" required>
+                        </div>
+                        
+                        <div class="form-input-group">
+                            <label for="message" class="form-label sr-only">Sua Mensagem</label>
+                            <textarea id="message" name="message" placeholder="Sua Mensagem" rows="4" required></textarea>
+                        </div>
+                        
+                        <button type="submit" id="submit-btn">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            Enviar Mensagem
+                        </button>
+                        
+                        <p id="form-status" class="form-status"></p>
+                    </form>
                         </div>
 
                         <div class="contato-links" role="list">

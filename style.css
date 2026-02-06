@@ -1446,3 +1446,300 @@ a:focus {
         scroll-behavior: auto !important;
     }
 }
+
+/* From Uiverse.io by Yaya12085 */ 
+.form {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  background-color: #171717;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 30px 30px -30px #404040;
+}
+
+.form .title {
+  color: #299971;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form input {
+  outline: 0;
+  border: 1px solid #121212;
+  padding: 8px 14px;
+  border-radius: 8px;
+  width: 100%;
+  height: 50px;
+}
+
+.form textarea {
+  border-radius: 8px;
+  height: 100px;
+  width: 100%;
+  resize: none;
+  outline: 0;
+  padding: 8px 14px;
+  border: 1px solid #121212;
+}
+
+.form button {
+  align-self: flex-end;
+  padding: 8px;
+  outline: 0;
+  border: 0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #162721;
+  color: #299971;
+  cursor: pointer;
+}
+    /* ============ FORMULÁRIO DE CONTATO ============ */
+.form {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--space-4);
+    width: 100%;
+    background: var(--color-dark-800);
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-dark-600);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    margin-top: var(--space-4);
+}
+
+.form:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-green);
+}
+
+.form .title {
+    color: var(--color-primary-light);
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-2);
+    width: 100%;
+}
+
+.form-input-group {
+    width: 100%;
+    margin-bottom: var(--space-2);
+}
+
+.form-label {
+    display: block;
+    font-size: var(--text-sm);
+    color: var(--color-gray);
+    margin-bottom: var(--space-2);
+    font-weight: 500;
+}
+
+.form input,
+.form textarea {
+    outline: 0;
+    border: 1px solid var(--color-dark-600);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-md);
+    width: 100%;
+    background: var(--color-dark-900);
+    color: var(--color-light);
+    font-family: var(--font-primary);
+    font-size: var(--text-base);
+    transition: all var(--transition-fast);
+}
+
+.form input {
+    height: 48px;
+}
+
+.form textarea {
+    height: 120px;
+    resize: vertical;
+    min-height: 120px;
+    max-height: 200px;
+}
+
+.form input:focus,
+.form textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-primary-soft);
+    background: var(--color-dark-800);
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    color: var(--color-gray-dark);
+    opacity: 0.7;
+}
+
+.form input:hover,
+.form textarea:hover {
+    border-color: var(--color-primary-light);
+}
+
+.form button {
+    align-self: flex-end;
+    padding: var(--space-3) var(--space-6);
+    outline: 0;
+    border: 0;
+    border-radius: var(--radius-md);
+    font-size: var(--text-base);
+    font-weight: 600;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
+    color: var(--color-light);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    font-family: var(--font-primary);
+    width: 100%;
+    margin-top: var(--space-2);
+    position: relative;
+    overflow: hidden;
+}
+
+.form button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left var(--transition-slow);
+}
+
+.form button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    background: linear-gradient(90deg, var(--color-primary-dark), var(--color-primary));
+}
+
+.form button:hover::before {
+    left: 100%;
+}
+
+.form button:active {
+    transform: translateY(0);
+}
+
+/* Estados de validação */
+.form input:invalid,
+.form textarea:invalid {
+    border-color: var(--color-error);
+}
+
+.form input:valid,
+.form textarea:valid {
+    border-color: var(--color-success);
+}
+
+/* Animações para o formulário */
+@keyframes formAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form {
+    animation: formAppear 0.6s ease-out 0.3s both;
+}
+
+/* Responsividade para o formulário */
+@media (max-width: 768px) {
+    .form {
+        padding: var(--space-4);
+        gap: var(--space-3);
+    }
+    
+    .form input,
+    .form textarea {
+        padding: var(--space-2) var(--space-3);
+    }
+    
+    .form input {
+        height: 44px;
+    }
+    
+    .form textarea {
+        height: 100px;
+        min-height: 100px;
+    }
+    
+    .form button {
+        padding: var(--space-2) var(--space-4);
+    }
+}
+
+@media (max-width: 480px) {
+    .form {
+        padding: var(--space-3);
+    }
+    
+    .form .title {
+        font-size: var(--text-lg);
+    }
+    
+    .form input,
+    .form textarea {
+        font-size: var(--text-sm);
+    }
+    
+    .form button {
+        font-size: var(--text-sm);
+    }
+}
+
+/* Melhorias para acessibilidade */
+.form input:focus-visible,
+.form textarea:focus-visible,
+.form button:focus-visible {
+    outline: 2px solid var(--color-primary-light);
+    outline-offset: 2px;
+}
+
+/* Feedback visual durante interação */
+.form button:disabled {
+    background: var(--color-dark-600);
+    color: var(--color-gray);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.form button:disabled:hover {
+    background: var(--color-dark-600);
+    transform: none;
+    box-shadow: none;
+}
+
+/* Adicionar ícone ao botão */
+.form button i {
+    margin-right: var(--space-2);
+    transition: transform var(--transition-fast);
+}
+
+.form button:hover i {
+    transform: translateX(2px);
+}
