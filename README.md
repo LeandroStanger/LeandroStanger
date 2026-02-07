@@ -4,7 +4,7 @@
 
 <div align="center">
   
-[![GitHub Pages](https://img.shields.io/badge/Portfólio_Online-10b981?style=for-the-badge&logo=opsgenie&logoColor=10b981&labelColor=000000)](https://leandrostanger.github.io/LeandroStanger/)
+[![GitHub Pages](https://img.shields.io/badge/Portfólio_Online-10b981?style=for-the-badge&logo=opsgeniereacthookform&labelColor=000000)](https://leandrostanger.github.io/LeandroStanger/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=logmein&logoColor=0077B5&labelColor=000000)](https://linkedin.com/in/leandrostanger1)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=000000)](https://github.com/LeandroStanger)
 </div>
@@ -30,27 +30,27 @@ const leandro = {
 ## Projetos em Destaque
 
 ### [Gerenciador de Lista](https://github.com/LeandroStanger/GerenciadorDeLista)
-[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge)](https://leandrostanger.github.io/GerenciadorDeLista/)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=reacthookform&logoColor=97ca00)](https://leandrostanger.github.io/GerenciadorDeLista/)
 Sistema para gerenciamento de listas de pessoas com armazenamento local.
 
 ### [Sistema de Login](https://github.com/LeandroStanger/SistemaDeLogin)
-[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge)](https://leandrostanger.github.io/SistemaDeLogin/)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=verizon&logoColor=97ca00)](https://leandrostanger.github.io/SistemaDeLogin/)
 Sistema completo de autenticação com validação e registro de usuários.
 
 ### [Cidades com Altas Temperaturas](https://github.com/LeandroStanger/CidadesComAltasTemperaturas)
-[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge)](https://leandrostanger.github.io/CidadesComAltasTemperaturas/)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=accuweather&logoColor=97ca00)](https://leandrostanger.github.io/CidadesComAltasTemperaturas/)
 Aplicação com dados climáticos fictícios de cidades quentes.
 
 ### [Corrida de Carro](https://github.com/LeandroStanger/CorridaDeCarro)
-[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge)](https://leandrostanger.github.io/CorridaDeCarro/)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=starship&logoColor=97ca00)](https://leandrostanger.github.io/CorridaDeCarro/)
 Simulador de apostas em corridas com escolha de números.
 
 ### [Formulário de Feedback](https://github.com/LeandroStanger/FormularioDeFeedback)
-[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge)](https://leandrostanger.github.io/FormularioDeFeedback/)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=googleforms&logoColor=97ca00)](https://leandrostanger.github.io/FormularioDeFeedback/)
 Formulário interativo para coleta de feedback com validação.
 
 ### [Animais no Zoológico](https://github.com/LeandroStanger/AnimaisNoZoologico)
-[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge)](https://leandrostanger.github.io/AnimaisNoZoologico/)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=animalplanet&logoColor=97ca00)](https://leandrostanger.github.io/AnimaisNoZoologico/)
 Site educativo sobre animais com dados inventados para demonstração.
 
 <div align="right">
@@ -61,11 +61,11 @@ Site educativo sobre animais com dados inventados para demonstração.
 ## Repositórios dedicado ao aprendizado e prática dos fundamentos!
 
 ### [Projetos-iniciais](https://github.com/LeandroStanger/Projetos-iniciais)
-[![Estudo Em andamento](https://img.shields.io/badge/Estudo-Em_andamento-1572B6?style=for-the-badge)](https://github.com/LeandroStanger/Projetos-iniciais)
+[![Estudo Em andamento](https://img.shields.io/badge/Estudo-Em_andamento-1572B6?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://github.com/LeandroStanger/Projetos-iniciais)
 Coleção de meus primeiros projetos de programação, demonstrando minha evolução como desenvolvedor.
 
 ### [Projetos Iniciais (Linguagem C)](https://github.com/LeandroStanger/Projetos-iniciais-C)
-[![Estudo Em andamento](https://img.shields.io/badge/Estudo-Em_andamento-1572B6?style=for-the-badge)](https://github.com/LeandroStanger/Projetos-iniciais-C)
+[![Estudo Em andamento](https://img.shields.io/badge/Estudo-Em_andamento-1572B6?style=for-the-badge&logo=c&logoColor=A8B9CC)](https://github.com/LeandroStanger/Projetos-iniciais-C)
 Coleção de meus primeiros projetos de programação na linguagem C, demonstrando minha evolução como desenvolvedor.
 
 <div align="center">
