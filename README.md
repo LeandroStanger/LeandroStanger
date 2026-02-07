@@ -53,6 +53,9 @@ Formulário interativo para coleta de feedback com validação.
 [![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge)](https://leandrostanger.github.io/AnimaisNoZoologico/)
 Site educativo sobre animais com dados inventados para demonstração.
 
+[![Ver todos projetos](https://img.shields.io/badge/Ver_todos_projetos-FFE500?style=for-the-badge&logo=cobalt&logoColor=FFE500&labelColor=000000)](https://leandrostanger.github.io/LeandroStanger/#projetos)
+
+
 ## Repositórios dedicado ao aprendizado e prática dos fundamentos!
 
 ### [Projetos-iniciais](https://github.com/LeandroStanger/Projetos-iniciais)
