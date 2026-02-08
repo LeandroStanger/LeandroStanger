@@ -16,24 +16,23 @@
     <meta property="og:description" content="Desenvolvedor Full-Stack e Estudante de Engenharia da Computação">
     <meta property="og:type" content="website">
     <meta property="og:image" content="img/perfil.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
+    <!-- Preload de recursos críticos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap">
+    
+    <!-- Ícones -->
     <link rel="shortcut icon" href="img/perfil.jpg" type="image/x-icon">
     <link rel="apple-touch-icon" href="img/perfil.jpg">
 
     <!-- Fontes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
 
-    <!-- Ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Carousel -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!-- Ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS Principal -->
     <link rel="stylesheet" href="style.css">
@@ -50,8 +49,8 @@
         <div class="container">
             <div class="header-content">
                 <div class="header-text">
-                    <h1 class="main-title">
-                        <span class="title-line">Leandro Stanger</span>
+                    <h1 class="main-title" id="typewriter">
+                        Leandro Stanger
                     </h1>
 
                     <p class="tagline" role="doc-subtitle">
@@ -74,7 +73,7 @@
                 <div class="profile-container" aria-label="Foto de perfil do Leandro">
                     <div class="profile-frame">
                         <img src="img/perfil.jpg" alt="Leandro Stanger - Foto profissional" class="profile-image"
-                            width="280" height="280">
+                            width="280" height="280" loading="eager">
                         <div class="profile-decoration"></div>
                     </div>
                 </div>
@@ -310,14 +309,14 @@
                                 <div class="experiencia-header">
                                     <h4 class="experiencia-empresa">Confecções Vanelise</h4>
                                     <div class="experiencia-periodo">
-                                        <span id="resultado1" class="periodo-detalhes"></span>
+                                        <span id="experiencia-periodo-1" class="periodo-detalhes"></span>
                                     </div>
                                 </div>
 
                                 <div class="experiencia-cargo">
                                     <h5 class="cargo-title">Auxiliar de Expedição Nível 2 (Tecido Plano)</h5>
                                     <div class="cargo-periodo">
-                                        <span id="resultado" class="periodo-detalhes">ago de 2025 - em andamento ·
+                                        <span id="cargo-periodo-1" class="periodo-detalhes">ago de 2025 - em andamento ·
                                         </span>
                                     </div>
                                     <ul class="cargo-responsabilidades" role="list">
@@ -348,7 +347,7 @@
                                 <div class="experiencia-header">
                                     <h4 class="experiencia-empresa">Manutenção de Computadores – Autônomo</h4>
                                     <div class="experiencia-periodo">
-                                        <span id="resultado2" class="periodo-detalhes">Jan/2014 – em andamento</span>
+                                        <span id="experiencia-periodo-2" class="periodo-detalhes">Jan/2014 – em andamento</span>
                                     </div>
                                 </div>
 
@@ -452,15 +451,15 @@
                         </header>
                         <div class="tecnologia-icons">
                             <div class="tecnologia-icon" aria-label="HTML">
-                                <img src="img/img2.png" alt="HTML5" width="64" height="64">
+                                <img src="img/img2.png" alt="HTML5" width="64" height="64" loading="lazy">
                                 <span class="tecnologia-label">HTML</span>
                             </div>
                             <div class="tecnologia-icon" aria-label="CSS">
-                                <img src="img/img3.png" alt="CSS3" width="64" height="64">
+                                <img src="img/img3.png" alt="CSS3" width="64" height="64" loading="lazy">
                                 <span class="tecnologia-label">CSS</span>
                             </div>
                             <div class="tecnologia-icon" aria-label="JavaScript">
-                                <img src="img/img.jpg" alt="JavaScript" width="64" height="64">
+                                <img src="img/img.jpg" alt="JavaScript" width="64" height="64" loading="lazy">
                                 <span class="tecnologia-label">JavaScript</span>
                             </div>
                         </div>
@@ -476,11 +475,11 @@
                         </header>
                         <div class="tecnologia-icons">
                             <div class="tecnologia-icon" aria-label="Node.js">
-                                <img src="img/img18.png" alt="Node.js" width="64" height="64">
+                                <img src="img/img18.png" alt="Node.js" width="64" height="64" loading="lazy">
                                 <span class="tecnologia-label">Node.js</span>
                             </div>
                             <div class="tecnologia-icon" aria-label="C">
-                                <img src="img/img19.png" alt="C" width="64" height="64">
+                                <img src="img/img19.png" alt="C" width="64" height="64" loading="lazy">
                                 <span class="tecnologia-label">C</span>
                             </div>
                         </div>
@@ -496,15 +495,15 @@
                         </header>
                         <div class="tecnologia-icons">
                             <div class="tecnologia-icon" aria-label="Docker">
-                                <img src="img/img13.png" alt="Docker" width="64" height="64">
+                                <img src="img/img13.png" alt="Docker" width="64" height="64" loading="lazy">
                                 <span class="tecnologia-label">Docker</span>
                             </div>
                             <div class="tecnologia-icon" aria-label="Podman">
-                                <img src="img/img14.png" alt="Podman" width="64" height="64">
+                                <img src="img/img14.png" alt="Podman" width="64" height="64" loading="lazy">
                                 <span class="tecnologia-label">Podman</span>
                             </div>
                             <div class="tecnologia-icon" aria-label="WinBoat">
-                                <img src="img/img15.png" alt="WinBoat" width="64" height="64">
+                                <img src="img/img15.png" alt="WinBoat" width="64" height="64" loading="lazy">
                                 <span class="tecnologia-label">WinBoat</span>
                             </div>
                         </div>
@@ -520,23 +519,23 @@
                         </header>
                         <div class="tecnologia-icons">
                             <div class="tecnologia-icon" aria-label="SQL">
-                                <img src="img/img7.png" alt="SQL" width="64" height="64">
+                                <img src="img/img7.png" alt="SQL" width="64" height="64" loading="lazy">
                                 <span class="tecnologia-label">SQL</span>
                             </div>
                             <div class="tecnologia-icon" aria-label="MySQL">
-                                <img src="img/img9.png" alt="MySQL" width="64" height="64">
+                                <img src="img/img9.png" alt="MySQL" width="64" height="64" loading="lazy">
                                 <span class="tecnologia-label">MySQL</span>
                             </div>
                             <div class="tecnologia-icon" aria-label="Databricks">
-                                <img src="img/img8.png" alt="Databricks" width="64" height="64">
+                                <img src="img/img8.png" alt="Databricks" width="64" height="64" loading="lazy">
                                 <span class="tecnologia-label">Databricks</span>
                             </div>
                             <div class="tecnologia-icon" aria-label="Azure Data Studio">
-                                <img src="img/img12.png" alt="Azure Data Studio" width="64" height="64">
+                                <img src="img/img12.png" alt="Azure Data Studio" width="64" height="64" loading="lazy">
                                 <span class="tecnologia-label">Azure Data Studio</span>
                             </div>
                             <div class="tecnologia-icon" aria-label="Microsoft SQL Server">
-                                <img src="img/img11.png" alt="Microsoft SQL Server" width="64" height="64">
+                                <img src="img/img11.png" alt="Microsoft SQL Server" width="64" height="64" loading="lazy">
                                 <span class="tecnologia-label">SQL Server</span>
                             </div>
                         </div>
@@ -552,23 +551,23 @@
                         </header>
                         <div class="tecnologia-icons">
                             <div class="tecnologia-icon" aria-label="Git">
-                                <img src="img/img4.png" alt="Git" width="64" height="64">
+                                <img src="img/img4.png" alt="Git" width="64" height="64" loading="lazy">
                                 <span class="tecnologia-label">Git</span>
                             </div>
                             <div class="tecnologia-icon" aria-label="GitHub">
-                                <img src="img/img6.png" alt="GitHub" width="64" height="64">
+                                <img src="img/img6.png" alt="GitHub" width="64" height="64" loading="lazy">
                                 <span class="tecnologia-label">GitHub</span>
                             </div>
                             <div class="tecnologia-icon" aria-label="Visual Studio Code">
-                                <img src="img/img5.png" alt="Visual Studio Code" width="64" height="64">
+                                <img src="img/img5.png" alt="Visual Studio Code" width="64" height="64" loading="lazy">
                                 <span class="tecnologia-label">VS Code</span>
                             </div>
                             <div class="tecnologia-icon" aria-label="Microsoft Excel">
-                                <img src="img/img10.png" alt="Microsoft Excel" width="64" height="64">
+                                <img src="img/img10.png" alt="Microsoft Excel" width="64" height="64" loading="lazy">
                                 <span class="tecnologia-label">Excel</span>
                             </div>
                             <div class="tecnologia-icon" aria-label="Code::Blocks">
-                                <img src="img/img20.png" alt="Code::Blocks" width="64" height="64">
+                                <img src="img/img20.png" alt="Code::Blocks" width="64" height="64" loading="lazy">
                                 <span class="tecnologia-label">Code::Blocks</span>
                             </div>
                         </div>
@@ -584,11 +583,11 @@
                         </header>
                         <div class="tecnologia-icons">
                             <div class="tecnologia-icon" aria-label="Arch Linux">
-                                <img src="img/img16.png" alt="Arch Linux" width="64" height="64">
+                                <img src="img/img16.png" alt="Arch Linux" width="64" height="64" loading="lazy">
                                 <span class="tecnologia-label">Arch Linux</span>
                             </div>
                             <div class="tecnologia-icon" aria-label="BigLinux">
-                                <img src="img/img17.png" alt="BigLinux" width="64" height="64">
+                                <img src="img/img17.png" alt="BigLinux" width="64" height="64" loading="lazy">
                                 <span class="tecnologia-label">BigLinux</span>
                             </div>
                         </div>
@@ -645,7 +644,7 @@
 
                 <div class="projetos-grid" id="projetos-grid">
                     <!-- Projeto 1 -->
-                    <article class="projeto-card" role="listitem">
+                    <article class="projeto-card" role="listitem" data-category="frontend">
                         <header class="projeto-header">
                             <h3 class="projeto-title">Animais no Zoológico 2</h3>
                             <p class="projeto-descricao">
@@ -677,7 +676,7 @@
                     </article>
 
                     <!-- Projeto 2 -->
-                    <article class="projeto-card" role="listitem">
+                    <article class="projeto-card" role="listitem" data-category="frontend">
                         <header class="projeto-header">
                             <h3 class="projeto-title">Dados Climáticos</h3>
                             <p class="projeto-descricao">
@@ -709,7 +708,7 @@
                     </article>
 
                     <!-- Projeto 3 -->
-                    <article class="projeto-card" role="listitem">
+                    <article class="projeto-card" role="listitem" data-category="frontend">
                         <header class="projeto-header">
                             <h3 class="projeto-title">Formulário de Feedback</h3>
                             <p class="projeto-descricao">
@@ -740,7 +739,7 @@
                     </article>
 
                     <!-- Projeto 4 -->
-                    <article class="projeto-card" role="listitem">
+                    <article class="projeto-card" role="listitem" data-category="frontend">
                         <header class="projeto-header">
                             <h3 class="projeto-title">Carros Divertidos</h3>
                             <p class="projeto-descricao">
@@ -772,7 +771,7 @@
                     </article>
 
                     <!-- Projeto 5 -->
-                    <article class="projeto-card" role="listitem">
+                    <article class="projeto-card" role="listitem" data-category="frontend">
                         <header class="projeto-header">
                             <h3 class="projeto-title">Corrida de Carro</h3>
                             <p class="projeto-descricao">
@@ -803,7 +802,7 @@
                     </article>
 
                     <!-- Projeto 6 -->
-                    <article class="projeto-card" role="listitem">
+                    <article class="projeto-card" role="listitem" data-category="frontend">
                         <header class="projeto-header">
                             <h3 class="projeto-title">Animais no Zoológico</h3>
                             <p class="projeto-descricao">
@@ -835,7 +834,7 @@
                     </article>
 
                     <!-- Projeto 7 -->
-                    <article class="projeto-card" role="listitem">
+                    <article class="projeto-card" role="listitem" data-category="frontend">
                         <header class="projeto-header">
                             <h3 class="projeto-title">Site com Loop</h3>
                             <p class="projeto-descricao">
@@ -866,7 +865,7 @@
                     </article>
 
                     <!-- Projeto 8 -->
-                    <article class="projeto-card" role="listitem">
+                    <article class="projeto-card" role="listitem" data-category="frontend">
                         <header class="projeto-header">
                             <h3 class="projeto-title">Sistema de Login</h3>
                             <p class="projeto-descricao">
@@ -897,7 +896,7 @@
                     </article>
 
                     <!-- Projeto 9 -->
-                    <article class="projeto-card" role="listitem">
+                    <article class="projeto-card" role="listitem" data-category="frontend">
                         <header class="projeto-header">
                             <h3 class="projeto-title">Gerenciador de Lista</h3>
                             <p class="projeto-descricao">
@@ -928,7 +927,7 @@
                     </article>
 
                     <!-- Projeto 10 -->
-                    <article class="projeto-card" role="listitem">
+                    <article class="projeto-card" role="listitem" data-category="frontend">
                         <header class="projeto-header">
                             <h3 class="projeto-title">Projetos Iniciais</h3>
                             <p class="projeto-descricao">
@@ -954,7 +953,7 @@
                     </article>
 
                     <!-- Projeto 11 -->
-                    <article class="projeto-card" role="listitem">
+                    <article class="projeto-card" role="listitem" data-category="frontend">
                         <header class="projeto-header">
                             <h3 class="projeto-title">Leandro Stanger Portfólio</h3>
                             <p class="projeto-descricao">
@@ -987,7 +986,7 @@
                     </article>
 
                     <!-- Projeto 12 -->
-                    <article class="projeto-card" role="listitem">
+                    <article class="projeto-card" role="listitem" data-category="frontend">
                         <header class="projeto-header">
                             <h3 class="projeto-title">Cidades com Altas Temperaturas</h3>
                             <p class="projeto-descricao">
@@ -1020,7 +1019,7 @@
                     </article>
 
                     <!-- Projeto 13 -->
-                    <article class="projeto-card" role="listitem">
+                    <article class="projeto-card" role="listitem" data-category="frontend">
                         <header class="projeto-header">
                             <h3 class="projeto-title">Site com Loop Hack</h3>
                             <p class="projeto-descricao">
@@ -1054,7 +1053,7 @@
                     </article>
 
                     <!-- Projeto 14 -->
-                    <article class="projeto-card" role="listitem">
+                    <article class="projeto-card" role="listitem" data-category="backend">
                         <header class="projeto-header">
                             <h3 class="projeto-title">Projetos Iniciais (Linguagem C)</h3>
                             <p class="projeto-descricao">
@@ -1100,33 +1099,34 @@
 
                     <div class="contato-grid">
                         <div class="contato-info">
-                            <h3 class="contato-info-title">Vamos nos conectar</h3>
+                            <h3 class="contato-info-title">Envie uma mensagem</h3>
                             <p class="contato-info-text">
-                                Você pode me encontrar nas seguintes plataformas ou enviar um email direto.
+                                Preencha o formulário abaixo e entrarei em contato o mais breve possível.
                             </p>
-                     <form id="contact-form" class="form" action="https://formspree.io/f/xjgevgvg" method="POST">
-                        <div class="form-input-group">
-                            <label for="name" class="form-label sr-only">Seu Nome</label>
-                            <input type="text" id="name" name="name" placeholder="Seu Nome" class="input" required>
-                        </div>
-                        
-                        <div class="form-input-group">
-                            <label for="email" class="form-label sr-only">Seu E-mail</label>
-                            <input type="email" id="email" name="email" placeholder="Seu E-mail" class="input" required>
-                        </div>
-                        
-                        <div class="form-input-group">
-                            <label for="message" class="form-label sr-only">Sua Mensagem</label>
-                            <textarea id="message" name="message" placeholder="Sua Mensagem" rows="4" required></textarea>
-                        </div>
-                        
-                        <button type="submit" id="submit-btn">
-                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
-                            Enviar Mensagem
-                        </button>
-                        
-                        <p id="form-status" class="form-status"></p>
-                    </form>
+                    
+                            <form id="contact-form" class="form" action="https://formspree.io/f/xjgevgvg" method="POST">
+                                <div class="form-input-group">
+                                    <label for="name" class="form-label sr-only">Seu Nome</label>
+                                    <input type="text" id="name" name="name" placeholder="Seu Nome" class="input" required>
+                                </div>
+                                
+                                <div class="form-input-group">
+                                    <label for="email" class="form-label sr-only">Seu E-mail</label>
+                                    <input type="email" id="email" name="email" placeholder="Seu E-mail" class="input" required>
+                                </div>
+                                
+                                <div class="form-input-group">
+                                    <label for="message" class="form-label sr-only">Sua Mensagem</label>
+                                    <textarea id="message" name="message" placeholder="Sua Mensagem" rows="4" required></textarea>
+                                </div>
+                                
+                                <button type="submit" id="submit-btn">
+                                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                                    Enviar Mensagem
+                                </button>
+                                
+                                <p id="form-status" class="form-status"></p>
+                            </form>
                         </div>
 
                         <div class="contato-links" role="list">
@@ -1218,9 +1218,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

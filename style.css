@@ -1,8 +1,3 @@
-/* ============================================
-   PORTFÓLIO LEANDRO STANGER - CSS MODERNO
-   Tema: Verde + Preto | Versão 3.0
-============================================ */
-
 /* ============ DESIGN SYSTEM ============ */
 :root {
     /* Cores - Tema Verde e Preto */
@@ -53,7 +48,7 @@
     --text-2xl: 1.5rem;
     --text-3xl: 1.875rem;
     --text-4xl: 2.25rem;
-    --text-5xl: 3rem;
+    --text-5xl: clamp(2.5rem, 5vw, 3rem);
     
     /* Espaçamentos */
     --space-0: 0;
@@ -135,12 +130,12 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: var(--space-4);
 }
 
-h1 { font-size: var(--text-5xl); }
-h2 { font-size: var(--text-4xl); }
-h3 { font-size: var(--text-3xl); }
-h4 { font-size: var(--text-2xl); }
-h5 { font-size: var(--text-xl); }
-h6 { font-size: var(--text-lg); }
+h1 { font-size: clamp(var(--text-4xl), 8vw, var(--text-5xl)); }
+h2 { font-size: clamp(var(--text-3xl), 6vw, var(--text-4xl)); }
+h3 { font-size: clamp(var(--text-2xl), 4vw, var(--text-3xl)); }
+h4 { font-size: clamp(var(--text-xl), 3vw, var(--text-2xl)); }
+h5 { font-size: clamp(var(--text-lg), 2vw, var(--text-xl)); }
+h6 { font-size: clamp(var(--text-base), 1.5vw, var(--text-lg)); }
 
 p {
     margin-bottom: var(--space-4);
@@ -266,8 +261,9 @@ a:focus {
 
 .profile-frame {
     position: relative;
-    width: 280px;
-    height: 280px;
+    width: min(280px, 100%);
+    height: min(280px, 100%);
+    aspect-ratio: 1;
 }
 
 .profile-image {
@@ -378,7 +374,7 @@ a:focus {
 
 .sobre-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     gap: var(--space-6);
     margin-top: var(--space-8);
 }
@@ -486,7 +482,7 @@ a:focus {
 
 .objetivo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: var(--space-6);
 }
 
@@ -703,7 +699,7 @@ a:focus {
 /* ============ HABILIDADES ============ */
 .habilidades-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: var(--space-8);
 }
 
@@ -796,7 +792,7 @@ a:focus {
 /* ============ TECNOLOGIAS ============ */
 .tecnologias-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: var(--space-6);
     margin-top: var(--space-8);
 }
@@ -914,7 +910,7 @@ a:focus {
 /* ============ PROJETOS ============ */
 .projetos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
     gap: var(--space-6);
     margin-top: var(--space-4);
 }
@@ -1167,6 +1163,8 @@ a:focus {
     text-decoration: none;
     position: relative;
     overflow: hidden;
+    min-height: 44px;
+    min-width: 44px;
 }
 
 .btn::before {
@@ -1207,39 +1205,6 @@ a:focus {
     transform: translateY(-2px);
 }
 
-/* ============ CURSOR PERSONALIZADO ============ */
-.cursor {
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--color-primary);
-    border-radius: var(--radius-full);
-    position: fixed;
-    pointer-events: none;
-    z-index: 1070;
-    transform: translate(-50%, -50%);
-    transition: width 0.3s, height 0.3s;
-    mix-blend-mode: difference;
-}
-
-.cursor-follower {
-    width: 8px;
-    height: 8px;
-    background: var(--color-primary);
-    border-radius: var(--radius-full);
-    position: fixed;
-    pointer-events: none;
-    z-index: 1070;
-    transform: translate(-50%, -50%);
-    transition: all 0.1s;
-    mix-blend-mode: difference;
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .cursor {
-        display: block;
-    }
-}
-
 /* ============ ANIMAÇÕES ============ */
 @keyframes fadeInUp {
     from {
@@ -1271,239 +1236,7 @@ a:focus {
     outline-offset: 3px;
 }
 
-/* ============ RESPONSIVIDADE ============ */
-@media (max-width: 1024px) {
-    :root {
-        --container-padding: var(--space-6);
-    }
-    
-    .header-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: var(--space-8);
-    }
-    
-    .header-actions {
-        justify-content: center;
-    }
-    
-    .contato-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-8);
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: var(--space-6);
-    }
-    
-    .footer-brand,
-    .footer-back {
-        text-align: center;
-    }
-    
-    .projetos-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
-}
-
-@media (max-width: 768px) {
-    h1 { font-size: var(--text-4xl); }
-    h2 { font-size: var(--text-3xl); }
-    h3 { font-size: var(--text-2xl); }
-    
-    .main-header {
-        padding: var(--space-12) 0 var(--space-8);
-    }
-    
-    .main-title {
-        font-size: var(--text-4xl);
-    }
-    
-    .tagline {
-        font-size: var(--text-lg);
-        flex-direction: column;
-        gap: var(--space-2);
-    }
-    
-    .header-actions {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    
-    .profile-frame {
-        width: 220px;
-        height: 220px;
-    }
-    
-    .section {
-        padding: var(--space-8) 0;
-    }
-    
-    .sobre-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .habilidades-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .tecnologias-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .tecnologia-icons {
-        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
-    }
-    
-    .projetos-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .projetos-categoria-title {
-        font-size: var(--text-xl);
-    }
-    
-    .projetos-categoria-desc {
-        font-size: var(--text-base);
-    }
-    
-    .experiencia-header {
-        align-items: stretch;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 { font-size: var(--text-3xl); }
-    h2 { font-size: var(--text-2xl); }
-    h3 { font-size: var(--text-xl); }
-    
-    :root {
-        --container-padding: var(--space-4);
-    }
-    
-    .main-title {
-        font-size: var(--text-3xl);
-    }
-    
-    .tagline {
-        font-size: var(--text-base);
-    }
-    
-    .profile-frame {
-        width: 180px;
-        height: 180px;
-    }
-    
-    .sobre-card-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: var(--space-2);
-    }
-    
-    .btn {
-        padding: var(--space-3) var(--space-4);
-        font-size: var(--text-sm);
-    }
-    
-    .btn-download {
-        padding: var(--space-3) var(--space-6);
-        font-size: var(--text-base);
-    }
-    
-    .tecnologia-icons {
-        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-    }
-    
-    .tecnologia-icon img {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .projetos-header {
-        padding: var(--space-4);
-        margin-bottom: var(--space-6);
-    }
-    
-    .projetos-categoria-title {
-        font-size: var(--text-lg);
-    }
-    
-    .projetos-categoria-desc {
-        font-size: var(--text-sm);
-    }
-}
-
-/* ============ PREFERÊNCIAS DE REDUÇÃO DE MOVIMENTO ============ */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
-
-/* From Uiverse.io by Yaya12085 */ 
-.form {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 10px;
-  width: 300px;
-  background-color: #171717;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 30px 30px -30px #404040;
-}
-
-.form .title {
-  color: #299971;
-  font-size: 30px;
-  font-weight: 600;
-  letter-spacing: -1px;
-  line-height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.form input {
-  outline: 0;
-  border: 1px solid #121212;
-  padding: 8px 14px;
-  border-radius: 8px;
-  width: 100%;
-  height: 50px;
-}
-
-.form textarea {
-  border-radius: 8px;
-  height: 100px;
-  width: 100%;
-  resize: none;
-  outline: 0;
-  padding: 8px 14px;
-  border: 1px solid #121212;
-}
-
-.form button {
-  align-self: flex-end;
-  padding: 8px;
-  outline: 0;
-  border: 0;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 500;
-  background-color: #162721;
-  color: #299971;
-  cursor: pointer;
-}
-    /* ============ FORMULÁRIO DE CONTATO ============ */
+/* ============ FORMULÁRIO DE CONTATO ============ */
 .form {
     position: relative;
     display: flex;
@@ -1612,6 +1345,7 @@ a:focus {
     margin-top: var(--space-2);
     position: relative;
     overflow: hidden;
+    min-height: 44px;
 }
 
 .form button::before {
@@ -1666,82 +1400,25 @@ a:focus {
     animation: formAppear 0.6s ease-out 0.3s both;
 }
 
-/* Responsividade para o formulário */
-@media (max-width: 768px) {
-    .form {
-        padding: var(--space-4);
-        gap: var(--space-3);
-    }
-    
-    .form input,
-    .form textarea {
-        padding: var(--space-2) var(--space-3);
-    }
-    
-    .form input {
-        height: 44px;
-    }
-    
-    .form textarea {
-        height: 100px;
-        min-height: 100px;
-    }
-    
-    .form button {
-        padding: var(--space-2) var(--space-4);
-    }
+.form-status {
+    margin-top: var(--space-3);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    text-align: center;
+    transition: all var(--transition-normal);
 }
 
-@media (max-width: 480px) {
-    .form {
-        padding: var(--space-3);
-    }
-    
-    .form .title {
-        font-size: var(--text-lg);
-    }
-    
-    .form input,
-    .form textarea {
-        font-size: var(--text-sm);
-    }
-    
-    .form button {
-        font-size: var(--text-sm);
-    }
+.form-status.success {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--color-success);
+    border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
-/* Melhorias para acessibilidade */
-.form input:focus-visible,
-.form textarea:focus-visible,
-.form button:focus-visible {
-    outline: 2px solid var(--color-primary-light);
-    outline-offset: 2px;
-}
-
-/* Feedback visual durante interação */
-.form button:disabled {
-    background: var(--color-dark-600);
-    color: var(--color-gray);
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
-}
-
-.form button:disabled:hover {
-    background: var(--color-dark-600);
-    transform: none;
-    box-shadow: none;
-}
-
-/* Adicionar ícone ao botão */
-.form button i {
-    margin-right: var(--space-2);
-    transition: transform var(--transition-fast);
-}
-
-.form button:hover i {
-    transform: translateX(2px);
+.form-status.error {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--color-error);
+    border: 1px solid rgba(239, 68, 68, 0.3);
 }
 
 /* ============ BARRA DE PESQUISA PROJETOS ============ */
@@ -1834,82 +1511,201 @@ a:focus {
     line-height: 1.6;
 }
 
-/* ============ ANIMAÇÃO PARA FILTRAGEM ============ */
-.projeto-card {
-    animation: fadeInUp 0.5s ease-out;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ============ RESPONSIVIDADE BARRA DE PESQUISA ============ */
-@media (max-width: 768px) {
-    .projetos-busca-container {
-        margin-bottom: var(--space-6);
+/* ============ RESPONSIVIDADE ============ */
+@media (max-width: 1024px) {
+    :root {
+        --container-padding: var(--space-6);
     }
     
-    .projetos-busca {
-        padding: var(--space-3) var(--space-4);
+    .header-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--space-8);
+    }
+    
+    .header-actions {
+        justify-content: center;
+    }
+    
+    .contato-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--space-6);
+    }
+    
+    .footer-brand,
+    .footer-back {
+        text-align: center;
+    }
+    
+    .projetos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        padding: var(--space-12) 0 var(--space-8);
+    }
+    
+    .main-title {
+        font-size: clamp(var(--text-3xl), 6vw, var(--text-4xl));
+    }
+    
+    .tagline {
+        font-size: var(--text-lg);
+        flex-direction: column;
+        gap: var(--space-2);
+    }
+    
+    .header-actions {
         flex-direction: column;
         align-items: stretch;
-        gap: var(--space-3);
     }
     
-    .projetos-busca i {
-        position: absolute;
-        left: var(--space-4);
-        top: 50%;
-        transform: translateY(-50%);
-        margin-right: 0;
+    .profile-frame {
+        width: 220px;
+        height: 220px;
     }
     
-    .projetos-busca-input {
-        padding-left: var(--space-10);
-        padding-right: var(--space-4);
+    .section {
+        padding: var(--space-8) 0;
     }
     
-    .projetos-busca-info {
-        margin-left: var(--space-10);
-        font-size: var(--text-xs);
+    .sobre-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .habilidades-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tecnologias-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tecnologia-icons {
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    }
+    
+    .projetos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .projetos-categoria-title {
+        font-size: var(--text-xl);
+    }
+    
+    .projetos-categoria-desc {
+        font-size: var(--text-base);
+    }
+    
+    .experiencia-header {
+        align-items: stretch;
     }
 }
 
 @media (max-width: 480px) {
-    .projetos-busca {
-        padding: var(--space-3);
+    :root {
+        --container-padding: var(--space-4);
     }
     
-    .projetos-busca i {
-        left: var(--space-3);
+    .main-title {
+        font-size: clamp(var(--text-2xl), 5vw, var(--text-3xl));
+    }
+    
+    .tagline {
         font-size: var(--text-base);
     }
     
-    .projetos-busca-input {
-        padding-left: var(--space-8);
+    .profile-frame {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .sobre-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-2);
+    }
+    
+    .btn {
+        padding: var(--space-3) var(--space-4);
         font-size: var(--text-sm);
     }
     
-    .projetos-busca-info {
-        margin-left: var(--space-8);
+    .btn-download {
+        padding: var(--space-3) var(--space-6);
+        font-size: var(--text-base);
     }
     
-    .nenhum-resultado {
-        padding: var(--space-8) var(--space-4);
+    .tecnologia-icons {
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
     }
     
-    .nenhum-resultado-titulo {
+    .tecnologia-icon img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .projetos-header {
+        padding: var(--space-4);
+        margin-bottom: var(--space-6);
+    }
+    
+    .projetos-categoria-title {
         font-size: var(--text-lg);
     }
     
-    .nenhum-resultado-descricao {
+    .projetos-categoria-desc {
         font-size: var(--text-sm);
+    }
+}
+
+@media (max-width: 320px) {
+    .header-content {
+        gap: var(--space-6);
+    }
+    
+    .profile-frame {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .btn {
+        min-height: 36px;
+        min-width: 36px;
+        font-size: var(--text-xs);
+    }
+    
+    .projetos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============ PREFERÊNCIAS DE REDUÇÃO DE MOVIMENTO ============ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .main-header::before,
+    .profile-decoration,
+    .scroll-indicator,
+    .section-label,
+    .section-title::after,
+    .projetos-categoria-title::after {
+        animation: none !important;
+        transition: none !important;
     }
 }
