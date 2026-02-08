@@ -322,4 +322,115 @@ if (contactForm) {
     });
 }
 
+// ============ BARRA DE PESQUISA DE PROJETOS ============
+document.addEventListener('DOMContentLoaded', function() {
+    const buscaInput = document.getElementById('busca-projetos');
+    const projetosGrid = document.getElementById('projetos-grid');
+    const projetoCards = projetosGrid.querySelectorAll('.projeto-card');
+    const nenhumResultado = document.getElementById('nenhum-resultado');
+    const contadorProjetos = document.getElementById('contador-projetos');
+    
+    // Atualiza o contador de projetos
+    function atualizarContador(quantidade) {
+        const texto = quantidade === 1 ? '1 projeto encontrado' : `${quantidade} projetos encontrados`;
+        contadorProjetos.textContent = texto;
+    }
+    
+    // Inicializa o contador
+    atualizarContador(projetoCards.length);
+    
+    // Função para filtrar projetos
+    function filtrarProjetos(termo) {
+        termo = termo.toLowerCase().trim();
+        let projetosEncontrados = 0;
+        
+        // Remove animações anteriores
+        projetoCards.forEach(card => {
+            card.style.animation = 'none';
+        });
+        
+        // Força reflow
+        void projetosGrid.offsetWidth;
+        
+        // Filtra os projetos
+        projetoCards.forEach(card => {
+            const titulo = card.querySelector('.projeto-title').textContent.toLowerCase();
+            const descricao = card.querySelector('.projeto-descricao').textContent.toLowerCase();
+            const tags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
+            
+            // Verifica se o termo está em qualquer um dos campos
+            const corresponde = 
+                titulo.includes(termo) ||
+                descricao.includes(termo) ||
+                tags.some(tag => tag.includes(termo));
+            
+            if (corresponde || termo === '') {
+                card.style.display = 'flex';
+                card.style.animation = 'fadeInUp 0.5s ease-out';
+                projetosEncontrados++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        
+        // Mostra/oculta mensagem de nenhum resultado
+        if (termo !== '' && projetosEncontrados === 0) {
+            nenhumResultado.style.display = 'block';
+            nenhumResultado.style.animation = 'fadeInUp 0.6s ease-out';
+        } else {
+            nenhumResultado.style.display = 'none';
+        }
+        
+        // Atualiza contador
+        atualizarContador(projetosEncontrados);
+    }
+    
+    // Event listener para input de busca
+    if (buscaInput) {
+        // Filtra enquanto digita
+        buscaInput.addEventListener('input', function() {
+            filtrarProjetos(this.value);
+        });
+        
+        // Limpa busca com Escape
+        buscaInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                this.value = '';
+                filtrarProjetos('');
+                this.blur();
+            }
+        });
+        
+        // Filtra ao carregar a página se já houver texto
+        if (buscaInput.value.trim() !== '') {
+            filtrarProjetos(buscaInput.value);
+        }
+    }
+    
+    // Adiciona funcionalidade de limpar busca
+    const buscarIcone = document.querySelector('.projetos-busca i');
+    if (buscarIcone) {
+        buscarIcone.addEventListener('click', function() {
+            if (buscaInput.value.trim() !== '') {
+                buscaInput.value = '';
+                filtrarProjetos('');
+                buscaInput.focus();
+            }
+        });
+        
+        // Altera ícone quando há texto
+        buscaInput.addEventListener('input', function() {
+            if (this.value.trim() !== '') {
+                buscarIcone.classList.remove('fa-search');
+                buscarIcone.classList.add('fa-times');
+                buscarIcone.style.cursor = 'pointer';
+            } else {
+                buscarIcone.classList.remove('fa-times');
+                buscarIcone.classList.add('fa-search');
+                buscarIcone.style.cursor = 'default';
+            }
+        });
+    }
+});
+
 calcularTempo();

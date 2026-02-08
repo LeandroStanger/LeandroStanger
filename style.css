@@ -1743,3 +1743,173 @@ a:focus {
 .form button:hover i {
     transform: translateX(2px);
 }
+
+/* ============ BARRA DE PESQUISA PROJETOS ============ */
+.projetos-busca-container {
+    max-width: 800px;
+    margin: 0 auto var(--space-8);
+    animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.projetos-busca {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: var(--color-dark-800);
+    border: 1px solid var(--color-dark-600);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4) var(--space-6);
+    transition: all var(--transition-normal);
+}
+
+.projetos-busca:focus-within {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-green);
+    transform: translateY(-2px);
+}
+
+.projetos-busca i {
+    color: var(--color-gray);
+    font-size: var(--text-lg);
+    margin-right: var(--space-4);
+    flex-shrink: 0;
+}
+
+.projetos-busca-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--color-light);
+    font-family: var(--font-primary);
+    font-size: var(--text-base);
+    padding: var(--space-1) 0;
+    outline: none;
+    min-width: 0;
+}
+
+.projetos-busca-input::placeholder {
+    color: var(--color-gray-dark);
+}
+
+.projetos-busca-input:focus {
+    outline: none;
+}
+
+.projetos-busca-info {
+    margin-left: var(--space-4);
+    flex-shrink: 0;
+    font-size: var(--text-sm);
+    color: var(--color-gray);
+    white-space: nowrap;
+}
+
+/* ============ MENSAGEM NENHUM RESULTADO ============ */
+.nenhum-resultado {
+    text-align: center;
+    padding: var(--space-12) var(--space-6);
+    background: var(--color-dark-800);
+    border: 1px solid var(--color-dark-600);
+    border-radius: var(--radius-xl);
+    margin: var(--space-8) 0;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.nenhum-resultado i {
+    font-size: var(--text-4xl);
+    color: var(--color-gray);
+    margin-bottom: var(--space-4);
+    opacity: 0.5;
+}
+
+.nenhum-resultado-titulo {
+    font-size: var(--text-xl);
+    color: var(--color-light);
+    margin-bottom: var(--space-2);
+}
+
+.nenhum-resultado-descricao {
+    color: var(--color-gray);
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ============ ANIMAÇÃO PARA FILTRAGEM ============ */
+.projeto-card {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============ RESPONSIVIDADE BARRA DE PESQUISA ============ */
+@media (max-width: 768px) {
+    .projetos-busca-container {
+        margin-bottom: var(--space-6);
+    }
+    
+    .projetos-busca {
+        padding: var(--space-3) var(--space-4);
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--space-3);
+    }
+    
+    .projetos-busca i {
+        position: absolute;
+        left: var(--space-4);
+        top: 50%;
+        transform: translateY(-50%);
+        margin-right: 0;
+    }
+    
+    .projetos-busca-input {
+        padding-left: var(--space-10);
+        padding-right: var(--space-4);
+    }
+    
+    .projetos-busca-info {
+        margin-left: var(--space-10);
+        font-size: var(--text-xs);
+    }
+}
+
+@media (max-width: 480px) {
+    .projetos-busca {
+        padding: var(--space-3);
+    }
+    
+    .projetos-busca i {
+        left: var(--space-3);
+        font-size: var(--text-base);
+    }
+    
+    .projetos-busca-input {
+        padding-left: var(--space-8);
+        font-size: var(--text-sm);
+    }
+    
+    .projetos-busca-info {
+        margin-left: var(--space-8);
+    }
+    
+    .nenhum-resultado {
+        padding: var(--space-8) var(--space-4);
+    }
+    
+    .nenhum-resultado-titulo {
+        font-size: var(--text-lg);
+    }
+    
+    .nenhum-resultado-descricao {
+        font-size: var(--text-sm);
+    }
+}

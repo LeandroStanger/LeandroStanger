@@ -617,7 +617,33 @@
                     </p>
                 </div>
 
-                <div class="projetos-grid">
+                <!-- Barra de Pesquisa -->
+                <div class="projetos-busca-container">
+                    <div class="projetos-busca">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <input 
+                            type="text" 
+                            id="busca-projetos" 
+                            class="projetos-busca-input"
+                            placeholder="Buscar projetos por nome, tecnologia ou descrição..."
+                            aria-label="Buscar projetos"
+                        >
+                        <div class="projetos-busca-info">
+                            <span id="contador-projetos">14 projetos encontrados</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mensagem de nenhum resultado -->
+                <div id="nenhum-resultado" class="nenhum-resultado" style="display: none;">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <h3 class="nenhum-resultado-titulo">Nenhum projeto encontrado</h3>
+                    <p class="nenhum-resultado-descricao">
+                        Tente ajustar sua busca. Você pode pesquisar por nome do projeto, tecnologias ou descrição.
+                    </p>
+                </div>
+
+                <div class="projetos-grid" id="projetos-grid">
                     <!-- Projeto 1 -->
                     <article class="projeto-card" role="listitem">
                         <header class="projeto-header">
