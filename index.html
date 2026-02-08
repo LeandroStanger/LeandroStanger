@@ -22,17 +22,22 @@
     <!-- Preload de recursos críticos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap">
-    
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap">
+
     <!-- Ícones -->
     <link rel="shortcut icon" href="img/perfil.jpg" type="image/x-icon">
     <link rel="apple-touch-icon" href="img/perfil.jpg">
 
     <!-- Fontes -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        media="print" onload="this.media='all'">
 
     <!-- Ícones Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS Principal -->
     <link rel="stylesheet" href="style.css">
@@ -347,7 +352,8 @@
                                 <div class="experiencia-header">
                                     <h4 class="experiencia-empresa">Manutenção de Computadores – Autônomo</h4>
                                     <div class="experiencia-periodo">
-                                        <span id="experiencia-periodo-2" class="periodo-detalhes">Jan/2014 – em andamento</span>
+                                        <span id="experiencia-periodo-2" class="periodo-detalhes">Jan/2014 – em
+                                            andamento</span>
                                     </div>
                                 </div>
 
@@ -535,7 +541,8 @@
                                 <span class="tecnologia-label">Azure Data Studio</span>
                             </div>
                             <div class="tecnologia-icon" aria-label="Microsoft SQL Server">
-                                <img src="img/img11.png" alt="Microsoft SQL Server" width="64" height="64" loading="lazy">
+                                <img src="img/img11.png" alt="Microsoft SQL Server" width="64" height="64"
+                                    loading="lazy">
                                 <span class="tecnologia-label">SQL Server</span>
                             </div>
                         </div>
@@ -620,13 +627,9 @@
                 <div class="projetos-busca-container">
                     <div class="projetos-busca">
                         <i class="fas fa-search" aria-hidden="true"></i>
-                        <input 
-                            type="text" 
-                            id="busca-projetos" 
-                            class="projetos-busca-input"
+                        <input type="text" id="busca-projetos" class="projetos-busca-input"
                             placeholder="Buscar projetos por nome, tecnologia ou descrição..."
-                            aria-label="Buscar projetos"
-                        >
+                            aria-label="Buscar projetos">
                         <div class="projetos-busca-info">
                             <span id="contador-projetos">14 projetos encontrados</span>
                         </div>
@@ -1103,28 +1106,31 @@
                             <p class="contato-info-text">
                                 Preencha o formulário abaixo e entrarei em contato o mais breve possível.
                             </p>
-                    
+
                             <form id="contact-form" class="form" action="https://formspree.io/f/xjgevgvg" method="POST">
                                 <div class="form-input-group">
                                     <label for="name" class="form-label sr-only">Seu Nome</label>
-                                    <input type="text" id="name" name="name" placeholder="Seu Nome" class="input" required>
+                                    <input type="text" id="name" name="name" placeholder="Seu Nome" class="input"
+                                        required>
                                 </div>
-                                
+
                                 <div class="form-input-group">
                                     <label for="email" class="form-label sr-only">Seu E-mail</label>
-                                    <input type="email" id="email" name="email" placeholder="Seu E-mail" class="input" required>
+                                    <input type="email" id="email" name="email" placeholder="Seu E-mail" class="input"
+                                        required>
                                 </div>
-                                
+
                                 <div class="form-input-group">
                                     <label for="message" class="form-label sr-only">Sua Mensagem</label>
-                                    <textarea id="message" name="message" placeholder="Sua Mensagem" rows="4" required></textarea>
+                                    <textarea id="message" name="message" placeholder="Sua Mensagem" rows="4"
+                                        required></textarea>
                                 </div>
-                                
+
                                 <button type="submit" id="submit-btn">
                                     <i class="fas fa-paper-plane" aria-hidden="true"></i>
                                     Enviar Mensagem
                                 </button>
-                                
+
                                 <p id="form-status" class="form-status"></p>
                             </form>
                         </div>

@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (typewriter) {
         const originalText = typewriter.textContent;
         typewriter.textContent = '';
-        
+
         let i = 0;
         const typeWriter = () => {
             if (i < originalText.length) {
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 setTimeout(typeWriter, 100);
             }
         };
-        
+
         setTimeout(typeWriter, 500);
     }
 
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 return;
             }
-            
+
             const target = document.querySelector(href);
             if (target) {
                 e.preventDefault();
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     behavior: 'smooth',
                     block: 'start'
                 });
-                
+
                 // Atualizar URL sem recarregar a página
                 if (history.pushState) {
                     history.pushState(null, null, href);
@@ -93,15 +93,15 @@ document.addEventListener('DOMContentLoaded', function () {
     function calcularPeriodo(dataInicio, dataFim = null) {
         const inicio = new Date(dataInicio);
         const fim = dataFim ? new Date(dataFim) : new Date();
-        
+
         let anos = fim.getFullYear() - inicio.getFullYear();
         let meses = fim.getMonth() - inicio.getMonth();
-        
+
         if (meses < 0) {
             anos--;
             meses += 12;
         }
-        
+
         return { anos, meses };
     }
 
@@ -152,11 +152,11 @@ document.addEventListener('DOMContentLoaded', function () {
         // Validação em tempo real
         const inputs = contactForm.querySelectorAll('input, textarea');
         inputs.forEach(input => {
-            input.addEventListener('blur', function() {
+            input.addEventListener('blur', function () {
                 validateField(this);
             });
-            
-            input.addEventListener('input', function() {
+
+            input.addEventListener('input', function () {
                 this.style.borderColor = 'var(--color-dark-600)';
                 if (formStatus) {
                     formStatus.textContent = '';
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 field.style.borderColor = 'var(--color-error)';
                 return false;
             }
-            
+
             if (field.type === 'email' && field.value) {
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailRegex.test(field.value)) {
@@ -178,17 +178,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     return false;
                 }
             }
-            
+
             if (field.value) {
                 field.style.borderColor = 'var(--color-success)';
             }
-            
+
             return true;
         }
 
-        contactForm.addEventListener('submit', async function(e) {
+        contactForm.addEventListener('submit', async function (e) {
             e.preventDefault();
-            
+
             // Validar todos os campos
             let isValid = true;
             inputs.forEach(input => {
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     isValid = false;
                 }
             });
-            
+
             if (!isValid) {
                 if (formStatus) {
                     formStatus.textContent = '❌ Por favor, corrija os campos destacados.';
@@ -204,18 +204,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 return;
             }
-            
+
             // Desabilita o botão de envio
             const originalBtnContent = submitBtn.innerHTML;
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-            
+
             // Remove mensagens anteriores
             if (formStatus) {
                 formStatus.textContent = '';
                 formStatus.className = 'form-status';
             }
-            
+
             try {
                 const formData = new FormData(contactForm);
                 const response = await fetch(contactForm.action, {
@@ -225,48 +225,48 @@ document.addEventListener('DOMContentLoaded', function () {
                         'Accept': 'application/json'
                     }
                 });
-                
+
                 if (response.ok) {
                     // Sucesso
                     if (formStatus) {
                         formStatus.textContent = '✅ Mensagem enviada com sucesso! Entrarei em contato em breve.';
                         formStatus.classList.add('success');
                     }
-                    
+
                     // Reset do formulário
                     contactForm.reset();
-                    
+
                     // Resetar bordas
                     inputs.forEach(input => {
                         input.style.borderColor = 'var(--color-dark-600)';
                     });
-                    
+
                 } else {
                     // Erro do servidor
                     if (formStatus) {
                         formStatus.textContent = '❌ Ocorreu um erro ao enviar a mensagem. Tente novamente.';
                         formStatus.classList.add('error');
                     }
-                    
+
                     throw new Error('Form submission failed');
                 }
-                
+
             } catch (error) {
                 // Erro de rede
                 if (formStatus) {
                     formStatus.textContent = '❌ Erro de conexão. Verifique sua internet e tente novamente.';
                     formStatus.classList.add('error');
                 }
-                
+
                 console.error('Erro no formulário:', error);
-                
+
             } finally {
                 // Reabilita o botão
                 setTimeout(() => {
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalBtnContent;
                 }, 2000);
-                
+
                 // Limpa a mensagem de status após 5 segundos
                 setTimeout(() => {
                     if (formStatus) {
@@ -283,10 +283,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const projetosGrid = document.getElementById('projetos-grid');
     const nenhumResultado = document.getElementById('nenhum-resultado');
     const contadorProjetos = document.getElementById('contador-projetos');
-    
+
     if (buscaInput && projetosGrid) {
         const projetoCards = projetosGrid.querySelectorAll('.projeto-card');
-        
+
         // Atualiza o contador de projetos
         function atualizarContador(quantidade) {
             if (contadorProjetos) {
@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 contadorProjetos.textContent = texto;
             }
         }
-        
+
         // Função debounce para otimizar a busca
         function debounce(func, wait) {
             let timeout;
@@ -307,24 +307,24 @@ document.addEventListener('DOMContentLoaded', function () {
                 timeout = setTimeout(later, wait);
             };
         }
-        
+
         // Função para filtrar projetos
         function filtrarProjetos(termo) {
             termo = termo.toLowerCase().trim();
             let projetosEncontrados = 0;
-            
+
             // Filtra os projetos
             projetoCards.forEach(card => {
                 const titulo = card.querySelector('.projeto-title').textContent.toLowerCase();
                 const descricao = card.querySelector('.projeto-descricao').textContent.toLowerCase();
                 const tags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
-                
+
                 // Verifica se o termo está em qualquer um dos campos
-                const corresponde = 
+                const corresponde =
                     titulo.includes(termo) ||
                     descricao.includes(termo) ||
                     tags.some(tag => tag.includes(termo));
-                
+
                 if (corresponde || termo === '') {
                     card.style.display = 'flex';
                     card.classList.add('fade-in-up');
@@ -334,7 +334,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     card.classList.remove('fade-in-up');
                 }
             });
-            
+
             // Mostra/oculta mensagem de nenhum resultado
             if (nenhumResultado) {
                 if (termo !== '' && projetosEncontrados === 0) {
@@ -345,46 +345,46 @@ document.addEventListener('DOMContentLoaded', function () {
                     nenhumResultado.classList.remove('fade-in-up');
                 }
             }
-            
+
             // Atualiza contador
             atualizarContador(projetosEncontrados);
         }
-        
+
         // Debounce na busca (300ms)
-        const buscaDebounce = debounce(function() {
+        const buscaDebounce = debounce(function () {
             filtrarProjetos(this.value);
         }, 300);
-        
+
         // Event listener para input de busca
         buscaInput.addEventListener('input', buscaDebounce);
-        
+
         // Limpa busca com Escape
-        buscaInput.addEventListener('keydown', function(e) {
+        buscaInput.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 this.value = '';
                 filtrarProjetos('');
                 this.blur();
             }
         });
-        
+
         // Filtra ao carregar a página se já houver texto
         if (buscaInput.value.trim() !== '') {
             filtrarProjetos(buscaInput.value);
         }
-        
+
         // Adiciona funcionalidade de limpar busca
         const buscarIcone = document.querySelector('.projetos-busca i');
         if (buscarIcone) {
-            buscarIcone.addEventListener('click', function() {
+            buscarIcone.addEventListener('click', function () {
                 if (buscaInput.value.trim() !== '') {
                     buscaInput.value = '';
                     filtrarProjetos('');
                     buscaInput.focus();
                 }
             });
-            
+
             // Altera ícone quando há texto
-            buscaInput.addEventListener('input', function() {
+            buscaInput.addEventListener('input', function () {
                 if (this.value.trim() !== '') {
                     buscarIcone.classList.remove('fa-search');
                     buscarIcone.classList.add('fa-times');
@@ -396,7 +396,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         }
-        
+
         // Inicializa o contador
         atualizarContador(projetoCards.length);
     }
@@ -425,7 +425,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // ============ BOTÃO VOLTAR AO TOPO ============
     const btnBackTop = document.querySelector('.btn-back-top');
     if (btnBackTop) {
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             if (window.scrollY > 500) {
                 btnBackTop.style.opacity = '1';
                 btnBackTop.style.visibility = 'visible';
@@ -436,7 +436,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 btnBackTop.style.transform = 'translateY(10px)';
             }
         });
-        
+
         // Inicializar estado
         btnBackTop.style.opacity = '0';
         btnBackTop.style.visibility = 'hidden';
@@ -455,10 +455,10 @@ document.addEventListener('DOMContentLoaded', function () {
 // Request Animation Frame para animações suaves
 function animate(callback) {
     let ticking = false;
-    
-    return function() {
+
+    return function () {
         if (!ticking) {
-            requestAnimationFrame(function() {
+            requestAnimationFrame(function () {
                 callback();
                 ticking = false;
             });
