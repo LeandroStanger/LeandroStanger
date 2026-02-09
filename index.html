@@ -46,7 +46,7 @@
 </head>
 
 <body>
-  <!-- Header Principal -->
+    <!-- Header Principal -->
     <header id="inicio" class="main-header" role="banner">
         <div class="container">
             <div class="header-content">
@@ -55,10 +55,12 @@
                         Leandro Stanger
                     </h1>
 
-                    <p class="tagline" role="doc-subtitle">
-                        <span class="tagline-text">• Desenvolvedor Full-Stack!</span>
-                        <span class="tagline-text">• Estudante de Engenharia da Computação!</span>
-                    </p>
+                    <div class="tagline" role="doc-subtitle">
+                        <div class="tagline-content">
+                            <span class="tagline-item">• Desenvolvedor Full-Stack!</span>
+                            <span class="tagline-item">• Estudante de Engenharia da Computação!</span>
+                        </div>
+                    </div>
 
                     <div class="header-actions">
                         <a href="#contato" class="btn btn-primary" aria-label="Entre em contato comigo">
@@ -1082,8 +1084,9 @@
                         <header class="projeto-header">
                             <h3 class="projeto-title">Sistema de Animais de Estimação</h3>
                             <p class="projeto-descricao">
-                                Sistema web completo para gerenciamento de animais de estimação com interface
-                                responsiva, CRUD, busca, filtros e armazenamento local.
+                                Um catálogo estático e responsivo que exibe uma lista de animais de estimação,
+                                apresentando informações básicas como nome, espécie, idade, peso e nível de energia em
+                                uma interface web amigável.
                             </p>
                         </header>
 
@@ -1139,24 +1142,24 @@
 
                             <form id="contact-form" class="form" action="https://formspree.io/f/xjgevgvg" method="POST">
                                 <div class="form-input-group">
-                                    <label for="name" class="form-label sr-only">Seu Nome</label>
-                                    <input type="text" id="name" name="name" placeholder="Seu Nome" class="input"
-                                        required>
+                                    <label for="name" class="form-label"></label>
+                                    <input type="text" id="name" name="name" placeholder="Digite seu nome completo"
+                                        class="input" required>
                                 </div>
 
                                 <div class="form-input-group">
-                                    <label for="email" class="form-label sr-only">Seu E-mail</label>
-                                    <input type="email" id="email" name="email" placeholder="Seu E-mail" class="input"
-                                        required>
+                                    <label for="email" class="form-label"></label>
+                                    <input type="email" id="email" name="email"
+                                        placeholder="Digite seu E-mail: seu@email.com" class="input" required>
                                 </div>
 
                                 <div class="form-input-group">
-                                    <label for="message" class="form-label sr-only">Sua Mensagem</label>
-                                    <textarea id="message" name="message" placeholder="Sua Mensagem" rows="4"
-                                        required></textarea>
+                                    <label for="message" class="form-label"></label>
+                                    <textarea id="message" name="message" placeholder="Digite sua mensagem aqui..."
+                                        rows="4" class="input" required></textarea>
                                 </div>
 
-                                <button type="submit" id="submit-btn">
+                                <button type="submit" id="submit-btn" class="btn btn-primary">
                                     <i class="fas fa-paper-plane" aria-hidden="true"></i>
                                     Enviar Mensagem
                                 </button>
@@ -1254,7 +1257,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

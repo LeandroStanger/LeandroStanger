@@ -28,7 +28,7 @@
     --color-light-700: #e5e5e5;
     
     --color-gray: #a3a3a3;
-    --color-gray-dark: #737373;
+    --color-gray-dark: #525252; /* Melhor contraste para acessibilidade */
     
     /* Estados */
     --color-success: #10b981;
@@ -115,6 +115,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    max-width: 100%;
 }
 
 /* ============ TIPOGRAFIA ============ */
@@ -208,10 +209,17 @@ a:focus {
     font-size: var(--text-xl);
     color: var(--color-gray);
     margin-bottom: var(--space-8);
+}
+
+.tagline-content {
     display: flex;
     align-items: center;
     gap: var(--space-3);
     flex-wrap: wrap;
+}
+
+.tagline-item {
+    white-space: nowrap;
 }
 
 .header-actions {
@@ -505,6 +513,9 @@ a:focus {
     position: relative;
     margin-bottom: var(--space-8);
     padding-left: var(--space-6);
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .timeline-marker {
@@ -583,6 +594,9 @@ a:focus {
     border-radius: var(--radius-lg);
     padding: var(--space-6);
     transition: all var(--transition-normal);
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .experiencia-item:hover {
@@ -1020,6 +1034,14 @@ a:focus {
     border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
+.search-highlight {
+    background-color: rgba(255, 255, 0, 0.2);
+    color: #ffd700;
+    font-weight: 600;
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
 .projeto-actions {
     display: flex;
     flex-direction: column;
@@ -1197,6 +1219,14 @@ a:focus {
     margin-bottom: var(--space-2);
 }
 
+.form-label {
+    display: block;
+    margin-bottom: var(--space-2);
+    color: var(--color-light-700);
+    font-weight: 500;
+    font-size: var(--text-sm);
+}
+
 .form input,
 .form textarea {
     outline: 0;
@@ -1209,6 +1239,7 @@ a:focus {
     font-family: var(--font-primary);
     font-size: var(--text-base);
     transition: all var(--transition-fast);
+    min-width: 0;
 }
 
 .form input {
@@ -1414,7 +1445,31 @@ a:focus {
     transform: translateY(-2px);
 }
 
+/* ============ ANIMAÇÕES DE SCROLL ============ */
+.fade-in-up {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* ============ FOCUS VISIBLE ============ */
+:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+}
+
 /* ============ RESPONSIVIDADE ============ */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .tecnologias-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .projetos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 1024px) {
     :root {
         --container-padding: var(--space-6);
@@ -1466,8 +1521,18 @@ a:focus {
     
     .tagline {
         font-size: var(--text-lg);
+    }
+    
+    .tagline-content {
         flex-direction: column;
         gap: var(--space-2);
+        align-items: center;
+    }
+    
+    .tagline-item {
+        white-space: normal;
+        text-align: center;
+        width: 100%;
     }
     
     .header-actions {
@@ -1572,6 +1637,10 @@ a:focus {
     .projetos-categoria-desc {
         font-size: var(--text-sm);
     }
+    
+    .projeto-card {
+        padding: var(--space-4);
+    }
 }
 
 /* ============ PREFERÊNCIAS DE REDUÇÃO DE MOVIMENTO ============ */
@@ -1583,5 +1652,13 @@ a:focus {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
+    }
+    
+    .scroll-indicator {
+        animation: none;
+    }
+    
+    .btn::before {
+        display: none;
     }
 }
