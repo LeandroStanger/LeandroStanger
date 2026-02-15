@@ -398,7 +398,7 @@ class ExperienceCalculator {
     updatePeriods() {
         try {
             // Experiência 1 - Cargo atual (desde ago/2025)
-            const exp1 = this.calculatePeriod('2025-08-01');
+            const exp1 = this.calculatePeriod('2025-08');
             const period1 = `ago de 2025 - em andamento · (${this.formatPeriod(exp1)})`;
             const element1 = document.getElementById('cargo-periodo-1');
             if (element1) element1.textContent = period1;
@@ -410,7 +410,7 @@ class ExperienceCalculator {
             if (elementEmp1) elementEmp1.textContent = periodEmp1;
             
             // Experiência 2 - Manutenção de Computadores (desde jan/2014)
-            const exp2 = this.calculatePeriod('2014-01-01');
+            const exp2 = this.calculatePeriod('2014-01');
             const period2 = `Jan/2014 - em andamento · (${this.formatPeriod(exp2)})`;
             const element2 = document.getElementById('experiencia-periodo-2');
             if (element2) element2.textContent = period2;
