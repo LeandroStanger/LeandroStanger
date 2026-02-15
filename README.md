@@ -92,6 +92,8 @@ Coleção de meus primeiros projetos de programação na linguagem C, demonstran
 [![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=databricks&logoColor=FF3621&labelColor=000000)](https://www.databricks.com/)
 [![Azure Data Studio](https://img.shields.io/badge/Azure_Data_Studio-0078D7?style=for-the-badge&logo=icloud&logoColor=0078D7&labelColor=000000)](https://learn.microsoft.com/azure-data-studio/)
 [![Microsoft SQL Server](https://img.shields.io/badge/Microsoft_SQL_Server-00A2FF?style=for-the-badge&logo=sublimetext&logoColor=00A2FF&labelColor=000000)](https://www.microsoft.com/sql-server/)
+[![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=003545&labelColor=000000)](https://mariadb.org/)
+
 
 ### Ferramentas
 [![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=F05032&labelColor=000000)](https://git-scm.com/)
