@@ -330,7 +330,7 @@ class TypewriterEffect {
             if (i < originalText.length) {
                 this.typewriterElement.textContent += originalText.charAt(i);
                 i++;
-                setTimeout(typeWriter, 100);
+                setTimeout(typeWriter, 20);
             }
         };
         
