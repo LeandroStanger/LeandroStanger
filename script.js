@@ -31,7 +31,7 @@ class ProjectsSearch {
         this.updateCounter();
         this.updateNoResults();
 
-        console.log(`Sistema de busca inicializado com ${this.totalProjects} projetos`);
+        // Log removido
     }
 
     setupEventListeners() {
@@ -579,7 +579,7 @@ class ContactForm {
     }
 }
 
-// ============ SMOOTH SCROLL ============
+// ============ SMOOTH SCROLL (REFATORADO) ============
 class SmoothScroll {
     constructor() {
         this.init();
@@ -593,30 +593,21 @@ class SmoothScroll {
                 // Ignorar links vazios
                 if (!href || href === '#') return;
 
-                // Scroll para topo
+                e.preventDefault();
+
+                // Se for o topo
                 if (href === '#inicio') {
-                    e.preventDefault();
                     window.scrollTo({ top: 0, behavior: 'smooth' });
-                    return;
+                } else {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
                 }
 
-                const target = document.querySelector(href);
-                if (target) {
-                    e.preventDefault();
-
-                    // Calcular offset para header fixo
-                    const headerHeight = document.querySelector('.main-header')?.offsetHeight || 0;
-                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-
-                    // Atualizar URL sem recarregar a página
-                    if (history.pushState) {
-                        history.pushState(null, null, href);
-                    }
+                // Atualizar URL sem recarregar a página
+                if (history.pushState) {
+                    history.pushState(null, null, href);
                 }
             });
         });
@@ -721,7 +712,7 @@ document.addEventListener('DOMContentLoaded', () => {
         components.forEach(component => {
             try {
                 component.init();
-                console.log(`✅ ${component.name} inicializado com sucesso`);
+                // Logs removidos
             } catch (error) {
                 console.warn(`⚠️ Erro ao inicializar ${component.name}:`, error.message);
             }
@@ -732,10 +723,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Adicionar fallback para scroll suave
         if (!('scrollBehavior' in document.documentElement.style)) {
-            console.log('Usando polyfill para scroll suave');
+            // console.log('Usando polyfill para scroll suave'); // removido
         }
 
-        console.log('✅ Portfólio inicializado com sucesso');
+        // console.log('✅ Portfólio inicializado com sucesso'); // removido
 
     } catch (error) {
         console.error('❌ Erro crítico na inicialização:', error);
