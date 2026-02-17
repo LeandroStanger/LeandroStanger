@@ -330,7 +330,8 @@ a:focus {
 .section {
     padding: var(--space-16) 0;
     position: relative;
-    scroll-margin-top: 2rem; /* Adicionado para compensar o cabeçalho */
+    scroll-margin-top: 2rem;
+    /* Adicionado para compensar o cabeçalho */
 }
 
 .section-header {
