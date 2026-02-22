@@ -1007,6 +1007,12 @@ a:focus {
     margin-top: var(--space-4);
 }
 
+/* Efeito de opacidade apenas nos cards visíveis (não ocultos) e não hover */
+.projetos-grid:hover .projeto-card:not(.hidden):not(:hover) {
+    opacity: 0.4 !important;
+    /* Garantir que a regra seja aplicada */
+}
+
 .projeto-card {
     background: var(--color-dark-800);
     border: 1px solid var(--color-dark-600);
@@ -1019,10 +1025,8 @@ a:focus {
     opacity: 1;
     transform: translateY(0);
     position: relative;
-}
-
-.projetos-grid:hover .projeto-card:not(:hover) {
-    opacity: 0.4;
+    will-change: transform, opacity;
+    /* Otimização */
 }
 
 .projeto-card:hover {
@@ -1032,13 +1036,16 @@ a:focus {
     z-index: 2;
 }
 
+/* Classe para esconder cards (usada pelo filtro) */
 .projeto-card.hidden {
     display: none;
 }
 
+/* Animação de entrada para cards que se tornam visíveis */
 .projeto-card.visible {
-    display: flex;
     animation: fadeInUp 0.5s ease-out;
+    animation-delay: var(--delay, 0s);
+    /* Permite delay via variável CSS */
 }
 
 @keyframes fadeInUp {
@@ -1641,7 +1648,7 @@ a:focus {
     /* Desabilitar efeitos de opacidade em mobile */
     .sobre-grid:hover .sobre-card:not(:hover),
     .objetivo-grid:hover .objetivo-area:not(:hover),
-    .projetos-grid:hover .projeto-card:not(:hover) {
+    .projetos-grid:hover .projeto-card:not(.hidden):not(:hover) {
         opacity: 1;
     }
 }
