@@ -29,7 +29,6 @@
 
     --color-gray: #a3a3a3;
     --color-gray-dark: #525252;
-    /* Melhor contraste para acessibilidade */
 
     /* Estados */
     --color-success: #10b981;
@@ -331,7 +330,6 @@ a:focus {
     padding: var(--space-16) 0;
     position: relative;
     scroll-margin-top: 2rem;
-    /* Adicionado para compensar o cabeçalho */
 }
 
 .section-header {
@@ -400,12 +398,18 @@ a:focus {
     height: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.sobre-grid:hover .sobre-card:not(:hover) {
+    opacity: 0.4;
 }
 
 .sobre-card:hover {
-    transform: translateY(-8px);
+    transform: scale(1.05);
     border-color: var(--color-primary);
     box-shadow: var(--shadow-green);
+    z-index: 2;
 }
 
 .sobre-card-header {
@@ -504,12 +508,18 @@ a:focus {
     border-radius: var(--radius-lg);
     padding: var(--space-6);
     transition: all var(--transition-normal);
+    position: relative;
+}
+
+.objetivo-grid:hover .objetivo-area:not(:hover) {
+    opacity: 0.4;
 }
 
 .objetivo-area:hover {
-    transform: translateY(-4px);
+    transform: scale(1.05);
     border-color: var(--color-primary);
     box-shadow: var(--shadow-green);
+    z-index: 2;
 }
 
 .objetivo-area-icon {
@@ -1008,7 +1018,18 @@ a:focus {
     transition: all var(--transition-normal);
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.projetos-grid:hover .projeto-card:not(:hover) {
+    opacity: 0.4;
+}
+
+.projeto-card:hover {
+    transform: scale(1.05);
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-green);
+    z-index: 2;
 }
 
 .projeto-card.hidden {
@@ -1030,12 +1051,6 @@ a:focus {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.projeto-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--color-primary);
-    box-shadow: var(--shadow-green);
 }
 
 .projeto-header {
@@ -1621,6 +1636,13 @@ a:focus {
 
     .projetos-categoria-desc {
         font-size: var(--text-base);
+    }
+
+    /* Desabilitar efeitos de opacidade em mobile */
+    .sobre-grid:hover .sobre-card:not(:hover),
+    .objetivo-grid:hover .objetivo-area:not(:hover),
+    .projetos-grid:hover .projeto-card:not(:hover) {
+        opacity: 1;
     }
 }
 
