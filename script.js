@@ -389,6 +389,25 @@ const DEFAULT_TRANSLATIONS = {
     }
 };
 
+// ==================== DETECÇÃO DE IDIOMA DO NAVEGADOR ====================  // <-- NOVO
+function getMappedLanguage(langCode) {
+    const primary = langCode.split('-')[0].toLowerCase();
+    if (primary === 'pt') return 'pt';
+    if (primary === 'en') return 'en';
+    if (primary === 'es') return 'es';
+    return 'en'; // fallback
+}
+
+function detectBrowserLanguage() {
+    const languages = navigator.languages || [navigator.language || navigator.userLanguage || 'en'];
+    for (let lang of languages) {
+        const mapped = getMappedLanguage(lang);
+        if (mapped) return mapped;
+    }
+    return 'en';
+}
+// =========================================================================
+
 // ==================== MÓDULO I18N ====================
 const I18n = {
     async loadTranslations(lang) {
@@ -463,6 +482,7 @@ const I18n = {
 
     async setLanguage(lang) {
         if (!AppState.supportedLangs.includes(lang) || lang === AppState.currentLang) return;
+        localStorage.setItem('preferredLang', lang); // <-- NOVO
         await this.loadTranslations(lang);
         // O listener do AppState cuidará da renderização
     }
@@ -471,7 +491,6 @@ const I18n = {
 // ==================== RENDERIZADORES DAS SEÇÕES ====================
 const Renderer = {
     renderAll() {
-        // Executa cada função de renderização com try/catch para que uma falha não pare as outras
         this._safeRender('Sobre', this.renderSobre);
         this._safeRender('Objetivo Áreas', this.renderObjetivoAreas);
         this._safeRender('Educação', this.renderEducacao);
@@ -903,10 +922,14 @@ function setupLanguageSelector() {
         document.documentElement.classList.remove('no-js');
         document.documentElement.classList.add('js');
 
-        const browserLang = navigator.language.split('-')[0];
-        if (AppState.supportedLangs.includes(browserLang)) {
-            AppState.currentLang = browserLang;
+        // ----- DETECÇÃO DE IDIOMA (com prioridade para localStorage) -----  // <-- NOVO
+        let initialLang = localStorage.getItem('preferredLang');
+        if (initialLang && AppState.supportedLangs.includes(initialLang)) {
+            AppState.currentLang = initialLang;
+        } else {
+            AppState.currentLang = detectBrowserLanguage();
         }
+        // ----------------------------------------------------------------
 
         // Adiciona listener ANTES de carregar as traduções para capturar futuras mudanças
         AppState.subscribe(() => {
@@ -916,10 +939,6 @@ function setupLanguageSelector() {
         });
 
         await I18n.loadTranslations(AppState.currentLang);
-
-        // A primeira renderização já será feita pelo listener (após setTranslations)
-        // Mas como o listener foi adicionado depois do loadTranslations? Na verdade, adicionamos antes.
-        // O loadTranslations chama setTranslations que notifica, então a primeira renderização ocorre aqui.
 
         // Inicializações adicionais
         updateCurrentYear();
