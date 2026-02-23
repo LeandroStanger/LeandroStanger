@@ -389,13 +389,13 @@ const DEFAULT_TRANSLATIONS = {
     }
 };
 
-// ==================== DETECÇÃO DE IDIOMA DO NAVEGADOR ====================  // <-- NOVO
+// ==================== DETECÇÃO DE IDIOMA DO NAVEGADOR ====================
 function getMappedLanguage(langCode) {
     const primary = langCode.split('-')[0].toLowerCase();
     if (primary === 'pt') return 'pt';
     if (primary === 'en') return 'en';
     if (primary === 'es') return 'es';
-    return 'en'; // fallback
+    return 'en';
 }
 
 function detectBrowserLanguage() {
@@ -406,7 +406,6 @@ function detectBrowserLanguage() {
     }
     return 'en';
 }
-// =========================================================================
 
 // ==================== MÓDULO I18N ====================
 const I18n = {
@@ -482,9 +481,62 @@ const I18n = {
 
     async setLanguage(lang) {
         if (!AppState.supportedLangs.includes(lang) || lang === AppState.currentLang) return;
-        localStorage.setItem('preferredLang', lang); // <-- NOVO
+        localStorage.setItem('preferredLang', lang);
         await this.loadTranslations(lang);
-        // O listener do AppState cuidará da renderização
+    }
+};
+
+// ==================== GERENCIADOR DE TEMA (LIGHT/DARK) ====================
+const ThemeManager = {
+    init() {
+        this.toggleBtn = document.getElementById('themeToggle');
+        if (!this.toggleBtn) return;
+
+        // 1. Verifica preferência salva no localStorage
+        const savedTheme = localStorage.getItem('theme');
+
+        if (savedTheme) {
+            // Aplica tema salvo
+            this.setTheme(savedTheme);
+        } else {
+            // 2. Se não houver salvamento, detecta tema do sistema
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const systemTheme = systemPrefersDark ? 'dark' : 'light';
+            this.setTheme(systemTheme);
+        }
+
+        // Event listener do botão
+        this.toggleBtn.addEventListener('click', () => this.toggle());
+    },
+
+    setTheme(theme) {
+        if (theme === 'light') {
+            document.body.classList.add('light-theme');
+            this.updateIcon('light');
+        } else {
+            document.body.classList.remove('light-theme');
+            this.updateIcon('dark');
+        }
+        // Não salvamos aqui, apenas no toggle manual
+    },
+
+    toggle() {
+        if (document.body.classList.contains('light-theme')) {
+            document.body.classList.remove('light-theme');
+            localStorage.setItem('theme', 'dark');
+            this.updateIcon('dark');
+        } else {
+            document.body.classList.add('light-theme');
+            localStorage.setItem('theme', 'light');
+            this.updateIcon('light');
+        }
+    },
+
+    updateIcon(mode) {
+        const icon = this.toggleBtn.querySelector('i');
+        if (icon) {
+            icon.className = mode === 'light' ? 'fas fa-sun' : 'fas fa-moon';
+        }
     }
 };
 
@@ -722,7 +774,6 @@ class ProjectsSearch {
         this.input.addEventListener('input', () => this.filter());
         AppState.subscribe(() => this.render());
         document.addEventListener('renderer:done', () => {
-            // Atualiza a lista de projetos após a renderização completa
             this.projects = Array.from(this.grid.children);
             this.filter();
         });
@@ -922,16 +973,15 @@ function setupLanguageSelector() {
         document.documentElement.classList.remove('no-js');
         document.documentElement.classList.add('js');
 
-        // ----- DETECÇÃO DE IDIOMA (com prioridade para localStorage) -----  // <-- NOVO
+        // ----- DETECÇÃO DE IDIOMA (com prioridade para localStorage) -----
         let initialLang = localStorage.getItem('preferredLang');
         if (initialLang && AppState.supportedLangs.includes(initialLang)) {
             AppState.currentLang = initialLang;
         } else {
             AppState.currentLang = detectBrowserLanguage();
         }
-        // ----------------------------------------------------------------
 
-        // Adiciona listener ANTES de carregar as traduções para capturar futuras mudanças
+        // Adiciona listener ANTES de carregar as traduções
         AppState.subscribe(() => {
             I18n.translateStaticElements();
             Renderer.renderAll();
@@ -939,6 +989,9 @@ function setupLanguageSelector() {
         });
 
         await I18n.loadTranslations(AppState.currentLang);
+
+        // Inicializa o gerenciador de temas
+        ThemeManager.init();
 
         // Inicializações adicionais
         updateCurrentYear();
