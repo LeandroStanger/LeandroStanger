@@ -1,760 +1,943 @@
-// ============ SISTEMA DE BUSCA DE PROJETOS ============
+// ==================== STORE CENTRAL ====================
+const AppState = {
+    currentLang: 'pt',
+    translations: {},
+    supportedLangs: ['pt', 'en', 'es'],
+    listeners: new Set(),
+
+    setTranslations(lang, data) {
+        if (!data || typeof data !== 'object') {
+            console.error('Traduções inválidas:', data);
+            return;
+        }
+        this.currentLang = lang;
+        this.translations = data;
+        this.notify();
+    },
+
+    subscribe(callback) {
+        this.listeners.add(callback);
+        return () => this.listeners.delete(callback);
+    },
+
+    notify() {
+        this.listeners.forEach(cb => {
+            try {
+                cb();
+            } catch (e) {
+                console.error('Erro em listener:', e);
+            }
+        });
+    }
+};
+
+// ==================== TRADUÇÕES PADRÃO (FALLBACK COMPLETO) ====================
+const DEFAULT_TRANSLATIONS = {
+    "site": {
+        "title": "Leandro Stanger - Portfólio",
+        "description": "Portfólio profissional de Leandro Stanger - Desenvolvedor e Estudante de Engenharia da Computação"
+    },
+    "header": {
+        "title": "Leandro Stanger",
+        "subtitle1": "Desenvolvedor Full-Stack!",
+        "subtitle2": "Estudante de Engenharia da Computação!",
+        "btn_contact": "Entrar em Contato",
+        "btn_resume": "Ver Currículo"
+    },
+    "scroll": "Scroll",
+    "ongoing": "em andamento",
+    "sections": {
+        "sobre": {
+            "number": "01",
+            "title": "Sobre Mim",
+            "subtitle": "Minha trajetória, paixões e objetivos",
+            "cards": [
+                {
+                    "icon": "graduation-cap",
+                    "title": "Formação Acadêmica",
+                    "text": "Estudante de Engenharia da Computação pela UNOPAR - Universidade Norte do Paraná. Em constante evolução na área de tecnologia, sempre buscando novos conhecimentos e desafios para crescimento profissional."
+                },
+                {
+                    "icon": "code",
+                    "title": "Paixão por Tecnologia",
+                    "text": "Apaixonado por programação, tecnologia e aprendizado contínuo. Acredito que a tecnologia tem o poder de transformar o mundo e busco contribuir para essa transformação através do desenvolvimento de soluções inovadoras."
+                },
+                {
+                    "icon": "medal",
+                    "title": "Jiu-jitsu & Disciplina",
+                    "text": "Praticante de Jiu-jitsu, esporte que me ensina disciplina, resiliência e estratégia - qualidades que aplico diretamente no desenvolvimento de software e na resolução de problemas complexos."
+                }
+            ]
+        },
+        "curriculo": {
+            "number": "02",
+            "title": "Currículo",
+            "subtitle": "Minha jornada profissional e acadêmica",
+            "objetivo": {
+                "title": "Objetivo Profissional",
+                "text": "Busco uma posição na área de TI como <strong>Desenvolvedor</strong> ou <strong>Analista de Banco de Dados</strong>, onde possa aplicar meus conhecimentos em manutenção de computadores e redes, além de continuar desenvolvendo minhas habilidades em suporte técnico, administração de sistemas, desenvolvimento de software e gerenciamento de bancos de dados.",
+                "areas": [
+                    {
+                        "icon": "rocket",
+                        "title": "Desenvolvedor",
+                        "text": "Interesse em atuar no desenvolvimento de aplicações web e sistemas, utilizando tecnologias modernas e seguindo as melhores práticas de programação."
+                    },
+                    {
+                        "icon": "database",
+                        "title": "Banco de Dados",
+                        "text": "Desejo trabalhar com modelagem, administração e otimização de bancos de dados, garantindo a integridade e performance dos sistemas."
+                    }
+                ]
+            },
+            "educacao": {
+                "title": "Educação",
+                "items": [
+                    {
+                        "date": "Em andamento (início: fev/2025)",
+                        "title": "Graduação em Engenharia de Computação",
+                        "institution": "Unopar",
+                        "status": ["1º Semestre - Concluído", "2º Semestre - Concluído", "3º Semestre - Em Andamento"]
+                    },
+                    {
+                        "date": "fev/2024 a jun/2025",
+                        "title": "Técnico em Manutenção e Suporte em Informática",
+                        "institution": "AMPLI",
+                        "status": ["Concluído"]
+                    },
+                    {
+                        "date": "Abr/2016 a Out/2016",
+                        "title": "Curso de Montagem e Manutenção de Computadores e Redes",
+                        "institution": "YesBras Escolas do Brasil",
+                        "status": ["Concluído"]
+                    },
+                    {
+                        "date": "2015 a Out/2017",
+                        "title": "Ensino Médio",
+                        "institution": "SESI",
+                        "status": ["Concluído"]
+                    },
+                    {
+                        "date": "Set/2014 a Set/2015",
+                        "title": "Curso APP – Administrativo Pessoal e Profissional",
+                        "institution": "Escola de Informática Unisoft",
+                        "status": ["Concluído"]
+                    },
+                    {
+                        "date": "Set/2013 a Set/2014",
+                        "title": "Curso QIT – Qualificação em Informática e Tecnologia",
+                        "institution": "Escola de Informática Unisoft",
+                        "status": ["Concluído"]
+                    }
+                ]
+            },
+            "experiencia": {
+                "title": "Experiência Profissional",
+                "items": [
+                    {
+                        "company": "Confecções Vanelise",
+                        "positions": [
+                            {
+                                "title": "Auxiliar de Expedição Nível 2 (Tecido Plano)",
+                                "responsibilities": [
+                                    "Promovido para nível 2 com maiores responsabilidades",
+                                    "Treinamento de novos funcionários",
+                                    "Gestão avançada de estoque da caixaria",
+                                    "Controle de qualidade dos processos de expedição"
+                                ]
+                            },
+                            {
+                                "title": "Auxiliar de Expedição (Tecido Plano)",
+                                "responsibilities": [
+                                    "Recebimento e organização de paletes de conserto",
+                                    "Abastecimento de revisão e armazenamento de peças",
+                                    "Gestão de estoque e organização de materiais",
+                                    "Controle de qualidade inicial dos produtos"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "company": "Manutenção de Computadores – Autônomo",
+                        "positions": [
+                            {
+                                "title": "Técnico em Manutenção",
+                                "responsibilities": [
+                                    "Formatação, troca de peças e atualização de software",
+                                    "Atendimento a clientes e suporte técnico remoto e presencial",
+                                    "Instalação e configuração de sistemas operacionais",
+                                    "Manutenção preventiva e corretiva de hardware"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "habilidades": {
+                "title": "Habilidades",
+                "tecnicas": {
+                    "title": "Técnicas",
+                    "items": [
+                        "Manutenção de computadores (hardware e software)",
+                        "Linux (intermediário)",
+                        "JavaScript (intermediário)",
+                        "Microsoft Office (Excel, Word e PowerPoint)",
+                        "C",
+                        "Redes de computadores",
+                        "Suporte técnico",
+                        "HTML",
+                        "Administração de sistemas",
+                        "CSS",
+                        "Banco de Dados SQL",
+                        "Desenvolvimento Web",
+                        "Git e controle de versão"
+                    ]
+                },
+                "interpessoais": {
+                    "title": "Interpessoais",
+                    "items": [
+                        "Pontualidade",
+                        "Responsabilidade",
+                        "Atendimento ao cliente",
+                        "Trabalho em equipe",
+                        "Resolução de problemas",
+                        "Comunicação eficaz",
+                        "Liderança",
+                        "Gestão de tempo"
+                    ]
+                }
+            },
+            "download": "Baixar Currículo Completo (PDF)"
+        },
+        "tecnologias": {
+            "number": "03",
+            "title": "Tecnologias e Ferramentas",
+            "subtitle": "Stack tecnológico e ferramentas que utilizo",
+            "categories": {
+                "frontend": "Front-end",
+                "backend": "Backend",
+                "devops": "DevOps",
+                "databases": "Databases",
+                "ferramentas": "Ferramentas",
+                "so": "Sistema Operacional"
+            }
+        },
+        "projetos": {
+            "number": "04",
+            "title": "Projetos",
+            "subtitle": "Meus projetos desenvolvidos e em desenvolvimento",
+            "category_title": "Portfólio de Desenvolvimento",
+            "category_desc": "Explore meus projetos front-end, back-end e experimentos de programação.",
+            "search_placeholder": "Buscar projetos por nome, tecnologia ou descrição...",
+            "found": "projetos encontrados",
+            "no_results_title": "Nenhum projeto encontrado",
+            "no_results_desc": "Tente ajustar sua busca. Você pode pesquisar por nome do projeto, tecnologias ou descrição.",
+            "code": "Código",
+            "demo": "Demo",
+            "cards": [
+                {
+                    "title": "Animais no Zoológico 2",
+                    "desc": "Uma aplicação web interativa para gerenciamento e visualização de animais em um zoológico virtual.",
+                    "tags": ["JavaScript", "HTML", "CSS"],
+                    "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico2",
+                    "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico2/"
+                },
+                {
+                    "title": "Dados Climáticos",
+                    "desc": "Sistema para coleta, processamento e visualização de dados meteorológicos de diferentes fontes.",
+                    "tags": ["JavaScript", "API", "CSS"],
+                    "codeLink": "https://github.com/LeandroStanger/DadosClimaticos",
+                    "demoLink": "https://leandrostanger.github.io/DadosClimaticos/"
+                },
+                {
+                    "title": "Formulário de Feedback",
+                    "desc": "Formulário interativo para coleta de feedback de usuários com validação de dados.",
+                    "tags": ["HTML", "CSS", "JavaScript"],
+                    "codeLink": "https://github.com/LeandroStanger/FormularioDeFeedback",
+                    "demoLink": "https://leandrostanger.github.io/FormularioDeFeedback/"
+                },
+                {
+                    "title": "Carros Divertidos",
+                    "desc": "Jogo interativo com carros em um ambiente 2D, desenvolvido para praticar conceitos de programação.",
+                    "tags": ["JavaScript", "HTML5", "CSS3"],
+                    "codeLink": "https://github.com/LeandroStanger/CarrosDivertidos",
+                    "demoLink": "https://leandrostanger.github.io/CarrosDivertidos/"
+                },
+                {
+                    "title": "Corrida de Carro",
+                    "desc": "Simulação de corrida de carros com controles interativos e sistema de pontuação.",
+                    "tags": ["JavaScript", "CSS3", "HTML5"],
+                    "codeLink": "https://github.com/LeandroStanger/CorridaDeCarro",
+                    "demoLink": "https://leandrostanger.github.io/CorridaDeCarro/"
+                },
+                {
+                    "title": "Animais no Zoológico",
+                    "desc": "Versão inicial do sistema de gerenciamento de zoológico, com foco em aprendizado de JavaScript.",
+                    "tags": ["JavaScript", "HTML", "CSS"],
+                    "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico",
+                    "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico/"
+                },
+                {
+                    "title": "Site com Loop",
+                    "desc": "Site demonstrativo com efeitos visuais em loop e animações CSS/JavaScript.",
+                    "tags": ["HTML", "CSS", "JavaScript"],
+                    "codeLink": "https://github.com/LeandroStanger/SiteComLoop",
+                    "demoLink": "https://leandrostanger.github.io/SiteComLoop/"
+                },
+                {
+                    "title": "Sistema de Login",
+                    "desc": "Sistema de autenticação de usuários com validação de credenciais e interface responsiva.",
+                    "tags": ["JavaScript", "HTML", "CSS"],
+                    "codeLink": "https://github.com/LeandroStanger/SistemaDeLogin",
+                    "demoLink": "https://leandrostanger.github.io/SistemaDeLogin/"
+                },
+                {
+                    "title": "Gerenciador de Lista",
+                    "desc": "Aplicação para criar, editar e excluir itens de listas, com armazenamento local.",
+                    "tags": ["JavaScript", "LocalStorage", "CSS"],
+                    "codeLink": "https://github.com/LeandroStanger/GerenciadorDeLista",
+                    "demoLink": "https://leandrostanger.github.io/GerenciadorDeLista/"
+                },
+                {
+                    "title": "Projetos Iniciais",
+                    "desc": "Coleção de meus primeiros projetos de programação, demonstrando minha evolução como desenvolvedor.",
+                    "tags": ["HTML", "CSS", "JavaScript"],
+                    "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais"
+                },
+                {
+                    "title": "Leandro Stanger Portfólio",
+                    "desc": "Repositório principal com perfil, README detalhado e links para todos os projetos. Foco em desenvolvimento Front-end com HTML, CSS e JavaScript.",
+                    "tags": ["HTML5", "CSS3", "JavaScript", "Git"],
+                    "codeLink": "https://github.com/LeandroStanger/LeandroStanger",
+                    "demoLink": "https://leandrostanger.github.io/LeandroStanger/"
+                },
+                {
+                    "title": "Cidades com Altas Temperaturas",
+                    "desc": "Aplicação web interativa que exibe e filtra dados sobre cidades com climas extremos. Inclui mapa, dashboard e visualização de dados climáticos.",
+                    "tags": ["JavaScript (ES6+)", "API", "CSS3", "Data Visualization"],
+                    "codeLink": "https://github.com/LeandroStanger/CidadesComAltasTemperaturas",
+                    "demoLink": "https://leandrostanger.github.io/CidadesComAltasTemperaturas/"
+                },
+                {
+                    "title": "Site com Loop Hack",
+                    "desc": "Site experimental com efeitos visuais em loop, animações criativas e técnicas avançadas de CSS/JavaScript. Demonstra habilidades em animações e design interativo.",
+                    "tags": ["HTML5", "CSS3", "JavaScript", "Animações", "Experimentos Web"],
+                    "codeLink": "https://github.com/LeandroStanger/SiteComLoopHack",
+                    "demoLink": "https://leandrostanger.github.io/SiteComLoopHack/"
+                },
+                {
+                    "title": "Projetos Iniciais (Linguagem C)",
+                    "desc": "Coleção de meus primeiros projetos de programação na linguagem C, demonstrando minha evolução como desenvolvedor.",
+                    "tags": ["C", "GCC"],
+                    "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-C"
+                },
+                {
+                    "title": "Sistema de Animais de Estimação",
+                    "desc": "Um catálogo estático e responsivo que exibe uma lista de animais de estimação, apresentando informações básicas como nome, espécie, idade, peso e nível de energia em uma interface web amigável.",
+                    "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+                    "codeLink": "https://github.com/LeandroStanger/SistemaDeAnimaisDeEstimacao",
+                    "demoLink": "https://leandrostanger.github.io/SistemaDeAnimaisDeEstimacao/"
+                },
+                {
+                    "title": "Dashboard de Jogadores",
+                    "desc": "Estatísticas completas dos maiores jogadores de futebol. Um painel web moderno e interativo para visualização e análise de dados de jogadores em formato de dashboard.",
+                    "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+                    "codeLink": "https://github.com/LeandroStanger/DashboardDeJogadores/",
+                    "demoLink": "https://leandrostanger.github.io/DashboardDeJogadores/"
+                }
+            ]
+        },
+        "contato": {
+            "number": "05",
+            "title": "Entre em Contato",
+            "subtitle": "Estou sempre aberto a novas oportunidades e colaborações",
+            "intro": "Vamos conversar sobre projetos, oportunidades ou apenas trocar ideias sobre tecnologia!",
+            "form": {
+                "title": "Envie uma mensagem",
+                "name_label": "Nome",
+                "name_placeholder": "Digite seu nome completo",
+                "email_label": "E-mail",
+                "email_placeholder": "Digite seu E-mail: seu@email.com",
+                "message_label": "Mensagem",
+                "message_placeholder": "Digite sua mensagem aqui...",
+                "send": "Enviar Mensagem",
+                "sending": "Enviando...",
+                "success": "✅ Mensagem enviada com sucesso! Entrarei em contato em breve.",
+                "error": "❌ Ocorreu um erro ao enviar a mensagem. Tente novamente."
+            },
+            "links": {
+                "linkedin": "LinkedIn",
+                "linkedin_desc": "Conecte-se profissionalmente",
+                "github": "GitHub",
+                "github_desc": "Veja meus projetos",
+                "instagram": "Instagram",
+                "instagram_desc": "Siga-me no Instagram",
+                "telegram": "Telegram",
+                "telegram_desc": "@leandrostanger",
+                "99freelas": "99freelas",
+                "99freelas_desc": "Perfil profissional",
+                "x": "X",
+                "x_desc": "@LeandroStanger1",
+                "messenger": "Messenger",
+                "messenger_desc": "@leandrostanger"
+            }
+        }
+    },
+    "footer": {
+        "tagline": "Desenvolvedor Full-Stack e Estudante de Engenharia da Computação",
+        "copyright_prefix": "© 2025 - ",
+        "copyright_suffix": " Leandro Stanger. Todos os direitos reservados."
+    }
+};
+
+// ==================== MÓDULO I18N ====================
+const I18n = {
+    async loadTranslations(lang) {
+        if (lang === AppState.currentLang && Object.keys(AppState.translations).length > 0) {
+            return true;
+        }
+
+        try {
+            const response = await fetch(`locales/${lang}.json`);
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const data = await response.json();
+            if (data && typeof data === 'object') {
+                AppState.setTranslations(lang, data);
+            } else {
+                throw new Error('JSON inválido');
+            }
+            return true;
+        } catch (error) {
+            console.warn(`Falha ao carregar ${lang}.`, error);
+            if (lang !== 'pt') {
+                return this.loadTranslations('pt');
+            } else {
+                console.warn('Usando traduções padrão (fallback).');
+                AppState.setTranslations('pt', DEFAULT_TRANSLATIONS);
+                return false;
+            }
+        }
+    },
+
+    t(key, options = {}) {
+        let value = key.split('.').reduce((obj, k) => obj?.[k], AppState.translations);
+        if (value === undefined) {
+            value = key.split('.').reduce((obj, k) => obj?.[k], DEFAULT_TRANSLATIONS);
+        }
+        if (value === undefined) {
+            console.warn(`Chave não encontrada: ${key}`);
+            return `[${key}]`;
+        }
+        if (typeof value === 'string' && Object.keys(options).length > 0) {
+            return value.replace(/\{(\w+)\}/g, (_, v) => options[v] || '');
+        }
+        return value;
+    },
+
+    translateStaticElements() {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            const translation = this.t(key);
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                const placeholderKey = el.getAttribute('data-i18n-placeholder');
+                if (placeholderKey) el.placeholder = this.t(placeholderKey);
+                else el.value = translation;
+            } else {
+                el.innerHTML = translation;
+            }
+        });
+
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            el.placeholder = this.t(el.getAttribute('data-i18n-placeholder'));
+        });
+
+        document.title = this.t('site.title');
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute('content', this.t('site.description'));
+    },
+
+    updateActiveButton() {
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.lang === AppState.currentLang);
+        });
+    },
+
+    async setLanguage(lang) {
+        if (!AppState.supportedLangs.includes(lang) || lang === AppState.currentLang) return;
+        await this.loadTranslations(lang);
+        // O listener do AppState cuidará da renderização
+    }
+};
+
+// ==================== RENDERIZADORES DAS SEÇÕES ====================
+const Renderer = {
+    renderAll() {
+        // Executa cada função de renderização com try/catch para que uma falha não pare as outras
+        this._safeRender('Sobre', this.renderSobre);
+        this._safeRender('Objetivo Áreas', this.renderObjetivoAreas);
+        this._safeRender('Educação', this.renderEducacao);
+        this._safeRender('Experiência', this.renderExperiencia);
+        this._safeRender('Habilidades', this.renderHabilidades);
+        document.dispatchEvent(new CustomEvent('renderer:done'));
+        ScrollAnimations.refresh();
+    },
+
+    _safeRender(sectionName, renderFn) {
+        try {
+            renderFn.call(this);
+        } catch (error) {
+            console.error(`Erro ao renderizar seção ${sectionName}:`, error);
+        }
+    },
+
+    renderSobre() {
+        const container = document.getElementById('sobre-grid');
+        if (!container) return;
+        const cards = I18n.t('sections.sobre.cards');
+        if (!Array.isArray(cards) || cards.length === 0) {
+            container.innerHTML = '<div class="error-message">Erro ao carregar dados da seção "Sobre".</div>';
+            return;
+        }
+        container.innerHTML = cards.map(card => `
+            <article class="sobre-card">
+                <div class="sobre-card-header">
+                    <div class="sobre-icon"><i class="fas fa-${card.icon || 'user'}"></i></div>
+                    <h3 class="sobre-card-title">${card.title || ''}</h3>
+                </div>
+                <div class="sobre-card-body"><p>${card.text || ''}</p></div>
+            </article>
+        `).join('');
+    },
+
+    renderObjetivoAreas() {
+        const container = document.getElementById('objetivo-grid');
+        if (!container) return;
+        const areas = I18n.t('sections.curriculo.objetivo.areas');
+        if (!Array.isArray(areas) || areas.length === 0) {
+            container.innerHTML = '';
+            return;
+        }
+        container.innerHTML = areas.map(area => `
+            <div class="objetivo-area">
+                <div class="objetivo-area-icon"><i class="fas fa-${area.icon || 'rocket'}"></i></div>
+                <h4 class="objetivo-area-title">${area.title || ''}</h4>
+                <p class="objetivo-area-text">${area.text || ''}</p>
+            </div>
+        `).join('');
+    },
+
+    renderEducacao() {
+        const container = document.getElementById('timeline-educacao');
+        if (!container) return;
+        const items = I18n.t('sections.curriculo.educacao.items');
+        if (!Array.isArray(items) || items.length === 0) {
+            container.innerHTML = '<div class="error-message">Erro ao carregar dados de educação.</div>';
+            return;
+        }
+        container.innerHTML = items.map(item => {
+            const statusArray = Array.isArray(item.status) ? item.status : [];
+            return `
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <time class="timeline-date">${item.date || ''}</time>
+                    <h4 class="timeline-title">${item.title || ''}</h4>
+                    <p class="timeline-subtitle">${item.institution || ''}</p>
+                    <div class="status-container">
+                        ${statusArray.map(s => {
+                            const lower = s.toLowerCase();
+                            const isCompleted = lower.includes('concluído') || lower.includes('completed') || lower.includes('completado');
+                            return `<span class="status-badge ${isCompleted ? 'status-concluido' : 'status-andamento'}">${s}</span>`;
+                        }).join('')}
+                    </div>
+                </div>
+            </div>
+        `}).join('');
+    },
+
+    renderExperiencia() {
+        const container = document.getElementById('experiencia-lista');
+        if (!container) return;
+        const items = I18n.t('sections.curriculo.experiencia.items');
+        if (!Array.isArray(items) || items.length === 0) {
+            container.innerHTML = '<div class="error-message">Erro ao carregar dados de experiência.</div>';
+            return;
+        }
+
+        const lang = AppState.currentLang;
+
+        container.innerHTML = items.map(exp => {
+            if (!exp || typeof exp !== 'object') return '';
+
+            let companyPeriod = '';
+            const company = exp.company || '';
+            if (company.includes('Vanelise')) {
+                companyPeriod = ExperienceCalc.getPeriodText('empresa1', lang);
+            } else if (company.includes('Autônomo') || company.includes('Self-employed') || company.includes('Autónomo')) {
+                companyPeriod = ExperienceCalc.getPeriodText('empresa2', lang);
+            } else {
+                companyPeriod = exp.period || '';
+            }
+
+            const positions = Array.isArray(exp.positions) ? exp.positions : [];
+
+            return `
+            <div class="experiencia-item">
+                <div class="experiencia-header">
+                    <h4 class="experiencia-empresa">${company}</h4>
+                    ${companyPeriod ? `<div class="experiencia-periodo"><span class="periodo-detalhes">${companyPeriod}</span></div>` : ''}
+                </div>
+                ${positions.map((pos, idx) => {
+                    if (!pos || typeof pos !== 'object') return '';
+                    let posPeriod = pos.period || '';
+                    if (company.includes('Vanelise')) {
+                        if (idx === 0) posPeriod = ExperienceCalc.getPeriodText('cargo1', lang);
+                        else if (idx === 1) posPeriod = ExperienceCalc.getPeriodText('cargo1_anterior', lang);
+                    }
+                    const responsibilities = Array.isArray(pos.responsibilities) ? pos.responsibilities : [];
+                    return `
+                    <div class="experiencia-cargo">
+                        <h5 class="cargo-title">${pos.title || ''}</h5>
+                        ${posPeriod ? `<div class="cargo-periodo"><span class="periodo-detalhes">${posPeriod}</span></div>` : ''}
+                        <ul class="cargo-responsabilidades">
+                            ${responsibilities.map(r => `<li>${r}</li>`).join('')}
+                        </ul>
+                    </div>
+                `}).join('')}
+            </div>
+        `}).join('');
+    },
+
+    renderHabilidades() {
+        const container = document.getElementById('habilidades-grid');
+        if (!container) return;
+        const tecnicas = I18n.t('sections.curriculo.habilidades.tecnicas');
+        const interpessoais = I18n.t('sections.curriculo.habilidades.interpessoais');
+        if (!tecnicas || !interpessoais || !Array.isArray(tecnicas.items) || !Array.isArray(interpessoais.items)) {
+            container.innerHTML = '<div class="error-message">Erro ao carregar habilidades.</div>';
+            return;
+        }
+        container.innerHTML = `
+            <div class="habilidades-categoria">
+                <h4 class="habilidades-categoria-title"><i class="fas fa-code"></i> ${tecnicas.title || ''}</h4>
+                <div class="habilidades-lista">${tecnicas.items.map(item => `<span class="habilidade-tag">${item}</span>`).join('')}</div>
+            </div>
+            <div class="habilidades-categoria">
+                <h4 class="habilidades-categoria-title"><i class="fas fa-users"></i> ${interpessoais.title || ''}</h4>
+                <div class="habilidades-lista">${interpessoais.items.map(item => `<span class="habilidade-tag">${item}</span>`).join('')}</div>
+            </div>
+        `;
+    }
+};
+
+// ==================== MÓDULO DE CÁLCULO DE PERÍODOS ====================
+const ExperienceCalc = {
+    calculatePeriod(start, end = new Date()) {
+        const s = new Date(start);
+        const e = end instanceof Date ? end : new Date(end);
+        if (isNaN(s.getTime())) return { years: 0, months: 0 };
+        let years = e.getFullYear() - s.getFullYear();
+        let months = e.getMonth() - s.getMonth();
+        if (months < 0) { years--; months += 12; }
+        if (e.getDate() < s.getDate()) {
+            months--;
+            if (months < 0) { years--; months += 12; }
+        }
+        return { years, months };
+    },
+
+    formatPeriod(period, lang) {
+        const labels = {
+            pt: { y: ['ano', 'anos'], m: ['mês', 'meses'] },
+            en: { y: ['year', 'years'], m: ['month', 'months'] },
+            es: { y: ['año', 'años'], m: ['mes', 'meses'] }
+        };
+        const l = labels[lang] || labels.pt;
+        const parts = [];
+        if (period.years > 0) parts.push(`${period.years} ${period.years === 1 ? l.y[0] : l.y[1]}`);
+        if (period.months > 0) parts.push(`${period.months} ${period.months === 1 ? l.m[0] : l.m[1]}`);
+        return parts.length > 0 ? parts.join(', ') : (lang === 'pt' ? '0 meses' : lang === 'en' ? '0 months' : '0 meses');
+    },
+
+    getPeriodText(type, lang) {
+        const ongoing = I18n.t('ongoing');
+        const now = new Date();
+        if (type === 'cargo1') {
+            const start = new Date('2025-08-01');
+            const period = start > now ? { years: 0, months: 0 } : this.calculatePeriod(start);
+            return `ago de 2025 - ${ongoing} · (${this.formatPeriod(period, lang)})`;
+        }
+        if (type === 'cargo1_anterior') {
+            const period = this.calculatePeriod('2020-01-21', '2025-08-01');
+            return `21 jan de 2020 a ago de 2025 (${this.formatPeriod(period, lang)})`;
+        }
+        if (type === 'empresa1') {
+            const period = this.calculatePeriod('2020-01-21');
+            return `21 jan de 2020 - ${ongoing} · (${this.formatPeriod(period, lang)})`;
+        }
+        if (type === 'empresa2') {
+            const period = this.calculatePeriod('2014-01-01');
+            return `Jan/2014 - ${ongoing} · (${this.formatPeriod(period, lang)})`;
+        }
+        return '';
+    }
+};
+
+// ==================== COMPONENTE DE PROJETOS ====================
 class ProjectsSearch {
     constructor() {
-        this.searchInput = document.getElementById('busca-projetos');
-        this.projectsGrid = document.getElementById('projetos-grid');
+        this.input = document.getElementById('busca-projetos');
+        this.grid = document.getElementById('projetos-grid');
         this.noResults = document.getElementById('nenhum-resultado');
         this.counter = document.getElementById('contador-projetos');
-        this.searchIcon = document.querySelector('.projetos-busca i');
 
-        this.projects = [];
-        this.visibleProjects = 0;
-        this.totalProjects = 0;
-        this.searchTerm = '';
-        this.debounceTimeout = null;
-        this.DEBOUNCE_DELAY = 300;
-
-        this.init();
-    }
-
-    init() {
-        if (!this.searchInput || !this.projectsGrid) {
+        if (!this.input || !this.grid) {
             console.warn('Elementos de busca não encontrados');
             return;
         }
 
-        this.projects = Array.from(this.projectsGrid.querySelectorAll('.projeto-card'));
-        this.totalProjects = this.projects.length;
-        this.visibleProjects = this.totalProjects;
-
-        this.setupEventListeners();
-        this.updateCounter();
-        this.updateNoResults();
-
-        // Log removido
+        this.projects = [];
+        this.init();
     }
 
-    setupEventListeners() {
-        // Evento de input com debounce
-        this.searchInput.addEventListener('input', (e) => {
-            this.handleSearchInput(e.target.value);
+    init() {
+        this.input.addEventListener('input', () => this.filter());
+        AppState.subscribe(() => this.render());
+        document.addEventListener('renderer:done', () => {
+            // Atualiza a lista de projetos após a renderização completa
+            this.projects = Array.from(this.grid.children);
+            this.filter();
         });
+        this.render();
+    }
 
-        // Limpar busca com Escape
-        this.searchInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                this.clearSearch();
-            }
+    render() {
+        const cardsData = I18n.t('sections.projetos.cards');
+        if (!Array.isArray(cardsData)) {
+            this.grid.innerHTML = '<div class="error-message">Erro ao carregar projetos.</div>';
+            return;
+        }
+
+        const codeLabel = I18n.t('sections.projetos.code');
+        const demoLabel = I18n.t('sections.projetos.demo');
+
+        this.grid.innerHTML = cardsData.map(p => `
+            <article class="projeto-card">
+                <header class="projeto-header">
+                    <h3 class="projeto-title">${p.title || ''}</h3>
+                    <p class="projeto-descricao">${p.desc || ''}</p>
+                </header>
+                <div class="projeto-tags">${(p.tags || []).map(t => `<span class="tag">${t}</span>`).join('')}</div>
+                <footer class="projeto-actions">
+                    <a href="${p.codeLink || '#'}" target="_blank" class="btn btn-projeto"><i class="fas fa-code"></i> ${codeLabel}</a>
+                    ${p.demoLink ? `<a href="${p.demoLink}" target="_blank" class="btn btn-projeto-secundario"><i class="fas fa-external-link-alt"></i> ${demoLabel}</a>` : ''}
+                </footer>
+            </article>
+        `).join('');
+
+        this.projects = Array.from(this.grid.children);
+        this.projects.forEach(p => {
+            p.classList.remove('hidden', 'entrance');
+            p.style.removeProperty('--delay');
         });
-
-        // Limpar busca clicando no ícone
-        if (this.searchIcon) {
-            this.searchIcon.addEventListener('click', () => {
-                if (this.searchInput.value.trim() !== '') {
-                    this.clearSearch();
-                }
-            });
-        }
-
-        // Aplicar busca se já houver texto ao carregar
-        if (this.searchInput.value.trim() !== '') {
-            setTimeout(() => {
-                this.handleSearchInput(this.searchInput.value);
-            }, 100);
-        }
+        this.filter();
     }
 
-    handleSearchInput(value) {
-        const term = value.trim();
-        this.searchTerm = term;
-
-        // Atualizar ícone
-        this.updateSearchIcon();
-
-        // Aplicar debounce
-        if (this.debounceTimeout) {
-            clearTimeout(this.debounceTimeout);
-        }
-
-        this.debounceTimeout = setTimeout(() => {
-            this.filterProjects();
-            this.debounceTimeout = null;
-        }, this.DEBOUNCE_DELAY);
-    }
-
-    filterProjects() {
-        const term = this.searchTerm.toLowerCase();
+    filter() {
+        const term = this.input.value.trim().toLowerCase();
         let visibleCount = 0;
 
-        // Resetar todos os projetos
-        this.projects.forEach(project => {
-            if (!project || !project.parentNode) return;
-            project.classList.remove('hidden');
-            project.style.display = 'flex';
-            project.style.animation = 'none'; // Resetar animação
+        this.projects.forEach(card => {
+            card.classList.remove('entrance');
         });
 
-        // Aplicar filtro se houver termo
-        if (term) {
-            this.projects.forEach(project => {
-                if (!project || !project.parentNode) return;
+        this.projects.forEach(card => {
+            const text = card.innerText.toLowerCase();
+            const match = term === '' || text.includes(term);
+            if (!match) {
+                card.classList.add('hidden');
+            } else {
+                card.classList.remove('hidden');
+                visibleCount++;
+            }
+        });
 
-                const title = project.querySelector('.projeto-title')?.textContent?.toLowerCase() || '';
-                const description = project.querySelector('.projeto-descricao')?.textContent?.toLowerCase() || '';
-                const tags = Array.from(project.querySelectorAll('.tag')).map(tag =>
-                    tag.textContent?.toLowerCase() || ''
-                );
+        if (this.counter) {
+            const foundText = I18n.t('sections.projetos.found');
+            this.counter.textContent = `${visibleCount} ${foundText}`;
+        }
 
-                const matches =
-                    title.includes(term) ||
-                    description.includes(term) ||
-                    tags.some(tag => tag.includes(term));
+        if (this.noResults) {
+            this.noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
 
-                if (!matches) {
-                    project.classList.add('hidden');
-                    project.style.display = 'none';
-                } else {
-                    visibleCount++;
-                    this.highlightText(project, term);
-                }
+        if (visibleCount > 0) {
+            requestAnimationFrame(() => {
+                const visibleCards = this.projects.filter(c => !c.classList.contains('hidden'));
+                visibleCards.forEach((card, index) => {
+                    card.style.setProperty('--delay', `${index * 0.05}s`);
+                    card.classList.add('entrance');
+                });
             });
-        } else {
-            // Termo vazio: mostrar todos
-            visibleCount = this.totalProjects;
-            this.removeHighlights();
         }
-
-        this.visibleProjects = visibleCount;
-        this.updateCounter();
-        this.updateNoResults();
-        this.animateVisibleProjects();
-    }
-
-    highlightText(project, term) {
-        if (!project || !term) return;
-
-        // Remover highlights anteriores
-        const highlights = project.querySelectorAll('.search-highlight');
-        highlights.forEach(highlight => {
-            const parent = highlight.parentNode;
-            if (parent) {
-                parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
-                parent.normalize();
-            }
-        });
-
-        // Aplicar highlight no título
-        const titleElement = project.querySelector('.projeto-title');
-        if (titleElement) this.highlightElement(titleElement, term);
-
-        // Aplicar highlight na descrição
-        const descElement = project.querySelector('.projeto-descricao');
-        if (descElement) this.highlightElement(descElement, term);
-
-        // Aplicar highlight nas tags
-        const tags = project.querySelectorAll('.tag');
-        tags.forEach(tag => {
-            this.highlightElement(tag, term);
-        });
-    }
-
-    highlightElement(element, term) {
-        if (!element || !term) return;
-
-        const text = element.textContent;
-        try {
-            const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-            const regex = new RegExp(`(${escapedTerm})`, 'gi');
-            const newText = text.replace(regex, '<span class="search-highlight">$1</span>');
-
-            if (newText !== text) {
-                element.innerHTML = newText;
-            }
-        } catch (error) {
-            console.warn('Erro ao aplicar highlight:', error);
-        }
-    }
-
-    removeHighlights() {
-        const highlights = document.querySelectorAll('.search-highlight');
-        highlights.forEach(highlight => {
-            const parent = highlight.parentNode;
-            if (parent) {
-                parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
-                parent.normalize();
-            }
-        });
-    }
-
-    clearSearch() {
-        this.searchInput.value = '';
-        this.searchTerm = '';
-        this.updateSearchIcon();
-        this.filterProjects();
-        this.searchInput.focus();
-    }
-
-    updateSearchIcon() {
-        if (!this.searchIcon) return;
-
-        // Remover todas as classes de ícone
-        this.searchIcon.classList.remove('fa-search', 'fa-times');
-
-        if (this.searchTerm) {
-            this.searchIcon.classList.add('fa-times');
-            this.searchIcon.style.cursor = 'pointer';
-            this.searchIcon.title = 'Limpar busca';
-        } else {
-            this.searchIcon.classList.add('fa-search');
-            this.searchIcon.style.cursor = 'default';
-            this.searchIcon.title = 'Buscar projetos';
-        }
-    }
-
-    updateCounter() {
-        if (!this.counter) return;
-
-        if (this.visibleProjects === this.totalProjects) {
-            this.counter.textContent = `${this.totalProjects} projetos`;
-        } else {
-            this.counter.textContent = `${this.visibleProjects} de ${this.totalProjects} projetos`;
-        }
-    }
-
-    updateNoResults() {
-        if (!this.noResults) return;
-
-        if (this.searchTerm && this.visibleProjects === 0) {
-            this.noResults.style.display = 'block';
-            this.noResults.classList.add('visible');
-        } else {
-            this.noResults.style.display = 'none';
-            this.noResults.classList.remove('visible');
-        }
-    }
-
-    animateVisibleProjects() {
-        requestAnimationFrame(() => {
-            const visibleCards = document.querySelectorAll('.projeto-card:not(.hidden)');
-
-            visibleCards.forEach((card, index) => {
-                if (!card) return;
-
-                // Resetar animação
-                card.style.animation = 'none';
-
-                // Forçar reflow
-                void card.offsetWidth;
-
-                // Aplicar animação com delay escalonado
-                card.style.animation = `fadeInUp 0.3s ease-out ${index * 0.05}s both`;
-            });
-        });
     }
 }
 
-// ============ ANIMAÇÕES DE SCROLL ============
-class ScrollAnimations {
-    constructor() {
-        this.sections = document.querySelectorAll('section');
-        this.timelineItems = document.querySelectorAll('.timeline-item');
-        this.experienceItems = document.querySelectorAll('.experiencia-item');
-        this.observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        this.init();
-    }
-
+// ==================== ANIMAÇÕES DE SCROLL ====================
+const ScrollAnimations = {
+    observer: null,
     init() {
-        if (this.sections.length === 0 &&
-            this.timelineItems.length === 0 &&
-            this.experienceItems.length === 0) {
-            console.warn('Nenhum elemento para animação de scroll encontrado');
-            return;
-        }
-
-        this.setupObservers();
-    }
-
-    setupObservers() {
-        const observer = new IntersectionObserver((entries) => {
+        this.observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-up');
-                    observer.unobserve(entry.target);
+                    entry.target.classList.add('visible');
+                    this.observer.unobserve(entry.target);
                 }
             });
-        }, this.observerOptions);
-
-        // Observar seções principais
-        this.sections.forEach(section => {
-            observer.observe(section);
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        this.observeAll();
+    },
+    observeAll() {
+        const targets = document.querySelectorAll('section, .timeline-item, .experiencia-item, .sobre-card, .projeto-card, .objetivo-area, .habilidades-categoria, .tecnologia-categoria, .contato-link');
+        targets.forEach(el => {
+            if (!el.classList.contains('visible')) this.observer.observe(el);
         });
-
-        // Observar itens da timeline
-        this.timelineItems.forEach(item => {
-            item.style.opacity = '0';
-            item.style.transform = 'translateX(-20px)';
-            observer.observe(item);
-        });
-
-        // Observar itens de experiência
-        this.experienceItems.forEach(item => {
-            item.style.opacity = '0';
-            item.style.transform = 'translateX(20px)';
-            observer.observe(item);
-        });
+    },
+    refresh() {
+        this.observeAll();
     }
+};
+
+// ==================== UTILITÁRIOS ====================
+function updateCurrentYear() {
+    const el = document.getElementById('mostrarAnoAtual');
+    if (el) el.textContent = new Date().getFullYear();
 }
 
-// ============ EFFECT DE DIGITAÇÃO ============
-class TypewriterEffect {
-    constructor() {
-        this.typewriterElement = document.getElementById('typewriter');
-        this.init();
-    }
-
-    init() {
-        if (!this.typewriterElement) {
-            console.warn('Elemento typewriter não encontrado');
-            return;
+function initTypewriter() {
+    const el = document.getElementById('typewriter');
+    if (!el) return;
+    const text = el.textContent;
+    el.textContent = '';
+    let i = 0;
+    function type() {
+        if (i < text.length) {
+            el.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, 30);
         }
-
-        const originalText = this.typewriterElement.textContent;
-        this.typewriterElement.textContent = '';
-
-        let i = 0;
-        const typeWriter = () => {
-            if (i < originalText.length) {
-                this.typewriterElement.textContent += originalText.charAt(i);
-                i++;
-                setTimeout(typeWriter, 20);
-            }
-        };
-
-        setTimeout(typeWriter, 500);
     }
+    type();
 }
 
-// ============ CÁLCULO DE PERÍODOS ============
-class ExperienceCalculator {
-    constructor() {
-        this.init();
-    }
-
-    init() {
-        this.updatePeriods();
-        // Atualizar a cada mês
-        setInterval(() => this.updatePeriods(), 30 * 24 * 60 * 60 * 1000);
-    }
-
-    calculatePeriod(startDate, endDate = null) {
-        try {
-            const start = new Date(startDate);
-            const end = endDate ? new Date(endDate) : new Date();
-
-            if (isNaN(start.getTime())) {
-                console.warn('Data de início inválida:', startDate);
-                return { years: 0, months: 0 };
-            }
-
-            let years = end.getFullYear() - start.getFullYear();
-            let months = end.getMonth() - start.getMonth();
-
-            if (months < 0) {
-                years--;
-                months += 12;
-            }
-
-            // Ajuste para dias
-            if (end.getDate() < start.getDate()) {
-                months--;
-                if (months < 0) {
-                    years--;
-                    months += 12;
-                }
-            }
-
-            return { years, months };
-        } catch (error) {
-            console.warn('Erro ao calcular período:', error);
-            return { years: 0, months: 0 };
-        }
-    }
-
-    formatPeriod(period) {
-        const parts = [];
-        if (period.years > 0) {
-            parts.push(`${period.years} ${period.years === 1 ? 'ano' : 'anos'}`);
-        }
-        if (period.months > 0) {
-            parts.push(`${period.months} ${period.months === 1 ? 'mês' : 'meses'}`);
-        }
-        return parts.length > 0 ? parts.join(', ') : '0 meses';
-    }
-
-    updatePeriods() {
-        try {
-            // Experiência 1 - Cargo atual (desde ago/2025)
-            const exp1 = this.calculatePeriod('2025-08');
-            const period1 = `ago de 2025 - em andamento · (${this.formatPeriod(exp1)})`;
-            const element1 = document.getElementById('cargo-periodo-1');
-            if (element1) element1.textContent = period1;
-
-            // Experiência 1 - Período total na empresa (desde jan/2020)
-            const expEmp1 = this.calculatePeriod('2020-01-21');
-            const periodEmp1 = `21 jan de 2020 - em andamento · (${this.formatPeriod(expEmp1)})`;
-            const elementEmp1 = document.getElementById('experiencia-periodo-1');
-            if (elementEmp1) elementEmp1.textContent = periodEmp1;
-
-            // Experiência 2 - Manutenção de Computadores (desde jan/2014)
-            const exp2 = this.calculatePeriod('2014-01');
-            const period2 = `Jan/2014 - em andamento · (${this.formatPeriod(exp2)})`;
-            const element2 = document.getElementById('experiencia-periodo-2');
-            if (element2) element2.textContent = period2;
-        } catch (error) {
-            console.warn('Erro ao atualizar períodos:', error);
-        }
-    }
-}
-
-// ============ FORMULÁRIO DE CONTATO ============
-class ContactForm {
-    constructor() {
-        this.form = document.getElementById('contact-form');
-        this.submitBtn = document.getElementById('submit-btn');
-        this.formStatus = document.getElementById('form-status');
-
-        this.init();
-    }
-
-    init() {
-        if (!this.form) {
-            console.warn('Formulário de contato não encontrado');
-            return;
-        }
-
-        this.setupEventListeners();
-    }
-
-    setupEventListeners() {
-        // Usar event delegation para validação
-        this.form.addEventListener('input', (e) => {
-            if (e.target.matches('input, textarea')) {
-                this.validateField(e.target);
-            }
-        });
-
-        this.form.addEventListener('blur', (e) => {
-            if (e.target.matches('input, textarea')) {
-                this.validateField(e.target);
-            }
-        }, true);
-
-        this.form.addEventListener('submit', (e) => {
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
             e.preventDefault();
-            this.handleSubmit();
+            const target = document.querySelector(a.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
         });
-    }
+    });
+}
 
-    validateField(field) {
-        if (!field) return false;
+function initBackToTop() {
+    const btn = document.querySelector('.btn-back-top');
+    if (!btn) return;
+    btn.style.display = 'none';
+    window.addEventListener('scroll', () => {
+        btn.style.display = window.scrollY > 400 ? 'flex' : 'none';
+    });
+    btn.addEventListener('click', e => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
 
-        // Resetar estilo
-        field.style.borderColor = 'var(--color-dark-600)';
-
-        if (field.hasAttribute('required') && field.value.trim() === '') {
-            field.style.borderColor = 'var(--color-error)';
-            return false;
-        }
-
-        if (field.type === 'email' && field.value) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(field.value)) {
-                field.style.borderColor = 'var(--color-error)';
-                return false;
-            }
-        }
-
-        if (field.value) {
-            field.style.borderColor = 'var(--color-success)';
-        }
-
-        return true;
-    }
-
-    validateAllFields() {
-        let isValid = true;
-        const inputs = this.form.querySelectorAll('input, textarea');
-
-        inputs.forEach(input => {
-            if (!this.validateField(input)) {
-                isValid = false;
-            }
-        });
-
-        return isValid;
-    }
-
-    async handleSubmit() {
-        // Validar todos os campos
-        if (!this.validateAllFields()) {
-            if (this.formStatus) {
-                this.formStatus.textContent = '❌ Por favor, corrija os campos destacados.';
-                this.formStatus.className = 'form-status error';
-            }
-            return;
-        }
-
-        // Salvar conteúdo original do botão
-        const originalBtnContent = this.submitBtn.innerHTML;
-        const originalBtnDisabled = this.submitBtn.disabled;
-
-        // Desabilitar botão e mostrar loading
-        this.submitBtn.disabled = true;
-        this.submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-
-        // Limpar mensagens anteriores
-        if (this.formStatus) {
-            this.formStatus.textContent = '';
-            this.formStatus.className = 'form-status';
-        }
-
+function initContactForm() {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+    form.addEventListener('submit', async e => {
+        e.preventDefault();
+        const status = document.getElementById('form-status');
+        const submitBtn = document.getElementById('submit-btn');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> ${I18n.t('sections.contato.form.sending')}`;
         try {
-            const formData = new FormData(this.form);
-            const response = await fetch(this.form.action, {
+            const response = await fetch(form.action, {
                 method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
             });
-
             if (response.ok) {
-                // Sucesso
-                if (this.formStatus) {
-                    this.formStatus.textContent = '✅ Mensagem enviada com sucesso! Entrarei em contato em breve.';
-                    this.formStatus.className = 'form-status success';
-                }
-
-                // Resetar formulário
-                this.form.reset();
-
-                // Resetar bordas
-                const inputs = this.form.querySelectorAll('input, textarea');
-                inputs.forEach(input => {
-                    input.style.borderColor = 'var(--color-dark-600)';
-                });
-
+                status.textContent = I18n.t('sections.contato.form.success');
+                status.className = 'form-status success';
+                form.reset();
             } else {
-                throw new Error('Form submission failed');
+                throw new Error();
             }
-
-        } catch (error) {
-            // Erro de rede ou servidor
-            if (this.formStatus) {
-                this.formStatus.textContent = '❌ Ocorreu um erro ao enviar a mensagem. Tente novamente.';
-                this.formStatus.className = 'form-status error';
-            }
-
-            console.error('Erro no formulário:', error);
-
+        } catch {
+            status.textContent = I18n.t('sections.contato.form.error');
+            status.className = 'form-status error';
         } finally {
-            // Restaurar botão após 1.5 segundos
             setTimeout(() => {
-                this.submitBtn.disabled = originalBtnDisabled;
-                this.submitBtn.innerHTML = originalBtnContent;
-
-                // Limpar mensagem de status após 5 segundos
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
                 setTimeout(() => {
-                    if (this.formStatus) {
-                        this.formStatus.textContent = '';
-                        this.formStatus.className = 'form-status';
-                    }
+                    status.textContent = '';
+                    status.className = 'form-status';
                 }, 5000);
             }, 1500);
         }
-    }
+    });
 }
 
-// ============ SMOOTH SCROLL (REFATORADO) ============
-class SmoothScroll {
-    constructor() {
-        this.init();
-    }
-
-    init() {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', (e) => {
-                const href = anchor.getAttribute('href');
-
-                // Ignorar links vazios
-                if (!href || href === '#') return;
-
-                e.preventDefault();
-
-                // Se for o topo
-                if (href === '#inicio') {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                } else {
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                }
-
-                // Atualizar URL sem recarregar a página
-                if (history.pushState) {
-                    history.pushState(null, null, href);
-                }
-            });
-        });
-    }
+function setupLanguageSelector() {
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => I18n.setLanguage(btn.dataset.lang));
+    });
 }
 
-// ============ ANO ATUAL NO FOOTER ============
-function updateCurrentYear() {
+// ==================== INICIALIZAÇÃO ====================
+(async function init() {
     try {
-        const yearElement = document.getElementById('mostrarAnoAtual');
-        if (yearElement) {
-            yearElement.textContent = new Date().getFullYear();
-        }
-    } catch (error) {
-        console.warn('Erro ao atualizar ano atual:', error);
-    }
-}
-
-// ============ BOTÃO VOLTAR AO TOPO ============
-class BackToTop {
-    constructor() {
-        this.btn = document.querySelector('.btn-back-top');
-        this.init();
-    }
-
-    init() {
-        if (!this.btn) {
-            console.warn('Botão voltar ao topo não encontrado');
-            return;
-        }
-
-        window.addEventListener('scroll', this.handleScroll.bind(this));
-
-        // Estado inicial
-        this.btn.style.opacity = '0';
-        this.btn.style.visibility = 'hidden';
-        this.btn.style.transform = 'translateY(10px)';
-        this.btn.style.transition = 'all var(--transition-normal)';
-
-        // Adicionar evento de clique
-        this.btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
-
-    handleScroll() {
-        requestAnimationFrame(() => {
-            if (window.scrollY > 500) {
-                this.btn.style.opacity = '1';
-                this.btn.style.visibility = 'visible';
-                this.btn.style.transform = 'translateY(0)';
-            } else {
-                this.btn.style.opacity = '0';
-                this.btn.style.visibility = 'hidden';
-                this.btn.style.transform = 'translateY(10px)';
-            }
-        });
-    }
-}
-
-// ============ MANIPULADOR DE ERROS ============
-class ErrorHandler {
-    static safeQuerySelector(selector) {
-        try {
-            return document.querySelector(selector);
-        } catch (error) {
-            console.warn(`Erro ao buscar selector "${selector}":`, error);
-            return null;
-        }
-    }
-
-    static safeQuerySelectorAll(selector) {
-        try {
-            return document.querySelectorAll(selector);
-        } catch (error) {
-            console.warn(`Erro ao buscar selector "${selector}":`, error);
-            return [];
-        }
-    }
-}
-
-// ============ INICIALIZAÇÃO GERAL ============
-document.addEventListener('DOMContentLoaded', () => {
-    try {
-        // Remover classe no-js
         document.documentElement.classList.remove('no-js');
         document.documentElement.classList.add('js');
 
-        // Lista de componentes para inicializar
-        const components = [
-            { name: 'ProjectsSearch', init: () => new ProjectsSearch() },
-            { name: 'ScrollAnimations', init: () => new ScrollAnimations() },
-            { name: 'TypewriterEffect', init: () => new TypewriterEffect() },
-            { name: 'ExperienceCalculator', init: () => new ExperienceCalculator() },
-            { name: 'ContactForm', init: () => new ContactForm() },
-            { name: 'SmoothScroll', init: () => new SmoothScroll() },
-            { name: 'BackToTop', init: () => new BackToTop() }
-        ];
-
-        // Inicializar cada componente com tratamento de erro
-        components.forEach(component => {
-            try {
-                component.init();
-                // Logs removidos
-            } catch (error) {
-                console.warn(`⚠️ Erro ao inicializar ${component.name}:`, error.message);
-            }
-        });
-
-        // Atualizar ano atual
-        updateCurrentYear();
-
-        // Adicionar fallback para scroll suave
-        if (!('scrollBehavior' in document.documentElement.style)) {
-            // console.log('Usando polyfill para scroll suave'); // removido
+        const browserLang = navigator.language.split('-')[0];
+        if (AppState.supportedLangs.includes(browserLang)) {
+            AppState.currentLang = browserLang;
         }
 
-        // console.log('✅ Portfólio inicializado com sucesso'); // removido
+        // Adiciona listener ANTES de carregar as traduções para capturar futuras mudanças
+        AppState.subscribe(() => {
+            I18n.translateStaticElements();
+            Renderer.renderAll();
+            I18n.updateActiveButton();
+        });
 
+        await I18n.loadTranslations(AppState.currentLang);
+
+        // A primeira renderização já será feita pelo listener (após setTranslations)
+        // Mas como o listener foi adicionado depois do loadTranslations? Na verdade, adicionamos antes.
+        // O loadTranslations chama setTranslations que notifica, então a primeira renderização ocorre aqui.
+
+        // Inicializações adicionais
+        updateCurrentYear();
+        initTypewriter();
+        setupLanguageSelector();
+        initSmoothScroll();
+        initBackToTop();
+        initContactForm();
+        ScrollAnimations.init();
+
+        window.projectsSearch = new ProjectsSearch();
+
+        I18n.updateActiveButton();
+
+        console.log('Inicialização concluída com sucesso.');
     } catch (error) {
-        console.error('❌ Erro crítico na inicialização:', error);
+        console.error('Erro crítico na inicialização:', error);
+        const body = document.body;
+        body.innerHTML += '<div style="background: red; color: white; padding: 1rem; text-align: center;">Erro ao carregar o site. Tente recarregar a página.</div>';
     }
-});
-
-// ============ POLYFILLS E FALLBACKS ============
-// Fallback para browsers antigos
-if (!Element.prototype.matches) {
-    Element.prototype.matches =
-        Element.prototype.matchesSelector ||
-        Element.prototype.mozMatchesSelector ||
-        Element.prototype.msMatchesSelector ||
-        Element.prototype.oMatchesSelector ||
-        Element.prototype.webkitMatchesSelector ||
-        function (s) {
-            var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-                i = matches.length;
-            while (--i >= 0 && matches.item(i) !== this) { }
-            return i > -1;
-        };
-}
-
-// RequestAnimationFrame fallback
-window.requestAnimationFrame = window.requestAnimationFrame ||
-    window.mozRequestAnimationFrame ||
-    window.webkitRequestAnimationFrame ||
-    window.msRequestAnimationFrame ||
-    function (callback) {
-        window.setTimeout(callback, 1000 / 60);
-    };
+})();

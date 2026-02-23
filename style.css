@@ -192,6 +192,38 @@ a:focus {
     border: 0;
 }
 
+/* ============ LANGUAGE SELECTOR ============ */
+.language-selector {
+    display: flex;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+    justify-content: flex-start;
+}
+.lang-btn {
+    background: transparent;
+    border: 2px solid var(--color-dark-600);
+    color: var(--color-light);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-size: var(--text-xl);
+    transition: all var(--transition-normal);
+    line-height: 1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.lang-btn.active {
+    background: var(--color-primary);
+    border-color: var(--color-primary-light);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--color-primary-soft);
+}
+
+@media (max-width: 768px) {
+    .language-selector {
+        justify-content: center;
+    }
+}
+
 /* ============ HEADER PRINCIPAL ============ */
 .main-header {
     position: relative;
@@ -241,6 +273,28 @@ a:focus {
 
 .tagline-item {
     white-space: nowrap;
+    position: relative;
+    padding-left: 1.2em; /* espaço para o bullet */
+}
+
+.tagline-item::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .tagline-item {
+        white-space: normal;
+        text-align: center;
+        width: 100%;
+        padding-left: 0;
+    }
+    .tagline-item::before {
+        display: none; /* remove o bullet em mobile */
+    }
 }
 
 .header-actions {
@@ -389,27 +443,32 @@ a:focus {
     margin-top: var(--space-8);
 }
 
+/* Animação dos projetos aplicada aos cards Sobre Mim */
 .sobre-card {
     background: var(--color-dark-800);
     border: 1px solid var(--color-dark-600);
     border-radius: var(--radius-xl);
     padding: var(--space-6);
+    /* Transição idêntica aos projetos */
     transition: all var(--transition-normal);
     height: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
+    will-change: transform, opacity;
 }
 
-.sobre-grid:hover .sobre-card:not(:hover) {
-    opacity: 0.4;
-}
-
+/* Hover idêntico aos projetos */
 .sobre-card:hover {
     transform: scale(1.05);
     border-color: var(--color-primary);
     box-shadow: var(--shadow-green);
     z-index: 2;
+}
+
+/* Opacidade dos demais cards quando o mouse está sobre o grid */
+.sobre-grid:hover .sobre-card:not(:hover) {
+    opacity: 0.4;
 }
 
 .sobre-card-header {
@@ -502,24 +561,29 @@ a:focus {
     gap: var(--space-6);
 }
 
+/* Animação dos projetos aplicada aos cards Objetivo */
 .objetivo-area {
     background: var(--color-dark-900);
     border: 1px solid var(--color-dark-600);
     border-radius: var(--radius-lg);
     padding: var(--space-6);
+    /* Transição idêntica aos projetos */
     transition: all var(--transition-normal);
     position: relative;
+    will-change: transform, opacity;
 }
 
-.objetivo-grid:hover .objetivo-area:not(:hover) {
-    opacity: 0.4;
-}
-
+/* Hover idêntico aos projetos */
 .objetivo-area:hover {
     transform: scale(1.05);
     border-color: var(--color-primary);
     box-shadow: var(--shadow-green);
     z-index: 2;
+}
+
+/* Opacidade dos demais cards quando o mouse está sobre o grid */
+.objetivo-grid:hover .objetivo-area:not(:hover) {
+    opacity: 0.4;
 }
 
 .objetivo-area-icon {
@@ -1010,7 +1074,6 @@ a:focus {
 /* Efeito de opacidade apenas nos cards visíveis (não ocultos) e não hover */
 .projetos-grid:hover .projeto-card:not(.hidden):not(:hover) {
     opacity: 0.4 !important;
-    /* Garantir que a regra seja aplicada */
 }
 
 .projeto-card {
@@ -1026,7 +1089,6 @@ a:focus {
     transform: translateY(0);
     position: relative;
     will-change: transform, opacity;
-    /* Otimização */
 }
 
 .projeto-card:hover {
@@ -1041,19 +1103,17 @@ a:focus {
     display: none;
 }
 
-/* Animação de entrada para cards que se tornam visíveis */
-.projeto-card.visible {
+/* Animação de entrada para cards que se tornam visíveis após filtro */
+.projeto-card.entrance {
     animation: fadeInUp 0.5s ease-out;
     animation-delay: var(--delay, 0s);
-    /* Permite delay via variável CSS */
 }
 
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(8px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1512,6 +1572,18 @@ a:focus {
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+/* Classe para elementos que aparecem ao rolar a página (usada pelo Intersection Observer) */
+.timeline-item.visible,
+.experiencia-item.visible,
+.nenhum-resultado.visible,
+.habilidades-categoria.visible,
+.tecnologia-categoria.visible,
+.contato-link.visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
 /* ============ FOCUS VISIBLE ============ */
 :focus-visible {
     outline: 2px solid var(--color-primary);
@@ -1601,6 +1673,10 @@ a:focus {
         white-space: normal;
         text-align: center;
         width: 100%;
+        padding-left: 0;
+    }
+    .tagline-item::before {
+        display: none;
     }
 
     .header-actions {
@@ -1745,4 +1821,16 @@ a:focus {
     .btn::before {
         display: none;
     }
+}
+
+/* ============ MENSAGENS DE ERRO ============ */
+.error-message {
+    color: var(--color-error);
+    text-align: center;
+    padding: var(--space-8);
+    background: rgba(239, 68, 68, 0.1);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    margin: var(--space-4) 0;
+    font-size: var(--text-base);
 }
