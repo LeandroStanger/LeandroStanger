@@ -562,7 +562,7 @@ function initParticles(themeIsLight = false) {
             },
             move: {
                 enable: true,
-                speed: 0.8, // mais lento para sofisticação
+                speed: 1,
                 direction: 'none',
                 random: true,
                 straight: false,
