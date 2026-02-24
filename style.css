@@ -318,6 +318,17 @@ a:focus {
     animation: spin 0.5s ease;
 }
 
+/* Animação ao trocar tema */
+.theme-toggle i.fa-sun {
+    color: #fbbf24;
+    text-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
+}
+
+.theme-toggle i.fa-moon {
+    color: #a3a3a3;
+    text-shadow: 0 0 8px rgba(163, 163, 163, 0.5);
+}
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
