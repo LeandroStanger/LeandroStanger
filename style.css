@@ -1073,9 +1073,9 @@ html.light-theme .section-label {
 }
 
 .tecnologia-icon:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px) scale(1.05);
     background: rgba(16, 185, 129, 0.1);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 0 15px var(--color-primary); /* glow */
 }
 
 .tecnologia-icon img {
@@ -1083,7 +1083,7 @@ html.light-theme .section-label {
     height: 48px;
     object-fit: contain;
     filter: grayscale(0.3);
-    transition: filter var(--transition-normal);
+    transition: filter var(--transition-normal), box-shadow var(--transition-normal);
 }
 
 .tecnologia-icon:hover img {

@@ -519,36 +519,39 @@ function initParticles(themeIsLight = false) {
         return;
     }
 
-    // Configuração base
+    // Configuração base com formato hexagonal
     const config = {
         particles: {
             number: {
-                value: 40,
+                value: 50,
                 density: {
                     enable: true,
                     value_area: 800
                 }
             },
             shape: {
-                type: 'circle'
+                type: 'polygon', // hexágonos
+                polygon: {
+                    sides: 6
+                }
             },
             opacity: {
                 value: 0.3,
                 random: true,
                 anim: {
                     enable: true,
-                    speed: 0.5,
+                    speed: 0.3,
                     opacity_min: 0.1,
                     sync: false
                 }
             },
             size: {
-                value: 3,
+                value: 4,
                 random: true,
                 anim: {
                     enable: true,
                     speed: 2,
-                    size_min: 0.5,
+                    size_min: 1,
                     sync: false
                 }
             },
@@ -559,7 +562,7 @@ function initParticles(themeIsLight = false) {
             },
             move: {
                 enable: true,
-                speed: 1,
+                speed: 0.8, // mais lento para sofisticação
                 direction: 'none',
                 random: true,
                 straight: false,
@@ -589,19 +592,18 @@ function initParticles(themeIsLight = false) {
         config.particles.color = {
             value: '#10b981'
         };
-        config.particles.opacity.value = 0.5;
-        config.particles.opacity.random = true;
-        config.particles.opacity.anim.speed = 0.5;
+        config.particles.opacity.value = 0.90;
+        config.particles.opacity.anim.speed = 0.90;
         config.particles.line_linked.color = '#10b981';
-        config.particles.line_linked.opacity = 0.5;
-        config.particles.number.value = 30; // um pouco menos para não poluir
+        config.particles.line_linked.opacity = 0.90;
+        config.particles.number.value = 50;
     } else {
         // Tema escuro: partículas claras
         config.particles.color = {
             value: '#10b981'
         };
         config.particles.line_linked.color = '#10b981';
-        config.particles.line_linked.opacity = 0.5;
+        config.particles.line_linked.opacity = 0.90;
     }
 
     // Se já existe uma instância, destruir antes de recriar
