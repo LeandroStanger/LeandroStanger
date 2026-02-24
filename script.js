@@ -389,24 +389,6 @@ const DEFAULT_TRANSLATIONS = {
     }
 };
 
-// ==================== DETECÇÃO DE IDIOMA DO NAVEGADOR ====================
-function getMappedLanguage(langCode) {
-    const primary = langCode.split('-')[0].toLowerCase();
-    if (primary === 'pt') return 'pt';
-    if (primary === 'en') return 'en';
-    if (primary === 'es') return 'es';
-    return 'en';
-}
-
-function detectBrowserLanguage() {
-    const languages = navigator.languages || [navigator.language || navigator.userLanguage || 'en'];
-    for (let lang of languages) {
-        const mapped = getMappedLanguage(lang);
-        if (mapped) return mapped;
-    }
-    return 'en';
-}
-
 // ==================== MÓDULO I18N ====================
 const I18n = {
     async loadTranslations(lang) {
@@ -481,63 +463,171 @@ const I18n = {
 
     async setLanguage(lang) {
         if (!AppState.supportedLangs.includes(lang) || lang === AppState.currentLang) return;
-        localStorage.setItem('preferredLang', lang);
         await this.loadTranslations(lang);
     }
 };
 
-// ==================== GERENCIADOR DE TEMA (LIGHT/DARK) ====================
+// ==================== GERENCIADOR DE TEMA ====================
 const ThemeManager = {
     init() {
-        this.toggleBtn = document.getElementById('themeToggle');
+        this.toggleBtn = document.getElementById('theme-toggle');
         if (!this.toggleBtn) return;
 
-        // 1. Verifica preferência salva no localStorage
         const savedTheme = localStorage.getItem('theme');
-
-        if (savedTheme) {
-            // Aplica tema salvo
-            this.setTheme(savedTheme);
+        if (savedTheme === 'light') {
+            document.documentElement.classList.add('light-theme');
+            this.updateIcon(true);
         } else {
-            // 2. Se não houver salvamento, detecta tema do sistema
-            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const systemTheme = systemPrefersDark ? 'dark' : 'light';
-            this.setTheme(systemTheme);
+            document.documentElement.classList.remove('light-theme');
+            this.updateIcon(false);
         }
 
-        // Event listener do botão
         this.toggleBtn.addEventListener('click', () => this.toggle());
     },
 
-    setTheme(theme) {
-        if (theme === 'light') {
-            document.body.classList.add('light-theme');
-            this.updateIcon('light');
-        } else {
-            document.body.classList.remove('light-theme');
-            this.updateIcon('dark');
-        }
-        // Não salvamos aqui, apenas no toggle manual
-    },
-
     toggle() {
-        if (document.body.classList.contains('light-theme')) {
-            document.body.classList.remove('light-theme');
-            localStorage.setItem('theme', 'dark');
-            this.updateIcon('dark');
-        } else {
-            document.body.classList.add('light-theme');
-            localStorage.setItem('theme', 'light');
-            this.updateIcon('light');
+        const isLight = document.documentElement.classList.toggle('light-theme');
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        this.updateIcon(isLight);
+
+        this.toggleBtn.classList.add('toggling');
+        setTimeout(() => {
+            this.toggleBtn.classList.remove('toggling');
+        }, 500);
+
+        // Atualiza as partículas conforme o novo tema
+        if (window.updateParticlesTheme) {
+            window.updateParticlesTheme(isLight);
         }
     },
 
-    updateIcon(mode) {
+    updateIcon(isLight) {
+        if (!this.toggleBtn) return;
         const icon = this.toggleBtn.querySelector('i');
         if (icon) {
-            icon.className = mode === 'light' ? 'fas fa-sun' : 'fas fa-moon';
+            icon.className = isLight ? 'fas fa-moon' : 'fas fa-sun';
         }
     }
+};
+
+// ==================== PARTICLES.JS COM SUPORTE A TEMA ====================
+let particlesInitialized = false;
+
+function initParticles(themeIsLight = false) {
+    if (typeof particlesJS === 'undefined') {
+        console.warn('Particles.js não carregado');
+        return;
+    }
+
+    // Configuração base
+    const config = {
+        particles: {
+            number: {
+                value: 40,
+                density: {
+                    enable: true,
+                    value_area: 800
+                }
+            },
+            shape: {
+                type: 'circle'
+            },
+            opacity: {
+                value: 0.3,
+                random: true,
+                anim: {
+                    enable: true,
+                    speed: 0.5,
+                    opacity_min: 0.1,
+                    sync: false
+                }
+            },
+            size: {
+                value: 3,
+                random: true,
+                anim: {
+                    enable: true,
+                    speed: 2,
+                    size_min: 0.5,
+                    sync: false
+                }
+            },
+            line_linked: {
+                enable: true,
+                distance: 150,
+                width: 1
+            },
+            move: {
+                enable: true,
+                speed: 1,
+                direction: 'none',
+                random: true,
+                straight: false,
+                out_mode: 'out',
+                bounce: false,
+                attract: {
+                    enable: false,
+                    rotateX: 600,
+                    rotateY: 1200
+                }
+            }
+        },
+        interactivity: {
+            detect_on: 'canvas',
+            events: {
+                onhover: { enable: false },
+                onclick: { enable: false },
+                resize: true
+            }
+        },
+        retina_detect: true
+    };
+
+    // Ajustes conforme tema
+    if (themeIsLight) {
+        // Tema claro: partículas escuras e mais sutis
+        config.particles.color = {
+            value: '#10b981'
+        };
+        config.particles.opacity.value = 0.5;
+        config.particles.opacity.random = true;
+        config.particles.opacity.anim.speed = 0.5;
+        config.particles.line_linked.color = '#10b981';
+        config.particles.line_linked.opacity = 0.5;
+        config.particles.number.value = 30; // um pouco menos para não poluir
+    } else {
+        // Tema escuro: partículas claras
+        config.particles.color = {
+            value: '#10b981'
+        };
+        config.particles.line_linked.color = '#10b981';
+        config.particles.line_linked.opacity = 0.5;
+    }
+
+    // Se já existe uma instância, destruir antes de recriar
+    if (window.pJSDom && window.pJSDom.length > 0) {
+        window.pJSDom[0].pJS.fn.vendors.destroypJS();
+        window.pJSDom = [];
+    }
+
+    particlesJS('particles-js', config);
+
+    // Ajustar densidade para mobile
+    if (window.innerWidth < 768) {
+        setTimeout(() => {
+            if (window.pJSDom && window.pJSDom[0]) {
+                window.pJSDom[0].pJS.particles.number.value = themeIsLight ? 15 : 20;
+                window.pJSDom[0].pJS.fn.particlesRefresh();
+            }
+        }, 500);
+    }
+
+    particlesInitialized = true;
+}
+
+// Função pública para atualizar partículas conforme tema
+window.updateParticlesTheme = function(isLight) {
+    initParticles(isLight);
 };
 
 // ==================== RENDERIZADORES DAS SEÇÕES ====================
@@ -973,15 +1063,11 @@ function setupLanguageSelector() {
         document.documentElement.classList.remove('no-js');
         document.documentElement.classList.add('js');
 
-        // ----- DETECÇÃO DE IDIOMA (com prioridade para localStorage) -----
-        let initialLang = localStorage.getItem('preferredLang');
-        if (initialLang && AppState.supportedLangs.includes(initialLang)) {
-            AppState.currentLang = initialLang;
-        } else {
-            AppState.currentLang = detectBrowserLanguage();
+        const browserLang = navigator.language.split('-')[0];
+        if (AppState.supportedLangs.includes(browserLang)) {
+            AppState.currentLang = browserLang;
         }
 
-        // Adiciona listener ANTES de carregar as traduções
         AppState.subscribe(() => {
             I18n.translateStaticElements();
             Renderer.renderAll();
@@ -990,10 +1076,6 @@ function setupLanguageSelector() {
 
         await I18n.loadTranslations(AppState.currentLang);
 
-        // Inicializa o gerenciador de temas
-        ThemeManager.init();
-
-        // Inicializações adicionais
         updateCurrentYear();
         initTypewriter();
         setupLanguageSelector();
@@ -1001,6 +1083,12 @@ function setupLanguageSelector() {
         initBackToTop();
         initContactForm();
         ScrollAnimations.init();
+
+        // Inicializa partículas com o tema atual
+        const isLight = document.documentElement.classList.contains('light-theme');
+        initParticles(isLight);
+
+        ThemeManager.init();
 
         window.projectsSearch = new ProjectsSearch();
 

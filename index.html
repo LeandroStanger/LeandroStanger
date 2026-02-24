@@ -39,16 +39,24 @@
 <body>
     <!-- Header Principal -->
     <header id="inicio" class="main-header" role="banner">
+        <!-- Container das partículas -->
+        <div id="particles-js"></div>
+
         <div class="container">
             <div class="header-content">
                 <div class="header-text">
-                    <!-- Seletor de idioma + Botão de tema moderno -->
-                    <div class="language-selector">
-                        <button class="lang-btn active" data-lang="pt" aria-label="Português">🇧🇷</button>
-                        <button class="lang-btn" data-lang="en" aria-label="English">🇺🇸</button>
-                        <button class="lang-btn" data-lang="es" aria-label="Español">🇪🇸</button>
-                        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
-                            <i class="fas fa-moon"></i>
+                    <!-- Barra de controles: idioma e tema -->
+                    <div class="header-controls">
+                        <!-- Seletor de idioma -->
+                        <div class="language-selector">
+                            <button class="lang-btn active" data-lang="pt" aria-label="Português">🇧🇷</button>
+                            <button class="lang-btn" data-lang="en" aria-label="English">🇺🇸</button>
+                            <button class="lang-btn" data-lang="es" aria-label="Español">🇪🇸</button>
+                        </div>
+
+                        <!-- Botão de alternância de tema (visual restaurado) -->
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema claro/escuro">
+                            <i class="fas fa-sun"></i>
                         </button>
                     </div>
 
@@ -452,6 +460,8 @@
     </footer>
 
     <!-- Scripts -->
+    <!-- Particles.js (CDN) -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
