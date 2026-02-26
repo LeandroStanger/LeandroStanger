@@ -74,7 +74,8 @@
             "progress": {
               "completed": 10,
               "total": 53,
-              "label": "{completed} de {total} disciplinas concluídas"
+              "label": "{completed} de {total} disciplinas concluídas",
+              "semesterText": "3º Semestre — Em andamento"
             }
           },
           {

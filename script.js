@@ -99,7 +99,8 @@ const DEFAULT_TRANSLATIONS = {
                         "progress": {
                             "completed": 10,
                             "total": 53,
-                            "label": "{completed} de {total} disciplinas concluídas"
+                            "label": "{completed} de {total} disciplinas concluídas",
+                            "semesterText": "3º Semestre — Em andamento"
                         }
                     },
                     {
@@ -727,6 +728,10 @@ const Renderer = {
                                 <!-- Usamos uma variável CSS para a largura alvo; a largura inicial é 0 -->
                                 <div class="progress-fill" style="--target-width: ${percentage}%; width: 0;"></div>
                             </div>
+                            ${progress.semesterText ? `
+                            <div class="progress-footer">
+                                <span class="semester-badge">${progress.semesterText}</span>
+                            </div>` : ''}
                         </div>
                     </div>
                 </div>
