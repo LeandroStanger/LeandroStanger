@@ -71,7 +71,11 @@
             "date": "Ongoing (start: Feb/2025)",
             "title": "Bachelor's in Computer Engineering",
             "institution": "Unopar",
-            "status": ["1st Semester - Completed", "2nd Semester - Completed", "3rd Semester - In Progress"]
+            "progress": {
+              "completed": 10,
+              "total": 53,
+              "label": "{completed} of {total} subjects completed"
+            }
           },
           {
             "date": "Feb/2024 to Jun/2025",

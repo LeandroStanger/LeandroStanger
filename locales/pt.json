@@ -71,7 +71,11 @@
             "date": "Em andamento (início: fev/2025)",
             "title": "Graduação em Engenharia de Computação",
             "institution": "Unopar",
-            "status": ["1º Semestre - Concluído", "2º Semestre - Concluído", "3º Semestre - Em Andamento"]
+            "progress": {
+              "completed": 10,
+              "total": 53,
+              "label": "{completed} de {total} disciplinas concluídas"
+            }
           },
           {
             "date": "fev/2024 a jun/2025",

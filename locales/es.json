@@ -71,7 +71,11 @@
             "date": "En curso (inicio: feb/2025)",
             "title": "Ingeniería en Computación",
             "institution": "Unopar",
-            "status": ["1er Semestre - Completado", "2do Semestre - Completado", "3er Semestre - En Progreso"]
+            "progress": {
+              "completed": 10,
+              "total": 53,
+              "label": "{completed} de {total} asignaturas completadas"
+            }
           },
           {
             "date": "feb/2024 a jun/2025",

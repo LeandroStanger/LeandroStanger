@@ -96,7 +96,11 @@ const DEFAULT_TRANSLATIONS = {
                         "date": "Em andamento (início: fev/2025)",
                         "title": "Graduação em Engenharia de Computação",
                         "institution": "Unopar",
-                        "status": ["1º Semestre - Concluído", "2º Semestre - Concluído", "3º Semestre - Em Andamento"]
+                        "progress": {
+                            "completed": 10,
+                            "total": 53,
+                            "label": "{completed} de {total} disciplinas concluídas"
+                        }
                     },
                     {
                         "date": "fev/2024 a jun/2025",
@@ -696,25 +700,59 @@ const Renderer = {
             container.innerHTML = '<div class="error-message">Erro ao carregar dados de educação.</div>';
             return;
         }
+
         container.innerHTML = items.map(item => {
-            const statusArray = Array.isArray(item.status) ? item.status : [];
-            return `
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <time class="timeline-date">${item.date || ''}</time>
-                    <h4 class="timeline-title">${item.title || ''}</h4>
-                    <p class="timeline-subtitle">${item.institution || ''}</p>
-                    <div class="status-container">
-                        ${statusArray.map(s => {
-                            const lower = s.toLowerCase();
-                            const isCompleted = lower.includes('concluído') || lower.includes('completed') || lower.includes('completado');
-                            return `<span class="status-badge ${isCompleted ? 'status-concluido' : 'status-andamento'}">${s}</span>`;
-                        }).join('')}
+            // Verifica se o item possui a propriedade 'progress' (graduação)
+            if (item.progress) {
+                const progress = item.progress;
+                const completed = progress.completed;
+                const total = progress.total;
+                const percentage = (completed / total) * 100; // valor exato para a largura
+                const percentageFormatted = percentage.toFixed(2); // para exibição
+                const labelText = progress.label.replace('{completed}', completed).replace('{total}', total);
+
+                return `
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <time class="timeline-date">${item.date || ''}</time>
+                        <h4 class="timeline-title">${item.title || ''}</h4>
+                        <p class="timeline-subtitle">${item.institution || ''}</p>
+                        <div class="progress-container">
+                            <div class="progress-header">
+                                <span class="progress-label">${labelText}</span>
+                                <span class="progress-percentage">${percentageFormatted}%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <!-- Usamos uma variável CSS para a largura alvo; a largura inicial é 0 -->
+                                <div class="progress-fill" style="--target-width: ${percentage}%; width: 0;"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        `}).join('');
+                `;
+            } else {
+                // Comportamento original para os demais itens
+                const statusArray = Array.isArray(item.status) ? item.status : [];
+                return `
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <time class="timeline-date">${item.date || ''}</time>
+                        <h4 class="timeline-title">${item.title || ''}</h4>
+                        <p class="timeline-subtitle">${item.institution || ''}</p>
+                        <div class="status-container">
+                            ${statusArray.map(s => {
+                                const lower = s.toLowerCase();
+                                const isCompleted = lower.includes('concluído') || lower.includes('completed') || lower.includes('completado');
+                                return `<span class="status-badge ${isCompleted ? 'status-concluido' : 'status-andamento'}">${s}</span>`;
+                            }).join('')}
+                        </div>
+                    </div>
+                </div>
+                `;
+            }
+        }).join('');
     },
 
     renderExperiencia() {
