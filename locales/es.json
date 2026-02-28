@@ -72,7 +72,7 @@
             "title": "Ingeniería en Computación",
             "institution": "Unopar",
             "progress": {
-              "completed": 10,
+              "completed": 11,
               "total": 53,
               "label": "{completed} de {total} asignaturas completadas",
               "semesterText": "3er Semestre — En curso"

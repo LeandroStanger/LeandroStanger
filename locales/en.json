@@ -72,7 +72,7 @@
             "title": "Bachelor's in Computer Engineering",
             "institution": "Unopar",
             "progress": {
-              "completed": 10,
+              "completed": 11,
               "total": 53,
               "label": "{completed} of {total} subjects completed",
               "semesterText": "3rd Semester — In Progress"

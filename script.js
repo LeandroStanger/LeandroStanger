@@ -97,7 +97,7 @@ const DEFAULT_TRANSLATIONS = {
                         "title": "Graduação em Engenharia de Computação",
                         "institution": "Unopar",
                         "progress": {
-                            "completed": 10,
+                            "completed": 11,
                             "total": 53,
                             "label": "{completed} de {total} disciplinas concluídas",
                             "semesterText": "3º Semestre — Em andamento"
