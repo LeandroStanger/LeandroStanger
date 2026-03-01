@@ -1018,20 +1018,42 @@ function updateCurrentYear() {
     if (el) el.textContent = new Date().getFullYear();
 }
 
+// NOVA FUNÇÃO DE DIGITAÇÃO COM VELOCIDADE HUMANA
 function initTypewriter() {
     const el = document.getElementById('typewriter');
     if (!el) return;
-    const text = el.textContent;
-    el.textContent = '';
+
+    const originalText = el.textContent;
+    el.textContent = ''; // limpa o conteúdo
+
     let i = 0;
-    function type() {
-        if (i < text.length) {
-            el.textContent += text.charAt(i);
+    const delayBase = 120; // ms por caractere normal
+    const delayPunctuation = 200; // para pontuação
+    const delaySpace = 80; // para espaços
+
+    function typeNext() {
+        if (i < originalText.length) {
+            const char = originalText.charAt(i);
+            el.textContent += char;
+
+            // Calcula o próximo atraso baseado no caractere
+            let nextDelay = delayBase;
+            if (char.match(/[.,!?;:]/)) {
+                nextDelay = delayPunctuation;
+            } else if (char === ' ') {
+                nextDelay = delaySpace;
+            }
+
             i++;
-            setTimeout(type, 30);
+            setTimeout(typeNext, nextDelay);
+        } else {
+            // Opcional: remover o cursor após terminar (ou manter)
+            // el.classList.add('done');
         }
     }
-    type();
+
+    // Pequeno atraso antes de começar (como se a pessoa estivesse pensando)
+    setTimeout(typeNext, 500);
 }
 
 function initSmoothScroll() {
@@ -1122,7 +1144,7 @@ function setupLanguageSelector() {
         await I18n.loadTranslations(AppState.currentLang);
 
         updateCurrentYear();
-        initTypewriter();
+        initTypewriter(); // ← agora com velocidade ajustada
         setupLanguageSelector();
         initSmoothScroll();
         initBackToTop();

@@ -215,6 +215,8 @@
       "found": "projects found",
       "no_results_title": "No projects found",
       "no_results_desc": "Try adjusting your search. You can search by project name, technologies or description.",
+      "code": "Code",
+      "demo": "Demo",
       "cards": [
         {
           "title": "Animals at the Zoo 2",

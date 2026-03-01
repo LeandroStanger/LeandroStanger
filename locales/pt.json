@@ -215,6 +215,8 @@
       "found": "projetos encontrados",
       "no_results_title": "Nenhum projeto encontrado",
       "no_results_desc": "Tente ajustar sua busca. Você pode pesquisar por nome do projeto, tecnologias ou descrição.",
+      "code": "Código",
+      "demo": "Demo",
       "cards": [
         {
           "title": "Animais no Zoológico 2",
