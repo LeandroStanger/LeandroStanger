@@ -990,7 +990,9 @@ class ProjectsSearch {
 // ==================== ANIMAÇÕES DE SCROLL ====================
 const ScrollAnimations = {
     observer: null,
+
     init() {
+        if (this.observer) return; // já existe
         this.observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1001,16 +1003,33 @@ const ScrollAnimations = {
         }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
         this.observeAll();
     },
+
     observeAll() {
-        const targets = document.querySelectorAll('section, .timeline-item, .experiencia-item, .sobre-card, .projeto-card, .objetivo-area, .habilidades-categoria, .tecnologia-categoria, .contato-link');
+        if (!this.observer) {
+            console.warn('ScrollAnimations: observer não inicializado');
+            return;
+        }
+        const targets = document.querySelectorAll(
+            'section, .timeline-item, .experiencia-item, .sobre-card, .projeto-card, .objetivo-area, .habilidades-categoria, .tecnologia-categoria, .contato-link'
+        );
+        if (!targets.length) return;
         targets.forEach(el => {
-            if (!el.classList.contains('visible')) this.observer.observe(el);
+            if (!el.classList.contains('visible')) {
+                this.observer.observe(el);
+            }
         });
     },
+
     refresh() {
+        if (this.observer) {
+            this.observer.disconnect(); // limpa observações anteriores
+        }
         this.observeAll();
     }
 };
+
+// Inicializa imediatamente (observer já existe antes de qualquer listener)
+ScrollAnimations.init();
 
 // ==================== UTILITÁRIOS ====================
 function updateCurrentYear() {
@@ -1069,10 +1088,18 @@ function initSmoothScroll() {
 function initBackToTop() {
     const btn = document.querySelector('.btn-back-top');
     if (!btn) return;
-    btn.style.display = 'none';
+
+    // Inicialmente oculto
+    btn.classList.add('hidden');
+
     window.addEventListener('scroll', () => {
-        btn.style.display = window.scrollY > 400 ? 'flex' : 'none';
+        if (window.scrollY > 400) {
+            btn.classList.remove('hidden');
+        } else {
+            btn.classList.add('hidden');
+        }
     });
+
     btn.addEventListener('click', e => {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1149,7 +1176,6 @@ function setupLanguageSelector() {
         initSmoothScroll();
         initBackToTop();
         initContactForm();
-        ScrollAnimations.init();
 
         // Inicializa partículas com o tema atual
         const isLight = document.documentElement.classList.contains('light-theme');
