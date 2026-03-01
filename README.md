@@ -1,6 +1,6 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=10b981&height=120&section=header"/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?weight=500&size=30&pause=10000&color=10b981&width=1000&height=80&lines=Leandro+Stanger+-+Desenvolvedor+Full-Stack)](https://git.io/typing-svg)
+[![Typing SVG](https://typingsvg.vercel.app/api/svg?width=1000&height=80&pause=10000&backgroundOpacity=0&border=false&cursorStyle=block&deletionBehavior=stay&lines=%5B%7B%22text%22%3A%22Leandro+Stanger+-+Desenvolvedor+Full-Stack%21%22%2C%22font%22%3A%22Consolas%22%2C%22color%22%3A%22%2310b981%22%2C%22fontSize%22%3A38%2C%22typingSpeed%22%3A0.3333333333333333%2C%22fontWeight%22%3A%22500%22%7D%5D)](https://github.com/whiteSHADOW1234/TypingSVG)
 
 <div align="center">
   
