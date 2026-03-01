@@ -82,31 +82,41 @@
             "date": "Feb/2024 to Jun/2025",
             "title": "Technical in Computer Maintenance and Support",
             "institution": "AMPLI",
-            "status": ["Completed"]
+            "status": [
+              "Completed"
+            ]
           },
           {
             "date": "Apr/2016 to Oct/2016",
             "title": "Computer Assembly and Maintenance & Networks Course",
             "institution": "YesBras Escolas do Brasil",
-            "status": ["Completed"]
+            "status": [
+              "Completed"
+            ]
           },
           {
             "date": "2015 to Oct/2017",
             "title": "High School",
             "institution": "SESI",
-            "status": ["Completed"]
+            "status": [
+              "Completed"
+            ]
           },
           {
             "date": "Sep/2014 to Sep/2015",
             "title": "APP Course – Personal and Professional Administrative",
             "institution": "Unisoft Computer School",
-            "status": ["Completed"]
+            "status": [
+              "Completed"
+            ]
           },
           {
             "date": "Sep/2013 to Sep/2014",
             "title": "QIT Course – Qualification in Information Technology",
             "institution": "Unisoft Computer School",
-            "status": ["Completed"]
+            "status": [
+              "Completed"
+            ]
           }
         ]
       },
@@ -221,7 +231,11 @@
         {
           "title": "Animals at the Zoo 2",
           "desc": "An interactive web application for managing and viewing animals in a virtual zoo.",
-          "tags": ["JavaScript", "HTML", "CSS"],
+          "tags": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+          ],
           "code": "View Code",
           "demo": "Live Demo",
           "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico2",
@@ -230,7 +244,11 @@
         {
           "title": "Weather Data",
           "desc": "System for collecting, processing and visualizing meteorological data from different sources.",
-          "tags": ["JavaScript", "API", "CSS"],
+          "tags": [
+            "JavaScript",
+            "API",
+            "CSS"
+          ],
           "code": "View Code",
           "demo": "Live Demo",
           "codeLink": "https://github.com/LeandroStanger/DadosClimaticos",
@@ -239,7 +257,11 @@
         {
           "title": "Feedback Form",
           "desc": "Interactive form for collecting user feedback with data validation.",
-          "tags": ["HTML", "CSS", "JavaScript"],
+          "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ],
           "code": "View Code",
           "demo": "Live Demo",
           "codeLink": "https://github.com/LeandroStanger/FormularioDeFeedback",
@@ -248,7 +270,11 @@
         {
           "title": "Fun Cars",
           "desc": "Interactive game with cars in a 2D environment, developed to practice programming concepts.",
-          "tags": ["JavaScript", "HTML5", "CSS3"],
+          "tags": [
+            "JavaScript",
+            "HTML5",
+            "CSS3"
+          ],
           "code": "View Code",
           "demo": "Live Demo",
           "codeLink": "https://github.com/LeandroStanger/CarrosDivertidos",
@@ -257,7 +283,11 @@
         {
           "title": "Car Race",
           "desc": "Car racing simulation with interactive controls and scoring system.",
-          "tags": ["JavaScript", "CSS3", "HTML5"],
+          "tags": [
+            "JavaScript",
+            "CSS3",
+            "HTML5"
+          ],
           "code": "View Code",
           "demo": "Live Demo",
           "codeLink": "https://github.com/LeandroStanger/CorridaDeCarro",
@@ -266,7 +296,11 @@
         {
           "title": "Animals at the Zoo",
           "desc": "Initial version of the zoo management system, focusing on learning JavaScript.",
-          "tags": ["JavaScript", "HTML", "CSS"],
+          "tags": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+          ],
           "code": "View Code",
           "demo": "Live Demo",
           "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico",
@@ -275,7 +309,11 @@
         {
           "title": "Website with Loop",
           "desc": "Demonstrative website with visual loop effects and CSS/JavaScript animations.",
-          "tags": ["HTML", "CSS", "JavaScript"],
+          "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ],
           "code": "View Code",
           "demo": "Live Demo",
           "codeLink": "https://github.com/LeandroStanger/SiteComLoop",
@@ -284,7 +322,11 @@
         {
           "title": "Login System",
           "desc": "User authentication system with credential validation and responsive interface.",
-          "tags": ["JavaScript", "HTML", "CSS"],
+          "tags": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+          ],
           "code": "View Code",
           "demo": "Live Demo",
           "codeLink": "https://github.com/LeandroStanger/SistemaDeLogin",
@@ -293,7 +335,11 @@
         {
           "title": "List Manager",
           "desc": "Application to create, edit and delete list items, with local storage.",
-          "tags": ["JavaScript", "LocalStorage", "CSS"],
+          "tags": [
+            "JavaScript",
+            "LocalStorage",
+            "CSS"
+          ],
           "code": "View Code",
           "demo": "Live Demo",
           "codeLink": "https://github.com/LeandroStanger/GerenciadorDeLista",
@@ -302,7 +348,11 @@
         {
           "title": "Initial Projects",
           "desc": "Collection of my first programming projects, demonstrating my evolution as a developer.",
-          "tags": ["HTML", "CSS", "JavaScript"],
+          "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ],
           "code": "View Code",
           "demo": "",
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais",
@@ -311,7 +361,12 @@
         {
           "title": "Leandro Stanger Portfolio",
           "desc": "Main repository with profile, detailed README and links to all projects. Focus on Front-end development with HTML, CSS and JavaScript.",
-          "tags": ["HTML5", "CSS3", "JavaScript", "Git"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Git"
+          ],
           "code": "View Code",
           "demo": "Live Demo",
           "codeLink": "https://github.com/LeandroStanger/LeandroStanger",
@@ -320,7 +375,12 @@
         {
           "title": "Cities with High Temperatures",
           "desc": "Interactive web application that displays and filters data on cities with extreme climates. Includes map, dashboard and climate data visualization.",
-          "tags": ["JavaScript (ES6+)", "API", "CSS3", "Data Visualization"],
+          "tags": [
+            "JavaScript (ES6+)",
+            "API",
+            "CSS3",
+            "Data Visualization"
+          ],
           "code": "View Code",
           "demo": "Live Demo",
           "codeLink": "https://github.com/LeandroStanger/CidadesComAltasTemperaturas",
@@ -329,7 +389,13 @@
         {
           "title": "Website with Loop Hack",
           "desc": "Experimental website with visual loop effects, creative animations and advanced CSS/JavaScript techniques. Demonstrates skills in animations and interactive design.",
-          "tags": ["HTML5", "CSS3", "JavaScript", "Animations", "Web Experiments"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Animations",
+            "Web Experiments"
+          ],
           "code": "View Code",
           "demo": "Live Demo",
           "codeLink": "https://github.com/LeandroStanger/SiteComLoopHack",
@@ -338,7 +404,10 @@
         {
           "title": "Initial Projects (C Language)",
           "desc": "Collection of my first programming projects in C language, demonstrating my evolution as a developer.",
-          "tags": ["C", "GCC"],
+          "tags": [
+            "C",
+            "GCC"
+          ],
           "code": "View Code",
           "demo": "",
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-C",
@@ -347,7 +416,12 @@
         {
           "title": "Pet Animals System",
           "desc": "A static and responsive catalog that displays a list of pets, presenting basic information such as name, species, age, weight and energy level in a user-friendly web interface.",
-          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "JSON"
+          ],
           "code": "View Code",
           "demo": "Live Demo",
           "codeLink": "https://github.com/LeandroStanger/SistemaDeAnimaisDeEstimacao",
@@ -356,7 +430,12 @@
         {
           "title": "Players Dashboard",
           "desc": "Complete statistics of the greatest soccer players. A modern and interactive web panel for viewing and analyzing player data in a dashboard format.",
-          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "JSON"
+          ],
           "code": "View Code",
           "demo": "Live Demo",
           "codeLink": "https://github.com/LeandroStanger/DashboardDeJogadores",

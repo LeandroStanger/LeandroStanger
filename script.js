@@ -633,7 +633,7 @@ function initParticles(themeIsLight = false) {
 }
 
 // Função pública para atualizar partículas conforme tema
-window.updateParticlesTheme = function(isLight) {
+window.updateParticlesTheme = function (isLight) {
     initParticles(isLight);
 };
 
@@ -748,10 +748,10 @@ const Renderer = {
                         <p class="timeline-subtitle">${item.institution || ''}</p>
                         <div class="status-container">
                             ${statusArray.map(s => {
-                                const lower = s.toLowerCase();
-                                const isCompleted = lower.includes('concluído') || lower.includes('completed') || lower.includes('completado');
-                                return `<span class="status-badge ${isCompleted ? 'status-concluido' : 'status-andamento'}">${s}</span>`;
-                            }).join('')}
+                    const lower = s.toLowerCase();
+                    const isCompleted = lower.includes('concluído') || lower.includes('completed') || lower.includes('completado');
+                    return `<span class="status-badge ${isCompleted ? 'status-concluido' : 'status-andamento'}">${s}</span>`;
+                }).join('')}
                         </div>
                     </div>
                 </div>
@@ -793,14 +793,14 @@ const Renderer = {
                     ${companyPeriod ? `<div class="experiencia-periodo"><span class="periodo-detalhes">${companyPeriod}</span></div>` : ''}
                 </div>
                 ${positions.map((pos, idx) => {
-                    if (!pos || typeof pos !== 'object') return '';
-                    let posPeriod = pos.period || '';
-                    if (company.includes('Vanelise')) {
-                        if (idx === 0) posPeriod = ExperienceCalc.getPeriodText('cargo1', lang);
-                        else if (idx === 1) posPeriod = ExperienceCalc.getPeriodText('cargo1_anterior', lang);
-                    }
-                    const responsibilities = Array.isArray(pos.responsibilities) ? pos.responsibilities : [];
-                    return `
+                if (!pos || typeof pos !== 'object') return '';
+                let posPeriod = pos.period || '';
+                if (company.includes('Vanelise')) {
+                    if (idx === 0) posPeriod = ExperienceCalc.getPeriodText('cargo1', lang);
+                    else if (idx === 1) posPeriod = ExperienceCalc.getPeriodText('cargo1_anterior', lang);
+                }
+                const responsibilities = Array.isArray(pos.responsibilities) ? pos.responsibilities : [];
+                return `
                     <div class="experiencia-cargo">
                         <h5 class="cargo-title">${pos.title || ''}</h5>
                         ${posPeriod ? `<div class="cargo-periodo"><span class="periodo-detalhes">${posPeriod}</span></div>` : ''}
