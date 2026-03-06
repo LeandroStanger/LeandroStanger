@@ -1151,6 +1151,54 @@ function setupLanguageSelector() {
     });
 }
 
+// ==================== FUNÇÃO PARA DOWNLOAD DO CURRÍCULO ====================
+async function initDownloadCurriculo() {
+    const downloadBtn = document.getElementById('download-curriculo');
+    if (!downloadBtn) return;
+
+    downloadBtn.addEventListener('click', async (e) => {
+        e.preventDefault(); // Impede a navegação para o link
+
+        const url = downloadBtn.href; // Link raw já configurado
+        const fileName = 'Curriculo_Leandro_Stanger.pdf'; // Nome do arquivo a ser salvo
+
+        try {
+            // Faz o fetch do arquivo com suporte a CORS
+            const response = await fetch(url, {
+                mode: 'cors',
+                headers: {
+                    'Accept': 'application/pdf'
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error('Erro ao baixar o arquivo');
+            }
+
+            // Converte a resposta para blob
+            const blob = await response.blob();
+
+            // Cria uma URL temporária para o blob
+            const blobUrl = window.URL.createObjectURL(blob);
+
+            // Cria um elemento <a> temporário para disparar o download
+            const link = document.createElement('a');
+            link.href = blobUrl;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+
+            // Limpeza
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(blobUrl);
+        } catch (error) {
+            console.error('Falha no download:', error);
+            // Fallback: abre o link em nova aba (caso o fetch falhe)
+            window.open(url, '_blank');
+        }
+    });
+}
+
 // ==================== INICIALIZAÇÃO ====================
 (async function init() {
     try {
@@ -1176,6 +1224,7 @@ function setupLanguageSelector() {
         initSmoothScroll();
         initBackToTop();
         initContactForm();
+        initDownloadCurriculo(); // Novo: inicializa o download do currículo
 
         // Inicializa partículas com o tema atual
         const isLight = document.documentElement.classList.contains('light-theme');
