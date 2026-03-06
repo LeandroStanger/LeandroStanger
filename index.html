@@ -5,23 +5,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <meta name="description"
-        content="Portfólio profissional de Leandro Stanger - Desenvolvedor e Estudante de Engenharia da Computação">
+        content="Portfólio profissional de Leandro Stanger - Desenvolvedor Full-Stack e Estudante de Engenharia da Computação. Conheça meus projetos, habilidades e experiência em desenvolvimento web, banco de dados e suporte técnico.">
     <meta name="keywords"
-        content="desenvolvedor, programador, engenharia da computação, portfolio, HTML, CSS, JavaScript">
+        content="Leandro Stanger, desenvolvedor, programador, engenharia da computação, portfólio, HTML, CSS, JavaScript, full-stack, banco de dados, GitHub">
     <meta name="author" content="Leandro Stanger">
     <meta name="theme-color" content="#10b981">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://leandrostanger.github.io/LeandroStanger/">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Leandro Stanger - Portfólio Profissional">
     <meta property="og:description" content="Desenvolvedor Full-Stack e Estudante de Engenharia da Computação">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="img/perfil.jpg">
+    <meta property="og:url" content="https://leandrostanger.github.io/LeandroStanger/">
+    <meta property="og:image" content="https://leandrostanger.github.io/LeandroStanger/img/perfil.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
-    <!-- Preload de recursos críticos -->
+    <!-- Schema.org JSON-LD (Person e WebSite) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Leandro Stanger",
+        "url": "https://leandrostanger.github.io/LeandroStanger/",
+        "image": "https://leandrostanger.github.io/LeandroStanger/img/perfil.jpg",
+        "sameAs": [
+            "https://www.linkedin.com/in/leandrostanger1/",
+            "https://github.com/LeandroStanger",
+            "https://twitter.com/LeandroStanger1"
+        ],
+        "jobTitle": "Desenvolvedor Full-Stack",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Freelancer"
+        },
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "UNOPAR"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://leandrostanger.github.io/LeandroStanger/",
+        "name": "Leandro Stanger - Portfólio",
+        "description": "Portfólio profissional de Leandro Stanger, desenvolvedor full-stack e estudante de engenharia da computação.",
+        "author": {
+            "@type": "Person",
+            "name": "Leandro Stanger"
+        }
+    }
+    </script>
+
+    <!-- Pré-conexão e DNS-Prefetch para recursos externos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+    <!-- Pré-carregamento de fontes (opcional, pode melhorar LCP) -->
     <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap">
 
@@ -29,19 +78,19 @@
     <link rel="shortcut icon" href="img/perfil.jpg" type="image/x-icon">
     <link rel="apple-touch-icon" href="img/perfil.jpg">
 
-    <!-- Fontes -->
+    <!-- Fontes (carregamento assíncrono) -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
         media="print" onload="this.media='all'">
 
     <!-- Ícones Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
 
     <!-- CSS Principal -->
     <link rel="stylesheet" href="style.css">
 
-    <title>Leandro Stanger - Portfólio</title>
+    <title>Leandro Stanger - Portfólio Profissional</title>
 </head>
 
 <body>
@@ -62,7 +111,7 @@
                             <button class="lang-btn" data-lang="es" aria-label="Español">🇪🇸</button>
                         </div>
 
-                        <!-- Botão de alternância de tema (visual restaurado) -->
+                        <!-- Botão de alternância de tema -->
                         <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema claro/escuro">
                             <i class="fas fa-sun"></i>
                         </button>
@@ -246,10 +295,10 @@
                             </h3>
                         </header>
                         <div class="tecnologia-icons">
-                            <div class="tecnologia-icon" aria-label="HTML"><img src="img/img2.png" alt="HTML5"
+                            <div class="tecnologia-icon" aria-label="HTML5"><img src="img/img2.png" alt="HTML5"
                                     width="64" height="64" loading="lazy"><span class="tecnologia-label">HTML</span>
                             </div>
-                            <div class="tecnologia-icon" aria-label="CSS"><img src="img/img3.png" alt="CSS3" width="64"
+                            <div class="tecnologia-icon" aria-label="CSS3"><img src="img/img3.png" alt="CSS3" width="64"
                                     height="64" loading="lazy"><span class="tecnologia-label">CSS</span></div>
                             <div class="tecnologia-icon" aria-label="JavaScript"><img src="img/img.jpg" alt="JavaScript"
                                     width="64" height="64" loading="lazy"><span
@@ -598,7 +647,6 @@
     </footer>
 
     <!-- Scripts -->
-    <!-- Particles.js (CDN) -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>

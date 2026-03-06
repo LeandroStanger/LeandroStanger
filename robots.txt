@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://leandrostanger.github.io/LeandroStanger/sitemap.xml

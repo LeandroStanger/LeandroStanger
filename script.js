@@ -458,6 +458,9 @@ const I18n = {
         document.title = this.t('site.title');
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) metaDesc.setAttribute('content', this.t('site.description'));
+
+        // Atualiza o atributo lang do HTML
+        document.documentElement.lang = AppState.currentLang === 'pt' ? 'pt-BR' : AppState.currentLang;
     },
 
     updateActiveButton() {
@@ -647,6 +650,7 @@ const Renderer = {
         this._safeRender('Habilidades', this.renderHabilidades);
         document.dispatchEvent(new CustomEvent('renderer:done'));
         ScrollAnimations.refresh();
+        this.generateProjectsSchema(); // Gera schema dos projetos após renderização
     },
 
     _safeRender(sectionName, renderFn) {
@@ -832,6 +836,41 @@ const Renderer = {
                 <div class="habilidades-lista">${interpessoais.items.map(item => `<span class="habilidade-tag">${item}</span>`).join('')}</div>
             </div>
         `;
+    },
+
+    // Gera schema ItemList para os projetos
+    generateProjectsSchema() {
+        const projects = I18n.t('sections.projetos.cards');
+        if (!Array.isArray(projects)) return;
+
+        const itemList = {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Projetos de Leandro Stanger",
+            "description": "Lista de projetos desenvolvidos por Leandro Stanger",
+            "numberOfItems": projects.length,
+            "itemListElement": projects.map((project, index) => ({
+                "@type": "ListItem",
+                "position": index + 1,
+                "item": {
+                    "@type": "CreativeWork",
+                    "name": project.title,
+                    "description": project.desc,
+                    "url": project.demoLink || project.codeLink,
+                    "keywords": project.tags.join(', ')
+                }
+            }))
+        };
+
+        // Remove schema antigo se existir
+        const oldScript = document.getElementById('schema-projects');
+        if (oldScript) oldScript.remove();
+
+        const script = document.createElement('script');
+        script.id = 'schema-projects';
+        script.type = 'application/ld+json';
+        script.textContent = JSON.stringify(itemList);
+        document.head.appendChild(script);
     }
 };
 
@@ -933,8 +972,8 @@ class ProjectsSearch {
                 </header>
                 <div class="projeto-tags">${(p.tags || []).map(t => `<span class="tag">${t}</span>`).join('')}</div>
                 <footer class="projeto-actions">
-                    <a href="${p.codeLink || '#'}" target="_blank" class="btn btn-projeto"><i class="fas fa-code"></i> ${codeLabel}</a>
-                    ${p.demoLink ? `<a href="${p.demoLink}" target="_blank" class="btn btn-projeto-secundario"><i class="fas fa-external-link-alt"></i> ${demoLabel}</a>` : ''}
+                    <a href="${p.codeLink || '#'}" target="_blank" rel="noopener noreferrer" class="btn btn-projeto"><i class="fas fa-code"></i> ${codeLabel}</a>
+                    ${p.demoLink ? `<a href="${p.demoLink}" target="_blank" rel="noopener noreferrer" class="btn btn-projeto-secundario"><i class="fas fa-external-link-alt"></i> ${demoLabel}</a>` : ''}
                 </footer>
             </article>
         `).join('');
