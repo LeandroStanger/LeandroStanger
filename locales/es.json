@@ -478,6 +478,36 @@
         "messenger": "Messenger",
         "messenger_desc": "@leandrostanger"
       }
+    },
+    "doacoes": {
+      "number": "06",
+      "title": "Apoyar el Proyecto",
+      "subtitle": "Contribuye al desarrollo",
+      "intro": "Tu contribución ayuda directamente a mis estudios y a la evolución de los proyectos. ¡Cualquier valor es bienvenido y marca la diferencia!",
+      "real_title": "Real (BRL)",
+      "dolar_title": "Dólar (USD)",
+      "valores": {
+        "title": "Elige un valor",
+        "btn5": "R$ 5",
+        "btn10": "R$ 10",
+        "btn20": "R$ 20",
+        "btn50": "R$ 50",
+        "btn100": "R$ 100",
+        "custom_placeholder": "Otro valor (R$)"
+      },
+      "pix": {
+        "title": "Pix",
+        "chave": "6e2301bf-4272-40f8-ac86-b161e6ba508b",
+        "copiar": "Copiar clave Pix",
+        "copiado": "¡Clave copiada!",
+        "instrucao": "Escanea el código QR o copia la clave para hacer un Pix."
+      },
+      "valor_escolhido": "Elegiste:",
+      "kofi": {
+        "title": "Ko-fi",
+        "description": "Si prefieres donar en dólares, puedes apoyarme en Ko-fi. ¡Es rápido y fácil!",
+        "button": "Apoyar en Ko-fi"
+      }
     }
   },
   "footer": {

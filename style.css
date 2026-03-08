@@ -2085,6 +2085,191 @@ html.light-theme .semester-badge {
     font-size: var(--text-base);
 }
 
+/* ============ DOAÇÕES ============ */
+.doacoes-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.doacoes-intro {
+    text-align: center;
+    font-size: var(--text-lg);
+    color: var(--color-gray);
+    margin-bottom: var(--space-8);
+    line-height: 1.7;
+}
+
+.doacoes-metodos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    margin-top: var(--space-6);
+}
+
+@media (min-width: 768px) {
+    .doacoes-metodos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.doacoes-card {
+    background: var(--color-dark-800);
+    border: 1px solid var(--color-dark-600);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    transition: all var(--transition-normal);
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.doacoes-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-green);
+}
+
+.doacoes-card-title {
+    font-size: var(--text-2xl);
+    color: var(--color-primary-light);
+    margin-bottom: var(--space-4);
+    text-align: center;
+}
+
+/* Área Pix */
+.doacoes-pix {
+    background: var(--color-dark-900);
+    border: 1px solid var(--color-dark-600);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    text-align: center;
+    margin-top: var(--space-3);
+}
+
+.pix-title {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-2xl);
+    color: var(--color-primary-light);
+    margin-bottom: var(--space-4);
+}
+
+.pix-chave-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+    flex-wrap: wrap;
+}
+
+.pix-chave {
+    background: var(--color-dark-800);
+    padding: var(--space-3) var(--space-5);
+    border-radius: var(--radius-full);
+    font-family: monospace;
+    font-size: var(--text-base);
+    color: var(--color-primary-light);
+    border: 1px solid var(--color-dark-600);
+    word-break: break-all;
+    max-width: 100%;
+}
+
+.btn-copiar {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: var(--space-3) var(--space-5);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    white-space: nowrap;
+}
+
+.btn-copiar:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-green);
+}
+
+.btn-copiar:active {
+    transform: translateY(0);
+}
+
+.qrcode-container {
+    display: flex;
+    justify-content: center;
+    margin: var(--space-4) 0;
+}
+
+.qrcode-container canvas {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    max-width: 200px;
+    height: auto;
+    width: 100%;
+}
+
+.pix-instrucao {
+    color: var(--color-gray);
+    font-size: var(--text-sm);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* ============ NOVO: Sub-card para Ko-fi ============ */
+.doacoes-kofi {
+    background: var(--color-dark-900);
+    border: 1px solid var(--color-dark-600);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    text-align: center;
+    margin-top: var(--space-3);
+}
+
+.kofi-title {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-2xl);
+    color: var(--color-primary-light);
+    margin-bottom: var(--space-4);
+}
+
+.kofi-description {
+    color: var(--color-gray);
+    margin-bottom: var(--space-4);
+    font-size: var(--text-base);
+    text-align: center;
+}
+
+.kofi-iframe {
+    max-width: 100%;
+    height: 712px;          /* altura fixa para evitar scroll */
+    width: 100%;
+    border-radius: var(--radius-lg);
+    background: var(--color-dark-900);
+    box-shadow: var(--shadow-md);
+    transition: box-shadow var(--transition-normal);
+    display: block;
+    margin: 0 auto;
+}
+
+.kofi-iframe:hover {
+    box-shadow: var(--shadow-green);
+}
+
+/* Ajuste responsivo para telas pequenas */
+@media (max-width: 640px) {
+    .kofi-iframe {
+        height: 600px;       /* reduz altura mantendo sem scroll */
+    }
+}
+
 /* ============ MEDIA QUERIES ADICIONAIS ============ */
 @media (max-width: 768px) {
     .header-content {

@@ -346,7 +346,7 @@ const DEFAULT_TRANSLATIONS = {
                     "title": "Dashboard de Jogadores",
                     "desc": "Estatísticas completas dos maiores jogadores de futebol. Um painel web moderno e interativo para visualização e análise de dados de jogadores em formato de dashboard.",
                     "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
-                    "codeLink": "https://github.com/LeandroStanger/DashboardDeJogadores/",
+                    "codeLink": "https://github.com/LeandroStanger/DashboardDeJogadores",
                     "demoLink": "https://leandrostanger.github.io/DashboardDeJogadores/"
                 }
             ]
@@ -384,6 +384,36 @@ const DEFAULT_TRANSLATIONS = {
                 "x_desc": "@LeandroStanger1",
                 "messenger": "Messenger",
                 "messenger_desc": "@leandrostanger"
+            }
+        },
+        "doacoes": {
+            "number": "06",
+            "title": "Apoiar o Projeto",
+            "subtitle": "Contribua para o desenvolvimento",
+            "intro": "Sua contribuição ajuda diretamente nos meus estudos e na evolução dos projetos. Todo valor é bem-vindo e faz a diferença!",
+            "real_title": "Real (BRL)",
+            "dolar_title": "Dólar (USD)",
+            "valores": {
+                "title": "Escolha um valor",
+                "btn5": "R$ 5",
+                "btn10": "R$ 10",
+                "btn20": "R$ 20",
+                "btn50": "R$ 50",
+                "btn100": "R$ 100",
+                "custom_placeholder": "Outro valor (R$)"
+            },
+            "pix": {
+                "title": "Pix",
+                "chave": "6e2301bf-4272-40f8-ac86-b161e6ba508b",
+                "copiar": "Copiar chave Pix",
+                "copiado": "Chave copiada!",
+                "instrucao": "Escaneie o QR code ou copie a chave para fazer um Pix."
+            },
+            "valor_escolhido": "Você escolheu:",
+            "kofi": {
+                "title": "Ko-fi",
+                "description": "Se preferir doar em dólar, você pode me apoiar no Ko-fi. É rápido e fácil!",
+                "button": "Apoiar no Ko-fi"
             }
         }
     },
@@ -506,6 +536,11 @@ const ThemeManager = {
         // Atualiza as partículas conforme o novo tema
         if (window.updateParticlesTheme) {
             window.updateParticlesTheme(isLight);
+        }
+
+        // Atualiza o QR code (cores)
+        if (window.initDoacoes) {
+            setTimeout(window.initDoacoes, 50);
         }
     },
 
@@ -1238,6 +1273,72 @@ async function initDownloadCurriculo() {
     });
 }
 
+// ==================== FUNÇÃO PARA INICIALIZAR A SEÇÃO DE DOAÇÕES (QR Code e cópia) ====================
+function initDoacoes() {
+    // Gerar QR Code
+    const qrcodeDiv = document.getElementById('qrcode');
+    if (qrcodeDiv) {
+        // Limpa conteúdo anterior
+        qrcodeDiv.innerHTML = '';
+        
+        if (typeof QRCode !== 'undefined') {
+            const pixKey = document.getElementById('pix-chave')?.textContent || '6e2301bf-4272-40f8-ac86-b161e6ba508b';
+            // Gera novo QR code com as cores do tema atual
+            new QRCode(qrcodeDiv, {
+                text: pixKey,
+                width: 200,
+                height: 200,
+                colorDark: document.documentElement.classList.contains('light-theme') ? '#000000' : '#ffffff',
+                colorLight: document.documentElement.classList.contains('light-theme') ? '#ffffff' : '#000000',
+                correctLevel: QRCode.CorrectLevel.H
+            });
+        } else {
+            console.warn('QRCode library not loaded. Cannot generate QR code.');
+            qrcodeDiv.innerHTML = '<p style="color: var(--color-error);">QR Code indisponível no momento.</p>';
+        }
+    }
+
+    // Copiar chave Pix
+    const copiarBtn = document.getElementById('copiar-chave');
+    if (copiarBtn) {
+        // Remove listener antigo para evitar duplicação
+        const newBtn = copiarBtn.cloneNode(true);
+        copiarBtn.parentNode.replaceChild(newBtn, copiarBtn);
+
+        newBtn.addEventListener('click', async () => {
+            const pixKeyElement = document.getElementById('pix-chave');
+            if (!pixKeyElement) return;
+            const pixKey = pixKeyElement.textContent;
+
+            try {
+                // Tenta usar a API Clipboard moderna
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(pixKey);
+                } else {
+                    // Fallback para document.execCommand (depreciado, mas ainda funciona em muitos navegadores)
+                    const textArea = document.createElement('textarea');
+                    textArea.value = pixKey;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                }
+
+                // Feedback visual
+                const originalText = newBtn.innerHTML;
+                const feedbackText = I18n.t('sections.doacoes.pix.copiado') || 'Chave copiada!';
+                newBtn.innerHTML = `<i class="fas fa-check"></i> ${feedbackText}`;
+                setTimeout(() => {
+                    newBtn.innerHTML = originalText;
+                }, 2000);
+            } catch (err) {
+                console.error('Erro ao copiar:', err);
+                alert('Não foi possível copiar a chave. Tente manualmente.');
+            }
+        });
+    }
+}
+
 // ==================== INICIALIZAÇÃO ====================
 (async function init() {
     try {
@@ -1258,12 +1359,13 @@ async function initDownloadCurriculo() {
         await I18n.loadTranslations(AppState.currentLang);
 
         updateCurrentYear();
-        initTypewriter(); // ← agora com velocidade ajustada
+        initTypewriter();
         setupLanguageSelector();
         initSmoothScroll();
         initBackToTop();
         initContactForm();
-        initDownloadCurriculo(); // Novo: inicializa o download do currículo
+        initDownloadCurriculo();
+        initDoacoes(); // QR code e cópia
 
         // Inicializa partículas com o tema atual
         const isLight = document.documentElement.classList.contains('light-theme');

@@ -84,7 +84,7 @@
         media="print" onload="this.media='all'">
 
     <!-- Ícones Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
 
     <!-- CSS Principal -->
@@ -617,6 +617,57 @@
                 </div>
             </div>
         </section>
+
+        <!-- Doações / Apoiar o Projeto -->
+        <section id="doacoes" class="section doacoes" aria-labelledby="doacoes-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label" aria-hidden="true" data-i18n="sections.doacoes.number">06</span>
+                    <h2 id="doacoes-title" class="section-title">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                        <span data-i18n="sections.doacoes.title">Apoiar o Projeto</span>
+                    </h2>
+                    <p class="section-subtitle" data-i18n="sections.doacoes.subtitle">Contribua para o desenvolvimento</p>
+                </div>
+
+                <div class="doacoes-content">
+                    <p class="doacoes-intro" data-i18n="sections.doacoes.intro">
+                        Sua contribuição ajuda diretamente nos meus estudos e na evolução dos projetos. Todo valor é bem-vindo e faz a diferença!
+                    </p>
+
+                    <!-- Container com dois cards -->
+                    <div class="doacoes-metodos">
+                        <!-- Card Real (BRL) -->
+                        <div class="doacoes-card doacoes-card-pix">
+                            <h3 class="doacoes-card-title" data-i18n="sections.doacoes.real_title">Real (BRL)</h3>
+                            <div class="doacoes-pix">
+                                <h4 class="pix-title"><i class="fa-brands fa-pix"></i> <span data-i18n="sections.doacoes.pix.title">Pix</span></h4>
+                                <div class="pix-chave-container">
+                                    <span id="pix-chave" class="pix-chave">6e2301bf-4272-40f8-ac86-b161e6ba508b</span>
+                                    <button id="copiar-chave" class="btn-copiar" aria-label="Copiar chave Pix">
+                                        <i class="fas fa-copy"></i>
+                                        <span data-i18n="sections.doacoes.pix.copiar">Copiar chave Pix</span>
+                                    </button>
+                                </div>
+                                <div id="qrcode" class="qrcode-container"></div>
+                                <p class="pix-instrucao" data-i18n="sections.doacoes.pix.instrucao">Escaneie o QR code ou copie a chave para fazer um Pix.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card Dólar (USD) -->
+                        <div class="doacoes-card doacoes-card-dolar">
+                            <h3 class="doacoes-card-title" data-i18n="sections.doacoes.dolar_title">Dólar (USD)</h3>
+                            <!-- Sub-card para Ko-fi (igual ao Pix) -->
+                            <div class="doacoes-kofi">
+                                <h4 class="kofi-title"><i class="fa-brands fa-ko-fi"></i> <span data-i18n="sections.doacoes.kofi.title">Ko-fi</span></h4>
+                                <p class="kofi-description" data-i18n="sections.doacoes.kofi.description">Se preferir doar em dólar, você pode me apoiar no Ko-fi. É rápido e fácil!</p>
+                                <iframe id="kofiframe" class="kofi-iframe" src="https://ko-fi.com/leandrostanger/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none; width:100%;" height="712" title="leandrostanger"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -648,6 +699,8 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- QRCode.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="script.js"></script>
 </body>
 
