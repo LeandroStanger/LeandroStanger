@@ -486,23 +486,13 @@
       "intro": "Your contribution directly helps my studies and the evolution of the projects. Any amount is welcome and makes a difference!",
       "real_title": "Real (BRL)",
       "dolar_title": "Dollar (USD)",
-      "valores": {
-        "title": "Choose an amount",
-        "btn5": "$5",
-        "btn10": "$10",
-        "btn20": "$20",
-        "btn50": "$50",
-        "btn100": "$100",
-        "custom_placeholder": "Other amount ($)"
-      },
       "pix": {
         "title": "Pix",
-        "chave": "6e2301bf-4272-40f8-ac86-b161e6ba508b",
+        "chave": "c348f1e6-72fa-4988-a2e9-3ac7d539de84",
         "copiar": "Copy Pix key",
         "copiado": "Key copied!",
         "instrucao": "Scan the QR code or copy the key to make a Pix payment."
       },
-      "valor_escolhido": "You chose:",
       "kofi": {
         "title": "Ko-fi",
         "description": "If you prefer to donate in dollars, you can support me on Ko-fi. It's quick and easy!",

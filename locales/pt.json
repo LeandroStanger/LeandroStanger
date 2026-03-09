@@ -2,7 +2,7 @@
   "site": {
     "title": "Leandro Stanger - Portfólio",
     "description": "Portfólio profissional de Leandro Stanger - Desenvolvedor e Estudante de Engenharia da Computação",
-    "keywords": "desenvolvedor, programador, engenharia da computação, portfolio, HTML, CSS, JavaScript"
+    "keywords": "desenvolvedor, programador, engenharia da computação, portfólio, HTML, CSS, JavaScript"
   },
   "nav": {
     "inicio": "Início",
@@ -29,7 +29,7 @@
       "cards": [
         {
           "title": "Formação Acadêmica",
-          "text": "Estudante de Engenharia da Computação pela <a href=\"https://www.unopar.com.br/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"highlight-link\">UNOPAR - Universidade Norte do Paraná</a>. Em constante evolução na área de tecnologia, sempre buscando novos conhecimentos e desafios para crescimento profissional.",
+          "text": "Estudante de Engenharia da Computação em <a href=\"https://www.unopar.com.br/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"highlight-link\">UNOPAR - Universidade Norte do Paraná</a>. Em constante evolução na área de tecnologia, sempre buscando novos conhecimentos e desafios para o crescimento profissional.",
           "icon": "graduation-cap"
         },
         {
@@ -210,7 +210,7 @@
         "frontend": "Front-end",
         "backend": "Backend",
         "devops": "DevOps",
-        "databases": "Databases",
+        "databases": "Bases de Dados",
         "ferramentas": "Ferramentas",
         "so": "Sistema Operacional"
       }
@@ -459,8 +459,7 @@
         "send": "Enviar Mensagem",
         "sending": "Enviando...",
         "success": "✅ Mensagem enviada com sucesso! Entrarei em contato em breve.",
-        "error": "❌ Ocorreu um erro ao enviar a mensagem. Tente novamente.",
-        "validation_error": "❌ Por favor, corrija os campos destacados."
+        "error": "❌ Ocorreu um erro ao enviar a mensagem. Tente novamente."
       },
       "links": {
         "linkedin": "LinkedIn",
@@ -486,23 +485,13 @@
       "intro": "Sua contribuição ajuda diretamente nos meus estudos e na evolução dos projetos. Todo valor é bem-vindo e faz a diferença!",
       "real_title": "Real (BRL)",
       "dolar_title": "Dólar (USD)",
-      "valores": {
-        "title": "Escolha um valor",
-        "btn5": "R$ 5",
-        "btn10": "R$ 10",
-        "btn20": "R$ 20",
-        "btn50": "R$ 50",
-        "btn100": "R$ 100",
-        "custom_placeholder": "Outro valor (R$)"
-      },
       "pix": {
         "title": "Pix",
-        "chave": "6e2301bf-4272-40f8-ac86-b161e6ba508b",
+        "chave": "c348f1e6-72fa-4988-a2e9-3ac7d539de84",
         "copiar": "Copiar chave Pix",
         "copiado": "Chave copiada!",
         "instrucao": "Escaneie o QR code ou copie a chave para fazer um Pix."
       },
-      "valor_escolhido": "Você escolheu:",
       "kofi": {
         "title": "Ko-fi",
         "description": "Se preferir doar em dólar, você pode me apoiar no Ko-fi. É rápido e fácil!",

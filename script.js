@@ -393,23 +393,13 @@ const DEFAULT_TRANSLATIONS = {
             "intro": "Sua contribuição ajuda diretamente nos meus estudos e na evolução dos projetos. Todo valor é bem-vindo e faz a diferença!",
             "real_title": "Real (BRL)",
             "dolar_title": "Dólar (USD)",
-            "valores": {
-                "title": "Escolha um valor",
-                "btn5": "R$ 5",
-                "btn10": "R$ 10",
-                "btn20": "R$ 20",
-                "btn50": "R$ 50",
-                "btn100": "R$ 100",
-                "custom_placeholder": "Outro valor (R$)"
-            },
             "pix": {
                 "title": "Pix",
-                "chave": "6e2301bf-4272-40f8-ac86-b161e6ba508b",
+                "chave": "c348f1e6-72fa-4988-a2e9-3ac7d539de84",
                 "copiar": "Copiar chave Pix",
                 "copiado": "Chave copiada!",
                 "instrucao": "Escaneie o QR code ou copie a chave para fazer um Pix."
             },
-            "valor_escolhido": "Você escolheu:",
             "kofi": {
                 "title": "Ko-fi",
                 "description": "Se preferir doar em dólar, você pode me apoiar no Ko-fi. É rápido e fácil!",
@@ -489,7 +479,6 @@ const I18n = {
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) metaDesc.setAttribute('content', this.t('site.description'));
 
-        // Atualiza o atributo lang do HTML
         document.documentElement.lang = AppState.currentLang === 'pt' ? 'pt-BR' : AppState.currentLang;
     },
 
@@ -533,12 +522,10 @@ const ThemeManager = {
             this.toggleBtn.classList.remove('toggling');
         }, 500);
 
-        // Atualiza as partículas conforme o novo tema
         if (window.updateParticlesTheme) {
             window.updateParticlesTheme(isLight);
         }
 
-        // Atualiza o QR code (cores)
         if (window.initDoacoes) {
             setTimeout(window.initDoacoes, 50);
         }
@@ -562,7 +549,6 @@ function initParticles(themeIsLight = false) {
         return;
     }
 
-    // Configuração base com formato hexagonal
     const config = {
         particles: {
             number: {
@@ -573,7 +559,7 @@ function initParticles(themeIsLight = false) {
                 }
             },
             shape: {
-                type: 'polygon', // hexágonos
+                type: 'polygon',
                 polygon: {
                     sides: 6
                 }
@@ -629,9 +615,7 @@ function initParticles(themeIsLight = false) {
         retina_detect: true
     };
 
-    // Ajustes conforme tema
     if (themeIsLight) {
-        // Tema claro: partículas escuras e mais sutis
         config.particles.color = {
             value: '#10b981'
         };
@@ -641,7 +625,6 @@ function initParticles(themeIsLight = false) {
         config.particles.line_linked.opacity = 0.90;
         config.particles.number.value = 50;
     } else {
-        // Tema escuro: partículas claras
         config.particles.color = {
             value: '#10b981'
         };
@@ -649,7 +632,6 @@ function initParticles(themeIsLight = false) {
         config.particles.line_linked.opacity = 0.90;
     }
 
-    // Se já existe uma instância, destruir antes de recriar
     if (window.pJSDom && window.pJSDom.length > 0) {
         window.pJSDom[0].pJS.fn.vendors.destroypJS();
         window.pJSDom = [];
@@ -657,7 +639,6 @@ function initParticles(themeIsLight = false) {
 
     particlesJS('particles-js', config);
 
-    // Ajustar densidade para mobile
     if (window.innerWidth < 768) {
         setTimeout(() => {
             if (window.pJSDom && window.pJSDom[0]) {
@@ -670,7 +651,6 @@ function initParticles(themeIsLight = false) {
     particlesInitialized = true;
 }
 
-// Função pública para atualizar partículas conforme tema
 window.updateParticlesTheme = function (isLight) {
     initParticles(isLight);
 };
@@ -685,7 +665,7 @@ const Renderer = {
         this._safeRender('Habilidades', this.renderHabilidades);
         document.dispatchEvent(new CustomEvent('renderer:done'));
         ScrollAnimations.refresh();
-        this.generateProjectsSchema(); // Gera schema dos projetos após renderização
+        this.generateProjectsSchema();
     },
 
     _safeRender(sectionName, renderFn) {
@@ -742,13 +722,12 @@ const Renderer = {
         }
 
         container.innerHTML = items.map(item => {
-            // Verifica se o item possui a propriedade 'progress' (graduação)
             if (item.progress) {
                 const progress = item.progress;
                 const completed = progress.completed;
                 const total = progress.total;
-                const percentage = (completed / total) * 100; // valor exato para a largura
-                const percentageFormatted = percentage.toFixed(2); // para exibição
+                const percentage = (completed / total) * 100;
+                const percentageFormatted = percentage.toFixed(2);
                 const labelText = progress.label.replace('{completed}', completed).replace('{total}', total);
 
                 return `
@@ -764,7 +743,6 @@ const Renderer = {
                                 <span class="progress-percentage">${percentageFormatted}%</span>
                             </div>
                             <div class="progress-bar">
-                                <!-- Usamos uma variável CSS para a largura alvo; a largura inicial é 0 -->
                                 <div class="progress-fill" style="--target-width: ${percentage}%; width: 0;"></div>
                             </div>
                             ${progress.semesterText ? `
@@ -776,7 +754,6 @@ const Renderer = {
                 </div>
                 `;
             } else {
-                // Comportamento original para os demais itens
                 const statusArray = Array.isArray(item.status) ? item.status : [];
                 return `
                 <div class="timeline-item">
@@ -873,7 +850,6 @@ const Renderer = {
         `;
     },
 
-    // Gera schema ItemList para os projetos
     generateProjectsSchema() {
         const projects = I18n.t('sections.projetos.cards');
         if (!Array.isArray(projects)) return;
@@ -897,7 +873,6 @@ const Renderer = {
             }))
         };
 
-        // Remove schema antigo se existir
         const oldScript = document.getElementById('schema-projects');
         if (oldScript) oldScript.remove();
 
@@ -1066,7 +1041,7 @@ const ScrollAnimations = {
     observer: null,
 
     init() {
-        if (this.observer) return; // já existe
+        if (this.observer) return;
         this.observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1096,13 +1071,12 @@ const ScrollAnimations = {
 
     refresh() {
         if (this.observer) {
-            this.observer.disconnect(); // limpa observações anteriores
+            this.observer.disconnect();
         }
         this.observeAll();
     }
 };
 
-// Inicializa imediatamente (observer já existe antes de qualquer listener)
 ScrollAnimations.init();
 
 // ==================== UTILITÁRIOS ====================
@@ -1111,25 +1085,23 @@ function updateCurrentYear() {
     if (el) el.textContent = new Date().getFullYear();
 }
 
-// NOVA FUNÇÃO DE DIGITAÇÃO COM VELOCIDADE HUMANA
 function initTypewriter() {
     const el = document.getElementById('typewriter');
     if (!el) return;
 
     const originalText = el.textContent;
-    el.textContent = ''; // limpa o conteúdo
+    el.textContent = '';
 
     let i = 0;
-    const delayBase = 120; // ms por caractere normal
-    const delayPunctuation = 200; // para pontuação
-    const delaySpace = 80; // para espaços
+    const delayBase = 120;
+    const delayPunctuation = 200;
+    const delaySpace = 80;
 
     function typeNext() {
         if (i < originalText.length) {
             const char = originalText.charAt(i);
             el.textContent += char;
 
-            // Calcula o próximo atraso baseado no caractere
             let nextDelay = delayBase;
             if (char.match(/[.,!?;:]/)) {
                 nextDelay = delayPunctuation;
@@ -1139,13 +1111,9 @@ function initTypewriter() {
 
             i++;
             setTimeout(typeNext, nextDelay);
-        } else {
-            // Opcional: remover o cursor após terminar (ou manter)
-            // el.classList.add('done');
         }
     }
 
-    // Pequeno atraso antes de começar (como se a pessoa estivesse pensando)
     setTimeout(typeNext, 500);
 }
 
@@ -1163,7 +1131,6 @@ function initBackToTop() {
     const btn = document.querySelector('.btn-back-top');
     if (!btn) return;
 
-    // Inicialmente oculto
     btn.classList.add('hidden');
 
     window.addEventListener('scroll', () => {
@@ -1225,19 +1192,17 @@ function setupLanguageSelector() {
     });
 }
 
-// ==================== FUNÇÃO PARA DOWNLOAD DO CURRÍCULO ====================
 async function initDownloadCurriculo() {
     const downloadBtn = document.getElementById('download-curriculo');
     if (!downloadBtn) return;
 
     downloadBtn.addEventListener('click', async (e) => {
-        e.preventDefault(); // Impede a navegação para o link
+        e.preventDefault();
 
-        const url = downloadBtn.href; // Link raw já configurado
-        const fileName = 'Curriculo_Leandro_Stanger.pdf'; // Nome do arquivo a ser salvo
+        const url = downloadBtn.href;
+        const fileName = 'Curriculo_Leandro_Stanger.pdf';
 
         try {
-            // Faz o fetch do arquivo com suporte a CORS
             const response = await fetch(url, {
                 mode: 'cors',
                 headers: {
@@ -1249,25 +1214,17 @@ async function initDownloadCurriculo() {
                 throw new Error('Erro ao baixar o arquivo');
             }
 
-            // Converte a resposta para blob
             const blob = await response.blob();
-
-            // Cria uma URL temporária para o blob
             const blobUrl = window.URL.createObjectURL(blob);
-
-            // Cria um elemento <a> temporário para disparar o download
             const link = document.createElement('a');
             link.href = blobUrl;
             link.download = fileName;
             document.body.appendChild(link);
             link.click();
-
-            // Limpeza
             document.body.removeChild(link);
             window.URL.revokeObjectURL(blobUrl);
         } catch (error) {
             console.error('Falha no download:', error);
-            // Fallback: abre o link em nova aba (caso o fetch falhe)
             window.open(url, '_blank');
         }
     });
@@ -1275,17 +1232,16 @@ async function initDownloadCurriculo() {
 
 // ==================== FUNÇÃO PARA INICIALIZAR A SEÇÃO DE DOAÇÕES (QR Code e cópia) ====================
 function initDoacoes() {
-    // Gerar QR Code
+    // Gerar QR Code com payload EMV fixo
     const qrcodeDiv = document.getElementById('qrcode');
     if (qrcodeDiv) {
-        // Limpa conteúdo anterior
         qrcodeDiv.innerHTML = '';
-        
         if (typeof QRCode !== 'undefined') {
-            const pixKey = document.getElementById('pix-chave')?.textContent || '6e2301bf-4272-40f8-ac86-b161e6ba508b';
-            // Gera novo QR code com as cores do tema atual
+            // Payload oficial fornecido (corrigido)
+            const pixPayload = "00020126580014BR.GOV.BCB.PIX0136c348f1e6-72fa-4988-a2e9-3ac7d539de845204000053039865802BR5915Leandro Stanger6009SAO PAULO62140510tNIDka78Nd6304D2D3";
+            
             new QRCode(qrcodeDiv, {
-                text: pixKey,
+                text: pixPayload,
                 width: 200,
                 height: 200,
                 colorDark: document.documentElement.classList.contains('light-theme') ? '#000000' : '#ffffff',
@@ -1298,10 +1254,9 @@ function initDoacoes() {
         }
     }
 
-    // Copiar chave Pix
+    // Copiar chave Pix (sem alterações)
     const copiarBtn = document.getElementById('copiar-chave');
     if (copiarBtn) {
-        // Remove listener antigo para evitar duplicação
         const newBtn = copiarBtn.cloneNode(true);
         copiarBtn.parentNode.replaceChild(newBtn, copiarBtn);
 
@@ -1311,11 +1266,9 @@ function initDoacoes() {
             const pixKey = pixKeyElement.textContent;
 
             try {
-                // Tenta usar a API Clipboard moderna
                 if (navigator.clipboard && window.isSecureContext) {
                     await navigator.clipboard.writeText(pixKey);
                 } else {
-                    // Fallback para document.execCommand (depreciado, mas ainda funciona em muitos navegadores)
                     const textArea = document.createElement('textarea');
                     textArea.value = pixKey;
                     document.body.appendChild(textArea);
@@ -1324,7 +1277,6 @@ function initDoacoes() {
                     document.body.removeChild(textArea);
                 }
 
-                // Feedback visual
                 const originalText = newBtn.innerHTML;
                 const feedbackText = I18n.t('sections.doacoes.pix.copiado') || 'Chave copiada!';
                 newBtn.innerHTML = `<i class="fas fa-check"></i> ${feedbackText}`;
@@ -1365,9 +1317,8 @@ function initDoacoes() {
         initBackToTop();
         initContactForm();
         initDownloadCurriculo();
-        initDoacoes(); // QR code e cópia
+        initDoacoes();
 
-        // Inicializa partículas com o tema atual
         const isLight = document.documentElement.classList.contains('light-theme');
         initParticles(isLight);
 
