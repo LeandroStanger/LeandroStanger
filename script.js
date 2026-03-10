@@ -101,6 +101,10 @@ const DEFAULT_TRANSLATIONS = {
                             "total": 53,
                             "label": "{completed} de {total} disciplinas concluídas",
                             "semesterText": "3º Semestre — Em andamento"
+                        },
+                        "referral": {
+                            "link": "http://www.portalpos.com.br/?utm_voceindica=135742",
+                            "text": "Estude também na Unopar"
                         }
                     },
                     {
@@ -388,9 +392,9 @@ const DEFAULT_TRANSLATIONS = {
         },
         "doacoes": {
             "number": "06",
-            "title": "Apoiar o Projeto",
+            "title": "Apoiar meus estudos",
             "subtitle": "Contribua para o desenvolvimento",
-            "intro": "Sua contribuição ajuda diretamente nos meus estudos e na evolução dos projetos. Todo valor é bem-vindo e faz a diferença!",
+            "intro": "Contribuições voluntárias ajudam diretamente na continuidade dos meus estudos e no desenvolvimento deste projeto.\nCada apoio recebido contribui para minha evolução acadêmica e profissional, especialmente durante minha jornada universitária.\nAtualmente estou cursando graduação na Universidade Unopar, e o apoio da comunidade ajuda a tornar essa trajetória possível.\nAs contribuições podem ser utilizadas para aquisição de livros, materiais de estudo e recursos educacionais importantes para minha formação.\nTambém ajudam no pagamento de mensalidades da faculdade e em custos relacionados à educação e qualificação profissional.\nOutra parte do apoio é direcionada para melhorias na estrutura do projeto, atualização do site e desenvolvimento de novas funcionalidades.\nCom o crescimento do projeto, pretendo também criar novos projetos educacionais, tecnológicos e iniciativas que possam gerar valor para outras pessoas.\nTodo valor é bem-vindo e faz diferença, pois cada contribuição representa um incentivo para continuar aprendendo, evoluindo e construindo algo maior no futuro.",
             "real_title": "Real (BRL)",
             "dolar_title": "Dólar (USD)",
             "pix": {
@@ -404,6 +408,28 @@ const DEFAULT_TRANSLATIONS = {
                 "title": "Ko-fi",
                 "description": "Se preferir doar em dólar, você pode me apoiar no Ko-fi. É rápido e fácil!",
                 "button": "Apoiar no Ko-fi"
+            },
+            "transferencia": {
+                "title": "Transferência ou depósito bancário",
+                "bankLabel": "Banco",
+                "agencyLabel": "Agência",
+                "accountLabel": "Conta Corrente",
+                "beneficiaryLabel": "Beneficiário",
+                "cpfLabel": "CPF",
+                "copyButton": "Copiar dados da conta",
+                "copySuccess": "Dados copiados com sucesso!"
+            },
+            "crypto": {
+                "title": "Doações em Criptomoedas",
+                "copyButton": "Copiar endereço",
+                "copySuccess": "Endereço copiado com sucesso!"
+            },
+            "internacional": {
+                "title": "Transferência Bancária Internacional",
+                "achTitle": "ACH Transfer <span>(EUA)</span>",
+                "wireTitle": "Wire Transfer <span>(Internacional)</span>",
+                "copyButton": "Copiar número",
+                "copyNumberSuccess": "Número copiado!"
             }
         }
     },
@@ -748,6 +774,7 @@ const Renderer = {
                             ${progress.semesterText ? `
                             <div class="progress-footer">
                                 <span class="semester-badge">${progress.semesterText}</span>
+                                ${item.referral ? `<a href="${item.referral.link}" target="_blank" rel="noopener noreferrer" class="referral-link" aria-label="${item.referral.text}"><i class="fas fa-external-link-alt"></i> ${item.referral.text}</a>` : ''}
                             </div>` : ''}
                         </div>
                     </div>
@@ -1237,7 +1264,6 @@ function initDoacoes() {
     if (qrcodeDiv) {
         qrcodeDiv.innerHTML = '';
         if (typeof QRCode !== 'undefined') {
-            // Payload oficial fornecido (corrigido)
             const pixPayload = "00020126580014BR.GOV.BCB.PIX0136c348f1e6-72fa-4988-a2e9-3ac7d539de845204000053039865802BR5915Leandro Stanger6009SAO PAULO62140510tNIDka78Nd6304D2D3";
             
             new QRCode(qrcodeDiv, {
@@ -1254,7 +1280,7 @@ function initDoacoes() {
         }
     }
 
-    // Copiar chave Pix (sem alterações)
+    // Copiar chave Pix
     const copiarBtn = document.getElementById('copiar-chave');
     if (copiarBtn) {
         const newBtn = copiarBtn.cloneNode(true);
@@ -1286,6 +1312,135 @@ function initDoacoes() {
             } catch (err) {
                 console.error('Erro ao copiar:', err);
                 alert('Não foi possível copiar a chave. Tente manualmente.');
+            }
+        });
+    }
+
+    // Delegação de eventos para os botões de cópia bancária (BRL)
+    const transferenciaContainer = document.querySelector('.doacoes-transferencia');
+    if (transferenciaContainer) {
+        transferenciaContainer.addEventListener('click', async (e) => {
+            const copyButton = e.target.closest('.btn-copy-bank');
+            if (!copyButton) return;
+            e.preventDefault();
+
+            const bank = copyButton.dataset.bank;
+            const agency = copyButton.dataset.agency;
+            const account = copyButton.dataset.account;
+            const beneficiary = copyButton.dataset.beneficiary;
+            const cpf = copyButton.dataset.cpf;
+
+            if (!bank || !agency || !account || !beneficiary || !cpf) return;
+
+            const copyText = `Banco: ${bank}\nAgência: ${agency}\nConta: ${account}\nBeneficiário: ${beneficiary}\nCPF: ${cpf}`;
+
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(copyText);
+                } else {
+                    const textArea = document.createElement('textarea');
+                    textArea.value = copyText;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                }
+
+                const originalHTML = copyButton.innerHTML;
+                const successText = I18n.t('sections.doacoes.transferencia.copySuccess') || 'Dados copiados com sucesso!';
+                copyButton.innerHTML = `<i class="fas fa-check"></i> ${successText}`;
+                setTimeout(() => {
+                    copyButton.innerHTML = originalHTML;
+                }, 2000);
+            } catch (err) {
+                console.error('Erro ao copiar dados bancários:', err);
+                alert('Não foi possível copiar os dados. Tente manualmente.');
+            }
+        });
+    }
+
+    // ==================== CRIPTOMOEDAS ====================
+    const cryptoContainer = document.querySelector('.doacoes-crypto');
+    if (cryptoContainer) {
+        cryptoContainer.querySelectorAll('.crypto-qr').forEach(qrDiv => {
+            const address = qrDiv.dataset.address;
+            if (address && typeof QRCode !== 'undefined') {
+                new QRCode(qrDiv, {
+                    text: address,
+                    width: 100,
+                    height: 100,
+                    colorDark: document.documentElement.classList.contains('light-theme') ? '#000000' : '#ffffff',
+                    colorLight: document.documentElement.classList.contains('light-theme') ? '#ffffff' : '#000000',
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+            }
+        });
+
+        cryptoContainer.addEventListener('click', async (e) => {
+            const copyButton = e.target.closest('.btn-copy-crypto');
+            if (!copyButton) return;
+            e.preventDefault();
+
+            const address = copyButton.dataset.address;
+            if (!address) return;
+
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(address);
+                } else {
+                    const textArea = document.createElement('textarea');
+                    textArea.value = address;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                }
+
+                const originalHTML = copyButton.innerHTML;
+                const successText = I18n.t('sections.doacoes.crypto.copySuccess') || 'Endereço copiado com sucesso!';
+                copyButton.innerHTML = `<i class="fas fa-check"></i> ${successText}`;
+                setTimeout(() => {
+                    copyButton.innerHTML = originalHTML;
+                }, 2000);
+            } catch (err) {
+                console.error('Erro ao copiar endereço:', err);
+                alert('Não foi possível copiar o endereço. Tente manualmente.');
+            }
+        });
+    }
+
+    // ==================== TRANSFERÊNCIA INTERNACIONAL (NOVOS SUBCARDS) ====================
+    const internacionalContainer = document.querySelector('.doacoes-internacional');
+    if (internacionalContainer) {
+        internacionalContainer.addEventListener('click', async (e) => {
+            const copyButton = e.target.closest('.btn-copy-internacional');
+            if (!copyButton) return;
+            e.preventDefault();
+
+            const number = copyButton.dataset.number;
+            if (!number) return;
+
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(number);
+                } else {
+                    const textArea = document.createElement('textarea');
+                    textArea.value = number;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                }
+
+                const originalHTML = copyButton.innerHTML;
+                const successText = I18n.t('sections.doacoes.internacional.copyNumberSuccess') || 'Número copiado!';
+                copyButton.innerHTML = `<i class="fas fa-check"></i> ${successText}`;
+                setTimeout(() => {
+                    copyButton.innerHTML = originalHTML;
+                }, 2000);
+            } catch (err) {
+                console.error('Erro ao copiar número:', err);
+                alert('Não foi possível copiar o número. Tente manualmente.');
             }
         });
     }

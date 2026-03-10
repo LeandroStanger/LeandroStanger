@@ -76,6 +76,10 @@
               "total": 53,
               "label": "{completed} of {total} subjects completed",
               "semesterText": "3rd Semester — In Progress"
+            },
+            "referral": {
+              "link": "http://www.portalpos.com.br/?utm_voceindica=135742",
+              "text": "Study at Unopar too"
             }
           },
           {
@@ -481,9 +485,9 @@
     },
     "doacoes": {
       "number": "06",
-      "title": "Support the Project",
+      "title": "Support my studies",
       "subtitle": "Help with development",
-      "intro": "Your contribution directly helps my studies and the evolution of the projects. Any amount is welcome and makes a difference!",
+      "intro": "Voluntary contributions directly help the continuity of my studies and the development of this project.\nEach support received contributes to my academic and professional evolution, especially during my university journey.\nI am currently studying for a degree at Unopar University, and community support helps make this journey possible.\nContributions can be used to purchase books, study materials, and important educational resources for my training.\nThey also help pay for college tuition and costs related to education and professional qualification.\nAnother part of the support is directed towards improvements in the project structure, website updates, and development of new features.\nWith the project's growth, I also intend to create new educational and technological projects and initiatives that can generate value for others.\nAny amount is welcome and makes a difference, as each contribution represents an incentive to continue learning, evolving, and building something bigger in the future.",
       "real_title": "Real (BRL)",
       "dolar_title": "Dollar (USD)",
       "pix": {
@@ -497,6 +501,28 @@
         "title": "Ko-fi",
         "description": "If you prefer to donate in dollars, you can support me on Ko-fi. It's quick and easy!",
         "button": "Support on Ko-fi"
+      },
+      "transferencia": {
+        "title": "Bank transfer or deposit",
+        "bankLabel": "Bank",
+        "agencyLabel": "Agency",
+        "accountLabel": "Checking account",
+        "beneficiaryLabel": "Beneficiary",
+        "cpfLabel": "CPF",
+        "copyButton": "Copy account data",
+        "copySuccess": "Data copied successfully!"
+      },
+      "crypto": {
+        "title": "Cryptocurrency Donations",
+        "copyButton": "Copy address",
+        "copySuccess": "Address copied successfully!"
+      },
+      "internacional": {
+        "title": "International Bank Transfer",
+        "achTitle": "ACH Transfer <span>(USA)</span>",
+        "wireTitle": "Wire Transfer <span>(International)</span>",
+        "copyButton": "Copy number",
+        "copyNumberSuccess": "Number copied!"
       }
     }
   },

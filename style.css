@@ -2047,7 +2047,10 @@ html.light-theme .progress-percentage {
 
 .progress-footer {
     display: flex;
+    align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     margin-top: var(--space-2);
 }
 
@@ -2073,6 +2076,26 @@ html.light-theme .semester-badge {
     border-color: rgba(14, 165, 233, 0.2);
 }
 
+/* ============ LINK DE INDICAÇÃO ============ */
+.referral-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    color: var(--color-secondary-light);
+    text-decoration: none;
+    border-bottom: 1px dashed currentColor;
+    transition: color 0.2s;
+}
+
+.referral-link:hover {
+    color: var(--color-primary);
+}
+
+.referral-link i {
+    font-size: 0.7rem;
+}
+
 /* ============ MENSAGENS DE ERRO ============ */
 .error-message {
     color: var(--color-error);
@@ -2087,7 +2110,7 @@ html.light-theme .semester-badge {
 
 /* ============ DOAÇÕES ============ */
 .doacoes-content {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -2097,6 +2120,41 @@ html.light-theme .semester-badge {
     color: var(--color-gray);
     margin-bottom: var(--space-8);
     line-height: 1.7;
+}
+
+/* Card informativo aprimorado */
+.study-support-card {
+    background: var(--color-dark-900);
+    border: 1px solid var(--color-dark-600);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    margin-bottom: var(--space-6);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    width: 100%;
+}
+
+.study-support-card:hover {
+    transform: scale(1.02);
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-green);
+}
+
+.study-support-card .doacoes-intro {
+    margin-bottom: 0;
+    text-align: left;
+    line-height: 1.7;
+}
+
+html.light-theme .study-support-card {
+    background: var(--color-light-800);
+    border-color: var(--color-light-600);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+html.light-theme .study-support-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.3);
 }
 
 .doacoes-metodos {
@@ -2226,7 +2284,7 @@ html.light-theme .semester-badge {
     margin: 0 auto;
 }
 
-/* ============ NOVO: Sub-card para Ko-fi ============ */
+/* ============ Sub-card para Ko-fi ============ */
 .doacoes-kofi {
     background: var(--color-dark-900);
     border: 1px solid var(--color-dark-600);
@@ -2268,11 +2326,401 @@ html.light-theme .semester-badge {
     box-shadow: var(--shadow-green);
 }
 
-/* Ajuste responsivo para telas pequenas */
 @media (max-width: 640px) {
     .kofi-iframe {
         height: 600px;
     }
+}
+
+/* ============ DOAÇÕES - TRANSFERÊNCIA BANCÁRIA (BRL) ============ */
+.doacoes-transferencia {
+    background: var(--color-dark-900);
+    border: 1px solid var(--color-dark-600);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    margin-top: var(--space-3);
+}
+
+.transferencia-title {
+    font-size: var(--text-lg);
+    color: var(--color-primary-light);
+    margin-bottom: var(--space-4);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+}
+
+.bank-item {
+    background: var(--color-dark-800);
+    border: 1px solid var(--color-dark-600);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    margin-bottom: var(--space-4);
+    transition: all var(--transition-normal);
+}
+
+.bank-item:last-child {
+    margin-bottom: 0;
+}
+
+.bank-item:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-green);
+    transform: translateY(-2px);
+}
+
+.bank-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--color-dark-600);
+}
+
+.bank-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+}
+
+.bank-logo.fallback {
+    display: none;
+}
+
+.bank-fallback {
+    font-size: 2rem;
+    color: var(--color-primary-light);
+    margin-right: var(--space-2);
+}
+
+.bank-name {
+    font-weight: 600;
+    color: var(--color-light);
+    font-size: var(--text-base);
+}
+
+.bank-details {
+    margin-bottom: var(--space-3);
+}
+
+.bank-details p {
+    margin-bottom: var(--space-1);
+    font-size: var(--text-sm);
+    color: var(--color-gray);
+    line-height: 1.5;
+}
+
+.bank-details p span {
+    color: var(--color-light);
+    font-weight: 500;
+}
+
+.btn-copy-bank {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--color-primary-light);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.btn-copy-bank:hover {
+    background: rgba(16, 185, 129, 0.2);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.btn-copy-bank:active {
+    transform: translateY(0);
+}
+
+.btn-copy-bank i {
+    font-size: var(--text-base);
+}
+
+@media (max-width: 640px) {
+    .bank-details p {
+        font-size: var(--text-xs);
+    }
+    .btn-copy-bank {
+        font-size: var(--text-xs);
+        padding: var(--space-1) var(--space-2);
+    }
+    .bank-header {
+        flex-wrap: wrap;
+    }
+}
+
+/* ============ DOAÇÕES - CRIPTOMOEDAS ============ */
+.doacoes-card-crypto {
+    grid-column: 1 / -1;
+}
+
+.doacoes-crypto {
+    background: var(--color-dark-900);
+    border: 1px solid var(--color-dark-600);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    margin-top: var(--space-3);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--space-4);
+}
+
+.crypto-item {
+    background: var(--color-dark-800);
+    border: 1px solid var(--color-dark-600);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+}
+
+.crypto-item:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-green);
+    transform: translateY(-2px);
+}
+
+.crypto-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--color-dark-600);
+}
+
+.crypto-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.crypto-logo.fallback {
+    display: none;
+}
+
+.crypto-fallback {
+    font-size: 1.8rem;
+    color: var(--color-primary-light);
+}
+
+.crypto-name {
+    font-weight: 600;
+    color: var(--color-light);
+    font-size: var(--text-base);
+}
+
+.crypto-address {
+    font-family: monospace;
+    font-size: var(--text-sm);
+    color: var(--color-gray);
+    background: var(--color-dark-900);
+    padding: var(--space-2);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-3);
+    word-break: break-all;
+    text-align: center;
+    border: 1px solid var(--color-dark-600);
+}
+
+.btn-copy-crypto {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--color-primary-light);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    margin-bottom: var(--space-3);
+}
+
+.btn-copy-crypto:hover {
+    background: rgba(16, 185, 129, 0.2);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.btn-copy-crypto:active {
+    transform: translateY(0);
+}
+
+.btn-copy-crypto i {
+    font-size: var(--text-base);
+}
+
+.crypto-qr {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-2);
+    min-height: 100px;
+}
+
+.crypto-qr canvas {
+    max-width: 100px;
+    height: auto;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 768px) {
+    .doacoes-crypto {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .doacoes-crypto {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============ ÁREA INTERNACIONAL (CORRIGIDA) ============ */
+.doacoes-internacional {
+    background: var(--color-dark-900);
+    border: 1px solid var(--color-dark-600);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    margin-top: var(--space-3);
+}
+
+.internacional-title {
+    font-size: var(--text-lg);
+    color: var(--color-primary-light);
+    margin-bottom: var(--space-4);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    justify-content: center;
+}
+
+.internacional-title i {
+    font-size: 1.3rem;
+}
+
+.internacional-cards {
+    display: grid;
+    grid-template-columns: 1fr;  /* Uma única coluna */
+    gap: var(--space-4);
+}
+
+.internacional-card {
+    background: var(--color-dark-800);
+    border: 1px solid var(--color-dark-600);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+}
+
+.internacional-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-green);
+    transform: translateY(-2px);
+}
+
+.internacional-card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
+    padding-bottom: var(--space-2);
+    border-bottom: 1px solid var(--color-dark-600);
+}
+
+.internacional-card-header i {
+    font-size: 1.5rem;
+    color: var(--color-primary-light);
+}
+
+.internacional-card-header h5 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--color-light);
+    margin: 0;
+}
+
+.internacional-card-header h5 span {
+    font-size: var(--text-xs);
+    color: var(--color-gray);
+    font-weight: 400;
+    margin-left: var(--space-1);
+}
+
+.internacional-card-number {
+    font-family: monospace;
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--color-primary-light);
+    background: var(--color-dark-900);
+    padding: var(--space-2);
+    border-radius: var(--radius-sm);
+    text-align: center;
+    margin-bottom: var(--space-3);
+    border: 1px solid var(--color-dark-600);
+}
+
+.btn-copy-internacional {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--color-primary-light);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.btn-copy-internacional:hover {
+    background: rgba(16, 185, 129, 0.2);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.btn-copy-internacional:active {
+    transform: translateY(0);
+}
+
+.btn-copy-internacional i {
+    font-size: var(--text-base);
+}
+
+html.light-theme .internacional-card {
+    background: var(--color-light-800);
+    border-color: var(--color-light-600);
+}
+
+html.light-theme .internacional-card-number {
+    background: var(--color-light-900);
+    border-color: var(--color-light-600);
 }
 
 /* ============ MEDIA QUERIES ADICIONAIS ============ */
@@ -2282,38 +2730,31 @@ html.light-theme .semester-badge {
         gap: var(--space-8);
         text-align: center;
     }
-
     .header-text {
         order: 2;
     }
-
     .profile-container {
         order: 1;
         margin-bottom: var(--space-4);
     }
-
     .tagline-item {
         white-space: normal;
         text-align: center;
         width: 100%;
         padding-left: 0;
     }
-
     .tagline-item::before {
         display: none;
     }
-
     .header-actions {
         flex-direction: column;
         align-items: stretch;
         gap: var(--space-3);
     }
-
     .btn {
         width: 100%;
         justify-content: center;
     }
-
     .profile-frame {
         width: min(240px, 60vw);
         height: min(240px, 60vw);

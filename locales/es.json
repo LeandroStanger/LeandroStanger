@@ -76,6 +76,10 @@
               "total": 53,
               "label": "{completed} de {total} asignaturas completadas",
               "semesterText": "3er Semestre — En curso"
+            },
+            "referral": {
+              "link": "http://www.portalpos.com.br/?utm_voceindica=135742",
+              "text": "Estudia también en Unopar"
             }
           },
           {
@@ -481,9 +485,9 @@
     },
     "doacoes": {
       "number": "06",
-      "title": "Apoyar el Proyecto",
+      "title": "Apoyar mis estudios",
       "subtitle": "Contribuye al desarrollo",
-      "intro": "Tu contribución ayuda directamente a mis estudios y a la evolución de los proyectos. ¡Cualquier valor es bienvenido y marca la diferencia!",
+      "intro": "Las contribuciones voluntarias ayudan directamente a la continuidad de mis estudios y al desarrollo de este proyecto.\nCada apoyo recibido contribuye a mi evolución académica y profesional, especialmente durante mi trayectoria universitaria.\nActualmente estoy cursando una graduación en la Universidad Unopar, y el apoyo de la comunidad ayuda a hacer posible este camino.\nLas contribuciones pueden utilizarse para la compra de libros, materiales de estudio y recursos educativos importantes para mi formación.\nTambién ayudan a pagar las cuotas universitarias y los gastos relacionados con la educación y la cualificación profesional.\nOtra parte del apoyo se destina a mejoras en la estructura del proyecto, actualizaciones del sitio web y desarrollo de nuevas funcionalidades.\nCon el crecimiento del proyecto, también pretendo crear nuevos proyectos educativos, tecnológicos e iniciativas que puedan generar valor para otros.\nCualquier cantidad es bienvenida y marca la diferencia, ya que cada contribución representa un incentivo para seguir aprendiendo, evolucionando y construyendo algo más grande en el futuro.",
       "real_title": "Real (BRL)",
       "dolar_title": "Dólar (USD)",
       "pix": {
@@ -497,6 +501,28 @@
         "title": "Ko-fi",
         "description": "Si prefieres donar en dólares, puedes apoyarme en Ko-fi. ¡Es rápido y fácil!",
         "button": "Apoyar en Ko-fi"
+      },
+      "transferencia": {
+        "title": "Transferencia o depósito bancario",
+        "bankLabel": "Banco",
+        "agencyLabel": "Agencia",
+        "accountLabel": "Cuenta corriente",
+        "beneficiaryLabel": "Beneficiario",
+        "cpfLabel": "CPF",
+        "copyButton": "Copiar datos de la cuenta",
+        "copySuccess": "¡Datos copiados con éxito!"
+      },
+      "crypto": {
+        "title": "Donaciones en Criptomonedas",
+        "copyButton": "Copiar dirección",
+        "copySuccess": "¡Dirección copiada con éxito!"
+      },
+      "internacional": {
+        "title": "Transferencia Bancaria Internacional",
+        "achTitle": "ACH Transfer <span>(EE.UU.)</span>",
+        "wireTitle": "Wire Transfer <span>(Internacional)</span>",
+        "copyButton": "Copiar número",
+        "copyNumberSuccess": "¡Número copiado!"
       }
     }
   },
