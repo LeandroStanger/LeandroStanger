@@ -392,7 +392,7 @@ const DEFAULT_TRANSLATIONS = {
         },
         "doacoes": {
             "number": "06",
-            "title": "Apoiar meus estudos",
+            "title": "Doações",
             "subtitle": "Contribua para o desenvolvimento",
             "intro": "Contribuições voluntárias ajudam diretamente na continuidade dos meus estudos e no desenvolvimento deste projeto.\nAtualmente estou em jornada acadêmica na Universidade Unopar, buscando evoluir constantemente na área de tecnologia e desenvolvimento.\nO apoio recebido contribui para aquisição de livros, recursos educacionais e para ajudar nos custos da faculdade.\nTambém permite investir na melhoria do projeto e na criação de novas iniciativas tecnológicas no futuro.\nQualquer contribuição é muito bem-vinda e faz diferença nessa jornada de aprendizado e evolução.",
             "real_title": "Real (BRL)",
@@ -417,7 +417,7 @@ const DEFAULT_TRANSLATIONS = {
                 "cpfLabel": "CPF"
             },
             "crypto": {
-                "title": "Doações em Criptomoedas",
+                "title": "Criptomoedas",
                 "copyButton": "Copiar endereço",
                 "copySuccess": "Endereço copiado com sucesso!"
             },

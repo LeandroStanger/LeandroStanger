@@ -374,8 +374,9 @@
     },
     "doacoes": {
       "number": "06",
-      "title": "Apoyar mis estudios",
+      "title": "Donaciones",
       "subtitle": "Contribuye al desarrollo",
+      "card_title": "Apoya mis estudios",
       "intro": "Las contribuciones voluntarias ayudan directamente a la continuidad de mis estudios y al desarrollo de este proyecto.\nActualmente estoy en una jornada académica en la Universidad Unopar, buscando evolucionar constantemente en el área de tecnología y desarrollo.\nEl apoyo recibido contribuye a la compra de libros, recursos educativos y a ayudar con los gastos universitarios.\nTambién permite invertir en la mejora del proyecto y en la creación de nuevas iniciativas tecnológicas en el futuro.\nCualquier contribución es muy bienvenida y marca la diferencia en este camino de aprendizaje y evolución.",
       "real_title": "Real (BRL)",
       "dolar_title": "Dólar (USD)",
@@ -395,11 +396,11 @@
         "bankLabel": "Banco:",
         "agencyLabel": "Agencia:",
         "accountLabel": "Cuenta corriente:",
-        "beneficiaryLabel": "Beneficiario",
-        "cpfLabel": "CPF"
+        "beneficiaryLabel": "Beneficiario:",
+        "cpfLabel": "CPF:"
       },
       "crypto": {
-        "title": "Donaciones en Criptomonedas",
+        "title": "Criptomonedas",
         "copyButton": "Copiar dirección",
         "copySuccess": "¡Dirección copiada con éxito!"
       },
