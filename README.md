@@ -139,6 +139,17 @@ Vamos conversar sobre projetos, oportunidades ou apenas trocar ideias sobre tecn
  
 [![Entre em Contato ](https://img.shields.io/badge/Entre_em_Contato-0072EF?style=for-the-badge&logo=minutemailer&logoColor=0072EF&labelColor=000000)](https://leandrostanger.github.io/LeandroStanger/#contato)
 
+## Doações
+<div align="center">
+
+Contribua para o desenvolvimento
+
+### Apoie meus estudos
+
+Contribuições voluntárias ajudam diretamente na continuidade dos meus estudos e no desenvolvimento deste projeto. 
+ 
+[![Apoie meus estudos](https://img.shields.io/badge/Apoie_meus_estudos-EAB300?style=for-the-badge&logo=bitcoinsv&logoColor=EAB300&labelColor=000000)](https://leandrostanger.github.io/LeandroStanger/#doacoes)
+
 ---
 
 ### Não esqueça de dar uma estrela nos repositórios que você gostou!
