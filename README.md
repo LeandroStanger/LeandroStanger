@@ -138,6 +138,7 @@ Estou sempre aberto a novas oportunidades e colaborações!
 Vamos conversar sobre projetos, oportunidades ou apenas trocar ideias sobre tecnologia! 
  
 [![Entre em Contato ](https://img.shields.io/badge/Entre_em_Contato-0072EF?style=for-the-badge&logo=minutemailer&logoColor=0072EF&labelColor=000000)](https://leandrostanger.github.io/LeandroStanger/#contato)
+</div>
 
 ## Doações
 <div align="center">
