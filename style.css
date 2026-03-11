@@ -509,7 +509,7 @@ html.light-theme .theme-toggle:hover {
     -webkit-transition: all var(--transition-normal);
     text-decoration: none;
     position: relative;
-    z-index: 100;
+    z-index: 1000;
     pointer-events: auto;
     overflow: hidden;
     touch-action: manipulation;
@@ -526,6 +526,7 @@ html.light-theme .theme-toggle:hover {
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: left var(--transition-slow);
     -webkit-transition: left var(--transition-slow);
+    pointer-events: none;
 }
 
 .btn:hover::before {
@@ -592,6 +593,7 @@ html.light-theme .theme-toggle:hover {
     opacity: 0.3;
     filter: blur(20px);
     z-index: 1;
+    pointer-events: none;
 }
 
 .scroll-indicator {
@@ -608,6 +610,7 @@ html.light-theme .theme-toggle:hover {
     animation: bounce 2s infinite;
     -webkit-animation: bounce 2s infinite;
     z-index: 2;
+    pointer-events: none;
 }
 
 .scroll-text {
