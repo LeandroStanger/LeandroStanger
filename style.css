@@ -93,9 +93,9 @@ html.light-theme {
     --color-dark-600: #a3a3a3;
 
     --color-light: #000000;
-    --color-light-900: #171717;
-    --color-light-800: #262626;
-    --color-light-700: #404040;
+    --color-light-900: #ffffff;
+    --color-light-800: #f0f0f0;
+    --color-light-700: #e0e0e0;
 
     --color-gray: #525252;
     --color-gray-dark: #737373;
@@ -487,8 +487,11 @@ html.light-theme .theme-toggle:hover {
     display: flex;
     gap: var(--space-4);
     margin-top: var(--space-8);
+    position: relative;
+    z-index: 10;
 }
 
+/* ============ BOTÕES ============ */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -506,6 +509,8 @@ html.light-theme .theme-toggle:hover {
     -webkit-transition: all var(--transition-normal);
     text-decoration: none;
     position: relative;
+    z-index: 100;
+    pointer-events: auto;
     overflow: hidden;
     touch-action: manipulation;
     width: auto;
@@ -1874,6 +1879,11 @@ html.light-theme .section-label {
     font-size: var(--text-sm);
 }
 
+/* Garantir que o parágrafo do copyright use a cor correta */
+.footer-copyright p {
+    color: var(--color-gray);
+}
+
 .footer-back {
     text-align: center;
 }
@@ -2701,14 +2711,27 @@ html.light-theme .copy-button:hover {
     font-size: var(--text-base);
 }
 
+/* TEMA CLARO PARA CARDS INTERNACIONAIS */
 html.light-theme .internacional-card {
-    background: var(--color-light-800);
+    background: var(--color-light-900);
     border-color: var(--color-light-600);
 }
 
 html.light-theme .internacional-card-number {
-    background: var(--color-light-900);
+    background: var(--color-light-800);
     border-color: var(--color-light-600);
+    color: var(--color-primary-dark);
+}
+
+html.light-theme .btn-copy-internacional {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--color-primary-dark);
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+html.light-theme .btn-copy-internacional:hover {
+    background: rgba(16, 185, 129, 0.2);
+    border-color: var(--color-primary);
 }
 
 /* ============ MEDIA QUERIES ADICIONAIS ============ */

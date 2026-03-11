@@ -1318,6 +1318,7 @@ function initDoacoes() {
     const cryptoContainerQR = document.querySelector('.doacoes-crypto');
     if (cryptoContainerQR) {
         cryptoContainerQR.querySelectorAll('.crypto-qr').forEach(qrDiv => {
+            qrDiv.innerHTML = '';
             const address = qrDiv.dataset.address;
             if (address && typeof QRCode !== 'undefined') {
                 new QRCode(qrDiv, {
