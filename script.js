@@ -31,7 +31,7 @@ const AppState = {
     }
 };
 
-// ==================== TRADUÇÕES PADRÃO (FALLBACK COMPLETO) ====================
+// ==================== TRADUÇÕES PADRÃO (FALLBACK) ====================
 const DEFAULT_TRANSLATIONS = {
     "site": {
         "title": "Leandro Stanger - Portfólio",
@@ -394,7 +394,7 @@ const DEFAULT_TRANSLATIONS = {
             "number": "06",
             "title": "Apoiar meus estudos",
             "subtitle": "Contribua para o desenvolvimento",
-            "intro": "Contribuições voluntárias ajudam diretamente na continuidade dos meus estudos e no desenvolvimento deste projeto.\nCada apoio recebido contribui para minha evolução acadêmica e profissional, especialmente durante minha jornada universitária.\nAtualmente estou cursando graduação na Universidade Unopar, e o apoio da comunidade ajuda a tornar essa trajetória possível.\nAs contribuições podem ser utilizadas para aquisição de livros, materiais de estudo e recursos educacionais importantes para minha formação.\nTambém ajudam no pagamento de mensalidades da faculdade e em custos relacionados à educação e qualificação profissional.\nOutra parte do apoio é direcionada para melhorias na estrutura do projeto, atualização do site e desenvolvimento de novas funcionalidades.\nCom o crescimento do projeto, pretendo também criar novos projetos educacionais, tecnológicos e iniciativas que possam gerar valor para outras pessoas.\nTodo valor é bem-vindo e faz diferença, pois cada contribuição representa um incentivo para continuar aprendendo, evoluindo e construindo algo maior no futuro.",
+            "intro": "Contribuições voluntárias ajudam diretamente na continuidade dos meus estudos e no desenvolvimento deste projeto.\nAtualmente estou em jornada acadêmica na Universidade Unopar, buscando evoluir constantemente na área de tecnologia e desenvolvimento.\nO apoio recebido contribui para aquisição de livros, recursos educacionais e para ajudar nos custos da faculdade.\nTambém permite investir na melhoria do projeto e na criação de novas iniciativas tecnológicas no futuro.\nQualquer contribuição é muito bem-vinda e faz diferença nessa jornada de aprendizado e evolução.",
             "real_title": "Real (BRL)",
             "dolar_title": "Dólar (USD)",
             "pix": {
@@ -406,18 +406,15 @@ const DEFAULT_TRANSLATIONS = {
             },
             "kofi": {
                 "title": "Ko-fi",
-                "description": "Se preferir doar em dólar, você pode me apoiar no Ko-fi. É rápido e fácil!",
-                "button": "Apoiar no Ko-fi"
+                "description": "Se preferir doar em dólar, você pode me apoiar no Ko-fi. É rápido e fácil!"
             },
             "transferencia": {
                 "title": "Transferência ou depósito bancário",
-                "bankLabel": "Banco",
-                "agencyLabel": "Agência",
-                "accountLabel": "Conta Corrente",
+                "bankLabel": "Banco:",
+                "agencyLabel": "Agência:",
+                "accountLabel": "Conta Corrente:",
                 "beneficiaryLabel": "Beneficiário",
-                "cpfLabel": "CPF",
-                "copyButton": "Copiar dados da conta",
-                "copySuccess": "Dados copiados com sucesso!"
+                "cpfLabel": "CPF"
             },
             "crypto": {
                 "title": "Doações em Criptomoedas",
@@ -567,8 +564,6 @@ const ThemeManager = {
 };
 
 // ==================== PARTICLES.JS COM SUPORTE A TEMA ====================
-let particlesInitialized = false;
-
 function initParticles(themeIsLight = false) {
     if (typeof particlesJS === 'undefined') {
         console.warn('Particles.js não carregado');
@@ -577,83 +572,25 @@ function initParticles(themeIsLight = false) {
 
     const config = {
         particles: {
-            number: {
-                value: 50,
-                density: {
-                    enable: true,
-                    value_area: 800
-                }
-            },
-            shape: {
-                type: 'polygon',
-                polygon: {
-                    sides: 6
-                }
-            },
-            opacity: {
-                value: 0.3,
-                random: true,
-                anim: {
-                    enable: true,
-                    speed: 0.3,
-                    opacity_min: 0.1,
-                    sync: false
-                }
-            },
-            size: {
-                value: 4,
-                random: true,
-                anim: {
-                    enable: true,
-                    speed: 2,
-                    size_min: 1,
-                    sync: false
-                }
-            },
-            line_linked: {
-                enable: true,
-                distance: 150,
-                width: 1
-            },
-            move: {
-                enable: true,
-                speed: 1,
-                direction: 'none',
-                random: true,
-                straight: false,
-                out_mode: 'out',
-                bounce: false,
-                attract: {
-                    enable: false,
-                    rotateX: 600,
-                    rotateY: 1200
-                }
-            }
+            number: { value: 50, density: { enable: true, value_area: 800 } },
+            shape: { type: 'polygon', polygon: { sides: 6 } },
+            opacity: { value: 0.3, random: true, anim: { enable: true, speed: 0.3, opacity_min: 0.1, sync: false } },
+            size: { value: 4, random: true, anim: { enable: true, speed: 2, size_min: 1, sync: false } },
+            line_linked: { enable: true, distance: 150, width: 1 },
+            move: { enable: true, speed: 1, direction: 'none', random: true, straight: false, out_mode: 'out', bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
         },
-        interactivity: {
-            detect_on: 'canvas',
-            events: {
-                onhover: { enable: false },
-                onclick: { enable: false },
-                resize: true
-            }
-        },
+        interactivity: { detect_on: 'canvas', events: { onhover: { enable: false }, onclick: { enable: false }, resize: true } },
         retina_detect: true
     };
 
     if (themeIsLight) {
-        config.particles.color = {
-            value: '#10b981'
-        };
+        config.particles.color = { value: '#10b981' };
         config.particles.opacity.value = 0.90;
         config.particles.opacity.anim.speed = 0.90;
         config.particles.line_linked.color = '#10b981';
         config.particles.line_linked.opacity = 0.90;
-        config.particles.number.value = 50;
     } else {
-        config.particles.color = {
-            value: '#10b981'
-        };
+        config.particles.color = { value: '#10b981' };
         config.particles.line_linked.color = '#10b981';
         config.particles.line_linked.opacity = 0.90;
     }
@@ -673,8 +610,6 @@ function initParticles(themeIsLight = false) {
             }
         }, 500);
     }
-
-    particlesInitialized = true;
 }
 
 window.updateParticlesTheme = function (isLight) {
@@ -753,7 +688,6 @@ const Renderer = {
                 const completed = progress.completed;
                 const total = progress.total;
                 const percentage = (completed / total) * 100;
-                const percentageFormatted = percentage.toFixed(2);
                 const labelText = progress.label.replace('{completed}', completed).replace('{total}', total);
 
                 return `
@@ -766,7 +700,7 @@ const Renderer = {
                         <div class="progress-container">
                             <div class="progress-header">
                                 <span class="progress-label">${labelText}</span>
-                                <span class="progress-percentage">${percentageFormatted}%</span>
+                                <span class="progress-percentage">${percentage.toFixed(2)}%</span>
                             </div>
                             <div class="progress-bar">
                                 <div class="progress-fill" style="--target-width: ${percentage}%; width: 0;"></div>
@@ -984,24 +918,32 @@ class ProjectsSearch {
     init() {
         this.input.addEventListener('input', () => this.filter());
         AppState.subscribe(() => this.render());
-        document.addEventListener('renderer:done', () => {
-            this.projects = Array.from(this.grid.children);
-            this.filter();
-        });
         this.render();
+    }
+
+    shuffleArray(array) {
+        const shuffled = [...array];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled;
     }
 
     render() {
         const cardsData = I18n.t('sections.projetos.cards');
-        if (!Array.isArray(cardsData)) {
-            this.grid.innerHTML = '<div class="error-message">Erro ao carregar projetos.</div>';
+        if (!Array.isArray(cardsData) || cardsData.length === 0) {
+            console.log('Nenhum projeto encontrado nos dados.');
+            this.grid.innerHTML = '';
             return;
         }
+
+        const shuffledCards = this.shuffleArray(cardsData);
 
         const codeLabel = I18n.t('sections.projetos.code');
         const demoLabel = I18n.t('sections.projetos.demo');
 
-        this.grid.innerHTML = cardsData.map(p => `
+        this.grid.innerHTML = shuffledCards.map(p => `
             <article class="projeto-card">
                 <header class="projeto-header">
                     <h3 class="projeto-title">${p.title || ''}</h3>
@@ -1232,14 +1174,10 @@ async function initDownloadCurriculo() {
         try {
             const response = await fetch(url, {
                 mode: 'cors',
-                headers: {
-                    'Accept': 'application/pdf'
-                }
+                headers: { 'Accept': 'application/pdf' }
             });
 
-            if (!response.ok) {
-                throw new Error('Erro ao baixar o arquivo');
-            }
+            if (!response.ok) throw new Error('Erro ao baixar o arquivo');
 
             const blob = await response.blob();
             const blobUrl = window.URL.createObjectURL(blob);
@@ -1257,15 +1195,13 @@ async function initDownloadCurriculo() {
     });
 }
 
-// ==================== FUNÇÃO PARA INICIALIZAR A SEÇÃO DE DOAÇÕES (QR Code e cópia) ====================
+// ==================== FUNÇÃO PARA INICIALIZAR A SEÇÃO DE DOAÇÕES ====================
 function initDoacoes() {
-    // Gerar QR Code com payload EMV fixo
     const qrcodeDiv = document.getElementById('qrcode');
     if (qrcodeDiv) {
         qrcodeDiv.innerHTML = '';
         if (typeof QRCode !== 'undefined') {
             const pixPayload = "00020126580014BR.GOV.BCB.PIX0136c348f1e6-72fa-4988-a2e9-3ac7d539de845204000053039865802BR5915Leandro Stanger6009SAO PAULO62140510tNIDka78Nd6304D2D3";
-            
             new QRCode(qrcodeDiv, {
                 text: pixPayload,
                 width: 200,
@@ -1275,12 +1211,10 @@ function initDoacoes() {
                 correctLevel: QRCode.CorrectLevel.H
             });
         } else {
-            console.warn('QRCode library not loaded. Cannot generate QR code.');
             qrcodeDiv.innerHTML = '<p style="color: var(--color-error);">QR Code indisponível no momento.</p>';
         }
     }
 
-    // Copiar chave Pix
     const copiarBtn = document.getElementById('copiar-chave');
     if (copiarBtn) {
         const newBtn = copiarBtn.cloneNode(true);
@@ -1316,53 +1250,74 @@ function initDoacoes() {
         });
     }
 
-    // Delegação de eventos para os botões de cópia bancária (BRL)
     const transferenciaContainer = document.querySelector('.doacoes-transferencia');
     if (transferenciaContainer) {
         transferenciaContainer.addEventListener('click', async (e) => {
-            const copyButton = e.target.closest('.btn-copy-bank');
+            const copyButton = e.target.closest('.copy-button');
             if (!copyButton) return;
             e.preventDefault();
 
-            const bank = copyButton.dataset.bank;
-            const agency = copyButton.dataset.agency;
-            const account = copyButton.dataset.account;
-            const beneficiary = copyButton.dataset.beneficiary;
-            const cpf = copyButton.dataset.cpf;
-
-            if (!bank || !agency || !account || !beneficiary || !cpf) return;
-
-            const copyText = `Banco: ${bank}\nAgência: ${agency}\nConta: ${account}\nBeneficiário: ${beneficiary}\nCPF: ${cpf}`;
+            const textToCopy = copyButton.dataset.copy;
+            if (!textToCopy) return;
 
             try {
                 if (navigator.clipboard && window.isSecureContext) {
-                    await navigator.clipboard.writeText(copyText);
+                    await navigator.clipboard.writeText(textToCopy);
                 } else {
                     const textArea = document.createElement('textarea');
-                    textArea.value = copyText;
+                    textArea.value = textToCopy;
                     document.body.appendChild(textArea);
                     textArea.select();
                     document.execCommand('copy');
                     document.body.removeChild(textArea);
                 }
 
-                const originalHTML = copyButton.innerHTML;
-                const successText = I18n.t('sections.doacoes.transferencia.copySuccess') || 'Dados copiados com sucesso!';
-                copyButton.innerHTML = `<i class="fas fa-check"></i> ${successText}`;
+                const originalText = copyButton.textContent;
+                copyButton.textContent = 'Copiado!';
+                copyButton.classList.add('copied');
                 setTimeout(() => {
-                    copyButton.innerHTML = originalHTML;
-                }, 2000);
+                    copyButton.textContent = originalText;
+                    copyButton.classList.remove('copied');
+                }, 1500);
             } catch (err) {
-                console.error('Erro ao copiar dados bancários:', err);
-                alert('Não foi possível copiar os dados. Tente manualmente.');
+                console.error('Erro ao copiar:', err);
+                alert('Não foi possível copiar o valor. Tente manualmente.');
             }
         });
     }
 
-    // ==================== CRIPTOMOEDAS ====================
     const cryptoContainer = document.querySelector('.doacoes-crypto');
-    if (cryptoContainer) {
-        cryptoContainer.querySelectorAll('.crypto-qr').forEach(qrDiv => {
+    if (cryptoContainer && !window.cryptoRandomized) {
+        const fixedCryptos = ['bitcoin', 'ethereum', 'solana'];
+        const items = Array.from(cryptoContainer.children);
+
+        const fixedItems = [];
+        const otherItems = [];
+
+        items.forEach(item => {
+            const crypto = item.dataset.crypto;
+            if (fixedCryptos.includes(crypto)) {
+                fixedItems.push(item);
+            } else {
+                otherItems.push(item);
+            }
+        });
+
+        for (let i = otherItems.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [otherItems[i], otherItems[j]] = [otherItems[j], otherItems[i]];
+        }
+
+        cryptoContainer.innerHTML = '';
+        fixedItems.forEach(item => cryptoContainer.appendChild(item));
+        otherItems.forEach(item => cryptoContainer.appendChild(item));
+
+        window.cryptoRandomized = true;
+    }
+
+    const cryptoContainerQR = document.querySelector('.doacoes-crypto');
+    if (cryptoContainerQR) {
+        cryptoContainerQR.querySelectorAll('.crypto-qr').forEach(qrDiv => {
             const address = qrDiv.dataset.address;
             if (address && typeof QRCode !== 'undefined') {
                 new QRCode(qrDiv, {
@@ -1376,7 +1331,7 @@ function initDoacoes() {
             }
         });
 
-        cryptoContainer.addEventListener('click', async (e) => {
+        cryptoContainerQR.addEventListener('click', async (e) => {
             const copyButton = e.target.closest('.btn-copy-crypto');
             if (!copyButton) return;
             e.preventDefault();
@@ -1409,7 +1364,6 @@ function initDoacoes() {
         });
     }
 
-    // ==================== TRANSFERÊNCIA INTERNACIONAL (NOVOS SUBCARDS) ====================
     const internacionalContainer = document.querySelector('.doacoes-internacional');
     if (internacionalContainer) {
         internacionalContainer.addEventListener('click', async (e) => {

@@ -60,7 +60,7 @@
     }
     </script>
 
-    <!-- Pré-conexão e DNS-Prefetch para recursos externos -->
+    <!-- Pré-conexão e DNS-Prefetch -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -70,7 +70,7 @@
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
-    <!-- Pré-carregamento de fontes (opcional, pode melhorar LCP) -->
+    <!-- Pré-carregamento de fontes -->
     <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap">
 
@@ -96,22 +96,18 @@
 <body>
     <!-- Header Principal -->
     <header id="inicio" class="main-header" role="banner">
-        <!-- Container das partículas -->
         <div id="particles-js"></div>
 
         <div class="container">
             <div class="header-content">
                 <div class="header-text">
-                    <!-- Barra de controles: idioma e tema -->
                     <div class="header-controls">
-                        <!-- Seletor de idioma -->
                         <div class="language-selector">
                             <button class="lang-btn active" data-lang="pt" aria-label="Português">🇧🇷</button>
                             <button class="lang-btn" data-lang="en" aria-label="English">🇺🇸</button>
                             <button class="lang-btn" data-lang="es" aria-label="Español">🇪🇸</button>
                         </div>
 
-                        <!-- Botão de alternância de tema -->
                         <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema claro/escuro">
                             <i class="fas fa-sun"></i>
                         </button>
@@ -149,14 +145,12 @@
             </div>
         </div>
 
-        <!-- Indicador de scroll -->
         <div class="scroll-indicator" aria-hidden="true">
             <span class="scroll-text" data-i18n="scroll">Scroll</span>
             <div class="scroll-line"></div>
         </div>
     </header>
 
-    <!-- Conteúdo Principal -->
     <main id="main-content" class="main-content" role="main">
         <!-- Sobre Mim -->
         <section id="sobre" class="section sobre-mim" aria-labelledby="sobre-title">
@@ -272,7 +266,7 @@
             </div>
         </section>
 
-        <!-- Tecnologias (conteúdo estático com data-i18n nos títulos) -->
+        <!-- Tecnologias -->
         <section id="tecnologias" class="section tecnologias" aria-labelledby="tecnologias-title">
             <div class="container">
                 <div class="section-header">
@@ -456,7 +450,6 @@
                         desenvolvimento</p>
                 </div>
 
-                <!-- Cabeçalho da Grade de Projetos -->
                 <div class="projetos-header">
                     <h3 class="projetos-categoria-title" data-i18n="sections.projetos.category_title">Portfólio de
                         Desenvolvimento</h3>
@@ -464,7 +457,6 @@
                         front-end, back-end e experimentos de programação.</p>
                 </div>
 
-                <!-- Barra de Pesquisa -->
                 <div class="projetos-busca-container">
                     <div class="projetos-busca">
                         <i class="fas fa-search" aria-hidden="true"></i>
@@ -477,7 +469,6 @@
                     </div>
                 </div>
 
-                <!-- Mensagem de nenhum resultado -->
                 <div id="nenhum-resultado" class="nenhum-resultado" style="display: none;">
                     <i class="fas fa-search" aria-hidden="true"></i>
                     <h3 class="nenhum-resultado-titulo" data-i18n="sections.projetos.no_results_title">Nenhum projeto
@@ -631,27 +622,21 @@
                 </div>
 
                 <div class="doacoes-content">
-                    <!-- Card informativo aprimorado -->
-                    <div class="study-support-card">
+                    <div class="doacoes-card">
                         <p class="doacoes-intro" data-i18n="sections.doacoes.intro">
                             Contribuições voluntárias ajudam diretamente na continuidade dos meus estudos e no desenvolvimento deste projeto.
-                            Cada apoio recebido contribui para minha evolução acadêmica e profissional, especialmente durante minha jornada universitária.
-                            Atualmente estou cursando graduação na Universidade Unopar, e o apoio da comunidade ajuda a tornar essa trajetória possível.
-                            As contribuições podem ser utilizadas para aquisição de livros, materiais de estudo e recursos educacionais importantes para minha formação.
-                            Também ajudam no pagamento de mensalidades da faculdade e em custos relacionados à educação e qualificação profissional.
-                            Outra parte do apoio é direcionada para melhorias na estrutura do projeto, atualização do site e desenvolvimento de novas funcionalidades.
-                            Com o crescimento do projeto, pretendo também criar novos projetos educacionais, tecnológicos e iniciativas que possam gerar valor para outras pessoas.
-                            Todo valor é bem-vindo e faz diferença, pois cada contribuição representa um incentivo para continuar aprendendo, evoluindo e construindo algo maior no futuro.
+                            Atualmente estou em jornada acadêmica na Universidade Unopar, buscando evoluir constantemente na área de tecnologia e desenvolvimento.
+                            O apoio recebido contribui para aquisição de livros, recursos educacionais e para ajudar nos custos da faculdade.
+                            Também permite investir na melhoria do projeto e na criação de novas iniciativas tecnológicas no futuro.
+                            Qualquer contribuição é muito bem-vinda e faz diferença nessa jornada de aprendizado e evolução.
                         </p>
                     </div>
 
-                    <!-- Container com cards principais -->
                     <div class="doacoes-metodos">
                         <!-- Card Real (BRL) -->
                         <div class="doacoes-card doacoes-card-pix">
                             <h3 class="doacoes-card-title"><i class="fa-solid fa-brazilian-real-sign"></i> <span data-i18n="sections.doacoes.real_title">Real (BRL)</span></h3>
                             
-                            <!-- Sub-card Pix -->
                             <div class="doacoes-pix">
                                 <h4 class="pix-title"><i class="fa-brands fa-pix"></i> <span data-i18n="sections.doacoes.pix.title">Pix</span></h4>
                                 <div class="pix-chave-container">
@@ -665,62 +650,88 @@
                                 <p class="pix-instrucao" data-i18n="sections.doacoes.pix.instrucao">Escaneie o QR code ou copie a chave para fazer um Pix.</p>
                             </div>
 
-                            <!-- Sub-card Transferência Bancária -->
                             <div class="doacoes-transferencia">
                                 <h4 class="transferencia-title" data-i18n="sections.doacoes.transferencia.title">Transferência ou depósito bancário</h4>
                                 
                                 <!-- Sicredi -->
-                                <div class="bank-item" data-bank="Sicredi" data-agency="2604" data-account="52656-8" data-beneficiary="Leandro Stanger" data-cpf="108.179.799-13">
+                                <div class="bank-item">
                                     <div class="bank-header">
                                         <img src="img/sicredi.png" alt="Sicredi" class="bank-logo" loading="lazy" onerror="this.onerror=null; this.classList.add('fallback'); this.insertAdjacentHTML('afterend', '<i class=\'fas fa-university bank-fallback\'></i>'); this.style.display='none';">
                                         <span class="bank-name">Sicredi</span>
                                     </div>
                                     <div class="bank-details">
-                                        <p><span data-i18n="sections.doacoes.transferencia.bankLabel">Banco</span>: 748</p>
-                                        <p><span data-i18n="sections.doacoes.transferencia.agencyLabel">Agência</span>: 2604</p>
-                                        <p><span data-i18n="sections.doacoes.transferencia.accountLabel">Conta Corrente</span>: 52656-8</p>
+                                        <div class="bank-line">
+                                            <span class="bank-label" data-i18n="sections.doacoes.transferencia.bankLabel">Banco:</span>
+                                            <span class="bank-value">748</span>
+                                            <button class="copy-button" data-copy="748">Copiar</button>
+                                        </div>
+                                        <div class="bank-line">
+                                            <span class="bank-label" data-i18n="sections.doacoes.transferencia.agencyLabel">Agência:</span>
+                                            <span class="bank-value">2604</span>
+                                            <button class="copy-button" data-copy="2604">Copiar</button>
+                                        </div>
+                                        <div class="bank-line">
+                                            <span class="bank-label" data-i18n="sections.doacoes.transferencia.accountLabel">Conta Corrente:</span>
+                                            <span class="bank-value">52656-8</span>
+                                            <button class="copy-button" data-copy="52656-8">Copiar</button>
+                                        </div>
                                         <p><span data-i18n="sections.doacoes.transferencia.beneficiaryLabel">Beneficiário</span>: Leandro Stanger</p>
                                         <p><span data-i18n="sections.doacoes.transferencia.cpfLabel">CPF</span>: 108.179.799-13</p>
                                     </div>
-                                    <button class="btn-copy-bank" data-bank="Sicredi" data-agency="2604" data-account="52656-8" data-beneficiary="Leandro Stanger" data-cpf="108.179.799-13">
-                                        <i class="fas fa-copy"></i> <span data-i18n="sections.doacoes.transferencia.copyButton">Copiar dados da conta</span>
-                                    </button>
                                 </div>
 
                                 <!-- Nubank -->
-                                <div class="bank-item" data-bank="Nubank" data-agency="0001" data-account="16760999-0" data-beneficiary="Leandro Stanger" data-cpf="108.179.799-13">
+                                <div class="bank-item">
                                     <div class="bank-header">
                                         <img src="img/nubank.png" alt="Nubank" class="bank-logo" loading="lazy" onerror="this.onerror=null; this.classList.add('fallback'); this.insertAdjacentHTML('afterend', '<i class=\'fas fa-university bank-fallback\'></i>'); this.style.display='none';">
                                         <span class="bank-name">Nubank</span>
                                     </div>
                                     <div class="bank-details">
-                                        <p><span data-i18n="sections.doacoes.transferencia.bankLabel">Banco</span>: 260</p>
-                                        <p><span data-i18n="sections.doacoes.transferencia.agencyLabel">Agência</span>: 0001</p>
-                                        <p><span data-i18n="sections.doacoes.transferencia.accountLabel">Conta Corrente</span>: 16760999-0</p>
+                                        <div class="bank-line">
+                                            <span class="bank-label" data-i18n="sections.doacoes.transferencia.bankLabel">Banco:</span>
+                                            <span class="bank-value">260</span>
+                                            <button class="copy-button" data-copy="260">Copiar</button>
+                                        </div>
+                                        <div class="bank-line">
+                                            <span class="bank-label" data-i18n="sections.doacoes.transferencia.agencyLabel">Agência:</span>
+                                            <span class="bank-value">0001</span>
+                                            <button class="copy-button" data-copy="0001">Copiar</button>
+                                        </div>
+                                        <div class="bank-line">
+                                            <span class="bank-label" data-i18n="sections.doacoes.transferencia.accountLabel">Conta Corrente:</span>
+                                            <span class="bank-value">16760999-0</span>
+                                            <button class="copy-button" data-copy="16760999-0">Copiar</button>
+                                        </div>
                                         <p><span data-i18n="sections.doacoes.transferencia.beneficiaryLabel">Beneficiário</span>: Leandro Stanger</p>
                                         <p><span data-i18n="sections.doacoes.transferencia.cpfLabel">CPF</span>: 108.179.799-13</p>
                                     </div>
-                                    <button class="btn-copy-bank" data-bank="Nubank" data-agency="0001" data-account="16760999-0" data-beneficiary="Leandro Stanger" data-cpf="108.179.799-13">
-                                        <i class="fas fa-copy"></i> <span data-i18n="sections.doacoes.transferencia.copyButton">Copiar dados da conta</span>
-                                    </button>
                                 </div>
 
                                 <!-- Itaú -->
-                                <div class="bank-item" data-bank="Itaú" data-agency="0628" data-account="77920-9" data-beneficiary="Leandro Stanger" data-cpf="108.179.799-13">
+                                <div class="bank-item">
                                     <div class="bank-header">
                                         <img src="img/itau.png" alt="Itaú" class="bank-logo" loading="lazy" onerror="this.onerror=null; this.classList.add('fallback'); this.insertAdjacentHTML('afterend', '<i class=\'fas fa-university bank-fallback\'></i>'); this.style.display='none';">
                                         <span class="bank-name">Itaú</span>
                                     </div>
                                     <div class="bank-details">
-                                        <p><span data-i18n="sections.doacoes.transferencia.bankLabel">Banco</span>: 341</p>
-                                        <p><span data-i18n="sections.doacoes.transferencia.agencyLabel">Agência</span>: 0628</p>
-                                        <p><span data-i18n="sections.doacoes.transferencia.accountLabel">Conta Corrente</span>: 77920-9</p>
+                                        <div class="bank-line">
+                                            <span class="bank-label" data-i18n="sections.doacoes.transferencia.bankLabel">Banco:</span>
+                                            <span class="bank-value">341</span>
+                                            <button class="copy-button" data-copy="341">Copiar</button>
+                                        </div>
+                                        <div class="bank-line">
+                                            <span class="bank-label" data-i18n="sections.doacoes.transferencia.agencyLabel">Agência:</span>
+                                            <span class="bank-value">0628</span>
+                                            <button class="copy-button" data-copy="0628">Copiar</button>
+                                        </div>
+                                        <div class="bank-line">
+                                            <span class="bank-label" data-i18n="sections.doacoes.transferencia.accountLabel">Conta Corrente:</span>
+                                            <span class="bank-value">77920-9</span>
+                                            <button class="copy-button" data-copy="77920-9">Copiar</button>
+                                        </div>
                                         <p><span data-i18n="sections.doacoes.transferencia.beneficiaryLabel">Beneficiário</span>: Leandro Stanger</p>
                                         <p><span data-i18n="sections.doacoes.transferencia.cpfLabel">CPF</span>: 108.179.799-13</p>
                                     </div>
-                                    <button class="btn-copy-bank" data-bank="Itaú" data-agency="0628" data-account="77920-9" data-beneficiary="Leandro Stanger" data-cpf="108.179.799-13">
-                                        <i class="fas fa-copy"></i> <span data-i18n="sections.doacoes.transferencia.copyButton">Copiar dados da conta</span>
-                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -729,21 +740,18 @@
                         <div class="doacoes-card doacoes-card-dolar">
                             <h3 class="doacoes-card-title"><i class="fa-solid fa-dollar-sign"></i> <span data-i18n="sections.doacoes.dolar_title">Dólar (USD)</span></h3>
                             
-                            <!-- Sub-card Ko-fi -->
                             <div class="doacoes-kofi">
                                 <h4 class="kofi-title"><i class="fa-brands fa-ko-fi"></i> <span data-i18n="sections.doacoes.kofi.title">Ko-fi</span></h4>
                                 <p class="kofi-description" data-i18n="sections.doacoes.kofi.description">Se preferir doar em dólar, você pode me apoiar no Ko-fi. É rápido e fácil!</p>
                                 <iframe id="kofiframe" class="kofi-iframe" src="https://ko-fi.com/leandrostanger/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none; width:100%;" height="712" title="leandrostanger"></iframe>
                             </div>
 
-                            <!-- Área de Transferência Bancária Internacional (CORRIGIDA) -->
                             <div class="doacoes-internacional">
                                 <h4 class="internacional-title">
                                     <i class="fa-solid fa-building-columns"></i>
                                     <span data-i18n="sections.doacoes.internacional.title">Transferência Bancária Internacional</span>
                                 </h4>
                                 <div class="internacional-cards">
-                                    <!-- Card ACH -->
                                     <div class="internacional-card">
                                         <div class="internacional-card-header">
                                             <i class="fas fa-university"></i>
@@ -754,7 +762,6 @@
                                             <i class="fas fa-copy"></i> <span data-i18n="sections.doacoes.internacional.copyButton">Copiar número</span>
                                         </button>
                                     </div>
-                                    <!-- Card Wire -->
                                     <div class="internacional-card">
                                         <div class="internacional-card-header">
                                             <i class="fas fa-globe"></i>
@@ -903,6 +910,84 @@
                                     </button>
                                     <div class="crypto-qr" data-address="TUkdsmgg1nKp1NxWH1fptqmnzuH914Hiw2"></div>
                                 </div>
+
+                                <!-- MegaETH -->
+                                <div class="crypto-item" data-crypto="megaeth" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                    <div class="crypto-header">
+                                        <img src="https://cryptologos.cc/logos/megaeth-eth-logo.png" alt="MegaETH" class="crypto-logo" loading="lazy" onerror="this.onerror=null; this.classList.add('fallback'); this.insertAdjacentHTML('afterend', '<i class=\'fas fa-coins crypto-fallback\'></i>'); this.style.display='none';">
+                                        <span class="crypto-name">MegaETH</span>
+                                    </div>
+                                    <div class="crypto-address">0xe18b69...F09B1</div>
+                                    <button class="btn-copy-crypto" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                        <i class="fas fa-copy"></i> <span data-i18n="sections.doacoes.crypto.copyButton">Copiar endereço</span>
+                                    </button>
+                                    <div class="crypto-qr" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1"></div>
+                                </div>
+
+                                <!-- Avalanche -->
+                                <div class="crypto-item" data-crypto="avalanche" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                    <div class="crypto-header">
+                                        <img src="https://cryptologos.cc/logos/avalanche-avax-logo.png" alt="Avalanche" class="crypto-logo" loading="lazy" onerror="this.onerror=null; this.classList.add('fallback'); this.insertAdjacentHTML('afterend', '<i class=\'fas fa-coins crypto-fallback\'></i>'); this.style.display='none';">
+                                        <span class="crypto-name">Avalanche</span>
+                                    </div>
+                                    <div class="crypto-address">0xe18b69...F09B1</div>
+                                    <button class="btn-copy-crypto" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                        <i class="fas fa-copy"></i> <span data-i18n="sections.doacoes.crypto.copyButton">Copiar endereço</span>
+                                    </button>
+                                    <div class="crypto-qr" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1"></div>
+                                </div>
+
+                                <!-- zkSync Era -->
+                                <div class="crypto-item" data-crypto="zksync-era" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                    <div class="crypto-header">
+                                        <img src="https://cryptologos.cc/logos/zksync-era-eth-logo.png" alt="zkSync Era" class="crypto-logo" loading="lazy" onerror="this.onerror=null; this.classList.add('fallback'); this.insertAdjacentHTML('afterend', '<i class=\'fas fa-coins crypto-fallback\'></i>'); this.style.display='none';">
+                                        <span class="crypto-name">zkSync Era</span>
+                                    </div>
+                                    <div class="crypto-address">0xe18b69...F09B1</div>
+                                    <button class="btn-copy-crypto" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                        <i class="fas fa-copy"></i> <span data-i18n="sections.doacoes.crypto.copyButton">Copiar endereço</span>
+                                    </button>
+                                    <div class="crypto-qr" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1"></div>
+                                </div>
+
+                                <!-- Sei -->
+                                <div class="crypto-item" data-crypto="sei" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                    <div class="crypto-header">
+                                        <img src="https://cryptologos.cc/logos/sei-network-sei-logo.png" alt="Sei" class="crypto-logo" loading="lazy" onerror="this.onerror=null; this.classList.add('fallback'); this.insertAdjacentHTML('afterend', '<i class=\'fas fa-coins crypto-fallback\'></i>'); this.style.display='none';">
+                                        <span class="crypto-name">Sei</span>
+                                    </div>
+                                    <div class="crypto-address">0xe18b69...F09B1</div>
+                                    <button class="btn-copy-crypto" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                        <i class="fas fa-copy"></i> <span data-i18n="sections.doacoes.crypto.copyButton">Copiar endereço</span>
+                                    </button>
+                                    <div class="crypto-qr" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1"></div>
+                                </div>
+
+                                <!-- Monad -->
+                                <div class="crypto-item" data-crypto="monad" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                    <div class="crypto-header">
+                                        <img src="https://cryptologos.cc/logos/monad-eth-logo.png" alt="Monad" class="crypto-logo" loading="lazy" onerror="this.onerror=null; this.classList.add('fallback'); this.insertAdjacentHTML('afterend', '<i class=\'fas fa-coins crypto-fallback\'></i>'); this.style.display='none';">
+                                        <span class="crypto-name">Monad</span>
+                                    </div>
+                                    <div class="crypto-address">0xe18b69...F09B1</div>
+                                    <button class="btn-copy-crypto" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                        <i class="fas fa-copy"></i> <span data-i18n="sections.doacoes.crypto.copyButton">Copiar endereço</span>
+                                    </button>
+                                    <div class="crypto-qr" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1"></div>
+                                </div>
+
+                                <!-- HyperEVM -->
+                                <div class="crypto-item" data-crypto="hyperevm" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                    <div class="crypto-header">
+                                        <img src="https://cryptologos.cc/logos/hyperevm-eth-logo.png" alt="HyperEVM" class="crypto-logo" loading="lazy" onerror="this.onerror=null; this.classList.add('fallback'); this.insertAdjacentHTML('afterend', '<i class=\'fas fa-coins crypto-fallback\'></i>'); this.style.display='none';">
+                                        <span class="crypto-name">HyperEVM</span>
+                                    </div>
+                                    <div class="crypto-address">0xe18b69...F09B1</div>
+                                    <button class="btn-copy-crypto" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                        <i class="fas fa-copy"></i> <span data-i18n="sections.doacoes.crypto.copyButton">Copiar endereço</span>
+                                    </button>
+                                    <div class="crypto-qr" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -940,7 +1025,6 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!-- QRCode.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="script.js"></script>
 </body>

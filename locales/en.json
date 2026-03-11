@@ -1,16 +1,7 @@
 {
   "site": {
     "title": "Leandro Stanger - Portfolio",
-    "description": "Professional portfolio of Leandro Stanger - Developer and Computer Engineering Student",
-    "keywords": "developer, programmer, computer engineering, portfolio, HTML, CSS, JavaScript"
-  },
-  "nav": {
-    "inicio": "Home",
-    "sobre": "About",
-    "curriculo": "Resume",
-    "tecnologias": "Technologies",
-    "projetos": "Projects",
-    "contato": "Contact"
+    "description": "Professional portfolio of Leandro Stanger - Developer and Computer Engineering Student"
   },
   "header": {
     "title": "Leandro Stanger",
@@ -235,213 +226,112 @@
         {
           "title": "Animals at the Zoo 2",
           "desc": "An interactive web application for managing and viewing animals in a virtual zoo.",
-          "tags": [
-            "JavaScript",
-            "HTML",
-            "CSS"
-          ],
-          "code": "View Code",
-          "demo": "Live Demo",
+          "tags": ["JavaScript", "HTML", "CSS"],
           "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico2",
           "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico2/"
         },
         {
           "title": "Weather Data",
           "desc": "System for collecting, processing and visualizing meteorological data from different sources.",
-          "tags": [
-            "JavaScript",
-            "API",
-            "CSS"
-          ],
-          "code": "View Code",
-          "demo": "Live Demo",
+          "tags": ["JavaScript", "API", "CSS"],
           "codeLink": "https://github.com/LeandroStanger/DadosClimaticos",
           "demoLink": "https://leandrostanger.github.io/DadosClimaticos/"
         },
         {
           "title": "Feedback Form",
           "desc": "Interactive form for collecting user feedback with data validation.",
-          "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript"
-          ],
-          "code": "View Code",
-          "demo": "Live Demo",
+          "tags": ["HTML", "CSS", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/FormularioDeFeedback",
           "demoLink": "https://leandrostanger.github.io/FormularioDeFeedback/"
         },
         {
           "title": "Fun Cars",
           "desc": "Interactive game with cars in a 2D environment, developed to practice programming concepts.",
-          "tags": [
-            "JavaScript",
-            "HTML5",
-            "CSS3"
-          ],
-          "code": "View Code",
-          "demo": "Live Demo",
+          "tags": ["JavaScript", "HTML5", "CSS3"],
           "codeLink": "https://github.com/LeandroStanger/CarrosDivertidos",
           "demoLink": "https://leandrostanger.github.io/CarrosDivertidos/"
         },
         {
           "title": "Car Race",
           "desc": "Car racing simulation with interactive controls and scoring system.",
-          "tags": [
-            "JavaScript",
-            "CSS3",
-            "HTML5"
-          ],
-          "code": "View Code",
-          "demo": "Live Demo",
+          "tags": ["JavaScript", "CSS3", "HTML5"],
           "codeLink": "https://github.com/LeandroStanger/CorridaDeCarro",
           "demoLink": "https://leandrostanger.github.io/CorridaDeCarro/"
         },
         {
           "title": "Animals at the Zoo",
           "desc": "Initial version of the zoo management system, focusing on learning JavaScript.",
-          "tags": [
-            "JavaScript",
-            "HTML",
-            "CSS"
-          ],
-          "code": "View Code",
-          "demo": "Live Demo",
+          "tags": ["JavaScript", "HTML", "CSS"],
           "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico",
           "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico/"
         },
         {
           "title": "Website with Loop",
           "desc": "Demonstrative website with visual loop effects and CSS/JavaScript animations.",
-          "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript"
-          ],
-          "code": "View Code",
-          "demo": "Live Demo",
+          "tags": ["HTML", "CSS", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/SiteComLoop",
           "demoLink": "https://leandrostanger.github.io/SiteComLoop/"
         },
         {
           "title": "Login System",
           "desc": "User authentication system with credential validation and responsive interface.",
-          "tags": [
-            "JavaScript",
-            "HTML",
-            "CSS"
-          ],
-          "code": "View Code",
-          "demo": "Live Demo",
+          "tags": ["JavaScript", "HTML", "CSS"],
           "codeLink": "https://github.com/LeandroStanger/SistemaDeLogin",
           "demoLink": "https://leandrostanger.github.io/SistemaDeLogin/"
         },
         {
           "title": "List Manager",
           "desc": "Application to create, edit and delete list items, with local storage.",
-          "tags": [
-            "JavaScript",
-            "LocalStorage",
-            "CSS"
-          ],
-          "code": "View Code",
-          "demo": "Live Demo",
+          "tags": ["JavaScript", "LocalStorage", "CSS"],
           "codeLink": "https://github.com/LeandroStanger/GerenciadorDeLista",
           "demoLink": "https://leandrostanger.github.io/GerenciadorDeLista/"
         },
         {
           "title": "Initial Projects",
           "desc": "Collection of my first programming projects, demonstrating my evolution as a developer.",
-          "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript"
-          ],
-          "code": "View Code",
-          "demo": "",
+          "tags": ["HTML", "CSS", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais",
           "demoLink": ""
         },
         {
           "title": "Leandro Stanger Portfolio",
           "desc": "Main repository with profile, detailed README and links to all projects. Focus on Front-end development with HTML, CSS and JavaScript.",
-          "tags": [
-            "HTML5",
-            "CSS3",
-            "JavaScript",
-            "Git"
-          ],
-          "code": "View Code",
-          "demo": "Live Demo",
+          "tags": ["HTML5", "CSS3", "JavaScript", "Git"],
           "codeLink": "https://github.com/LeandroStanger/LeandroStanger",
           "demoLink": "https://leandrostanger.github.io/LeandroStanger/"
         },
         {
           "title": "Cities with High Temperatures",
           "desc": "Interactive web application that displays and filters data on cities with extreme climates. Includes map, dashboard and climate data visualization.",
-          "tags": [
-            "JavaScript (ES6+)",
-            "API",
-            "CSS3",
-            "Data Visualization"
-          ],
-          "code": "View Code",
-          "demo": "Live Demo",
+          "tags": ["JavaScript (ES6+)", "API", "CSS3", "Data Visualization"],
           "codeLink": "https://github.com/LeandroStanger/CidadesComAltasTemperaturas",
           "demoLink": "https://leandrostanger.github.io/CidadesComAltasTemperaturas/"
         },
         {
           "title": "Website with Loop Hack",
           "desc": "Experimental website with visual loop effects, creative animations and advanced CSS/JavaScript techniques. Demonstrates skills in animations and interactive design.",
-          "tags": [
-            "HTML5",
-            "CSS3",
-            "JavaScript",
-            "Animations",
-            "Web Experiments"
-          ],
-          "code": "View Code",
-          "demo": "Live Demo",
+          "tags": ["HTML5", "CSS3", "JavaScript", "Animations", "Web Experiments"],
           "codeLink": "https://github.com/LeandroStanger/SiteComLoopHack",
           "demoLink": "https://leandrostanger.github.io/SiteComLoopHack/"
         },
         {
           "title": "Initial Projects (C Language)",
           "desc": "Collection of my first programming projects in C language, demonstrating my evolution as a developer.",
-          "tags": [
-            "C",
-            "GCC"
-          ],
-          "code": "View Code",
-          "demo": "",
+          "tags": ["C", "GCC"],
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-C",
           "demoLink": ""
         },
         {
           "title": "Pet Animals System",
           "desc": "A static and responsive catalog that displays a list of pets, presenting information such as name, species, age, weight and energy level in a user-friendly web interface.",
-          "tags": [
-            "HTML5",
-            "CSS3",
-            "JavaScript",
-            "JSON"
-          ],
-          "code": "View Code",
-          "demo": "Live Demo",
+          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
           "codeLink": "https://github.com/LeandroStanger/SistemaDeAnimaisDeEstimacao",
           "demoLink": "https://leandrostanger.github.io/SistemaDeAnimaisDeEstimacao/"
         },
         {
           "title": "Players Dashboard",
           "desc": "Complete statistics of the greatest soccer players. A modern and interactive web panel for viewing and analyzing player data in a dashboard format.",
-          "tags": [
-            "HTML5",
-            "CSS3",
-            "JavaScript",
-            "JSON"
-          ],
-          "code": "View Code",
-          "demo": "Live Demo",
+          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
           "codeLink": "https://github.com/LeandroStanger/DashboardDeJogadores",
           "demoLink": "https://leandrostanger.github.io/DashboardDeJogadores/"
         }
@@ -463,8 +353,7 @@
         "send": "Send Message",
         "sending": "Sending...",
         "success": "✅ Message sent successfully! I will get back to you soon.",
-        "error": "❌ An error occurred while sending the message. Please try again.",
-        "validation_error": "❌ Please correct the highlighted fields."
+        "error": "❌ An error occurred while sending the message. Please try again."
       },
       "links": {
         "linkedin": "LinkedIn",
@@ -487,7 +376,7 @@
       "number": "06",
       "title": "Support my studies",
       "subtitle": "Help with development",
-      "intro": "Voluntary contributions directly help the continuity of my studies and the development of this project.\nEach support received contributes to my academic and professional evolution, especially during my university journey.\nI am currently studying for a degree at Unopar University, and community support helps make this journey possible.\nContributions can be used to purchase books, study materials, and important educational resources for my training.\nThey also help pay for college tuition and costs related to education and professional qualification.\nAnother part of the support is directed towards improvements in the project structure, website updates, and development of new features.\nWith the project's growth, I also intend to create new educational and technological projects and initiatives that can generate value for others.\nAny amount is welcome and makes a difference, as each contribution represents an incentive to continue learning, evolving, and building something bigger in the future.",
+      "intro": "Voluntary contributions directly help the continuity of my studies and the development of this project.\nI am currently on an academic journey at Unopar University, constantly seeking to evolve in the technology and development area.\nThe support received helps with the purchase of books, educational resources, and with college expenses.\nIt also allows me to invest in improving the project and creating new technological initiatives in the future.\nAny contribution is very welcome and makes a difference in this journey of learning and evolution.",
       "real_title": "Real (BRL)",
       "dolar_title": "Dollar (USD)",
       "pix": {
@@ -499,18 +388,15 @@
       },
       "kofi": {
         "title": "Ko-fi",
-        "description": "If you prefer to donate in dollars, you can support me on Ko-fi. It's quick and easy!",
-        "button": "Support on Ko-fi"
+        "description": "If you prefer to donate in dollars, you can support me on Ko-fi. It's quick and easy!"
       },
       "transferencia": {
         "title": "Bank transfer or deposit",
-        "bankLabel": "Bank",
-        "agencyLabel": "Agency",
-        "accountLabel": "Checking account",
+        "bankLabel": "Bank:",
+        "agencyLabel": "Agency:",
+        "accountLabel": "Checking account:",
         "beneficiaryLabel": "Beneficiary",
-        "cpfLabel": "CPF",
-        "copyButton": "Copy account data",
-        "copySuccess": "Data copied successfully!"
+        "cpfLabel": "CPF"
       },
       "crypto": {
         "title": "Cryptocurrency Donations",

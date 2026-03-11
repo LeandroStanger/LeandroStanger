@@ -407,7 +407,6 @@ html.light-theme .theme-toggle:hover {
     pointer-events: none;
 }
 
-/* Header content - layout desktop original */
 .header-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1516,14 +1515,6 @@ html.light-theme .section-label {
     border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
-.search-highlight {
-    background-color: rgba(255, 255, 0, 0.2);
-    color: #ffd700;
-    font-weight: 600;
-    padding: 0 2px;
-    border-radius: 2px;
-}
-
 .projeto-actions {
     display: flex;
     flex-direction: column;
@@ -1887,7 +1878,7 @@ html.light-theme .section-label {
     text-align: center;
 }
 
-/* ============ BOTÃO BACK TO TOP (MODIFICADO) ============ */
+/* ============ BOTÃO BACK TO TOP ============ */
 .btn-back-top {
     display: inline-flex;
     align-items: center;
@@ -1937,14 +1928,6 @@ html.light-theme .section-label {
 }
 
 /* ============ ANIMAÇÕES DE SCROLL ============ */
-.fade-in-up {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-    -webkit-transform: translateY(0) !important;
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    -webkit-transition: opacity 0.6s ease-out, -webkit-transform 0.6s ease-out;
-}
-
 .timeline-item.visible,
 .experiencia-item.visible,
 .nenhum-resultado.visible,
@@ -2122,39 +2105,8 @@ html.light-theme .semester-badge {
     line-height: 1.7;
 }
 
-/* Card informativo aprimorado */
-.study-support-card {
-    background: var(--color-dark-900);
-    border: 1px solid var(--color-dark-600);
-    border-radius: var(--radius-lg);
-    padding: var(--space-5);
+.doacoes-content > .doacoes-card:first-child {
     margin-bottom: var(--space-6);
-    box-shadow: var(--shadow-md);
-    transition: all var(--transition-normal);
-    width: 100%;
-}
-
-.study-support-card:hover {
-    transform: scale(1.02);
-    border-color: var(--color-primary);
-    box-shadow: var(--shadow-green);
-}
-
-.study-support-card .doacoes-intro {
-    margin-bottom: 0;
-    text-align: left;
-    line-height: 1.7;
-}
-
-html.light-theme .study-support-card {
-    background: var(--color-light-800);
-    border-color: var(--color-light-600);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-html.light-theme .study-support-card:hover {
-    border-color: var(--color-primary);
-    box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.3);
 }
 
 .doacoes-metodos {
@@ -2258,7 +2210,7 @@ html.light-theme .study-support-card:hover {
     transform: translateY(0);
 }
 
-/* ============ QR CODE (melhorias) ============ */
+/* QR Code */
 .qrcode-container {
     display: flex;
     justify-content: center;
@@ -2284,7 +2236,7 @@ html.light-theme .study-support-card:hover {
     margin: 0 auto;
 }
 
-/* ============ Sub-card para Ko-fi ============ */
+/* Sub-card para Ko-fi */
 .doacoes-kofi {
     background: var(--color-dark-900);
     border: 1px solid var(--color-dark-600);
@@ -2332,7 +2284,7 @@ html.light-theme .study-support-card:hover {
     }
 }
 
-/* ============ DOAÇÕES - TRANSFERÊNCIA BANCÁRIA (BRL) ============ */
+/* DOAÇÕES - TRANSFERÊNCIA BANCÁRIA (BRL) */
 .doacoes-transferencia {
     background: var(--color-dark-900);
     border: 1px solid var(--color-dark-600);
@@ -2407,63 +2359,99 @@ html.light-theme .study-support-card:hover {
     margin-bottom: var(--space-3);
 }
 
-.bank-details p {
-    margin-bottom: var(--space-1);
-    font-size: var(--text-sm);
-    color: var(--color-gray);
-    line-height: 1.5;
+.bank-line {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
 }
 
-.bank-details p span {
+.bank-label {
+    font-weight: 600;
     color: var(--color-light);
-    font-weight: 500;
+    flex-shrink: 0;
 }
 
-.btn-copy-bank {
-    width: 100%;
+.bank-value {
+    font-family: monospace;
+    font-size: var(--text-sm);
+    color: var(--color-primary-light);
+    background: var(--color-dark-900);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-dark-600);
+    white-space: nowrap;
+}
+
+.copy-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: var(--space-2);
     background: rgba(16, 185, 129, 0.1);
     color: var(--color-primary-light);
     border: 1px solid rgba(16, 185, 129, 0.3);
-    padding: var(--space-2) var(--space-4);
+    padding: 4px 10px;
     border-radius: var(--radius-full);
+    font-size: var(--text-xs);
     font-weight: 600;
-    font-size: var(--text-sm);
     cursor: pointer;
-    transition: all var(--transition-normal);
+    transition: all var(--transition-fast);
+    line-height: 1;
+    white-space: nowrap;
 }
 
-.btn-copy-bank:hover {
+.copy-button:hover {
     background: rgba(16, 185, 129, 0.2);
     border-color: var(--color-primary);
-    transform: translateY(-2px);
+    transform: translateY(-1px);
 }
 
-.btn-copy-bank:active {
+.copy-button:active {
     transform: translateY(0);
 }
 
-.btn-copy-bank i {
-    font-size: var(--text-base);
+.copy-button.copied {
+    background: var(--color-success);
+    color: white;
+    border-color: var(--color-success);
+}
+
+html.light-theme .bank-value {
+    background: var(--color-light-900);
+    border-color: var(--color-light-600);
+    color: var(--color-primary-dark);
+}
+
+html.light-theme .copy-button {
+    background: rgba(16, 185, 129, 0.05);
+    color: var(--color-primary-dark);
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+html.light-theme .copy-button:hover {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: var(--color-primary);
 }
 
 @media (max-width: 640px) {
-    .bank-details p {
+    .bank-line {
+        gap: 4px;
+    }
+    .bank-label {
         font-size: var(--text-xs);
     }
-    .btn-copy-bank {
+    .bank-value {
         font-size: var(--text-xs);
-        padding: var(--space-1) var(--space-2);
+        padding: 2px 4px;
     }
-    .bank-header {
-        flex-wrap: wrap;
+    .copy-button {
+        padding: 2px 6px;
+        font-size: var(--text-xs);
     }
 }
 
-/* ============ DOAÇÕES - CRIPTOMOEDAS ============ */
+/* DOAÇÕES - CRIPTOMOEDAS */
 .doacoes-card-crypto {
     grid-column: 1 / -1;
 }
@@ -2596,7 +2584,7 @@ html.light-theme .study-support-card:hover {
     }
 }
 
-/* ============ ÁREA INTERNACIONAL (CORRIGIDA) ============ */
+/* ÁREA INTERNACIONAL */
 .doacoes-internacional {
     background: var(--color-dark-900);
     border: 1px solid var(--color-dark-600);
@@ -2621,7 +2609,7 @@ html.light-theme .study-support-card:hover {
 
 .internacional-cards {
     display: grid;
-    grid-template-columns: 1fr;  /* Uma única coluna */
+    grid-template-columns: 1fr;
     gap: var(--space-4);
 }
 

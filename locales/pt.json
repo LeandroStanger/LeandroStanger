@@ -1,16 +1,7 @@
 {
   "site": {
     "title": "Leandro Stanger - Portfólio",
-    "description": "Portfólio profissional de Leandro Stanger - Desenvolvedor e Estudante de Engenharia da Computação",
-    "keywords": "desenvolvedor, programador, engenharia da computação, portfólio, HTML, CSS, JavaScript"
-  },
-  "nav": {
-    "inicio": "Início",
-    "sobre": "Sobre",
-    "curriculo": "Currículo",
-    "tecnologias": "Tecnologias",
-    "projetos": "Projetos",
-    "contato": "Contato"
+    "description": "Portfólio profissional de Leandro Stanger - Desenvolvedor e Estudante de Engenharia da Computação"
   },
   "header": {
     "title": "Leandro Stanger",
@@ -235,213 +226,112 @@
         {
           "title": "Animais no Zoológico 2",
           "desc": "Uma aplicação web interativa para gerenciamento e visualização de animais em um zoológico virtual.",
-          "tags": [
-            "JavaScript",
-            "HTML",
-            "CSS"
-          ],
-          "code": "Ver Código",
-          "demo": "Ver Online",
+          "tags": ["JavaScript", "HTML", "CSS"],
           "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico2",
           "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico2/"
         },
         {
           "title": "Dados Climáticos",
           "desc": "Sistema para coleta, processamento e visualização de dados meteorológicos de diferentes fontes.",
-          "tags": [
-            "JavaScript",
-            "API",
-            "CSS"
-          ],
-          "code": "Ver Código",
-          "demo": "Ver Online",
+          "tags": ["JavaScript", "API", "CSS"],
           "codeLink": "https://github.com/LeandroStanger/DadosClimaticos",
           "demoLink": "https://leandrostanger.github.io/DadosClimaticos/"
         },
         {
           "title": "Formulário de Feedback",
           "desc": "Formulário interativo para coleta de feedback de usuários com validação de dados.",
-          "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript"
-          ],
-          "code": "Ver Código",
-          "demo": "Ver Online",
+          "tags": ["HTML", "CSS", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/FormularioDeFeedback",
           "demoLink": "https://leandrostanger.github.io/FormularioDeFeedback/"
         },
         {
           "title": "Carros Divertidos",
           "desc": "Jogo interativo com carros em um ambiente 2D, desenvolvido para praticar conceitos de programação.",
-          "tags": [
-            "JavaScript",
-            "HTML5",
-            "CSS3"
-          ],
-          "code": "Ver Código",
-          "demo": "Ver Online",
+          "tags": ["JavaScript", "HTML5", "CSS3"],
           "codeLink": "https://github.com/LeandroStanger/CarrosDivertidos",
           "demoLink": "https://leandrostanger.github.io/CarrosDivertidos/"
         },
         {
           "title": "Corrida de Carro",
           "desc": "Simulação de corrida de carros com controles interativos e sistema de pontuação.",
-          "tags": [
-            "JavaScript",
-            "CSS3",
-            "HTML5"
-          ],
-          "code": "Ver Código",
-          "demo": "Ver Online",
+          "tags": ["JavaScript", "CSS3", "HTML5"],
           "codeLink": "https://github.com/LeandroStanger/CorridaDeCarro",
           "demoLink": "https://leandrostanger.github.io/CorridaDeCarro/"
         },
         {
           "title": "Animais no Zoológico",
           "desc": "Versão inicial do sistema de gerenciamento de zoológico, com foco em aprendizado de JavaScript.",
-          "tags": [
-            "JavaScript",
-            "HTML",
-            "CSS"
-          ],
-          "code": "Ver Código",
-          "demo": "Ver Online",
+          "tags": ["JavaScript", "HTML", "CSS"],
           "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico",
           "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico/"
         },
         {
           "title": "Site com Loop",
           "desc": "Site demonstrativo com efeitos visuais em loop e animações CSS/JavaScript.",
-          "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript"
-          ],
-          "code": "Ver Código",
-          "demo": "Ver Online",
+          "tags": ["HTML", "CSS", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/SiteComLoop",
           "demoLink": "https://leandrostanger.github.io/SiteComLoop/"
         },
         {
           "title": "Sistema de Login",
           "desc": "Sistema de autenticação de usuários com validação de credenciais e interface responsiva.",
-          "tags": [
-            "JavaScript",
-            "HTML",
-            "CSS"
-          ],
-          "code": "Ver Código",
-          "demo": "Ver Online",
+          "tags": ["JavaScript", "HTML", "CSS"],
           "codeLink": "https://github.com/LeandroStanger/SistemaDeLogin",
           "demoLink": "https://leandrostanger.github.io/SistemaDeLogin/"
         },
         {
           "title": "Gerenciador de Lista",
           "desc": "Aplicação para criar, editar e excluir itens de listas, com armazenamento local.",
-          "tags": [
-            "JavaScript",
-            "LocalStorage",
-            "CSS"
-          ],
-          "code": "Ver Código",
-          "demo": "Ver Online",
+          "tags": ["JavaScript", "LocalStorage", "CSS"],
           "codeLink": "https://github.com/LeandroStanger/GerenciadorDeLista",
           "demoLink": "https://leandrostanger.github.io/GerenciadorDeLista/"
         },
         {
           "title": "Projetos Iniciais",
           "desc": "Coleção de meus primeiros projetos de programação, demonstrando minha evolução como desenvolvedor.",
-          "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript"
-          ],
-          "code": "Ver Código",
-          "demo": "",
+          "tags": ["HTML", "CSS", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais",
           "demoLink": ""
         },
         {
           "title": "Leandro Stanger Portfólio",
           "desc": "Repositório principal com perfil, README detalhado e links para todos os projetos. Foco em desenvolvimento Front-end com HTML, CSS e JavaScript.",
-          "tags": [
-            "HTML5",
-            "CSS3",
-            "JavaScript",
-            "Git"
-          ],
-          "code": "Ver Código",
-          "demo": "Ver Online",
+          "tags": ["HTML5", "CSS3", "JavaScript", "Git"],
           "codeLink": "https://github.com/LeandroStanger/LeandroStanger",
           "demoLink": "https://leandrostanger.github.io/LeandroStanger/"
         },
         {
           "title": "Cidades com Altas Temperaturas",
           "desc": "Aplicação web interativa que exibe e filtra dados sobre cidades com climas extremos. Inclui mapa, dashboard e visualização de dados climáticos.",
-          "tags": [
-            "JavaScript (ES6+)",
-            "API",
-            "CSS3",
-            "Data Visualization"
-          ],
-          "code": "Ver Código",
-          "demo": "Ver Online",
+          "tags": ["JavaScript (ES6+)", "API", "CSS3", "Data Visualization"],
           "codeLink": "https://github.com/LeandroStanger/CidadesComAltasTemperaturas",
           "demoLink": "https://leandrostanger.github.io/CidadesComAltasTemperaturas/"
         },
         {
           "title": "Site com Loop Hack",
           "desc": "Site experimental com efeitos visuais em loop, animações criativas e técnicas avançadas de CSS/JavaScript. Demonstra habilidades em animações e design interativo.",
-          "tags": [
-            "HTML5",
-            "CSS3",
-            "JavaScript",
-            "Animações",
-            "Experimentos Web"
-          ],
-          "code": "Ver Código",
-          "demo": "Ver Online",
+          "tags": ["HTML5", "CSS3", "JavaScript", "Animações", "Experimentos Web"],
           "codeLink": "https://github.com/LeandroStanger/SiteComLoopHack",
           "demoLink": "https://leandrostanger.github.io/SiteComLoopHack/"
         },
         {
           "title": "Projetos Iniciais (Linguagem C)",
           "desc": "Coleção de meus primeiros projetos de programação na linguagem C, demonstrando minha evolução como desenvolvedor.",
-          "tags": [
-            "C",
-            "GCC"
-          ],
-          "code": "Ver Código",
-          "demo": "",
+          "tags": ["C", "GCC"],
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-C",
           "demoLink": ""
         },
         {
           "title": "Sistema de Animais de Estimação",
           "desc": "Um catálogo estático e responsivo que exibe uma lista de animais de estimação, apresentando informações básicas como nome, espécie, idade, peso e nível de energia em uma interface web amigável.",
-          "tags": [
-            "HTML5",
-            "CSS3",
-            "JavaScript",
-            "JSON"
-          ],
-          "code": "Ver Código",
-          "demo": "Ver Online",
+          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
           "codeLink": "https://github.com/LeandroStanger/SistemaDeAnimaisDeEstimacao",
           "demoLink": "https://leandrostanger.github.io/SistemaDeAnimaisDeEstimacao/"
         },
         {
           "title": "Dashboard de Jogadores",
           "desc": "Estatísticas completas dos maiores jogadores de futebol. Um painel web moderno e interativo para visualização e análise de dados de jogadores em formato de dashboard.",
-          "tags": [
-            "HTML5",
-            "CSS3",
-            "JavaScript",
-            "JSON"
-          ],
-          "code": "Ver Código",
-          "demo": "Ver Online",
+          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
           "codeLink": "https://github.com/LeandroStanger/DashboardDeJogadores",
           "demoLink": "https://leandrostanger.github.io/DashboardDeJogadores/"
         }
@@ -486,7 +376,7 @@
       "number": "06",
       "title": "Apoiar meus estudos",
       "subtitle": "Contribua para o desenvolvimento",
-      "intro": "Contribuições voluntárias ajudam diretamente na continuidade dos meus estudos e no desenvolvimento deste projeto.\nCada apoio recebido contribui para minha evolução acadêmica e profissional, especialmente durante minha jornada universitária.\nAtualmente estou cursando graduação na Universidade Unopar, e o apoio da comunidade ajuda a tornar essa trajetória possível.\nAs contribuições podem ser utilizadas para aquisição de livros, materiais de estudo e recursos educacionais importantes para minha formação.\nTambém ajudam no pagamento de mensalidades da faculdade e em custos relacionados à educação e qualificação profissional.\nOutra parte do apoio é direcionada para melhorias na estrutura do projeto, atualização do site e desenvolvimento de novas funcionalidades.\nCom o crescimento do projeto, pretendo também criar novos projetos educacionais, tecnológicos e iniciativas que possam gerar valor para outras pessoas.\nTodo valor é bem-vindo e faz diferença, pois cada contribuição representa um incentivo para continuar aprendendo, evoluindo e construindo algo maior no futuro.",
+      "intro": "Contribuições voluntárias ajudam diretamente na continuidade dos meus estudos e no desenvolvimento deste projeto.\nAtualmente estou em jornada acadêmica na Universidade Unopar, buscando evoluir constantemente na área de tecnologia e desenvolvimento.\nO apoio recebido contribui para aquisição de livros, recursos educacionais e para ajudar nos custos da faculdade.\nTambém permite investir na melhoria do projeto e na criação de novas iniciativas tecnológicas no futuro.\nQualquer contribuição é muito bem-vinda e faz diferença nessa jornada de aprendizado e evolução.",
       "real_title": "Real (BRL)",
       "dolar_title": "Dólar (USD)",
       "pix": {
@@ -498,18 +388,15 @@
       },
       "kofi": {
         "title": "Ko-fi",
-        "description": "Se preferir doar em dólar, você pode me apoiar no Ko-fi. É rápido e fácil!",
-        "button": "Apoiar no Ko-fi"
+        "description": "Se preferir doar em dólar, você pode me apoiar no Ko-fi. É rápido e fácil!"
       },
       "transferencia": {
         "title": "Transferência ou depósito bancário",
-        "bankLabel": "Banco",
-        "agencyLabel": "Agência",
-        "accountLabel": "Conta Corrente",
+        "bankLabel": "Banco:",
+        "agencyLabel": "Agência:",
+        "accountLabel": "Conta Corrente:",
         "beneficiaryLabel": "Beneficiário",
-        "cpfLabel": "CPF",
-        "copyButton": "Copiar dados da conta",
-        "copySuccess": "Dados copiados com sucesso!"
+        "cpfLabel": "CPF"
       },
       "crypto": {
         "title": "Doações em Criptomoedas",
