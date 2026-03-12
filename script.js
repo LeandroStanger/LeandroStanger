@@ -33,7 +33,410 @@ const AppState = {
 
 // ==================== TRADUÇÕES PADRÃO (FALLBACK) ====================
 const DEFAULT_TRANSLATIONS = {
-    // ... (mesmo conteúdo do pt.json, mantido)
+  "site": {
+    "title": "Leandro Stanger - Portfólio",
+    "description": "Portfólio profissional de Leandro Stanger - Desenvolvedor e Estudante de Engenharia da Computação"
+  },
+  "header": {
+    "title": "Leandro Stanger",
+    "subtitle1": "Desenvolvedor Full-Stack!",
+    "subtitle2": "Estudante de Engenharia da Computação!",
+    "btn_contact": "Entrar em Contato",
+    "btn_resume": "Ver Currículo"
+  },
+  "scroll": "Scroll",
+  "ongoing": "em andamento",
+  "sections": {
+    "sobre": {
+      "number": "01",
+      "title": "Sobre Mim",
+      "subtitle": "Minha trajetória, paixões e objetivos",
+      "cards": [
+        {
+          "icon": "graduation-cap",
+          "title": "Formação Acadêmica",
+          "text": "Estudante de Engenharia da Computação pela UNOPAR - Universidade Norte do Paraná. Em constante evolução na área de tecnologia, sempre buscando novos conhecimentos e desafios para crescimento profissional."
+        },
+        {
+          "icon": "code",
+          "title": "Paixão por Tecnologia",
+          "text": "Apaixonado por programação, tecnologia e aprendizado contínuo. Acredito que a tecnologia tem o poder de transformar o mundo e busco contribuir para essa transformação através do desenvolvimento de soluções inovadoras."
+        },
+        {
+          "icon": "medal",
+          "title": "Jiu-jitsu & Disciplina",
+          "text": "Praticante de Jiu-jitsu, esporte que me ensina disciplina, resiliência e estratégia - qualidades que aplico diretamente no desenvolvimento de software e na resolução de problemas complexos."
+        }
+      ]
+    },
+    "curriculo": {
+      "number": "02",
+      "title": "Currículo",
+      "subtitle": "Minha jornada profissional e acadêmica",
+      "objetivo": {
+        "title": "Objetivo Profissional",
+        "text": "Busco uma posição na área de TI como <strong>Desenvolvedor</strong> ou <strong>Analista de Banco de Dados</strong>, onde possa aplicar meus conhecimentos em manutenção de computadores e redes, além de continuar desenvolvendo minhas habilidades em suporte técnico, administração de sistemas, desenvolvimento de software e gerenciamento de bancos de dados.",
+        "areas": [
+          {
+            "icon": "rocket",
+            "title": "Desenvolvedor",
+            "text": "Interesse em atuar no desenvolvimento de aplicações web e sistemas, utilizando tecnologias modernas e seguindo as melhores práticas de programação."
+          },
+          {
+            "icon": "database",
+            "title": "Banco de Dados",
+            "text": "Desejo trabalhar com modelagem, administração e otimização de bancos de dados, garantindo a integridade e performance dos sistemas."
+          }
+        ]
+      },
+      "educacao": {
+        "title": "Educação",
+        "items": [
+          {
+            "date": "Em andamento (início: fev/2025)",
+            "title": "Graduação em Engenharia de Computação",
+            "institution": "Unopar",
+            "progress": {
+              "completed": 11,
+              "total": 53,
+              "label": "{completed} de {total} disciplinas concluídas",
+              "semesterText": "3º Semestre — Em andamento"
+            },
+            "referral": {
+              "link": "http://www.portalpos.com.br/?utm_voceindica=135742",
+              "text": "Estude também na Unopar"
+            }
+          },
+          {
+            "date": "fev/2024 a jun/2025",
+            "title": "Técnico em Manutenção e Suporte em Informática",
+            "institution": "AMPLI",
+            "status": ["Concluído"]
+          },
+          {
+            "date": "Abr/2016 a Out/2016",
+            "title": "Curso de Montagem e Manutenção de Computadores e Redes",
+            "institution": "YesBras Escolas do Brasil",
+            "status": ["Concluído"]
+          },
+          {
+            "date": "2015 a Out/2017",
+            "title": "Ensino Médio",
+            "institution": "SESI",
+            "status": ["Concluído"]
+          },
+          {
+            "date": "Set/2014 a Set/2015",
+            "title": "Curso APP – Administrativo Pessoal e Profissional",
+            "institution": "Escola de Informática Unisoft",
+            "status": ["Concluído"]
+          },
+          {
+            "date": "Set/2013 a Set/2014",
+            "title": "Curso QIT – Qualificação em Informática e Tecnologia",
+            "institution": "Escola de Informática Unisoft",
+            "status": ["Concluído"]
+          }
+        ]
+      },
+      "experiencia": {
+        "title": "Experiência Profissional",
+        "items": [
+          {
+            "company": "Confecções Vanelise",
+            "positions": [
+              {
+                "title": "Auxiliar de Expedição Nível 2 (Tecido Plano)",
+                "responsibilities": [
+                  "Promovido para nível 2 com maiores responsabilidades",
+                  "Treinamento de novos funcionários",
+                  "Gestão avançada de estoque da caixaria",
+                  "Controle de qualidade dos processos de expedição"
+                ]
+              },
+              {
+                "title": "Auxiliar de Expedição (Tecido Plano)",
+                "responsibilities": [
+                  "Recebimento e organização de paletes de conserto",
+                  "Abastecimento de revisão e armazenamento de peças",
+                  "Gestão de estoque e organização de materiais",
+                  "Controle de qualidade inicial dos produtos"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "Manutenção de Computadores – Autônomo",
+            "positions": [
+              {
+                "title": "Técnico em Manutenção",
+                "responsibilities": [
+                  "Formatação, troca de peças e atualização de software",
+                  "Atendimento a clientes e suporte técnico remoto e presencial",
+                  "Instalação e configuração de sistemas operacionais",
+                  "Manutenção preventiva e corretiva de hardware"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "habilidades": {
+        "title": "Habilidades",
+        "tecnicas": {
+          "title": "Técnicas",
+          "items": [
+            "Manutenção de computadores (hardware e software)",
+            "Linux (intermediário)",
+            "JavaScript (intermediário)",
+            "Microsoft Office (Excel, Word e PowerPoint)",
+            "C",
+            "Redes de computadores",
+            "Suporte técnico",
+            "HTML",
+            "Administração de sistemas",
+            "CSS",
+            "Banco de Dados SQL",
+            "Desenvolvimento Web",
+            "Git e controle de versão"
+          ]
+        },
+        "interpessoais": {
+          "title": "Interpessoais",
+          "items": [
+            "Pontualidade",
+            "Responsabilidade",
+            "Atendimento ao cliente",
+            "Trabalho em equipe",
+            "Resolução de problemas",
+            "Comunicação eficaz",
+            "Liderança",
+            "Gestão de tempo"
+          ]
+        }
+      },
+      "download": "Baixar Currículo Completo (PDF)"
+    },
+    "tecnologias": {
+      "number": "03",
+      "title": "Tecnologias e Ferramentas",
+      "subtitle": "Stack tecnológico e ferramentas que utilizo",
+      "categories": {
+        "frontend": "Front-end",
+        "backend": "Backend",
+        "devops": "DevOps",
+        "databases": "Databases",
+        "ferramentas": "Ferramentas",
+        "so": "Sistema Operacional"
+      }
+    },
+    "projetos": {
+      "number": "04",
+      "title": "Projetos",
+      "subtitle": "Meus projetos desenvolvidos e em desenvolvimento",
+      "category_title": "Portfólio de Desenvolvimento",
+      "category_desc": "Explore meus projetos front-end, back-end e experimentos de programação.",
+      "search_placeholder": "Buscar projetos por nome, tecnologia ou descrição...",
+      "found": "projetos encontrados",
+      "no_results_title": "Nenhum projeto encontrado",
+      "no_results_desc": "Tente ajustar sua busca. Você pode pesquisar por nome do projeto, tecnologias ou descrição.",
+      "code": "Código",
+      "demo": "Demo",
+      "cards": [
+        {
+          "title": "Animais no Zoológico 2",
+          "desc": "Uma aplicação web interativa para gerenciamento e visualização de animais em um zoológico virtual.",
+          "tags": ["JavaScript", "HTML", "CSS"],
+          "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico2",
+          "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico2/"
+        },
+        {
+          "title": "Dados Climáticos",
+          "desc": "Sistema para coleta, processamento e visualização de dados meteorológicos de diferentes fontes.",
+          "tags": ["JavaScript", "API", "CSS"],
+          "codeLink": "https://github.com/LeandroStanger/DadosClimaticos",
+          "demoLink": "https://leandrostanger.github.io/DadosClimaticos/"
+        },
+        {
+          "title": "Formulário de Feedback",
+          "desc": "Formulário interativo para coleta de feedback de usuários com validação de dados.",
+          "tags": ["HTML", "CSS", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/FormularioDeFeedback",
+          "demoLink": "https://leandrostanger.github.io/FormularioDeFeedback/"
+        },
+        {
+          "title": "Carros Divertidos",
+          "desc": "Jogo interativo com carros em um ambiente 2D, desenvolvido para praticar conceitos de programação.",
+          "tags": ["JavaScript", "HTML5", "CSS3"],
+          "codeLink": "https://github.com/LeandroStanger/CarrosDivertidos",
+          "demoLink": "https://leandrostanger.github.io/CarrosDivertidos/"
+        },
+        {
+          "title": "Corrida de Carro",
+          "desc": "Simulação de corrida de carros com controles interativos e sistema de pontuação.",
+          "tags": ["JavaScript", "CSS3", "HTML5"],
+          "codeLink": "https://github.com/LeandroStanger/CorridaDeCarro",
+          "demoLink": "https://leandrostanger.github.io/CorridaDeCarro/"
+        },
+        {
+          "title": "Animais no Zoológico",
+          "desc": "Versão inicial do sistema de gerenciamento de zoológico, com foco em aprendizado de JavaScript.",
+          "tags": ["JavaScript", "HTML", "CSS"],
+          "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico",
+          "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico/"
+        },
+        {
+          "title": "Site com Loop",
+          "desc": "Site demonstrativo com efeitos visuais em loop e animações CSS/JavaScript.",
+          "tags": ["HTML", "CSS", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/SiteComLoop",
+          "demoLink": "https://leandrostanger.github.io/SiteComLoop/"
+        },
+        {
+          "title": "Sistema de Login",
+          "desc": "Sistema de autenticação de usuários com validação de credenciais e interface responsiva.",
+          "tags": ["JavaScript", "HTML", "CSS"],
+          "codeLink": "https://github.com/LeandroStanger/SistemaDeLogin",
+          "demoLink": "https://leandrostanger.github.io/SistemaDeLogin/"
+        },
+        {
+          "title": "Gerenciador de Lista",
+          "desc": "Aplicação para criar, editar e excluir itens de listas, com armazenamento local.",
+          "tags": ["JavaScript", "LocalStorage", "CSS"],
+          "codeLink": "https://github.com/LeandroStanger/GerenciadorDeLista",
+          "demoLink": "https://leandrostanger.github.io/GerenciadorDeLista/"
+        },
+        {
+          "title": "Projetos Iniciais",
+          "desc": "Coleção de meus primeiros projetos de programação, demonstrando minha evolução como desenvolvedor.",
+          "tags": ["HTML", "CSS", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais"
+        },
+        {
+          "title": "Leandro Stanger Portfólio",
+          "desc": "Repositório principal com perfil, README detalhado e links para todos os projetos. Foco em desenvolvimento Front-end com HTML, CSS e JavaScript.",
+          "tags": ["HTML5", "CSS3", "JavaScript", "Git"],
+          "codeLink": "https://github.com/LeandroStanger/LeandroStanger",
+          "demoLink": "https://leandrostanger.github.io/LeandroStanger/"
+        },
+        {
+          "title": "Cidades com Altas Temperaturas",
+          "desc": "Aplicação web interativa que exibe e filtra dados sobre cidades com climas extremos. Inclui mapa, dashboard e visualização de dados climáticos.",
+          "tags": ["JavaScript (ES6+)", "API", "CSS3", "Data Visualization"],
+          "codeLink": "https://github.com/LeandroStanger/CidadesComAltasTemperaturas",
+          "demoLink": "https://leandrostanger.github.io/CidadesComAltasTemperaturas/"
+        },
+        {
+          "title": "Site com Loop Hack",
+          "desc": "Site experimental com efeitos visuais em loop, animações criativas e técnicas avançadas de CSS/JavaScript. Demonstra habilidades em animações e design interativo.",
+          "tags": ["HTML5", "CSS3", "JavaScript", "Animações", "Experimentos Web"],
+          "codeLink": "https://github.com/LeandroStanger/SiteComLoopHack",
+          "demoLink": "https://leandrostanger.github.io/SiteComLoopHack/"
+        },
+        {
+          "title": "Projetos Iniciais (Linguagem C)",
+          "desc": "Coleção de meus primeiros projetos de programação na linguagem C, demonstrando minha evolução como desenvolvedor.",
+          "tags": ["C", "GCC"],
+          "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-C"
+        },
+        {
+          "title": "Sistema de Animais de Estimação",
+          "desc": "Um catálogo estático e responsivo que exibe uma lista de animais de estimação, apresentando informações básicas como nome, espécie, idade, peso e nível de energia em uma interface web amigável.",
+          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "codeLink": "https://github.com/LeandroStanger/SistemaDeAnimaisDeEstimacao",
+          "demoLink": "https://leandrostanger.github.io/SistemaDeAnimaisDeEstimacao/"
+        },
+        {
+          "title": "Dashboard de Jogadores",
+          "desc": "Estatísticas completas dos maiores jogadores de futebol. Um painel web moderno e interativo para visualização e análise de dados de jogadores em formato de dashboard.",
+          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "codeLink": "https://github.com/LeandroStanger/DashboardDeJogadores",
+          "demoLink": "https://leandrostanger.github.io/DashboardDeJogadores/"
+        }
+      ]
+    },
+    "contato": {
+      "number": "05",
+      "title": "Entre em Contato",
+      "subtitle": "Estou sempre aberto a novas oportunidades e colaborações",
+      "intro": "Vamos conversar sobre projetos, oportunidades ou apenas trocar ideias sobre tecnologia!",
+      "form": {
+        "title": "Envie uma mensagem",
+        "name_label": "Nome",
+        "name_placeholder": "Digite seu nome completo",
+        "email_label": "E-mail",
+        "email_placeholder": "Digite seu E-mail: seu@email.com",
+        "message_label": "Mensagem",
+        "message_placeholder": "Digite sua mensagem aqui...",
+        "send": "Enviar Mensagem",
+        "sending": "Enviando...",
+        "success": "✅ Mensagem enviada com sucesso! Entrarei em contato em breve.",
+        "error": "❌ Ocorreu um erro ao enviar a mensagem. Tente novamente."
+      },
+      "links": {
+        "linkedin": "LinkedIn",
+        "linkedin_desc": "Conecte-se profissionalmente",
+        "github": "GitHub",
+        "github_desc": "Veja meus projetos",
+        "instagram": "Instagram",
+        "instagram_desc": "Siga-me no Instagram",
+        "telegram": "Telegram",
+        "telegram_desc": "@leandrostanger",
+        "99freelas": "99freelas",
+        "99freelas_desc": "Perfil profissional",
+        "x": "X",
+        "x_desc": "@LeandroStanger1",
+        "messenger": "Messenger",
+        "messenger_desc": "@leandrostanger"
+      }
+    },
+    "doacoes": {
+      "number": "06",
+      "title": "Doações",
+      "subtitle": "Contribua para o desenvolvimento",
+      "card_title": "Apoie meus estudos",
+      "intro": "Contribuições voluntárias ajudam diretamente na continuidade dos meus estudos e no desenvolvimento deste projeto.\nAtualmente estou em jornada acadêmica na Universidade Unopar, buscando evoluir constantemente na área de tecnologia e desenvolvimento.\nO apoio recebido contribui para aquisição de livros, recursos educacionais e para ajudar nos custos da faculdade.\nTambém permite investir na melhoria do projeto e na criação de novas iniciativas tecnológicas no futuro.\nQualquer contribuição é muito bem-vinda e faz diferença nessa jornada de aprendizado e evolução.",
+      "real_title": "Real (BRL)",
+      "dolar_title": "Dólar (USD)",
+      "pix": {
+        "title": "Pix",
+        "chave": "c348f1e6-72fa-4988-a2e9-3ac7d539de84",
+        "copiar": "Copiar chave Pix",
+        "copiado": "Chave copiada!",
+        "instrucao": "Escaneie o QR code ou copie a chave para fazer um Pix."
+      },
+      "kofi": {
+        "title": "Ko-fi",
+        "description": "Se preferir doar em dólar, você pode me apoiar no Ko-fi. É rápido e fácil!"
+      },
+      "transferencia": {
+        "title": "Transferência ou depósito bancário",
+        "bankLabel": "Banco:",
+        "agencyLabel": "Agência:",
+        "accountLabel": "Conta Corrente:",
+        "beneficiaryLabel": "Beneficiário",
+        "cpfLabel": "CPF",
+        "copy": "Copiar"   // <-- chave adicionada
+      },
+      "crypto": {
+        "title": "Criptomoedas",
+        "copyButton": "Copiar endereço",
+        "copySuccess": "Endereço copiado com sucesso!"
+      },
+      "internacional": {
+        "title": "Transferência Bancária Internacional",
+        "achTitle": "ACH Transfer <span>(EUA)</span>",
+        "wireTitle": "Wire Transfer <span>(Internacional)</span>",
+        "copyButton": "Copiar número",
+        "copyNumberSuccess": "Número copiado!"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Desenvolvedor Full-Stack e Estudante de Engenharia da Computação",
+    "copyright_prefix": "© 2025 - ",
+    "copyright_suffix": " Leandro Stanger. Todos os direitos reservados."
+  }
 };
 
 // ==================== MÓDULO I18N ====================
@@ -853,7 +1256,7 @@ function initDoacoes() {
     }
 
     const transferenciaContainer = document.querySelector('.doacoes-transferencia');
-    if (transferenciaContainer) {
+    if (transferenciaContainer && !transferenciaContainer._hasCopyListener) {
         transferenciaContainer.addEventListener('click', async (e) => {
             const copyButton = e.target.closest('.copy-button');
             if (!copyButton) return;
@@ -874,18 +1277,30 @@ function initDoacoes() {
                     document.body.removeChild(textArea);
                 }
 
-                const originalText = copyButton.textContent;
-                copyButton.textContent = 'Copiado!';
-                copyButton.classList.add('copied');
-                setTimeout(() => {
-                    copyButton.textContent = originalText;
-                    copyButton.classList.remove('copied');
-                }, 1500);
+                const textSpan = copyButton.querySelector('span[data-i18n]') || copyButton.querySelector('span');
+                if (textSpan) {
+                    const originalText = textSpan.textContent;
+                    textSpan.textContent = 'Copiado!';
+                    copyButton.classList.add('copied');
+                    setTimeout(() => {
+                        textSpan.textContent = originalText;
+                        copyButton.classList.remove('copied');
+                    }, 1500);
+                } else {
+                    const originalText = copyButton.textContent;
+                    copyButton.textContent = 'Copiado!';
+                    copyButton.classList.add('copied');
+                    setTimeout(() => {
+                        copyButton.textContent = originalText;
+                        copyButton.classList.remove('copied');
+                    }, 1500);
+                }
             } catch (err) {
                 console.error('Erro ao copiar:', err);
                 alert(I18n.t('sections.doacoes.copy_failed_number'));
             }
         });
+        transferenciaContainer._hasCopyListener = true;
     }
 
     const cryptoContainer = document.querySelector('.doacoes-crypto');
@@ -934,41 +1349,44 @@ function initDoacoes() {
             }
         });
 
-        cryptoContainerQR.addEventListener('click', async (e) => {
-            const copyButton = e.target.closest('.btn-copy-crypto');
-            if (!copyButton) return;
-            e.preventDefault();
+        if (!cryptoContainerQR._hasCopyListener) {
+            cryptoContainerQR.addEventListener('click', async (e) => {
+                const copyButton = e.target.closest('.btn-copy-crypto');
+                if (!copyButton) return;
+                e.preventDefault();
 
-            const address = copyButton.dataset.address;
-            if (!address) return;
+                const address = copyButton.dataset.address;
+                if (!address) return;
 
-            try {
-                if (navigator.clipboard && window.isSecureContext) {
-                    await navigator.clipboard.writeText(address);
-                } else {
-                    const textArea = document.createElement('textarea');
-                    textArea.value = address;
-                    document.body.appendChild(textArea);
-                    textArea.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(textArea);
+                try {
+                    if (navigator.clipboard && window.isSecureContext) {
+                        await navigator.clipboard.writeText(address);
+                    } else {
+                        const textArea = document.createElement('textarea');
+                        textArea.value = address;
+                        document.body.appendChild(textArea);
+                        textArea.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(textArea);
+                    }
+
+                    const originalHTML = copyButton.innerHTML;
+                    const successText = I18n.t('sections.doacoes.crypto.copySuccess') || 'Endereço copiado com sucesso!';
+                    copyButton.innerHTML = `<i class="fas fa-check"></i> ${successText}`;
+                    setTimeout(() => {
+                        copyButton.innerHTML = originalHTML;
+                    }, 2000);
+                } catch (err) {
+                    console.error('Erro ao copiar endereço:', err);
+                    alert(I18n.t('sections.doacoes.copy_failed_address'));
                 }
-
-                const originalHTML = copyButton.innerHTML;
-                const successText = I18n.t('sections.doacoes.crypto.copySuccess') || 'Endereço copiado com sucesso!';
-                copyButton.innerHTML = `<i class="fas fa-check"></i> ${successText}`;
-                setTimeout(() => {
-                    copyButton.innerHTML = originalHTML;
-                }, 2000);
-            } catch (err) {
-                console.error('Erro ao copiar endereço:', err);
-                alert(I18n.t('sections.doacoes.copy_failed_address'));
-            }
-        });
+            });
+            cryptoContainerQR._hasCopyListener = true;
+        }
     }
 
     const internacionalContainer = document.querySelector('.doacoes-internacional');
-    if (internacionalContainer) {
+    if (internacionalContainer && !internacionalContainer._hasCopyListener) {
         internacionalContainer.addEventListener('click', async (e) => {
             const copyButton = e.target.closest('.btn-copy-internacional');
             if (!copyButton) return;
@@ -1000,6 +1418,7 @@ function initDoacoes() {
                 alert(I18n.t('sections.doacoes.copy_failed_number'));
             }
         });
+        internacionalContainer._hasCopyListener = true;
     }
 }
 

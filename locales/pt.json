@@ -397,7 +397,8 @@
         "agencyLabel": "Agência:",
         "accountLabel": "Conta Corrente:",
         "beneficiaryLabel": "Beneficiário:",
-        "cpfLabel": "CPF:"
+        "cpfLabel": "CPF:",
+        "copy": "Copiar"
       },
       "crypto": {
         "title": "Criptomoedas",

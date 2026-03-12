@@ -397,7 +397,8 @@
         "agencyLabel": "Agency:",
         "accountLabel": "Checking account:",
         "beneficiaryLabel": "Beneficiary:",
-        "cpfLabel": "CPF:"
+        "cpfLabel": "CPF:",
+        "copy": "Copy"
       },
       "crypto": {
         "title": "Cryptocurrencies",
