@@ -2158,6 +2158,16 @@ html.light-theme .semester-badge {
     text-align: center;
 }
 
+/* ============ CLASSE PADRÃO PARA ÍCONES DE PAGAMENTO ============ */
+.payment-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+    margin-right: var(--space-2);
+    vertical-align: middle;
+}
+
 /* Área Pix */
 .doacoes-pix {
     background: var(--color-dark-900);
