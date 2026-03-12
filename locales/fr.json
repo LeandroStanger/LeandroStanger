@@ -386,8 +386,6 @@
         "bankLabel": "Banque :",
         "agencyLabel": "Agence :",
         "accountLabel": "Compte courant :",
-        "beneficiaryLabel": "Bénéficiaire :",
-        "cpfLabel": "CPF :",
         "copy": "Copier"
       },
       "crypto": {

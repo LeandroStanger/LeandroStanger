@@ -386,8 +386,6 @@
         "bankLabel": "Bank:",
         "agencyLabel": "Filiale:",
         "accountLabel": "Girokonto:",
-        "beneficiaryLabel": "Begünstigter:",
-        "cpfLabel": "CPF:",
         "copy": "Kopieren"
       },
       "crypto": {

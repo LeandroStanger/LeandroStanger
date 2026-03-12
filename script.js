@@ -414,9 +414,7 @@ const DEFAULT_TRANSLATIONS = {
         "bankLabel": "Banco:",
         "agencyLabel": "Agência:",
         "accountLabel": "Conta Corrente:",
-        "beneficiaryLabel": "Beneficiário",
-        "cpfLabel": "CPF",
-        "copy": "Copiar"   // <-- chave adicionada
+        "copy": "Copiar"
       },
       "crypto": {
         "title": "Criptomoedas",

@@ -386,8 +386,6 @@
         "bankLabel": "银行：",
         "agencyLabel": "分行：",
         "accountLabel": "活期账户：",
-        "beneficiaryLabel": "收款人：",
-        "cpfLabel": "CPF：",
         "copy": "复制"
       },
       "crypto": {
