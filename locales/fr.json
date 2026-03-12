@@ -1,0 +1,416 @@
+{
+  "site": {
+    "title": "Leandro Stanger - Portfolio",
+    "description": "Portfolio professionnel de Leandro Stanger - Développeur et Étudiant en Ingénierie Informatique"
+  },
+  "header": {
+    "title": "Leandro Stanger",
+    "subtitle1": "Développeur Full-Stack !",
+    "subtitle2": "Étudiant en Ingénierie Informatique !",
+    "btn_contact": "Me Contacter",
+    "btn_resume": "Voir le CV"
+  },
+  "scroll": "Défiler",
+  "ongoing": "en cours",
+  "sections": {
+    "sobre": {
+      "number": "01",
+      "title": "À Propos de Moi",
+      "subtitle": "Mon parcours, mes passions et mes objectifs",
+      "cards": [
+        {
+          "title": "Formation Académique",
+          "text": "Étudiant en Ingénierie Informatique à <a href=\"https://www.unopar.com.br/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"highlight-link\">UNOPAR - Université du Nord du Paraná</a>. En constante évolution dans le domaine de la technologie, toujours à la recherche de nouvelles connaissances et de défis pour ma croissance professionnelle.",
+          "icon": "graduation-cap"
+        },
+        {
+          "title": "Passion pour la Technologie",
+          "text": "Passionné par la programmation, la technologie et l'apprentissage continu. Je crois que la technologie a le pouvoir de transformer le monde et je cherche à contribuer à cette transformation en développant des solutions innovantes.",
+          "icon": "code"
+        },
+        {
+          "title": "Jiu-jitsu & Discipline",
+          "text": "Pratiquant de Jiu-jitsu, un sport qui m'enseigne la discipline, la résilience et la stratégie - des qualités que j'applique directement dans le développement de logiciels et la résolution de problèmes complexes.",
+          "icon": "medal"
+        }
+      ]
+    },
+    "curriculo": {
+      "number": "02",
+      "title": "CV",
+      "subtitle": "Mon parcours professionnel et académique",
+      "objetivo": {
+        "title": "Objectif Professionnel",
+        "text": "Je recherche un poste dans le domaine de l'informatique en tant que <strong>Développeur</strong> ou <strong>Analyste de Bases de Données</strong>, où je pourrai appliquer mes connaissances en maintenance de matériel et de réseaux, tout en continuant à développer mes compétences en support technique, administration de systèmes, développement de logiciels et gestion de bases de données.",
+        "areas": [
+          {
+            "title": "Développeur",
+            "text": "Intérêt à travailler sur le développement d'applications web et de systèmes, en utilisant des technologies modernes et en suivant les meilleures pratiques de programmation.",
+            "icon": "rocket"
+          },
+          {
+            "title": "Base de Données",
+            "text": "Je souhaite travailler sur la modélisation, l'administration et l'optimisation de bases de données, garantissant l'intégrité et la performance des systèmes.",
+            "icon": "database"
+          }
+        ]
+      },
+      "educacao": {
+        "title": "Formation",
+        "items": [
+          {
+            "date": "En cours (début: fév/2025)",
+            "title": "Licence en Ingénierie Informatique",
+            "institution": "Unopar",
+            "progress": {
+              "completed": 11,
+              "total": 53,
+              "label": "{completed} sur {total} matières terminées",
+              "semesterText": "3ème Semestre — En cours"
+            },
+            "referral": {
+              "link": "http://www.portalpos.com.br/?utm_voceindica=135742",
+              "text": "Étudie aussi à Unopar"
+            }
+          },
+          {
+            "date": "fév/2024 à juin/2025",
+            "title": "Technicien en Maintenance et Support Informatique",
+            "institution": "AMPLI",
+            "status": ["Terminé"]
+          },
+          {
+            "date": "avr/2016 à oct/2016",
+            "title": "Cours de Montage et Maintenance de Matériel et Réseaux",
+            "institution": "YesBras Escolas do Brasil",
+            "status": ["Terminé"]
+          },
+          {
+            "date": "2015 à oct/2017",
+            "title": "Lycée",
+            "institution": "SESI",
+            "status": ["Terminé"]
+          },
+          {
+            "date": "sep/2014 à sep/2015",
+            "title": "Cours APP – Administratif Personnel et Professionnel",
+            "institution": "École d'Informatique Unisoft",
+            "status": ["Terminé"]
+          },
+          {
+            "date": "sep/2013 à sep/2014",
+            "title": "Cours QIT – Qualification en Informatique et Technologie",
+            "institution": "École d'Informatique Unisoft",
+            "status": ["Terminé"]
+          }
+        ]
+      },
+      "experiencia": {
+        "title": "Expérience Professionnelle",
+        "items": [
+          {
+            "company": "Confecções Vanelise",
+            "period": "",
+            "positions": [
+              {
+                "title": "Assistant d'Expédition Niveau 2 (Tissu Plat)",
+                "period": "",
+                "responsibilities": [
+                  "Promu au niveau 2 avec plus de responsabilités",
+                  "Formation des nouveaux employés",
+                  "Gestion avancée des stocks du département des boîtes",
+                  "Contrôle qualité des processus d'expédition"
+                ]
+              },
+              {
+                "title": "Assistant d'Expédition (Tissu Plat)",
+                "period": "",
+                "responsibilities": [
+                  "Réception et organisation des palettes de réparation",
+                  "Approvisionnement en révision et stockage des pièces",
+                  "Gestion des stocks et organisation des matériaux",
+                  "Contrôle qualité initial des produits"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "Maintenance Informatique – Auto-entrepreneur",
+            "period": "",
+            "positions": [
+              {
+                "title": "Technicien de Maintenance",
+                "responsibilities": [
+                  "Formatage, changement de pièces et mise à jour logicielle",
+                  "Service client et support technique à distance et sur site",
+                  "Installation et configuration de systèmes d'exploitation",
+                  "Maintenance préventive et corrective du matériel"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "habilidades": {
+        "title": "Compétences",
+        "tecnicas": {
+          "title": "Techniques",
+          "items": [
+            "Maintenance de matériel et logiciel",
+            "Linux (intermédiaire)",
+            "JavaScript (intermédiaire)",
+            "Microsoft Office (Excel, Word et PowerPoint)",
+            "C",
+            "Réseaux informatiques",
+            "Support technique",
+            "HTML",
+            "Administration de systèmes",
+            "CSS",
+            "Base de données SQL",
+            "Développement Web",
+            "Git et contrôle de version"
+          ]
+        },
+        "interpessoais": {
+          "title": "Interpersonnelles",
+          "items": [
+            "Ponctualité",
+            "Responsabilité",
+            "Service client",
+            "Travail d'équipe",
+            "Résolution de problèmes",
+            "Communication efficace",
+            "Leadership",
+            "Gestion du temps"
+          ]
+        }
+      },
+      "download": "Télécharger le CV complet (PDF)"
+    },
+    "tecnologias": {
+      "number": "03",
+      "title": "Technologies et Outils",
+      "subtitle": "Stack technologique et outils que j'utilise",
+      "categories": {
+        "frontend": "Front-end",
+        "backend": "Backend",
+        "devops": "DevOps",
+        "databases": "Bases de données",
+        "ferramentas": "Outils",
+        "so": "Système d'exploitation"
+      }
+    },
+    "projetos": {
+      "number": "04",
+      "title": "Projets",
+      "subtitle": "Mes projets développés et en cours",
+      "category_title": "Portfolio de Développement",
+      "category_desc": "Explorez mes projets front-end, back-end et mes expérimentations de programmation.",
+      "search_placeholder": "Rechercher des projets par nom, technologie ou description...",
+      "found": "projets trouvés",
+      "no_results_title": "Aucun projet trouvé",
+      "no_results_desc": "Essayez d'ajuster votre recherche. Vous pouvez rechercher par nom de projet, technologies ou description.",
+      "code": "Code",
+      "demo": "Démo",
+      "cards": [
+        {
+          "title": "Animaux au Zoo 2",
+          "desc": "Une application web interactive pour gérer et visualiser des animaux dans un zoo virtuel.",
+          "tags": ["JavaScript", "HTML", "CSS"],
+          "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico2",
+          "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico2/"
+        },
+        {
+          "title": "Données Météo",
+          "desc": "Système de collecte, traitement et visualisation de données météorologiques provenant de différentes sources.",
+          "tags": ["JavaScript", "API", "CSS"],
+          "codeLink": "https://github.com/LeandroStanger/DadosClimaticos",
+          "demoLink": "https://leandrostanger.github.io/DadosClimaticos/"
+        },
+        {
+          "title": "Formulaire de Feedback",
+          "desc": "Formulaire interactif pour recueillir les commentaires des utilisateurs avec validation des données.",
+          "tags": ["HTML", "CSS", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/FormularioDeFeedback",
+          "demoLink": "https://leandrostanger.github.io/FormularioDeFeedback/"
+        },
+        {
+          "title": "Voitures Amusantes",
+          "desc": "Jeu interactif avec des voitures dans un environnement 2D, développé pour pratiquer des concepts de programmation.",
+          "tags": ["JavaScript", "HTML5", "CSS3"],
+          "codeLink": "https://github.com/LeandroStanger/CarrosDivertidos",
+          "demoLink": "https://leandrostanger.github.io/CarrosDivertidos/"
+        },
+        {
+          "title": "Course de Voitures",
+          "desc": "Simulation de course de voitures avec contrôles interactifs et système de score.",
+          "tags": ["JavaScript", "CSS3", "HTML5"],
+          "codeLink": "https://github.com/LeandroStanger/CorridaDeCarro",
+          "demoLink": "https://leandrostanger.github.io/CorridaDeCarro/"
+        },
+        {
+          "title": "Animaux au Zoo",
+          "desc": "Version initiale du système de gestion de zoo, axée sur l'apprentissage de JavaScript.",
+          "tags": ["JavaScript", "HTML", "CSS"],
+          "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico",
+          "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico/"
+        },
+        {
+          "title": "Site avec Boucle",
+          "desc": "Site démonstratif avec effets visuels en boucle et animations CSS/JavaScript.",
+          "tags": ["HTML", "CSS", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/SiteComLoop",
+          "demoLink": "https://leandrostanger.github.io/SiteComLoop/"
+        },
+        {
+          "title": "Système de Connexion",
+          "desc": "Système d'authentification des utilisateurs avec validation des identifiants et interface responsive.",
+          "tags": ["JavaScript", "HTML", "CSS"],
+          "codeLink": "https://github.com/LeandroStanger/SistemaDeLogin",
+          "demoLink": "https://leandrostanger.github.io/SistemaDeLogin/"
+        },
+        {
+          "title": "Gestionnaire de Liste",
+          "desc": "Application pour créer, éditer et supprimer des éléments de listes, avec stockage local.",
+          "tags": ["JavaScript", "LocalStorage", "CSS"],
+          "codeLink": "https://github.com/LeandroStanger/GerenciadorDeLista",
+          "demoLink": "https://leandrostanger.github.io/GerenciadorDeLista/"
+        },
+        {
+          "title": "Projets Initiaux",
+          "desc": "Collection de mes premiers projets de programmation, démontrant mon évolution en tant que développeur.",
+          "tags": ["HTML", "CSS", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais",
+          "demoLink": ""
+        },
+        {
+          "title": "Portfolio Leandro Stanger",
+          "desc": "Dépôt principal avec profil, README détaillé et liens vers tous les projets. Focus sur le développement Front-end avec HTML, CSS et JavaScript.",
+          "tags": ["HTML5", "CSS3", "JavaScript", "Git"],
+          "codeLink": "https://github.com/LeandroStanger/LeandroStanger",
+          "demoLink": "https://leandrostanger.github.io/LeandroStanger/"
+        },
+        {
+          "title": "Villes à Fortes Températures",
+          "desc": "Application web interactive qui affiche et filtre les données sur les villes aux climats extrêmes. Inclut carte, tableau de bord et visualisation des données climatiques.",
+          "tags": ["JavaScript (ES6+)", "API", "CSS3", "Data Visualization"],
+          "codeLink": "https://github.com/LeandroStanger/CidadesComAltasTemperaturas",
+          "demoLink": "https://leandrostanger.github.io/CidadesComAltasTemperaturas/"
+        },
+        {
+          "title": "Site avec Boucle Hack",
+          "desc": "Site expérimental avec effets visuels en boucle, animations créatives et techniques avancées de CSS/JavaScript. Démontre des compétences en animations et design interactif.",
+          "tags": ["HTML5", "CSS3", "JavaScript", "Animations", "Web Experiments"],
+          "codeLink": "https://github.com/LeandroStanger/SiteComLoopHack",
+          "demoLink": "https://leandrostanger.github.io/SiteComLoopHack/"
+        },
+        {
+          "title": "Projets Initiaux (Langage C)",
+          "desc": "Collection de mes premiers projets de programmation en langage C, démontrant mon évolution en tant que développeur.",
+          "tags": ["C", "GCC"],
+          "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-C",
+          "demoLink": ""
+        },
+        {
+          "title": "Système d'Animaux de Compagnie",
+          "desc": "Un catalogue statique et responsive qui affiche une liste d'animaux de compagnie, présentant des informations de base comme le nom, l'espèce, l'âge, le poids et le niveau d'énergie dans une interface web conviviale.",
+          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "codeLink": "https://github.com/LeandroStanger/SistemaDeAnimaisDeEstimacao",
+          "demoLink": "https://leandrostanger.github.io/SistemaDeAnimaisDeEstimacao/"
+        },
+        {
+          "title": "Tableau de Bord des Joueurs",
+          "desc": "Statistiques complètes des plus grands joueurs de football. Un panneau web moderne et interactif pour visualiser et analyser les données des joueurs sous forme de tableau de bord.",
+          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "codeLink": "https://github.com/LeandroStanger/DashboardDeJogadores",
+          "demoLink": "https://leandrostanger.github.io/DashboardDeJogadores/"
+        }
+      ]
+    },
+    "contato": {
+      "number": "05",
+      "title": "Contact",
+      "subtitle": "Je suis toujours ouvert aux nouvelles opportunités et collaborations",
+      "intro": "Parlons de projets, d'opportunités ou simplement échangeons des idées sur la technologie !",
+      "form": {
+        "title": "Envoyer un message",
+        "name_label": "Nom",
+        "name_placeholder": "Entrez votre nom complet",
+        "email_label": "E-mail",
+        "email_placeholder": "Entrez votre e-mail : vous@email.com",
+        "message_label": "Message",
+        "message_placeholder": "Écrivez votre message ici...",
+        "send": "Envoyer le message",
+        "sending": "Envoi en cours...",
+        "success": "✅ Message envoyé avec succès ! Je vous répondrai bientôt.",
+        "error": "❌ Une erreur s'est produite lors de l'envoi. Veuillez réessayer."
+      },
+      "links": {
+        "linkedin": "LinkedIn",
+        "linkedin_desc": "Connectez-vous professionnellement",
+        "github": "GitHub",
+        "github_desc": "Voir mes projets",
+        "instagram": "Instagram",
+        "instagram_desc": "Suivez-moi sur Instagram",
+        "telegram": "Telegram",
+        "telegram_desc": "@leandrostanger",
+        "99freelas": "99freelas",
+        "99freelas_desc": "Profil professionnel",
+        "x": "X",
+        "x_desc": "@LeandroStanger1",
+        "messenger": "Messenger",
+        "messenger_desc": "@leandrostanger"
+      }
+    },
+    "doacoes": {
+      "number": "06",
+      "title": "Dons",
+      "subtitle": "Contribuez au développement",
+      "card_title": "Soutenez mes études",
+      "intro": "Les contributions volontaires aident directement à la continuité de mes études et au développement de ce projet.\nActuellement, je suis en parcours académique à l'Université Unopar, cherchant à évoluer constamment dans le domaine de la technologie et du développement.\nLe soutien reçu contribue à l'achat de livres, de ressources éducatives et à aider avec les frais universitaires.\nCela permet également d'investir dans l'amélioration du projet et la création de nouvelles initiatives technologiques à l'avenir.\nToute contribution est la bienvenue et fait la différence dans ce parcours d'apprentissage et d'évolution.",
+      "real_title": "Real (BRL)",
+      "dolar_title": "Dollar (USD)",
+      "pix": {
+        "title": "Pix",
+        "chave": "c348f1e6-72fa-4988-a2e9-3ac7d539de84",
+        "copiar": "Copier la clé Pix",
+        "copiado": "Clé copiée !",
+        "instrucao": "Scannez le QR code ou copiez la clé pour faire un Pix."
+      },
+      "kofi": {
+        "title": "Ko-fi",
+        "description": "Si vous préférez donner en dollars, vous pouvez me soutenir sur Ko-fi. C'est rapide et facile !"
+      },
+      "transferencia": {
+        "title": "Virement ou dépôt bancaire",
+        "bankLabel": "Banque :",
+        "agencyLabel": "Agence :",
+        "accountLabel": "Compte courant :",
+        "beneficiaryLabel": "Bénéficiaire :",
+        "cpfLabel": "CPF :",
+        "copy": "Copier"
+      },
+      "crypto": {
+        "title": "Cryptomonnaies",
+        "copyButton": "Copier l'adresse",
+        "copySuccess": "Adresse copiée avec succès !"
+      },
+      "internacional": {
+        "title": "Virement bancaire international",
+        "achTitle": "ACH Transfer <span>(États-Unis)</span>",
+        "wireTitle": "Wire Transfer <span>(International)</span>",
+        "copyButton": "Copier le numéro",
+        "copyNumberSuccess": "Numéro copié !"
+      },
+      "qrcode_unavailable": "QR Code indisponible pour le moment.",
+      "copy_failed_key": "Impossible de copier la clé. Veuillez essayer manuellement.",
+      "copy_failed_address": "Impossible de copier l'adresse. Veuillez essayer manuellement.",
+      "copy_failed_number": "Impossible de copier le numéro. Veuillez essayer manuellement."
+    }
+  },
+  "footer": {
+    "tagline": "Développeur Full-Stack et Étudiant en Ingénierie Informatique",
+    "copyright_prefix": "© 2025 - ",
+    "copyright_suffix": " Leandro Stanger. Tous droits réservés."
+  }
+}

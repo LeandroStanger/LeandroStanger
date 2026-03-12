@@ -461,18 +461,19 @@ html.light-theme .theme-toggle:hover {
     margin-bottom: var(--space-8);
 }
 
+/* ============ CORREÇÃO PARA OS SUBTÍTULOS (EMPILHADOS EM TODOS OS IDIOMAS) ============ */
 .tagline-content {
     display: flex;
-    align-items: center;
+    flex-direction: column;  /* Garante que os itens fiquem um abaixo do outro */
+    align-items: flex-start;
     gap: var(--space-3);
-    flex-wrap: wrap;
 }
 
 .tagline-item {
-    white-space: nowrap;
     position: relative;
     padding-left: 1.2em;
     color: var(--color-gray);
+    white-space: normal;      /* Permite quebra de linha dentro do item se necessário */
 }
 
 .tagline-item::before {
@@ -2765,6 +2766,10 @@ html.light-theme .btn-copy-internacional:hover {
     }
     .tagline-item::before {
         display: none;
+    }
+    /* Ajuste adicional para centralizar o conteúdo do header em mobile */
+    .tagline-content {
+        align-items: center;
     }
     .header-actions {
         flex-direction: column;

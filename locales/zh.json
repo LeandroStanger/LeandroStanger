@@ -1,0 +1,416 @@
+{
+  "site": {
+    "title": "Leandro Stanger - 作品集",
+    "description": "Leandro Stanger的专业作品集 - 开发者和计算机工程学生"
+  },
+  "header": {
+    "title": "Leandro Stanger",
+    "subtitle1": "全栈开发者！",
+    "subtitle2": "计算机工程学生！",
+    "btn_contact": "联系我",
+    "btn_resume": "查看简历"
+  },
+  "scroll": "滚动",
+  "ongoing": "进行中",
+  "sections": {
+    "sobre": {
+      "number": "01",
+      "title": "关于我",
+      "subtitle": "我的历程、热情和目标",
+      "cards": [
+        {
+          "title": "学术背景",
+          "text": "在<a href=\"https://www.unopar.com.br/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"highlight-link\">UNOPAR - 北巴拉那大学</a>攻读计算机工程。在技术领域不断进步，始终寻求新知识和挑战以实现专业成长。",
+          "icon": "graduation-cap"
+        },
+        {
+          "title": "对技术的热情",
+          "text": "热爱编程、技术和持续学习。我相信技术有改变世界的力量，我致力于通过开发创新解决方案为这一变革做出贡献。",
+          "icon": "code"
+        },
+        {
+          "title": "柔术与纪律",
+          "text": "柔术练习者，这项运动教会我纪律、韧性和策略——这些品质我直接应用于软件开发和解决复杂问题。",
+          "icon": "medal"
+        }
+      ]
+    },
+    "curriculo": {
+      "number": "02",
+      "title": "简历",
+      "subtitle": "我的专业和学术历程",
+      "objetivo": {
+        "title": "职业目标",
+        "text": "我寻求在IT领域担任<strong>开发者</strong>或<strong>数据库分析师</strong>的职位，能够应用我在计算机和网络维护方面的知识，同时继续发展我在技术支持、系统管理、软件开发和数据库管理方面的技能。",
+        "areas": [
+          {
+            "title": "开发者",
+            "text": "有兴趣从事Web应用和系统开发，使用现代技术并遵循最佳编程实践。",
+            "icon": "rocket"
+          },
+          {
+            "title": "数据库",
+            "text": "希望从事数据库建模、管理和优化工作，确保系统的完整性和性能。",
+            "icon": "database"
+          }
+        ]
+      },
+      "educacao": {
+        "title": "教育",
+        "items": [
+          {
+            "date": "进行中 (开始: 2025年2月)",
+            "title": "计算机工程学士学位",
+            "institution": "Unopar",
+            "progress": {
+              "completed": 11,
+              "total": 53,
+              "label": "已完成 {completed} / {total} 门课程",
+              "semesterText": "第3学期 — 进行中"
+            },
+            "referral": {
+              "link": "http://www.portalpos.com.br/?utm_voceindica=135742",
+              "text": "也去Unopar学习"
+            }
+          },
+          {
+            "date": "2024年2月至2025年6月",
+            "title": "计算机维护与支持技术员",
+            "institution": "AMPLI",
+            "status": ["已完成"]
+          },
+          {
+            "date": "2016年4月至2016年10月",
+            "title": "计算机组装与维护及网络课程",
+            "institution": "YesBras Escolas do Brasil",
+            "status": ["已完成"]
+          },
+          {
+            "date": "2015年至2017年10月",
+            "title": "高中",
+            "institution": "SESI",
+            "status": ["已完成"]
+          },
+          {
+            "date": "2014年9月至2015年9月",
+            "title": "APP课程 – 个人与职业行政管理",
+            "institution": "Unisoft计算机学校",
+            "status": ["已完成"]
+          },
+          {
+            "date": "2013年9月至2014年9月",
+            "title": "QIT课程 – 信息技术资格",
+            "institution": "Unisoft计算机学校",
+            "status": ["已完成"]
+          }
+        ]
+      },
+      "experiencia": {
+        "title": "专业经验",
+        "items": [
+          {
+            "company": "Confecções Vanelise",
+            "period": "",
+            "positions": [
+              {
+                "title": "发货助理 2级 (平纹织物)",
+                "period": "",
+                "responsibilities": [
+                  "晋升至2级，承担更大责任",
+                  "培训新员工",
+                  "箱包部门的高级库存管理",
+                  "发货过程的质量控制"
+                ]
+              },
+              {
+                "title": "发货助理 (平纹织物)",
+                "period": "",
+                "responsibilities": [
+                  "接收和组织维修托盘",
+                  "供应检修和存储零件",
+                  "库存管理和材料组织",
+                  "产品的初始质量控制"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "计算机维护 – 自由职业",
+            "period": "",
+            "positions": [
+              {
+                "title": "维护技术员",
+                "responsibilities": [
+                  "格式化、更换零件和软件更新",
+                  "客户服务和远程/现场技术支持",
+                  "安装和配置操作系统",
+                  "硬件的预防性和纠正性维护"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "habilidades": {
+        "title": "技能",
+        "tecnicas": {
+          "title": "技术技能",
+          "items": [
+            "计算机维护（硬件和软件）",
+            "Linux（中级）",
+            "JavaScript（中级）",
+            "Microsoft Office（Excel、Word和PowerPoint）",
+            "C",
+            "计算机网络",
+            "技术支持",
+            "HTML",
+            "系统管理",
+            "CSS",
+            "SQL数据库",
+            "Web开发",
+            "Git和版本控制"
+          ]
+        },
+        "interpessoais": {
+          "title": "人际交往技能",
+          "items": [
+            "守时",
+            "责任心",
+            "客户服务",
+            "团队合作",
+            "解决问题",
+            "有效沟通",
+            "领导力",
+            "时间管理"
+          ]
+        }
+      },
+      "download": "下载完整简历 (PDF)"
+    },
+    "tecnologias": {
+      "number": "03",
+      "title": "技术与工具",
+      "subtitle": "我使用的技术栈和工具",
+      "categories": {
+        "frontend": "前端",
+        "backend": "后端",
+        "devops": "DevOps",
+        "databases": "数据库",
+        "ferramentas": "工具",
+        "so": "操作系统"
+      }
+    },
+    "projetos": {
+      "number": "04",
+      "title": "项目",
+      "subtitle": "我已完成和正在进行的项目",
+      "category_title": "开发作品集",
+      "category_desc": "探索我的前端、后端项目和编程实验。",
+      "search_placeholder": "按名称、技术或描述搜索项目...",
+      "found": "个项目",
+      "no_results_title": "未找到项目",
+      "no_results_desc": "尝试调整搜索条件。您可以按项目名称、技术或描述进行搜索。",
+      "code": "代码",
+      "demo": "演示",
+      "cards": [
+        {
+          "title": "动物园动物 2",
+          "desc": "一个交互式Web应用程序，用于管理和查看虚拟动物园中的动物。",
+          "tags": ["JavaScript", "HTML", "CSS"],
+          "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico2",
+          "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico2/"
+        },
+        {
+          "title": "气候数据",
+          "desc": "用于收集、处理和可视化不同来源气象数据的系统。",
+          "tags": ["JavaScript", "API", "CSS"],
+          "codeLink": "https://github.com/LeandroStanger/DadosClimaticos",
+          "demoLink": "https://leandrostanger.github.io/DadosClimaticos/"
+        },
+        {
+          "title": "反馈表单",
+          "desc": "用于收集用户反馈的交互式表单，带有数据验证。",
+          "tags": ["HTML", "CSS", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/FormularioDeFeedback",
+          "demoLink": "https://leandrostanger.github.io/FormularioDeFeedback/"
+        },
+        {
+          "title": "趣味汽车",
+          "desc": "2D环境中的交互式汽车游戏，用于练习编程概念。",
+          "tags": ["JavaScript", "HTML5", "CSS3"],
+          "codeLink": "https://github.com/LeandroStanger/CarrosDivertidos",
+          "demoLink": "https://leandrostanger.github.io/CarrosDivertidos/"
+        },
+        {
+          "title": "汽车比赛",
+          "desc": "带有交互控制和计分系统的汽车比赛模拟。",
+          "tags": ["JavaScript", "CSS3", "HTML5"],
+          "codeLink": "https://github.com/LeandroStanger/CorridaDeCarro",
+          "demoLink": "https://leandrostanger.github.io/CorridaDeCarro/"
+        },
+        {
+          "title": "动物园动物",
+          "desc": "动物园管理系统的初始版本，专注于学习JavaScript。",
+          "tags": ["JavaScript", "HTML", "CSS"],
+          "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico",
+          "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico/"
+        },
+        {
+          "title": "循环网站",
+          "desc": "带有循环视觉效果和CSS/JavaScript动画的演示网站。",
+          "tags": ["HTML", "CSS", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/SiteComLoop",
+          "demoLink": "https://leandrostanger.github.io/SiteComLoop/"
+        },
+        {
+          "title": "登录系统",
+          "desc": "带有凭据验证和响应式界面的用户认证系统。",
+          "tags": ["JavaScript", "HTML", "CSS"],
+          "codeLink": "https://github.com/LeandroStanger/SistemaDeLogin",
+          "demoLink": "https://leandrostanger.github.io/SistemaDeLogin/"
+        },
+        {
+          "title": "列表管理器",
+          "desc": "用于创建、编辑和删除列表项的应用程序，带有本地存储。",
+          "tags": ["JavaScript", "LocalStorage", "CSS"],
+          "codeLink": "https://github.com/LeandroStanger/GerenciadorDeLista",
+          "demoLink": "https://leandrostanger.github.io/GerenciadorDeLista/"
+        },
+        {
+          "title": "初始项目",
+          "desc": "我第一批编程项目的集合，展示我作为开发者的成长。",
+          "tags": ["HTML", "CSS", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais",
+          "demoLink": ""
+        },
+        {
+          "title": "Leandro Stanger 作品集",
+          "desc": "主仓库，包含个人资料、详细README和所有项目的链接。专注于使用HTML、CSS和JavaScript进行前端开发。",
+          "tags": ["HTML5", "CSS3", "JavaScript", "Git"],
+          "codeLink": "https://github.com/LeandroStanger/LeandroStanger",
+          "demoLink": "https://leandrostanger.github.io/LeandroStanger/"
+        },
+        {
+          "title": "高温城市",
+          "desc": "交互式Web应用程序，显示和过滤极端气候城市的数据。包括地图、仪表盘和气候数据可视化。",
+          "tags": ["JavaScript (ES6+)", "API", "CSS3", "Data Visualization"],
+          "codeLink": "https://github.com/LeandroStanger/CidadesComAltasTemperaturas",
+          "demoLink": "https://leandrostanger.github.io/CidadesComAltasTemperaturas/"
+        },
+        {
+          "title": "循环黑客网站",
+          "desc": "带有循环视觉效果、创意动画和高级CSS/JavaScript技术的实验性网站。展示动画和交互设计技能。",
+          "tags": ["HTML5", "CSS3", "JavaScript", "Animations", "Web Experiments"],
+          "codeLink": "https://github.com/LeandroStanger/SiteComLoopHack",
+          "demoLink": "https://leandrostanger.github.io/SiteComLoopHack/"
+        },
+        {
+          "title": "初始项目 (C语言)",
+          "desc": "我第一批C语言编程项目的集合，展示我作为开发者的成长。",
+          "tags": ["C", "GCC"],
+          "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-C",
+          "demoLink": ""
+        },
+        {
+          "title": "宠物动物系统",
+          "desc": "一个静态且响应式的目录，显示宠物列表，在用户友好的Web界面中展示基本信息，如名称、种类、年龄、体重和精力水平。",
+          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "codeLink": "https://github.com/LeandroStanger/SistemaDeAnimaisDeEstimacao",
+          "demoLink": "https://leandrostanger.github.io/SistemaDeAnimaisDeEstimacao/"
+        },
+        {
+          "title": "球员仪表板",
+          "desc": "最伟大足球运动员的完整统计数据。一个现代交互式Web面板，以仪表板形式查看和分析球员数据。",
+          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "codeLink": "https://github.com/LeandroStanger/DashboardDeJogadores",
+          "demoLink": "https://leandrostanger.github.io/DashboardDeJogadores/"
+        }
+      ]
+    },
+    "contato": {
+      "number": "05",
+      "title": "联系",
+      "subtitle": "我始终对新机会和合作持开放态度",
+      "intro": "让我们谈谈项目、机会，或者只是交流关于技术的想法！",
+      "form": {
+        "title": "发送消息",
+        "name_label": "姓名",
+        "name_placeholder": "输入您的全名",
+        "email_label": "电子邮件",
+        "email_placeholder": "输入您的电子邮件：you@email.com",
+        "message_label": "消息",
+        "message_placeholder": "在此处输入您的消息...",
+        "send": "发送消息",
+        "sending": "发送中...",
+        "success": "✅ 消息发送成功！我会尽快回复您。",
+        "error": "❌ 发送消息时出错。请重试。"
+      },
+      "links": {
+        "linkedin": "领英",
+        "linkedin_desc": "专业连接",
+        "github": "GitHub",
+        "github_desc": "查看我的项目",
+        "instagram": "Instagram",
+        "instagram_desc": "在Instagram上关注我",
+        "telegram": "Telegram",
+        "telegram_desc": "@leandrostanger",
+        "99freelas": "99freelas",
+        "99freelas_desc": "专业简介",
+        "x": "X",
+        "x_desc": "@LeandroStanger1",
+        "messenger": "Messenger",
+        "messenger_desc": "@leandrostanger"
+      }
+    },
+    "doacoes": {
+      "number": "06",
+      "title": "捐赠",
+      "subtitle": "助力开发",
+      "card_title": "支持我的学业",
+      "intro": "自愿捐款直接帮助我继续学业和开发这个项目。\n目前我正在Unopar大学进行学术之旅，不断寻求在技术和开发领域的进步。\n收到的支持有助于购买书籍、教育资源，并帮助支付大学费用。\n也使我能够投资于项目的改进和未来创建新的技术计划。\n任何贡献都非常受欢迎，并在这个学习和发展的旅程中发挥作用。",
+      "real_title": "雷亚尔 (BRL)",
+      "dolar_title": "美元 (USD)",
+      "pix": {
+        "title": "Pix",
+        "chave": "c348f1e6-72fa-4988-a2e9-3ac7d539de84",
+        "copiar": "复制Pix密钥",
+        "copiado": "密钥已复制！",
+        "instrucao": "扫描二维码或复制密钥进行Pix支付。"
+      },
+      "kofi": {
+        "title": "Ko-fi",
+        "description": "如果您想用美元捐赠，可以在Ko-fi上支持我。快速简便！"
+      },
+      "transferencia": {
+        "title": "银行转账或存款",
+        "bankLabel": "银行：",
+        "agencyLabel": "分行：",
+        "accountLabel": "活期账户：",
+        "beneficiaryLabel": "收款人：",
+        "cpfLabel": "CPF：",
+        "copy": "复制"
+      },
+      "crypto": {
+        "title": "加密货币",
+        "copyButton": "复制地址",
+        "copySuccess": "地址复制成功！"
+      },
+      "internacional": {
+        "title": "国际银行转账",
+        "achTitle": "ACH转账 <span>(美国)</span>",
+        "wireTitle": "电汇 <span>(国际)</span>",
+        "copyButton": "复制号码",
+        "copyNumberSuccess": "号码已复制！"
+      },
+      "qrcode_unavailable": "二维码暂时不可用。",
+      "copy_failed_key": "无法复制密钥。请手动尝试。",
+      "copy_failed_address": "无法复制地址。请手动尝试。",
+      "copy_failed_number": "无法复制号码。请手动尝试。"
+    }
+  },
+  "footer": {
+    "tagline": "全栈开发者和计算机工程学生",
+    "copyright_prefix": "© 2025 - ",
+    "copyright_suffix": " Leandro Stanger。保留所有权利。"
+  }
+}
