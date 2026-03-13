@@ -522,6 +522,24 @@ const ExperienceCalc = {
     }
 };
 
+// ==================== RANDOMIZAÇÃO DOS ÍCONES DE TECNOLOGIAS ====================
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+function shuffleTechnologiesIcons() {
+    const containers = document.querySelectorAll('.tecnologia-icons');
+    containers.forEach(container => {
+        const icons = Array.from(container.children);
+        shuffleArray(icons);
+        icons.forEach(icon => container.appendChild(icon));
+    });
+}
+
 // ==================== COMPONENTE DE PROJETOS ====================
 class ProjectsSearch {
     constructor() {
@@ -1077,6 +1095,9 @@ function initDoacoes() {
         window.projectsSearch = new ProjectsSearch();
 
         I18n.updateActiveButton();
+
+        // ===== NOVA FUNÇÃO: randomizar ícones das tecnologias =====
+        shuffleTechnologiesIcons();
 
         console.log('Inicialização concluída com sucesso.');
     } catch (error) {
