@@ -143,11 +143,9 @@ Vamos conversar sobre projetos, oportunidades ou apenas trocar ideias sobre tecn
 ## Doações
 <div align="center">
 
-Contribua para o desenvolvimento
+Contribua para o desenvolvimento e apoie meus estudos!
 
-### Apoie meus estudos
-
-Contribuições voluntárias ajudam diretamente na continuidade dos meus estudos e no desenvolvimento deste projeto. 
+Sua contribuição voluntária ajuda diretamente na continuidade dos meus estudos e no desenvolvimento deste projeto. Todo suporte é bem-vindo e faz a diferença para que eu possa dedicar mais tempo e recursos para trazer conteútos e soluções cada vez melhores.
  
 [![Apoie meus estudos](https://img.shields.io/badge/Apoie_meus_estudos-EAB300?style=for-the-badge&logo=bitcoinsv&logoColor=EAB300&labelColor=000000)](https://leandrostanger.github.io/LeandroStanger/#doacoes)
 
