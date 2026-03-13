@@ -70,24 +70,24 @@
 }
 
 html.light-theme {
-    --color-dark: #f8f9fa;
+    --color-dark: #f5f7fa;
     --color-dark-900: #ffffff;
-    --color-dark-800: #f1f5f9;
-    --color-dark-700: #e2e8f0;
-    --color-dark-600: #cbd5e1;
-    --color-light: #0f172a;
-    --color-light-900: #1e293b;
-    --color-light-800: #334155;
-    --color-light-700: #475569;
-    --color-gray: #64748b;
-    --color-gray-dark: #94a3b8;
-    --color-primary-soft: rgba(16, 185, 129, 0.1);
-    --color-secondary-soft: rgba(14, 165, 233, 0.1);
+    --color-dark-800: #f3f4f6;
+    --color-dark-700: #e5e7eb;
+    --color-dark-600: #d1d5db;
+    --color-light: #1f2937;
+    --color-light-900: #4b5563;
+    --color-light-800: #6b7280;
+    --color-light-700: #9ca3af;
+    --color-gray: #6b7280;
+    --color-gray-dark: #4b5563;
+    --color-primary-soft: rgba(16, 185, 129, 0.08);
+    --color-secondary-soft: rgba(14, 165, 233, 0.08);
     --header-gradient-start: rgba(255, 255, 255, 0.9);
     --header-gradient-end: rgba(245, 245, 245, 0.8);
 }
 
-/* Sombra suave para cards no tema claro */
+/* Sombra suave refinada para cards no tema claro */
 html.light-theme .sobre-card,
 html.light-theme .curriculo-section,
 html.light-theme .tecnologia-categoria,
@@ -95,19 +95,20 @@ html.light-theme .projeto-card,
 html.light-theme .doacoes-card,
 html.light-theme .contato-link,
 html.light-theme .form,
-html.light-theme .bank-item {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+html.light-theme .bank-item,
+html.light-theme .internacional-card {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }
 
 /* Cards internacionais corrigidos */
 html.light-theme .internacional-card {
     background: var(--color-dark-900);
-    border-color: var(--color-dark-600);
+    border-color: var(--color-dark-700);
 }
 
 html.light-theme .internacional-card-number {
     background: var(--color-dark-800);
-    border-color: var(--color-dark-600);
+    border-color: var(--color-dark-700);
     color: var(--color-primary-dark);
 }
 
@@ -115,20 +116,20 @@ html.light-theme .internacional-card-number {
 html.light-theme .bank-value {
     background: var(--color-dark-800);
     color: var(--color-primary-dark);
-    border-color: var(--color-dark-600);
+    border-color: var(--color-dark-700);
 }
 
 /* Botões de cópia no tema claro */
 html.light-theme .btn-copy-internacional {
-    background: rgba(16,185,129,0.1);
+    background: var(--color-primary-soft);
     color: var(--color-primary-dark);
-    border-color: rgba(16,185,129,0.2);
+    border-color: rgba(16, 185, 129, 0.2);
 }
 
 html.light-theme .copy-button {
-    background: rgba(16,185,129,0.05);
+    background: var(--color-primary-soft);
     color: var(--color-primary-dark);
-    border-color: rgba(16,185,129,0.2);
+    border-color: rgba(16, 185, 129, 0.2);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -624,8 +625,8 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
 @media (min-width: 1024px) { .sobre-grid { grid-template-columns: repeat(3, 1fr); } }
 
 .sobre-card {
-    background: var(--color-dark-800);
-    border: 1px solid var(--color-dark-600);
+    background: var(--color-dark-900);
+    border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-xl);
     padding: var(--space-6);
     transition: all var(--transition-normal);
@@ -651,7 +652,7 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
     gap: var(--space-4);
     margin-bottom: var(--space-4);
     padding-bottom: var(--space-4);
-    border-bottom: 1px solid var(--color-dark-600);
+    border-bottom: 1px solid var(--color-dark-700);
 }
 
 .sobre-icon {
@@ -698,16 +699,16 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
 }
 
 .curriculo-section {
-    background: var(--color-dark-800);
+    background: var(--color-dark-900);
     border-radius: var(--radius-xl);
     padding: var(--space-6);
-    border: 1px solid var(--color-dark-600);
+    border: 1px solid var(--color-dark-700);
 }
 
 .curriculo-section-header {
     margin-bottom: var(--space-4);
     padding-bottom: var(--space-3);
-    border-bottom: 1px solid var(--color-dark-600);
+    border-bottom: 1px solid var(--color-dark-700);
 }
 
 .curriculo-section-title {
@@ -733,8 +734,8 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
 @media (min-width: 640px) { .objetivo-grid { grid-template-columns: repeat(2, 1fr); } }
 
 .objetivo-area {
-    background: var(--color-dark-900);
-    border: 1px solid var(--color-dark-600);
+    background: var(--color-dark-800);
+    border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-lg);
     padding: var(--space-5);
     transition: all var(--transition-normal);
@@ -863,8 +864,8 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
 }
 
 .experiencia-item {
-    background: var(--color-dark-900);
-    border: 1px solid var(--color-dark-600);
+    background: var(--color-dark-800);
+    border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-lg);
     padding: var(--space-5);
     transition: all var(--transition-normal);
@@ -910,7 +911,7 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
 .experiencia-cargo {
     margin-top: var(--space-4);
     padding-top: var(--space-4);
-    border-top: 1px solid var(--color-dark-600);
+    border-top: 1px solid var(--color-dark-700);
 }
 
 .cargo-title {
@@ -957,8 +958,8 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
 @media (min-width: 640px) { .habilidades-grid { grid-template-columns: repeat(2, 1fr); } }
 
 .habilidades-categoria {
-    background: var(--color-dark-900);
-    border: 1px solid var(--color-dark-600);
+    background: var(--color-dark-800);
+    border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-lg);
     padding: var(--space-5);
 }
@@ -1050,8 +1051,8 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
 @media (min-width: 1024px) { .tecnologias-grid { grid-template-columns: repeat(3, 1fr); } }
 
 .tecnologia-categoria {
-    background: var(--color-dark-800);
-    border: 1px solid var(--color-dark-600);
+    background: var(--color-dark-900);
+    border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-lg);
     padding: var(--space-5);
     transition: all var(--transition-normal);
@@ -1065,7 +1066,7 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
 .tecnologia-categoria-header {
     margin-bottom: var(--space-4);
     padding-bottom: var(--space-3);
-    border-bottom: 1px solid var(--color-dark-600);
+    border-bottom: 1px solid var(--color-dark-700);
 }
 
 .tecnologia-categoria-title {
@@ -1090,7 +1091,7 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
     gap: var(--space-1);
     padding: var(--space-2);
     border-radius: var(--radius-md);
-    background: var(--color-dark-900);
+    background: var(--color-dark-800);
     transition: all var(--transition-normal);
     width: 100%;
 }
@@ -1125,7 +1126,7 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
     padding: var(--space-4);
     background: var(--color-dark-800);
     border-radius: var(--radius-lg);
-    border: 1px solid var(--color-dark-600);
+    border: 1px solid var(--color-dark-700);
 }
 
 .projetos-categoria-title {
@@ -1163,7 +1164,7 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
     display: flex;
     align-items: center;
     background: var(--color-dark-800);
-    border: 1px solid var(--color-dark-600);
+    border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-lg);
     padding: var(--space-3) var(--space-4);
     transition: all var(--transition-normal);
@@ -1225,8 +1226,8 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
 .projetos-grid:hover .projeto-card:not(.hidden):not(:hover) { opacity: 0.4 !important; }
 
 .projeto-card {
-    background: var(--color-dark-800);
-    border: 1px solid var(--color-dark-600);
+    background: var(--color-dark-900);
+    border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-xl);
     padding: var(--space-5);
     display: flex;
@@ -1329,7 +1330,7 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
     text-align: center;
     padding: var(--space-8) var(--space-4);
     background: var(--color-dark-800);
-    border: 1px solid var(--color-dark-600);
+    border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-xl);
     margin: var(--space-6) 0;
     display: none;
@@ -1400,8 +1401,8 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
     align-items: center;
     gap: var(--space-3);
     padding: var(--space-3);
-    background: var(--color-dark-800);
-    border: 1px solid var(--color-dark-600);
+    background: var(--color-dark-900);
+    border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-lg);
     transition: all var(--transition-normal);
     text-decoration: none;
@@ -1449,10 +1450,10 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
     flex-direction: column;
     gap: var(--space-4);
     width: 100%;
-    background: var(--color-dark-800);
+    background: var(--color-dark-900);
     padding: var(--space-5);
     border-radius: var(--radius-lg);
-    border: 1px solid var(--color-dark-600);
+    border: 1px solid var(--color-dark-700);
     box-shadow: var(--shadow-md);
     transition: all var(--transition-normal);
     margin-top: var(--space-4);
@@ -1478,11 +1479,11 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
 
 .form input, .form textarea {
     outline: 0;
-    border: 1px solid var(--color-dark-600);
+    border: 1px solid var(--color-dark-700);
     padding: var(--space-3) var(--space-4);
     border-radius: var(--radius-md);
     width: 100%;
-    background: var(--color-dark-900);
+    background: var(--color-dark-800);
     color: var(--color-light);
     font-family: var(--font-primary);
     font-size: var(--text-base);
@@ -1571,7 +1572,7 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
 
 .main-footer {
     background: var(--color-dark-900);
-    border-top: 1px solid var(--color-dark-600);
+    border-top: 1px solid var(--color-dark-700);
     padding: var(--space-8) 0;
     margin-top: var(--space-12);
 }
@@ -1698,7 +1699,7 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
 .progress-bar {
     width: 100%;
     height: 8px;
-    background: var(--color-dark-600);
+    background: var(--color-dark-700);
     border-radius: var(--radius-full);
     overflow: hidden;
     -webkit-backdrop-filter: blur(4px);
@@ -1724,7 +1725,7 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
     to { width: var(--target-width); }
 }
 
-html.light-theme .progress-bar { background: var(--color-light-700); }
+html.light-theme .progress-bar { background: var(--color-dark-700); }
 html.light-theme .progress-percentage { color: var(--color-primary-dark); }
 
 .progress-footer {
@@ -1805,8 +1806,8 @@ html.light-theme .semester-badge {
 @media (min-width: 768px) { .doacoes-metodos { grid-template-columns: 1fr 1fr; } }
 
 .doacoes-card {
-    background: var(--color-dark-800);
-    border: 1px solid var(--color-dark-600);
+    background: var(--color-dark-900);
+    border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-xl);
     padding: var(--space-6);
     transition: all var(--transition-normal);
@@ -1837,8 +1838,8 @@ html.light-theme .semester-badge {
 }
 
 .doacoes-pix {
-    background: var(--color-dark-900);
-    border: 1px solid var(--color-dark-600);
+    background: var(--color-dark-800);
+    border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-lg);
     padding: var(--space-5);
     text-align: center;
@@ -1870,7 +1871,7 @@ html.light-theme .semester-badge {
     font-family: monospace;
     font-size: var(--text-base);
     color: var(--color-primary-light);
-    border: 1px solid var(--color-dark-600);
+    border: 1px solid var(--color-dark-700);
     word-break: break-all;
     max-width: 100%;
 }
@@ -1921,8 +1922,8 @@ html.light-theme .semester-badge {
 }
 
 .doacoes-kofi {
-    background: var(--color-dark-900);
-    border: 1px solid var(--color-dark-600);
+    background: var(--color-dark-800);
+    border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-lg);
     padding: var(--space-5);
     text-align: center;
@@ -1962,8 +1963,8 @@ html.light-theme .semester-badge {
 @media (max-width: 640px) { .kofi-iframe { height: 600px; } }
 
 .doacoes-transferencia {
-    background: var(--color-dark-900);
-    border: 1px solid var(--color-dark-600);
+    background: var(--color-dark-800);
+    border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-lg);
     padding: var(--space-5);
     margin-top: var(--space-3);
@@ -1981,8 +1982,8 @@ html.light-theme .semester-badge {
 }
 
 .bank-item {
-    background: var(--color-dark-800);
-    border: 1px solid var(--color-dark-600);
+    background: var(--color-dark-900);
+    border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-md);
     padding: var(--space-4);
     margin-bottom: var(--space-4);
@@ -2003,7 +2004,7 @@ html.light-theme .semester-badge {
     gap: var(--space-3);
     margin-bottom: var(--space-3);
     padding-bottom: var(--space-3);
-    border-bottom: 1px solid var(--color-dark-600);
+    border-bottom: 1px solid var(--color-dark-700);
 }
 
 .bank-logo {
@@ -2045,10 +2046,10 @@ html.light-theme .semester-badge {
     font-family: monospace;
     font-size: var(--text-sm);
     color: var(--color-primary-light);
-    background: var(--color-dark-900);
+    background: var(--color-dark-800);
     padding: 2px 6px;
     border-radius: var(--radius-sm);
-    border: 1px solid var(--color-dark-600);
+    border: 1px solid var(--color-dark-700);
     white-space: nowrap;
 }
 
@@ -2084,11 +2085,11 @@ html.light-theme .semester-badge {
 html.light-theme .bank-value {
     background: var(--color-dark-800);
     color: var(--color-primary-dark);
-    border-color: var(--color-dark-600);
+    border-color: var(--color-dark-700);
 }
 
 html.light-theme .copy-button {
-    background: rgba(16,185,129,0.05);
+    background: var(--color-primary-soft);
     color: var(--color-primary-dark);
     border-color: rgba(16,185,129,0.2);
 }
@@ -2108,8 +2109,8 @@ html.light-theme .copy-button:hover {
 .doacoes-card-crypto { grid-column: 1 / -1; }
 
 .doacoes-crypto {
-    background: var(--color-dark-900);
-    border: 1px solid var(--color-dark-600);
+    background: var(--color-dark-800);
+    border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-lg);
     padding: var(--space-5);
     margin-top: var(--space-3);
@@ -2119,8 +2120,8 @@ html.light-theme .copy-button:hover {
 }
 
 .crypto-item {
-    background: var(--color-dark-800);
-    border: 1px solid var(--color-dark-600);
+    background: var(--color-dark-900);
+    border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-md);
     padding: var(--space-4);
     transition: all var(--transition-normal);
@@ -2140,7 +2141,7 @@ html.light-theme .copy-button:hover {
     gap: var(--space-3);
     margin-bottom: var(--space-3);
     padding-bottom: var(--space-3);
-    border-bottom: 1px solid var(--color-dark-600);
+    border-bottom: 1px solid var(--color-dark-700);
 }
 
 .crypto-logo {
@@ -2164,13 +2165,13 @@ html.light-theme .copy-button:hover {
     font-family: monospace;
     font-size: var(--text-sm);
     color: var(--color-gray);
-    background: var(--color-dark-900);
+    background: var(--color-dark-800);
     padding: var(--space-2);
     border-radius: var(--radius-sm);
     margin-bottom: var(--space-3);
     word-break: break-all;
     text-align: center;
-    border: 1px solid var(--color-dark-600);
+    border: 1px solid var(--color-dark-700);
 }
 
 .btn-copy-crypto {
@@ -2217,8 +2218,8 @@ html.light-theme .copy-button:hover {
 @media (max-width: 480px) { .doacoes-crypto { grid-template-columns: 1fr; } }
 
 .doacoes-internacional {
-    background: var(--color-dark-900);
-    border: 1px solid var(--color-dark-600);
+    background: var(--color-dark-800);
+    border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-lg);
     padding: var(--space-5);
     margin-top: var(--space-3);
@@ -2243,8 +2244,8 @@ html.light-theme .copy-button:hover {
 }
 
 .internacional-card {
-    background: var(--color-dark-800);
-    border: 1px solid var(--color-dark-600);
+    background: var(--color-dark-900);
+    border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-md);
     padding: var(--space-4);
     transition: all var(--transition-normal);
@@ -2264,7 +2265,7 @@ html.light-theme .copy-button:hover {
     gap: var(--space-2);
     margin-bottom: var(--space-3);
     padding-bottom: var(--space-2);
-    border-bottom: 1px solid var(--color-dark-600);
+    border-bottom: 1px solid var(--color-dark-700);
 }
 
 .internacional-card-header i {
@@ -2291,12 +2292,12 @@ html.light-theme .copy-button:hover {
     font-size: var(--text-lg);
     font-weight: 600;
     color: var(--color-primary-light);
-    background: var(--color-dark-900);
+    background: var(--color-dark-800);
     padding: var(--space-2);
     border-radius: var(--radius-sm);
     text-align: center;
     margin-bottom: var(--space-3);
-    border: 1px solid var(--color-dark-600);
+    border: 1px solid var(--color-dark-700);
 }
 
 .btn-copy-internacional {
@@ -2326,23 +2327,23 @@ html.light-theme .copy-button:hover {
 
 html.light-theme .internacional-card {
     background: var(--color-dark-900);
-    border-color: var(--color-dark-600);
+    border-color: var(--color-dark-700);
 }
 
 html.light-theme .internacional-card-number {
     background: var(--color-dark-800);
-    border-color: var(--color-dark-600);
+    border-color: var(--color-dark-700);
     color: var(--color-primary-dark);
 }
 
 html.light-theme .btn-copy-internacional {
-    background: rgba(16,185,129,0.1);
+    background: var(--color-primary-soft);
     color: var(--color-primary-dark);
     border-color: rgba(16,185,129,0.2);
 }
 
 html.light-theme .btn-copy-internacional:hover {
-    background: rgba(16,185,129,0.2);
+    background: rgba(16,185,129,0.1);
     border-color: var(--color-primary);
 }
 
