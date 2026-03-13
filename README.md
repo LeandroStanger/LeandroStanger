@@ -98,6 +98,7 @@ Coleção de meus primeiros projetos de programação na linguagem C, demonstran
 [![Azure Data Studio](https://img.shields.io/badge/Azure_Data_Studio-0078D7?style=for-the-badge&logo=icloud&logoColor=0078D7&labelColor=000000)](https://learn.microsoft.com/azure-data-studio/)
 [![Microsoft SQL Server](https://img.shields.io/badge/Microsoft_SQL_Server-00A2FF?style=for-the-badge&logo=sublimetext&logoColor=00A2FF&labelColor=000000)](https://www.microsoft.com/sql-server/)
 [![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=003545&labelColor=000000)](https://mariadb.org/)
+[![SQLite](https://img.shields.io/badge/SQLite-68bae7?style=for-the-badge&logo=sqlite&logoColor=68bae7&labelColor=000000)](https://sqlite.org)
 
 
 ### Ferramentas
