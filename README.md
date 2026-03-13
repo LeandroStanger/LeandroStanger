@@ -19,9 +19,9 @@ const leandro = {
   tecnologias: {
     frontend: ["HTML5", "CSS3", "JavaScript"],
     backend: ["Node.js", "C"],
-    bancoDados: ["MySQL", "Databricks", "Microsoft SQL Server", "SQL Server", "MariaDB"],
-    devOps: ["Docker", "Podman", "WinBoat"],
-    ferramentas: ["Git", "Github", "VS Code", "Microsoft Excel", "Code::Blocks"],
+    bancoDados: ["MySQL", "Databricks", "Microsoft SQL Server", "SQL Server", "MariaDB", "SQLite"],
+    devOps: ["Docker", "Podman", "WinBoat", "VirtualBox", "Ubuntu Server", "CentOS", "Bash", "Shell Script"],
+    ferramentas: ["Git", "Github", "VS Code", "Terminal", "Microsoft Excel", "Code::Blocks"],
     sistemaOperacional: ["Arch Linux", "BigLinux"]
   },
   foco: ["Interfaces Responsivas", "UX/UI", "Performance Web", "Banco de Dados"],
