@@ -91,6 +91,7 @@ Coleção de meus primeiros projetos de programação na linguagem C, demonstran
 [![Ubuntu Server](https://img.shields.io/badge/Ubuntu_Server-E95420?style=for-the-badge&logo=ubuntu&logoColor=E95420&labelColor=000000)](https://ubuntu.com/server)
 [![CentOS](https://img.shields.io/badge/CentOS-a14f8c?style=for-the-badge&logo=centos&logoColor=a14f8c&labelColor=000000)](https://www.centos.org/)
 [![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=4EAA25&labelColor=000000)](https://wikipedia.org/wiki/Bash_(Unix_shell))
+[![Shell Script](https://img.shields.io/badge/Shell_Script-41AD48?style=for-the-badge&logo=iterm2&logoColor=41AD48&labelColor=000000)](https://wikipedia.org/wiki/Shell_script)
 
 
 ### Databases
