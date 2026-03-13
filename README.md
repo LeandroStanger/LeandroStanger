@@ -113,6 +113,7 @@ Coleção de meus primeiros projetos de programação na linguagem C, demonstran
 [![Code::Blocks](https://img.shields.io/badge/Code::Blocks-41AD48?style=for-the-badge&logo=codeblocks&logoColor=41AD48&labelColor=000000)](https://www.codeblocks.org/)
 [![LibreOffice Writer](https://img.shields.io/badge/LibreOffice_Writer-083FA6?style=for-the-badge&logo=libreofficewriter&logoColor=083FA6&labelColor=000000)](https://www.libreoffice.org/discover/writer/)
 [![LibreOffice Calc](https://img.shields.io/badge/LibreOffice_Calc-007C3C?style=for-the-badge&logo=libreofficecalc&logoColor=007C3C&labelColor=000000)](https://www.libreoffice.org/discover/calc/)
+[![Flatpak](https://img.shields.io/badge/Flatpak-4A90D9?style=for-the-badge&logo=flatpak&logoColor=4A90D9&labelColor=000000)](https://flatpak.org/)
 
 
 ### Sistema Operacional
