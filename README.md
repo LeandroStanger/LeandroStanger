@@ -109,8 +109,10 @@ Coleção de meus primeiros projetos de programação na linguagem C, demonstran
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=000000)](https://github.com/)
 [![Visual Studio Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=vscodium&logoColor=0078D4&labelColor=000000)](https://code.visualstudio.com/)
 [![Terminal](https://img.shields.io/badge/Terminal-4EAA25?style=for-the-badge&logo=gnometerminal&logoColor=4EAA25&labelColor=000000)](https://wikipedia.org/wiki/Terminal_emulator)
-[![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=xstate&logoColor=217346&labelColor=000000)](https://www.microsoft.com/microsoft-365/excel)
+[![Microsoft Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=xstate&logoColor=217346&labelColor=000000)](https://www.microsoft.com/microsoft-365/excel)
 [![Code::Blocks](https://img.shields.io/badge/Code::Blocks-41AD48?style=for-the-badge&logo=codeblocks&logoColor=41AD48&labelColor=000000)](https://www.codeblocks.org/)
+[![LibreOffice Writer](https://img.shields.io/badge/LibreOffice_Writer-083FA6?style=for-the-badge&logo=libreofficewriter&logoColor=083FA6&labelColor=000000)](https://www.libreoffice.org/discover/writer/)
+[![LibreOffice Calc](https://img.shields.io/badge/LibreOffice_Calc-007C3C?style=for-the-badge&logo=libreofficecalc&logoColor=007C3C&labelColor=000000)](https://www.libreoffice.org/discover/calc/)
 
 
 ### Sistema Operacional
