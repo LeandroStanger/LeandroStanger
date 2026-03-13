@@ -90,6 +90,8 @@ Coleção de meus primeiros projetos de programação na linguagem C, demonstran
 [![VirtualBox](https://img.shields.io/badge/VirtualBox-2F61B4?style=for-the-badge&logo=virtualbox&logoColor=2F61B4&labelColor=000000)](https://www.virtualbox.org/)
 [![Ubuntu Server](https://img.shields.io/badge/Ubuntu_Server-E95420?style=for-the-badge&logo=ubuntu&logoColor=E95420&labelColor=000000)](https://ubuntu.com/server)
 [![CentOS](https://img.shields.io/badge/CentOS-a14f8c?style=for-the-badge&logo=centos&logoColor=a14f8c&labelColor=000000)](https://www.centos.org/)
+[![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=4EAA25&labelColor=000000)](https://wikipedia.org/wiki/Bash_(Unix_shell))
+
 
 ### Databases
 [![SQL](https://img.shields.io/badge/SQL-ef4750?style=for-the-badge&logo=databricks&logoColor=ef4750&labelColor=000000)](https://wikipedia.org/wiki/SQL)
@@ -105,6 +107,7 @@ Coleção de meus primeiros projetos de programação na linguagem C, demonstran
 [![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=F05032&labelColor=000000)](https://git-scm.com/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=000000)](https://github.com/)
 [![Visual Studio Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=vscodium&logoColor=0078D4&labelColor=000000)](https://code.visualstudio.com/)
+[![Terminal](https://img.shields.io/badge/Terminal-4EAA25?style=for-the-badge&logo=gnometerminal&logoColor=4EAA25&labelColor=000000)](https://wikipedia.org/wiki/Terminal_emulator)
 [![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=xstate&logoColor=217346&labelColor=000000)](https://www.microsoft.com/microsoft-365/excel)
 [![Code::Blocks](https://img.shields.io/badge/Code::Blocks-41AD48?style=for-the-badge&logo=codeblocks&logoColor=41AD48&labelColor=000000)](https://www.codeblocks.org/)
 
