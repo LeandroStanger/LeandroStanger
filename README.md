@@ -87,6 +87,7 @@ Coleção de meus primeiros projetos de programação na linguagem C, demonstran
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=2496ED&labelColor=000000)](https://www.docker.com/)
 [![Podman](https://img.shields.io/badge/Podman-892CA0?style=for-the-badge&logo=podman&logoColor=892CA0&labelColor=000000)](https://podman.io/)
 [![WinBoat](https://img.shields.io/badge/WinBoat-7153dd?style=for-the-badge&logo=corsair&logoColor=7153dd&labelColor=000000)](https://www.winboat.app/)
+[![VirtualBox](https://img.shields.io/badge/VirtualBox-2F61B4?style=for-the-badge&logo=virtualbox&logoColor=2F61B4&labelColor=000000)](https://www.centos.org/)
 [![Ubuntu Server](https://img.shields.io/badge/Ubuntu_Server-E95420?style=for-the-badge&logo=ubuntu&logoColor=E95420&labelColor=000000)](https://ubuntu.com/server)
 [![CentOS](https://img.shields.io/badge/CentOS-a14f8c?style=for-the-badge&logo=centos&logoColor=a14f8c&labelColor=000000)](https://www.centos.org/)
 
