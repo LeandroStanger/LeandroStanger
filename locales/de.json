@@ -166,9 +166,19 @@
             "HTML",
             "Systemadministration",
             "CSS",
-            "SQL-Datenbank",
+            "Datenbank",
+            "SQL",
             "Webentwicklung",
-            "Git und Versionskontrolle"
+            "Git und Versionskontrolle",
+            "GitHub",
+            "Docker",
+            "Podman",
+            "Bash",
+            "Shell Script",
+            "VirtualBox",
+            "WinBoat",
+            "Flatpak",
+            "Terminal"
           ]
         },
         "interpessoais": {

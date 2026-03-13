@@ -166,9 +166,19 @@
             "HTML",
             "系统管理",
             "CSS",
-            "SQL数据库",
+            "数据库",
+            "SQL",
             "Web开发",
-            "Git和版本控制"
+            "Git和版本控制",
+            "GitHub",
+            "Docker",
+            "Podman",
+            "Bash",
+            "Shell脚本",
+            "VirtualBox",
+            "WinBoat",
+            "Flatpak",
+            "终端"
           ]
         },
         "interpessoais": {

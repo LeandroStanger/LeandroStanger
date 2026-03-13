@@ -420,14 +420,19 @@ const Renderer = {
             container.innerHTML = '<div class="error-message">Erro ao carregar habilidades.</div>';
             return;
         }
+
+        // Embaralhar as listas sem modificar os originais
+        const shuffledTecnicas = shuffleArray([...tecnicas.items]);
+        const shuffledInterpessoais = shuffleArray([...interpessoais.items]);
+
         container.innerHTML = `
             <div class="habilidades-categoria">
                 <h4 class="habilidades-categoria-title"><i class="fas fa-code"></i> ${tecnicas.title || ''}</h4>
-                <div class="habilidades-lista">${tecnicas.items.map(item => `<span class="habilidade-tag">${item}</span>`).join('')}</div>
+                <div class="habilidades-lista">${shuffledTecnicas.map(item => `<span class="habilidade-tag">${item}</span>`).join('')}</div>
             </div>
             <div class="habilidades-categoria">
                 <h4 class="habilidades-categoria-title"><i class="fas fa-users"></i> ${interpessoais.title || ''}</h4>
-                <div class="habilidades-lista">${interpessoais.items.map(item => `<span class="habilidade-tag">${item}</span>`).join('')}</div>
+                <div class="habilidades-lista">${shuffledInterpessoais.map(item => `<span class="habilidade-tag">${item}</span>`).join('')}</div>
             </div>
         `;
     },
