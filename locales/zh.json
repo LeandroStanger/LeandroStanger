@@ -159,7 +159,8 @@
             "计算机维护（硬件和软件）",
             "Linux（中级）",
             "JavaScript（中级）",
-            "Microsoft Office（Excel、Word和PowerPoint）",
+            "Microsoft Excel",
+            "Microsoft Word",
             "C",
             "计算机网络",
             "技术支持",
@@ -169,7 +170,8 @@
             "数据库",
             "SQL",
             "Web开发",
-            "Git和版本控制",
+            "Git",
+            "版本控制",
             "GitHub",
             "Docker",
             "Podman",
@@ -178,7 +180,9 @@
             "VirtualBox",
             "WinBoat",
             "Flatpak",
-            "终端"
+            "终端",
+            "LibreOffice Writer",
+            "LibreOffice Calc"
           ]
         },
         "interpessoais": {

@@ -159,7 +159,8 @@
             "Maintenance de matériel et logiciel",
             "Linux (intermédiaire)",
             "JavaScript (intermédiaire)",
-            "Microsoft Office (Excel, Word et PowerPoint)",
+            "Microsoft Excel",
+            "Microsoft Word",
             "C",
             "Réseaux informatiques",
             "Support technique",
@@ -169,7 +170,8 @@
             "Base de données",
             "SQL",
             "Développement Web",
-            "Git et contrôle de version",
+            "Git",
+            "Contrôle de version",
             "GitHub",
             "Docker",
             "Podman",
@@ -178,7 +180,9 @@
             "VirtualBox",
             "WinBoat",
             "Flatpak",
-            "Terminal"
+            "Terminal",
+            "LibreOffice Writer",
+            "LibreOffice Calc"
           ]
         },
         "interpessoais": {
