@@ -338,6 +338,13 @@
           "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
           "codeLink": "https://github.com/LeandroStanger/DashboardDeJogadores",
           "demoLink": "https://leandrostanger.github.io/DashboardDeJogadores/"
+        },
+        {
+          "title": "Dashboard für Naturschutz",
+          "desc": "Eine eingehende Analyse der Bevölkerungsdaten unter Berücksichtigung von Geburten-, Sterblichkeits- und Migrationsraten zeigt einen besorgniserregenden Verlauf, der es uns ermöglicht, die maximale verbleibende Zeit bis zum lokalen Aussterben dieser Gemeinschaft abzuschätzen.",
+          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "codeLink": "https://github.com/LeandroStanger/DashboardDeConservacao",
+          "demoLink": "https://leandrostanger.github.io/DashboardDeConservacao/"
         }
       ]
     },

@@ -348,6 +348,13 @@
           "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
           "codeLink": "https://github.com/LeandroStanger/DashboardDeJogadores",
           "demoLink": "https://leandrostanger.github.io/DashboardDeJogadores/"
+        },
+        {
+          "title": "Conservation Dashboard",
+          "desc": "An in-depth analysis of population data, considering birth, mortality and migration rates, reveals a worrying trajectory that allows us to estimate the maximum time remaining before the local extinction of this community.",
+          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "codeLink": "https://github.com/LeandroStanger/DashboardDeConservacao",
+          "demoLink": "https://leandrostanger.github.io/DashboardDeConservacao/"
         }
       ]
     },
@@ -423,7 +430,11 @@
         "wireTitle": "Wire Transfer <span>(International)</span>",
         "copyButton": "Copy number",
         "copyNumberSuccess": "Number copied!"
-      }
+      },
+      "qrcode_unavailable": "QR code temporarily unavailable.",
+      "copy_failed_key": "Failed to copy key. Please try manually.",
+      "copy_failed_address": "Failed to copy address. Please try manually.",
+      "copy_failed_number": "Failed to copy number. Please try manually."
     }
   },
   "footer": {

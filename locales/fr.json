@@ -338,6 +338,13 @@
           "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
           "codeLink": "https://github.com/LeandroStanger/DashboardDeJogadores",
           "demoLink": "https://leandrostanger.github.io/DashboardDeJogadores/"
+        },
+        {
+          "title": "Tableau de Bord de Conservation",
+          "desc": "Une analyse approfondie des données démographiques, tenant compte des taux de natalité, de mortalité et de migration, révèle une trajectoire préoccupante qui nous permet d'estimer le temps maximum restant avant l'extinction locale de cette communauté.",
+          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "codeLink": "https://github.com/LeandroStanger/DashboardDeConservacao",
+          "demoLink": "https://leandrostanger.github.io/DashboardDeConservacao/"
         }
       ]
     },
@@ -414,10 +421,10 @@
         "copyButton": "Copier le numéro",
         "copyNumberSuccess": "Numéro copié !"
       },
-      "qrcode_unavailable": "QR Code indisponible pour le moment.",
-      "copy_failed_key": "Impossible de copier la clé. Veuillez essayer manuellement.",
-      "copy_failed_address": "Impossible de copier l'adresse. Veuillez essayer manuellement.",
-      "copy_failed_number": "Impossible de copier le numéro. Veuillez essayer manuellement."
+      "qrcode_unavailable": "QR code temporairement indisponible.",
+      "copy_failed_key": "Échec de la copie de la clé. Veuillez essayer manuellement.",
+      "copy_failed_address": "Échec de la copie de l'adresse. Veuillez essayer manuellement.",
+      "copy_failed_number": "Échec de la copie du numéro. Veuillez essayer manuellement."
     }
   },
   "footer": {
