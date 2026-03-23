@@ -355,6 +355,20 @@
           "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
           "codeLink": "https://github.com/LeandroStanger/DashboardDeConservacao",
           "demoLink": "https://leandrostanger.github.io/DashboardDeConservacao/"
+        },
+        {
+          "title": "Sorteio de Números",
+          "desc": "Uma aplicação web simples e interativa para realizar sorteios aleatórios de números dentro de um intervalo definido pelo usuário.",
+          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/SorteioDeNumeros",
+          "demoLink": "https://leandrostanger.github.io/SorteioDeNumeros/"
+        },
+        {
+          "title": "Calculadora",
+          "desc": "Uma calculadora web funcional com interface limpa e intuitiva, capaz de realizar operações matemáticas básicas.",
+          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/Calculadora",
+          "demoLink": "https://leandrostanger.github.io/Calculadora/"
         }
       ]
     },

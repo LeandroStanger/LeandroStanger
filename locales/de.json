@@ -345,6 +345,20 @@
           "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
           "codeLink": "https://github.com/LeandroStanger/DashboardDeConservacao",
           "demoLink": "https://leandrostanger.github.io/DashboardDeConservacao/"
+        },
+        {
+          "title": "Zahlenziehung",
+          "desc": "Eine einfache interaktive Webanwendung, um zufällige Zahlen in einem benutzerdefinierten Bereich zu ziehen.",
+          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/SorteioDeNumeros",
+          "demoLink": "https://leandrostanger.github.io/SorteioDeNumeros/"
+        },
+        {
+          "title": "Taschenrechner",
+          "desc": "Ein funktionaler Web-Taschenrechner mit einer klaren und intuitiven Oberfläche, der grundlegende mathematische Operationen ausführen kann.",
+          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/Calculadora",
+          "demoLink": "https://leandrostanger.github.io/Calculadora/"
         }
       ]
     },

@@ -77,41 +77,31 @@
             "date": "feb/2024 a jun/2025",
             "title": "Técnico en Mantenimiento y Soporte en Informática",
             "institution": "AMPLI",
-            "status": [
-              "Completado"
-            ]
+            "status": ["Completado"]
           },
           {
             "date": "Abr/2016 a Oct/2016",
             "title": "Curso de Montaje y Mantenimiento de Computadoras y Redes",
             "institution": "YesBras Escolas do Brasil",
-            "status": [
-              "Completado"
-            ]
+            "status": ["Completado"]
           },
           {
             "date": "2015 a Oct/2017",
             "title": "Educación Secundaria",
             "institution": "SESI",
-            "status": [
-              "Completado"
-            ]
+            "status": ["Completado"]
           },
           {
             "date": "Sep/2014 a Sep/2015",
             "title": "Curso APP – Administrativo Personal y Profesional",
             "institution": "Escuela de Informática Unisoft",
-            "status": [
-              "Completado"
-            ]
+            "status": ["Completado"]
           },
           {
             "date": "Sep/2013 a Sep/2014",
             "title": "Curso QIT – Calificación en Informática y Tecnología",
             "institution": "Escuela de Informática Unisoft",
-            "status": [
-              "Completado"
-            ]
+            "status": ["Completado"]
           }
         ]
       },
@@ -355,6 +345,20 @@
           "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
           "codeLink": "https://github.com/LeandroStanger/DashboardDeConservacao",
           "demoLink": "https://leandrostanger.github.io/DashboardDeConservacao/"
+        },
+        {
+          "title": "Sorteo de Números",
+          "desc": "Una aplicación web simple e interactiva para realizar sorteos aleatorios de números dentro de un intervalo definido por el usuario.",
+          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/SorteioDeNumeros",
+          "demoLink": "https://leandrostanger.github.io/SorteioDeNumeros/"
+        },
+        {
+          "title": "Calculadora",
+          "desc": "Una calculadora web funcional con interfaz limpia e intuitiva, capaz de realizar operaciones matemáticas básicas.",
+          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/Calculadora",
+          "demoLink": "https://leandrostanger.github.io/Calculadora/"
         }
       ]
     },

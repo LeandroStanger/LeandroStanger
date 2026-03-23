@@ -345,6 +345,20 @@
           "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
           "codeLink": "https://github.com/LeandroStanger/DashboardDeConservacao",
           "demoLink": "https://leandrostanger.github.io/DashboardDeConservacao/"
+        },
+        {
+          "title": "数字抽奖",
+          "desc": "一个简单交互式网页应用，用于在用户指定范围内随机抽取数字。",
+          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/SorteioDeNumeros",
+          "demoLink": "https://leandrostanger.github.io/SorteioDeNumeros/"
+        },
+        {
+          "title": "计算器",
+          "desc": "功能齐全的网络计算器，界面简洁直观，能执行基本数学运算。",
+          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/Calculadora",
+          "demoLink": "https://leandrostanger.github.io/Calculadora/"
         }
       ]
     },
