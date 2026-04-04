@@ -63,7 +63,7 @@
             "title": "Bachelor in Computertechnik",
             "institution": "Unopar",
             "progress": {
-              "completed": 11,
+              "completed": 12,
               "total": 53,
               "label": "{completed} von {total} Fächern abgeschlossen",
               "semesterText": "3. Semester — Laufend"
@@ -359,6 +359,13 @@
           "tags": ["HTML5", "CSS3", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/Calculadora",
           "demoLink": "https://leandrostanger.github.io/Calculadora/"
+        },
+        {
+          "title": "Freie Universität",
+          "desc": "Institutionelle Plattform der Freien Universität, mit Informationen zu Bachelorstudiengängen (Schwerpunkt Mathematik), Masterprogrammen, Lehrkörper, Forschung und Weiterbildungsangeboten. Entwickelt mit responsivem Design für Desktop und mobile Geräte.",
+          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/UniversidadeLivre",
+          "demoLink": "https://leandrostanger.github.io/UniversidadeLivre/"
         }
       ]
     },

@@ -63,7 +63,7 @@
             "title": "Licence en Ingénierie Informatique",
             "institution": "Unopar",
             "progress": {
-              "completed": 11,
+              "completed": 12,
               "total": 53,
               "label": "{completed} sur {total} matières terminées",
               "semesterText": "3ème Semestre — En cours"
@@ -359,6 +359,13 @@
           "tags": ["HTML5", "CSS3", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/Calculadora",
           "demoLink": "https://leandrostanger.github.io/Calculadora/"
+        },
+        {
+          "title": "Université Libre",
+          "desc": "Plateforme institutionnelle de l'Université Libre, offrant des informations sur les cursus de licence (avec accent sur les mathématiques), les programmes de master, le corps enseignant, la recherche et les activités d'extension. Développé avec un design responsive pour ordinateur et appareils mobiles.",
+          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/UniversidadeLivre",
+          "demoLink": "https://leandrostanger.github.io/UniversidadeLivre/"
         }
       ]
     },

@@ -63,7 +63,7 @@
             "title": "Bachelor's in Computer Engineering",
             "institution": "Unopar",
             "progress": {
-              "completed": 11,
+              "completed": 12,
               "total": 53,
               "label": "{completed} of {total} subjects completed",
               "semesterText": "3rd Semester — In Progress"
@@ -77,41 +77,31 @@
             "date": "Feb/2024 to Jun/2025",
             "title": "Technical in Computer Maintenance and Support",
             "institution": "AMPLI",
-            "status": [
-              "Completed"
-            ]
+            "status": ["Completed"]
           },
           {
             "date": "Apr/2016 to Oct/2016",
             "title": "Computer Assembly and Maintenance & Networks Course",
             "institution": "YesBras Escolas do Brasil",
-            "status": [
-              "Completed"
-            ]
+            "status": ["Completed"]
           },
           {
             "date": "2015 to Oct/2017",
             "title": "High School",
             "institution": "SESI",
-            "status": [
-              "Completed"
-            ]
+            "status": ["Completed"]
           },
           {
             "date": "Sep/2014 to Sep/2015",
             "title": "APP Course – Personal and Professional Administrative",
             "institution": "Unisoft Computer School",
-            "status": [
-              "Completed"
-            ]
+            "status": ["Completed"]
           },
           {
             "date": "Sep/2013 to Sep/2014",
             "title": "QIT Course – Qualification in Information Technology",
             "institution": "Unisoft Computer School",
-            "status": [
-              "Completed"
-            ]
+            "status": ["Completed"]
           }
         ]
       },
@@ -369,6 +359,13 @@
           "tags": ["HTML5", "CSS3", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/Calculadora",
           "demoLink": "https://leandrostanger.github.io/Calculadora/"
+        },
+        {
+          "title": "Free University",
+          "desc": "Institutional platform of Free University, offering information about undergraduate courses (with emphasis on Mathematics), graduate programs, faculty, research and extension. Developed with responsive design for desktop and mobile devices.",
+          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/UniversidadeLivre",
+          "demoLink": "https://leandrostanger.github.io/UniversidadeLivre/"
         }
       ]
     },

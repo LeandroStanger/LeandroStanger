@@ -63,7 +63,7 @@
             "title": "Graduação em Engenharia de Computação",
             "institution": "Unopar",
             "progress": {
-              "completed": 11,
+              "completed": 12,
               "total": 53,
               "label": "{completed} de {total} disciplinas concluídas",
               "semesterText": "3º Semestre — Em andamento"
@@ -369,6 +369,13 @@
           "tags": ["HTML5", "CSS3", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/Calculadora",
           "demoLink": "https://leandrostanger.github.io/Calculadora/"
+        },
+        {
+          "title": "Universidade Livre",
+          "desc": "Plataforma institucional da Universidade Livre, oferecendo informações sobre cursos de graduação (com ênfase em Matemática), programas de pós-graduação, corpo docente, pesquisa e extensão. Desenvolvido com design responsivo para desktop e dispositivos móveis.",
+          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/UniversidadeLivre",
+          "demoLink": "https://leandrostanger.github.io/UniversidadeLivre/"
         }
       ]
     },

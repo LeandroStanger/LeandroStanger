@@ -63,7 +63,7 @@
             "title": "计算机工程学士学位",
             "institution": "Unopar",
             "progress": {
-              "completed": 11,
+              "completed": 12,
               "total": 53,
               "label": "已完成 {completed} / {total} 门课程",
               "semesterText": "第3学期 — 进行中"
@@ -359,6 +359,13 @@
           "tags": ["HTML5", "CSS3", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/Calculadora",
           "demoLink": "https://leandrostanger.github.io/Calculadora/"
+        },
+        {
+          "title": "自由大学",
+          "desc": "自由大学的官方网站，提供本科课程（以数学为重点）、研究生项目、师资队伍、研究和推广信息。采用响应式设计，适用于桌面和移动设备。",
+          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/UniversidadeLivre",
+          "demoLink": "https://leandrostanger.github.io/UniversidadeLivre/"
         }
       ]
     },
