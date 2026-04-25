@@ -367,6 +367,13 @@
           "tags": ["HTML5", "CSS3", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/UniversidadeLivre",
           "demoLink": "https://leandrostanger.github.io/UniversidadeLivre/"
+        },
+        {
+          "title": "SQL初始项目",
+          "desc": "我的第一批SQL项目集合，展示我在数据库方面的成长。",
+          "tags": ["SQL", "数据库"],
+          "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-SQL",
+          "demoLink": ""
         }
       ]
     },

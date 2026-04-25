@@ -367,6 +367,13 @@
           "tags": ["HTML5", "CSS3", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/UniversidadeLivre",
           "demoLink": "https://leandrostanger.github.io/UniversidadeLivre/"
+        },
+        {
+          "title": "Erste Projekte in SQL",
+          "desc": "Sammlung meiner ersten SQL-Projekte, die meine Entwicklung in Datenbanken zeigt.",
+          "tags": ["SQL", "Datenbank"],
+          "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-SQL",
+          "demoLink": ""
         }
       ]
     },
