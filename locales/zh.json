@@ -63,7 +63,7 @@
             "title": "计算机工程学士学位",
             "institution": "Unopar",
             "progress": {
-              "completed": 12,
+              "completed": 13,
               "total": 53,
               "label": "已完成 {completed} / {total} 门课程",
               "semesterText": "第3学期 — 进行中"
