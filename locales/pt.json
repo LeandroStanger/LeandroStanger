@@ -168,7 +168,7 @@
           "items": [
             "Manutenção de computadores (hardware e software)",
             "Linux (intermediário)",
-            "JavaScript (intermediário)",
+            "JavaScript (Avançado)",
             "Microsoft Excel",
             "Microsoft Word",
             "C",
@@ -192,7 +192,8 @@
             "Flatpak",
             "Terminal",
             "LibreOffice Writer",
-            "LibreOffice Calc"
+            "LibreOffice Calc",
+            "Web Scraping"
           ]
         },
         "interpessoais": {

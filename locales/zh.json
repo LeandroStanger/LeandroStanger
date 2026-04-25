@@ -158,7 +158,7 @@
           "items": [
             "计算机维护（硬件和软件）",
             "Linux（中级）",
-            "JavaScript（中级）",
+            "JavaScript（高级）",
             "Microsoft Excel",
             "Microsoft Word",
             "C",
@@ -182,7 +182,8 @@
             "Flatpak",
             "终端",
             "LibreOffice Writer",
-            "LibreOffice Calc"
+            "LibreOffice Calc",
+            "网络爬虫"
           ]
         },
         "interpessoais": {
