@@ -71,7 +71,7 @@ Coleção de meus primeiros projetos de programação, demonstrando minha evolu�
 Coleção de meus primeiros projetos de programação na linguagem C, demonstrando minha evolução como desenvolvedor.
 
 ### [Projetos Iniciais SQL](https://github.com/LeandroStanger/Projetos-iniciais-SQL)
-[![Estudo Em andamento](https://img.shields.io/badge/Estudo-Em_andamento-1572B6?style=for-the-badge&logo=sqlite&logoColor=003B57)](https://github.com/LeandroStanger/Projetos-iniciais-C)
+[![Estudo Em andamento](https://img.shields.io/badge/Estudo-Em_andamento-1572B6?style=for-the-badge&logo=sqlite&logoColor=68bae7)](https://github.com/LeandroStanger/Projetos-iniciais-C)
 Coleção de meus primeiros projetos de SQL, demonstrando minha evolução como Analista de Banco de Dados.
 
 
