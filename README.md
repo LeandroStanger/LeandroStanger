@@ -87,6 +87,8 @@ Coleção de meus primeiros projetos de SQL, demonstrando minha evolução como 
 ### Backend
 [![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=node.js&logoColor=5FA04E&labelColor=000000)](https://nodejs.org)
 [![C](https://img.shields.io/badge/c-A8B9CC?style=for-the-badge&logo=c&logoColor=A8B9CC&labelColor=000000)](https://wikipedia.org/wiki/C_(programming_language))
+[![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=CB3837&labelColor=000000)](https://www.npmjs.com/)
+
 
 ### DevOps
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=2496ED&labelColor=000000)](https://www.docker.com/)
