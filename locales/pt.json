@@ -63,7 +63,7 @@
             "title": "Graduação em Engenharia de Computação",
             "institution": "Unopar",
             "progress": {
-              "completed": 13,
+              "completed": 15,
               "total": 53,
               "label": "{completed} de {total} disciplinas concluídas",
               "semesterText": "3º Semestre — Em andamento"
@@ -193,7 +193,8 @@
             "Terminal",
             "LibreOffice Writer",
             "LibreOffice Calc",
-            "Web Scraping"
+            "Web Scraping",
+            "Java"
           ]
         },
         "interpessoais": {
@@ -383,6 +384,13 @@
           "desc": "Coleção de meus primeiros projetos em SQL, demonstrando minha evolução em banco de dados.",
           "tags": ["SQL", "Banco de Dados"],
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-SQL",
+          "demoLink": ""
+        },
+        {
+          "title": "Projetos Iniciais em Java",
+          "desc": "Coleção de meus primeiros projetos de programação em Java, demonstrando minha evolução como desenvolvedor.",
+          "tags": ["Java", "JDK", "javac", "JVM"],
+          "codeLink": "https://github.com/LeandroStanger/Projetos-Iniciais-Java",
           "demoLink": ""
         }
       ]

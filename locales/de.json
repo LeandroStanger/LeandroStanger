@@ -7,11 +7,11 @@
     "title": "Leandro Stanger",
     "subtitle1": "Full-Stack-Entwickler!",
     "subtitle2": "Student der Computertechnik!",
-    "btn_contact": "Kontakt",
+    "btn_contact": "Kontakt aufnehmen",
     "btn_resume": "Lebenslauf ansehen"
   },
   "scroll": "Scrollen",
-  "ongoing": "laufend",
+  "ongoing": "in Bearbeitung",
   "sections": {
     "sobre": {
       "number": "01",
@@ -20,17 +20,17 @@
       "cards": [
         {
           "title": "Akademische Ausbildung",
-          "text": "Student der Computertechnik an der <a href=\"https://www.unopar.com.br/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"highlight-link\">UNOPAR - Universität Nordparaná</a>. Ständige Weiterentwicklung im Technologiebereich, immer auf der Suche nach neuem Wissen und Herausforderungen für berufliches Wachstum.",
+          "text": "Student der Computertechnik an der <a href=\"https://www.unopar.com.br/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"highlight-link\">UNOPAR - Universidade Norte do Paraná</a>. Ständige Weiterentwicklung im Technologiebereich, stets auf der Suche nach neuem Wissen und Herausforderungen für das berufliche Wachstum.",
           "icon": "graduation-cap"
         },
         {
           "title": "Leidenschaft für Technologie",
-          "text": "Leidenschaftlich für Programmierung, Technologie und kontinuierliches Lernen. Ich glaube, dass Technologie die Macht hat, die Welt zu verändern, und ich versuche, zu dieser Transformation durch die Entwicklung innovativer Lösungen beizutragen.",
+          "text": "Leidenschaftlich interessiert an Programmierung, Technologie und kontinuierlichem Lernen. Ich glaube, dass Technologie die Macht hat, die Welt zu verändern, und möchte durch die Entwicklung innovativer Lösungen zu dieser Veränderung beitragen.",
           "icon": "code"
         },
         {
-          "title": "Jiu-Jitsu & Disziplin",
-          "text": "Jiu-Jitsu-Praktizierender, ein Sport, der mir Disziplin, Belastbarkeit und Strategie beibringt – Eigenschaften, die ich direkt in der Softwareentwicklung und bei der Lösung komplexer Probleme anwende.",
+          "title": "Jiu-jitsu & Disziplin",
+          "text": "Jiu-jitsu-Praktizierender, ein Sport, der mir Disziplin, Resilienz und Strategie lehrt – Eigenschaften, die ich direkt auf die Softwareentwicklung und komplexe Problemlösungen anwende.",
           "icon": "medal"
         }
       ]
@@ -41,16 +41,16 @@
       "subtitle": "Mein beruflicher und akademischer Werdegang",
       "objetivo": {
         "title": "Berufliches Ziel",
-        "text": "Ich suche eine Position im IT-Bereich als <strong>Entwickler</strong> oder <strong>Datenbankanalyst</strong>, wo ich meine Kenntnisse in Computer- und Netzwerkwartung anwenden und meine Fähigkeiten in technischem Support, Systemadministration, Softwareentwicklung und Datenbankverwaltung weiterentwickeln kann.",
+        "text": "Ich suche eine Position im IT-Bereich als <strong>Entwickler</strong> oder <strong>Datenbankanalyst</strong>, in der ich meine Kenntnisse in der Computer- und Netzwerkwartung anwenden und gleichzeitig meine Fähigkeiten im technischen Support, der Systemadministration, der Softwareentwicklung und der Datenbankverwaltung weiterentwickeln kann.",
         "areas": [
           {
             "title": "Entwickler",
-            "text": "Interesse an der Entwicklung von Webanwendungen und Systemen unter Verwendung moderner Technologien und Einhaltung bewährter Programmierpraktiken.",
+            "text": "Interesse an der Entwicklung von Webanwendungen und Systemen unter Verwendung moderner Technologien und unter Beachtung bewährter Programmierpraktiken.",
             "icon": "rocket"
           },
           {
             "title": "Datenbank",
-            "text": "Ich möchte an der Modellierung, Verwaltung und Optimierung von Datenbanken arbeiten, um die Integrität und Leistung der Systeme zu gewährleisten.",
+            "text": "Ich möchte im Bereich Datenbankmodellierung, -administration und -optimierung arbeiten, um die Integrität und Leistung der Systeme zu gewährleisten.",
             "icon": "database"
           }
         ]
@@ -59,49 +59,59 @@
         "title": "Bildung",
         "items": [
           {
-            "date": "Laufend (Beginn: Feb/2025)",
+            "date": "In Bearbeitung (Beginn: Feb/2025)",
             "title": "Bachelor in Computertechnik",
             "institution": "Unopar",
             "progress": {
-              "completed": 13,
+              "completed": 15,
               "total": 53,
               "label": "{completed} von {total} Fächern abgeschlossen",
-              "semesterText": "3. Semester — Laufend"
+              "semesterText": "3. Semester — In Bearbeitung"
             },
             "referral": {
               "link": "http://www.portalpos.com.br/?utm_voceindica=135742",
-              "text": "Studiere auch an der Unopar"
+              "text": "Studieren Sie auch an der Unopar"
             }
           },
           {
             "date": "Feb/2024 bis Jun/2025",
             "title": "Techniker für Computerwartung und -support",
             "institution": "AMPLI",
-            "status": ["Abgeschlossen"]
+            "status": [
+              "Abgeschlossen"
+            ]
           },
           {
             "date": "Apr/2016 bis Okt/2016",
-            "title": "Kurs für Computeraufbau und -wartung sowie Netzwerke",
+            "title": "Kurs für Computerbau, -wartung und Netzwerke",
             "institution": "YesBras Escolas do Brasil",
-            "status": ["Abgeschlossen"]
+            "status": [
+              "Abgeschlossen"
+            ]
           },
           {
             "date": "2015 bis Okt/2017",
-            "title": "Abitur",
+            "title": "Sekundarschulbildung",
             "institution": "SESI",
-            "status": ["Abgeschlossen"]
+            "status": [
+              "Abgeschlossen"
+            ]
           },
           {
             "date": "Sep/2014 bis Sep/2015",
             "title": "APP-Kurs – Persönliche und berufliche Verwaltung",
-            "institution": "Unisoft Computerschule",
-            "status": ["Abgeschlossen"]
+            "institution": "Unisoft Informatikschule",
+            "status": [
+              "Abgeschlossen"
+            ]
           },
           {
             "date": "Sep/2013 bis Sep/2014",
             "title": "QIT-Kurs – Qualifikation in Informatik und Technologie",
-            "institution": "Unisoft Computerschule",
-            "status": ["Abgeschlossen"]
+            "institution": "Unisoft Informatikschule",
+            "status": [
+              "Abgeschlossen"
+            ]
           }
         ]
       },
@@ -113,12 +123,12 @@
             "period": "",
             "positions": [
               {
-                "title": "Versandassistent Stufe 2 (Flachgewebe)",
+                "title": "Versandassistent Level 2 (Flachgewebe)",
                 "period": "",
                 "responsibilities": [
-                  "Beförderung auf Stufe 2 mit größeren Verantwortlichkeiten",
-                  "Einweisung neuer Mitarbeiter",
-                  "Fortgeschrittene Bestandsverwaltung der Kartonageabteilung",
+                  "Beförderung auf Level 2 mit größeren Verantwortlichkeiten",
+                  "Schulung neuer Mitarbeiter",
+                  "Fortschrittliche Lagerverwaltung für Kartons",
                   "Qualitätskontrolle der Versandprozesse"
                 ]
               },
@@ -127,9 +137,9 @@
                 "period": "",
                 "responsibilities": [
                   "Annahme und Organisation von Reparaturpaletten",
-                  "Bereitstellung von Nacharbeit und Lagerung von Teilen",
-                  "Bestandsverwaltung und Materialorganisation",
-                  "Erste Produktqualitätskontrolle"
+                  "Bereitstellung der Revision und Lagerung von Teilen",
+                  "Lagerverwaltung und Materialorganisation",
+                  "Erste Qualitätskontrolle der Produkte"
                 ]
               }
             ]
@@ -141,8 +151,8 @@
               {
                 "title": "Wartungstechniker",
                 "responsibilities": [
-                  "Formatieren, Teileaustausch und Software-Updates",
-                  "Kundendienst und technischer Fern- und Vor-Ort-Support",
+                  "Formatieren, Austausch von Teilen und Software-Updates",
+                  "Kundenbetreuung und technischer Support aus der Ferne und vor Ort",
                   "Installation und Konfiguration von Betriebssystemen",
                   "Vorbeugende und korrigierende Hardwarewartung"
                 ]
@@ -157,7 +167,7 @@
           "title": "Technische",
           "items": [
             "Computerwartung (Hardware und Software)",
-            "Linux (Mittelstufe)",
+            "Linux (mittel)",
             "JavaScript (Fortgeschritten)",
             "Microsoft Excel",
             "Microsoft Word",
@@ -167,7 +177,7 @@
             "HTML",
             "Systemadministration",
             "CSS",
-            "Datenbank",
+            "Datenbanken",
             "SQL",
             "Webentwicklung",
             "Git",
@@ -183,7 +193,8 @@
             "Terminal",
             "LibreOffice Writer",
             "LibreOffice Calc",
-            "Web Scraping"
+            "Web Scraping",
+            "Java"
           ]
         },
         "interpessoais": {
@@ -191,7 +202,7 @@
           "items": [
             "Pünktlichkeit",
             "Verantwortungsbewusstsein",
-            "Kundenservice",
+            "Kundendienst",
             "Teamarbeit",
             "Problemlösung",
             "Effektive Kommunikation",
@@ -207,7 +218,7 @@
       "title": "Technologien und Werkzeuge",
       "subtitle": "Tech-Stack und Werkzeuge, die ich verwende",
       "categories": {
-        "frontend": "Frontend",
+        "frontend": "Front-end",
         "backend": "Backend",
         "devops": "DevOps",
         "databases": "Datenbanken",
@@ -220,159 +231,166 @@
       "title": "Projekte",
       "subtitle": "Meine entwickelten und laufenden Projekte",
       "category_title": "Entwicklungsportfolio",
-      "category_desc": "Entdecken Sie meine Frontend-, Backend-Projekte und Programmierexperimente.",
-      "search_placeholder": "Projekte nach Namen, Technologie oder Beschreibung suchen...",
+      "category_desc": "Entdecken Sie meine Front-End-, Back-End-Projekte und Programmierexperimente.",
+      "search_placeholder": "Projekte nach Namen, Technologie oder Beschreibung durchsuchen...",
       "found": "Projekte gefunden",
       "no_results_title": "Keine Projekte gefunden",
-      "no_results_desc": "Versuchen Sie, Ihre Suche anzupassen. Sie können nach Projektnamen, Technologien oder Beschreibung suchen.",
+      "no_results_desc": "Passen Sie Ihre Suche an. Sie können nach Projektname, Technologien oder Beschreibung suchen.",
       "code": "Code",
       "demo": "Demo",
       "cards": [
         {
-          "title": "Tiere im Zoo 2",
+          "title": "Animais no Zoológico 2",
           "desc": "Eine interaktive Webanwendung zur Verwaltung und Anzeige von Tieren in einem virtuellen Zoo.",
           "tags": ["JavaScript", "HTML", "CSS"],
           "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico2",
           "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico2/"
         },
         {
-          "title": "Wetterdaten",
-          "desc": "System zum Sammeln, Verarbeiten und Visualisieren von Wetterdaten aus verschiedenen Quellen.",
+          "title": "Dados Climáticos",
+          "desc": "System zur Erfassung, Verarbeitung und Visualisierung von meteorologischen Daten aus verschiedenen Quellen.",
           "tags": ["JavaScript", "API", "CSS"],
           "codeLink": "https://github.com/LeandroStanger/DadosClimaticos",
           "demoLink": "https://leandrostanger.github.io/DadosClimaticos/"
         },
         {
-          "title": "Feedback-Formular",
-          "desc": "Interaktives Formular zum Sammeln von Benutzerfeedback mit Datenvalidierung.",
+          "title": "Formulário de Feedback",
+          "desc": "Interaktives Formular zur Sammlung von Benutzerfeedback mit Datenvalidierung.",
           "tags": ["HTML", "CSS", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/FormularioDeFeedback",
           "demoLink": "https://leandrostanger.github.io/FormularioDeFeedback/"
         },
         {
-          "title": "Lustige Autos",
+          "title": "Carros Divertidos",
           "desc": "Interaktives Spiel mit Autos in einer 2D-Umgebung, entwickelt zum Üben von Programmierkonzepten.",
           "tags": ["JavaScript", "HTML5", "CSS3"],
           "codeLink": "https://github.com/LeandroStanger/CarrosDivertidos",
           "demoLink": "https://leandrostanger.github.io/CarrosDivertidos/"
         },
         {
-          "title": "Autorennen",
-          "desc": "Autorenn-Simulation mit interaktiven Steuerungen und Punktesystem.",
+          "title": "Corrida de Carro",
+          "desc": "Autorennsimulation mit interaktiven Steuerungen und Punktesystem.",
           "tags": ["JavaScript", "CSS3", "HTML5"],
           "codeLink": "https://github.com/LeandroStanger/CorridaDeCarro",
           "demoLink": "https://leandrostanger.github.io/CorridaDeCarro/"
         },
         {
-          "title": "Tiere im Zoo",
-          "desc": "Erste Version des Zooverwaltungssystems, mit Schwerpunkt auf dem Erlernen von JavaScript.",
+          "title": "Animais no Zoológico",
+          "desc": "Erste Version des Zoo-Verwaltungssystems, mit Fokus auf das Erlernen von JavaScript.",
           "tags": ["JavaScript", "HTML", "CSS"],
           "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico",
           "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico/"
         },
         {
-          "title": "Website mit Schleife",
+          "title": "Site com Loop",
           "desc": "Demonstrationswebsite mit visuellen Schleifeneffekten und CSS/JavaScript-Animationen.",
           "tags": ["HTML", "CSS", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/SiteComLoop",
           "demoLink": "https://leandrostanger.github.io/SiteComLoop/"
         },
         {
-          "title": "Anmeldesystem",
+          "title": "Sistema de Login",
           "desc": "Benutzerauthentifizierungssystem mit Anmeldevalidierung und responsiver Oberfläche.",
           "tags": ["JavaScript", "HTML", "CSS"],
           "codeLink": "https://github.com/LeandroStanger/SistemaDeLogin",
           "demoLink": "https://leandrostanger.github.io/SistemaDeLogin/"
         },
         {
-          "title": "Listenverwaltung",
-          "desc": "Anwendung zum Erstellen, Bearbeiten und Löschen von Listenelementen mit lokaler Speicherung.",
+          "title": "Gerenciador de Lista",
+          "desc": "Anwendung zum Erstellen, Bearbeiten und Löschen von Listenelementen mit lokalem Speicher.",
           "tags": ["JavaScript", "LocalStorage", "CSS"],
           "codeLink": "https://github.com/LeandroStanger/GerenciadorDeLista",
           "demoLink": "https://leandrostanger.github.io/GerenciadorDeLista/"
         },
         {
-          "title": "Erste Projekte",
+          "title": "Projetos Iniciais",
           "desc": "Sammlung meiner ersten Programmierprojekte, die meine Entwicklung als Entwickler zeigen.",
           "tags": ["HTML", "CSS", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais",
           "demoLink": ""
         },
         {
-          "title": "Leandro Stanger Portfolio",
-          "desc": "Hauptrepository mit Profil, detaillierter README und Links zu allen Projekten. Fokus auf Frontend-Entwicklung mit HTML, CSS und JavaScript.",
+          "title": "Leandro Stanger Portfólio",
+          "desc": "Hauptrepository mit Profil, detaillierter README und Links zu allen Projekten. Fokus auf Front-End-Entwicklung mit HTML, CSS und JavaScript.",
           "tags": ["HTML5", "CSS3", "JavaScript", "Git"],
           "codeLink": "https://github.com/LeandroStanger/LeandroStanger",
           "demoLink": "https://leandrostanger.github.io/LeandroStanger/"
         },
         {
-          "title": "Städte mit hohen Temperaturen",
-          "desc": "Interaktive Webanwendung, die Daten über Städte mit extremen Klimazonen anzeigt und filtert. Enthält Karte, Dashboard und Visualisierung von Klimadaten.",
+          "title": "Cidades com Altas Temperaturas",
+          "desc": "Interaktive Webanwendung, die Daten über Städte mit extremen Klimabedingungen anzeigt und filtert. Enthält Karte, Dashboard und Visualisierung von Klimadaten.",
           "tags": ["JavaScript (ES6+)", "API", "CSS3", "Data Visualization"],
           "codeLink": "https://github.com/LeandroStanger/CidadesComAltasTemperaturas",
           "demoLink": "https://leandrostanger.github.io/CidadesComAltasTemperaturas/"
         },
         {
-          "title": "Website mit Schleifen-Hack",
-          "desc": "Experimentelle Website mit visuellen Schleifeneffekten, kreativen Animationen und fortgeschrittenen CSS/JavaScript-Techniken. Demonstriert Fähigkeiten in Animationen und interaktivem Design.",
-          "tags": ["HTML5", "CSS3", "JavaScript", "Animations", "Web Experiments"],
+          "title": "Site com Loop Hack",
+          "desc": "Experimentelle Website mit visuellen Schleifeneffekten, kreativen Animationen und fortgeschrittenen CSS/JavaScript-Techniken. Zeigt Fähigkeiten in Animationen und interaktivem Design.",
+          "tags": ["HTML5", "CSS3", "JavaScript", "Animationen", "Web-Experimente"],
           "codeLink": "https://github.com/LeandroStanger/SiteComLoopHack",
           "demoLink": "https://leandrostanger.github.io/SiteComLoopHack/"
         },
         {
-          "title": "Erste Projekte (C-Sprache)",
+          "title": "Projetos Iniciais (Linguagem C)",
           "desc": "Sammlung meiner ersten Programmierprojekte in C, die meine Entwicklung als Entwickler zeigen.",
           "tags": ["C", "GCC"],
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-C",
           "demoLink": ""
         },
         {
-          "title": "Haustiersystem",
+          "title": "Sistema de Animais de Estimação",
           "desc": "Ein statischer und responsiver Katalog, der eine Liste von Haustieren anzeigt und grundlegende Informationen wie Name, Art, Alter, Gewicht und Energieniveau in einer benutzerfreundlichen Weboberfläche präsentiert.",
           "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
           "codeLink": "https://github.com/LeandroStanger/SistemaDeAnimaisDeEstimacao",
           "demoLink": "https://leandrostanger.github.io/SistemaDeAnimaisDeEstimacao/"
         },
         {
-          "title": "Spieler-Dashboard",
-          "desc": "Vollständige Statistiken der größten Fußballspieler. Ein modernes, interaktives Webpanel zur Anzeige und Analyse von Spielerdaten in einem Dashboard-Format.",
+          "title": "Dashboard de Jogadores",
+          "desc": "Vollständige Statistiken der größten Fußballspieler. Ein modernes und interaktives Web-Dashboard zur Anzeige und Analyse von Spielerdaten.",
           "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
           "codeLink": "https://github.com/LeandroStanger/DashboardDeJogadores",
           "demoLink": "https://leandrostanger.github.io/DashboardDeJogadores/"
         },
         {
-          "title": "Dashboard für Naturschutz",
-          "desc": "Eine eingehende Analyse der Bevölkerungsdaten unter Berücksichtigung von Geburten-, Sterblichkeits- und Migrationsraten zeigt einen besorgniserregenden Verlauf, der es uns ermöglicht, die maximale verbleibende Zeit bis zum lokalen Aussterben dieser Gemeinschaft abzuschätzen.",
+          "title": "Dashboard de Conservação",
+          "desc": "Die eingehende Analyse der Bevölkerungsdaten unter Berücksichtigung von Geburten-, Sterbe- und Migrationsraten zeigt eine besorgniserregende Entwicklung auf, die es uns ermöglicht, die maximale verbleibende Zeit vor dem lokalen Aussterben dieser Gemeinschaft abzuschätzen.",
           "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
           "codeLink": "https://github.com/LeandroStanger/DashboardDeConservacao",
           "demoLink": "https://leandrostanger.github.io/DashboardDeConservacao/"
         },
         {
-          "title": "Zahlenziehung",
-          "desc": "Eine einfache interaktive Webanwendung, um zufällige Zahlen in einem benutzerdefinierten Bereich zu ziehen.",
+          "title": "Sorteio de Números",
+          "desc": "Eine einfache und interaktive Webanwendung, um zufällige Zahlen in einem vom Benutzer definierten Bereich zu ziehen.",
           "tags": ["HTML5", "CSS3", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/SorteioDeNumeros",
           "demoLink": "https://leandrostanger.github.io/SorteioDeNumeros/"
         },
         {
-          "title": "Taschenrechner",
-          "desc": "Ein funktionaler Web-Taschenrechner mit einer klaren und intuitiven Oberfläche, der grundlegende mathematische Operationen ausführen kann.",
+          "title": "Calculadora",
+          "desc": "Ein funktionaler Web-Taschenrechner mit sauberer und intuitiver Oberfläche, der grundlegende mathematische Operationen ausführen kann.",
           "tags": ["HTML5", "CSS3", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/Calculadora",
           "demoLink": "https://leandrostanger.github.io/Calculadora/"
         },
         {
-          "title": "Freie Universität",
-          "desc": "Institutionelle Plattform der Freien Universität, mit Informationen zu Bachelorstudiengängen (Schwerpunkt Mathematik), Masterprogrammen, Lehrkörper, Forschung und Weiterbildungsangeboten. Entwickelt mit responsivem Design für Desktop und mobile Geräte.",
+          "title": "Universidade Livre",
+          "desc": "Institutionelle Plattform der Universidade Livre, die Informationen über Bachelorstudiengänge (mit Schwerpunkt Mathematik), Postgraduiertenprogramme, Lehrkörper, Forschung und Weiterbildung bietet. Entwickelt mit responsive Design für Desktop und mobile Geräte.",
           "tags": ["HTML5", "CSS3", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/UniversidadeLivre",
           "demoLink": "https://leandrostanger.github.io/UniversidadeLivre/"
         },
         {
-          "title": "Erste Projekte in SQL",
+          "title": "Projetos Iniciais em SQL",
           "desc": "Sammlung meiner ersten SQL-Projekte, die meine Entwicklung in Datenbanken zeigt.",
           "tags": ["SQL", "Datenbank"],
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-SQL",
+          "demoLink": ""
+        },
+        {
+          "title": "Projetos Iniciais em Java",
+          "desc": "Sammlung meiner ersten Programmierprojekte in Java, die meine Entwicklung als Entwickler zeigen.",
+          "tags": ["Java", "JDK", "javac", "JVM"],
+          "codeLink": "https://github.com/LeandroStanger/Projetos-Iniciais-Java",
           "demoLink": ""
         }
       ]
@@ -380,32 +398,32 @@
     "contato": {
       "number": "05",
       "title": "Kontakt",
-      "subtitle": "Ich bin immer offen für neue Möglichkeiten und Zusammenarbeit",
-      "intro": "Lassen Sie uns über Projekte, Möglichkeiten oder einfach Ideen über Technologie austauschen!",
+      "subtitle": "Ich bin immer offen für neue Möglichkeiten und Kooperationen",
+      "intro": "Lassen Sie uns über Projekte, Möglichkeiten oder einfach über Technologie sprechen!",
       "form": {
         "title": "Nachricht senden",
         "name_label": "Name",
         "name_placeholder": "Geben Sie Ihren vollständigen Namen ein",
         "email_label": "E-Mail",
-        "email_placeholder": "Geben Sie Ihre E-Mail ein: sie@email.com",
+        "email_placeholder": "Geben Sie Ihre E-Mail ein: ihre@email.com",
         "message_label": "Nachricht",
-        "message_placeholder": "Schreiben Sie hier Ihre Nachricht...",
+        "message_placeholder": "Schreiben Sie Ihre Nachricht hier...",
         "send": "Nachricht senden",
         "sending": "Senden...",
-        "success": "✅ Nachricht erfolgreich gesendet! Ich melde mich bald bei Ihnen.",
+        "success": "✅ Nachricht erfolgreich gesendet! Ich werde mich bald bei Ihnen melden.",
         "error": "❌ Beim Senden der Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
       },
       "links": {
         "linkedin": "LinkedIn",
-        "linkedin_desc": "Vernetzen Sie sich beruflich",
+        "linkedin_desc": "Professionell vernetzen",
         "github": "GitHub",
-        "github_desc": "Sehen Sie meine Projekte",
+        "github_desc": "Meine Projekte ansehen",
         "instagram": "Instagram",
         "instagram_desc": "Folgen Sie mir auf Instagram",
         "telegram": "Telegram",
         "telegram_desc": "@leandrostanger",
         "99freelas": "99freelas",
-        "99freelas_desc": "Berufliches Profil",
+        "99freelas_desc": "Berufsprofil",
         "x": "X",
         "x_desc": "@LeandroStanger1",
         "messenger": "Messenger",
@@ -415,9 +433,9 @@
     "doacoes": {
       "number": "06",
       "title": "Spenden",
-      "subtitle": "Unterstützen Sie die Entwicklung",
+      "subtitle": "Zur Entwicklung beitragen",
       "card_title": "Unterstützen Sie mein Studium",
-      "intro": "Freiwillige Beiträge helfen direkt bei der Fortsetzung meines Studiums und der Entwicklung dieses Projekts.\nDerzeit bin ich auf einer akademischen Reise an der Unopar-Universität und versuche, mich ständig im Technologie- und Entwicklungsbereich weiterzuentwickeln.\nDie erhaltene Unterstützung trägt zum Kauf von Büchern, Bildungsressourcen und zur Deckung der Studiengebühren bei.\nSie ermöglicht es auch, in die Verbesserung des Projekts und die Schaffung neuer technologischer Initiativen in der Zukunft zu investieren.\nJeder Beitrag ist willkommen und macht einen Unterschied auf dieser Reise des Lernens und der Entwicklung.",
+      "intro": "Freiwillige Beiträge helfen direkt bei der Fortführung meines Studiums und der Entwicklung dieses Projekts.\nIch befinde mich derzeit auf einer akademischen Reise an der Universität Unopar und strebe eine ständige Weiterentwicklung im Technologie- und Entwicklungsbereich an.\nDie erhaltene Unterstützung trägt zum Erwerb von Büchern, Lernressourcen und zur Deckung der Unikosten bei.\nSie ermöglicht es auch, in die Verbesserung des Projekts und die Schaffung neuer technologischer Initiativen in der Zukunft zu investieren.\nJeder Beitrag ist willkommen und macht einen Unterschied auf dieser Reise des Lernens und der Weiterentwicklung.",
       "real_title": "Real (BRL)",
       "dolar_title": "Dollar (USD)",
       "pix": {
@@ -446,14 +464,14 @@
       "internacional": {
         "title": "Internationale Banküberweisung",
         "achTitle": "ACH-Überweisung <span>(USA)</span>",
-        "wireTitle": "Wire-Überweisung <span>(International)</span>",
+        "wireTitle": "Drahtüberweisung <span>(International)</span>",
         "copyButton": "Nummer kopieren",
         "copyNumberSuccess": "Nummer kopiert!"
       },
-      "qrcode_unavailable": "QR-Code derzeit nicht verfügbar.",
-      "copy_failed_key": "Schlüssel konnte nicht kopiert werden. Bitte manuell versuchen.",
-      "copy_failed_address": "Adresse konnte nicht kopiert werden. Bitte manuell versuchen.",
-      "copy_failed_number": "Nummer konnte nicht kopiert werden. Bitte manuell versuchen."
+      "qrcode_unavailable": "QR-Code vorübergehend nicht verfügbar.",
+      "copy_failed_key": "Fehler beim Kopieren des Schlüssels. Bitte manuell versuchen.",
+      "copy_failed_address": "Fehler beim Kopieren der Adresse. Bitte manuell versuchen.",
+      "copy_failed_number": "Fehler beim Kopieren der Nummer. Bitte manuell versuchen."
     }
   },
   "footer": {
