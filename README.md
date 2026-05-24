@@ -75,7 +75,7 @@ Coleção de meus primeiros projetos de programação na linguagem C, demonstran
 Coleção de meus primeiros projetos de SQL, demonstrando minha evolução como Analista de Banco de Dados.
 
 ### [Projetos Iniciais (Java)](https://github.com/LeandroStanger/Projetos-Iniciais-Java)
-[![Estudo Em andamento](https://img.shields.io/badge/Estudo-Em_andamento-1572B6?style=for-the-badge&logo=gitea&logoColor=E62B1E)](https://github.com/LeandroStanger/Projetos-iniciais-C)
+[![Estudo Em andamento](https://img.shields.io/badge/Estudo-Em_andamento-1572B6?style=for-the-badge&logo=gitea&logoColor=E62B1E)](https://github.com/LeandroStanger/Projetos-Iniciais-Java)
 Coleção de meus primeiros projetos de programação na linguagem C, demonstrando minha evolução como desenvolvedor.
 
 
@@ -92,7 +92,7 @@ Coleção de meus primeiros projetos de programação na linguagem C, demonstran
 [![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=node.js&logoColor=5FA04E&labelColor=000000)](https://nodejs.org)
 [![C](https://img.shields.io/badge/c-A8B9CC?style=for-the-badge&logo=c&logoColor=A8B9CC&labelColor=000000)](https://wikipedia.org/wiki/C_(programming_language))
 [![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=CB3837&labelColor=000000)](https://www.npmjs.com/)
-[![Java](https://img.shields.io/badge/Java-E62B1E?style=for-the-badge&logo=gitea&logoColor=E62B1E&labelColor=000000)](https://www.npmjs.com/)
+[![Java](https://img.shields.io/badge/Java-E62B1E?style=for-the-badge&logo=gitea&logoColor=E62B1E&labelColor=000000)](https://www.java.com)
 
 
 
