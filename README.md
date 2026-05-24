@@ -76,7 +76,7 @@ Coleção de meus primeiros projetos de SQL, demonstrando minha evolução como 
 
 ### [Projetos Iniciais (Java)](https://github.com/LeandroStanger/Projetos-Iniciais-Java)
 [![Estudo Em andamento](https://img.shields.io/badge/Estudo-Em_andamento-1572B6?style=for-the-badge&logo=gitea&logoColor=E62B1E)](https://github.com/LeandroStanger/Projetos-Iniciais-Java)
-Coleção de meus primeiros projetos de programação na linguagem C, demonstrando minha evolução como desenvolvedor.
+Coleção de meus primeiros projetos de programação em Java, demonstrando minha evolução como desenvolvedor.
 
 
 <div align="center">
