@@ -18,14 +18,14 @@ const leandro = {
   area: "Desenvolvimento Full-Stack",
   tecnologias: {
     frontend: ["HTML5", "CSS3", "JavaScript"],
-    backend: ["Node.js", "C"],
-    bancoDados: ["MySQL", "Databricks", "Microsoft SQL Server", "SQL Server", "MariaDB", "SQLite"],
+    backend: ["Node.js", "C", "Java", "npm"],           
+    bancoDados: ["SQL", "MySQL", "Databricks", "Microsoft SQL Server", "MariaDB", "SQLite"],
     devOps: ["Docker", "Podman", "WinBoat", "VirtualBox", "Ubuntu Server", "CentOS", "Bash", "Shell Script"],
-    ferramentas: ["Git", "Github", "Visual Studio Code", "Terminal", "Microsoft Excel", "Code::Blocks"],
+    ferramentas: ["Git", "GitHub", "Visual Studio Code", "Terminal", "Microsoft Excel", "Code::Blocks", "LibreOffice Writer", "LibreOffice Calc", "Flatpak", "VSCodium","Azure Data Studio"],
     sistemaOperacional: ["Arch Linux", "BigLinux"]
   },
   foco: ["Interfaces Responsivas", "UX/UI", "Performance Web", "Banco de Dados"],
-  hobbies: ["Coding", "Tecnologia", "Games", "Open Source"]
+  hobbies: ["Coding", "Tecnologia", "Open Source"]
 };
 ```
 
