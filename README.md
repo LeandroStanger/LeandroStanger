@@ -12,21 +12,26 @@
 ## Sobre Mim
 
 Desenvolvedor Full-Stack apaixonado por criar aplicações web modernas e escaláveis, com forte atuação em Java, JavaScript e C – do front-end ao back-end e até sistemas embarcados. Busco uma posição em TI onde possa aplicar e ampliar meus conhecimentos em desenvolvimento de software, administração de sistemas, gerenciamento de bancos de dados, suporte técnico, manutenção de computadores e redes. Estou em constante aprendizado, incluindo curso de Inglês e Escrita para ampliar minha atuação global, e levo do Jiu‑jitsu a disciplina, resiliência e pensamento estratégico para entregar soluções robustas, seguras e de alto desempenho.
-```javascript
-const leandro = {
-  nome: "Leandro Stanger",
-  area: "Desenvolvimento Full-Stack",
-  tecnologias: {
-    frontend: ["HTML5", "CSS3", "JavaScript"],
-    backend: ["Node.js", "C", "Java", "npm"],           
-    bancoDados: ["SQL", "MySQL", "Databricks", "Microsoft SQL Server", "MariaDB", "SQLite"],
-    devOps: ["Docker", "Podman", "WinBoat", "VirtualBox", "Ubuntu Server", "CentOS", "Bash", "Shell Script"],
-    ferramentas: ["Git", "GitHub", "Visual Studio Code", "Terminal", "Microsoft Excel", "Code::Blocks", "LibreOffice Writer", "LibreOffice Calc", "Flatpak", "VSCodium","Azure Data Studio"],
-    sistemaOperacional: ["Arch Linux", "BigLinux"]
-  },
-  foco: ["Interfaces Responsivas", "UX/UI", "Performance Web", "Banco de Dados"],
-  hobbies: ["Coding", "Tecnologia", "Open Source"]
-};
+```java
+import java.util.List;
+import java.util.Map;
+
+public class LeandroStanger {
+    public String nome = "Leandro Stanger";
+    public String area = "Desenvolvimento Full-Stack";
+    public Tecnologias tecnologias = new Tecnologias();
+    public List<String> foco = List.of("Interfaces Responsivas", "UX/UI", "Performance Web", "Banco de Dados");
+    public List<String> hobbies = List.of("Coding", "Tecnologia", "Open Source");
+
+    public static class Tecnologias {
+        public List<String> frontend = List.of("HTML5", "CSS3", "JavaScript");
+        public List<String> backend = List.of("Node.js", "C", "Java", "npm");
+        public List<String> bancoDados = List.of("SQL", "MySQL", "Databricks", "Microsoft SQL Server", "MariaDB", "SQLite");
+        public List<String> devOps = List.of("Docker", "Podman", "WinBoat", "VirtualBox", "Ubuntu Server", "CentOS", "Bash", "Shell Script");
+        public List<String> ferramentas = List.of("Git", "GitHub", "Visual Studio Code", "Terminal", "Microsoft Excel", "Code::Blocks", "LibreOffice Writer", "LibreOffice Calc", "Flatpak", "VSCodium", "Azure Data Studio");
+        public List<String> sistemaOperacional = List.of("Arch Linux", "BigLinux");
+    }
+}
 ```
 
 ## Projetos em Destaque
