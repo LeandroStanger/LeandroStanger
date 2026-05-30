@@ -41,7 +41,7 @@
       "subtitle": "Mi trayectoria profesional y académica",
       "objetivo": {
         "title": "Objetivo Profesional",
-        "text": "Busco una posición en TI como <strong>Desarrollador</strong> o <strong>Analista de Bases de Datos</strong>, donde pueda aplicar mis conocimientos en mantenimiento de computadoras y redes, además de continuar desarrollando mis habilidades en soporte técnico, administración de sistemas, desarrollo de software y gestión de bases de datos.",
+        "text": "Busco una posición en TI como <strong>Desarrollador Java</strong>, <strong>Desarrollador JavaScript</strong>, <strong>Desarrollador C</strong> o <strong>Analista de Bases de Datos</strong>, donde pueda aplicar mis conocimientos en mantenimiento de computadoras y redes. Me he dedicado al estudio de <strong>Java</strong>, <strong>JavaScript</strong> y <strong>C</strong> (con enfoque en sistemas embebidos, lógica de programación y rendimiento), además del ecosistema Spring, Hibernate, Maven y frameworks front-end. Busco convertirme en un desarrollador full-stack calificado. Continúo desarrollando habilidades en soporte técnico, administración de sistemas, desarrollo de software y gestión de bases de datos.",
         "areas": [
           {
             "title": "Desarrollador",
@@ -52,6 +52,16 @@
             "title": "Base de Datos",
             "text": "Deseo trabajar con modelado, administración y optimización de bases de datos, garantizando la integridad y el rendimiento de los sistemas.",
             "icon": "database"
+          },
+          {
+            "title": "Java / Móvil",
+            "text": "Interés en desarrollo móvil (Android) y backend con Java, explorando el ecosistema Spring, buenas prácticas de POO e integración con bases de datos.",
+            "icon": "mobile-alt"
+          },
+          {
+            "title": "Lenguaje C",
+            "text": "Pasión por la programación de bajo nivel, sistemas embebidos, controladores y algoritmos eficientes. El lenguaje C me proporciona una comprensión profunda de la memoria, punteros y rendimiento, siendo fundamental para mi formación en Ingeniería en Computación.",
+            "icon": "microchip"
           }
         ]
       },
@@ -72,6 +82,14 @@
               "link": "http://www.portalpos.com.br/?utm_voceindica=135742",
               "text": "Estudia también en Unopar"
             }
+          },
+          {
+            "date": "En curso (inicio: nov/2025)",
+            "title": "Clases de Inglés y Escritura",
+            "institution": "Centro Cultural Americano",
+            "status": [
+              "En curso"
+            ]
           },
           {
             "date": "feb/2024 a jun/2025",
@@ -463,8 +481,8 @@
       },
       "internacional": {
         "title": "Transferencia Bancaria Internacional",
-        "achTitle": "Transferencia ACH <span>(EE.UU.)</span>",
-        "wireTitle": "Transferencia Wire <span>(Internacional)</span>",
+        "achTitle": "ACH Transfer <span>(EE.UU.)</span>",
+        "wireTitle": "Wire Transfer <span>(Internacional)</span>",
         "copyButton": "Copiar número",
         "copyNumberSuccess": "¡Número copiado!"
       },

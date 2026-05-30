@@ -41,17 +41,27 @@
       "subtitle": "Minha jornada profissional e acadêmica",
       "objetivo": {
         "title": "Objetivo Profissional",
-        "text": "Busco uma posição na área de TI como <strong>Desenvolvedor</strong> ou <strong>Analista de Banco de Dados</strong>, onde possa aplicar meus conhecimentos em manutenção de computadores e redes, além de continuar desenvolvendo minhas habilidades em suporte técnico, administração de sistemas, desenvolvimento de software e gerenciamento de bancos de dados.",
+        "text": "Busco uma posição na área de TI como <strong>Desenvolvedor Java</strong>, <strong>Desenvolvedor JavaScript</strong>, <strong>Desenvolvedor C</strong> ou <strong>Analista de Banco de Dados</strong>, onde possa aplicar meus conhecimentos em manutenção de computadores e redes. Tenho me dedicado ao estudo das linguagens <strong>Java</strong>, <strong>JavaScript</strong> e <strong>C</strong> (com foco em sistemas embarcados, lógica de programação e desempenho), além do ecossistema Spring, Hibernate, Maven e frameworks front-end. Busco me tornar um desenvolvedor full-stack qualificado. Continuo desenvolvendo habilidades em suporte técnico, administração de sistemas, desenvolvimento de software e gerenciamento de bancos de dados.",
         "areas": [
           {
             "title": "Desenvolvedor",
-            "text": "Interesse em atuar no desenvolvimento de aplicações web e sistemas, utilizando tecnologias modernas e seguindo as melhores práticas de programação.",
+            "text": "Interesse em trabalhar no desenvolvimento de aplicações web e sistemas, utilizando tecnologias modernas e seguindo as melhores práticas de programação.",
             "icon": "rocket"
           },
           {
             "title": "Banco de Dados",
             "text": "Desejo trabalhar com modelagem, administração e otimização de bancos de dados, garantindo a integridade e performance dos sistemas.",
             "icon": "database"
+          },
+          {
+            "title": "Java / Mobile",
+            "text": "Interesse em desenvolvimento de aplicações mobile (Android) e backend com Java, explorando o ecossistema Spring, boas práticas de POO e integração com bancos de dados.",
+            "icon": "mobile-alt"
+          },
+          {
+            "title": "Linguagem C",
+            "text": "Paixão por programação de baixo nível, sistemas embarcados, drivers e algoritmos eficientes. A linguagem C me proporciona entendimento profundo de memória, ponteiros e desempenho, sendo fundamental para minha formação em Engenharia da Computação.",
+            "icon": "microchip"
           }
         ]
       },
@@ -72,6 +82,14 @@
               "link": "http://www.portalpos.com.br/?utm_voceindica=135742",
               "text": "Estude também na Unopar"
             }
+          },
+          {
+            "date": "Em andamento (início: nov/2025)",
+            "title": "Aulas de Inglês e Escrita",
+            "institution": "Centro Cultural Americano",
+            "status": [
+              "Em andamento"
+            ]
           },
           {
             "date": "fev/2024 a jun/2025",

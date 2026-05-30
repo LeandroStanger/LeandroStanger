@@ -41,7 +41,7 @@
       "subtitle": "Mein beruflicher und akademischer Werdegang",
       "objetivo": {
         "title": "Berufliches Ziel",
-        "text": "Ich suche eine Position im IT-Bereich als <strong>Entwickler</strong> oder <strong>Datenbankanalyst</strong>, in der ich meine Kenntnisse in der Computer- und Netzwerkwartung anwenden und gleichzeitig meine Fähigkeiten im technischen Support, der Systemadministration, der Softwareentwicklung und der Datenbankverwaltung weiterentwickeln kann.",
+        "text": "Ich suche eine Position im IT-Bereich als <strong>Java-Entwickler</strong>, <strong>JavaScript-Entwickler</strong>, <strong>C-Entwickler</strong> oder <strong>Datenbankanalyst</strong>, in der ich meine Kenntnisse in der Computer- und Netzwerkwartung anwenden kann. Ich habe mich dem Studium von <strong>Java</strong>, <strong>JavaScript</strong> und <strong>C</strong> (mit Fokus auf eingebettete Systeme, Programmierlogik und Leistung) gewidmet, sowie dem Spring-, Hibernate-, Maven-Ökosystem und Frontend-Frameworks. Ich strebe an, ein qualifizierter Full-Stack-Entwickler zu werden. Darüber hinaus entwickle ich meine Fähigkeiten im technischen Support, der Systemadministration, der Softwareentwicklung und der Datenbankverwaltung weiter.",
         "areas": [
           {
             "title": "Entwickler",
@@ -52,6 +52,16 @@
             "title": "Datenbank",
             "text": "Ich möchte im Bereich Datenbankmodellierung, -administration und -optimierung arbeiten, um die Integrität und Leistung der Systeme zu gewährleisten.",
             "icon": "database"
+          },
+          {
+            "title": "Java / Mobile",
+            "text": "Interesse an der Entwicklung mobiler Apps (Android) und Backend mit Java, unter Nutzung des Spring-Ökosystems, bewährter OOP-Praktiken und Datenbankintegration.",
+            "icon": "mobile-alt"
+          },
+          {
+            "title": "C-Sprache",
+            "text": "Leidenschaft für Low-Level-Programmierung, eingebettete Systeme, Treiber und effiziente Algorithmen. Die C-Sprache vermittelt mir ein tiefes Verständnis für Speicher, Zeiger und Leistung, das für mein Studium der Computertechnik unerlässlich ist.",
+            "icon": "microchip"
           }
         ]
       },
@@ -72,6 +82,14 @@
               "link": "http://www.portalpos.com.br/?utm_voceindica=135742",
               "text": "Studieren Sie auch an der Unopar"
             }
+          },
+          {
+            "date": "In Bearbeitung (Beginn: Nov/2025)",
+            "title": "Englisch- und Schreibkurse",
+            "institution": "Amerikanisches Kulturzentrum",
+            "status": [
+              "In Bearbeitung"
+            ]
           },
           {
             "date": "Feb/2024 bis Jun/2025",

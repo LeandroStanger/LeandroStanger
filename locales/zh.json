@@ -41,7 +41,7 @@
       "subtitle": "我的职业与学术旅程",
       "objetivo": {
         "title": "职业目标",
-        "text": "寻求 IT 领域的职位，担任<strong>开发人员</strong>或<strong>数据库分析师</strong>，能够应用我在计算机和网络维护方面的知识，并继续发展我的技术支持和系统管理、软件开发、数据库管理等技能。",
+        "text": "寻求 IT 领域的职位，担任<strong>Java 开发人员</strong>、<strong>JavaScript 开发人员</strong>、<strong>C 语言开发人员</strong>或<strong>数据库分析师</strong>，能够应用我在计算机和网络维护方面的知识。我致力于学习<strong>Java</strong>、<strong>JavaScript</strong>和<strong>C 语言</strong>（重点关注嵌入式系统、编程逻辑和性能），以及 Spring、Hibernate、Maven 生态系统和前端框架。目标是成为一名合格的全栈开发人员。同时，我继续发展技术支持、系统管理、软件开发和数据库管理方面的技能。",
         "areas": [
           {
             "title": "开发人员",
@@ -52,6 +52,16 @@
             "title": "数据库",
             "text": "希望从事数据库建模、管理和优化工作，确保系统的完整性和性能。",
             "icon": "database"
+          },
+          {
+            "title": "Java / 移动开发",
+            "text": "对移动（Android）和后端 Java 开发感兴趣，探索 Spring 生态系统、OOP 最佳实践和数据库集成。",
+            "icon": "mobile-alt"
+          },
+          {
+            "title": "C 语言",
+            "text": "热衷于底层编程、嵌入式系统、驱动程序和高效算法。C 语言让我深入了解内存、指针和性能，这对于我的计算机工程学习至关重要。",
+            "icon": "microchip"
           }
         ]
       },
@@ -72,6 +82,14 @@
               "link": "http://www.portalpos.com.br/?utm_voceindica=135742",
               "text": "也来 Unopar 学习吧"
             }
+          },
+          {
+            "date": "进行中（开始：2025年11月）",
+            "title": "英语与写作课程",
+            "institution": "美国文化中心",
+            "status": [
+              "进行中"
+            ]
           },
           {
             "date": "2024年2月 - 2025年6月",

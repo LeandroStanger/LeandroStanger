@@ -41,7 +41,7 @@
       "subtitle": "Mon parcours professionnel et académique",
       "objetivo": {
         "title": "Objectif professionnel",
-        "text": "Je recherche un poste dans l'informatique en tant que <strong>Développeur</strong> ou <strong>Analyste de bases de données</strong>, où je pourrai appliquer mes connaissances en maintenance informatique et réseau, tout en continuant à développer mes compétences en support technique, administration système, développement logiciel et gestion de bases de données.",
+        "text": "Je recherche un poste dans l'informatique en tant que <strong>Développeur Java</strong>, <strong>Développeur JavaScript</strong>, <strong>Développeur C</strong> ou <strong>Analyste de bases de données</strong>, où je pourrai appliquer mes connaissances en maintenance informatique et réseau. Je me suis consacré à l'étude de <strong>Java</strong>, <strong>JavaScript</strong> et <strong>C</strong> (avec un accent sur les systèmes embarqués, la logique de programmation et les performances), ainsi qu'à l'écosystème Spring, Hibernate, Maven et aux frameworks front-end. Je cherche à devenir un développeur full-stack qualifié. Je continue à développer mes compétences en support technique, administration système, développement logiciel et gestion de bases de données.",
         "areas": [
           {
             "title": "Développeur",
@@ -52,6 +52,16 @@
             "title": "Base de données",
             "text": "Je souhaite travailler sur la modélisation, l'administration et l'optimisation de bases de données, garantissant l'intégrité et la performance des systèmes.",
             "icon": "database"
+          },
+          {
+            "title": "Java / Mobile",
+            "text": "Intérêt pour le développement mobile (Android) et backend avec Java, en explorant l'écosystème Spring, les bonnes pratiques de POO et l'intégration de bases de données.",
+            "icon": "mobile-alt"
+          },
+          {
+            "title": "Langage C",
+            "text": "Passion pour la programmation bas niveau, les systèmes embarqués, les pilotes et les algorithmes efficaces. Le langage C me donne une compréhension approfondie de la mémoire, des pointeurs et des performances, essentielle pour ma formation en ingénierie informatique.",
+            "icon": "microchip"
           }
         ]
       },
@@ -72,6 +82,14 @@
               "link": "http://www.portalpos.com.br/?utm_voceindica=135742",
               "text": "Étudiez aussi à Unopar"
             }
+          },
+          {
+            "date": "En cours (début : nov/2025)",
+            "title": "Cours d'anglais et d'écriture",
+            "institution": "Centre Culturel Américain",
+            "status": [
+              "En cours"
+            ]
           },
           {
             "date": "fév/2024 à juin/2025",

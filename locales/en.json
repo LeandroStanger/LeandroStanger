@@ -41,17 +41,27 @@
       "subtitle": "My professional and academic journey",
       "objetivo": {
         "title": "Professional Objective",
-        "text": "I am seeking a position in IT as a <strong>Developer</strong> or <strong>Database Analyst</strong>, where I can apply my knowledge in computer and network maintenance, while continuing to develop my skills in technical support, systems administration, software development, and database management.",
+        "text": "I am seeking an IT position as a <strong>Java Developer</strong>, <strong>JavaScript Developer</strong>, <strong>C Developer</strong> or <strong>Database Analyst</strong>, where I can apply my computer and network maintenance knowledge. I have been dedicated to studying <strong>Java</strong>, <strong>JavaScript</strong> and <strong>C</strong> (focusing on embedded systems, programming logic and performance), as well as the Spring, Hibernate, Maven ecosystem and front-end frameworks. I aim to become a qualified full-stack developer. Additionally, I continue to develop skills in technical support, systems administration, software development, and database management.",
         "areas": [
           {
             "title": "Developer",
-            "text": "Interest in working on web application and system development, using modern technologies and following best programming practices.",
+            "text": "Interest in working on web applications and system development, using modern technologies and following best programming practices.",
             "icon": "rocket"
           },
           {
             "title": "Database",
             "text": "I want to work with database modeling, administration, and optimization, ensuring system integrity and performance.",
             "icon": "database"
+          },
+          {
+            "title": "Java / Mobile",
+            "text": "Interest in mobile (Android) and backend development with Java, exploring the Spring ecosystem, OOP best practices, and database integration.",
+            "icon": "mobile-alt"
+          },
+          {
+            "title": "C Language",
+            "text": "Passion for low-level programming, embedded systems, drivers and efficient algorithms. The C language gives me deep understanding of memory, pointers and performance, being essential for my Computer Engineering degree.",
+            "icon": "microchip"
           }
         ]
       },
@@ -72,6 +82,14 @@
               "link": "http://www.portalpos.com.br/?utm_voceindica=135742",
               "text": "Study at Unopar too"
             }
+          },
+          {
+            "date": "In progress (start: Nov/2025)",
+            "title": "English and Writing Classes",
+            "institution": "American Cultural Center",
+            "status": [
+              "In progress"
+            ]
           },
           {
             "date": "Feb/2024 to Jun/2025",
