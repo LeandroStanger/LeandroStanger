@@ -133,6 +133,8 @@ Coleção de meus primeiros projetos de programação em Java, demonstrando minh
 [![LibreOffice Calc](https://img.shields.io/badge/LibreOffice_Calc-007C3C?style=for-the-badge&logo=libreofficecalc&logoColor=007C3C&labelColor=000000)](https://www.libreoffice.org/discover/calc/)
 [![Flatpak](https://img.shields.io/badge/Flatpak-4A90D9?style=for-the-badge&logo=flatpak&logoColor=4A90D9&labelColor=000000)](https://flatpak.org/)
 [![VSCodium](https://img.shields.io/badge/VSCodium-2F80ED?style=for-the-badge&logo=vscodium&logoColor=2F80ED&labelColor=000000)](https://vscodium.com/)
+[![IntelliJ IDEA Community](https://img.shields.io/badge/IntelliJ_IDEA_Community-cc4e72?style=for-the-badge&logo=intellijidea&logoColor=cc4e72&labelColor=000000)](https://www.jetbrains.com/pt-br/idea/)
+
 
 
 
