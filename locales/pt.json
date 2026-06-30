@@ -127,10 +127,25 @@
       },
       "experiencia": {
         "title": "Experiência Profissional",
+        "brand_button": "Marcas que trabalhei",
         "items": [
           {
             "company": "Confecções Vanelise",
             "period": "",
+            "brands": [
+              { "name": "Renner", "logo": "img/marcas/renner.png", "url": "https://www.renner.com.br/" },
+              { "name": "Hering", "logo": "img/marcas/hering.png", "url": "https://www.hering.com.br/" },
+              { "name": "Farm", "logo": "img/marcas/farm.png", "url": "https://www.farmrio.com.br/" },
+              { "name": "Youcom", "logo": "img/marcas/youcom.png", "url": "https://www.youcom.com.br/" },
+              { "name": "Havan", "logo": "img/marcas/havan.png", "url": "https://www.havan.com.br/" },
+              { "name": "Uniforme Anjo Tintas", "logo": "img/marcas/anjo-tintas.png", "url": "https://www.anjo.com.br/" },
+              { "name": "Ashua", "logo": "img/marcas/ashua.png", "url": "https://www.lojasrenner.com.br/ashua" },
+              { "name": "Insider", "logo": "img/marcas/insider.png", "url": "https://www.insiderstore.com.br/" },
+              { "name": "Marisa", "logo": "img/marcas/marisa.png", "url": "https://www.marisa.com.br/" },
+              { "name": "C&A", "logo": "img/marcas/C&A.png", "url": "https://www.cea.com.br/" },
+              { "name": "Gang", "logo": "img/marcas/gang.png", "url": "https://www.gang.com.br/" },
+              { "name": "Riachuelo", "logo": "img/marcas/riachuelo.png", "url": "https://www.riachuelo.com.br/" }
+            ],
             "positions": [
               {
                 "title": "Auxiliar de Expedição Nível 2 (Tecido Plano | Uniformes)",

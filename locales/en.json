@@ -16,7 +16,7 @@
     "sobre": {
       "number": "01",
       "title": "About Me",
-      "subtitle": "My journey, passions, and goals",
+      "subtitle": "My journey, passions and goals",
       "cards": [
         {
           "title": "Academic Background",
@@ -25,12 +25,12 @@
         },
         {
           "title": "Passion for Technology",
-          "text": "Passionate about programming, technology, and continuous learning. I believe technology has the power to transform the world and I strive to contribute to this transformation through the development of innovative solutions.",
+          "text": "Passionate about programming, technology and continuous learning. I believe technology has the power to transform the world and I seek to contribute to this transformation by developing innovative solutions.",
           "icon": "code"
         },
         {
           "title": "Jiu-jitsu & Discipline",
-          "text": "Jiu-jitsu practitioner, a sport that teaches me discipline, resilience, and strategy – qualities I directly apply to software development and solving complex problems.",
+          "text": "Jiu-jitsu practitioner, a sport that teaches me discipline, resilience and strategy - qualities I directly apply in software development and complex problem solving.",
           "icon": "medal"
         }
       ]
@@ -41,26 +41,26 @@
       "subtitle": "My professional and academic journey",
       "objetivo": {
         "title": "Professional Objective",
-        "text": "I am seeking a position in the IT field as a <strong>Java Developer</strong>, <strong>JavaScript Developer</strong>, <strong>C Developer</strong>, or <strong>Database Analyst</strong>, where I can apply my knowledge in computer maintenance and networking. I have been dedicated to studying <strong>Java</strong>, <strong>JavaScript</strong>, and <strong>C</strong> (with a focus on embedded systems, programming logic, and performance), as well as the Spring ecosystem, Hibernate, Maven, and front-end frameworks. I aim to become a qualified full-stack developer. I continuously develop skills in technical support, systems administration, software development, and database management.",
+        "text": "Seeking a position in the IT field as a <strong>Java Developer</strong>, <strong>JavaScript Developer</strong>, <strong>C Developer</strong> or <strong>Database Analyst</strong>, where I can apply my knowledge in computer and network maintenance. I have been dedicated to studying <strong>Java</strong>, <strong>JavaScript</strong> and <strong>C</strong> (focusing on embedded systems, programming logic and performance), as well as the Spring ecosystem, Hibernate, Maven and front-end frameworks. I aim to become a qualified full-stack developer. I continue to develop skills in technical support, system administration, software development and database management.",
         "areas": [
           {
             "title": "Developer",
-            "text": "Interest in working on web application and system development using modern technologies and following best programming practices.",
+            "text": "Interested in working on web application and system development, using modern technologies and following best programming practices.",
             "icon": "rocket"
           },
           {
             "title": "Database",
-            "text": "I want to work with database modeling, administration, and optimization to ensure system integrity and performance.",
+            "text": "I wish to work with database modeling, administration and optimization, ensuring system integrity and performance.",
             "icon": "database"
           },
           {
             "title": "Java / Mobile",
-            "text": "Interest in mobile application development (Android) and backend with Java, exploring the Spring ecosystem, OOP best practices, and database integration.",
+            "text": "Interested in developing mobile applications (Android) and backend with Java, exploring the Spring ecosystem, good OOP practices and database integration.",
             "icon": "mobile-alt"
           },
           {
             "title": "C Language",
-            "text": "Passion for low-level programming, embedded systems, drivers, and efficient algorithms. The C language gives me a deep understanding of memory, pointers, and performance, which is essential for my Computer Engineering education.",
+            "text": "Passionate about low-level programming, embedded systems, drivers and efficient algorithms. The C language gives me a deep understanding of memory, pointers and performance, being fundamental for my Computer Engineering education.",
             "icon": "microchip"
           }
         ]
@@ -70,7 +70,7 @@
         "items": [
           {
             "date": "In progress (start: Feb/2025)",
-            "title": "Bachelor's in Computer Engineering",
+            "title": "Bachelor's Degree in Computer Engineering",
             "institution": "Unopar",
             "progress": {
               "completed": 15,
@@ -93,7 +93,7 @@
           },
           {
             "date": "Apr/2016 to Oct/2016",
-            "title": "Course in Computer Assembly and Maintenance & Networks",
+            "title": "Computer and Network Assembly and Maintenance Course",
             "institution": "YesBras Escolas do Brasil",
             "status": [
               "Completed"
@@ -109,7 +109,7 @@
           },
           {
             "date": "Sep/2014 to Sep/2015",
-            "title": "APP Course – Administrative Personal and Professional",
+            "title": "APP Course – Personal and Professional Administrative",
             "institution": "Escola de Informática Unisoft",
             "status": [
               "Completed"
@@ -117,7 +117,7 @@
           },
           {
             "date": "Sep/2013 to Sep/2014",
-            "title": "QIT Course – Qualification in Informatics and Technology",
+            "title": "QIT Course – Qualification in Information Technology",
             "institution": "Escola de Informática Unisoft",
             "status": [
               "Completed"
@@ -127,18 +127,33 @@
       },
       "experiencia": {
         "title": "Professional Experience",
+        "brand_button": "Brands I've worked with",
         "items": [
           {
             "company": "Confecções Vanelise",
             "period": "",
+            "brands": [
+              { "name": "Renner", "logo": "img/marcas/renner.png", "url": "https://www.renner.com.br/" },
+              { "name": "Hering", "logo": "img/marcas/hering.png", "url": "https://www.hering.com.br/" },
+              { "name": "Farm", "logo": "img/marcas/farm.png", "url": "https://www.farmrio.com.br/" },
+              { "name": "Youcom", "logo": "img/marcas/youcom.png", "url": "https://www.youcom.com.br/" },
+              { "name": "Havan", "logo": "img/marcas/havan.png", "url": "https://www.havan.com.br/" },
+              { "name": "Uniforme Anjo Tintas", "logo": "img/marcas/anjo-tintas.png", "url": "https://www.anjo.com.br/" },
+              { "name": "Ashua", "logo": "img/marcas/ashua.png", "url": "https://www.lojasrenner.com.br/ashua" },
+              { "name": "Insider", "logo": "img/marcas/insider.png", "url": "https://www.insiderstore.com.br/" },
+              { "name": "Marisa", "logo": "img/marcas/marisa.png", "url": "https://www.marisa.com.br/" },
+              { "name": "C&A", "logo": "img/marcas/C&A.png", "url": "https://www.cea.com.br/" },
+              { "name": "Gang", "logo": "img/marcas/gang.png", "url": "https://www.gang.com.br/" },
+              { "name": "Riachuelo", "logo": "img/marcas/riachuelo.png", "url": "https://www.riachuelo.com.br/" }
+            ],
             "positions": [
               {
                 "title": "Shipping Assistant Level 2 (Flat Fabric | Uniforms)",
                 "period": "",
                 "responsibilities": [
                   "Promoted to level 2 with greater responsibilities",
-                  "Training new employees",
-                  "Advanced packaging stock management",
+                  "Training of new employees",
+                  "Advanced inventory management of the boxing area",
                   "Quality control of shipping processes"
                 ]
               },
@@ -147,9 +162,9 @@
                 "period": "",
                 "responsibilities": [
                   "Receiving and organizing repair pallets",
-                  "Supplying revision and storage of parts",
+                  "Supplying review area and storing parts",
                   "Inventory management and material organization",
-                  "Initial quality control of products"
+                  "Initial product quality control"
                 ]
               }
             ]
@@ -161,8 +176,8 @@
               {
                 "title": "Maintenance Technician",
                 "responsibilities": [
-                  "Formatting, parts replacement, and software updates",
-                  "Customer service and remote/onsite technical support",
+                  "Formatting, part replacement and software updates",
+                  "Customer service and remote/on-site technical support",
                   "Installation and configuration of operating systems",
                   "Preventive and corrective hardware maintenance"
                 ]
@@ -185,11 +200,11 @@
             "Computer networks",
             "Technical support",
             "HTML",
-            "Systems administration",
+            "System administration",
             "CSS",
-            "Databases",
+            "Database",
             "SQL",
-            "Web Development",
+            "Web development",
             "Git",
             "Version control",
             "GitHub",
@@ -231,7 +246,7 @@
         "frontend": "Front-end",
         "backend": "Backend",
         "devops": "DevOps",
-        "databases": "Databases",
+        "databases": "Database",
         "ferramentas": "Tools",
         "so": "Operating System"
       }
@@ -242,163 +257,163 @@
       "subtitle": "My developed and in-development projects",
       "category_title": "Development Portfolio",
       "category_desc": "Explore my front-end, back-end projects and programming experiments.",
-      "search_placeholder": "Search projects by name, technology, or description...",
+      "search_placeholder": "Search projects by name, technology or description...",
       "found": "projects found",
       "no_results_title": "No projects found",
-      "no_results_desc": "Try adjusting your search. You can search by project name, technologies, or description.",
+      "no_results_desc": "Try adjusting your search. You can search by project name, technologies or description.",
       "code": "Code",
       "demo": "Demo",
       "cards": [
         {
-          "title": "Animals in the Zoo 2",
-          "desc": "An interactive web application for managing and viewing animals in a virtual zoo.",
+          "title": "Animais no Zoológico 2",
+          "desc": "An interactive web application for management and visualization of animals in a virtual zoo.",
           "tags": ["JavaScript", "HTML", "CSS"],
           "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico2",
           "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico2/"
         },
         {
-          "title": "Climate Data",
-          "desc": "System for collecting, processing, and visualizing weather data from different sources.",
+          "title": "Dados Climáticos",
+          "desc": "System for collecting, processing and visualizing weather data from different sources.",
           "tags": ["JavaScript", "API", "CSS"],
           "codeLink": "https://github.com/LeandroStanger/DadosClimaticos",
           "demoLink": "https://leandrostanger.github.io/DadosClimaticos/"
         },
         {
-          "title": "Feedback Form",
+          "title": "Formulário de Feedback",
           "desc": "Interactive form for collecting user feedback with data validation.",
           "tags": ["HTML", "CSS", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/FormularioDeFeedback",
           "demoLink": "https://leandrostanger.github.io/FormularioDeFeedback/"
         },
         {
-          "title": "Fun Cars",
+          "title": "Carros Divertidos",
           "desc": "Interactive car game in a 2D environment, developed to practice programming concepts.",
           "tags": ["JavaScript", "HTML5", "CSS3"],
           "codeLink": "https://github.com/LeandroStanger/CarrosDivertidos",
           "demoLink": "https://leandrostanger.github.io/CarrosDivertidos/"
         },
         {
-          "title": "Car Racing",
-          "desc": "Car racing simulation with interactive controls and scoring system.",
+          "title": "Corrida de Carro",
+          "desc": "Car race simulation with interactive controls and scoring system.",
           "tags": ["JavaScript", "CSS3", "HTML5"],
           "codeLink": "https://github.com/LeandroStanger/CorridaDeCarro",
           "demoLink": "https://leandrostanger.github.io/CorridaDeCarro/"
         },
         {
-          "title": "Animals in the Zoo",
-          "desc": "Initial version of the zoo management system, focusing on learning JavaScript.",
+          "title": "Animais no Zoológico",
+          "desc": "Initial version of the zoo management system, focused on learning JavaScript.",
           "tags": ["JavaScript", "HTML", "CSS"],
           "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico",
           "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico/"
         },
         {
-          "title": "Website with Loop",
-          "desc": "Demonstration website with visual loop effects and CSS/JavaScript animations.",
+          "title": "Site com Loop",
+          "desc": "Demo site with looping visual effects and CSS/JavaScript animations.",
           "tags": ["HTML", "CSS", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/SiteComLoop",
           "demoLink": "https://leandrostanger.github.io/SiteComLoop/"
         },
         {
-          "title": "Login System",
+          "title": "Sistema de Login",
           "desc": "User authentication system with credential validation and responsive interface.",
           "tags": ["JavaScript", "HTML", "CSS"],
           "codeLink": "https://github.com/LeandroStanger/SistemaDeLogin",
           "demoLink": "https://leandrostanger.github.io/SistemaDeLogin/"
         },
         {
-          "title": "List Manager",
-          "desc": "Application to create, edit, and delete list items with local storage.",
+          "title": "Gerenciador de Lista",
+          "desc": "Application to create, edit and delete list items, with local storage.",
           "tags": ["JavaScript", "LocalStorage", "CSS"],
           "codeLink": "https://github.com/LeandroStanger/GerenciadorDeLista",
           "demoLink": "https://leandrostanger.github.io/GerenciadorDeLista/"
         },
         {
-          "title": "Initial Projects",
-          "desc": "Collection of my first programming projects, showcasing my evolution as a developer.",
+          "title": "Projetos Iniciais",
+          "desc": "Collection of my first programming projects, demonstrating my evolution as a developer.",
           "tags": ["HTML", "CSS", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais",
           "demoLink": ""
         },
         {
-          "title": "Leandro Stanger Portfolio",
-          "desc": "Main repository with profile, detailed README, and links to all projects. Focus on Front-end development with HTML, CSS, and JavaScript.",
+          "title": "Leandro Stanger Portfólio",
+          "desc": "Main repository with profile, detailed README and links to all projects. Focus on Front-end development with HTML, CSS and JavaScript.",
           "tags": ["HTML5", "CSS3", "JavaScript", "Git"],
           "codeLink": "https://github.com/LeandroStanger/LeandroStanger",
           "demoLink": "https://leandrostanger.github.io/LeandroStanger/"
         },
         {
-          "title": "Cities with High Temperatures",
-          "desc": "Interactive web application that displays and filters data on cities with extreme climates. Includes map, dashboard, and climate data visualization.",
+          "title": "Cidades com Altas Temperaturas",
+          "desc": "Interactive web application that displays and filters data about cities with extreme climates. Includes map, dashboard and climate data visualization.",
           "tags": ["JavaScript (ES6+)", "API", "CSS3", "Data Visualization"],
           "codeLink": "https://github.com/LeandroStanger/CidadesComAltasTemperaturas",
           "demoLink": "https://leandrostanger.github.io/CidadesComAltasTemperaturas/"
         },
         {
-          "title": "Website with Loop Hack",
-          "desc": "Experimental website with visual loop effects, creative animations, and advanced CSS/JavaScript techniques. Demonstrates skills in animations and interactive design.",
+          "title": "Site com Loop Hack",
+          "desc": "Experimental site with looping visual effects, creative animations and advanced CSS/JavaScript techniques. Demonstrates animation and interactive design skills.",
           "tags": ["HTML5", "CSS3", "JavaScript", "Animations", "Web Experiments"],
           "codeLink": "https://github.com/LeandroStanger/SiteComLoopHack",
           "demoLink": "https://leandrostanger.github.io/SiteComLoopHack/"
         },
         {
-          "title": "Initial Projects (C Language)",
-          "desc": "Collection of my first programming projects in C, showcasing my evolution as a developer.",
+          "title": "Projetos Iniciais (Linguagem C)",
+          "desc": "Collection of my first programming projects in C language, demonstrating my evolution as a developer.",
           "tags": ["C", "GCC"],
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-C",
           "demoLink": ""
         },
         {
-          "title": "Pet Management System",
-          "desc": "A static, responsive catalog displaying a list of pets with basic information such as name, species, age, weight, and energy level in a user-friendly web interface.",
+          "title": "Sistema de Animais de Estimação",
+          "desc": "A static and responsive catalog that displays a list of pets, presenting basic information such as name, species, age, weight and energy level in a friendly web interface.",
           "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
           "codeLink": "https://github.com/LeandroStanger/SistemaDeAnimaisDeEstimacao",
           "demoLink": "https://leandrostanger.github.io/SistemaDeAnimaisDeEstimacao/"
         },
         {
-          "title": "Players Dashboard",
-          "desc": "Complete statistics of the greatest football players. A modern, interactive web dashboard for viewing and analyzing player data in dashboard format.",
+          "title": "Dashboard de Jogadores",
+          "desc": "Complete statistics of the greatest football players. A modern and interactive web panel for visualization and analysis of player data in dashboard format.",
           "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
           "codeLink": "https://github.com/LeandroStanger/DashboardDeJogadores",
           "demoLink": "https://leandrostanger.github.io/DashboardDeJogadores/"
         },
         {
-          "title": "Conservation Dashboard",
-          "desc": "In-depth analysis of population data, considering birth, mortality, and migration rates, reveals a worrying trend that allows us to estimate the maximum remaining time before local extinction of this community.",
+          "title": "Dashboard de Conservação",
+          "desc": "An in-depth analysis of population data, considering birth rates, mortality and migration, reveals a worrying trajectory that allows us to estimate the maximum time remaining before the local extinction of this community.",
           "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
           "codeLink": "https://github.com/LeandroStanger/DashboardDeConservacao",
           "demoLink": "https://leandrostanger.github.io/DashboardDeConservacao/"
         },
         {
-          "title": "Number Draw",
-          "desc": "A simple and interactive web application for randomly drawing numbers within a user-defined range.",
+          "title": "Sorteio de Números",
+          "desc": "A simple and interactive web application for random number draws within a user-defined range.",
           "tags": ["HTML5", "CSS3", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/SorteioDeNumeros",
           "demoLink": "https://leandrostanger.github.io/SorteioDeNumeros/"
         },
         {
-          "title": "Calculator",
+          "title": "Calculadora",
           "desc": "A functional web calculator with a clean and intuitive interface, capable of performing basic mathematical operations.",
           "tags": ["HTML5", "CSS3", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/Calculadora",
           "demoLink": "https://leandrostanger.github.io/Calculadora/"
         },
         {
-          "title": "Free University",
-          "desc": "Institutional platform of the Free University, offering information on undergraduate courses (with emphasis on Mathematics), graduate programs, faculty, research, and extension. Developed with responsive design for desktop and mobile devices.",
+          "title": "Universidade Livre",
+          "desc": "Institutional platform of Universidade Livre, offering information about undergraduate courses (with emphasis on Mathematics), graduate programs, faculty, research and extension. Developed with responsive design for desktop and mobile devices.",
           "tags": ["HTML5", "CSS3", "JavaScript"],
           "codeLink": "https://github.com/LeandroStanger/UniversidadeLivre",
           "demoLink": "https://leandrostanger.github.io/UniversidadeLivre/"
         },
         {
-          "title": "Initial SQL Projects",
-          "desc": "Collection of my first SQL projects, showcasing my evolution in databases.",
+          "title": "Projetos Iniciais em SQL",
+          "desc": "Collection of my first SQL projects, demonstrating my evolution in databases.",
           "tags": ["SQL", "Database"],
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-SQL",
           "demoLink": ""
         },
         {
-          "title": "Initial Java Projects",
-          "desc": "Collection of my first programming projects in Java, showcasing my evolution as a developer.",
+          "title": "Projetos Iniciais em Java",
+          "desc": "Collection of my first Java programming projects, demonstrating my evolution as a developer.",
           "tags": ["Java", "JDK", "javac", "JVM"],
           "codeLink": "https://github.com/LeandroStanger/Projetos-Iniciais-Java",
           "demoLink": ""
@@ -407,15 +422,15 @@
     },
     "contato": {
       "number": "05",
-      "title": "Contact",
+      "title": "Get in Touch",
       "subtitle": "I'm always open to new opportunities and collaborations",
-      "intro": "Let's talk about projects, opportunities, or just exchange ideas about technology!",
+      "intro": "Let's talk about projects, opportunities or just exchange ideas about technology!",
       "form": {
         "title": "Send a message",
         "name_label": "Name",
         "name_placeholder": "Enter your full name",
-        "email_label": "E-mail",
-        "email_placeholder": "Enter your E-mail: your@email.com",
+        "email_label": "Email",
+        "email_placeholder": "Enter your email: your@email.com",
         "message_label": "Message",
         "message_placeholder": "Type your message here...",
         "send": "Send Message",
@@ -445,7 +460,7 @@
       "title": "Donations",
       "subtitle": "Contribute to development",
       "card_title": "Support my studies",
-      "intro": "Voluntary contributions directly help continue my studies and the development of this project.\nI am currently on an academic journey at Unopar University, seeking to constantly evolve in the technology and development field.\nThe support received contributes to acquiring books, educational resources, and helps with college costs.\nIt also allows investing in improving the project and creating new technological initiatives in the future.\nAny contribution is very welcome and makes a difference in this journey of learning and evolution.",
+      "intro": "Voluntary contributions directly help the continuity of my studies and the development of this project.\nI am currently on an academic journey at Unopar University, constantly seeking to evolve in technology and development.\nThe support received contributes to the purchase of books, educational resources and helps with college costs.\nIt also allows me to invest in improving the project and creating new technological initiatives in the future.\nAny contribution is very welcome and makes a difference in this journey of learning and evolution.",
       "real_title": "Real (BRL)",
       "dolar_title": "Dollar (USD)",
       "pix": {
@@ -453,23 +468,23 @@
         "chave": "c348f1e6-72fa-4988-a2e9-3ac7d539de84",
         "copiar": "Copy Pix key",
         "copiado": "Key copied!",
-        "instrucao": "Scan the QR code or copy the key to make a Pix payment."
+        "instrucao": "Scan the QR code or copy the key to make a Pix."
       },
       "kofi": {
         "title": "Ko-fi",
-        "description": "If you prefer to donate in dollars, you can support me on Ko-fi. It's fast and easy!"
+        "description": "If you prefer to donate in dollars, you can support me on Ko-fi. It's quick and easy!"
       },
       "transferencia": {
         "title": "Bank transfer or deposit",
         "bankLabel": "Bank:",
-        "agencyLabel": "Branch:",
-        "accountLabel": "Current Account:",
+        "agencyLabel": "Agency:",
+        "accountLabel": "Checking Account:",
         "copy": "Copy"
       },
       "crypto": {
         "title": "Cryptocurrencies",
         "copyButton": "Copy address",
-        "copySuccess": "Address copied successfully!"
+        "copySuccess": "Address successfully copied!"
       },
       "internacional": {
         "title": "International Bank Transfer",
@@ -479,9 +494,9 @@
         "copyNumberSuccess": "Number copied!"
       },
       "qrcode_unavailable": "QR code temporarily unavailable.",
-      "copy_failed_key": "Failed to copy key. Please try manually.",
-      "copy_failed_address": "Failed to copy address. Please try manually.",
-      "copy_failed_number": "Failed to copy number. Please try manually."
+      "copy_failed_key": "Failed to copy key. Try manually.",
+      "copy_failed_address": "Failed to copy address. Try manually.",
+      "copy_failed_number": "Failed to copy number. Try manually."
     }
   },
   "footer": {

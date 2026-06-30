@@ -27,8 +27,8 @@
     <link rel="alternate" hreflang="en" href="https://leandrostanger.github.io/LeandroStanger/" />
     <link rel="alternate" hreflang="es" href="https://leandrostanger.github.io/LeandroStanger/" />
     <link rel="alternate" hreflang="fr" href="https://leandrostanger.github.io/LeandroStanger/" />
-    <link rel="alternate" hreflang="de" href="https://leandrostanger.github.io/LeandroStanger/" />
     <link rel="alternate" hreflang="zh" href="https://leandrostanger.github.io/LeandroStanger/" />
+    <link rel="alternate" hreflang="de" href="https://leandrostanger.github.io/LeandroStanger/" />
     <link rel="alternate" hreflang="x-default" href="https://leandrostanger.github.io/LeandroStanger/" />
 
     <!-- Schema.org JSON-LD -->
@@ -324,11 +324,6 @@
                             <div class="tecnologia-icon" aria-label="Shell Script"><img src="img/img32.png"
                                     alt="Shell Script" width="64" height="64" loading="lazy"><span
                                     class="tecnologia-label">Shell Script</span></div>
-                            <!--<div class="tecnologia-icon" aria-label="Debian"><img src="img/img24.png" alt="Debian" width="64" height="64" loading="lazy"><span class="tecnologia-label">Debian</span></div>
-                            <div class="tecnologia-icon" aria-label="Fedora Linux"><img src="img/img25.png" alt="Fedora Linux" width="64" height="64" loading="lazy"><span class="tecnologia-label">Fedora Linux</span></div>
-                            <div class="tecnologia-icon" aria-label="Oracle Linux"><img src="img/img26.png" alt="Oracle Linux" width="64" height="64" loading="lazy"><span class="tecnologia-label">Oracle Linux</span></div>
-                            <div class="tecnologia-icon" aria-label="AlmaLinux OS"><img src="img/img27.png" alt="AlmaLinux OS" width="64" height="64" loading="lazy"><span class="tecnologia-label">AlmaLinux OS</span></div>
-                        -->
                         </div>
                     </article>
                     <article class="tecnologia-categoria" aria-labelledby="databases-title">
@@ -1057,6 +1052,17 @@
             </div>
         </section>
     </main>
+
+    <!-- ===== MODAL DE MARCAS ===== -->
+    <div id="modal-marcas" class="modal-overlay" style="display:none;" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fechar">&times;</button>
+            <h3 data-i18n="sections.curriculo.experiencia.brand_button">Marcas</h3>
+            <ul class="brands-list" id="brands-list">
+                <!-- Preenchido dinamicamente pelo JavaScript -->
+            </ul>
+        </div>
+    </div>
 
     <footer class="main-footer" role="contentinfo">
         <div class="container">

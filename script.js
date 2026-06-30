@@ -44,6 +44,11 @@ const MINIMAL_TRANSLATIONS = {
     "scroll": "Scroll",
     "ongoing": "em andamento",
     "sections": {
+        "curriculo": {
+            "experiencia": {
+                "brand_button": "Marcas que trabalhei"
+            }
+        },
         "projetos": {
             "found": "projetos encontrados",
             "no_results_title": "Nenhum projeto",
@@ -237,6 +242,71 @@ window.updateParticlesTheme = function (isLight) {
     initParticles(isLight);
 };
 
+// ==================== MÓDULO DE CÁLCULO DE PERÍODOS ====================
+const ExperienceCalc = {
+    calculatePeriod(start, end = new Date()) {
+        const s = new Date(start);
+        const e = end instanceof Date ? end : new Date(end);
+        if (isNaN(s.getTime())) return { years: 0, months: 0 };
+        let years = e.getFullYear() - s.getFullYear();
+        let months = e.getMonth() - s.getMonth();
+        if (months < 0) { years--; months += 12; }
+        if (e.getDate() < s.getDate()) {
+            months--;
+            if (months < 0) { years--; months += 12; }
+        }
+        return { years, months };
+    },
+
+    formatPeriod(period, lang) {
+        const labels = {
+            pt: { y: ['ano', 'anos'], m: ['mês', 'meses'] },
+            en: { y: ['year', 'years'], m: ['month', 'months'] },
+            es: { y: ['año', 'años'], m: ['mes', 'meses'] },
+            fr: { y: ['an', 'ans'], m: ['mois', 'mois'] },
+            zh: { y: ['年', '年'], m: ['月', '月'] },
+            de: { y: ['Jahr', 'Jahre'], m: ['Monat', 'Monate'] }
+        };
+        const l = labels[lang] || labels.pt;
+        const parts = [];
+        if (period.years > 0) parts.push(`${period.years} ${period.years === 1 ? l.y[0] : l.y[1]}`);
+        if (period.months > 0) parts.push(`${period.months} ${period.months === 1 ? l.m[0] : l.m[1]}`);
+        return parts.length > 0 ? parts.join(', ') : (lang === 'pt' ? '0 meses' : lang === 'en' ? '0 months' : lang === 'es' ? '0 meses' : lang === 'fr' ? '0 mois' : lang === 'zh' ? '0个月' : '0 Monate');
+    },
+
+    getPeriodText(type, lang) {
+        const ongoing = I18n.t('ongoing');
+        const now = new Date();
+        if (type === 'cargo1') {
+            const start = new Date('2025-08-01');
+            const period = start > now ? { years: 0, months: 0 } : this.calculatePeriod(start);
+            return `ago de 2025 - ${ongoing} · (${this.formatPeriod(period, lang)})`;
+        }
+        if (type === 'cargo1_anterior') {
+            const period = this.calculatePeriod('2020-01-21', '2025-08-01');
+            return `21 jan de 2020 a ago de 2025 (${this.formatPeriod(period, lang)})`;
+        }
+        if (type === 'empresa1') {
+            const period = this.calculatePeriod('2020-01-21');
+            return `21 jan de 2020 - ${ongoing} · (${this.formatPeriod(period, lang)})`;
+        }
+        if (type === 'empresa2') {
+            const period = this.calculatePeriod('2014-01-01');
+            return `Jan/2014 - ${ongoing} · (${this.formatPeriod(period, lang)})`;
+        }
+        return '';
+    }
+};
+
+// ==================== UTILITÁRIO DE EMBARALHAMENTO ====================
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
 // ==================== RENDERIZADORES DAS SEÇÕES ====================
 const Renderer = {
     renderAll() {
@@ -383,11 +453,17 @@ const Renderer = {
             }
 
             const positions = Array.isArray(exp.positions) ? exp.positions : [];
+            const brands = Array.isArray(exp.brands) ? exp.brands : [];
+            const hasBrands = brands.length > 0;
 
+            // Montagem do cabeçalho com empresa e botão lado a lado, e período abaixo
             return `
             <div class="experiencia-item">
                 <div class="experiencia-header">
-                    <h4 class="experiencia-empresa">${company}</h4>
+                    <div class="experiencia-header-row">
+                        <h4 class="experiencia-empresa">${company}</h4>
+                        ${hasBrands ? `<button class="btn-marcas" data-company="${company}" aria-label="${I18n.t('sections.curriculo.experiencia.brand_button')}"><i class="fas fa-tags"></i> ${I18n.t('sections.curriculo.experiencia.brand_button')}</button>` : ''}
+                    </div>
                     ${companyPeriod ? `<div class="experiencia-periodo"><span class="periodo-detalhes">${companyPeriod}</span></div>` : ''}
                 </div>
                 ${positions.map((pos, idx) => {
@@ -409,6 +485,18 @@ const Renderer = {
                 `}).join('')}
             </div>
         `}).join('');
+
+        // Adiciona eventos aos botões "Marcas"
+        container.querySelectorAll('.btn-marcas').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const company = this.dataset.company;
+                const expItem = items.find(item => item.company === company);
+                if (expItem && expItem.brands) {
+                    openBrandsModal(expItem.brands);
+                }
+            });
+        });
     },
 
     renderHabilidades() {
@@ -421,7 +509,6 @@ const Renderer = {
             return;
         }
 
-        // Embaralhar as listas sem modificar os originais
         const shuffledTecnicas = shuffleArray([...tecnicas.items]);
         const shuffledInterpessoais = shuffleArray([...interpessoais.items]);
 
@@ -471,78 +558,40 @@ const Renderer = {
     }
 };
 
-// ==================== MÓDULO DE CÁLCULO DE PERÍODOS ====================
-const ExperienceCalc = {
-    calculatePeriod(start, end = new Date()) {
-        const s = new Date(start);
-        const e = end instanceof Date ? end : new Date(end);
-        if (isNaN(s.getTime())) return { years: 0, months: 0 };
-        let years = e.getFullYear() - s.getFullYear();
-        let months = e.getMonth() - s.getMonth();
-        if (months < 0) { years--; months += 12; }
-        if (e.getDate() < s.getDate()) {
-            months--;
-            if (months < 0) { years--; months += 12; }
-        }
-        return { years, months };
-    },
+// ==================== MODAL DE MARCAS COM LINKS ====================
+function openBrandsModal(brands) {
+    const modal = document.getElementById('modal-marcas');
+    const list = document.getElementById('brands-list');
+    if (!modal || !list) return;
 
-    formatPeriod(period, lang) {
-        const labels = {
-            pt: { y: ['ano', 'anos'], m: ['mês', 'meses'] },
-            en: { y: ['year', 'years'], m: ['month', 'months'] },
-            es: { y: ['año', 'años'], m: ['mes', 'meses'] },
-            fr: { y: ['an', 'ans'], m: ['mois', 'mois'] },
-            zh: { y: ['年', '年'], m: ['月', '月'] },
-            de: { y: ['Jahr', 'Jahre'], m: ['Monat', 'Monate'] }
-        };
-        const l = labels[lang] || labels.pt;
-        const parts = [];
-        if (period.years > 0) parts.push(`${period.years} ${period.years === 1 ? l.y[0] : l.y[1]}`);
-        if (period.months > 0) parts.push(`${period.months} ${period.months === 1 ? l.m[0] : l.m[1]}`);
-        return parts.length > 0 ? parts.join(', ') : (lang === 'pt' ? '0 meses' : lang === 'en' ? '0 months' : lang === 'es' ? '0 meses' : lang === 'fr' ? '0 mois' : lang === 'zh' ? '0个月' : '0 Monate');
-    },
-
-    getPeriodText(type, lang) {
-        const ongoing = I18n.t('ongoing');
-        const now = new Date();
-        if (type === 'cargo1') {
-            const start = new Date('2025-08-01');
-            const period = start > now ? { years: 0, months: 0 } : this.calculatePeriod(start);
-            return `ago de 2025 - ${ongoing} · (${this.formatPeriod(period, lang)})`;
-        }
-        if (type === 'cargo1_anterior') {
-            const period = this.calculatePeriod('2020-01-21', '2025-08-01');
-            return `21 jan de 2020 a ago de 2025 (${this.formatPeriod(period, lang)})`;
-        }
-        if (type === 'empresa1') {
-            const period = this.calculatePeriod('2020-01-21');
-            return `21 jan de 2020 - ${ongoing} · (${this.formatPeriod(period, lang)})`;
-        }
-        if (type === 'empresa2') {
-            const period = this.calculatePeriod('2014-01-01');
-            return `Jan/2014 - ${ongoing} · (${this.formatPeriod(period, lang)})`;
-        }
-        return '';
+    if (!Array.isArray(brands) || brands.length === 0) {
+        list.innerHTML = '<li class="brand-item" style="grid-column:1/-1; text-align:center; color:var(--color-gray);">Nenhuma marca encontrada.</li>';
+    } else {
+        list.innerHTML = brands.map(brand => {
+            const url = brand.url || '#';
+            const hasLink = url && url !== '#';
+            if (hasLink) {
+                return `
+                    <li class="brand-item">
+                        <a href="${url}" target="_blank" rel="noopener noreferrer" class="brand-link">
+                            <img src="${brand.logo || 'img/placeholder.png'}" alt="${brand.name}" class="brand-logo" loading="lazy" onerror="this.onerror=null; this.src='img/placeholder.png';">
+                            <span>${brand.name}</span>
+                        </a>
+                    </li>
+                `;
+            } else {
+                return `
+                    <li class="brand-item">
+                        <img src="${brand.logo || 'img/placeholder.png'}" alt="${brand.name}" class="brand-logo" loading="lazy" onerror="this.onerror=null; this.src='img/placeholder.png';">
+                        <span>${brand.name}</span>
+                    </li>
+                `;
+            }
+        }).join('');
     }
-};
 
-// ==================== RANDOMIZAÇÃO DOS ÍCONES DE TECNOLOGIAS ====================
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
-
-function shuffleTechnologiesIcons() {
-    const containers = document.querySelectorAll('.tecnologia-icons');
-    containers.forEach(container => {
-        const icons = Array.from(container.children);
-        shuffleArray(icons);
-        icons.forEach(icon => container.appendChild(icon));
-    });
+    modal.style.display = 'flex';
+    document.body.classList.add('modal-open');
 }
 
 // ==================== COMPONENTE DE PROJETOS ====================
@@ -568,15 +617,6 @@ class ProjectsSearch {
         this.render();
     }
 
-    shuffleArray(array) {
-        const shuffled = [...array];
-        for (let i = shuffled.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-        }
-        return shuffled;
-    }
-
     render() {
         const cardsData = I18n.t('sections.projetos.cards');
         if (!Array.isArray(cardsData) || cardsData.length === 0) {
@@ -585,7 +625,7 @@ class ProjectsSearch {
             return;
         }
 
-        const shuffledCards = this.shuffleArray(cardsData);
+        const shuffledCards = shuffleArray([...cardsData]);
 
         const codeLabel = I18n.t('sections.projetos.code');
         const demoLabel = I18n.t('sections.projetos.demo');
@@ -658,6 +698,14 @@ const ScrollAnimations = {
 
     init() {
         if (this.observer) return;
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => this._createObserver());
+        } else {
+            this._createObserver();
+        }
+    },
+
+    _createObserver() {
         this.observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -671,7 +719,7 @@ const ScrollAnimations = {
 
     observeAll() {
         if (!this.observer) {
-            console.warn('ScrollAnimations: observer não inicializado');
+            this._createObserver();
             return;
         }
         const targets = document.querySelectorAll(
@@ -688,8 +736,10 @@ const ScrollAnimations = {
     refresh() {
         if (this.observer) {
             this.observer.disconnect();
+            this._createObserver();
+        } else {
+            this.init();
         }
-        this.observeAll();
     }
 };
 
@@ -839,6 +889,15 @@ async function initDownloadCurriculo() {
             console.error('Falha no download:', error);
             window.open(url, '_blank');
         }
+    });
+}
+
+function shuffleTechnologiesIcons() {
+    const containers = document.querySelectorAll('.tecnologia-icons');
+    containers.forEach(container => {
+        const icons = Array.from(container.children);
+        shuffleArray(icons);
+        icons.forEach(icon => container.appendChild(icon));
     });
 }
 
@@ -1064,7 +1123,7 @@ function initDoacoes() {
     }
 }
 
-// ==================== INICIALIZAÇÃO ====================
+// ==================== INICIALIZAÇÃO PRINCIPAL ====================
 (async function init() {
     try {
         document.documentElement.classList.remove('no-js');
@@ -1092,6 +1151,30 @@ function initDoacoes() {
         initDownloadCurriculo();
         initDoacoes();
 
+        // ===== MODAL DE MARCAS - CONTROLE =====
+        const modal = document.getElementById('modal-marcas');
+        const closeBtn = modal?.querySelector('.modal-close');
+        if (modal) {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.classList.remove('modal-open');
+                }
+            });
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                    document.body.classList.remove('modal-open');
+                });
+            }
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.style.display === 'flex') {
+                    modal.style.display = 'none';
+                    document.body.classList.remove('modal-open');
+                }
+            });
+        }
+
         const isLight = document.documentElement.classList.contains('light-theme');
         initParticles(isLight);
 
@@ -1101,7 +1184,6 @@ function initDoacoes() {
 
         I18n.updateActiveButton();
 
-        // ===== NOVA FUNÇÃO: randomizar ícones das tecnologias =====
         shuffleTechnologiesIcons();
 
         console.log('Inicialização concluída com sucesso.');
