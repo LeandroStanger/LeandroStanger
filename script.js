@@ -558,7 +558,7 @@ const Renderer = {
     }
 };
 
-// ==================== MODAL DE MARCAS COM LINKS ====================
+// ==================== MODAL DE MARCAS COM LINKS E ORDEM ALEATÓRIA ====================
 function openBrandsModal(brands) {
     const modal = document.getElementById('modal-marcas');
     const list = document.getElementById('brands-list');
@@ -567,7 +567,9 @@ function openBrandsModal(brands) {
     if (!Array.isArray(brands) || brands.length === 0) {
         list.innerHTML = '<li class="brand-item" style="grid-column:1/-1; text-align:center; color:var(--color-gray);">Nenhuma marca encontrada.</li>';
     } else {
-        list.innerHTML = brands.map(brand => {
+        // Embaralha a lista de marcas
+        const shuffledBrands = shuffleArray([...brands]);
+        list.innerHTML = shuffledBrands.map(brand => {
             const url = brand.url || '#';
             const hasLink = url && url !== '#';
             if (hasLink) {
