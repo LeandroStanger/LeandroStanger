@@ -87,41 +87,31 @@
             "date": "2024年2月至2025年6月",
             "title": "计算机维护与支持技术员",
             "institution": "AMPLI",
-            "status": [
-              "已完成"
-            ]
+            "status": ["已完成"]
           },
           {
             "date": "2016年4月至2016年10月",
             "title": "计算机与网络组装和维护课程",
             "institution": "YesBras Escolas do Brasil",
-            "status": [
-              "已完成"
-            ]
+            "status": ["已完成"]
           },
           {
             "date": "2015年至2017年10月",
             "title": "高中",
             "institution": "SESI",
-            "status": [
-              "已完成"
-            ]
+            "status": ["已完成"]
           },
           {
             "date": "2014年9月至2015年9月",
             "title": "APP课程 – 个人与职业行政管理",
             "institution": "Escola de Informática Unisoft",
-            "status": [
-              "已完成"
-            ]
+            "status": ["已完成"]
           },
           {
             "date": "2013年9月至2014年9月",
             "title": "QIT课程 – 信息与技术资格认证",
             "institution": "Escola de Informática Unisoft",
-            "status": [
-              "已完成"
-            ]
+            "status": ["已完成"]
           }
         ]
       },
@@ -144,7 +134,8 @@
               { "name": "Marisa", "logo": "img/marcas/marisa.png", "url": "https://www.marisa.com.br/" },
               { "name": "C&A", "logo": "img/marcas/C&A.png", "url": "https://www.cea.com.br/" },
               { "name": "Gang", "logo": "img/marcas/gang.png", "url": "https://www.gang.com.br/" },
-              { "name": "Riachuelo", "logo": "img/marcas/riachuelo.png", "url": "https://www.riachuelo.com.br/" }
+              { "name": "Riachuelo", "logo": "img/marcas/riachuelo.png", "url": "https://www.riachuelo.com.br/" },
+              { "name": "Valentys Uniformes", "logo": "img/marcas/valentyns.png", "url": "https://valentys.com.br/" }
             ],
             "positions": [
               {

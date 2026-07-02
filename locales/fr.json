@@ -87,41 +87,31 @@
             "date": "fév. 2024 à juin 2025",
             "title": "Technicien en Maintenance et Support Informatique",
             "institution": "AMPLI",
-            "status": [
-              "Terminé"
-            ]
+            "status": ["Terminé"]
           },
           {
             "date": "avr. 2016 à oct. 2016",
             "title": "Cours de Montage et Maintenance d'Ordinateurs et de Réseaux",
             "institution": "YesBras Escolas do Brasil",
-            "status": [
-              "Terminé"
-            ]
+            "status": ["Terminé"]
           },
           {
             "date": "2015 à oct. 2017",
             "title": "Baccalauréat",
             "institution": "SESI",
-            "status": [
-              "Terminé"
-            ]
+            "status": ["Terminé"]
           },
           {
             "date": "sep. 2014 à sep. 2015",
             "title": "Cours APP – Administratif Personnel et Professionnel",
             "institution": "Escola de Informática Unisoft",
-            "status": [
-              "Terminé"
-            ]
+            "status": ["Terminé"]
           },
           {
             "date": "sep. 2013 à sep. 2014",
             "title": "Cours QIT – Qualification en Informatique et Technologie",
             "institution": "Escola de Informática Unisoft",
-            "status": [
-              "Terminé"
-            ]
+            "status": ["Terminé"]
           }
         ]
       },
@@ -144,7 +134,8 @@
               { "name": "Marisa", "logo": "img/marcas/marisa.png", "url": "https://www.marisa.com.br/" },
               { "name": "C&A", "logo": "img/marcas/C&A.png", "url": "https://www.cea.com.br/" },
               { "name": "Gang", "logo": "img/marcas/gang.png", "url": "https://www.gang.com.br/" },
-              { "name": "Riachuelo", "logo": "img/marcas/riachuelo.png", "url": "https://www.riachuelo.com.br/" }
+              { "name": "Riachuelo", "logo": "img/marcas/riachuelo.png", "url": "https://www.riachuelo.com.br/" },
+              { "name": "Valentys Uniformes", "logo": "img/marcas/valentyns.png", "url": "https://valentys.com.br/" }
             ],
             "positions": [
               {

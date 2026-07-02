@@ -87,41 +87,31 @@
             "date": "Feb. 2024 bis Jun. 2025",
             "title": "Techniker für Computerwartung und -support",
             "institution": "AMPLI",
-            "status": [
-              "Abgeschlossen"
-            ]
+            "status": ["Abgeschlossen"]
           },
           {
             "date": "Apr. 2016 bis Okt. 2016",
             "title": "Kurs für Montage und Wartung von Computern und Netzwerken",
             "institution": "YesBras Escolas do Brasil",
-            "status": [
-              "Abgeschlossen"
-            ]
+            "status": ["Abgeschlossen"]
           },
           {
             "date": "2015 bis Okt. 2017",
             "title": "Abitur",
             "institution": "SESI",
-            "status": [
-              "Abgeschlossen"
-            ]
+            "status": ["Abgeschlossen"]
           },
           {
             "date": "Sep. 2014 bis Sep. 2015",
             "title": "APP-Kurs – Persönliche und berufliche Administration",
             "institution": "Escola de Informática Unisoft",
-            "status": [
-              "Abgeschlossen"
-            ]
+            "status": ["Abgeschlossen"]
           },
           {
             "date": "Sep. 2013 bis Sep. 2014",
             "title": "QIT-Kurs – Qualifikation in Informatik und Technologie",
             "institution": "Escola de Informática Unisoft",
-            "status": [
-              "Abgeschlossen"
-            ]
+            "status": ["Abgeschlossen"]
           }
         ]
       },
@@ -144,7 +134,8 @@
               { "name": "Marisa", "logo": "img/marcas/marisa.png", "url": "https://www.marisa.com.br/" },
               { "name": "C&A", "logo": "img/marcas/C&A.png", "url": "https://www.cea.com.br/" },
               { "name": "Gang", "logo": "img/marcas/gang.png", "url": "https://www.gang.com.br/" },
-              { "name": "Riachuelo", "logo": "img/marcas/riachuelo.png", "url": "https://www.riachuelo.com.br/" }
+              { "name": "Riachuelo", "logo": "img/marcas/riachuelo.png", "url": "https://www.riachuelo.com.br/" },
+              { "name": "Valentys Uniformes", "logo": "img/marcas/valentyns.png", "url": "https://valentys.com.br/" }
             ],
             "positions": [
               {

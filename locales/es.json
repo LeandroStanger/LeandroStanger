@@ -87,41 +87,31 @@
             "date": "feb/2024 a jun/2025",
             "title": "Técnico en Mantenimiento y Soporte Informático",
             "institution": "AMPLI",
-            "status": [
-              "Completado"
-            ]
+            "status": ["Completado"]
           },
           {
             "date": "abr/2016 a oct/2016",
             "title": "Curso de Montaje y Mantenimiento de Computadoras y Redes",
             "institution": "YesBras Escolas do Brasil",
-            "status": [
-              "Completado"
-            ]
+            "status": ["Completado"]
           },
           {
             "date": "2015 a oct/2017",
             "title": "Educación Secundaria",
             "institution": "SESI",
-            "status": [
-              "Completado"
-            ]
+            "status": ["Completado"]
           },
           {
             "date": "sep/2014 a sep/2015",
             "title": "Curso APP – Administrativo Personal y Profesional",
             "institution": "Escola de Informática Unisoft",
-            "status": [
-              "Completado"
-            ]
+            "status": ["Completado"]
           },
           {
             "date": "sep/2013 a sep/2014",
             "title": "Curso QIT – Cualificación en Informática y Tecnología",
             "institution": "Escola de Informática Unisoft",
-            "status": [
-              "Completado"
-            ]
+            "status": ["Completado"]
           }
         ]
       },
@@ -144,7 +134,8 @@
               { "name": "Marisa", "logo": "img/marcas/marisa.png", "url": "https://www.marisa.com.br/" },
               { "name": "C&A", "logo": "img/marcas/C&A.png", "url": "https://www.cea.com.br/" },
               { "name": "Gang", "logo": "img/marcas/gang.png", "url": "https://www.gang.com.br/" },
-              { "name": "Riachuelo", "logo": "img/marcas/riachuelo.png", "url": "https://www.riachuelo.com.br/" }
+              { "name": "Riachuelo", "logo": "img/marcas/riachuelo.png", "url": "https://www.riachuelo.com.br/" },
+              { "name": "Valentys Uniformes", "logo": "img/marcas/valentyns.png", "url": "https://valentys.com.br/" }
             ],
             "positions": [
               {
