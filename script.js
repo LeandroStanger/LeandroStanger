@@ -143,6 +143,15 @@ const I18n = {
     }
 };
 
+// ==================== CONTROLE DE VISIBILIDADE DOS ANÚNCIOS ====================
+function toggleAdsVisibility() {
+    const anuncio1 = document.getElementById('anuncio1');
+    const anuncio2 = document.getElementById('anuncio2');
+    const isPortuguese = AppState.currentLang === 'pt';
+    if (anuncio1) anuncio1.style.display = isPortuguese ? 'block' : 'none';
+    if (anuncio2) anuncio2.style.display = isPortuguese ? 'block' : 'none';
+}
+
 // ==================== GERENCIADOR DE TEMA ====================
 const ThemeManager = {
     init() {
@@ -1140,6 +1149,7 @@ function initDoacoes() {
             I18n.translateStaticElements();
             Renderer.renderAll();
             I18n.updateActiveButton();
+            toggleAdsVisibility(); // Controla exibição dos anúncios conforme o idioma
         });
 
         await I18n.loadTranslations(AppState.currentLang);
@@ -1187,6 +1197,9 @@ function initDoacoes() {
         I18n.updateActiveButton();
 
         shuffleTechnologiesIcons();
+
+        // Garantir que os anúncios fiquem no estado correto logo após o carregamento
+        toggleAdsVisibility();
 
         console.log('Inicialização concluída com sucesso.');
     } catch (error) {

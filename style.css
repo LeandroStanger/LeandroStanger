@@ -617,6 +617,45 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
     margin: 0 auto;
 }
 
+/* ===== ANÚNCIO ===== */
+.anuncio-section {
+    padding: var(--space-4) 0;
+}
+
+.anuncio-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.anuncio-link {
+    display: block;
+    max-width: 100%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.anuncio-link:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+.anuncio-imagem {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-lg);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
 /* ===== SOBRE ===== */
 .sobre-content { max-width: 1000px; margin: 0 auto; }
 .sobre-grid {
