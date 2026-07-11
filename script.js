@@ -143,13 +143,209 @@ const I18n = {
     }
 };
 
-// ==================== CONTROLE DE VISIBILIDADE DOS ANÚNCIOS ====================
+// ==================== ESTADO DOS ANÚNCIOS ====================
+const adStates = {};
+
+function initAdState(adId, imagesArray) {
+    if (!adStates[adId]) {
+        adStates[adId] = {
+            currentIndex: 0,
+            timer: null,
+            progress: 0,
+            isPlaying: false,
+            images: imagesArray || []
+        };
+    }
+    return adStates[adId];
+}
+
+function updateAd(adId, newIndex) {
+    const state = adStates[adId];
+    if (!state) return;
+    const imgElement = document.getElementById(adId + '-img');
+    const progressElement = document.getElementById(adId + '-progress');
+    const progressContainer = progressElement?.parentElement;
+    const indicator = document.getElementById(adId + '-indicator');
+    const prevBtn = document.getElementById(adId + '-prev');
+    const nextBtn = document.getElementById(adId + '-next');
+    const navContainer = document.querySelector(`#${adId} .anuncio-nav`);
+
+    if (!imgElement || !progressElement || !progressContainer) return;
+
+    const total = state.images.length;
+
+    // Atualiza índice
+    state.currentIndex = newIndex;
+
+    // Troca imagem com fade
+    imgElement.style.opacity = '0';
+    setTimeout(() => {
+        imgElement.src = state.images[state.currentIndex];
+        imgElement.alt = `Anúncio ${adId === 'anuncio1' ? '1' : '2'} - ${state.currentIndex + 1}`;
+        imgElement.onload = () => { imgElement.style.opacity = '1'; };
+        if (imgElement.complete) imgElement.style.opacity = '1';
+    }, 100);
+
+    // Controle de visibilidade dos elementos conforme a quantidade de imagens
+    if (total <= 1) {
+        // Apenas uma imagem: oculta barra de progresso e navegação
+        progressContainer.style.display = 'none';
+        if (navContainer) navContainer.style.display = 'none';
+        // Para qualquer timer pendente
+        clearTimeout(state.timer);
+        return;
+    }
+
+    // Mais de uma imagem: mostra barra e navegação
+    progressContainer.style.display = 'block';
+    if (navContainer) navContainer.style.display = 'flex';
+
+    // Atualiza indicador
+    if (indicator) indicator.textContent = `${state.currentIndex + 1} / ${total}`;
+
+    // Controla visibilidade dos botões
+    if (prevBtn) prevBtn.style.display = state.currentIndex === 0 ? 'none' : 'flex';
+    if (nextBtn) nextBtn.style.display = state.currentIndex === total - 1 ? 'none' : 'flex';
+
+    // Reinicia progresso e timer
+    clearTimeout(state.timer);
+    state.progress = 0;
+    progressElement.style.width = '0%';
+
+    // Inicia a progressão
+    startProgress(adId);
+    state.timer = setTimeout(() => {
+        const next = (state.currentIndex + 1) % total;
+        updateAd(adId, next);
+    }, 25000);
+}
+
+function startProgress(adId) {
+    const state = adStates[adId];
+    if (!state) return;
+    const progressElement = document.getElementById(adId + '-progress');
+    if (!progressElement) return;
+    const total = state.images.length;
+    if (total <= 1) return; // Não inicia barra se houver apenas uma imagem
+
+    const startTime = Date.now();
+    const duration = 25000;
+
+    function updateProgress() {
+        const elapsed = Date.now() - startTime;
+        const progress = Math.min((elapsed / duration) * 100, 100);
+        progressElement.style.width = progress + '%';
+        if (progress < 100) {
+            requestAnimationFrame(updateProgress);
+        }
+    }
+    requestAnimationFrame(updateProgress);
+}
+
+function nextAd(adId) {
+    const state = adStates[adId];
+    if (!state) return;
+    const total = state.images.length;
+    if (total <= 1) return;
+    if (state.currentIndex >= total - 1) return;
+    clearTimeout(state.timer);
+    updateAd(adId, state.currentIndex + 1);
+}
+
+function prevAd(adId) {
+    const state = adStates[adId];
+    if (!state) return;
+    if (state.currentIndex <= 0) return;
+    clearTimeout(state.timer);
+    updateAd(adId, state.currentIndex - 1);
+}
+
+function setupAd(adId, imagesArray) {
+    if (!Array.isArray(imagesArray) || imagesArray.length === 0) {
+        // Se não houver imagens, oculta todo o anúncio
+        const section = document.getElementById(adId);
+        if (section) section.style.display = 'none';
+        return;
+    }
+
+    const state = initAdState(adId, imagesArray);
+    // Define imagem inicial aleatória
+    const randomIndex = Math.floor(Math.random() * imagesArray.length);
+    const imgElement = document.getElementById(adId + '-img');
+    if (imgElement) {
+        imgElement.src = imagesArray[randomIndex];
+        imgElement.alt = `Anúncio ${adId === 'anuncio1' ? '1' : '2'} - ${randomIndex + 1}`;
+        imgElement.style.opacity = '1';
+    }
+    state.currentIndex = randomIndex;
+    updateAd(adId, randomIndex);
+
+    // Event listeners dos botões (remover antigos para evitar duplicação)
+    const prevBtn = document.getElementById(adId + '-prev');
+    const nextBtn = document.getElementById(adId + '-next');
+    if (prevBtn) {
+        const newPrev = prevBtn.cloneNode(true);
+        prevBtn.parentNode.replaceChild(newPrev, prevBtn);
+        newPrev.addEventListener('click', () => prevAd(adId));
+    }
+    if (nextBtn) {
+        const newNext = nextBtn.cloneNode(true);
+        nextBtn.parentNode.replaceChild(newNext, nextBtn);
+        newNext.addEventListener('click', () => nextAd(adId));
+    }
+}
+
+// ==================== CONTROLE DE VISIBILIDADE DOS ANÚNCIOS E ROTAÇÃO ====================
+// Arrays de imagens para cada anúncio (adicione ou remova caminhos conforme necessário)
+const anuncio1Images = [
+    'img/anuncio/anuncio1.png',
+    'img/anuncio/anuncio3.png',
+    // adicione mais imagens aqui
+];
+const anuncio2Images = [
+    'img/anuncio/anuncio2.png',
+    // adicione mais imagens aqui
+];
+
+let rotacaoTimeout1 = null;
+let rotacaoTimeout2 = null;
+
+function startAdRotation() {
+    // Para rotações anteriores
+    clearTimeout(rotacaoTimeout1);
+    clearTimeout(rotacaoTimeout2);
+
+    if (AppState.currentLang !== 'pt') return;
+
+    setupAd('anuncio1', anuncio1Images);
+    setupAd('anuncio2', anuncio2Images);
+}
+
 function toggleAdsVisibility() {
     const anuncio1 = document.getElementById('anuncio1');
     const anuncio2 = document.getElementById('anuncio2');
     const isPortuguese = AppState.currentLang === 'pt';
-    if (anuncio1) anuncio1.style.display = isPortuguese ? 'block' : 'none';
-    if (anuncio2) anuncio2.style.display = isPortuguese ? 'block' : 'none';
+
+    if (anuncio1) {
+        anuncio1.style.display = isPortuguese ? 'block' : 'none';
+    }
+    if (anuncio2) {
+        anuncio2.style.display = isPortuguese ? 'block' : 'none';
+    }
+
+    if (isPortuguese) {
+        startAdRotation();
+    } else {
+        // Para a rotação se não estiver em português
+        clearTimeout(rotacaoTimeout1);
+        clearTimeout(rotacaoTimeout2);
+        // Limpa timers dos estados
+        Object.keys(adStates).forEach(key => {
+            if (adStates[key] && adStates[key].timer) {
+                clearTimeout(adStates[key].timer);
+            }
+        });
+    }
 }
 
 // ==================== GERENCIADOR DE TEMA ====================
@@ -465,7 +661,6 @@ const Renderer = {
             const brands = Array.isArray(exp.brands) ? exp.brands : [];
             const hasBrands = brands.length > 0;
 
-            // Montagem do cabeçalho com empresa e botão lado a lado, e período abaixo
             return `
             <div class="experiencia-item">
                 <div class="experiencia-header">
@@ -495,7 +690,6 @@ const Renderer = {
             </div>
         `}).join('');
 
-        // Adiciona eventos aos botões "Marcas"
         container.querySelectorAll('.btn-marcas').forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.stopPropagation();
@@ -567,7 +761,7 @@ const Renderer = {
     }
 };
 
-// ==================== MODAL DE MARCAS COM LINKS E ORDEM ALEATÓRIA ====================
+// ==================== MODAL DE MARCAS ====================
 function openBrandsModal(brands) {
     const modal = document.getElementById('modal-marcas');
     const list = document.getElementById('brands-list');
@@ -576,7 +770,6 @@ function openBrandsModal(brands) {
     if (!Array.isArray(brands) || brands.length === 0) {
         list.innerHTML = '<li class="brand-item" style="grid-column:1/-1; text-align:center; color:var(--color-gray);">Nenhuma marca encontrada.</li>';
     } else {
-        // Embaralha a lista de marcas
         const shuffledBrands = shuffleArray([...brands]);
         list.innerHTML = shuffledBrands.map(brand => {
             const url = brand.url || '#';
@@ -1149,7 +1342,7 @@ function initDoacoes() {
             I18n.translateStaticElements();
             Renderer.renderAll();
             I18n.updateActiveButton();
-            toggleAdsVisibility(); // Controla exibição dos anúncios conforme o idioma
+            toggleAdsVisibility();
         });
 
         await I18n.loadTranslations(AppState.currentLang);
@@ -1198,7 +1391,7 @@ function initDoacoes() {
 
         shuffleTechnologiesIcons();
 
-        // Garantir que os anúncios fiquem no estado correto logo após o carregamento
+        // Garantir que os anúncios fiquem no estado correto e iniciar rotação se necessário
         toggleAdsVisibility();
 
         console.log('Inicialização concluída com sucesso.');

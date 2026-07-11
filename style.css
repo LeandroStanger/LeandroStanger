@@ -649,11 +649,90 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
     display: block;
     border-radius: var(--radius-lg);
     animation: float 3s ease-in-out infinite;
+    transition: opacity 0.6s ease;
 }
 
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
+}
+
+/* Barra de progresso */
+.anuncio-progress-container {
+    width: 100%;
+    height: 4px;
+    background: var(--color-dark-700);
+    border-radius: var(--radius-full);
+    margin-top: var(--space-3);
+    overflow: hidden;
+}
+
+.anuncio-progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    border-radius: var(--radius-full);
+    transition: width 0.1s linear;
+}
+
+/* Navegação */
+.anuncio-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-top: var(--space-2);
+}
+
+.anuncio-nav-btn {
+    background: var(--color-dark-800);
+    border: 1px solid var(--color-dark-700);
+    color: var(--color-light);
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    font-size: var(--text-xl);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.anuncio-nav-btn:hover:not(:disabled) {
+    background: var(--color-primary-soft);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.anuncio-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.anuncio-nav-indicator {
+    font-size: var(--text-sm);
+    color: var(--color-gray);
+    min-width: 50px;
+    text-align: center;
+}
+
+html.light-theme .anuncio-progress-container {
+    background: var(--color-dark-700);
+}
+
+html.light-theme .anuncio-nav-btn {
+    background: var(--color-dark-900);
+    border-color: var(--color-dark-700);
+    color: var(--color-dark-800);
+}
+
+html.light-theme .anuncio-nav-btn:hover:not(:disabled) {
+    background: var(--color-primary-soft);
+    border-color: var(--color-primary);
+    color: var(--color-primary-dark);
 }
 
 /* ===== SOBRE ===== */
