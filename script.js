@@ -304,8 +304,13 @@ const anuncio1Images = [
     { 
         src: 'img/anuncio/anuncio3.png', 
         link: 'https://wa.me/5548996446508?text=Quero%20recuperar%20meus%20dados.' 
+    },
+    { 
+        src: 'img/anuncio/anuncio5.png', 
+        link: 'https://wa.me/5548996446508?text=Vin%20pelo%20site%2C%20desejo%20formatar%20o%20meu%20PC%20Gamer.%20digite%20seu%20nome%3A' 
     }
 ];
+
 const anuncio2Images = [
     { 
         src: 'img/anuncio/anuncio2.png', 
