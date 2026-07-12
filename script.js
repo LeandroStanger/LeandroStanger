@@ -163,6 +163,7 @@ function updateAd(adId, newIndex) {
     const state = adStates[adId];
     if (!state) return;
     const imgElement = document.getElementById(adId + '-img');
+    const linkElement = document.getElementById(adId + '-link');
     const progressElement = document.getElementById(adId + '-progress');
     const progressContainer = progressElement?.parentElement;
     const indicator = document.getElementById(adId + '-indicator');
@@ -180,39 +181,37 @@ function updateAd(adId, newIndex) {
     // Troca imagem com fade
     imgElement.style.opacity = '0';
     setTimeout(() => {
-        imgElement.src = state.images[state.currentIndex];
+        const currentImage = state.images[state.currentIndex];
+        imgElement.src = currentImage.src;
         imgElement.alt = `Anúncio ${adId === 'anuncio1' ? '1' : '2'} - ${state.currentIndex + 1}`;
+        // Atualiza o link
+        if (linkElement) {
+            linkElement.href = currentImage.link || '#';
+        }
         imgElement.onload = () => { imgElement.style.opacity = '1'; };
         if (imgElement.complete) imgElement.style.opacity = '1';
     }, 100);
 
     // Controle de visibilidade dos elementos conforme a quantidade de imagens
     if (total <= 1) {
-        // Apenas uma imagem: oculta barra de progresso e navegação
         progressContainer.style.display = 'none';
         if (navContainer) navContainer.style.display = 'none';
-        // Para qualquer timer pendente
         clearTimeout(state.timer);
         return;
     }
 
-    // Mais de uma imagem: mostra barra e navegação
     progressContainer.style.display = 'block';
     if (navContainer) navContainer.style.display = 'flex';
 
-    // Atualiza indicador
     if (indicator) indicator.textContent = `${state.currentIndex + 1} / ${total}`;
 
-    // Controla visibilidade dos botões
     if (prevBtn) prevBtn.style.display = state.currentIndex === 0 ? 'none' : 'flex';
     if (nextBtn) nextBtn.style.display = state.currentIndex === total - 1 ? 'none' : 'flex';
 
-    // Reinicia progresso e timer
     clearTimeout(state.timer);
     state.progress = 0;
     progressElement.style.width = '0%';
 
-    // Inicia a progressão
     startProgress(adId);
     state.timer = setTimeout(() => {
         const next = (state.currentIndex + 1) % total;
@@ -226,7 +225,7 @@ function startProgress(adId) {
     const progressElement = document.getElementById(adId + '-progress');
     if (!progressElement) return;
     const total = state.images.length;
-    if (total <= 1) return; // Não inicia barra se houver apenas uma imagem
+    if (total <= 1) return;
 
     const startTime = Date.now();
     const duration = 25000;
@@ -262,25 +261,26 @@ function prevAd(adId) {
 
 function setupAd(adId, imagesArray) {
     if (!Array.isArray(imagesArray) || imagesArray.length === 0) {
-        // Se não houver imagens, oculta todo o anúncio
         const section = document.getElementById(adId);
         if (section) section.style.display = 'none';
         return;
     }
 
     const state = initAdState(adId, imagesArray);
-    // Define imagem inicial aleatória
     const randomIndex = Math.floor(Math.random() * imagesArray.length);
     const imgElement = document.getElementById(adId + '-img');
+    const linkElement = document.getElementById(adId + '-link');
     if (imgElement) {
-        imgElement.src = imagesArray[randomIndex];
+        imgElement.src = imagesArray[randomIndex].src;
         imgElement.alt = `Anúncio ${adId === 'anuncio1' ? '1' : '2'} - ${randomIndex + 1}`;
         imgElement.style.opacity = '1';
+    }
+    if (linkElement) {
+        linkElement.href = imagesArray[randomIndex].link || '#';
     }
     state.currentIndex = randomIndex;
     updateAd(adId, randomIndex);
 
-    // Event listeners dos botões (remover antigos para evitar duplicação)
     const prevBtn = document.getElementById(adId + '-prev');
     const nextBtn = document.getElementById(adId + '-next');
     if (prevBtn) {
@@ -296,22 +296,31 @@ function setupAd(adId, imagesArray) {
 }
 
 // ==================== CONTROLE DE VISIBILIDADE DOS ANÚNCIOS E ROTAÇÃO ====================
-// Arrays de imagens para cada anúncio (adicione ou remova caminhos conforme necessário)
 const anuncio1Images = [
-    'img/anuncio/anuncio1.png',
-    'img/anuncio/anuncio3.png',
-    // adicione mais imagens aqui
+    { 
+        src: 'img/anuncio/anuncio1.png', 
+        link: 'https://wa.me/5548996446508?text=Vin%20pelo%20site%2C%20desejo%20formatar%20o%20meu%20computador.%20digite%20seu%20nome%3A%20' 
+    },
+    { 
+        src: 'img/anuncio/anuncio3.png', 
+        link: 'https://wa.me/5548996446508?text=Quero%20recuperar%20meus%20dados.' 
+    }
 ];
 const anuncio2Images = [
-    'img/anuncio/anuncio2.png',
-    // adicione mais imagens aqui
+    { 
+        src: 'img/anuncio/anuncio2.png', 
+        link: 'https://wa.me/5548996446508?text=Vin%20pelo%20site%2C%20desejo%20repararam%20na%20tela%20do%20monitor%20ou%20instalar%20ou%20trocar%20meu%20HD%5CSSD%20e%20mem%C3%B3ria.%20digite%20seu%20nome%3A%20' 
+    },
+    { 
+        src: 'img/anuncio/anuncio4.png', 
+        link: 'https://wa.me/5548996446508?text=Quero%20remover%20v%C3%ADrus%20do%20meu%20PC%20e%20realizar%20uma%20repara%C3%A7%C3%A3o%20no%20sistema.' 
+    }
 ];
 
 let rotacaoTimeout1 = null;
 let rotacaoTimeout2 = null;
 
 function startAdRotation() {
-    // Para rotações anteriores
     clearTimeout(rotacaoTimeout1);
     clearTimeout(rotacaoTimeout2);
 
@@ -336,10 +345,8 @@ function toggleAdsVisibility() {
     if (isPortuguese) {
         startAdRotation();
     } else {
-        // Para a rotação se não estiver em português
         clearTimeout(rotacaoTimeout1);
         clearTimeout(rotacaoTimeout2);
-        // Limpa timers dos estados
         Object.keys(adStates).forEach(key => {
             if (adStates[key] && adStates[key].timer) {
                 clearTimeout(adStates[key].timer);
@@ -1356,7 +1363,6 @@ function initDoacoes() {
         initDownloadCurriculo();
         initDoacoes();
 
-        // ===== MODAL DE MARCAS - CONTROLE =====
         const modal = document.getElementById('modal-marcas');
         const closeBtn = modal?.querySelector('.modal-close');
         if (modal) {
@@ -1391,7 +1397,6 @@ function initDoacoes() {
 
         shuffleTechnologiesIcons();
 
-        // Garantir que os anúncios fiquem no estado correto e iniciar rotação se necessário
         toggleAdsVisibility();
 
         console.log('Inicialização concluída com sucesso.');
