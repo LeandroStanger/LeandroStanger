@@ -76,7 +76,7 @@
               "completed": 15,
               "total": 53,
               "label": "{completed} of {total} subjects completed",
-              "semesterText": "3rd Semester — In progress"
+              "semesterText": "4th Semester — In progress"
             },
             "referral": {
               "link": "http://www.portalpos.com.br/?utm_voceindica=135742",
@@ -408,6 +408,13 @@
           "tags": ["Java", "JDK", "javac", "JVM"],
           "codeLink": "https://github.com/LeandroStanger/Projetos-Iniciais-Java",
           "demoLink": ""
+        },
+        {
+          "title": "Leandro Stanger Soluções em Informática",
+          "desc": "Institutional website of Leandro Stanger Soluções em Informática, presenting computer maintenance services, technical support and IT solutions.",
+          "tags": ["HTML5", "CSS3", "JavaScript", "Responsive"],
+          "codeLink": "https://github.com/LeandroStanger/LeandroStanger-Solucoes-em-Informatica",
+          "demoLink": "https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/"
         }
       ]
     },

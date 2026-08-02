@@ -76,7 +76,7 @@
               "completed": 15,
               "total": 53,
               "label": "已完成 {completed}/{total} 门课程",
-              "semesterText": "第3学期 — 进行中"
+              "semesterText": "第4学期 — 进行中"
             },
             "referral": {
               "link": "http://www.portalpos.com.br/?utm_voceindica=135742",
@@ -408,6 +408,13 @@
           "tags": ["Java", "JDK", "javac", "JVM"],
           "codeLink": "https://github.com/LeandroStanger/Projetos-Iniciais-Java",
           "demoLink": ""
+        },
+        {
+          "title": "Leandro Stanger Soluções em Informática",
+          "desc": "Leandro Stanger Soluções em Informática 的机构网站，提供计算机维护服务、技术支持和IT解决方案。",
+          "tags": ["HTML5", "CSS3", "JavaScript", "响应式"],
+          "codeLink": "https://github.com/LeandroStanger/LeandroStanger-Solucoes-em-Informatica",
+          "demoLink": "https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/"
         }
       ]
     },

@@ -299,26 +299,26 @@ function setupAd(adId, imagesArray) {
 const anuncio1Images = [
     { 
         src: 'img/anuncio/anuncio1.png', 
-        link: 'https://wa.me/5548996446508?text=Vin%20pelo%20site%2C%20desejo%20formatar%20o%20meu%20computador.%20digite%20seu%20nome%3A%20' 
+        link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao' 
     },
     { 
         src: 'img/anuncio/anuncio3.png', 
-        link: 'https://wa.me/5548996446508?text=Quero%20recuperar%20meus%20dados.' 
+        link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#recuperacao.' 
     },
     { 
         src: 'img/anuncio/anuncio5.png', 
-        link: 'https://wa.me/5548996446508?text=Vin%20pelo%20site%2C%20desejo%20formatar%20o%20meu%20PC%20Gamer.%20digite%20seu%20nome%3A' 
+        link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao' 
     }
 ];
 
 const anuncio2Images = [
     { 
         src: 'img/anuncio/anuncio2.png', 
-        link: 'https://wa.me/5548996446508?text=Vin%20pelo%20site%2C%20desejo%20repararam%20na%20tela%20do%20monitor%20ou%20instalar%20ou%20trocar%20meu%20HD%5CSSD%20e%20mem%C3%B3ria.%20digite%20seu%20nome%3A%20' 
+        link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#servicos' 
     },
     { 
         src: 'img/anuncio/anuncio4.png', 
-        link: 'https://wa.me/5548996446508?text=Quero%20remover%20v%C3%ADrus%20do%20meu%20PC%20e%20realizar%20uma%20repara%C3%A7%C3%A3o%20no%20sistema.' 
+        link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#servicos' 
     }
 ];
 
@@ -810,13 +810,15 @@ function openBrandsModal(brands) {
     document.body.classList.add('modal-open');
 }
 
-// ==================== COMPONENTE DE PROJETOS ====================
+// ==================== COMPONENTE DE PROJETOS (COM FILTROS APRIMORADOS) ====================
 class ProjectsSearch {
     constructor() {
         this.input = document.getElementById('busca-projetos');
         this.grid = document.getElementById('projetos-grid');
         this.noResults = document.getElementById('nenhum-resultado');
         this.counter = document.getElementById('contador-projetos');
+        this.allProjectsData = [];
+        this.currentCategory = 'todos';
 
         if (!this.input || !this.grid) {
             console.warn('Elementos de busca não encontrados');
@@ -831,6 +833,26 @@ class ProjectsSearch {
         this.input.addEventListener('input', () => this.filter());
         AppState.subscribe(() => this.render());
         this.render();
+        this.setupFilters();
+    }
+
+    setupFilters() {
+        const filters = document.querySelectorAll('.btn-filtro');
+        filters.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const categoria = btn.dataset.filtro || 'todos';
+                this.setCategory(categoria);
+            });
+        });
+    }
+
+    setCategory(categoria) {
+        this.currentCategory = categoria;
+        document.querySelectorAll('.btn-filtro').forEach(b => {
+            b.classList.toggle('active', b.dataset.filtro === categoria);
+        });
+        this.filter();
     }
 
     render() {
@@ -841,13 +863,15 @@ class ProjectsSearch {
             return;
         }
 
-        const shuffledCards = shuffleArray([...cardsData]);
+        this.allProjectsData = shuffleArray([...cardsData]);
 
         const codeLabel = I18n.t('sections.projetos.code');
         const demoLabel = I18n.t('sections.projetos.demo');
 
-        this.grid.innerHTML = shuffledCards.map(p => `
-            <article class="projeto-card">
+        this.grid.innerHTML = this.allProjectsData.map(p => {
+            const tagsStr = (p.tags || []).map(t => t.toLowerCase()).join(',');
+            return `
+            <article class="projeto-card" data-tags="${tagsStr}">
                 <header class="projeto-header">
                     <h3 class="projeto-title">${p.title || ''}</h3>
                     <p class="projeto-descricao">${p.desc || ''}</p>
@@ -858,7 +882,7 @@ class ProjectsSearch {
                     ${p.demoLink ? `<a href="${p.demoLink}" target="_blank" rel="noopener noreferrer" class="btn btn-projeto-secundario"><i class="fas fa-external-link-alt"></i> ${demoLabel}</a>` : ''}
                 </footer>
             </article>
-        `).join('');
+        `}).join('');
 
         this.projects = Array.from(this.grid.children);
         this.projects.forEach(p => {
@@ -868,17 +892,52 @@ class ProjectsSearch {
         this.filter();
     }
 
+    // Função auxiliar para verificar se uma tag corresponde a uma palavra-chave (como palavra inteira)
+    matchesKeyword(tag, keyword) {
+        // Usa regex com boundaries para corresponder à palavra exata
+        const regex = new RegExp('\\b' + keyword + '\\b', 'i');
+        return regex.test(tag);
+    }
+
     filter() {
         const term = this.input.value.trim().toLowerCase();
+        const category = this.currentCategory;
         let visibleCount = 0;
+
+        // Mapeamento de categorias para palavras-chave (agora usando correspondência exata de palavra)
+        const categoryMap = {
+            'frontend': ['html', 'css', 'javascript', 'html5', 'css3', 'web', 'ui', 'ux', 'responsive', 'front-end'],
+            'backend': ['java', 'c', 'sql', 'database', 'api', 'server', 'node.js', 'gcc', 'jdk', 'javac', 'jvm', 'banco de dados', 'backend'],
+            'fullstack': ['html', 'css', 'javascript', 'java', 'c', 'sql', 'api', 'node.js'], // usado com lógica AND
+            'javascript': ['javascript']
+        };
 
         this.projects.forEach(card => {
             card.classList.remove('entrance');
         });
 
         this.projects.forEach(card => {
+            const tags = card.dataset.tags ? card.dataset.tags.split(',') : [];
+            let categoryMatch = false;
+
+            if (category === 'todos') {
+                categoryMatch = true;
+            } else if (category === 'fullstack') {
+                // Verifica se tem pelo menos uma tag de frontend E uma de backend
+                const hasFrontend = tags.some(t => categoryMap.frontend.some(kw => this.matchesKeyword(t, kw)));
+                const hasBackend = tags.some(t => categoryMap.backend.some(kw => this.matchesKeyword(t, kw)));
+                categoryMatch = hasFrontend && hasBackend;
+            } else {
+                // Para as demais categorias, verifica se alguma tag corresponde a alguma palavra-chave
+                const keywords = categoryMap[category] || [];
+                categoryMatch = tags.some(t => keywords.some(kw => this.matchesKeyword(t, kw)));
+            }
+
             const text = card.innerText.toLowerCase();
-            const match = term === '' || text.includes(term);
+            let textMatch = term === '' || text.includes(term);
+
+            const match = categoryMatch && textMatch;
+
             if (!match) {
                 card.classList.add('hidden');
             } else {
@@ -1338,6 +1397,22 @@ function initDoacoes() {
         internacionalContainer._hasCopyListener = true;
     }
 }
+
+// ==================== INTEGRAÇÃO COM HTMX ====================
+document.addEventListener('htmx:afterSwap', function(evt) {
+    if (evt.target.id === 'projetos-grid') {
+        const count = evt.target.children.length;
+        const counter = document.getElementById('contador-projetos');
+        if (counter) {
+            const foundText = I18n.t('sections.projetos.found');
+            counter.textContent = `${count} ${foundText}`;
+        }
+        if (window.projectsSearch) {
+            window.projectsSearch.projects = Array.from(evt.target.children);
+            window.projectsSearch.filter();
+        }
+    }
+});
 
 // ==================== INICIALIZAÇÃO PRINCIPAL ====================
 (async function init() {

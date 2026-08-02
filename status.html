@@ -1,0 +1,9 @@
+<div class="status-card">
+    <i class="fas fa-check-circle" style="color: var(--color-success);"></i>
+    <span style="font-weight: 600; color: var(--color-light);">Status:</span>
+    <span style="color: var(--color-primary-light);">Online</span>
+    <small style="color: var(--color-gray); margin-left: 0.5rem;">· <span id="status-time">agora</span></small>
+</div>
+<script>
+    document.getElementById('status-time').textContent = new Date().toLocaleTimeString();
+</script>

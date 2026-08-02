@@ -76,7 +76,7 @@
               "completed": 15,
               "total": 53,
               "label": "{completed} de {total} disciplinas concluídas",
-              "semesterText": "3º Semestre — Em andamento"
+              "semesterText": "4º Semestre — Em andamento"
             },
             "referral": {
               "link": "http://www.portalpos.com.br/?utm_voceindica=135742",
@@ -87,41 +87,31 @@
             "date": "fev/2024 a jun/2025",
             "title": "Técnico em Manutenção e Suporte em Informática",
             "institution": "AMPLI",
-            "status": [
-              "Concluído"
-            ]
+            "status": ["Concluído"]
           },
           {
             "date": "Abr/2016 a Out/2016",
             "title": "Curso de Montagem e Manutenção de Computadores e Redes",
             "institution": "YesBras Escolas do Brasil",
-            "status": [
-              "Concluído"
-            ]
+            "status": ["Concluído"]
           },
           {
             "date": "2015 a Out/2017",
             "title": "Ensino Médio",
             "institution": "SESI",
-            "status": [
-              "Concluído"
-            ]
+            "status": ["Concluído"]
           },
           {
             "date": "Set/2014 a Set/2015",
             "title": "Curso APP – Administrativo Pessoal e Profissional",
             "institution": "Escola de Informática Unisoft",
-            "status": [
-              "Concluído"
-            ]
+            "status": ["Concluído"]
           },
           {
             "date": "Set/2013 a Set/2014",
             "title": "Curso QIT – Qualificação em Informática e Tecnologia",
             "institution": "Escola de Informática Unisoft",
-            "status": [
-              "Concluído"
-            ]
+            "status": ["Concluído"]
           }
         ]
       },
@@ -418,6 +408,13 @@
           "tags": ["Java", "JDK", "javac", "JVM"],
           "codeLink": "https://github.com/LeandroStanger/Projetos-Iniciais-Java",
           "demoLink": ""
+        },
+        {
+          "title": "Leandro Stanger Soluções em Informática",
+          "desc": "Site institucional da Leandro Stanger Soluções em Informática, apresentando serviços de manutenção de computadores, suporte técnico e soluções em TI.",
+          "tags": ["HTML5", "CSS3", "JavaScript", "Responsivo"],
+          "codeLink": "https://github.com/LeandroStanger/LeandroStanger-Solucoes-em-Informatica",
+          "demoLink": "https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/"
         }
       ]
     },

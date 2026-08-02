@@ -92,8 +92,8 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
         media="print" onload="this.media='all'">
 
-    <!-- Ícones Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.css"
+    <!-- Ícones Font Awesome 7.3.0 (Atualizado) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
 
     <!-- CSS Principal -->
@@ -512,6 +512,7 @@
             </div>
         </section>
 
+        <!-- ===== PROJETOS COM FILTROS CORRIGIDOS ===== -->
         <section id="projetos" class="section projetos" aria-labelledby="projetos-title">
             <div class="container">
                 <div class="section-header">
@@ -523,12 +524,17 @@
                     <p class="section-subtitle" data-i18n="sections.projetos.subtitle">Meus projetos desenvolvidos e em
                         desenvolvimento</p>
                 </div>
-                <div class="projetos-header">
-                    <h3 class="projetos-categoria-title" data-i18n="sections.projetos.category_title">Portfólio de
-                        Desenvolvimento</h3>
-                    <p class="projetos-categoria-desc" data-i18n="sections.projetos.category_desc">Explore meus projetos
-                        front-end, back-end e experimentos de programação.</p>
+
+                <!-- Filtros (apenas JavaScript, sem HTMX) -->
+                <div class="projetos-filtros">
+                    <button class="btn btn-sm btn-filtro active" data-filtro="todos">Todos</button>
+                    <button class="btn btn-sm btn-filtro" data-filtro="frontend">Front-end</button>
+                    <button class="btn btn-sm btn-filtro" data-filtro="backend">Back-end</button>
+                    <button class="btn btn-sm btn-filtro" data-filtro="fullstack">Full-Stack</button>
+                    <button class="btn btn-sm btn-filtro" data-filtro="javascript">JavaScript</button>
                 </div>
+
+                <!-- Busca -->
                 <div class="projetos-busca-container">
                     <div class="projetos-busca">
                         <i class="fas fa-search" aria-hidden="true"></i>
@@ -540,14 +546,23 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Skeleton Loading -->
+                <div id="projetos-loading" class="htmx-indicator" style="display:none; text-align:center; padding:2rem;">
+                    <i class="fas fa-spinner fa-spin fa-3x" style="color:var(--color-primary);"></i>
+                    <p style="color:var(--color-gray);">Carregando projetos...</p>
+                </div>
+
                 <div id="nenhum-resultado" class="nenhum-resultado" style="display: none;">
                     <i class="fas fa-search" aria-hidden="true"></i>
-                    <h3 class="nenhum-resultado-titulo" data-i18n="sections.projetos.no_results_title">Nenhum projeto
-                        encontrado</h3>
-                    <p class="nenhum-resultado-descricao" data-i18n="sections.projetos.no_results_desc">Tente ajustar
-                        sua busca. Você pode pesquisar por nome do projeto, tecnologias ou descrição.</p>
+                    <h3 class="nenhum-resultado-titulo" data-i18n="sections.projetos.no_results_title">Nenhum projeto encontrado</h3>
+                    <p class="nenhum-resultado-descricao" data-i18n="sections.projetos.no_results_desc">Tente ajustar sua busca. Você pode pesquisar por nome do projeto, tecnologias ou descrição.</p>
                 </div>
-                <div class="projetos-grid" id="projetos-grid"></div>
+
+                <!-- Grid de projetos (renderizado pelo JavaScript) -->
+                <div class="projetos-grid" id="projetos-grid">
+                    <!-- Conteúdo será renderizado pelo JavaScript (ProjectsSearch) -->
+                </div>
             </div>
         </section>
 
@@ -1177,6 +1192,14 @@
                         <span id="mostrarAnoAtual"></span>
                         <span data-i18n="footer.copyright_suffix"> Leandro Stanger. Todos os direitos reservados.</span>
                     </p>
+                    <!-- Card de status carregado dinamicamente via HTMX -->
+                    <div id="status-container" style="margin-top: 0.5rem; display: flex; justify-content: center;"
+                         hx-get="/status.html"
+                         hx-trigger="load, every 30s"
+                         hx-swap="innerHTML"
+                         hx-indicator="this">
+                        <span style="color: var(--color-gray); font-size: var(--text-sm);">Carregando status…</span>
+                    </div>
                 </div>
                 <div class="footer-back">
                     <a href="#inicio" class="btn-back-top" aria-label="Voltar ao topo da página">
@@ -1187,6 +1210,8 @@
         </div>
     </footer>
 
+    <!-- HTMX 2.0.10 (completo) -->
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="script.js"></script>

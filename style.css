@@ -336,9 +336,17 @@ html.light-theme .theme-toggle:hover {
 .main-header {
     position: relative;
     padding: var(--space-20) 0 var(--space-16);
-    background: linear-gradient(135deg, var(--header-gradient-start), var(--header-gradient-end));
+    background: linear-gradient(135deg, var(--header-gradient-start), var(--header-gradient-end), var(--color-primary-soft));
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
     transition: background var(--transition-normal);
     overflow: hidden;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 #particles-js {
@@ -752,12 +760,33 @@ html.light-theme .anuncio-nav-btn:hover:not(:disabled) {
     border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-xl);
     padding: var(--space-6);
-    transition: all var(--transition-normal);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.4s ease,
+                border-color 0.3s ease,
+                opacity 0.3s ease;
     height: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
     will-change: transform, opacity;
+}
+
+.sobre-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(16,185,129,0.05) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+    border-radius: inherit;
+}
+
+.sobre-card:hover::after {
+    opacity: 1;
 }
 
 .sobre-grid:hover .sobre-card:not(:hover) { opacity: 0.4; }
@@ -1098,7 +1127,10 @@ html.light-theme .semester-badge {
     border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-lg);
     padding: var(--space-5);
-    transition: all var(--transition-normal);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.4s ease,
+                border-color 0.3s ease,
+                opacity 0.3s ease;
     opacity: 0;
     transform: translateX(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -1321,7 +1353,9 @@ html.light-theme .semester-badge {
     border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-lg);
     padding: var(--space-5);
-    transition: all var(--transition-normal);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.4s ease,
+                border-color 0.3s ease;
 }
 
 .tecnologia-categoria:hover {
@@ -1424,6 +1458,43 @@ html.light-theme .semester-badge {
     line-height: 1.6;
 }
 
+/* Filtros */
+.projetos-filtros {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.btn-filtro {
+    background: var(--color-dark-800);
+    color: var(--color-light);
+    border: 1px solid var(--color-dark-700);
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.btn-filtro:hover {
+    background: var(--color-primary-soft);
+    border-color: var(--color-primary);
+    color: var(--color-primary-light);
+    transform: translateY(-2px);
+}
+
+.btn-filtro.active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #fff;
+    box-shadow: var(--shadow-green);
+}
+
+/* Busca */
 .projetos-busca-container { max-width: 800px; margin: 0 auto var(--space-6); }
 
 .projetos-busca {
@@ -1480,6 +1551,7 @@ html.light-theme .semester-badge {
     white-space: nowrap;
 }
 
+/* Grid de projetos */
 .projetos-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -1500,13 +1572,34 @@ html.light-theme .semester-badge {
     display: flex;
     flex-direction: column;
     height: 100%;
-    transition: all var(--transition-normal);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.4s ease,
+                border-color 0.3s ease,
+                opacity 0.3s ease;
     opacity: 1;
     transform: translateY(0);
     position: relative;
     will-change: transform, opacity;
     max-width: 100%;
     width: 100%;
+}
+
+.projeto-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(16,185,129,0.05) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+    border-radius: inherit;
+}
+
+.projeto-card:hover::after {
+    opacity: 1;
 }
 
 .projeto-card:hover {
@@ -2637,6 +2730,54 @@ body.modal-open {
 
 .btn-back-top:not(.hidden) { animation: slideInLeft 0.5s ease-out; }
 
+/* ===== STATUS CARD (RODAPÉ) ===== */
+#status-container .status-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-dark-800);
+    padding: 0.3rem 1rem;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-dark-700);
+    font-size: var(--text-sm);
+}
+
+#status-container .status-card i {
+    font-size: 1rem;
+    animation: pulse-icon 2s ease-in-out infinite;
+}
+
+@keyframes pulse-icon {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* ===== HTMX INDICATOR ===== */
+.htmx-indicator {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
+.htmx-request .htmx-indicator {
+    opacity: 1;
+}
+.htmx-request.htmx-indicator {
+    opacity: 1;
+}
+
+/* ===== SKELETON LOADING ===== */
+.skeleton-card {
+    background: var(--color-dark-800);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+    height: 200px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
 /* ===== UTILITY ===== */
 .timeline-item.visible,
 .experiencia-item.visible,
@@ -2693,6 +2834,14 @@ body.modal-open {
         width: min(240px, 60vw);
         height: min(240px, 60vw);
         margin: 0 auto;
+    }
+    /* Filtros responsivos */
+    .projetos-filtros {
+        gap: 0.3rem;
+    }
+    .btn-filtro {
+        font-size: var(--text-xs);
+        padding: 0.2rem 0.6rem;
     }
 }
 
