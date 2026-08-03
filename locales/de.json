@@ -254,6 +254,13 @@
       "no_results_desc": "Versuchen Sie, Ihre Suche anzupassen. Sie können nach Projektname, Technologien oder Beschreibung suchen.",
       "code": "Code",
       "demo": "Demo",
+      "filtros": {
+        "todos": "Alle",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "fullstack": "Full-Stack",
+        "banco_dados": "Datenbank"
+      },
       "cards": [
         {
           "title": "Animais no Zoológico 2",
@@ -495,6 +502,32 @@
       "copy_failed_key": "Fehler beim Kopieren des Schlüssels. Versuchen Sie es manuell.",
       "copy_failed_address": "Fehler beim Kopieren der Adresse. Versuchen Sie es manuell.",
       "copy_failed_number": "Fehler beim Kopieren der Nummer. Versuchen Sie es manuell."
+    },
+    "feed": {
+      "title": "Feed-Updates",
+      "subtitle": "Neueste Nachrichten und Beiträge",
+      "items": [
+        {
+          "title": "Portfolio mit HTMX aktualisiert",
+          "text": "Jetzt verwendet die Website HTMX, um dynamische Inhalte zu laden und die Benutzererfahrung zu verbessern.",
+          "date": "Veröffentlicht am: 02.08.2026"
+        },
+        {
+          "title": "Neue Projekte hinzugefügt",
+          "text": "Schauen Sie sich die neuen Projekte im Bereich \"Projekte\" an – einschließlich der institutionellen Website von Leandro Stanger Soluções em Informática.",
+          "date": "Veröffentlicht am: 01.08.2026"
+        },
+        {
+          "title": "Neue unterstützte Sprachen: Japanisch und Koreanisch!",
+          "text": "Die Website bietet jetzt volle Unterstützung für Japanisch (日本語) und Koreanisch (한국어). Entdecken Sie die Inhalte in zwei weiteren Sprachen und teilen Sie sie mit Ihren Kontakten!",
+          "date": "Veröffentlicht am: 03.08.2026"
+        }
+      ],
+      "load_more": "Mehr laden"
+    },
+    "status": {
+      "label": "Status:",
+      "online": "Online"
     }
   },
   "footer": {

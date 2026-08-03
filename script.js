@@ -2,7 +2,7 @@
 const AppState = {
     currentLang: 'pt',
     translations: {},
-    supportedLangs: ['pt', 'en', 'es', 'fr', 'zh', 'de'],
+    supportedLangs: ['pt', 'en', 'es', 'fr', 'zh', 'de', 'ja', 'ko'],
     listeners: new Set(),
 
     setTranslations(lang, data) {
@@ -54,7 +54,26 @@ const MINIMAL_TRANSLATIONS = {
             "no_results_title": "Nenhum projeto",
             "no_results_desc": "Tente novamente.",
             "code": "Código",
-            "demo": "Demo"
+            "demo": "Demo",
+            "filtros": {
+                "todos": "Todos",
+                "frontend": "Front-end",
+                "backend": "Back-end",
+                "fullstack": "Full-Stack",
+                "banco_dados": "Banco de Dados"
+            }
+        },
+        "feed": {
+            "title": "Feed de Atualizações",
+            "subtitle": "Últimas novidades",
+            "items": [
+                { "title": "Exemplo", "text": "Conteúdo de exemplo.", "date": "Hoje" }
+            ],
+            "load_more": "Carregar mais"
+        },
+        "status": {
+            "label": "Status:",
+            "online": "Online"
         }
     },
     "footer": {
@@ -184,7 +203,6 @@ function updateAd(adId, newIndex) {
         const currentImage = state.images[state.currentIndex];
         imgElement.src = currentImage.src;
         imgElement.alt = `Anúncio ${adId === 'anuncio1' ? '1' : '2'} - ${state.currentIndex + 1}`;
-        // Atualiza o link
         if (linkElement) {
             linkElement.href = currentImage.link || '#';
         }
@@ -192,7 +210,6 @@ function updateAd(adId, newIndex) {
         if (imgElement.complete) imgElement.style.opacity = '1';
     }, 100);
 
-    // Controle de visibilidade dos elementos conforme a quantidade de imagens
     if (total <= 1) {
         progressContainer.style.display = 'none';
         if (navContainer) navContainer.style.display = 'none';
@@ -319,6 +336,10 @@ const anuncio2Images = [
     { 
         src: 'img/anuncio/anuncio4.png', 
         link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#servicos' 
+    },
+    { 
+        src: 'img/anuncio/anuncio6.png', 
+        link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#limpeza' 
     }
 ];
 
@@ -482,13 +503,15 @@ const ExperienceCalc = {
             es: { y: ['año', 'años'], m: ['mes', 'meses'] },
             fr: { y: ['an', 'ans'], m: ['mois', 'mois'] },
             zh: { y: ['年', '年'], m: ['月', '月'] },
-            de: { y: ['Jahr', 'Jahre'], m: ['Monat', 'Monate'] }
+            de: { y: ['Jahr', 'Jahre'], m: ['Monat', 'Monate'] },
+            ja: { y: ['年', '年'], m: ['ヶ月', 'ヶ月'] },
+            ko: { y: ['년', '년'], m: ['개월', '개월'] }
         };
         const l = labels[lang] || labels.pt;
         const parts = [];
         if (period.years > 0) parts.push(`${period.years} ${period.years === 1 ? l.y[0] : l.y[1]}`);
         if (period.months > 0) parts.push(`${period.months} ${period.months === 1 ? l.m[0] : l.m[1]}`);
-        return parts.length > 0 ? parts.join(', ') : (lang === 'pt' ? '0 meses' : lang === 'en' ? '0 months' : lang === 'es' ? '0 meses' : lang === 'fr' ? '0 mois' : lang === 'zh' ? '0个月' : '0 Monate');
+        return parts.length > 0 ? parts.join(', ') : (lang === 'pt' ? '0 meses' : lang === 'en' ? '0 months' : lang === 'es' ? '0 meses' : lang === 'fr' ? '0 mois' : lang === 'zh' ? '0个月' : lang === 'de' ? '0 Monate' : lang === 'ja' ? '0ヶ月' : '0개월');
     },
 
     getPeriodText(type, lang) {
@@ -535,6 +558,8 @@ const Renderer = {
         document.dispatchEvent(new CustomEvent('renderer:done'));
         ScrollAnimations.refresh();
         this.generateProjectsSchema();
+        renderFeed();
+        renderStatus();
     },
 
     _safeRender(sectionName, renderFn) {
@@ -634,7 +659,7 @@ const Renderer = {
                         <div class="status-container">
                             ${statusArray.map(s => {
                     const lower = s.toLowerCase();
-                    const isCompleted = lower.includes('concluído') || lower.includes('completed') || lower.includes('completado') || lower.includes('terminé') || lower.includes('完成') || lower.includes('abgeschlossen');
+                    const isCompleted = lower.includes('concluído') || lower.includes('completed') || lower.includes('completado') || lower.includes('terminé') || lower.includes('完成') || lower.includes('abgeschlossen') || lower.includes('修了') || lower.includes('완료');
                     return `<span class="status-badge ${isCompleted ? 'status-concluido' : 'status-andamento'}">${s}</span>`;
                 }).join('')}
                         </div>
@@ -663,7 +688,7 @@ const Renderer = {
             const company = exp.company || '';
             if (company.includes('Vanelise')) {
                 companyPeriod = ExperienceCalc.getPeriodText('empresa1', lang);
-            } else if (company.includes('Autônomo') || company.includes('Self-employed') || company.includes('Autónomo') || company.includes('Auto-entrepreneur') || company.includes('自由职业') || company.includes('Selbstständig')) {
+            } else if (company.includes('Autônomo') || company.includes('Self-employed') || company.includes('Autónomo') || company.includes('Auto-entrepreneur') || company.includes('自由职业') || company.includes('Selbstständig') || company.includes('フリーランス') || company.includes('프리랜서')) {
                 companyPeriod = ExperienceCalc.getPeriodText('empresa2', lang);
             } else {
                 companyPeriod = exp.period || '';
@@ -773,6 +798,58 @@ const Renderer = {
     }
 };
 
+// ==================== FEED E STATUS ====================
+function renderFeed() {
+    const container = document.getElementById('feed-container');
+    if (!container) return;
+    const items = I18n.t('sections.feed.items');
+    if (!Array.isArray(items) || items.length === 0) {
+        container.innerHTML = '<p style="color:var(--color-gray); text-align:center; padding:1rem;">Nenhum item no feed.</p>';
+        return;
+    }
+    let html = '';
+    items.forEach(item => {
+        html += `
+            <div class="feed-item" style="background:var(--color-dark-800); border-radius:var(--radius-lg); padding:1.5rem; margin-bottom:1rem; border-left:4px solid var(--color-primary);">
+                <h4 style="color:var(--color-light);">
+                    <i class="fas fa-rocket" style="color:var(--color-primary); margin-right:0.5rem;"></i>
+                    ${item.title}
+                </h4>
+                <p style="color:var(--color-gray);">${item.text}</p>
+                <small style="color:var(--color-gray-dark);">${item.date}</small>
+            </div>
+        `;
+    });
+    container.innerHTML = html;
+
+    const extraItems = I18n.t('sections.feed.extraItems');
+    const btn = document.getElementById('load-more-feed');
+    if (btn) {
+        if (extraItems && Array.isArray(extraItems) && extraItems.length > 0) {
+            btn.style.display = 'inline-flex';
+        } else {
+            btn.style.display = 'none';
+        }
+    }
+}
+
+function renderStatus() {
+    const container = document.getElementById('status-container');
+    if (!container) return;
+    const label = I18n.t('sections.status.label');
+    const statusText = I18n.t('sections.status.online');
+    const now = new Date();
+    const time = now.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+    container.innerHTML = `
+        <div class="status-card" style="display:inline-flex; align-items:center; gap:0.5rem; background:var(--color-dark-800); padding:0.3rem 1rem; border-radius:var(--radius-full); border:1px solid var(--color-dark-700); font-size:var(--text-sm);">
+            <i class="fas fa-check-circle" style="color: var(--color-success); font-size:1rem; animation: pulse-icon 2s ease-in-out infinite;"></i>
+            <span style="font-weight: 600; color: var(--color-light);">${label}</span>
+            <span style="color: var(--color-primary-light);">${statusText}</span>
+            <small style="color: var(--color-gray); margin-left: 0.25rem;">· ${time}</small>
+        </div>
+    `;
+}
+
 // ==================== MODAL DE MARCAS ====================
 function openBrandsModal(brands) {
     const modal = document.getElementById('modal-marcas');
@@ -810,7 +887,7 @@ function openBrandsModal(brands) {
     document.body.classList.add('modal-open');
 }
 
-// ==================== COMPONENTE DE PROJETOS (COM FILTROS APRIMORADOS) ====================
+// ==================== PROJETOS (BUSCA E FILTROS) ====================
 class ProjectsSearch {
     constructor() {
         this.input = document.getElementById('busca-projetos');
@@ -892,9 +969,7 @@ class ProjectsSearch {
         this.filter();
     }
 
-    // Função auxiliar para verificar se uma tag corresponde a uma palavra-chave (como palavra inteira)
     matchesKeyword(tag, keyword) {
-        // Usa regex com boundaries para corresponder à palavra exata
         const regex = new RegExp('\\b' + keyword + '\\b', 'i');
         return regex.test(tag);
     }
@@ -904,12 +979,11 @@ class ProjectsSearch {
         const category = this.currentCategory;
         let visibleCount = 0;
 
-        // Mapeamento de categorias para palavras-chave (agora usando correspondência exata de palavra)
         const categoryMap = {
             'frontend': ['html', 'css', 'javascript', 'html5', 'css3', 'web', 'ui', 'ux', 'responsive', 'front-end'],
             'backend': ['java', 'c', 'sql', 'database', 'api', 'server', 'node.js', 'gcc', 'jdk', 'javac', 'jvm', 'banco de dados', 'backend'],
-            'fullstack': ['html', 'css', 'javascript', 'java', 'c', 'sql', 'api', 'node.js'], // usado com lógica AND
-            'javascript': ['javascript']
+            'fullstack': ['html', 'css', 'javascript', 'java', 'c', 'sql', 'api', 'node.js'],
+            'banco_dados': ['sql', 'database', 'mysql', 'mariadb', 'postgresql', 'sqlite', 'mongodb', 'nosql', 'banco de dados', 'databricks', 'azure data studio']
         };
 
         this.projects.forEach(card => {
@@ -923,12 +997,10 @@ class ProjectsSearch {
             if (category === 'todos') {
                 categoryMatch = true;
             } else if (category === 'fullstack') {
-                // Verifica se tem pelo menos uma tag de frontend E uma de backend
                 const hasFrontend = tags.some(t => categoryMap.frontend.some(kw => this.matchesKeyword(t, kw)));
                 const hasBackend = tags.some(t => categoryMap.backend.some(kw => this.matchesKeyword(t, kw)));
                 categoryMatch = hasFrontend && hasBackend;
             } else {
-                // Para as demais categorias, verifica se alguma tag corresponde a alguma palavra-chave
                 const keywords = categoryMap[category] || [];
                 categoryMatch = tags.some(t => keywords.some(kw => this.matchesKeyword(t, kw)));
             }
@@ -1088,45 +1160,6 @@ function initBackToTop() {
     });
 }
 
-function initContactForm() {
-    const form = document.getElementById('contact-form');
-    if (!form) return;
-    form.addEventListener('submit', async e => {
-        e.preventDefault();
-        const status = document.getElementById('form-status');
-        const submitBtn = document.getElementById('submit-btn');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> ${I18n.t('sections.contato.form.sending')}`;
-        try {
-            const response = await fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form),
-                headers: { 'Accept': 'application/json' }
-            });
-            if (response.ok) {
-                status.textContent = I18n.t('sections.contato.form.success');
-                status.className = 'form-status success';
-                form.reset();
-            } else {
-                throw new Error();
-            }
-        } catch {
-            status.textContent = I18n.t('sections.contato.form.error');
-            status.className = 'form-status error';
-        } finally {
-            setTimeout(() => {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalText;
-                setTimeout(() => {
-                    status.textContent = '';
-                    status.className = 'form-status';
-                }, 5000);
-            }, 1500);
-        }
-    });
-}
-
 function setupLanguageSelector() {
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', () => I18n.setLanguage(btn.dataset.lang));
@@ -1176,7 +1209,7 @@ function shuffleTechnologiesIcons() {
     });
 }
 
-// ==================== FUNÇÃO PARA INICIALIZAR A SEÇÃO DE DOAÇÕES ====================
+// ==================== DOAÇÕES (PIX, TRANSFERÊNCIAS, CRIPTO) ====================
 function initDoacoes() {
     const qrcodeDiv = document.getElementById('qrcode');
     if (qrcodeDiv) {
@@ -1398,6 +1431,32 @@ function initDoacoes() {
     }
 }
 
+// ==================== BOTÃO "CARREGAR MAIS" DO FEED ====================
+function setupLoadMoreFeed() {
+    const btn = document.getElementById('load-more-feed');
+    if (!btn) return;
+    btn.addEventListener('click', function() {
+        const container = document.getElementById('feed-container');
+        if (!container) return;
+        const extraItems = I18n.t('sections.feed.extraItems');
+        if (extraItems && Array.isArray(extraItems) && extraItems.length > 0) {
+            extraItems.forEach(item => {
+                const html = `
+                    <div class="feed-item" style="background:var(--color-dark-800); border-radius:var(--radius-lg); padding:1.5rem; margin-bottom:1rem; border-left:4px solid var(--color-accent);">
+                        <h4 style="color:var(--color-light);">
+                            <i class="fas fa-star" style="color:var(--color-accent); margin-right:0.5rem;"></i>
+                            ${item.title}
+                        </h4>
+                        <p style="color:var(--color-gray);">${item.text}</p>
+                        <small style="color:var(--color-gray-dark);">${item.date}</small>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', html);
+            });
+        }
+    });
+}
+
 // ==================== INTEGRAÇÃO COM HTMX ====================
 document.addEventListener('htmx:afterSwap', function(evt) {
     if (evt.target.id === 'projetos-grid') {
@@ -1430,6 +1489,8 @@ document.addEventListener('htmx:afterSwap', function(evt) {
             Renderer.renderAll();
             I18n.updateActiveButton();
             toggleAdsVisibility();
+            renderFeed();
+            renderStatus();
         });
 
         await I18n.loadTranslations(AppState.currentLang);
@@ -1439,9 +1500,9 @@ document.addEventListener('htmx:afterSwap', function(evt) {
         setupLanguageSelector();
         initSmoothScroll();
         initBackToTop();
-        initContactForm();
         initDownloadCurriculo();
         initDoacoes();
+        setupLoadMoreFeed();
 
         const modal = document.getElementById('modal-marcas');
         const closeBtn = modal?.querySelector('.modal-close');
@@ -1472,6 +1533,9 @@ document.addEventListener('htmx:afterSwap', function(evt) {
         ThemeManager.init();
 
         window.projectsSearch = new ProjectsSearch();
+
+        renderFeed();
+        renderStatus();
 
         I18n.updateActiveButton();
 

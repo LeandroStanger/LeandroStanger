@@ -254,6 +254,13 @@
       "no_results_desc": "请尝试调整搜索条件。您可以按项目名称、技术或描述进行搜索。",
       "code": "代码",
       "demo": "演示",
+      "filtros": {
+        "todos": "全部",
+        "frontend": "前端",
+        "backend": "后端",
+        "fullstack": "全栈",
+        "banco_dados": "数据库"
+      },
       "cards": [
         {
           "title": "Animais no Zoológico 2",
@@ -495,6 +502,32 @@
       "copy_failed_key": "密钥复制失败。请手动尝试。",
       "copy_failed_address": "地址复制失败。请手动尝试。",
       "copy_failed_number": "号码复制失败。请手动尝试。"
+    },
+    "feed": {
+      "title": "更新动态",
+      "subtitle": "最新消息和帖子",
+      "items": [
+        {
+          "title": "使用HTMX更新的作品集",
+          "text": "现在网站使用HTMX加载动态内容，改善用户体验。",
+          "date": "发布于：2026年8月2日"
+        },
+        {
+          "title": "新增项目",
+          "text": "查看“项目”部分的新项目 – 包括Leandro Stanger Soluções em Informática的机构网站。",
+          "date": "发布于：2026年8月1日"
+        },
+        {
+          "title": "新增支持的语言：日语和韩语！",
+          "text": "现在网站完全支持日语（日本語）和韩语（한국어）。探索更多语言的内容，并与您的联系人分享！",
+          "date": "发布于：2026年8月3日"
+        }
+      ],
+      "load_more": "加载更多"
+    },
+    "status": {
+      "label": "状态：",
+      "online": "在线"
     }
   },
   "footer": {

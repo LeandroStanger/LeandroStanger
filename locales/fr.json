@@ -254,6 +254,13 @@
       "no_results_desc": "Essayez d'affiner votre recherche. Vous pouvez rechercher par nom de projet, technologies ou description.",
       "code": "Code",
       "demo": "Démo",
+      "filtros": {
+        "todos": "Tous",
+        "frontend": "Front-end",
+        "backend": "Back-end",
+        "fullstack": "Full-Stack",
+        "banco_dados": "Base de données"
+      },
       "cards": [
         {
           "title": "Animais no Zoológico 2",
@@ -495,6 +502,32 @@
       "copy_failed_key": "Échec de la copie de la clé. Essayez manuellement.",
       "copy_failed_address": "Échec de la copie de l'adresse. Essayez manuellement.",
       "copy_failed_number": "Échec de la copie du numéro. Essayez manuellement."
+    },
+    "feed": {
+      "title": "Flux de mises à jour",
+      "subtitle": "Dernières nouvelles et articles",
+      "items": [
+        {
+          "title": "Portfolio mis à jour avec HTMX",
+          "text": "Désormais, le site utilise HTMX pour charger du contenu dynamique, améliorant ainsi l'expérience utilisateur.",
+          "date": "Publié le : 02/08/2026"
+        },
+        {
+          "title": "Nouveaux projets ajoutés",
+          "text": "Découvrez les nouveaux projets dans la section \"Projets\" – y compris le site institutionnel de Leandro Stanger Soluções em Informática.",
+          "date": "Publié le : 01/08/2026"
+        },
+        {
+          "title": "Nouvelles langues prises en charge : le japonais et le coréen !",
+          "text": "Le site offre désormais une prise en charge complète du japonais (日本語) et du coréen (한국어). Explorez le contenu dans deux langues supplémentaires et partagez avec vos contacts !",
+          "date": "Publié le : 03/08/2026"
+        }
+      ],
+      "load_more": "Charger plus"
+    },
+    "status": {
+      "label": "Statut :",
+      "online": "En ligne"
     }
   },
   "footer": {

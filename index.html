@@ -29,6 +29,8 @@
     <link rel="alternate" hreflang="fr" href="https://leandrostanger.github.io/LeandroStanger/" />
     <link rel="alternate" hreflang="zh" href="https://leandrostanger.github.io/LeandroStanger/" />
     <link rel="alternate" hreflang="de" href="https://leandrostanger.github.io/LeandroStanger/" />
+    <link rel="alternate" hreflang="ja" href="https://leandrostanger.github.io/LeandroStanger/" />
+    <link rel="alternate" hreflang="ko" href="https://leandrostanger.github.io/LeandroStanger/" />
     <link rel="alternate" hreflang="x-default" href="https://leandrostanger.github.io/LeandroStanger/" />
 
     <!-- Schema.org JSON-LD -->
@@ -92,7 +94,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
         media="print" onload="this.media='all'">
 
-    <!-- Ícones Font Awesome 7.3.0 (Atualizado) -->
+    <!-- Ícones Font Awesome 7.3.0 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
 
@@ -116,6 +118,8 @@
                             <button class="lang-btn" data-lang="fr" aria-label="Français">🇫🇷</button>
                             <button class="lang-btn" data-lang="zh" aria-label="中文">🇨🇳</button>
                             <button class="lang-btn" data-lang="de" aria-label="Deutsch">🇩🇪</button>
+                            <button class="lang-btn" data-lang="ja" aria-label="日本語">🇯🇵</button>
+                            <button class="lang-btn" data-lang="ko" aria-label="한국어">🇰🇷</button>
                         </div>
                         <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema claro/escuro">
                             <i class="fas fa-sun"></i>
@@ -184,11 +188,9 @@
                             loading="lazy">
                     </a>
                 </div>
-                <!-- Barra de progresso -->
                 <div class="anuncio-progress-container">
                     <div id="anuncio1-progress" class="anuncio-progress"></div>
                 </div>
-                <!-- Navegação -->
                 <div class="anuncio-nav">
                     <button id="anuncio1-prev" class="anuncio-nav-btn" aria-label="Anterior">‹</button>
                     <span class="anuncio-nav-indicator" id="anuncio1-indicator">1 / 2</span>
@@ -488,7 +490,7 @@
             </div>
         </section>
 
-        <!-- ===== ANÚNCIO 2 (entre Tecnologias e Projetos) ===== -->
+        <!-- ===== ANÚNCIO 2 (entre Tecnologias e Projetos) com 3 imagens ===== -->
         <section id="anuncio2" class="section anuncio-section" aria-label="Anúncio">
             <div class="container">
                 <div class="anuncio-content">
@@ -499,11 +501,9 @@
                             loading="lazy">
                     </a>
                 </div>
-                <!-- Barra de progresso -->
                 <div class="anuncio-progress-container">
                     <div id="anuncio2-progress" class="anuncio-progress"></div>
                 </div>
-                <!-- Navegação -->
                 <div class="anuncio-nav">
                     <button id="anuncio2-prev" class="anuncio-nav-btn" aria-label="Anterior">‹</button>
                     <span class="anuncio-nav-indicator" id="anuncio2-indicator">1 / 2</span>
@@ -512,7 +512,7 @@
             </div>
         </section>
 
-        <!-- ===== PROJETOS COM FILTROS CORRIGIDOS ===== -->
+        <!-- ===== PROJETOS ===== -->
         <section id="projetos" class="section projetos" aria-labelledby="projetos-title">
             <div class="container">
                 <div class="section-header">
@@ -525,13 +525,13 @@
                         desenvolvimento</p>
                 </div>
 
-                <!-- Filtros (apenas JavaScript, sem HTMX) -->
+                <!-- Filtros -->
                 <div class="projetos-filtros">
-                    <button class="btn btn-sm btn-filtro active" data-filtro="todos">Todos</button>
-                    <button class="btn btn-sm btn-filtro" data-filtro="frontend">Front-end</button>
-                    <button class="btn btn-sm btn-filtro" data-filtro="backend">Back-end</button>
-                    <button class="btn btn-sm btn-filtro" data-filtro="fullstack">Full-Stack</button>
-                    <button class="btn btn-sm btn-filtro" data-filtro="javascript">JavaScript</button>
+                    <button class="btn btn-sm btn-filtro active" data-filtro="todos" data-i18n="sections.projetos.filtros.todos">Todos</button>
+                    <button class="btn btn-sm btn-filtro" data-filtro="frontend" data-i18n="sections.projetos.filtros.frontend">Front-end</button>
+                    <button class="btn btn-sm btn-filtro" data-filtro="backend" data-i18n="sections.projetos.filtros.backend">Back-end</button>
+                    <button class="btn btn-sm btn-filtro" data-filtro="fullstack" data-i18n="sections.projetos.filtros.fullstack">Full-Stack</button>
+                    <button class="btn btn-sm btn-filtro" data-filtro="banco_dados" data-i18n="sections.projetos.filtros.banco_dados">Banco de Dados</button>
                 </div>
 
                 <!-- Busca -->
@@ -547,25 +547,21 @@
                     </div>
                 </div>
 
-                <!-- Skeleton Loading -->
-                <div id="projetos-loading" class="htmx-indicator" style="display:none; text-align:center; padding:2rem;">
-                    <i class="fas fa-spinner fa-spin fa-3x" style="color:var(--color-primary);"></i>
-                    <p style="color:var(--color-gray);">Carregando projetos...</p>
-                </div>
-
                 <div id="nenhum-resultado" class="nenhum-resultado" style="display: none;">
                     <i class="fas fa-search" aria-hidden="true"></i>
-                    <h3 class="nenhum-resultado-titulo" data-i18n="sections.projetos.no_results_title">Nenhum projeto encontrado</h3>
-                    <p class="nenhum-resultado-descricao" data-i18n="sections.projetos.no_results_desc">Tente ajustar sua busca. Você pode pesquisar por nome do projeto, tecnologias ou descrição.</p>
+                    <h3 class="nenhum-resultado-titulo" data-i18n="sections.projetos.no_results_title">Nenhum projeto
+                        encontrado</h3>
+                    <p class="nenhum-resultado-descricao" data-i18n="sections.projetos.no_results_desc">Tente ajustar
+                        sua busca. Você pode pesquisar por nome do projeto, tecnologias ou descrição.</p>
                 </div>
 
-                <!-- Grid de projetos (renderizado pelo JavaScript) -->
                 <div class="projetos-grid" id="projetos-grid">
-                    <!-- Conteúdo será renderizado pelo JavaScript (ProjectsSearch) -->
+                    <!-- Renderizado pelo JavaScript -->
                 </div>
             </div>
         </section>
 
+        <!-- ===== CONTATO ===== -->
         <section id="contato" class="section contato-section" aria-labelledby="contato-title">
             <div class="container">
                 <div class="section-header">
@@ -586,7 +582,9 @@
                             </h3>
                             <p class="contato-info-text" data-i18n="sections.contato.intro">Preencha o formulário abaixo
                                 e entrarei em contato o mais breve possível.</p>
-                            <form id="contact-form" class="form" action="https://formspree.io/f/xjgevgvg" method="POST">
+                            <form class="form" hx-post="https://formspree.io/f/xjgevgvg" hx-target="#form-status"
+                                hx-swap="innerHTML" hx-indicator="#submit-btn"
+                                hx-on::after-request="this.reset()">
                                 <div class="form-input-group">
                                     <label for="name" class="form-label"
                                         data-i18n="sections.contato.form.name_label">Nome</label>
@@ -611,8 +609,11 @@
                                 <button type="submit" id="submit-btn" class="btn btn-primary">
                                     <i class="fas fa-paper-plane" aria-hidden="true"></i>
                                     <span data-i18n="sections.contato.form.send">Enviar Mensagem</span>
+                                    <span class="htmx-indicator" style="display:none;">
+                                        <i class="fas fa-spinner fa-spin"></i> Enviando...
+                                    </span>
                                 </button>
-                                <p id="form-status" class="form-status"></p>
+                                <div id="form-status" class="form-status"></div>
                             </form>
                         </div>
                         <div class="contato-links" role="list">
@@ -687,6 +688,7 @@
             </div>
         </section>
 
+        <!-- ===== DOAÇÕES ===== -->
         <section id="doacoes" class="section doacoes" aria-labelledby="doacoes-title">
             <div class="container">
                 <div class="section-header">
@@ -715,6 +717,7 @@
                         </p>
                     </div>
                     <div class="doacoes-metodos">
+                        <!-- PIX e Transferências -->
                         <div class="doacoes-card doacoes-card-pix">
                             <h3 class="doacoes-card-title"><i class="fa-solid fa-brazilian-real-sign"></i> <span
                                     data-i18n="sections.doacoes.real_title">Real (BRL)</span></h3>
@@ -747,29 +750,22 @@
                                     </div>
                                     <div class="bank-details">
                                         <div class="bank-line">
-                                            <span class="bank-label"
-                                                data-i18n="sections.doacoes.transferencia.bankLabel">Banco:</span>
+                                            <span class="bank-label" data-i18n="sections.doacoes.transferencia.bankLabel">Banco:</span>
                                             <span class="bank-value">748</span>
                                             <button class="copy-button" data-copy="748"><i class="fas fa-copy"></i>
-                                                <span
-                                                    data-i18n="sections.doacoes.transferencia.copy">Copiar</span></button>
+                                                <span data-i18n="sections.doacoes.transferencia.copy">Copiar</span></button>
                                         </div>
                                         <div class="bank-line">
-                                            <span class="bank-label"
-                                                data-i18n="sections.doacoes.transferencia.agencyLabel">Agência:</span>
+                                            <span class="bank-label" data-i18n="sections.doacoes.transferencia.agencyLabel">Agência:</span>
                                             <span class="bank-value">2604</span>
                                             <button class="copy-button" data-copy="2604"><i class="fas fa-copy"></i>
-                                                <span
-                                                    data-i18n="sections.doacoes.transferencia.copy">Copiar</span></button>
+                                                <span data-i18n="sections.doacoes.transferencia.copy">Copiar</span></button>
                                         </div>
                                         <div class="bank-line">
-                                            <span class="bank-label"
-                                                data-i18n="sections.doacoes.transferencia.accountLabel">Conta
-                                                Corrente:</span>
+                                            <span class="bank-label" data-i18n="sections.doacoes.transferencia.accountLabel">Conta Corrente:</span>
                                             <span class="bank-value">52656-8</span>
                                             <button class="copy-button" data-copy="52656-8"><i class="fas fa-copy"></i>
-                                                <span
-                                                    data-i18n="sections.doacoes.transferencia.copy">Copiar</span></button>
+                                                <span data-i18n="sections.doacoes.transferencia.copy">Copiar</span></button>
                                         </div>
                                     </div>
                                 </div>
@@ -781,29 +777,22 @@
                                     </div>
                                     <div class="bank-details">
                                         <div class="bank-line">
-                                            <span class="bank-label"
-                                                data-i18n="sections.doacoes.transferencia.bankLabel">Banco:</span>
+                                            <span class="bank-label" data-i18n="sections.doacoes.transferencia.bankLabel">Banco:</span>
                                             <span class="bank-value">260</span>
                                             <button class="copy-button" data-copy="260"><i class="fas fa-copy"></i>
-                                                <span
-                                                    data-i18n="sections.doacoes.transferencia.copy">Copiar</span></button>
+                                                <span data-i18n="sections.doacoes.transferencia.copy">Copiar</span></button>
                                         </div>
                                         <div class="bank-line">
-                                            <span class="bank-label"
-                                                data-i18n="sections.doacoes.transferencia.agencyLabel">Agência:</span>
+                                            <span class="bank-label" data-i18n="sections.doacoes.transferencia.agencyLabel">Agência:</span>
                                             <span class="bank-value">0001</span>
                                             <button class="copy-button" data-copy="0001"><i class="fas fa-copy"></i>
-                                                <span
-                                                    data-i18n="sections.doacoes.transferencia.copy">Copiar</span></button>
+                                                <span data-i18n="sections.doacoes.transferencia.copy">Copiar</span></button>
                                         </div>
                                         <div class="bank-line">
-                                            <span class="bank-label"
-                                                data-i18n="sections.doacoes.transferencia.accountLabel">Conta
-                                                Corrente:</span>
+                                            <span class="bank-label" data-i18n="sections.doacoes.transferencia.accountLabel">Conta Corrente:</span>
                                             <span class="bank-value">16760999-0</span>
                                             <button class="copy-button" data-copy="16760999-0"><i
-                                                    class="fas fa-copy"></i> <span
-                                                    data-i18n="sections.doacoes.transferencia.copy">Copiar</span></button>
+                                                    class="fas fa-copy"></i> <span data-i18n="sections.doacoes.transferencia.copy">Copiar</span></button>
                                         </div>
                                     </div>
                                 </div>
@@ -815,34 +804,29 @@
                                     </div>
                                     <div class="bank-details">
                                         <div class="bank-line">
-                                            <span class="bank-label"
-                                                data-i18n="sections.doacoes.transferencia.bankLabel">Banco:</span>
+                                            <span class="bank-label" data-i18n="sections.doacoes.transferencia.bankLabel">Banco:</span>
                                             <span class="bank-value">341</span>
                                             <button class="copy-button" data-copy="341"><i class="fas fa-copy"></i>
-                                                <span
-                                                    data-i18n="sections.doacoes.transferencia.copy">Copiar</span></button>
+                                                <span data-i18n="sections.doacoes.transferencia.copy">Copiar</span></button>
                                         </div>
                                         <div class="bank-line">
-                                            <span class="bank-label"
-                                                data-i18n="sections.doacoes.transferencia.agencyLabel">Agência:</span>
+                                            <span class="bank-label" data-i18n="sections.doacoes.transferencia.agencyLabel">Agência:</span>
                                             <span class="bank-value">0628</span>
                                             <button class="copy-button" data-copy="0628"><i class="fas fa-copy"></i>
-                                                <span
-                                                    data-i18n="sections.doacoes.transferencia.copy">Copiar</span></button>
+                                                <span data-i18n="sections.doacoes.transferencia.copy">Copiar</span></button>
                                         </div>
                                         <div class="bank-line">
-                                            <span class="bank-label"
-                                                data-i18n="sections.doacoes.transferencia.accountLabel">Conta
-                                                Corrente:</span>
+                                            <span class="bank-label" data-i18n="sections.doacoes.transferencia.accountLabel">Conta Corrente:</span>
                                             <span class="bank-value">77920-9</span>
                                             <button class="copy-button" data-copy="779209"><i class="fas fa-copy"></i>
-                                                <span
-                                                    data-i18n="sections.doacoes.transferencia.copy">Copiar</span></button>
+                                                <span data-i18n="sections.doacoes.transferencia.copy">Copiar</span></button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Dólar e Internacional -->
                         <div class="doacoes-card doacoes-card-dolar">
                             <h3 class="doacoes-card-title"><i class="fa-solid fa-dollar-sign"></i> <span
                                     data-i18n="sections.doacoes.dolar_title">Dólar (USD)</span></h3>
@@ -893,10 +877,13 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- ===== CRIPTOMOEDAS ===== -->
                         <div class="doacoes-card doacoes-card-crypto">
                             <h3 class="doacoes-card-title"><i class="fas fa-coins"></i> <span
                                     data-i18n="sections.doacoes.crypto.title">Criptomoedas</span></h3>
                             <div class="doacoes-crypto">
+                                <!-- Bitcoin -->
                                 <div class="crypto-item" data-crypto="bitcoin"
                                     data-address="bc1q9fejrhm26lx3uh8axh7xfrlckmg5g5nwpvj2lt">
                                     <div class="crypto-header">
@@ -911,9 +898,11 @@
                                             class="fas fa-copy"></i> <span
                                             data-i18n="sections.doacoes.crypto.copyButton">Copiar
                                             endereço</span></button>
-                                    <div class="crypto-qr" data-address="bc1q9fejrhm26lx3uh8axh7xfrlckmg5g5nwpvj2lt">
+                                    <div class="crypto-qr"
+                                        data-address="bc1q9fejrhm26lx3uh8axh7xfrlckmg5g5nwpvj2lt">
                                     </div>
                                 </div>
+                                <!-- Ethereum -->
                                 <div class="crypto-item" data-crypto="ethereum"
                                     data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     <div class="crypto-header">
@@ -928,9 +917,11 @@
                                             class="fas fa-copy"></i> <span
                                             data-i18n="sections.doacoes.crypto.copyButton">Copiar
                                             endereço</span></button>
-                                    <div class="crypto-qr" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                    <div class="crypto-qr"
+                                        data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     </div>
                                 </div>
+                                <!-- Solana -->
                                 <div class="crypto-item" data-crypto="solana"
                                     data-address="AEUidTeEZuN6TCLHHpcnrnXiUNVPQhARx5V7aM247Hn7">
                                     <div class="crypto-header">
@@ -945,13 +936,16 @@
                                             class="fas fa-copy"></i> <span
                                             data-i18n="sections.doacoes.crypto.copyButton">Copiar
                                             endereço</span></button>
-                                    <div class="crypto-qr" data-address="AEUidTeEZuN6TCLHHpcnrnXiUNVPQhARx5V7aM247Hn7">
+                                    <div class="crypto-qr"
+                                        data-address="AEUidTeEZuN6TCLHHpcnrnXiUNVPQhARx5V7aM247Hn7">
                                     </div>
                                 </div>
+                                <!-- Linea -->
                                 <div class="crypto-item" data-crypto="linea"
                                     data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     <div class="crypto-header">
-                                        <img src="img/Doacoes/linea.png" alt="Linea" class="crypto-logo" loading="lazy"
+                                        <img src="img/Doacoes/linea.png" alt="Linea" class="crypto-logo"
+                                            loading="lazy"
                                             onerror="this.onerror=null; this.classList.add('fallback'); this.insertAdjacentHTML('afterend', '<i class=\'fas fa-link crypto-fallback\'></i>'); this.style.display='none';">
                                         <span class="crypto-name">Linea</span>
                                     </div>
@@ -961,13 +955,16 @@
                                             class="fas fa-copy"></i> <span
                                             data-i18n="sections.doacoes.crypto.copyButton">Copiar
                                             endereço</span></button>
-                                    <div class="crypto-qr" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                    <div class="crypto-qr"
+                                        data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     </div>
                                 </div>
+                                <!-- Base -->
                                 <div class="crypto-item" data-crypto="base"
                                     data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     <div class="crypto-header">
-                                        <img src="img/Doacoes/base.png" alt="Base" class="crypto-logo" loading="lazy"
+                                        <img src="img/Doacoes/base.png" alt="Base" class="crypto-logo"
+                                            loading="lazy"
                                             onerror="this.onerror=null; this.classList.add('fallback'); this.insertAdjacentHTML('afterend', '<i class=\'fas fa-database crypto-fallback\'></i>'); this.style.display='none';">
                                         <span class="crypto-name">Base</span>
                                     </div>
@@ -977,9 +974,11 @@
                                             class="fas fa-copy"></i> <span
                                             data-i18n="sections.doacoes.crypto.copyButton">Copiar
                                             endereço</span></button>
-                                    <div class="crypto-qr" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                    <div class="crypto-qr"
+                                        data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     </div>
                                 </div>
+                                <!-- Arbitrum -->
                                 <div class="crypto-item" data-crypto="arbitrum"
                                     data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     <div class="crypto-header">
@@ -994,9 +993,11 @@
                                             class="fas fa-copy"></i> <span
                                             data-i18n="sections.doacoes.crypto.copyButton">Copiar
                                             endereço</span></button>
-                                    <div class="crypto-qr" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                    <div class="crypto-qr"
+                                        data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     </div>
                                 </div>
+                                <!-- BNB Chain -->
                                 <div class="crypto-item" data-crypto="bnb"
                                     data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     <div class="crypto-header">
@@ -1011,9 +1012,11 @@
                                             class="fas fa-copy"></i> <span
                                             data-i18n="sections.doacoes.crypto.copyButton">Copiar
                                             endereço</span></button>
-                                    <div class="crypto-qr" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                    <div class="crypto-qr"
+                                        data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     </div>
                                 </div>
+                                <!-- Optimism -->
                                 <div class="crypto-item" data-crypto="optimism"
                                     data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     <div class="crypto-header">
@@ -1028,9 +1031,11 @@
                                             class="fas fa-copy"></i> <span
                                             data-i18n="sections.doacoes.crypto.copyButton">Copiar
                                             endereço</span></button>
-                                    <div class="crypto-qr" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                    <div class="crypto-qr"
+                                        data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     </div>
                                 </div>
+                                <!-- Polygon -->
                                 <div class="crypto-item" data-crypto="polygon"
                                     data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     <div class="crypto-header">
@@ -1044,9 +1049,11 @@
                                             class="fas fa-copy"></i> <span
                                             data-i18n="sections.doacoes.crypto.copyButton">Copiar
                                             endereço</span></button>
-                                    <div class="crypto-qr" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                    <div class="crypto-qr"
+                                        data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     </div>
                                 </div>
+                                <!-- Tron -->
                                 <div class="crypto-item" data-crypto="tron"
                                     data-address="TUkdsmgg1nKp1NxWH1fptqmnzuH914Hiw2">
                                     <div class="crypto-header">
@@ -1055,12 +1062,16 @@
                                         <span class="crypto-name">Tron</span>
                                     </div>
                                     <div class="crypto-address">TUkdsmgg...4Hiw2</div>
-                                    <button class="btn-copy-crypto" data-address="TUkdsmgg1nKp1NxWH1fptqmnzuH914Hiw2"><i
+                                    <button class="btn-copy-crypto"
+                                        data-address="TUkdsmgg1nKp1NxWH1fptqmnzuH914Hiw2"><i
                                             class="fas fa-copy"></i> <span
                                             data-i18n="sections.doacoes.crypto.copyButton">Copiar
                                             endereço</span></button>
-                                    <div class="crypto-qr" data-address="TUkdsmgg1nKp1NxWH1fptqmnzuH914Hiw2"></div>
+                                    <div class="crypto-qr"
+                                        data-address="TUkdsmgg1nKp1NxWH1fptqmnzuH914Hiw2">
+                                    </div>
                                 </div>
+                                <!-- MegaETH -->
                                 <div class="crypto-item" data-crypto="megaeth"
                                     data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     <div class="crypto-header">
@@ -1074,9 +1085,11 @@
                                             class="fas fa-copy"></i> <span
                                             data-i18n="sections.doacoes.crypto.copyButton">Copiar
                                             endereço</span></button>
-                                    <div class="crypto-qr" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                    <div class="crypto-qr"
+                                        data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     </div>
                                 </div>
+                                <!-- Avalanche -->
                                 <div class="crypto-item" data-crypto="avalanche"
                                     data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     <div class="crypto-header">
@@ -1090,9 +1103,11 @@
                                             class="fas fa-copy"></i> <span
                                             data-i18n="sections.doacoes.crypto.copyButton">Copiar
                                             endereço</span></button>
-                                    <div class="crypto-qr" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                    <div class="crypto-qr"
+                                        data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     </div>
                                 </div>
+                                <!-- zkSync Era -->
                                 <div class="crypto-item" data-crypto="zksync-era"
                                     data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     <div class="crypto-header">
@@ -1107,9 +1122,11 @@
                                             class="fas fa-copy"></i> <span
                                             data-i18n="sections.doacoes.crypto.copyButton">Copiar
                                             endereço</span></button>
-                                    <div class="crypto-qr" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                    <div class="crypto-qr"
+                                        data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     </div>
                                 </div>
+                                <!-- Sei -->
                                 <div class="crypto-item" data-crypto="sei"
                                     data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     <div class="crypto-header">
@@ -1123,9 +1140,11 @@
                                             class="fas fa-copy"></i> <span
                                             data-i18n="sections.doacoes.crypto.copyButton">Copiar
                                             endereço</span></button>
-                                    <div class="crypto-qr" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                    <div class="crypto-qr"
+                                        data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     </div>
                                 </div>
+                                <!-- Monad -->
                                 <div class="crypto-item" data-crypto="monad"
                                     data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     <div class="crypto-header">
@@ -1139,9 +1158,11 @@
                                             class="fas fa-copy"></i> <span
                                             data-i18n="sections.doacoes.crypto.copyButton">Copiar
                                             endereço</span></button>
-                                    <div class="crypto-qr" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                    <div class="crypto-qr"
+                                        data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     </div>
                                 </div>
+                                <!-- HyperEVM -->
                                 <div class="crypto-item" data-crypto="hyperevm"
                                     data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     <div class="crypto-header">
@@ -1156,7 +1177,8 @@
                                             class="fas fa-copy"></i> <span
                                             data-i18n="sections.doacoes.crypto.copyButton">Copiar
                                             endereço</span></button>
-                                    <div class="crypto-qr" data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
+                                    <div class="crypto-qr"
+                                        data-address="0xe18b69C66B3F168b31EeDCc1744bC833FD6F09B1">
                                     </div>
                                 </div>
                             </div>
@@ -1165,6 +1187,31 @@
                 </div>
             </div>
         </section>
+
+        <!-- ===== FEED DE ATUALIZAÇÕES ===== -->
+        <section id="feed" class="section" aria-labelledby="feed-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label" aria-hidden="true">
+                        <i class="fas fa-newspaper" style="font-size:inherit;"></i>
+                    </span>
+                    <h2 id="feed-title" class="section-title">
+                        <i class="fas fa-newspaper" aria-hidden="true"></i>
+                        <span data-i18n="sections.feed.title">Feed de Atualizações</span>
+                    </h2>
+                    <p class="section-subtitle" data-i18n="sections.feed.subtitle">Últimas novidades e posts</p>
+                </div>
+                <div id="feed-container" style="margin-top: 1rem;">
+                    <!-- Renderizado dinamicamente pelo JavaScript -->
+                </div>
+                <div style="text-align:center; margin-top:1rem;">
+                    <button id="load-more-feed" class="btn btn-secondary" style="display:none;">
+                        <i class="fas fa-plus"></i> <span data-i18n="sections.feed.load_more">Carregar mais</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- ===== MODAL DE MARCAS ===== -->
@@ -1192,13 +1239,8 @@
                         <span id="mostrarAnoAtual"></span>
                         <span data-i18n="footer.copyright_suffix"> Leandro Stanger. Todos os direitos reservados.</span>
                     </p>
-                    <!-- Card de status carregado dinamicamente via HTMX -->
-                    <div id="status-container" style="margin-top: 0.5rem; display: flex; justify-content: center;"
-                         hx-get="/status.html"
-                         hx-trigger="load, every 30s"
-                         hx-swap="innerHTML"
-                         hx-indicator="this">
-                        <span style="color: var(--color-gray); font-size: var(--text-sm);">Carregando status…</span>
+                    <div id="status-container" style="margin-top: 0.5rem; display: flex; justify-content: center;">
+                        <!-- Renderizado dinamicamente -->
                     </div>
                 </div>
                 <div class="footer-back">
@@ -1210,8 +1252,10 @@
         </div>
     </footer>
 
-    <!-- HTMX 2.0.10 (completo) -->
-    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.js"></script>
+    <!-- HTMX 2.0.10 com SRI -->
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.js"
+        integrity="sha384-Q+Dky3iHVJOr6wUjQ4ulh6uQ76an/t+ak1+PjMVaxRjbZamFLAG+u9InkfjbsEQf"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="script.js"></script>

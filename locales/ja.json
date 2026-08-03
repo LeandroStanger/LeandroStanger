@@ -1,0 +1,538 @@
+{
+  "site": {
+    "title": "Leandro Stanger - ポートフォリオ",
+    "description": "Leandro Stanger のプロフェッショナルポートフォリオ - 開発者兼コンピュータ工学士"
+  },
+  "header": {
+    "title": "Leandro Stanger",
+    "subtitle1": "フルスタック開発者！",
+    "subtitle2": "コンピュータ工学士！",
+    "btn_contact": "お問い合わせ",
+    "btn_resume": "履歴書を見る"
+  },
+  "scroll": "スクロール",
+  "ongoing": "進行中",
+  "sections": {
+    "sobre": {
+      "number": "01",
+      "title": "私について",
+      "subtitle": "私の歩み、情熱、そして目標",
+      "cards": [
+        {
+          "title": "学歴",
+          "text": "<a href=\"https://www.unopar.com.br/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"highlight-link\">UNOPAR - 北パラナ大学</a>でコンピュータ工学を専攻。常に技術分野で進化し、新たな知識と挑戦を求めています。",
+          "icon": "graduation-cap"
+        },
+        {
+          "title": "テクノロジーへの情熱",
+          "text": "プログラミング、テクノロジー、そして継続的な学習に情熱を注いでいます。テクノロジーは世界を変える力を持っていると信じ、革新的なソリューションの開発を通じてその変革に貢献したいと考えています。",
+          "icon": "code"
+        },
+        {
+          "title": "柔術と規律",
+          "text": "柔術の練習者であり、このスポーツは規律、回復力、戦略を教えてくれます。これらの資質はソフトウェア開発や複雑な問題解決に直接応用しています。",
+          "icon": "medal"
+        }
+      ]
+    },
+    "curriculo": {
+      "number": "02",
+      "title": "履歴書",
+      "subtitle": "私のプロフェッショナルおよび学術的な経歴",
+      "objetivo": {
+        "title": "キャリア目標",
+        "text": "<strong>Java開発者</strong>、<strong>JavaScript開発者</strong>、<strong>C開発者</strong>、または<strong>データベースアナリスト</strong>としてIT分野でのポジションを探しています。コンピュータおよびネットワークのメンテナンスに関する知識を活かせる職場を希望しています。<strong>Java</strong>、<strong>JavaScript</strong>、<strong>C</strong>（組込みシステム、プログラミングロジック、パフォーマンスに焦点）の学習に加え、Springエコシステム、Hibernate、Maven、フロントエンドフレームワークにも取り組んでいます。フルスタック開発者としての成長を目指し、テクニカルサポート、システム管理、ソフトウェア開発、データベース管理のスキルを継続的に向上させています。",
+        "areas": [
+          {
+            "title": "開発者",
+            "text": "最新技術を活用し、ベストプラクティスに従ったWebアプリケーションやシステムの開発に興味があります。",
+            "icon": "rocket"
+          },
+          {
+            "title": "データベース",
+            "text": "データベースのモデリング、管理、最適化に携わり、システムの整合性とパフォーマンスを確保したいと考えています。",
+            "icon": "database"
+          },
+          {
+            "title": "Java / モバイル",
+            "text": "AndroidアプリケーションやJavaバックエンドの開発に興味があり、Springエコシステム、OOPのベストプラクティス、データベース統合を探求しています。",
+            "icon": "mobile-alt"
+          },
+          {
+            "title": "C言語",
+            "text": "低レベルプログラミング、組込みシステム、ドライバ、効率的なアルゴリズムに情熱を持っています。C言語はメモリ、ポインタ、パフォーマンスに関する深い理解をもたらし、コンピュータ工学の基礎として重要です。",
+            "icon": "microchip"
+          }
+        ]
+      },
+      "educacao": {
+        "title": "学歴",
+        "items": [
+          {
+            "date": "進行中（開始：2025年2月）",
+            "title": "コンピュータ工学学士",
+            "institution": "Unopar",
+            "progress": {
+              "completed": 15,
+              "total": 53,
+              "label": "{completed}/{total} 科目修了",
+              "semesterText": "第4学期 — 進行中"
+            },
+            "referral": {
+              "link": "http://www.portalpos.com.br/?utm_voceindica=135742",
+              "text": "Unoparで学ぶ"
+            }
+          },
+          {
+            "date": "2024年2月～2025年6月",
+            "title": "コンピュータメンテナンスおよびサポート技術者",
+            "institution": "AMPLI",
+            "status": ["修了"]
+          },
+          {
+            "date": "2016年4月～2016年10月",
+            "title": "コンピュータおよびネットワーク組立・メンテナンスコース",
+            "institution": "YesBras Escolas do Brasil",
+            "status": ["修了"]
+          },
+          {
+            "date": "2015年～2017年10月",
+            "title": "高等学校",
+            "institution": "SESI",
+            "status": ["修了"]
+          },
+          {
+            "date": "2014年9月～2015年9月",
+            "title": "APPコース – 個人・職業管理",
+            "institution": "Escola de Informática Unisoft",
+            "status": ["修了"]
+          },
+          {
+            "date": "2013年9月～2014年9月",
+            "title": "QITコース – 情報技術資格",
+            "institution": "Escola de Informática Unisoft",
+            "status": ["修了"]
+          }
+        ]
+      },
+      "experiencia": {
+        "title": "職歴",
+        "brand_button": "協力したブランド",
+        "items": [
+          {
+            "company": "Confecções Vanelise",
+            "period": "",
+            "brands": [
+              { "name": "Renner", "logo": "img/marcas/renner.png", "url": "https://www.renner.com.br/" },
+              { "name": "Hering", "logo": "img/marcas/hering.png", "url": "https://www.hering.com.br/" },
+              { "name": "Farm", "logo": "img/marcas/farm.png", "url": "https://www.farmrio.com.br/" },
+              { "name": "Youcom", "logo": "img/marcas/youcom.png", "url": "https://www.youcom.com.br/" },
+              { "name": "Havan", "logo": "img/marcas/havan.png", "url": "https://www.havan.com.br/" },
+              { "name": "Uniforme Anjo Tintas", "logo": "img/marcas/anjo-tintas.png", "url": "https://www.anjo.com.br/" },
+              { "name": "Ashua", "logo": "img/marcas/ashua.png", "url": "https://www.lojasrenner.com.br/ashua" },
+              { "name": "Insider", "logo": "img/marcas/insider.png", "url": "https://www.insiderstore.com.br/" },
+              { "name": "Marisa", "logo": "img/marcas/marisa.png", "url": "https://www.marisa.com.br/" },
+              { "name": "C&A", "logo": "img/marcas/C&A.png", "url": "https://www.cea.com.br/" },
+              { "name": "Gang", "logo": "img/marcas/gang.png", "url": "https://www.gang.com.br/" },
+              { "name": "Riachuelo", "logo": "img/marcas/riachuelo.png", "url": "https://www.riachuelo.com.br/" },
+              { "name": "Valentys Uniformes", "logo": "img/marcas/valentyns.png", "url": "https://valentys.com.br/" }
+            ],
+            "positions": [
+              {
+                "title": "出荷アシスタント レベル2（平織 | ユニフォーム）",
+                "period": "",
+                "responsibilities": [
+                  "レベル2に昇格し、より大きな責任を担う",
+                  "新入社員のトレーニング",
+                  "梱包エリアの高度な在庫管理",
+                  "出荷プロセスの品質管理"
+                ]
+              },
+              {
+                "title": "出荷アシスタント（平織）",
+                "period": "",
+                "responsibilities": [
+                  "修理用パレットの受入れと整理",
+                  "検査エリアへの補充と部品の保管",
+                  "在庫管理と資材整理",
+                  "製品の初期品質管理"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "コンピュータメンテナンス – フリーランス",
+            "period": "",
+            "positions": [
+              {
+                "title": "メンテナンス技術者",
+                "responsibilities": [
+                  "フォーマット、部品交換、ソフトウェアアップデート",
+                  "顧客対応およびリモート/オンサイト技術サポート",
+                  "オペレーティングシステムのインストールと設定",
+                  "ハードウェアの予防・修正メンテナンス"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "habilidades": {
+        "title": "スキル",
+        "tecnicas": {
+          "title": "テクニカルスキル",
+          "items": [
+            "コンピュータメンテナンス（ハードウェア・ソフトウェア）",
+            "Linux（中級）",
+            "JavaScript（上級）",
+            "Microsoft Excel",
+            "Microsoft Word",
+            "C",
+            "コンピュータネットワーク",
+            "テクニカルサポート",
+            "HTML",
+            "システム管理",
+            "CSS",
+            "データベース",
+            "SQL",
+            "Web開発",
+            "Git",
+            "バージョン管理",
+            "GitHub",
+            "Docker",
+            "Podman",
+            "Bash",
+            "シェルスクリプト",
+            "VirtualBox",
+            "WinBoat",
+            "Flatpak",
+            "ターミナル",
+            "LibreOffice Writer",
+            "LibreOffice Calc",
+            "Webスクレイピング",
+            "Java"
+          ]
+        },
+        "interpessoais": {
+          "title": "対人スキル",
+          "items": [
+            "時間厳守",
+            "責任感",
+            "顧客サービス",
+            "チームワーク",
+            "問題解決",
+            "効果的なコミュニケーション",
+            "リーダーシップ",
+            "時間管理"
+          ]
+        }
+      },
+      "download": "完全な履歴書をダウンロード (PDF)"
+    },
+    "tecnologias": {
+      "number": "03",
+      "title": "テクノロジーとツール",
+      "subtitle": "私が使用する技術スタックとツール",
+      "categories": {
+        "frontend": "フロントエンド",
+        "backend": "バックエンド",
+        "devops": "DevOps",
+        "databases": "データベース",
+        "ferramentas": "ツール",
+        "so": "オペレーティングシステム"
+      }
+    },
+    "projetos": {
+      "number": "04",
+      "title": "プロジェクト",
+      "subtitle": "開発済みおよび開発中のプロジェクト",
+      "category_title": "開発ポートフォリオ",
+      "category_desc": "フロントエンド、バックエンド、プログラミング実験プロジェクトを探索してください。",
+      "search_placeholder": "プロジェクト名、技術、説明で検索...",
+      "found": "件のプロジェクトが見つかりました",
+      "no_results_title": "プロジェクトが見つかりません",
+      "no_results_desc": "検索条件を調整してください。プロジェクト名、技術、説明で検索できます。",
+      "code": "コード",
+      "demo": "デモ",
+      "filtros": {
+        "todos": "すべて",
+        "frontend": "フロントエンド",
+        "backend": "バックエンド",
+        "fullstack": "フルスタック",
+        "banco_dados": "データベース"
+      },
+      "cards": [
+        {
+          "title": "Animais no Zoológico 2",
+          "desc": "仮想動物園の動物管理と可視化のためのインタラクティブなWebアプリケーション。",
+          "tags": ["JavaScript", "HTML", "CSS"],
+          "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico2",
+          "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico2/"
+        },
+        {
+          "title": "Dados Climáticos",
+          "desc": "さまざまなソースから気象データを収集、処理、可視化するシステム。",
+          "tags": ["JavaScript", "API", "CSS"],
+          "codeLink": "https://github.com/LeandroStanger/DadosClimaticos",
+          "demoLink": "https://leandrostanger.github.io/DadosClimaticos/"
+        },
+        {
+          "title": "Formulário de Feedback",
+          "desc": "データ検証付きのユーザーフィードバック収集インタラクティブフォーム。",
+          "tags": ["HTML", "CSS", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/FormularioDeFeedback",
+          "demoLink": "https://leandrostanger.github.io/FormularioDeFeedback/"
+        },
+        {
+          "title": "Carros Divertidos",
+          "desc": "2D環境でのインタラクティブなカーレースゲーム。プログラミング概念の練習用。",
+          "tags": ["JavaScript", "HTML5", "CSS3"],
+          "codeLink": "https://github.com/LeandroStanger/CarrosDivertidos",
+          "demoLink": "https://leandrostanger.github.io/CarrosDivertidos/"
+        },
+        {
+          "title": "Corrida de Carro",
+          "desc": "インタラクティブなコントロールとスコアリングシステムを備えたカーレースシミュレーション。",
+          "tags": ["JavaScript", "CSS3", "HTML5"],
+          "codeLink": "https://github.com/LeandroStanger/CorridaDeCarro",
+          "demoLink": "https://leandrostanger.github.io/CorridaDeCarro/"
+        },
+        {
+          "title": "Animais no Zoológico",
+          "desc": "JavaScript学習に焦点を当てた動物園管理システムの初期バージョン。",
+          "tags": ["JavaScript", "HTML", "CSS"],
+          "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico",
+          "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico/"
+        },
+        {
+          "title": "Site com Loop",
+          "desc": "ループするビジュアルエフェクトとCSS/JavaScriptアニメーションを備えたデモサイト。",
+          "tags": ["HTML", "CSS", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/SiteComLoop",
+          "demoLink": "https://leandrostanger.github.io/SiteComLoop/"
+        },
+        {
+          "title": "Sistema de Login",
+          "desc": "資格情報検証とレスポンシブインターフェースを備えたユーザー認証システム。",
+          "tags": ["JavaScript", "HTML", "CSS"],
+          "codeLink": "https://github.com/LeandroStanger/SistemaDeLogin",
+          "demoLink": "https://leandrostanger.github.io/SistemaDeLogin/"
+        },
+        {
+          "title": "Gerenciador de Lista",
+          "desc": "ローカルストレージを使用したリスト項目の作成、編集、削除アプリケーション。",
+          "tags": ["JavaScript", "LocalStorage", "CSS"],
+          "codeLink": "https://github.com/LeandroStanger/GerenciadorDeLista",
+          "demoLink": "https://leandrostanger.github.io/GerenciadorDeLista/"
+        },
+        {
+          "title": "Projetos Iniciais",
+          "desc": "最初のプログラミングプロジェクト集。開発者としての成長を示します。",
+          "tags": ["HTML", "CSS", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais",
+          "demoLink": ""
+        },
+        {
+          "title": "Leandro Stanger Portfólio",
+          "desc": "プロフィール、詳細なREADME、すべてのプロジェクトへのリンクを含むメインリポジトリ。HTML、CSS、JavaScriptによるフロントエンド開発に焦点。",
+          "tags": ["HTML5", "CSS3", "JavaScript", "Git"],
+          "codeLink": "https://github.com/LeandroStanger/LeandroStanger",
+          "demoLink": "https://leandrostanger.github.io/LeandroStanger/"
+        },
+        {
+          "title": "Cidades com Altas Temperaturas",
+          "desc": "極端な気候の都市に関するデータを表示・フィルタリングするインタラクティブなWebアプリ。地図、ダッシュボード、気候データ可視化を含む。",
+          "tags": ["JavaScript (ES6+)", "API", "CSS3", "Data Visualization"],
+          "codeLink": "https://github.com/LeandroStanger/CidadesComAltasTemperaturas",
+          "demoLink": "https://leandrostanger.github.io/CidadesComAltasTemperaturas/"
+        },
+        {
+          "title": "Site com Loop Hack",
+          "desc": "ループするビジュアルエフェクト、クリエイティブなアニメーション、高度なCSS/JavaScript技術を備えた実験的サイト。アニメーションとインタラクティブデザインのスキルを披露。",
+          "tags": ["HTML5", "CSS3", "JavaScript", "Animations", "Web Experiments"],
+          "codeLink": "https://github.com/LeandroStanger/SiteComLoopHack",
+          "demoLink": "https://leandrostanger.github.io/SiteComLoopHack/"
+        },
+        {
+          "title": "Projetos Iniciais (Linguagem C)",
+          "desc": "C言語での最初のプログラミングプロジェクト集。開発者としての成長を示します。",
+          "tags": ["C", "GCC"],
+          "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-C",
+          "demoLink": ""
+        },
+        {
+          "title": "Sistema de Animais de Estimação",
+          "desc": "ペットのリストを表示する静的でレスポンシブなカタログ。名前、種類、年齢、体重、エネルギー量などの基本情報をフレンドリーなWebインターフェースで提供。",
+          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "codeLink": "https://github.com/LeandroStanger/SistemaDeAnimaisDeEstimacao",
+          "demoLink": "https://leandrostanger.github.io/SistemaDeAnimaisDeEstimacao/"
+        },
+        {
+          "title": "Dashboard de Jogadores",
+          "desc": "偉大なサッカー選手の完全な統計情報。ダッシュボード形式で選手データを可視化・分析するモダンでインタラクティブなWebパネル。",
+          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "codeLink": "https://github.com/LeandroStanger/DashboardDeJogadores",
+          "demoLink": "https://leandrostanger.github.io/DashboardDeJogadores/"
+        },
+        {
+          "title": "Dashboard de Conservação",
+          "desc": "出生率、死亡率、移住を考慮した人口データの詳細分析は、憂慮すべき軌道を明らかにし、このコミュニティの局地的絶滅までの最大残存時間を推定できるようにします。",
+          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "codeLink": "https://github.com/LeandroStanger/DashboardDeConservacao",
+          "demoLink": "https://leandrostanger.github.io/DashboardDeConservacao/"
+        },
+        {
+          "title": "Sorteio de Números",
+          "desc": "ユーザー定義の範囲内でランダムな数字を抽選するシンプルでインタラクティブなWebアプリケーション。",
+          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/SorteioDeNumeros",
+          "demoLink": "https://leandrostanger.github.io/SorteioDeNumeros/"
+        },
+        {
+          "title": "Calculadora",
+          "desc": "クリーンで直感的なインターフェースを備えた機能的なWeb電卓。基本的な数学演算を実行可能。",
+          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/Calculadora",
+          "demoLink": "https://leandrostanger.github.io/Calculadora/"
+        },
+        {
+          "title": "Universidade Livre",
+          "desc": "Universidade Livreの機関プラットフォーム。数学を強調した学部課程、大学院プログラム、教員、研究、普及活動に関する情報を提供。デスクトップとモバイルに対応したレスポンシブデザイン。",
+          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "codeLink": "https://github.com/LeandroStanger/UniversidadeLivre",
+          "demoLink": "https://leandrostanger.github.io/UniversidadeLivre/"
+        },
+        {
+          "title": "Projetos Iniciais em SQL",
+          "desc": "最初のSQLプロジェクト集。データベース分野での成長を示します。",
+          "tags": ["SQL", "Database"],
+          "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-SQL",
+          "demoLink": ""
+        },
+        {
+          "title": "Projetos Iniciais em Java",
+          "desc": "最初のJavaプログラミングプロジェクト集。開発者としての成長を示します。",
+          "tags": ["Java", "JDK", "javac", "JVM"],
+          "codeLink": "https://github.com/LeandroStanger/Projetos-Iniciais-Java",
+          "demoLink": ""
+        },
+        {
+          "title": "Leandro Stanger Soluções em Informática",
+          "desc": "Leandro Stanger Soluções em Informáticaの公式サイト。コンピュータメンテナンスサービス、テクニカルサポート、ITソリューションを紹介。",
+          "tags": ["HTML5", "CSS3", "JavaScript", "Responsive"],
+          "codeLink": "https://github.com/LeandroStanger/LeandroStanger-Solucoes-em-Informatica",
+          "demoLink": "https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/"
+        }
+      ]
+    },
+    "contato": {
+      "number": "05",
+      "title": "お問い合わせ",
+      "subtitle": "新しい機会やコラボレーションに常にオープンです",
+      "intro": "プロジェクト、機会、またはテクノロジーについてのアイデア交換について話しましょう！",
+      "form": {
+        "title": "メッセージを送る",
+        "name_label": "名前",
+        "name_placeholder": "フルネームを入力してください",
+        "email_label": "メール",
+        "email_placeholder": "メールアドレスを入力: your@email.com",
+        "message_label": "メッセージ",
+        "message_placeholder": "ここにメッセージを入力...",
+        "send": "メッセージを送信",
+        "sending": "送信中...",
+        "success": "✅ メッセージが正常に送信されました！すぐにご連絡します。",
+        "error": "❌ メッセージの送信中にエラーが発生しました。もう一度お試しください。"
+      },
+      "links": {
+        "linkedin": "LinkedIn",
+        "linkedin_desc": "プロフェッショナルに繋がる",
+        "github": "GitHub",
+        "github_desc": "プロジェクトを見る",
+        "instagram": "Instagram",
+        "instagram_desc": "Instagramでフォロー",
+        "telegram": "Telegram",
+        "telegram_desc": "@leandrostanger",
+        "99freelas": "99freelas",
+        "99freelas_desc": "プロフェッショナルプロフィール",
+        "x": "X",
+        "x_desc": "@LeandroStanger1",
+        "messenger": "Messenger",
+        "messenger_desc": "@leandrostanger"
+      }
+    },
+    "doacoes": {
+      "number": "06",
+      "title": "寄付",
+      "subtitle": "開発に貢献する",
+      "card_title": "私の学業をサポート",
+      "intro": "任意の寄付は、私の学業の継続とこのプロジェクトの開発に直接役立ちます。\n現在、Unopar大学で学術的な旅をしており、テクノロジーと開発の分野で常に進化を求めています。\nいただいたサポートは、書籍や教育リソースの購入、大学の費用に役立てられます。\nまた、プロジェクトの改善や将来の新しいテクノロジーイニシアチブの創出にも投資できます。\nどんな貢献も大歓迎であり、この学びと進化の旅において大きな違いをもたらします。",
+      "real_title": "レアル (BRL)",
+      "dolar_title": "ドル (USD)",
+      "pix": {
+        "title": "Pix",
+        "chave": "c348f1e6-72fa-4988-a2e9-3ac7d539de84",
+        "copiar": "Pixキーをコピー",
+        "copiado": "キーをコピーしました！",
+        "instrucao": "QRコードをスキャンするか、キーをコピーしてPixを行ってください。"
+      },
+      "kofi": {
+        "title": "Ko-fi",
+        "description": "ドルで寄付をご希望の場合は、Ko-fiでサポートできます。迅速で簡単です！"
+      },
+      "transferencia": {
+        "title": "銀行振込または預け入れ",
+        "bankLabel": "銀行:",
+        "agencyLabel": "支店:",
+        "accountLabel": "当座預金:",
+        "copy": "コピー"
+      },
+      "crypto": {
+        "title": "暗号通貨",
+        "copyButton": "アドレスをコピー",
+        "copySuccess": "アドレスを正常にコピーしました！"
+      },
+      "internacional": {
+        "title": "国際銀行振込",
+        "achTitle": "ACH送金 <span>(米国)</span>",
+        "wireTitle": "ワイヤー送金 <span>(国際)</span>",
+        "copyButton": "番号をコピー",
+        "copyNumberSuccess": "番号をコピーしました！"
+      },
+      "qrcode_unavailable": "QRコードは一時的に利用できません。",
+      "copy_failed_key": "キーのコピーに失敗しました。手動で試してください。",
+      "copy_failed_address": "アドレスのコピーに失敗しました。手動で試してください。",
+      "copy_failed_number": "番号のコピーに失敗しました。手動で試してください。"
+    },
+    "feed": {
+      "title": "フィード更新",
+      "subtitle": "最新ニュースと投稿",
+      "items": [
+        {
+          "title": "HTMXで更新されたポートフォリオ",
+          "text": "サイトはHTMXを使用して動的コンテンツを読み込み、ユーザーエクスペリエンスを向上させています。",
+          "date": "公開日: 2026年8月2日"
+        },
+        {
+          "title": "新しいプロジェクトが追加されました",
+          "text": "\"プロジェクト\"セクションで新しいプロジェクトをチェック – Leandro Stanger Soluções em Informáticaの公式サイトを含みます。",
+          "date": "公開日: 2026年8月1日"
+        },
+        {
+          "title": "新しい対応言語：日本語と韓国語！",
+          "text": "このサイトは日本語と韓国語を完全にサポートするようになりました。さらに2つの言語でコンテンツを探索し、連絡先と共有してください！",
+          "date": "公開日: 2026年8月3日"
+        }
+      ],
+      "load_more": "さらに読み込む"
+    },
+    "status": {
+      "label": "ステータス:",
+      "online": "オンライン"
+    }
+  },
+  "footer": {
+    "tagline": "フルスタック開発者兼コンピュータ工学士",
+    "copyright_prefix": "© 2025 - ",
+    "copyright_suffix": " Leandro Stanger。すべての権利を保有。"
+  }
+}

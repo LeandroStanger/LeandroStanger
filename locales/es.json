@@ -10,7 +10,7 @@
     "btn_contact": "Contactar",
     "btn_resume": "Ver Currículum"
   },
-  "scroll": "Scroll",
+  "scroll": "Desplazar",
   "ongoing": "en curso",
   "sections": {
     "sobre": {
@@ -254,6 +254,13 @@
       "no_results_desc": "Intenta ajustar tu búsqueda. Puedes buscar por nombre del proyecto, tecnologías o descripción.",
       "code": "Código",
       "demo": "Demo",
+      "filtros": {
+        "todos": "Todos",
+        "frontend": "Front-end",
+        "backend": "Back-end",
+        "fullstack": "Full-Stack",
+        "banco_dados": "Base de Datos"
+      },
       "cards": [
         {
           "title": "Animais no Zoológico 2",
@@ -495,6 +502,32 @@
       "copy_failed_key": "Error al copiar la clave. Intenta manualmente.",
       "copy_failed_address": "Error al copiar la dirección. Intenta manualmente.",
       "copy_failed_number": "Error al copiar el número. Intenta manualmente."
+    },
+    "feed": {
+      "title": "Feed de Actualizaciones",
+      "subtitle": "Últimas noticias y publicaciones",
+      "items": [
+        {
+          "title": "Portafolio actualizado con HTMX",
+          "text": "Ahora el sitio utiliza HTMX para cargar contenido dinámicamente, mejorando la experiencia del usuario.",
+          "date": "Publicado el: 02/08/2026"
+        },
+        {
+          "title": "Nuevos proyectos añadidos",
+          "text": "Consulta los nuevos proyectos en la sección \"Proyectos\" – incluyendo el sitio institucional de Leandro Stanger Soluções em Informática.",
+          "date": "Publicado el: 01/08/2026"
+        },
+        {
+          "title": "¡Nuevos idiomas soportados: Japonés y Coreano!",
+          "text": "Ahora el sitio ofrece soporte completo para los idiomas Japonés (日本語) y Coreano (한국어). Explora el contenido en dos idiomas más y compártelo con tus contactos!",
+          "date": "Publicado el: 03/08/2026"
+        }
+      ],
+      "load_more": "Cargar más"
+    },
+    "status": {
+      "label": "Estado:",
+      "online": "En línea"
     }
   },
   "footer": {

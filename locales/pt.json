@@ -254,6 +254,13 @@
       "no_results_desc": "Tente ajustar sua busca. Você pode pesquisar por nome do projeto, tecnologias ou descrição.",
       "code": "Código",
       "demo": "Demo",
+      "filtros": {
+        "todos": "Todos",
+        "frontend": "Front-end",
+        "backend": "Back-end",
+        "fullstack": "Full-Stack",
+        "banco_dados": "Banco de Dados"
+      },
       "cards": [
         {
           "title": "Animais no Zoológico 2",
@@ -495,6 +502,32 @@
       "copy_failed_key": "Falha ao copiar chave. Tente manualmente.",
       "copy_failed_address": "Falha ao copiar endereço. Tente manualmente.",
       "copy_failed_number": "Falha ao copiar número. Tente manualmente."
+    },
+    "feed": {
+      "title": "Feed de Atualizações",
+      "subtitle": "Últimas novidades e posts",
+      "items": [
+        {
+          "title": "Portfólio atualizado com HTMX",
+          "text": "Agora o site utiliza HTMX para carregar conteúdo dinamicamente, melhorando a experiência do usuário.",
+          "date": "Publicado em: 02/08/2026"
+        },
+        {
+          "title": "Novos projetos adicionados",
+          "text": "Confira os novos projetos na seção \"Projetos\" – incluindo o site institucional da Leandro Stanger Soluções em Informática.",
+          "date": "Publicado em: 01/08/2026"
+        },
+        {
+          "title": "Novos idiomas suportados: Japonês e Coreano!",
+          "text": "Agora o site oferece suporte completo para os idiomas Japonês (日本語) e Coreano (한국어). Explore o conteúdo em mais dois idiomas e compartilhe com seus contatos!",
+          "date": "Publicado em: 03/08/2026"
+        }
+      ],
+      "load_more": "Carregar mais"
+    },
+    "status": {
+      "label": "Status:",
+      "online": "Online"
     }
   },
   "footer": {
