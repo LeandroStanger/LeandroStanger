@@ -533,6 +533,11 @@
           "title": "Novo projeto: BankMoz",
           "text": "Sistema bancário simples com operações de depósito, saque e transferência. Desenvolvido em Java com foco em programação orientada a objetos.",
           "date": "Publicado em: 03/08/2026"
+        },
+        {
+          "title": "Novo idioma suportado: Italiano!",
+          "text": "Agora o site oferece suporte completo para o idioma Italiano (Italiano). Explore o conteúdo em mais um idioma e compartilhe com seus contatos!",
+          "date": "Publicado em: 04/08/2026"
         }
       ],
       "load_more": "Carregar mais"

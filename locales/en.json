@@ -533,6 +533,11 @@
           "title": "New project: BankMoz",
           "text": "Simple banking system with deposit, withdrawal and transfer operations. Developed in Java with focus on object-oriented programming.",
           "date": "Published on: 08/03/2026"
+        },
+        {
+          "title": "New language supported: Italian!",
+          "text": "The site now offers full support for Italian (Italiano). Explore the content in one more language and share with your contacts!",
+          "date": "Published on: 08/04/2026"
         }
       ],
       "load_more": "Load more"

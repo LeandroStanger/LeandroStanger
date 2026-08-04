@@ -533,6 +533,11 @@
           "title": "Neues Projekt: BankMoz",
           "text": "Einfaches Banksystem mit Einzahlungs-, Auszahlungs- und Überweisungsfunktionen. Entwickelt in Java mit Fokus auf objektorientierte Programmierung.",
           "date": "Veröffentlicht am: 03.08.2026"
+        },
+        {
+          "title": "Neue Sprache unterstützt: Italienisch!",
+          "text": "Die Website bietet jetzt volle Unterstützung für Italienisch (Italiano). Entdecken Sie die Inhalte in einer weiteren Sprache und teilen Sie sie mit Ihren Kontakten!",
+          "date": "Veröffentlicht am: 04.08.2026"
         }
       ],
       "load_more": "Mehr laden"

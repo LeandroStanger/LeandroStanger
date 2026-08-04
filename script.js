@@ -2,7 +2,7 @@
 const AppState = {
     currentLang: 'pt',
     translations: {},
-    supportedLangs: ['pt', 'en', 'es', 'fr', 'zh', 'de', 'ja', 'ko'],
+    supportedLangs: ['pt', 'en', 'es', 'fr', 'zh', 'de', 'ja', 'ko', 'it'],
     listeners: new Set(),
 
     setTranslations(lang, data) {
@@ -67,7 +67,12 @@ const MINIMAL_TRANSLATIONS = {
             "title": "Feed de Atualizações",
             "subtitle": "Últimas novidades",
             "items": [
-                { "title": "Exemplo", "text": "Conteúdo de exemplo.", "date": "Hoje" }
+                { "title": "Exemplo", "text": "Conteúdo de exemplo.", "date": "Hoje" },
+                {
+                    "title": "Novo idioma suportado: Italiano!",
+                    "text": "Agora o site oferece suporte completo para o idioma Italiano (Italiano). Explore o conteúdo em mais um idioma e compartilhe com seus contatos!",
+                    "date": "Publicado em: 04/08/2026"
+                }
             ],
             "load_more": "Carregar mais"
         },
@@ -505,13 +510,14 @@ const ExperienceCalc = {
             zh: { y: ['年', '年'], m: ['月', '月'] },
             de: { y: ['Jahr', 'Jahre'], m: ['Monat', 'Monate'] },
             ja: { y: ['年', '年'], m: ['ヶ月', 'ヶ月'] },
-            ko: { y: ['년', '년'], m: ['개월', '개월'] }
+            ko: { y: ['년', '년'], m: ['개월', '개월'] },
+            it: { y: ['anno', 'anni'], m: ['mese', 'mesi'] }
         };
         const l = labels[lang] || labels.pt;
         const parts = [];
         if (period.years > 0) parts.push(`${period.years} ${period.years === 1 ? l.y[0] : l.y[1]}`);
         if (period.months > 0) parts.push(`${period.months} ${period.months === 1 ? l.m[0] : l.m[1]}`);
-        return parts.length > 0 ? parts.join(', ') : (lang === 'pt' ? '0 meses' : lang === 'en' ? '0 months' : lang === 'es' ? '0 meses' : lang === 'fr' ? '0 mois' : lang === 'zh' ? '0个月' : lang === 'de' ? '0 Monate' : lang === 'ja' ? '0ヶ月' : '0개월');
+        return parts.length > 0 ? parts.join(', ') : (lang === 'pt' ? '0 meses' : lang === 'en' ? '0 months' : lang === 'es' ? '0 meses' : lang === 'fr' ? '0 mois' : lang === 'zh' ? '0个月' : lang === 'de' ? '0 Monate' : lang === 'ja' ? '0ヶ月' : lang === 'ko' ? '0개월' : '0 mesi');
     },
 
     getPeriodText(type, lang) {
@@ -659,7 +665,7 @@ const Renderer = {
                         <div class="status-container">
                             ${statusArray.map(s => {
                     const lower = s.toLowerCase();
-                    const isCompleted = lower.includes('concluído') || lower.includes('completed') || lower.includes('completado') || lower.includes('terminé') || lower.includes('完成') || lower.includes('abgeschlossen') || lower.includes('修了') || lower.includes('완료');
+                    const isCompleted = lower.includes('concluído') || lower.includes('completed') || lower.includes('completado') || lower.includes('terminé') || lower.includes('完成') || lower.includes('abgeschlossen') || lower.includes('修了') || lower.includes('완료') || lower.includes('completato');
                     return `<span class="status-badge ${isCompleted ? 'status-concluido' : 'status-andamento'}">${s}</span>`;
                 }).join('')}
                         </div>
@@ -688,7 +694,7 @@ const Renderer = {
             const company = exp.company || '';
             if (company.includes('Vanelise')) {
                 companyPeriod = ExperienceCalc.getPeriodText('empresa1', lang);
-            } else if (company.includes('Autônomo') || company.includes('Self-employed') || company.includes('Autónomo') || company.includes('Auto-entrepreneur') || company.includes('自由职业') || company.includes('Selbstständig') || company.includes('フリーランス') || company.includes('프리랜서')) {
+            } else if (company.includes('Autônomo') || company.includes('Self-employed') || company.includes('Autónomo') || company.includes('Auto-entrepreneur') || company.includes('自由职业') || company.includes('Selbstständig') || company.includes('フリーランス') || company.includes('프리랜서') || company.includes('Freelance')) {
                 companyPeriod = ExperienceCalc.getPeriodText('empresa2', lang);
             } else {
                 companyPeriod = exp.period || '';
