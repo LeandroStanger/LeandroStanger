@@ -798,17 +798,47 @@ const Renderer = {
     }
 };
 
-// ==================== FEED E STATUS ====================
+// ==================== FEED COM ORDENAÇÃO, PAGINAÇÃO E TRADUÇÃO ====================
+let feedRemainingItems = [];
+
 function renderFeed() {
     const container = document.getElementById('feed-container');
     if (!container) return;
+
     const items = I18n.t('sections.feed.items');
     if (!Array.isArray(items) || items.length === 0) {
         container.innerHTML = '<p style="color:var(--color-gray); text-align:center; padding:1rem;">Nenhum item no feed.</p>';
+        const btn = document.getElementById('load-more-feed');
+        if (btn) btn.style.display = 'none';
         return;
     }
+
+    // Função para extrair data do campo date (formato dd/mm/aaaa)
+    function parseDate(dateStr) {
+        const match = dateStr.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+        if (match) {
+            const day = parseInt(match[1], 10);
+            const month = parseInt(match[2], 10) - 1;
+            const year = parseInt(match[3], 10);
+            return new Date(year, month, day);
+        }
+        return new Date(0); // data antiga para itens sem data
+    }
+
+    // Ordena do mais recente para o mais antigo
+    const sortedItems = [...items].sort((a, b) => {
+        const dateA = parseDate(a.date);
+        const dateB = parseDate(b.date);
+        return dateB - dateA;
+    });
+
+    // Itens iniciais (2 primeiros)
+    const initialItems = sortedItems.slice(0, 2);
+    feedRemainingItems = sortedItems.slice(2);
+
+    // Renderiza os itens iniciais
     let html = '';
-    items.forEach(item => {
+    initialItems.forEach(item => {
         html += `
             <div class="feed-item" style="background:var(--color-dark-800); border-radius:var(--radius-lg); padding:1.5rem; margin-bottom:1rem; border-left:4px solid var(--color-primary);">
                 <h4 style="color:var(--color-light);">
@@ -822,14 +852,40 @@ function renderFeed() {
     });
     container.innerHTML = html;
 
-    const extraItems = I18n.t('sections.feed.extraItems');
-    const btn = document.getElementById('load-more-feed');
-    if (btn) {
-        if (extraItems && Array.isArray(extraItems) && extraItems.length > 0) {
-            btn.style.display = 'inline-flex';
-        } else {
-            btn.style.display = 'none';
-        }
+    // Controla o botão "Carregar mais" com tradução
+    const loadMoreBtn = document.getElementById('load-more-feed');
+    if (!loadMoreBtn) return;
+
+    if (feedRemainingItems.length > 0) {
+        loadMoreBtn.style.display = 'inline-flex';
+        // Usa a tradução diretamente
+        const loadMoreText = I18n.t('sections.feed.load_more');
+        loadMoreBtn.innerHTML = `<i class="fas fa-plus"></i> ${loadMoreText}`;
+        // Define o evento onclick diretamente
+        loadMoreBtn.onclick = function() {
+            const container = document.getElementById('feed-container');
+            if (!container || feedRemainingItems.length === 0) return;
+
+            let html = '';
+            feedRemainingItems.forEach(item => {
+                html += `
+                    <div class="feed-item" style="background:var(--color-dark-800); border-radius:var(--radius-lg); padding:1.5rem; margin-bottom:1rem; border-left:4px solid var(--color-accent);">
+                        <h4 style="color:var(--color-light);">
+                            <i class="fas fa-star" style="color:var(--color-accent); margin-right:0.5rem;"></i>
+                            ${item.title}
+                        </h4>
+                        <p style="color:var(--color-gray);">${item.text}</p>
+                        <small style="color:var(--color-gray-dark);">${item.date}</small>
+                    </div>
+                `;
+            });
+            container.insertAdjacentHTML('beforeend', html);
+            feedRemainingItems = [];
+            loadMoreBtn.style.display = 'none';
+        };
+    } else {
+        loadMoreBtn.style.display = 'none';
+        loadMoreBtn.onclick = null;
     }
 }
 
@@ -887,7 +943,7 @@ function openBrandsModal(brands) {
     document.body.classList.add('modal-open');
 }
 
-// ==================== PROJETOS (BUSCA E FILTROS) ====================
+// ==================== COMPONENTE DE PROJETOS (COM FILTROS APRIMORADOS) ====================
 class ProjectsSearch {
     constructor() {
         this.input = document.getElementById('busca-projetos');
@@ -1209,7 +1265,7 @@ function shuffleTechnologiesIcons() {
     });
 }
 
-// ==================== DOAÇÕES (PIX, TRANSFERÊNCIAS, CRIPTO) ====================
+// ==================== FUNÇÃO PARA INICIALIZAR A SEÇÃO DE DOAÇÕES ====================
 function initDoacoes() {
     const qrcodeDiv = document.getElementById('qrcode');
     if (qrcodeDiv) {
@@ -1431,32 +1487,6 @@ function initDoacoes() {
     }
 }
 
-// ==================== BOTÃO "CARREGAR MAIS" DO FEED ====================
-function setupLoadMoreFeed() {
-    const btn = document.getElementById('load-more-feed');
-    if (!btn) return;
-    btn.addEventListener('click', function() {
-        const container = document.getElementById('feed-container');
-        if (!container) return;
-        const extraItems = I18n.t('sections.feed.extraItems');
-        if (extraItems && Array.isArray(extraItems) && extraItems.length > 0) {
-            extraItems.forEach(item => {
-                const html = `
-                    <div class="feed-item" style="background:var(--color-dark-800); border-radius:var(--radius-lg); padding:1.5rem; margin-bottom:1rem; border-left:4px solid var(--color-accent);">
-                        <h4 style="color:var(--color-light);">
-                            <i class="fas fa-star" style="color:var(--color-accent); margin-right:0.5rem;"></i>
-                            ${item.title}
-                        </h4>
-                        <p style="color:var(--color-gray);">${item.text}</p>
-                        <small style="color:var(--color-gray-dark);">${item.date}</small>
-                    </div>
-                `;
-                container.insertAdjacentHTML('beforeend', html);
-            });
-        }
-    });
-}
-
 // ==================== INTEGRAÇÃO COM HTMX ====================
 document.addEventListener('htmx:afterSwap', function(evt) {
     if (evt.target.id === 'projetos-grid') {
@@ -1502,7 +1532,6 @@ document.addEventListener('htmx:afterSwap', function(evt) {
         initBackToTop();
         initDownloadCurriculo();
         initDoacoes();
-        setupLoadMoreFeed();
 
         const modal = document.getElementById('modal-marcas');
         const closeBtn = modal?.querySelector('.modal-close');

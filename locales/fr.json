@@ -528,6 +528,11 @@
           "title": "Nouvelles langues prises en charge : le japonais et le coréen !",
           "text": "Le site offre désormais une prise en charge complète du japonais (日本語) et du coréen (한국어). Explorez le contenu dans deux langues supplémentaires et partagez avec vos contacts !",
           "date": "Publié le : 03/08/2026"
+        },
+        {
+          "title": "Nouveau projet : BankMoz",
+          "text": "Système bancaire simple avec des opérations de dépôt, de retrait et de transfert. Développé en Java avec un accent sur la programmation orientée objet.",
+          "date": "Publié le : 03/08/2026"
         }
       ],
       "load_more": "Charger plus"

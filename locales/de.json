@@ -528,6 +528,11 @@
           "title": "Neue unterstützte Sprachen: Japanisch und Koreanisch!",
           "text": "Die Website bietet jetzt volle Unterstützung für Japanisch (日本語) und Koreanisch (한국어). Entdecken Sie die Inhalte in zwei weiteren Sprachen und teilen Sie sie mit Ihren Kontakten!",
           "date": "Veröffentlicht am: 03.08.2026"
+        },
+        {
+          "title": "Neues Projekt: BankMoz",
+          "text": "Einfaches Banksystem mit Einzahlungs-, Auszahlungs- und Überweisungsfunktionen. Entwickelt in Java mit Fokus auf objektorientierte Programmierung.",
+          "date": "Veröffentlicht am: 03.08.2026"
         }
       ],
       "load_more": "Mehr laden"

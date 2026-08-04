@@ -528,6 +528,11 @@
           "title": "¡Nuevos idiomas soportados: Japonés y Coreano!",
           "text": "Ahora el sitio ofrece soporte completo para los idiomas Japonés (日本語) y Coreano (한국어). Explora el contenido en dos idiomas más y compártelo con tus contactos!",
           "date": "Publicado el: 03/08/2026"
+        },
+        {
+          "title": "Nuevo proyecto: BankMoz",
+          "text": "Sistema bancario simple con operaciones de depósito, retiro y transferencia. Desarrollado en Java con enfoque en programación orientada a objetos.",
+          "date": "Publicado el: 03/08/2026"
         }
       ],
       "load_more": "Cargar más"
