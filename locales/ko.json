@@ -422,6 +422,13 @@
           "tags": ["HTML5", "CSS3", "JavaScript", "Responsive"],
           "codeLink": "https://github.com/LeandroStanger/LeandroStanger-Solucoes-em-Informatica",
           "demoLink": "https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/"
+        },
+        {
+          "title": "BankMoz",
+          "desc": "입금, 출금, 이체 작업이 가능한 간단한 은행 시스템. 객체 지향 프로그래밍에 중점을 두고 Java로 개발되었습니다.",
+          "tags": ["Java", "OOP", "콘솔", "은행", "터미널"],
+          "codeLink": "https://github.com/LeandroStanger/BankMoz",
+          "demoLink": ""
         }
       ]
     },

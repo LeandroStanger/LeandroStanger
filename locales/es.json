@@ -422,6 +422,13 @@
           "tags": ["HTML5", "CSS3", "JavaScript", "Responsivo"],
           "codeLink": "https://github.com/LeandroStanger/LeandroStanger-Solucoes-em-Informatica",
           "demoLink": "https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/"
+        },
+        {
+          "title": "BankMoz",
+          "desc": "Sistema bancario simple con operaciones de depósito, retiro y transferencia. Desarrollado en Java con enfoque en programación orientada a objetos.",
+          "tags": ["Java", "OOP", "Consola", "Banco", "Terminal"],
+          "codeLink": "https://github.com/LeandroStanger/BankMoz",
+          "demoLink": ""
         }
       ]
     },

@@ -422,6 +422,13 @@
           "tags": ["HTML5", "CSS3", "JavaScript", "Responsive"],
           "codeLink": "https://github.com/LeandroStanger/LeandroStanger-Solucoes-em-Informatica",
           "demoLink": "https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/"
+        },
+        {
+          "title": "BankMoz",
+          "desc": "Einfaches Banksystem mit Einzahlungs-, Auszahlungs- und Überweisungsfunktionen. Entwickelt in Java mit Fokus auf objektorientierte Programmierung.",
+          "tags": ["Java", "OOP", "Konsole", "Bank", "Terminal"],
+          "codeLink": "https://github.com/LeandroStanger/BankMoz",
+          "demoLink": ""
         }
       ]
     },

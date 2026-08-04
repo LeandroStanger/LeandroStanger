@@ -422,6 +422,13 @@
           "tags": ["HTML5", "CSS3", "JavaScript", "响应式"],
           "codeLink": "https://github.com/LeandroStanger/LeandroStanger-Solucoes-em-Informatica",
           "demoLink": "https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/"
+        },
+        {
+          "title": "BankMoz",
+          "desc": "简单的银行系统，支持存款、取款和转账操作。使用 Java 开发，注重面向对象编程。",
+          "tags": ["Java", "OOP", "控制台", "银行", "终端"],
+          "codeLink": "https://github.com/LeandroStanger/BankMoz",
+          "demoLink": ""
         }
       ]
     },
