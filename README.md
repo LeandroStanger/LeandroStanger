@@ -134,6 +134,7 @@ Coleção de meus primeiros projetos de programação em Java, demonstrando minh
 [![Flatpak](https://img.shields.io/badge/Flatpak-4A90D9?style=for-the-badge&logo=flatpak&logoColor=4A90D9&labelColor=000000)](https://flatpak.org/)
 [![VSCodium](https://img.shields.io/badge/VSCodium-2F80ED?style=for-the-badge&logo=vscodium&logoColor=2F80ED&labelColor=000000)](https://vscodium.com/)
 [![IntelliJ IDEA Community](https://img.shields.io/badge/IntelliJ_IDEA_Community-f63a4d?style=for-the-badge&logo=intellijidea&logoColor=f63a4d&labelColor=000000)](https://www.jetbrains.com/pt-br/idea/)
+[![Eclipse IDE](https://img.shields.io/badge/Eclipse_IDE-2C2255?style=for-the-badge&logo=eclipseide&logoColor=2C2255&labelColor=000000)](https://eclipseide.org/)
 
 
 
