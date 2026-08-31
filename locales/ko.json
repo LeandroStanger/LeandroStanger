@@ -73,7 +73,7 @@
             "title": "컴퓨터 공학 학사",
             "institution": "Unopar",
             "progress": {
-              "completed": 15,
+              "completed": 16,
               "total": 53,
               "label": "{completed}/{total} 과목 완료",
               "semesterText": "제4학기 — 진행 중"

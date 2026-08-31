@@ -73,7 +73,7 @@
             "title": "コンピュータ工学学士",
             "institution": "Unopar",
             "progress": {
-              "completed": 15,
+              "completed": 16,
               "total": 53,
               "label": "{completed}/{total} 科目修了",
               "semesterText": "第4学期 — 進行中"

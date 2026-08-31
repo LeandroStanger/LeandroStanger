@@ -73,7 +73,7 @@
             "title": "Grado en Ingeniería en Computación",
             "institution": "Unopar",
             "progress": {
-              "completed": 15,
+              "completed": 16,
               "total": 53,
               "label": "{completed} de {total} materias completadas",
               "semesterText": "4º Semestre — En curso"
