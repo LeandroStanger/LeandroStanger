@@ -50,7 +50,7 @@
           },
           {
             "title": "Base de Données",
-            "text": "Je souhaite travailler dans la modélisation, l'administration et l'optimisation des bases de données, en garantissant l'intégrité et les performances des systèmes.",
+            "text": "Je souhaite travailler dans la modélisation, l'administration et l'optimisation des bases de données, en garantissant l' intégrité et les performances des systèmes.",
             "icon": "database"
           },
           {
@@ -197,6 +197,16 @@
                 "name": "Valentys Uniformes",
                 "logo": "img/marcas/valentyns.png",
                 "url": "https://valentys.com.br/"
+              },
+              {
+                "name": "Uniforme Farmácia Super Popular",
+                "logo": "img/marcas/Farmácia Super Popular.png",
+                "url": "https://www.facebook.com/farmarcon"
+              },
+              {
+                "name": "Uniforme Master Farma",
+                "logo": "img/marcas/Master Farma.png",
+                "url": "https://www.masterfarma.com.br/"
               }
             ],
             "positions": [
