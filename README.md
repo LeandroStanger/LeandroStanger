@@ -11,25 +11,39 @@
 
 ## Sobre Mim
 
-Desenvolvedor Full-Stack apaixonado por criar aplicações web modernas e escaláveis, com forte atuação em Java, JavaScript e C – do front-end ao back-end e até sistemas embarcados. Busco uma posição em TI onde possa aplicar e ampliar meus conhecimentos em desenvolvimento de software, administração de sistemas, gerenciamento de bancos de dados, suporte técnico, manutenção de computadores e redes. Estou em constante aprendizado, incluindo curso de Inglês e Escrita para ampliar minha atuação global, e levo do Jiu‑jitsu a disciplina, resiliência e pensamento estratégico para entregar soluções robustas, seguras e de alto desempenho.
-```java
-import java.util.List;
-import java.util.Map;
+Desenvolvedor Full-Stack apaixonado por criar aplicações web modernas e escaláveis, com forte atuação em PHP, JavaScript e C – do front-end ao back-end e até sistemas embarcados. Busco uma posição em TI onde possa aplicar e ampliar meus conhecimentos em desenvolvimento de software, administração de sistemas, gerenciamento de bancos de dados, suporte técnico, manutenção de computadores e redes. Estou em constante aprendizado, incluindo curso de Inglês e Escrita para ampliar minha atuação global, e levo do Jiu‑jitsu a disciplina, resiliência e pensamento estratégico para entregar soluções robustas, seguras e de alto desempenho.
+```php
+<?php
 
-public class LeandroStanger {
-    public String nome = "Leandro Stanger";
-    public String area = "Desenvolvimento Full-Stack";
-    public Tecnologias tecnologias = new Tecnologias();
-    public List<String> foco = List.of("Interfaces Responsivas", "UX/UI", "Performance Web", "Banco de Dados");
-    public List<String> hobbies = List.of("Coding", "Tecnologia", "Open Source");
+class LeandroStanger {
+    public string $nome = "Leandro Stanger";
+    public string $area = "Desenvolvimento Full-Stack";
+    public Tecnologias $tecnologias;
+    public array $foco;
+    public array $hobbies;
 
-    public static class Tecnologias {
-        public List<String> frontend = List.of("HTML5", "CSS3", "JavaScript");
-        public List<String> backend = List.of("Node.js", "C", "Java", "npm");
-        public List<String> bancoDados = List.of("SQL", "MySQL", "Databricks", "Microsoft SQL Server", "MariaDB", "SQLite");
-        public List<String> devOps = List.of("Docker", "Podman", "WinBoat", "VirtualBox", "Ubuntu Server", "CentOS", "Bash", "Shell Script");
-        public List<String> ferramentas = List.of("Git", "GitHub", "Visual Studio Code", "Terminal", "Microsoft Excel", "Code::Blocks", "LibreOffice Writer", "LibreOffice Calc", "Flatpak", "VSCodium", "Azure Data Studio");
-        public List<String> sistemaOperacional = List.of("Arch Linux", "BigLinux");
+    public function __construct() {
+        $this->tecnologias = new Tecnologias();
+        $this->foco = ["Interfaces Responsivas", "UX/UI", "Performance Web", "Banco de Dados"];
+        $this->hobbies = ["Coding", "Tecnologia", "Open Source"];
+    }
+}
+
+class Tecnologias {
+    public array $frontend;
+    public array $backend;
+    public array $bancoDados;
+    public array $devOps;
+    public array $ferramentas;
+    public array $sistemaOperacional;
+
+    public function __construct() {
+        $this->frontend = ["HTML5", "CSS3", "JavaScript"];
+        $this->backend = ["Node.js", "C", "Java", "npm", "PHP"];
+        $this->bancoDados = ["SQL", "MySQL", "Databricks", "Microsoft SQL Server", "MariaDB", "SQLite"];
+        $this->devOps = ["Docker", "Podman", "WinBoat", "VirtualBox", "Ubuntu Server", "CentOS", "Bash", "Shell Script"];
+        $this->ferramentas = ["Git", "GitHub", "Visual Studio Code", "Terminal", "Microsoft Excel", "Code::Blocks", "LibreOffice Writer", "LibreOffice Calc", "Flatpak", "VSCodium", "Azure Data Studio"];
+        $this->sistemaOperacional = ["Arch Linux", "BigLinux"];
     }
 }
 ```
@@ -80,7 +94,7 @@ Coleção de meus primeiros projetos de programação na linguagem C, demonstran
 Coleção de meus primeiros projetos de SQL, demonstrando minha evolução como Analista de Banco de Dados.
 
 ### [Projetos Iniciais (Java)](https://github.com/LeandroStanger/Projetos-Iniciais-Java)
-[![Estudo Em andamento](https://img.shields.io/badge/Estudo-Em_andamento-1572B6?style=for-the-badge&logo=gitea&logoColor=E62B1E)](https://github.com/LeandroStanger/Projetos-Iniciais-Java)
+[![Estudo Em andamento](https://img.shields.io/badge/Estudo-Pausado-FF6441?style=for-the-badge&logo=gitea&logoColor=E62B1E)](https://github.com/LeandroStanger/Projetos-Iniciais-Java)
 Coleção de meus primeiros projetos de programação em Java, demonstrando minha evolução como desenvolvedor.
 
 
@@ -98,6 +112,7 @@ Coleção de meus primeiros projetos de programação em Java, demonstrando minh
 [![C](https://img.shields.io/badge/c-A8B9CC?style=for-the-badge&logo=c&logoColor=A8B9CC&labelColor=000000)](https://wikipedia.org/wiki/C_(programming_language))
 [![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=CB3837&labelColor=000000)](https://www.npmjs.com/)
 [![Java](https://img.shields.io/badge/Java-E62B1E?style=for-the-badge&logo=gitea&logoColor=E62B1E&labelColor=000000)](https://www.java.com)
+[![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=gitea&logoColor=777BB4&labelColor=000000)](https://www.php.net/)
 
 
 
