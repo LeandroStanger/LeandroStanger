@@ -54,9 +54,9 @@
             "icon": "database"
           },
           {
-            "title": "Java / Mobile",
-            "text": "Interesse nello sviluppo di applicazioni mobili (Android) e backend con Java, esplorando l'ecosistema Spring, le buone pratiche di OOP e l'integrazione con i database.",
-            "icon": "mobile-alt"
+            "title": "PHP",
+            "text": "Sviluppo di applicazioni web dinamiche con PHP, esplorando framework come Laravel, buone pratiche di programmazione e integrazione con database.",
+            "icon": "code"
           },
           {
             "title": "Linguaggio C",
@@ -87,31 +87,41 @@
             "date": "feb/2024 a giu/2025",
             "title": "Tecnico in Manutenzione e Supporto Informatico",
             "institution": "AMPLI",
-            "status": ["Completato"]
+            "status": [
+              "Completato"
+            ]
           },
           {
             "date": "apr/2016 a ott/2016",
             "title": "Corso di Montaggio e Manutenzione di Computer e Reti",
             "institution": "YesBras Escolas do Brasil",
-            "status": ["Completato"]
+            "status": [
+              "Completato"
+            ]
           },
           {
             "date": "2015 a ott/2017",
             "title": "Scuola Superiore",
             "institution": "SESI",
-            "status": ["Completato"]
+            "status": [
+              "Completato"
+            ]
           },
           {
             "date": "set/2014 a set/2015",
             "title": "Corso APP – Amministrativo Personale e Professionale",
             "institution": "Escola de Informática Unisoft",
-            "status": ["Completato"]
+            "status": [
+              "Completato"
+            ]
           },
           {
             "date": "set/2013 a set/2014",
             "title": "Corso QIT – Qualifica in Informatica e Tecnologia",
             "institution": "Escola de Informática Unisoft",
-            "status": ["Completato"]
+            "status": [
+              "Completato"
+            ]
           }
         ]
       },
@@ -123,19 +133,71 @@
             "company": "Confecções Vanelise",
             "period": "",
             "brands": [
-              { "name": "Renner", "logo": "img/marcas/renner.png", "url": "https://www.renner.com.br/" },
-              { "name": "Hering", "logo": "img/marcas/hering.png", "url": "https://www.hering.com.br/" },
-              { "name": "Farm", "logo": "img/marcas/farm.png", "url": "https://www.farmrio.com.br/" },
-              { "name": "Youcom", "logo": "img/marcas/youcom.png", "url": "https://www.youcom.com.br/" },
-              { "name": "Havan", "logo": "img/marcas/havan.png", "url": "https://www.havan.com.br/" },
-              { "name": "Uniforme Anjo Tintas", "logo": "img/marcas/anjo-tintas.png", "url": "https://www.anjo.com.br/" },
-              { "name": "Ashua", "logo": "img/marcas/ashua.png", "url": "https://www.lojasrenner.com.br/ashua" },
-              { "name": "Insider", "logo": "img/marcas/insider.png", "url": "https://www.insiderstore.com.br/" },
-              { "name": "Marisa", "logo": "img/marcas/marisa.png", "url": "https://www.marisa.com.br/" },
-              { "name": "C&A", "logo": "img/marcas/C&A.png", "url": "https://www.cea.com.br/" },
-              { "name": "Gang", "logo": "img/marcas/gang.png", "url": "https://www.gang.com.br/" },
-              { "name": "Riachuelo", "logo": "img/marcas/riachuelo.png", "url": "https://www.riachuelo.com.br/" },
-              { "name": "Valentys Uniformes", "logo": "img/marcas/valentyns.png", "url": "https://valentys.com.br/" }
+              {
+                "name": "Renner",
+                "logo": "img/marcas/renner.png",
+                "url": "https://www.renner.com.br/"
+              },
+              {
+                "name": "Hering",
+                "logo": "img/marcas/hering.png",
+                "url": "https://www.hering.com.br/"
+              },
+              {
+                "name": "Farm",
+                "logo": "img/marcas/farm.png",
+                "url": "https://www.farmrio.com.br/"
+              },
+              {
+                "name": "Youcom",
+                "logo": "img/marcas/youcom.png",
+                "url": "https://www.youcom.com.br/"
+              },
+              {
+                "name": "Havan",
+                "logo": "img/marcas/havan.png",
+                "url": "https://www.havan.com.br/"
+              },
+              {
+                "name": "Uniforme Anjo Tintas",
+                "logo": "img/marcas/anjo-tintas.png",
+                "url": "https://www.anjo.com.br/"
+              },
+              {
+                "name": "Ashua",
+                "logo": "img/marcas/ashua.png",
+                "url": "https://www.lojasrenner.com.br/ashua"
+              },
+              {
+                "name": "Insider",
+                "logo": "img/marcas/insider.png",
+                "url": "https://www.insiderstore.com.br/"
+              },
+              {
+                "name": "Marisa",
+                "logo": "img/marcas/marisa.png",
+                "url": "https://www.marisa.com.br/"
+              },
+              {
+                "name": "C&A",
+                "logo": "img/marcas/C&A.png",
+                "url": "https://www.cea.com.br/"
+              },
+              {
+                "name": "Gang",
+                "logo": "img/marcas/gang.png",
+                "url": "https://www.gang.com.br/"
+              },
+              {
+                "name": "Riachuelo",
+                "logo": "img/marcas/riachuelo.png",
+                "url": "https://www.riachuelo.com.br/"
+              },
+              {
+                "name": "Valentys Uniformes",
+                "logo": "img/marcas/valentyns.png",
+                "url": "https://valentys.com.br/"
+              }
             ],
             "positions": [
               {
@@ -265,168 +327,273 @@
         {
           "title": "Animais no Zoológico 2",
           "desc": "Un'applicazione web interattiva per la gestione e la visualizzazione di animali in uno zoo virtuale.",
-          "tags": ["JavaScript", "HTML", "CSS"],
+          "tags": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+          ],
           "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico2",
           "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico2/"
         },
         {
           "title": "Dados Climáticos",
           "desc": "Sistema per la raccolta, l'elaborazione e la visualizzazione di dati meteorologici da diverse fonti.",
-          "tags": ["JavaScript", "API", "CSS"],
+          "tags": [
+            "JavaScript",
+            "API",
+            "CSS"
+          ],
           "codeLink": "https://github.com/LeandroStanger/DadosClimaticos",
           "demoLink": "https://leandrostanger.github.io/DadosClimaticos/"
         },
         {
           "title": "Formulário de Feedback",
           "desc": "Modulo interattivo per la raccolta di feedback degli utenti con validazione dei dati.",
-          "tags": ["HTML", "CSS", "JavaScript"],
+          "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ],
           "codeLink": "https://github.com/LeandroStanger/FormularioDeFeedback",
           "demoLink": "https://leandrostanger.github.io/FormularioDeFeedback/"
         },
         {
           "title": "Carros Divertidos",
           "desc": "Gioco interattivo con auto in un ambiente 2D, sviluppato per praticare concetti di programmazione.",
-          "tags": ["JavaScript", "HTML5", "CSS3"],
+          "tags": [
+            "JavaScript",
+            "HTML5",
+            "CSS3"
+          ],
           "codeLink": "https://github.com/LeandroStanger/CarrosDivertidos",
           "demoLink": "https://leandrostanger.github.io/CarrosDivertidos/"
         },
         {
           "title": "Corrida de Carro",
           "desc": "Simulazione di gara automobilistica con controlli interattivi e sistema di punteggio.",
-          "tags": ["JavaScript", "CSS3", "HTML5"],
+          "tags": [
+            "JavaScript",
+            "CSS3",
+            "HTML5"
+          ],
           "codeLink": "https://github.com/LeandroStanger/CorridaDeCarro",
           "demoLink": "https://leandrostanger.github.io/CorridaDeCarro/"
         },
         {
           "title": "Animais no Zoológico",
           "desc": "Versione iniziale del sistema di gestione dello zoo, focalizzata sull'apprendimento di JavaScript.",
-          "tags": ["JavaScript", "HTML", "CSS"],
+          "tags": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+          ],
           "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico",
           "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico/"
         },
         {
           "title": "Site com Loop",
           "desc": "Sito dimostrativo con effetti visivi in loop e animazioni CSS/JavaScript.",
-          "tags": ["HTML", "CSS", "JavaScript"],
+          "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ],
           "codeLink": "https://github.com/LeandroStanger/SiteComLoop",
           "demoLink": "https://leandrostanger.github.io/SiteComLoop/"
         },
         {
           "title": "Sistema de Login",
           "desc": "Sistema di autenticazione utenti con validazione delle credenziali e interfaccia responsiva.",
-          "tags": ["JavaScript", "HTML", "CSS"],
+          "tags": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+          ],
           "codeLink": "https://github.com/LeandroStanger/SistemaDeLogin",
           "demoLink": "https://leandrostanger.github.io/SistemaDeLogin/"
         },
         {
           "title": "Gerenciador de Lista",
           "desc": "Applicazione per creare, modificare ed eliminare elementi di liste, con archiviazione locale.",
-          "tags": ["JavaScript", "LocalStorage", "CSS"],
+          "tags": [
+            "JavaScript",
+            "LocalStorage",
+            "CSS"
+          ],
           "codeLink": "https://github.com/LeandroStanger/GerenciadorDeLista",
           "demoLink": "https://leandrostanger.github.io/GerenciadorDeLista/"
         },
         {
           "title": "Projetos Iniciais",
           "desc": "Raccolta dei miei primi progetti di programmazione, che dimostrano la mia evoluzione come sviluppatore.",
-          "tags": ["HTML", "CSS", "JavaScript"],
+          "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ],
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais",
           "demoLink": ""
         },
         {
           "title": "Leandro Stanger Portfólio",
           "desc": "Repository principale con profilo, README dettagliato e link a tutti i progetti. Focus sullo sviluppo Front-end con HTML, CSS e JavaScript.",
-          "tags": ["HTML5", "CSS3", "JavaScript", "Git"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Git"
+          ],
           "codeLink": "https://github.com/LeandroStanger/LeandroStanger",
           "demoLink": "https://leandrostanger.github.io/LeandroStanger/"
         },
         {
           "title": "Cidades com Altas Temperaturas",
           "desc": "Applicazione web interattiva che visualizza e filtra i dati sulle città con climi estremi. Include mappa, dashboard e visualizzazione dei dati climatici.",
-          "tags": ["JavaScript (ES6+)", "API", "CSS3", "Data Visualization"],
+          "tags": [
+            "JavaScript (ES6+)",
+            "API",
+            "CSS3",
+            "Data Visualization"
+          ],
           "codeLink": "https://github.com/LeandroStanger/CidadesComAltasTemperaturas",
           "demoLink": "https://leandrostanger.github.io/CidadesComAltasTemperaturas/"
         },
         {
           "title": "Site com Loop Hack",
           "desc": "Sito sperimentale con effetti visivi in loop, animazioni creative e tecniche avanzate CSS/JavaScript. Dimostra competenze in animazioni e design interattivo.",
-          "tags": ["HTML5", "CSS3", "JavaScript", "Animazioni", "Esperimenti Web"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Animazioni",
+            "Esperimenti Web"
+          ],
           "codeLink": "https://github.com/LeandroStanger/SiteComLoopHack",
           "demoLink": "https://leandrostanger.github.io/SiteComLoopHack/"
         },
         {
           "title": "Projetos Iniciais (Linguagem C)",
           "desc": "Raccolta dei miei primi progetti di programmazione in linguaggio C, che dimostrano la mia evoluzione come sviluppatore.",
-          "tags": ["C", "GCC"],
+          "tags": [
+            "C",
+            "GCC"
+          ],
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-C",
           "demoLink": ""
         },
         {
           "title": "Sistema de Animais de Estimação",
           "desc": "Un catalogo statico e responsivo che visualizza una lista di animali domestici, presentando informazioni di base come nome, specie, età, peso e livello di energia in un'interfaccia web user-friendly.",
-          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "JSON"
+          ],
           "codeLink": "https://github.com/LeandroStanger/SistemaDeAnimaisDeEstimacao",
           "demoLink": "https://leandrostanger.github.io/SistemaDeAnimaisDeEstimacao/"
         },
         {
           "title": "Dashboard de Jogadores",
           "desc": "Statistiche complete dei più grandi giocatori di calcio. Un pannello web moderno e interattivo per la visualizzazione e l'analisi dei dati dei giocatori in formato dashboard.",
-          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "JSON"
+          ],
           "codeLink": "https://github.com/LeandroStanger/DashboardDeJogadores",
           "demoLink": "https://leandrostanger.github.io/DashboardDeJogadores/"
         },
         {
           "title": "Dashboard de Conservação",
           "desc": "Un'analisi approfondita dei dati demografici, considerando tassi di natalità, mortalità e migrazione, rivela una traiettoria preoccupante che ci permette di stimare il tempo massimo rimanente prima dell'estinzione locale di questa comunità.",
-          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "JSON"
+          ],
           "codeLink": "https://github.com/LeandroStanger/DashboardDeConservacao",
           "demoLink": "https://leandrostanger.github.io/DashboardDeConservacao/"
         },
         {
           "title": "Sorteio de Números",
           "desc": "Un'applicazione web semplice e interattiva per estrazioni casuali di numeri all'interno di un intervallo definito dall'utente.",
-          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript"
+          ],
           "codeLink": "https://github.com/LeandroStanger/SorteioDeNumeros",
           "demoLink": "https://leandrostanger.github.io/SorteioDeNumeros/"
         },
         {
           "title": "Calculadora",
           "desc": "Una calcolatrice web funzionale con interfaccia pulita e intuitiva, in grado di eseguire operazioni matematiche di base.",
-          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript"
+          ],
           "codeLink": "https://github.com/LeandroStanger/Calculadora",
           "demoLink": "https://leandrostanger.github.io/Calculadora/"
         },
         {
           "title": "Universidade Livre",
           "desc": "Piattaforma istituzionale dell'Universidade Livre, che offre informazioni sui corsi di laurea (con enfasi sulla Matematica), programmi di master, corpo docente, ricerca e estensione. Sviluppato con design responsivo per desktop e dispositivi mobili.",
-          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript"
+          ],
           "codeLink": "https://github.com/LeandroStanger/UniversidadeLivre",
           "demoLink": "https://leandrostanger.github.io/UniversidadeLivre/"
         },
         {
           "title": "Projetos Iniciais em SQL",
           "desc": "Raccolta dei miei primi progetti SQL, che dimostrano la mia evoluzione nei database.",
-          "tags": ["SQL", "Database"],
+          "tags": [
+            "SQL",
+            "Database"
+          ],
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-SQL",
           "demoLink": ""
         },
         {
           "title": "Projetos Iniciais em Java",
           "desc": "Raccolta dei miei primi progetti di programmazione in Java, che dimostrano la mia evoluzione come sviluppatore.",
-          "tags": ["Java", "JDK", "javac", "JVM"],
+          "tags": [
+            "Java",
+            "JDK",
+            "javac",
+            "JVM"
+          ],
           "codeLink": "https://github.com/LeandroStanger/Projetos-Iniciais-Java",
           "demoLink": ""
         },
         {
           "title": "Leandro Stanger Soluções em Informática",
           "desc": "Sito istituzionale di Leandro Stanger Soluções em Informática, che presenta servizi di manutenzione computer, assistenza tecnica e soluzioni IT.",
-          "tags": ["HTML5", "CSS3", "JavaScript", "Responsive"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Responsive"
+          ],
           "codeLink": "https://github.com/LeandroStanger/LeandroStanger-Solucoes-em-Informatica",
           "demoLink": "https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/"
         },
         {
           "title": "BankMoz",
           "desc": "Sistema bancario semplice con operazioni di deposito, prelievo e trasferimento. Sviluppato in Java con focus sulla programmazione orientata agli oggetti.",
-          "tags": ["Java", "OOP", "Console", "Banca", "Terminale"],
+          "tags": [
+            "Java",
+            "OOP",
+            "Console",
+            "Banca",
+            "Terminale"
+          ],
           "codeLink": "https://github.com/LeandroStanger/BankMoz",
           "demoLink": ""
         }

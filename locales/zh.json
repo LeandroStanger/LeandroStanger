@@ -54,9 +54,9 @@
             "icon": "database"
           },
           {
-            "title": "Java / 移动端",
-            "text": "对移动应用（Android）和Java后端开发感兴趣，探索Spring生态、良好的面向对象实践和数据库集成。",
-            "icon": "mobile-alt"
+            "title": "PHP",
+            "text": "使用PHP开发动态Web应用程序，探索Laravel等框架、良好编程实践和数据库集成。",
+            "icon": "code"
           },
           {
             "title": "C语言",
@@ -87,31 +87,41 @@
             "date": "2024年2月至2025年6月",
             "title": "计算机维护与支持技术员",
             "institution": "AMPLI",
-            "status": ["已完成"]
+            "status": [
+              "已完成"
+            ]
           },
           {
             "date": "2016年4月至2016年10月",
             "title": "计算机与网络组装和维护课程",
             "institution": "YesBras Escolas do Brasil",
-            "status": ["已完成"]
+            "status": [
+              "已完成"
+            ]
           },
           {
             "date": "2015年至2017年10月",
             "title": "高中",
             "institution": "SESI",
-            "status": ["已完成"]
+            "status": [
+              "已完成"
+            ]
           },
           {
             "date": "2014年9月至2015年9月",
             "title": "APP课程 – 个人与职业行政管理",
             "institution": "Escola de Informática Unisoft",
-            "status": ["已完成"]
+            "status": [
+              "已完成"
+            ]
           },
           {
             "date": "2013年9月至2014年9月",
             "title": "QIT课程 – 信息与技术资格认证",
             "institution": "Escola de Informática Unisoft",
-            "status": ["已完成"]
+            "status": [
+              "已完成"
+            ]
           }
         ]
       },
@@ -123,19 +133,71 @@
             "company": "Confecções Vanelise",
             "period": "",
             "brands": [
-              { "name": "Renner", "logo": "img/marcas/renner.png", "url": "https://www.renner.com.br/" },
-              { "name": "Hering", "logo": "img/marcas/hering.png", "url": "https://www.hering.com.br/" },
-              { "name": "Farm", "logo": "img/marcas/farm.png", "url": "https://www.farmrio.com.br/" },
-              { "name": "Youcom", "logo": "img/marcas/youcom.png", "url": "https://www.youcom.com.br/" },
-              { "name": "Havan", "logo": "img/marcas/havan.png", "url": "https://www.havan.com.br/" },
-              { "name": "Uniforme Anjo Tintas", "logo": "img/marcas/anjo-tintas.png", "url": "https://www.anjo.com.br/" },
-              { "name": "Ashua", "logo": "img/marcas/ashua.png", "url": "https://www.lojasrenner.com.br/ashua" },
-              { "name": "Insider", "logo": "img/marcas/insider.png", "url": "https://www.insiderstore.com.br/" },
-              { "name": "Marisa", "logo": "img/marcas/marisa.png", "url": "https://www.marisa.com.br/" },
-              { "name": "C&A", "logo": "img/marcas/C&A.png", "url": "https://www.cea.com.br/" },
-              { "name": "Gang", "logo": "img/marcas/gang.png", "url": "https://www.gang.com.br/" },
-              { "name": "Riachuelo", "logo": "img/marcas/riachuelo.png", "url": "https://www.riachuelo.com.br/" },
-              { "name": "Valentys Uniformes", "logo": "img/marcas/valentyns.png", "url": "https://valentys.com.br/" }
+              {
+                "name": "Renner",
+                "logo": "img/marcas/renner.png",
+                "url": "https://www.renner.com.br/"
+              },
+              {
+                "name": "Hering",
+                "logo": "img/marcas/hering.png",
+                "url": "https://www.hering.com.br/"
+              },
+              {
+                "name": "Farm",
+                "logo": "img/marcas/farm.png",
+                "url": "https://www.farmrio.com.br/"
+              },
+              {
+                "name": "Youcom",
+                "logo": "img/marcas/youcom.png",
+                "url": "https://www.youcom.com.br/"
+              },
+              {
+                "name": "Havan",
+                "logo": "img/marcas/havan.png",
+                "url": "https://www.havan.com.br/"
+              },
+              {
+                "name": "Uniforme Anjo Tintas",
+                "logo": "img/marcas/anjo-tintas.png",
+                "url": "https://www.anjo.com.br/"
+              },
+              {
+                "name": "Ashua",
+                "logo": "img/marcas/ashua.png",
+                "url": "https://www.lojasrenner.com.br/ashua"
+              },
+              {
+                "name": "Insider",
+                "logo": "img/marcas/insider.png",
+                "url": "https://www.insiderstore.com.br/"
+              },
+              {
+                "name": "Marisa",
+                "logo": "img/marcas/marisa.png",
+                "url": "https://www.marisa.com.br/"
+              },
+              {
+                "name": "C&A",
+                "logo": "img/marcas/C&A.png",
+                "url": "https://www.cea.com.br/"
+              },
+              {
+                "name": "Gang",
+                "logo": "img/marcas/gang.png",
+                "url": "https://www.gang.com.br/"
+              },
+              {
+                "name": "Riachuelo",
+                "logo": "img/marcas/riachuelo.png",
+                "url": "https://www.riachuelo.com.br/"
+              },
+              {
+                "name": "Valentys Uniformes",
+                "logo": "img/marcas/valentyns.png",
+                "url": "https://valentys.com.br/"
+              }
             ],
             "positions": [
               {
@@ -265,168 +327,273 @@
         {
           "title": "Animais no Zoológico 2",
           "desc": "一个用于管理和展示虚拟动物园动物的交互式 Web 应用。",
-          "tags": ["JavaScript", "HTML", "CSS"],
+          "tags": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+          ],
           "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico2",
           "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico2/"
         },
         {
           "title": "Dados Climáticos",
           "desc": "用于收集、处理和可视化不同来源气象数据的系统。",
-          "tags": ["JavaScript", "API", "CSS"],
+          "tags": [
+            "JavaScript",
+            "API",
+            "CSS"
+          ],
           "codeLink": "https://github.com/LeandroStanger/DadosClimaticos",
           "demoLink": "https://leandrostanger.github.io/DadosClimaticos/"
         },
         {
           "title": "Formulário de Feedback",
           "desc": "带有数据验证功能的用户反馈收集交互式表单。",
-          "tags": ["HTML", "CSS", "JavaScript"],
+          "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ],
           "codeLink": "https://github.com/LeandroStanger/FormularioDeFeedback",
           "demoLink": "https://leandrostanger.github.io/FormularioDeFeedback/"
         },
         {
           "title": "Carros Divertidos",
           "desc": "一个 2D 环境下的互动汽车游戏，用于练习编程概念。",
-          "tags": ["JavaScript", "HTML5", "CSS3"],
+          "tags": [
+            "JavaScript",
+            "HTML5",
+            "CSS3"
+          ],
           "codeLink": "https://github.com/LeandroStanger/CarrosDivertidos",
           "demoLink": "https://leandrostanger.github.io/CarrosDivertidos/"
         },
         {
           "title": "Corrida de Carro",
           "desc": "带有交互式控制和计分系统的赛车模拟。",
-          "tags": ["JavaScript", "CSS3", "HTML5"],
+          "tags": [
+            "JavaScript",
+            "CSS3",
+            "HTML5"
+          ],
           "codeLink": "https://github.com/LeandroStanger/CorridaDeCarro",
           "demoLink": "https://leandrostanger.github.io/CorridaDeCarro/"
         },
         {
           "title": "Animais no Zoológico",
           "desc": "动物园管理系统的初始版本，侧重于 JavaScript 学习。",
-          "tags": ["JavaScript", "HTML", "CSS"],
+          "tags": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+          ],
           "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico",
           "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico/"
         },
         {
           "title": "Site com Loop",
           "desc": "具有循环视觉效果和 CSS/JavaScript 动画的演示网站。",
-          "tags": ["HTML", "CSS", "JavaScript"],
+          "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ],
           "codeLink": "https://github.com/LeandroStanger/SiteComLoop",
           "demoLink": "https://leandrostanger.github.io/SiteComLoop/"
         },
         {
           "title": "Sistema de Login",
           "desc": "具有凭据验证和响应式界面的用户认证系统。",
-          "tags": ["JavaScript", "HTML", "CSS"],
+          "tags": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+          ],
           "codeLink": "https://github.com/LeandroStanger/SistemaDeLogin",
           "demoLink": "https://leandrostanger.github.io/SistemaDeLogin/"
         },
         {
           "title": "Gerenciador de Lista",
           "desc": "用于创建、编辑和删除列表项的应用，具有本地存储功能。",
-          "tags": ["JavaScript", "LocalStorage", "CSS"],
+          "tags": [
+            "JavaScript",
+            "LocalStorage",
+            "CSS"
+          ],
           "codeLink": "https://github.com/LeandroStanger/GerenciadorDeLista",
           "demoLink": "https://leandrostanger.github.io/GerenciadorDeLista/"
         },
         {
           "title": "Projetos Iniciais",
           "desc": "我最初的编程项目合集，展示了我作为开发者的成长历程。",
-          "tags": ["HTML", "CSS", "JavaScript"],
+          "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ],
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais",
           "demoLink": ""
         },
         {
           "title": "Leandro Stanger Portfólio",
           "desc": "包含个人资料、详细 README 和所有项目链接的主仓库。专注于使用 HTML、CSS 和 JavaScript 进行前端开发。",
-          "tags": ["HTML5", "CSS3", "JavaScript", "Git"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Git"
+          ],
           "codeLink": "https://github.com/LeandroStanger/LeandroStanger",
           "demoLink": "https://leandrostanger.github.io/LeandroStanger/"
         },
         {
           "title": "Cidades com Altas Temperaturas",
           "desc": "交互式 Web 应用，展示和筛选极端气候城市的数据。包含地图、仪表板和气候数据可视化。",
-          "tags": ["JavaScript (ES6+)", "API", "CSS3", "数据可视化"],
+          "tags": [
+            "JavaScript (ES6+)",
+            "API",
+            "CSS3",
+            "数据可视化"
+          ],
           "codeLink": "https://github.com/LeandroStanger/CidadesComAltasTemperaturas",
           "demoLink": "https://leandrostanger.github.io/CidadesComAltasTemperaturas/"
         },
         {
           "title": "Site com Loop Hack",
           "desc": "具有循环视觉效果、创意动画和高级 CSS/JavaScript 技术的实验性网站。展示了动画和交互设计技能。",
-          "tags": ["HTML5", "CSS3", "JavaScript", "动画", "Web实验"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "动画",
+            "Web实验"
+          ],
           "codeLink": "https://github.com/LeandroStanger/SiteComLoopHack",
           "demoLink": "https://leandrostanger.github.io/SiteComLoopHack/"
         },
         {
           "title": "Projetos Iniciais (Linguagem C)",
           "desc": "我最初的 C 语言编程项目合集，展示了我作为开发者的成长。",
-          "tags": ["C", "GCC"],
+          "tags": [
+            "C",
+            "GCC"
+          ],
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-C",
           "demoLink": ""
         },
         {
           "title": "Sistema de Animais de Estimação",
           "desc": "一个静态且响应式的目录，以友好的 Web 界面展示宠物列表，提供名称、物种、年龄、体重和能量水平等基本信息。",
-          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "JSON"
+          ],
           "codeLink": "https://github.com/LeandroStanger/SistemaDeAnimaisDeEstimacao",
           "demoLink": "https://leandrostanger.github.io/SistemaDeAnimaisDeEstimacao/"
         },
         {
           "title": "Dashboard de Jogadores",
           "desc": "最伟大足球运动员的完整统计数据。一个现代、交互式的 Web 面板，用于以仪表板形式可视化和分析球员数据。",
-          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "JSON"
+          ],
           "codeLink": "https://github.com/LeandroStanger/DashboardDeJogadores",
           "demoLink": "https://leandrostanger.github.io/DashboardDeJogadores/"
         },
         {
           "title": "Dashboard de Conservação",
           "desc": "对人口数据的深入分析，考虑了出生率、死亡率和迁移情况，揭示了一个令人担忧的趋势，使我们能够估算出该种群局部灭绝前的最长剩余时间。",
-          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "JSON"
+          ],
           "codeLink": "https://github.com/LeandroStanger/DashboardDeConservacao",
           "demoLink": "https://leandrostanger.github.io/DashboardDeConservacao/"
         },
         {
           "title": "Sorteio de Números",
           "desc": "一个简单交互式 Web 应用，用于在用户定义的范围内随机抽取数字。",
-          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript"
+          ],
           "codeLink": "https://github.com/LeandroStanger/SorteioDeNumeros",
           "demoLink": "https://leandrostanger.github.io/SorteioDeNumeros/"
         },
         {
           "title": "Calculadora",
           "desc": "一个功能齐全的 Web 计算器，界面简洁直观，可执行基本数学运算。",
-          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript"
+          ],
           "codeLink": "https://github.com/LeandroStanger/Calculadora",
           "demoLink": "https://leandrostanger.github.io/Calculadora/"
         },
         {
           "title": "Universidade Livre",
           "desc": "Universidade Livre 的机构平台，提供本科课程（侧重数学）、研究生项目、师资、研究和推广信息。采用响应式设计，适配桌面和移动设备。",
-          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript"
+          ],
           "codeLink": "https://github.com/LeandroStanger/UniversidadeLivre",
           "demoLink": "https://leandrostanger.github.io/UniversidadeLivre/"
         },
         {
           "title": "Projetos Iniciais em SQL",
           "desc": "我最初的 SQL 项目合集，展示我在数据库方面的成长。",
-          "tags": ["SQL", "数据库"],
+          "tags": [
+            "SQL",
+            "数据库"
+          ],
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-SQL",
           "demoLink": ""
         },
         {
           "title": "Projetos Iniciais em Java",
           "desc": "我最初的 Java 编程项目合集，展示我作为开发者的成长。",
-          "tags": ["Java", "JDK", "javac", "JVM"],
+          "tags": [
+            "Java",
+            "JDK",
+            "javac",
+            "JVM"
+          ],
           "codeLink": "https://github.com/LeandroStanger/Projetos-Iniciais-Java",
           "demoLink": ""
         },
         {
           "title": "Leandro Stanger Soluções em Informática",
           "desc": "Leandro Stanger Soluções em Informática 的机构网站，提供计算机维护服务、技术支持和IT解决方案。",
-          "tags": ["HTML5", "CSS3", "JavaScript", "响应式"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "响应式"
+          ],
           "codeLink": "https://github.com/LeandroStanger/LeandroStanger-Solucoes-em-Informatica",
           "demoLink": "https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/"
         },
         {
           "title": "BankMoz",
           "desc": "简单的银行系统，支持存款、取款和转账操作。使用 Java 开发，注重面向对象编程。",
-          "tags": ["Java", "OOP", "控制台", "银行", "终端"],
+          "tags": [
+            "Java",
+            "OOP",
+            "控制台",
+            "银行",
+            "终端"
+          ],
           "codeLink": "https://github.com/LeandroStanger/BankMoz",
           "demoLink": ""
         }

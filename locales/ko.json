@@ -54,9 +54,9 @@
             "icon": "database"
           },
           {
-            "title": "Java / 모바일",
-            "text": "Android 애플리케이션 및 Java 백엔드 개발에 관심이 있으며, Spring 생태계, OOP 모범 사례, 데이터베이스 통합을 탐구하고 있습니다.",
-            "icon": "mobile-alt"
+            "title": "PHP",
+            "text": "PHP를 사용한 동적 웹 애플리케이션 개발, Laravel과 같은 프레임워크, 우수한 프로그래밍 관행 및 데이터베이스 통합 탐구.",
+            "icon": "code"
           },
           {
             "title": "C 언어",
@@ -87,31 +87,41 @@
             "date": "2024년 2월 ~ 2025년 6월",
             "title": "컴퓨터 유지보수 및 지원 기술자",
             "institution": "AMPLI",
-            "status": ["완료"]
+            "status": [
+              "완료"
+            ]
           },
           {
             "date": "2016년 4월 ~ 2016년 10월",
             "title": "컴퓨터 및 네트워크 조립 및 유지보수 과정",
             "institution": "YesBras Escolas do Brasil",
-            "status": ["완료"]
+            "status": [
+              "완료"
+            ]
           },
           {
             "date": "2015년 ~ 2017년 10월",
             "title": "고등학교",
             "institution": "SESI",
-            "status": ["완료"]
+            "status": [
+              "완료"
+            ]
           },
           {
             "date": "2014년 9월 ~ 2015년 9월",
             "title": "APP 과정 – 개인 및 전문 관리",
             "institution": "Escola de Informática Unisoft",
-            "status": ["완료"]
+            "status": [
+              "완료"
+            ]
           },
           {
             "date": "2013년 9월 ~ 2014년 9월",
             "title": "QIT 과정 – 정보 기술 자격",
             "institution": "Escola de Informática Unisoft",
-            "status": ["완료"]
+            "status": [
+              "완료"
+            ]
           }
         ]
       },
@@ -123,19 +133,71 @@
             "company": "Confecções Vanelise",
             "period": "",
             "brands": [
-              { "name": "Renner", "logo": "img/marcas/renner.png", "url": "https://www.renner.com.br/" },
-              { "name": "Hering", "logo": "img/marcas/hering.png", "url": "https://www.hering.com.br/" },
-              { "name": "Farm", "logo": "img/marcas/farm.png", "url": "https://www.farmrio.com.br/" },
-              { "name": "Youcom", "logo": "img/marcas/youcom.png", "url": "https://www.youcom.com.br/" },
-              { "name": "Havan", "logo": "img/marcas/havan.png", "url": "https://www.havan.com.br/" },
-              { "name": "Uniforme Anjo Tintas", "logo": "img/marcas/anjo-tintas.png", "url": "https://www.anjo.com.br/" },
-              { "name": "Ashua", "logo": "img/marcas/ashua.png", "url": "https://www.lojasrenner.com.br/ashua" },
-              { "name": "Insider", "logo": "img/marcas/insider.png", "url": "https://www.insiderstore.com.br/" },
-              { "name": "Marisa", "logo": "img/marcas/marisa.png", "url": "https://www.marisa.com.br/" },
-              { "name": "C&A", "logo": "img/marcas/C&A.png", "url": "https://www.cea.com.br/" },
-              { "name": "Gang", "logo": "img/marcas/gang.png", "url": "https://www.gang.com.br/" },
-              { "name": "Riachuelo", "logo": "img/marcas/riachuelo.png", "url": "https://www.riachuelo.com.br/" },
-              { "name": "Valentys Uniformes", "logo": "img/marcas/valentyns.png", "url": "https://valentys.com.br/" }
+              {
+                "name": "Renner",
+                "logo": "img/marcas/renner.png",
+                "url": "https://www.renner.com.br/"
+              },
+              {
+                "name": "Hering",
+                "logo": "img/marcas/hering.png",
+                "url": "https://www.hering.com.br/"
+              },
+              {
+                "name": "Farm",
+                "logo": "img/marcas/farm.png",
+                "url": "https://www.farmrio.com.br/"
+              },
+              {
+                "name": "Youcom",
+                "logo": "img/marcas/youcom.png",
+                "url": "https://www.youcom.com.br/"
+              },
+              {
+                "name": "Havan",
+                "logo": "img/marcas/havan.png",
+                "url": "https://www.havan.com.br/"
+              },
+              {
+                "name": "Uniforme Anjo Tintas",
+                "logo": "img/marcas/anjo-tintas.png",
+                "url": "https://www.anjo.com.br/"
+              },
+              {
+                "name": "Ashua",
+                "logo": "img/marcas/ashua.png",
+                "url": "https://www.lojasrenner.com.br/ashua"
+              },
+              {
+                "name": "Insider",
+                "logo": "img/marcas/insider.png",
+                "url": "https://www.insiderstore.com.br/"
+              },
+              {
+                "name": "Marisa",
+                "logo": "img/marcas/marisa.png",
+                "url": "https://www.marisa.com.br/"
+              },
+              {
+                "name": "C&A",
+                "logo": "img/marcas/C&A.png",
+                "url": "https://www.cea.com.br/"
+              },
+              {
+                "name": "Gang",
+                "logo": "img/marcas/gang.png",
+                "url": "https://www.gang.com.br/"
+              },
+              {
+                "name": "Riachuelo",
+                "logo": "img/marcas/riachuelo.png",
+                "url": "https://www.riachuelo.com.br/"
+              },
+              {
+                "name": "Valentys Uniformes",
+                "logo": "img/marcas/valentyns.png",
+                "url": "https://valentys.com.br/"
+              }
             ],
             "positions": [
               {
@@ -265,168 +327,273 @@
         {
           "title": "Animais no Zoológico 2",
           "desc": "가상 동물원의 동물 관리 및 시각화를 위한 인터랙티브 웹 애플리케이션.",
-          "tags": ["JavaScript", "HTML", "CSS"],
+          "tags": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+          ],
           "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico2",
           "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico2/"
         },
         {
           "title": "Dados Climáticos",
           "desc": "다양한 소스의 기상 데이터를 수집, 처리, 시각화하는 시스템.",
-          "tags": ["JavaScript", "API", "CSS"],
+          "tags": [
+            "JavaScript",
+            "API",
+            "CSS"
+          ],
           "codeLink": "https://github.com/LeandroStanger/DadosClimaticos",
           "demoLink": "https://leandrostanger.github.io/DadosClimaticos/"
         },
         {
           "title": "Formulário de Feedback",
           "desc": "데이터 검증이 포함된 사용자 피드백 수집 인터랙티브 폼.",
-          "tags": ["HTML", "CSS", "JavaScript"],
+          "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ],
           "codeLink": "https://github.com/LeandroStanger/FormularioDeFeedback",
           "demoLink": "https://leandrostanger.github.io/FormularioDeFeedback/"
         },
         {
           "title": "Carros Divertidos",
           "desc": "2D 환경에서의 인터랙티브 자동차 게임. 프로그래밍 개념 연습용.",
-          "tags": ["JavaScript", "HTML5", "CSS3"],
+          "tags": [
+            "JavaScript",
+            "HTML5",
+            "CSS3"
+          ],
           "codeLink": "https://github.com/LeandroStanger/CarrosDivertidos",
           "demoLink": "https://leandrostanger.github.io/CarrosDivertidos/"
         },
         {
           "title": "Corrida de Carro",
           "desc": "인터랙티브 컨트롤과 점수 시스템을 갖춘 자동차 경주 시뮬레이션.",
-          "tags": ["JavaScript", "CSS3", "HTML5"],
+          "tags": [
+            "JavaScript",
+            "CSS3",
+            "HTML5"
+          ],
           "codeLink": "https://github.com/LeandroStanger/CorridaDeCarro",
           "demoLink": "https://leandrostanger.github.io/CorridaDeCarro/"
         },
         {
           "title": "Animais no Zoológico",
           "desc": "JavaScript 학습에 중점을 둔 동물원 관리 시스템의 초기 버전.",
-          "tags": ["JavaScript", "HTML", "CSS"],
+          "tags": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+          ],
           "codeLink": "https://github.com/LeandroStanger/AnimaisNoZoologico",
           "demoLink": "https://leandrostanger.github.io/AnimaisNoZoologico/"
         },
         {
           "title": "Site com Loop",
           "desc": "루핑 비주얼 효과와 CSS/JavaScript 애니메이션이 포함된 데모 사이트.",
-          "tags": ["HTML", "CSS", "JavaScript"],
+          "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ],
           "codeLink": "https://github.com/LeandroStanger/SiteComLoop",
           "demoLink": "https://leandrostanger.github.io/SiteComLoop/"
         },
         {
           "title": "Sistema de Login",
           "desc": "자격 증명 검증과 반응형 인터페이스를 갖춘 사용자 인증 시스템.",
-          "tags": ["JavaScript", "HTML", "CSS"],
+          "tags": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+          ],
           "codeLink": "https://github.com/LeandroStanger/SistemaDeLogin",
           "demoLink": "https://leandrostanger.github.io/SistemaDeLogin/"
         },
         {
           "title": "Gerenciador de Lista",
           "desc": "로컬 스토리지를 사용한 리스트 항목 생성, 편집, 삭제 애플리케이션.",
-          "tags": ["JavaScript", "LocalStorage", "CSS"],
+          "tags": [
+            "JavaScript",
+            "LocalStorage",
+            "CSS"
+          ],
           "codeLink": "https://github.com/LeandroStanger/GerenciadorDeLista",
           "demoLink": "https://leandrostanger.github.io/GerenciadorDeLista/"
         },
         {
           "title": "Projetos Iniciais",
           "desc": "첫 번째 프로그래밍 프로젝트 모음. 개발자로서의 성장을 보여줍니다.",
-          "tags": ["HTML", "CSS", "JavaScript"],
+          "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ],
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais",
           "demoLink": ""
         },
         {
           "title": "Leandro Stanger Portfólio",
           "desc": "프로필, 상세 README, 모든 프로젝트 링크가 포함된 메인 리포지토리. HTML, CSS, JavaScript를 사용한 프론트엔드 개발에 중점.",
-          "tags": ["HTML5", "CSS3", "JavaScript", "Git"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Git"
+          ],
           "codeLink": "https://github.com/LeandroStanger/LeandroStanger",
           "demoLink": "https://leandrostanger.github.io/LeandroStanger/"
         },
         {
           "title": "Cidades com Altas Temperaturas",
           "desc": "극한 기후 도시에 대한 데이터를 표시하고 필터링하는 인터랙티브 웹 앱. 지도, 대시보드, 기후 데이터 시각화 포함.",
-          "tags": ["JavaScript (ES6+)", "API", "CSS3", "Data Visualization"],
+          "tags": [
+            "JavaScript (ES6+)",
+            "API",
+            "CSS3",
+            "Data Visualization"
+          ],
           "codeLink": "https://github.com/LeandroStanger/CidadesComAltasTemperaturas",
           "demoLink": "https://leandrostanger.github.io/CidadesComAltasTemperaturas/"
         },
         {
           "title": "Site com Loop Hack",
           "desc": "루핑 비주얼 효과, 창의적인 애니메이션, 고급 CSS/JavaScript 기술이 포함된 실험적 사이트. 애니메이션 및 인터랙티브 디자인 기술을 보여줍니다.",
-          "tags": ["HTML5", "CSS3", "JavaScript", "Animations", "Web Experiments"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Animations",
+            "Web Experiments"
+          ],
           "codeLink": "https://github.com/LeandroStanger/SiteComLoopHack",
           "demoLink": "https://leandrostanger.github.io/SiteComLoopHack/"
         },
         {
           "title": "Projetos Iniciais (Linguagem C)",
           "desc": "C 언어로 된 첫 번째 프로그래밍 프로젝트 모음. 개발자로서의 성장을 보여줍니다.",
-          "tags": ["C", "GCC"],
+          "tags": [
+            "C",
+            "GCC"
+          ],
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-C",
           "demoLink": ""
         },
         {
           "title": "Sistema de Animais de Estimação",
           "desc": "반려동물 목록을 표시하는 정적이고 반응형인 카탈로그. 이름, 종, 나이, 체중, 에너지 수준 등의 기본 정보를 사용자 친화적인 웹 인터페이스로 제공.",
-          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "JSON"
+          ],
           "codeLink": "https://github.com/LeandroStanger/SistemaDeAnimaisDeEstimacao",
           "demoLink": "https://leandrostanger.github.io/SistemaDeAnimaisDeEstimacao/"
         },
         {
           "title": "Dashboard de Jogadores",
           "desc": "위대한 축구 선수들의 완전한 통계. 대시보드 형식으로 선수 데이터를 시각화하고 분석하는 현대적이고 인터랙티브한 웹 패널.",
-          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "JSON"
+          ],
           "codeLink": "https://github.com/LeandroStanger/DashboardDeJogadores",
           "demoLink": "https://leandrostanger.github.io/DashboardDeJogadores/"
         },
         {
           "title": "Dashboard de Conservação",
           "desc": "출생률, 사망률, 이주를 고려한 인구 데이터의 심층 분석은 우려스러운 궤적을 보여주며, 이 공동체의 지역적 멸종까지 남은 최대 시간을 추정할 수 있게 합니다.",
-          "tags": ["HTML5", "CSS3", "JavaScript", "JSON"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "JSON"
+          ],
           "codeLink": "https://github.com/LeandroStanger/DashboardDeConservacao",
           "demoLink": "https://leandrostanger.github.io/DashboardDeConservacao/"
         },
         {
           "title": "Sorteio de Números",
           "desc": "사용자 정의 범위 내에서 무작위 숫자를 추첨하는 간단하고 인터랙티브한 웹 애플리케이션.",
-          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript"
+          ],
           "codeLink": "https://github.com/LeandroStanger/SorteioDeNumeros",
           "demoLink": "https://leandrostanger.github.io/SorteioDeNumeros/"
         },
         {
           "title": "Calculadora",
           "desc": "깔끔하고 직관적인 인터페이스를 갖춘 기능적인 웹 계산기. 기본 수학 연산을 수행할 수 있습니다.",
-          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript"
+          ],
           "codeLink": "https://github.com/LeandroStanger/Calculadora",
           "demoLink": "https://leandrostanger.github.io/Calculadora/"
         },
         {
           "title": "Universidade Livre",
           "desc": "Universidade Livre의 기관 플랫폼. 수학을 강조한 학부 과정, 대학원 프로그램, 교수진, 연구, 확장 활동에 대한 정보를 제공. 데스크탑 및 모바일을 위한 반응형 디자인으로 개발.",
-          "tags": ["HTML5", "CSS3", "JavaScript"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript"
+          ],
           "codeLink": "https://github.com/LeandroStanger/UniversidadeLivre",
           "demoLink": "https://leandrostanger.github.io/UniversidadeLivre/"
         },
         {
           "title": "Projetos Iniciais em SQL",
           "desc": "첫 번째 SQL 프로젝트 모음. 데이터베이스 분야에서의 성장을 보여줍니다.",
-          "tags": ["SQL", "Database"],
+          "tags": [
+            "SQL",
+            "Database"
+          ],
           "codeLink": "https://github.com/LeandroStanger/Projetos-iniciais-SQL",
           "demoLink": ""
         },
         {
           "title": "Projetos Iniciais em Java",
           "desc": "첫 번째 Java 프로그래밍 프로젝트 모음. 개발자로서의 성장을 보여줍니다.",
-          "tags": ["Java", "JDK", "javac", "JVM"],
+          "tags": [
+            "Java",
+            "JDK",
+            "javac",
+            "JVM"
+          ],
           "codeLink": "https://github.com/LeandroStanger/Projetos-Iniciais-Java",
           "demoLink": ""
         },
         {
           "title": "Leandro Stanger Soluções em Informática",
           "desc": "Leandro Stanger Soluções em Informática의 공식 사이트. 컴퓨터 유지보수 서비스, 기술 지원, IT 솔루션을 소개합니다.",
-          "tags": ["HTML5", "CSS3", "JavaScript", "Responsive"],
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Responsive"
+          ],
           "codeLink": "https://github.com/LeandroStanger/LeandroStanger-Solucoes-em-Informatica",
           "demoLink": "https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/"
         },
         {
           "title": "BankMoz",
           "desc": "입금, 출금, 이체 작업이 가능한 간단한 은행 시스템. 객체 지향 프로그래밍에 중점을 두고 Java로 개발되었습니다.",
-          "tags": ["Java", "OOP", "콘솔", "은행", "터미널"],
+          "tags": [
+            "Java",
+            "OOP",
+            "콘솔",
+            "은행",
+            "터미널"
+          ],
           "codeLink": "https://github.com/LeandroStanger/BankMoz",
           "demoLink": ""
         }
