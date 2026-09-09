@@ -326,6 +326,7 @@
       "no_results_desc": "검색 조건을 조정하세요. 프로젝트 이름, 기술 또는 설명으로 검색할 수 있습니다.",
       "code": "코드",
       "demo": "데모",
+      "load_more": "더 보기",
       "filtros": {
         "todos": "전체",
         "frontend": "프론트엔드",
@@ -606,6 +607,17 @@
           ],
           "codeLink": "https://github.com/LeandroStanger/BankMoz",
           "demoLink": ""
+        },
+        {
+          "title": "Projetos Iniciais em PHP",
+          "desc": "PHP로 작성한 첫 번째 프로젝트 모음입니다. 백엔드 웹 개발에서의 성장을 보여줍니다.",
+          "tags": [
+            "PHP",
+            "Web",
+            "Backend"
+          ],
+          "codeLink": "https://github.com/LeandroStanger/Projetos-Iniciais-PHP",
+          "demoLink": ""
         }
       ]
     },
@@ -691,6 +703,11 @@
       "title": "피드 업데이트",
       "subtitle": "최신 뉴스 및 게시물",
       "items": [
+        {
+          "title": "프로젝트에 '더 보기' 버튼이 추가되었습니다!",
+          "text": "이제 '더 보기' 버튼으로 프로젝트를 점진적으로 로드할 수 있어 탐색이 더 빠르고 체계적입니다. 모든 필터에서 사용 가능합니다!",
+          "date": "게시일: 2026년 9월 9일"
+        },
         {
           "title": "HTMX로 업데이트된 포트폴리오",
           "text": "이제 사이트는 HTMX를 사용하여 동적 콘텐츠를 로드하여 사용자 경험을 향상시킵니다.",

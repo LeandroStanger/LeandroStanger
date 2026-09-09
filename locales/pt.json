@@ -326,6 +326,7 @@
       "no_results_desc": "Tente ajustar sua busca. Você pode pesquisar por nome do projeto, tecnologias ou descrição.",
       "code": "Código",
       "demo": "Demo",
+      "load_more": "Ver mais",
       "filtros": {
         "todos": "Todos",
         "frontend": "Front-end",
@@ -606,6 +607,17 @@
           ],
           "codeLink": "https://github.com/LeandroStanger/BankMoz",
           "demoLink": ""
+        },
+        {
+          "title": "Projetos Iniciais em PHP",
+          "desc": "Coleção de meus primeiros projetos em PHP, demonstrando minha evolução no desenvolvimento web back-end.",
+          "tags": [
+            "PHP",
+            "Web",
+            "Backend"
+          ],
+          "codeLink": "https://github.com/LeandroStanger/Projetos-Iniciais-PHP",
+          "demoLink": ""
         }
       ]
     },
@@ -692,7 +704,12 @@
       "subtitle": "Últimas novidades e posts",
       "items": [
         {
-          "title": "Portfólio atualizado com HTMX",
+          "title": "Novo botão 'Ver mais' nos projetos!",
+          "text": "Agora você pode carregar mais projetos progressivamente com o botão 'Ver mais', tornando a navegação mais rápida e organizada. Disponível em todos os filtros!",
+          "date": "Publicado em: 09/09/2026"
+        },
+        {
+          "title": "HTMX que atualizado Portfólio",
           "text": "Agora o site utiliza HTMX para carregar conteúdo dinamicamente, melhorando a experiência do usuário.",
           "date": "Publicado em: 02/08/2026"
         },

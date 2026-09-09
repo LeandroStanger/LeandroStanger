@@ -60,9 +60,10 @@
     --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1);
     --shadow-2xl: 0 25px 50px -12px rgba(0,0,0,0.25);
     --shadow-green: 0 10px 30px -10px rgba(16,185,129,0.3);
-    --transition-fast: 150ms cubic-bezier(0.4,0,0.2,1);
-    --transition-normal: 250ms cubic-bezier(0.4,0,0.2,1);
-    --transition-slow: 350ms cubic-bezier(0.4,0,0.2,1);
+    --transition-fast: 150ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-normal: 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-slow: 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-bounce: 600ms cubic-bezier(0.34, 1.56, 0.64, 1);
     --container-max-width: 1200px;
     --container-padding: 1.5rem;
     --header-gradient-start: rgba(0,0,0,0.95);
@@ -100,7 +101,6 @@ html.light-theme .internacional-card {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }
 
-/* Cards internacionais corrigidos */
 html.light-theme .internacional-card {
     background: var(--color-dark-900);
     border-color: var(--color-dark-700);
@@ -112,14 +112,12 @@ html.light-theme .internacional-card-number {
     color: var(--color-primary-dark);
 }
 
-/* Melhor contraste e visual para códigos bancários */
 html.light-theme .bank-value {
     background: var(--color-dark-800);
     color: var(--color-primary-dark);
     border-color: var(--color-dark-700);
 }
 
-/* Botões de cópia no tema claro */
 html.light-theme .btn-copy-internacional {
     background: var(--color-primary-soft);
     color: var(--color-primary-dark);
@@ -265,7 +263,7 @@ a:hover, a:focus {
     justify-content: center;
     cursor: pointer;
     font-size: 1.4rem;
-    transition: all 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2), inset 0 0 0 1px rgba(255,255,255,0.05);
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
@@ -760,7 +758,7 @@ html.light-theme .anuncio-nav-btn:hover:not(:disabled) {
     border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-xl);
     padding: var(--space-6);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
                 box-shadow 0.4s ease,
                 border-color 0.3s ease,
                 opacity 0.3s ease;
@@ -892,7 +890,10 @@ html.light-theme .anuncio-nav-btn:hover:not(:disabled) {
     border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-lg);
     padding: var(--space-5);
-    transition: all var(--transition-normal);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.4s ease,
+                border-color 0.3s ease,
+                opacity 0.3s ease;
     position: relative;
     will-change: transform, opacity;
 }
@@ -946,7 +947,7 @@ html.light-theme .anuncio-nav-btn:hover:not(:disabled) {
     padding-left: var(--space-4);
     opacity: 0;
     transform: translateX(-20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .timeline-marker {
@@ -1054,12 +1055,12 @@ html.light-theme .anuncio-nav-btn:hover:not(:disabled) {
     background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
     border-radius: var(--radius-full);
     width: 0%;
-    transition: width 0.8s cubic-bezier(0.4,0,0.2,1);
+    transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     box-shadow: 0 0 10px var(--color-primary-soft);
 }
 
 .timeline-item.visible .progress-fill {
-    animation: fillBar 0.8s cubic-bezier(0.4,0,0.2,1) forwards;
+    animation: fillBar 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
 @keyframes fillBar {
@@ -1127,13 +1128,13 @@ html.light-theme .semester-badge {
     border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-lg);
     padding: var(--space-5);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
                 box-shadow 0.4s ease,
                 border-color 0.3s ease,
                 opacity 0.3s ease;
     opacity: 0;
     transform: translateX(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .experiencia-item:hover {
@@ -1353,7 +1354,7 @@ html.light-theme .semester-badge {
     border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-lg);
     padding: var(--space-5);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
                 box-shadow 0.4s ease,
                 border-color 0.3s ease;
 }
@@ -1392,7 +1393,9 @@ html.light-theme .semester-badge {
     padding: var(--space-2);
     border-radius: var(--radius-md);
     background: var(--color-dark-800);
-    transition: all var(--transition-normal);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+                background 0.3s ease,
+                box-shadow 0.3s ease;
     width: 100%;
 }
 
@@ -1572,7 +1575,7 @@ html.light-theme .semester-badge {
     display: flex;
     flex-direction: column;
     height: 100%;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
                 box-shadow 0.4s ease,
                 border-color 0.3s ease,
                 opacity 0.3s ease;
@@ -1612,7 +1615,7 @@ html.light-theme .semester-badge {
 .projeto-card.hidden { display: none; }
 
 .projeto-card.entrance {
-    animation: fadeInUp 0.5s ease-out;
+    animation: fadeInUp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     animation-delay: var(--delay, 0s);
 }
 
@@ -1765,7 +1768,9 @@ html.light-theme .semester-badge {
     background: var(--color-dark-900);
     border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-lg);
-    transition: all var(--transition-normal);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+                background 0.3s ease,
+                border-color 0.3s ease;
     text-decoration: none;
     touch-action: manipulation;
 }
@@ -2703,7 +2708,7 @@ body.modal-open {
     background: var(--color-primary);
     color: #fff;
     border-radius: var(--radius-full);
-    transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275), opacity 0.3s ease, background-color 0.3s;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease, background-color 0.3s;
     opacity: 1;
     transform: translateX(0);
     pointer-events: auto;
@@ -2787,7 +2792,7 @@ body.modal-open {
 .contato-link.visible {
     opacity: 1 !important;
     transform: none !important;
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 :focus-visible {

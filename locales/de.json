@@ -326,6 +326,7 @@
       "no_results_desc": "Versuchen Sie, Ihre Suche anzupassen. Sie können nach Projektname, Technologien oder Beschreibung suchen.",
       "code": "Code",
       "demo": "Demo",
+      "load_more": "Mehr laden",
       "filtros": {
         "todos": "Alle",
         "frontend": "Frontend",
@@ -606,6 +607,17 @@
           ],
           "codeLink": "https://github.com/LeandroStanger/BankMoz",
           "demoLink": ""
+        },
+        {
+          "title": "Projetos Iniciais em PHP",
+          "desc": "Sammlung meiner ersten PHP-Projekte, die meine Entwicklung in der Backend-Webentwicklung zeigen.",
+          "tags": [
+            "PHP",
+            "Web",
+            "Backend"
+          ],
+          "codeLink": "https://github.com/LeandroStanger/Projetos-Iniciais-PHP",
+          "demoLink": ""
         }
       ]
     },
@@ -691,6 +703,11 @@
       "title": "Feed-Updates",
       "subtitle": "Neueste Nachrichten und Beiträge",
       "items": [
+        {
+          "title": "Neuer 'Mehr laden'-Button in den Projekten!",
+          "text": "Jetzt können Sie mit dem 'Mehr laden'-Button Projekte schrittweise laden, was die Navigation schneller und übersichtlicher macht. Verfügbar in allen Filtern!",
+          "date": "Veröffentlicht am: 09.09.2026"
+        },
         {
           "title": "Portfolio mit HTMX aktualisiert",
           "text": "Jetzt verwendet die Website HTMX, um dynamische Inhalte zu laden und die Benutzererfahrung zu verbessern.",

@@ -326,6 +326,7 @@
       "no_results_desc": "请尝试调整搜索条件。您可以按项目名称、技术或描述进行搜索。",
       "code": "代码",
       "demo": "演示",
+      "load_more": "查看更多",
       "filtros": {
         "todos": "全部",
         "frontend": "前端",
@@ -606,6 +607,17 @@
           ],
           "codeLink": "https://github.com/LeandroStanger/BankMoz",
           "demoLink": ""
+        },
+        {
+          "title": "PHP 入门项目",
+          "desc": "我最初的 PHP 项目合集，展示了我在后端 Web 开发方面的成长。",
+          "tags": [
+            "PHP",
+            "Web",
+            "Backend"
+          ],
+          "codeLink": "https://github.com/LeandroStanger/Projetos-Iniciais-PHP",
+          "demoLink": ""
         }
       ]
     },
@@ -691,6 +703,11 @@
       "title": "更新动态",
       "subtitle": "最新消息和帖子",
       "items": [
+        {
+          "title": "项目新增“查看更多”按钮！",
+          "text": "现在您可以使用“查看更多”按钮逐步加载更多项目，使导航更快、更有条理。适用于所有筛选器！",
+          "date": "发布于：2026年9月9日"
+        },
         {
           "title": "使用HTMX更新的作品集",
           "text": "现在网站使用HTMX加载动态内容，改善用户体验。",

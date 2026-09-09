@@ -55,6 +55,7 @@ const MINIMAL_TRANSLATIONS = {
             "no_results_desc": "Tente novamente.",
             "code": "Código",
             "demo": "Demo",
+            "load_more": "Ver mais",
             "filtros": {
                 "todos": "Todos",
                 "frontend": "Front-end",
@@ -199,10 +200,10 @@ function updateAd(adId, newIndex) {
 
     const total = state.images.length;
 
-    // Atualiza índice
     state.currentIndex = newIndex;
 
-    // Troca imagem com fade
+    // Transição suave de opacidade
+    imgElement.style.transition = 'opacity 0.3s ease';
     imgElement.style.opacity = '0';
     setTimeout(() => {
         const currentImage = state.images[state.currentIndex];
@@ -213,7 +214,7 @@ function updateAd(adId, newIndex) {
         }
         imgElement.onload = () => { imgElement.style.opacity = '1'; };
         if (imgElement.complete) imgElement.style.opacity = '1';
-    }, 100);
+    }, 300);
 
     if (total <= 1) {
         progressContainer.style.display = 'none';
@@ -819,7 +820,6 @@ function renderFeed() {
         return;
     }
 
-    // Função para extrair data do campo date (formato dd/mm/aaaa)
     function parseDate(dateStr) {
         const match = dateStr.match(/(\d{2})\/(\d{2})\/(\d{4})/);
         if (match) {
@@ -828,21 +828,18 @@ function renderFeed() {
             const year = parseInt(match[3], 10);
             return new Date(year, month, day);
         }
-        return new Date(0); // data antiga para itens sem data
+        return new Date(0);
     }
 
-    // Ordena do mais recente para o mais antigo
     const sortedItems = [...items].sort((a, b) => {
         const dateA = parseDate(a.date);
         const dateB = parseDate(b.date);
         return dateB - dateA;
     });
 
-    // Itens iniciais (2 primeiros)
     const initialItems = sortedItems.slice(0, 2);
     feedRemainingItems = sortedItems.slice(2);
 
-    // Renderiza os itens iniciais
     let html = '';
     initialItems.forEach(item => {
         html += `
@@ -858,16 +855,13 @@ function renderFeed() {
     });
     container.innerHTML = html;
 
-    // Controla o botão "Carregar mais" com tradução
     const loadMoreBtn = document.getElementById('load-more-feed');
     if (!loadMoreBtn) return;
 
     if (feedRemainingItems.length > 0) {
         loadMoreBtn.style.display = 'inline-flex';
-        // Usa a tradução diretamente
         const loadMoreText = I18n.t('sections.feed.load_more');
         loadMoreBtn.innerHTML = `<i class="fas fa-plus"></i> ${loadMoreText}`;
-        // Define o evento onclick diretamente
         loadMoreBtn.onclick = function() {
             const container = document.getElementById('feed-container');
             if (!container || feedRemainingItems.length === 0) return;
@@ -949,15 +943,20 @@ function openBrandsModal(brands) {
     document.body.classList.add('modal-open');
 }
 
-// ==================== COMPONENTE DE PROJETOS (COM FILTROS APRIMORADOS) ====================
+// ==================== COMPONENTE DE PROJETOS (COM FILTROS E PAGINAÇÃO) ====================
 class ProjectsSearch {
     constructor() {
         this.input = document.getElementById('busca-projetos');
         this.grid = document.getElementById('projetos-grid');
         this.noResults = document.getElementById('nenhum-resultado');
         this.counter = document.getElementById('contador-projetos');
+        this.loadMoreContainer = document.getElementById('projetos-load-more-container');
         this.allProjectsData = [];
         this.currentCategory = 'todos';
+        this.itemsPerPage = 9;
+        this.currentVisible = this.itemsPerPage;
+        this.filteredProjects = [];
+        this.loadMoreBtn = null;
 
         if (!this.input || !this.grid) {
             console.warn('Elementos de busca não encontrados');
@@ -969,8 +968,14 @@ class ProjectsSearch {
     }
 
     init() {
-        this.input.addEventListener('input', () => this.filter());
-        AppState.subscribe(() => this.render());
+        this.input.addEventListener('input', () => {
+            this.currentVisible = this.itemsPerPage;
+            this.filter();
+        });
+        AppState.subscribe(() => {
+            this.currentVisible = this.itemsPerPage;
+            this.render();
+        });
         this.render();
         this.setupFilters();
     }
@@ -981,6 +986,7 @@ class ProjectsSearch {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
                 const categoria = btn.dataset.filtro || 'todos';
+                this.currentVisible = this.itemsPerPage;
                 this.setCategory(categoria);
             });
         });
@@ -999,6 +1005,7 @@ class ProjectsSearch {
         if (!Array.isArray(cardsData) || cardsData.length === 0) {
             console.log('Nenhum projeto encontrado nos dados.');
             this.grid.innerHTML = '';
+            this.updateLoadMoreButton(0);
             return;
         }
 
@@ -1028,6 +1035,7 @@ class ProjectsSearch {
             p.classList.remove('hidden', 'entrance');
             p.style.removeProperty('--delay');
         });
+        this.currentVisible = this.itemsPerPage;
         this.filter();
     }
 
@@ -1048,10 +1056,12 @@ class ProjectsSearch {
             'banco_dados': ['sql', 'database', 'mysql', 'mariadb', 'postgresql', 'sqlite', 'mongodb', 'nosql', 'banco de dados', 'databricks', 'azure data studio']
         };
 
+        // Remove animação de entrada para todos
         this.projects.forEach(card => {
             card.classList.remove('entrance');
         });
 
+        // Aplica filtros e marca hidden
         this.projects.forEach(card => {
             const tags = card.dataset.tags ? card.dataset.tags.split(',') : [];
             let categoryMatch = false;
@@ -1080,16 +1090,34 @@ class ProjectsSearch {
             }
         });
 
+        // Armazena os cards filtrados (visíveis)
+        this.filteredProjects = this.projects.filter(c => !c.classList.contains('hidden'));
+
+        // Aplica paginação: mostra apenas os primeiros `currentVisible` itens filtrados
+        this.filteredProjects.forEach((card, index) => {
+            if (index < this.currentVisible) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+
+        // Atualiza contador
         if (this.counter) {
             const foundText = I18n.t('sections.projetos.found');
-            this.counter.textContent = `${visibleCount} ${foundText}`;
+            this.counter.textContent = `${this.filteredProjects.length} ${foundText}`;
         }
 
+        // Mostra/oculta "nenhum resultado"
         if (this.noResults) {
-            this.noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+            this.noResults.style.display = this.filteredProjects.length === 0 ? 'block' : 'none';
         }
 
-        if (visibleCount > 0) {
+        // Gerencia o botão "Ver mais"
+        this.updateLoadMoreButton(this.filteredProjects.length);
+
+        // Anima os cards visíveis (entrance)
+        if (this.filteredProjects.length > 0) {
             requestAnimationFrame(() => {
                 const visibleCards = this.projects.filter(c => !c.classList.contains('hidden'));
                 visibleCards.forEach((card, index) => {
@@ -1099,9 +1127,32 @@ class ProjectsSearch {
             });
         }
     }
+
+    updateLoadMoreButton(totalFiltered) {
+        if (!this.loadMoreContainer) return;
+
+        // Remove botão existente
+        if (this.loadMoreBtn) {
+            this.loadMoreBtn.remove();
+            this.loadMoreBtn = null;
+        }
+
+        // Se o total filtrado for maior que o que já está visível, exibe o botão
+        if (totalFiltered > this.currentVisible) {
+            const btn = document.createElement('button');
+            btn.className = 'btn btn-secondary';
+            btn.innerHTML = `<i class="fas fa-plus"></i> ${I18n.t('sections.projetos.load_more')}`;
+            btn.addEventListener('click', () => {
+                this.currentVisible += this.itemsPerPage;
+                this.filter();
+            });
+            this.loadMoreContainer.appendChild(btn);
+            this.loadMoreBtn = btn;
+        }
+    }
 }
 
-// ==================== ANIMAÇÕES DE SCROLL ====================
+// ==================== ANIMAÇÕES DE SCROLL (OTIMIZADAS) ====================
 const ScrollAnimations = {
     observer: null,
 
