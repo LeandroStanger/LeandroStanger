@@ -97,6 +97,10 @@ Coleção de meus primeiros projetos de SQL, demonstrando minha evolução como 
 [![Estudo Em andamento](https://img.shields.io/badge/Estudo-Pausado-FF6441?style=for-the-badge&logo=gitea&logoColor=E62B1E)](https://github.com/LeandroStanger/Projetos-Iniciais-Java)
 Coleção de meus primeiros projetos de programação em Java, demonstrando minha evolução como desenvolvedor.
 
+### [Projetos Iniciais (PHP)](https://github.com/LeandroStanger/Projetos-Iniciais-PHP)
+[![Estudo Em andamento](https://img.shields.io/badge/Estudo-Em_andamento-1572B6?style=for-the-badge&logo=php&logoColor=777BB4)](https://github.com/LeandroStanger/Projetos-Iniciais-PHP)
+Coleção de meus primeiros projetos de programação, demonstrando minha evolução como desenvolvedor.
+
 
 <div align="center">
   
