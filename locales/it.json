@@ -73,7 +73,7 @@
             "title": "Laurea in Ingegneria Informatica",
             "institution": "Unopar",
             "progress": {
-              "completed": 16,
+              "completed": 17,
               "total": 53,
               "label": "{completed} di {total} materie completate",
               "semesterText": "4º Semestre — In corso"
