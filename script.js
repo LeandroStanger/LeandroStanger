@@ -68,6 +68,11 @@ const MINIMAL_TRANSLATIONS = {
             "title": "Feed de Atualizações",
             "subtitle": "Últimas novidades",
             "items": [
+                {
+                    "title": "Novo sistema de anúncios no site!",
+                    "text": "Atualizamos o sistema de anúncios para direcionar cada banner para a solução correta da Leandro Stanger Soluções em Informática, com links mais específicos para criação, formatação, recuperação e manutenção.",
+                    "date": "Publicado em: 04/10/2026"
+                },
                 { "title": "Exemplo", "text": "Conteúdo de exemplo.", "date": "Hoje" },
                 {
                     "title": "Novo idioma suportado: Italiano!",
@@ -176,6 +181,8 @@ function initAdState(adId, imagesArray) {
         adStates[adId] = {
             currentIndex: 0,
             timer: null,
+            progressFrame: null,
+            swapTimer: null,
             progress: 0,
             isPlaying: false,
             images: imagesArray || []
@@ -202,19 +209,26 @@ function updateAd(adId, newIndex) {
 
     state.currentIndex = newIndex;
 
-    // Transição suave de opacidade
-    imgElement.style.transition = 'opacity 0.3s ease';
+    clearTimeout(state.swapTimer);
+    if (state.progressFrame !== null) cancelAnimationFrame(state.progressFrame);
+    state.progressFrame = null;
+
+    imgElement.style.transition = 'opacity 0.18s ease';
     imgElement.style.opacity = '0';
-    setTimeout(() => {
-        const currentImage = state.images[state.currentIndex];
+    state.swapTimer = setTimeout(() => {
+        const currentIndex = state.currentIndex;
+        const currentImage = state.images[currentIndex];
         imgElement.src = currentImage.src;
-        imgElement.alt = `Anúncio ${adId === 'anuncio1' ? '1' : '2'} - ${state.currentIndex + 1}`;
+        const imageNumber = currentImage.src.match(/anuncio(\d+)\.png$/)?.[1];
+        imgElement.alt = `Anúncio ${imageNumber || currentIndex + 1}`;
         if (linkElement) {
             linkElement.href = currentImage.link || '#';
         }
-        imgElement.onload = () => { imgElement.style.opacity = '1'; };
-        if (imgElement.complete) imgElement.style.opacity = '1';
-    }, 300);
+        imgElement.onload = () => {
+            if (state.currentIndex === currentIndex) imgElement.style.opacity = '1';
+        };
+        if (imgElement.complete && state.currentIndex === currentIndex) imgElement.style.opacity = '1';
+    }, 180);
 
     if (total <= 1) {
         progressContainer.style.display = 'none';
@@ -233,7 +247,7 @@ function updateAd(adId, newIndex) {
 
     clearTimeout(state.timer);
     state.progress = 0;
-    progressElement.style.width = '0%';
+    progressElement.style.transform = 'scaleX(0)';
 
     startProgress(adId);
     state.timer = setTimeout(() => {
@@ -250,18 +264,19 @@ function startProgress(adId) {
     const total = state.images.length;
     if (total <= 1) return;
 
-    const startTime = Date.now();
+    const startTime = performance.now();
     const duration = 25000;
 
-    function updateProgress() {
-        const elapsed = Date.now() - startTime;
-        const progress = Math.min((elapsed / duration) * 100, 100);
-        progressElement.style.width = progress + '%';
-        if (progress < 100) {
-            requestAnimationFrame(updateProgress);
+    function updateProgress(timestamp) {
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        progressElement.style.transform = `scaleX(${progress})`;
+        if (progress < 1) {
+            state.progressFrame = requestAnimationFrame(updateProgress);
+        } else {
+            state.progressFrame = null;
         }
     }
-    requestAnimationFrame(updateProgress);
+    state.progressFrame = requestAnimationFrame(updateProgress);
 }
 
 function nextAd(adId) {
@@ -295,7 +310,8 @@ function setupAd(adId, imagesArray) {
     const linkElement = document.getElementById(adId + '-link');
     if (imgElement) {
         imgElement.src = imagesArray[randomIndex].src;
-        imgElement.alt = `Anúncio ${adId === 'anuncio1' ? '1' : '2'} - ${randomIndex + 1}`;
+        const imageNumber = imagesArray[randomIndex].src.match(/anuncio(\d+)\.png$/)?.[1];
+        imgElement.alt = `Anúncio ${imageNumber || randomIndex + 1}`;
         imgElement.style.opacity = '1';
     }
     if (linkElement) {
@@ -320,33 +336,19 @@ function setupAd(adId, imagesArray) {
 
 // ==================== CONTROLE DE VISIBILIDADE DOS ANÚNCIOS E ROTAÇÃO ====================
 const anuncio1Images = [
-    { 
-        src: 'img/anuncio/anuncio1.png', 
-        link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao' 
-    },
-    { 
-        src: 'img/anuncio/anuncio3.png', 
-        link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#recuperacao.' 
-    },
-    { 
-        src: 'img/anuncio/anuncio5.png', 
-        link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao' 
-    }
+    { src: 'img/anuncio/anuncio1.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#criacao-site' },
+    { src: 'img/anuncio/anuncio2.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-standard' },
+    { src: 'img/anuncio/anuncio3.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-gamer' },
+    { src: 'img/anuncio/anuncio4.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-pro' },
+    { src: 'img/anuncio/anuncio5.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-premium' }
 ];
 
 const anuncio2Images = [
-    { 
-        src: 'img/anuncio/anuncio2.png', 
-        link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#servicos' 
-    },
-    { 
-        src: 'img/anuncio/anuncio4.png', 
-        link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#servicos' 
-    },
-    { 
-        src: 'img/anuncio/anuncio6.png', 
-        link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#limpeza' 
-    }
+    { src: 'img/anuncio/anuncio6.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-enterprise' },
+    { src: 'img/anuncio/anuncio7.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-educacional' },
+    { src: 'img/anuncio/anuncio8.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-go' },
+    { src: 'img/anuncio/anuncio9.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#recuperacao' },
+    { src: 'img/anuncio/anuncio10.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#limpeza' }
 ];
 
 let rotacaoTimeout1 = null;
@@ -383,9 +385,26 @@ function toggleAdsVisibility() {
             if (adStates[key] && adStates[key].timer) {
                 clearTimeout(adStates[key].timer);
             }
+            if (adStates[key]?.progressFrame !== null) {
+                cancelAnimationFrame(adStates[key].progressFrame);
+                adStates[key].progressFrame = null;
+            }
+            clearTimeout(adStates[key]?.swapTimer);
         });
     }
+    updateAdsScrollVisibility();
 }
+
+function updateAdsScrollVisibility() {
+    const aboutSection = document.getElementById('sobre');
+    const shouldShow = AppState.currentLang === 'pt' && aboutSection && window.scrollY >= aboutSection.offsetTop;
+
+    ['anuncio1', 'anuncio2'].forEach(adId => {
+        document.getElementById(adId)?.classList.toggle('is-visible', shouldShow);
+    });
+}
+
+window.addEventListener('scroll', updateAdsScrollVisibility, { passive: true });
 
 // ==================== GERENCIADOR DE TEMA ====================
 const ThemeManager = {

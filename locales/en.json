@@ -709,6 +709,11 @@
       "subtitle": "Latest news and posts",
       "items": [
         {
+          "title": "New ad system on the website!",
+          "text": "We updated the ad system so each banner directs to the correct Leandro Stanger Soluções em Informática solution, with more specific links for setup, formatting, recovery and maintenance.",
+          "date": "Published on: 10/04/2026"
+        },
+        {
           "title": "New 'Load more' button in projects!",
           "text": "Now you can load more projects progressively with the 'Load more' button, making navigation faster and more organized. Available in all filters!",
           "date": "Published on: 09/09/2026"

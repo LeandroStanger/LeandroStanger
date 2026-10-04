@@ -709,6 +709,11 @@
       "subtitle": "Dernières nouvelles et articles",
       "items": [
         {
+          "title": "Nouveau système d'annonces sur le site !",
+          "text": "Nous avons mis à jour le système d'annonces pour diriger chaque bannière vers la bonne solution de Leandro Stanger Soluções em Informática, avec des liens plus précis pour la création, la mise en forme, la récupération et l'entretien.",
+          "date": "Publié le : 04/10/2026"
+        },
+        {
           "title": "Nouveau bouton 'Voir plus' dans les projets !",
           "text": "Vous pouvez maintenant charger plus de projets progressivement avec le bouton 'Voir plus', rendant la navigation plus rapide et organisée. Disponible dans tous les filtres !",
           "date": "Publié le : 09/09/2026"
