@@ -137,6 +137,10 @@ html.light-theme .copy-button {
         transition-duration: .01ms !important;
         scroll-behavior: auto !important;
     }
+
+    html {
+        scroll-behavior: auto !important;
+    }
 }
 
 *, ::before, ::after {
@@ -164,6 +168,34 @@ body {
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     max-width: 100%;
+}
+
+.section,
+.curriculo-section,
+.tecnologia-categoria,
+.projeto-card,
+.sobre-card,
+.doacoes-card,
+.contato-link,
+.bank-item,
+.internacional-card,
+.feed-item {
+    contain: layout paint;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sobre-card:hover,
+    .projeto-card:hover,
+    .tecnologia-icon:hover,
+    .btn:hover,
+    .contato-link:hover,
+    .copy-button:hover,
+    .btn-copiar:hover,
+    .btn-copy-crypto:hover,
+    .btn-copy-internacional:hover,
+    .btn-back-top:hover {
+        transform: none !important;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {

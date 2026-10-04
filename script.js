@@ -395,16 +395,25 @@ function toggleAdsVisibility() {
     updateAdsScrollVisibility();
 }
 
-function updateAdsScrollVisibility() {
-    const aboutSection = document.getElementById('sobre');
-    const shouldShow = AppState.currentLang === 'pt' && aboutSection && window.scrollY >= aboutSection.offsetTop;
+let adsScrollFrame = null;
 
-    ['anuncio1', 'anuncio2'].forEach(adId => {
-        document.getElementById(adId)?.classList.toggle('is-visible', shouldShow);
+function updateAdsScrollVisibility() {
+    if (adsScrollFrame) return;
+
+    adsScrollFrame = requestAnimationFrame(() => {
+        const aboutSection = document.getElementById('sobre');
+        const shouldShow = AppState.currentLang === 'pt' && aboutSection && window.scrollY >= aboutSection.offsetTop;
+
+        ['anuncio1', 'anuncio2'].forEach(adId => {
+            document.getElementById(adId)?.classList.toggle('is-visible', shouldShow);
+        });
+
+        adsScrollFrame = null;
     });
 }
 
 window.addEventListener('scroll', updateAdsScrollVisibility, { passive: true });
+updateAdsScrollVisibility();
 
 // ==================== GERENCIADOR DE TEMA ====================
 const ThemeManager = {
@@ -1263,11 +1272,14 @@ function initTypewriter() {
 }
 
 function initSmoothScroll() {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const scrollBehavior = prefersReducedMotion ? 'auto' : 'smooth';
+
     document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', e => {
             e.preventDefault();
             const target = document.querySelector(a.getAttribute('href'));
-            if (target) target.scrollIntoView({ behavior: 'smooth' });
+            if (target) target.scrollIntoView({ behavior: scrollBehavior, block: 'start' });
         });
     });
 }
@@ -1275,6 +1287,9 @@ function initSmoothScroll() {
 function initBackToTop() {
     const btn = document.querySelector('.btn-back-top');
     if (!btn) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const scrollBehavior = prefersReducedMotion ? 'auto' : 'smooth';
 
     btn.classList.add('hidden');
 
@@ -1288,7 +1303,7 @@ function initBackToTop() {
 
     btn.addEventListener('click', e => {
         e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: scrollBehavior });
     });
 }
 
