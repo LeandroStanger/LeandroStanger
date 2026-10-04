@@ -625,7 +625,35 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
 
 /* ===== ANÚNCIO ===== */
 .anuncio-section {
-    padding: var(--space-4) 0;
+    position: fixed;
+    top: 50%;
+    z-index: 20;
+    width: min(calc(clamp(140px, 11vw, 190px) + 3cm), calc(50vw - 596px));
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: opacity var(--transition-normal), visibility var(--transition-normal);
+}
+
+#anuncio1 {
+    left: 12px;
+}
+
+#anuncio2 {
+    right: 12px;
+}
+
+.anuncio-section.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.anuncio-section .container {
+    width: 100%;
+    padding: 0;
 }
 
 .anuncio-content {
@@ -654,13 +682,13 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
     height: auto;
     display: block;
     border-radius: var(--radius-lg);
-    animation: float 3s ease-in-out infinite;
-    transition: opacity 0.6s ease;
+    animation: float 5s ease-in-out infinite;
+    transition: opacity 0.18s ease;
 }
 
 @keyframes float {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-4px); }
 }
 
 /* Barra de progresso */
@@ -675,10 +703,12 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
 
 .anuncio-progress {
     height: 100%;
-    width: 0%;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
     background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
     border-radius: var(--radius-full);
-    transition: width 0.1s linear;
+    transition: none;
 }
 
 /* Navegação */
@@ -723,6 +753,12 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
     color: var(--color-gray);
     min-width: 50px;
     text-align: center;
+}
+
+@media (max-width: 1500px) {
+    .anuncio-section {
+        display: none !important;
+    }
 }
 
 html.light-theme .anuncio-progress-container {
