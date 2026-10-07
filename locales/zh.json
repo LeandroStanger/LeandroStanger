@@ -697,7 +697,8 @@
       "crypto": {
         "title": "加密货币",
         "copyButton": "复制地址",
-        "copySuccess": "地址复制成功！"
+        "copySuccess": "地址复制成功！",
+        "load_more": "加载更多"
       },
       "internacional": {
         "title": "国际银行转账",

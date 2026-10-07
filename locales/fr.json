@@ -697,7 +697,8 @@
       "crypto": {
         "title": "Cryptomonnaies",
         "copyButton": "Copier l'adresse",
-        "copySuccess": "Adresse copiée avec succès !"
+        "copySuccess": "Adresse copiée avec succès !",
+        "load_more": "Charger plus"
       },
       "internacional": {
         "title": "Virement bancaire international",

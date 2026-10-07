@@ -697,7 +697,8 @@
       "crypto": {
         "title": "암호화폐",
         "copyButton": "주소 복사",
-        "copySuccess": "주소가 성공적으로 복사되었습니다!"
+        "copySuccess": "주소가 성공적으로 복사되었습니다!",
+        "load_more": "더 불러오기"
       },
       "internacional": {
         "title": "국제 은행 송금",

@@ -697,7 +697,8 @@
       "crypto": {
         "title": "Criptovalute",
         "copyButton": "Copia indirizzo",
-        "copySuccess": "Indirizzo copiato con successo!"
+        "copySuccess": "Indirizzo copiato con successo!",
+        "load_more": "Carica altro"
       },
       "internacional": {
         "title": "Trasferimento Bancario Internazionale",

@@ -66,6 +66,9 @@ const MINIMAL_TRANSLATIONS = {
                 "banco_dados": "Banco de Dados"
             }
         },
+        "doacoes": {
+            "crypto": { "load_more": "Carregar mais" }
+        },
         "feed": {
             "title": "Feed de Atualizações",
             "subtitle": "Últimas novidades",
@@ -1585,6 +1588,40 @@ function initDoacoes() {
         otherItems.forEach(item => cryptoContainer.appendChild(item));
 
         window.cryptoRandomized = true;
+    }
+
+    if (cryptoContainer && !cryptoContainer._paginationInitialized) {
+        const cryptoItems = Array.from(cryptoContainer.querySelectorAll(':scope > .crypto-item'));
+        const pageSize = 9;
+        let visibleCount = Math.min(pageSize, cryptoItems.length);
+
+        cryptoItems.forEach((item, index) => {
+            item.hidden = index >= visibleCount;
+        });
+
+        if (cryptoItems.length > pageSize) {
+            const controls = document.createElement('div');
+            controls.className = 'crypto-load-more-wrap';
+
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'btn btn-secondary crypto-load-more';
+            button.innerHTML = `<i class="fas fa-plus"></i> ${I18n.t('sections.doacoes.crypto.load_more')}`;
+            controls.appendChild(button);
+            cryptoContainer.insertAdjacentElement('afterend', controls);
+
+            button.addEventListener('click', () => {
+                const nextVisibleCount = Math.min(visibleCount + pageSize, cryptoItems.length);
+                cryptoItems.slice(visibleCount, nextVisibleCount).forEach(item => {
+                    item.hidden = false;
+                });
+                visibleCount = nextVisibleCount;
+
+                if (visibleCount >= cryptoItems.length) controls.remove();
+            });
+        }
+
+        cryptoContainer._paginationInitialized = true;
     }
 
     const cryptoContainerQR = document.querySelector('.doacoes-crypto');

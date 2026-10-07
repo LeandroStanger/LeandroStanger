@@ -697,7 +697,8 @@
       "crypto": {
         "title": "Criptomonedas",
         "copyButton": "Copiar dirección",
-        "copySuccess": "¡Dirección copiada con éxito!"
+        "copySuccess": "¡Dirección copiada con éxito!",
+        "load_more": "Cargar más"
       },
       "internacional": {
         "title": "Transferencia Bancaria Internacional",

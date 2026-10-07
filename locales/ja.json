@@ -697,7 +697,8 @@
       "crypto": {
         "title": "暗号通貨",
         "copyButton": "アドレスをコピー",
-        "copySuccess": "アドレスを正常にコピーしました！"
+        "copySuccess": "アドレスを正常にコピーしました！",
+        "load_more": "さらに読み込む"
       },
       "internacional": {
         "title": "国際銀行振込",
