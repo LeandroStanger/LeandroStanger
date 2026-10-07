@@ -128,6 +128,8 @@
       "experiencia": {
         "title": "경력",
         "brand_button": "협력한 브랜드",
+        "carousel_pause": "캐러셀 일시 정지",
+        "carousel_play": "캐러셀 재생",
         "items": [
           {
             "company": "Confecções Vanelise",
@@ -713,6 +715,11 @@
       "title": "피드 업데이트",
       "subtitle": "최신 뉴스 및 게시물",
       "items": [
+        {
+          "title": "함께 일한 브랜드 캐러셀 추가!",
+          "text": "\"함께 일한 브랜드\" 섹션이 자동 캐러셀로 바뀌었으며, 일시 정지 및 다시 재생하는 버튼도 추가되었습니다. 목록에는 실제로 함께 일한 브랜드만 표시됩니다.",
+          "date": "게시일: 2026년 10월 7일"
+        },
         {
           "title": "사이트의 새 광고 시스템!",
           "text": "각 배너가 Leandro Stanger Soluções em Informática의 올바른 솔루션으로 이동하도록 광고 시스템을 업데이트했습니다. 설치, 포맷, 복구 및 유지보수에 대한 더 구체적인 링크를 추가했습니다.",

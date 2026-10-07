@@ -128,6 +128,8 @@
       "experiencia": {
         "title": "Berufserfahrung",
         "brand_button": "Marken, mit denen ich gearbeitet habe",
+        "carousel_pause": "Karussell pausieren",
+        "carousel_play": "Karussell abspielen",
         "items": [
           {
             "company": "Confecções Vanelise",
@@ -713,6 +715,11 @@
       "title": "Feed-Updates",
       "subtitle": "Neueste Nachrichten und Beiträge",
       "items": [
+        {
+          "title": "Neues Karussell mit Marken, mit denen ich gearbeitet habe!",
+          "text": "Der Abschnitt \"Marken, mit denen ich gearbeitet habe\" wird jetzt in einem automatischen Karussell mit Steuerelementen zum Pausieren und Fortsetzen angezeigt. Die Liste enthält nur Marken, mit denen ich gearbeitet habe.",
+          "date": "Veröffentlicht am: 07.10.2026"
+        },
         {
           "title": "Neues Anzeigensystem auf der Website!",
           "text": "Wir haben das Anzeigensystem aktualisiert, damit jedes Banner zur richtigen Lösung von Leandro Stanger Soluções em Informática führt, mit spezielleren Links für Einrichtung, Formatierung, Wiederherstellung und Wartung.",

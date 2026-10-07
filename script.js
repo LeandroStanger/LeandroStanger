@@ -46,7 +46,9 @@ const MINIMAL_TRANSLATIONS = {
     "sections": {
         "curriculo": {
             "experiencia": {
-                "brand_button": "Marcas que trabalhei"
+                "brand_button": "Marcas que trabalhei",
+                "carousel_pause": "Pausar carrossel",
+                "carousel_play": "Reproduzir carrossel"
             }
         },
         "projetos": {
@@ -68,6 +70,11 @@ const MINIMAL_TRANSLATIONS = {
             "title": "Feed de Atualizações",
             "subtitle": "Últimas novidades",
             "items": [
+                {
+                    "title": "Novo carrossel de marcas trabalhadas!",
+                    "text": "A seção \"Marcas que trabalhei\" agora é exibida em um carrossel automático, com controles para pausar e retomar. A lista reúne apenas marcas com as quais trabalhei.",
+                    "date": "Publicado em: 07/10/2026"
+                },
                 {
                     "title": "Novo sistema de anúncios no site!",
                     "text": "Atualizamos o sistema de anúncios para direcionar cada banner para a solução correta da Leandro Stanger Soluções em Informática, com links mais específicos para criação, formatação, recuperação e manutenção.",
@@ -590,11 +597,75 @@ const Renderer = {
         this._safeRender('Educação', this.renderEducacao);
         this._safeRender('Experiência', this.renderExperiencia);
         this._safeRender('Habilidades', this.renderHabilidades);
+        this.initBrandCarousels();
         document.dispatchEvent(new CustomEvent('renderer:done'));
         ScrollAnimations.refresh();
         this.generateProjectsSchema();
         renderFeed();
         renderStatus();
+    },
+
+    initBrandCarousels() {
+        const labels = {
+            pause: I18n.t('sections.curriculo.experiencia.carousel_pause'),
+            play: I18n.t('sections.curriculo.experiencia.carousel_play')
+        };
+
+        document.querySelectorAll('.marcas-carousel').forEach(carousel => {
+            const track = carousel.querySelector('.marcas-track');
+            if (!track) return;
+
+            if (carousel._brandInterval) {
+                clearInterval(carousel._brandInterval);
+            }
+
+            const toggleButton = carousel.closest('.marcas-trabalhadas')?.querySelector('.marcas-carousel-toggle');
+            const originalItems = Array.from(track.children);
+            if (originalItems.length === 0) return;
+
+            const loopWidth = track.scrollWidth + parseFloat(getComputedStyle(track).columnGap || 0);
+            const cloneItems = () => originalItems.forEach(item => {
+                const clone = item.cloneNode(true);
+                clone.setAttribute('aria-hidden', 'true');
+                clone.querySelectorAll('a, button, [tabindex]').forEach(el => el.setAttribute('tabindex', '-1'));
+                track.appendChild(clone);
+            });
+
+            while (track.scrollWidth < loopWidth + carousel.clientWidth) {
+                cloneItems();
+            }
+
+            carousel.scrollLeft = Math.random() * loopWidth;
+
+            const speed = 0.35 + Math.random() * 0.5;
+            const setPlaybackState = isPlaying => {
+                if (carousel._brandInterval !== null) {
+                    clearInterval(carousel._brandInterval);
+                    carousel._brandInterval = null;
+                }
+                carousel._brandPlaying = isPlaying;
+
+                if (isPlaying) {
+                    carousel._brandInterval = setInterval(() => {
+                        carousel.scrollLeft += speed;
+                        if (carousel.scrollLeft >= loopWidth) carousel.scrollLeft -= loopWidth;
+                    }, 18);
+                }
+
+                if (toggleButton) {
+                    const icon = toggleButton.querySelector('i');
+                    if (icon) icon.className = isPlaying ? 'fas fa-pause' : 'fas fa-play';
+                    const label = isPlaying ? labels.pause : labels.play;
+                    toggleButton.setAttribute('aria-label', label);
+                    toggleButton.title = label;
+                }
+            };
+
+            setPlaybackState(true);
+            if (toggleButton) {
+                toggleButton.addEventListener('click', () => setPlaybackState(!carousel._brandPlaying));
+            }
+        });
     },
 
     _safeRender(sectionName, renderFn) {
@@ -730,7 +801,7 @@ const Renderer = {
             }
 
             const positions = Array.isArray(exp.positions) ? exp.positions : [];
-            const brands = Array.isArray(exp.brands) ? exp.brands : [];
+            const brands = Array.isArray(exp.brands) ? shuffleArray([...exp.brands]) : [];
             const hasBrands = brands.length > 0;
 
             return `
@@ -738,10 +809,38 @@ const Renderer = {
                 <div class="experiencia-header">
                     <div class="experiencia-header-row">
                         <h4 class="experiencia-empresa">${company}</h4>
-                        ${hasBrands ? `<button class="btn-marcas" data-company="${company}" aria-label="${I18n.t('sections.curriculo.experiencia.brand_button')}"><i class="fas fa-tags"></i> ${I18n.t('sections.curriculo.experiencia.brand_button')}</button>` : ''}
                     </div>
                     ${companyPeriod ? `<div class="experiencia-periodo"><span class="periodo-detalhes">${companyPeriod}</span></div>` : ''}
                 </div>
+
+                ${hasBrands ? `
+                    <div class="marcas-trabalhadas">
+                        <div class="marcas-header">
+                            <span class="marcas-label"><i class="fas fa-tags"></i> ${I18n.t('sections.curriculo.experiencia.brand_button')}</span>
+                            <span class="marcas-periodo">${companyPeriod}</span>
+                        </div>
+                        <div class="marcas-carousel" aria-label="Marcas que trabalhei">
+                            <div class="marcas-track">
+                                ${brands.map(brand => {
+                                    const url = brand.url || '#';
+                                    const hasLink = url && url !== '#';
+                                    return `
+                                        <a href="${url}" target="_blank" rel="noopener noreferrer" class="marca-item" aria-label="${brand.name}">
+                                            <img src="${brand.logo || 'img/placeholder.png'}" alt="${brand.name}" class="marca-logo" loading="lazy" onerror="this.onerror=null; this.src='img/placeholder.png';">
+                                            <span>${brand.name}</span>
+                                        </a>
+                                    `;
+                                }).join('')}
+                            </div>
+                        </div>
+                        <div class="marcas-carousel-controls">
+                            <button type="button" class="marcas-carousel-toggle" aria-label="Pausar carrossel" title="Pausar carrossel">
+                                <i class="fas fa-pause" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                ` : ''}
+
                 ${positions.map((pos, idx) => {
                 if (!pos || typeof pos !== 'object') return '';
                 let posPeriod = pos.period || '';
@@ -761,17 +860,6 @@ const Renderer = {
                 `}).join('')}
             </div>
         `}).join('');
-
-        container.querySelectorAll('.btn-marcas').forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                const company = this.dataset.company;
-                const expItem = items.find(item => item.company === company);
-                if (expItem && expItem.brands) {
-                    openBrandsModal(expItem.brands);
-                }
-            });
-        });
     },
 
     renderHabilidades() {
@@ -849,12 +937,23 @@ function renderFeed() {
     }
 
     function parseDate(dateStr) {
-        const match = dateStr.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+        const isEnglish = AppState.currentLang === 'en';
+        const match = isEnglish
+            ? dateStr.match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/)
+            : dateStr.match(/(\d{1,2})[./](\d{1,2})[./](\d{4})/);
         if (match) {
-            const day = parseInt(match[1], 10);
-            const month = parseInt(match[2], 10) - 1;
+            const day = parseInt(isEnglish ? match[2] : match[1], 10);
+            const month = parseInt(isEnglish ? match[1] : match[2], 10) - 1;
             const year = parseInt(match[3], 10);
             return new Date(year, month, day);
+        }
+        const localizedMatch = dateStr.match(/(\d{4})[年년]\s*(\d{1,2})[月월]\s*(\d{1,2})日?/);
+        if (localizedMatch) {
+            return new Date(
+                parseInt(localizedMatch[1], 10),
+                parseInt(localizedMatch[2], 10) - 1,
+                parseInt(localizedMatch[3], 10)
+            );
         }
         return new Date(0);
     }
