@@ -100,12 +100,25 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
 
     <!-- CSS Principal -->
+    <script>
+        (() => {
+            const supportedLanguages = ['en', 'es', 'fr', 'zh', 'de', 'ja', 'ko', 'it'];
+            const browserLanguage = navigator.language.split('-')[0];
+            if (supportedLanguages.includes(browserLanguage)) {
+                document.documentElement.classList.add('translation-loading');
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="style.css">
 
     <title>Leandro Stanger - Portfólio Profissional</title>
 </head>
 
 <body>
+    <div id="translation-loader" role="status" aria-live="polite">
+        <span class="translation-loader-spinner" aria-hidden="true"></span>
+        <p>Carregando tradução...</p>
+    </div>
     <header id="inicio" class="main-header" role="banner">
         <div id="particles-js"></div>
         <div class="container">

@@ -181,6 +181,7 @@ const I18n = {
     async setLanguage(lang) {
         if (!AppState.supportedLangs.includes(lang) || lang === AppState.currentLang) return;
         await this.loadTranslations(lang);
+        setDefaultDonationTab();
     }
 };
 
@@ -1794,6 +1795,26 @@ function initDoacoes() {
         });
         internacionalContainer._hasCopyListener = true;
     }
+
+    setDefaultDonationTab();
+}
+
+function setDefaultDonationTab() {
+    const isBrazilianReal = AppState.currentLang === 'pt';
+    const selectedTabId = isBrazilianReal ? 'doacao-tab-real' : 'doacao-tab-internacional';
+    const selectedTab = document.getElementById(selectedTabId);
+    const donationTabs = selectedTab?.closest('.doacoes-tabs');
+    if (!donationTabs) return;
+
+    donationTabs.querySelectorAll('[role="tab"]').forEach(tab => {
+        const selected = tab === selectedTab;
+        tab.setAttribute('aria-selected', String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+    });
+
+    donationTabs.querySelectorAll('[role="tabpanel"]').forEach(panel => {
+        panel.hidden = panel.getAttribute('aria-labelledby') !== selectedTabId;
+    });
 }
 
 // ==================== INTEGRAÇÃO COM HTMX ====================
@@ -1818,10 +1839,8 @@ document.addEventListener('htmx:afterSwap', function(evt) {
         document.documentElement.classList.remove('no-js');
         document.documentElement.classList.add('js');
 
-        const browserLang = navigator.language.split('-')[0];
-        if (AppState.supportedLangs.includes(browserLang)) {
-            AppState.currentLang = browserLang;
-        }
+        const browserLang = (navigator.language || 'en').split('-')[0].toLowerCase();
+        AppState.currentLang = AppState.supportedLangs.includes(browserLang) ? browserLang : 'en';
 
         AppState.subscribe(() => {
             I18n.translateStaticElements();
@@ -1833,6 +1852,8 @@ document.addEventListener('htmx:afterSwap', function(evt) {
         });
 
         await I18n.loadTranslations(AppState.currentLang);
+        document.documentElement.classList.remove('translation-loading');
+        document.getElementById('translation-loader')?.setAttribute('hidden', '');
 
         initTechnologiesLoadMore();
         updateCurrentYear();

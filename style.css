@@ -170,6 +170,51 @@ body {
     max-width: 100%;
 }
 
+#translation-loader {
+    display: none;
+}
+
+html.translation-loading body > :not(#translation-loader) {
+    visibility: hidden;
+}
+
+html.translation-loading #translation-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    background: var(--color-dark-900);
+    color: var(--color-light);
+}
+
+#translation-loader p {
+    margin: 0;
+    color: inherit;
+}
+
+.translation-loader-spinner {
+    width: 2.5rem;
+    aspect-ratio: 1;
+    border: 3px solid var(--color-dark-600);
+    border-top-color: var(--color-secondary);
+    border-radius: 50%;
+    animation: translation-loader-spin .8s linear infinite;
+}
+
+@keyframes translation-loader-spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .translation-loader-spinner {
+        animation: none;
+    }
+}
+
 .section,
 .curriculo-section,
 .tecnologia-categoria,
