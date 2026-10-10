@@ -128,6 +128,7 @@
       "experiencia": {
         "title": "Experiencia Profesional",
         "brand_button": "Marcas con las que he trabajado",
+        "brands_count": "+ {count} marcas",
         "carousel_pause": "Pausar carrusel",
         "carousel_play": "Reanudar carrusel",
         "items": [
@@ -721,6 +722,11 @@
       "title": "Feed de Actualizaciones",
       "subtitle": "Últimas noticias y publicaciones",
       "items": [
+        {
+          "title": "¡Ya está aquí la versión 2 del sitio!",
+          "text": "La versión 2 ofrece un portafolio más organizado, con la experiencia profesional separada en tarjetas por puesto, listas desplegables de tecnologías y habilidades, y mejoras en la sección de donaciones.",
+          "date": "Publicado el: 10/10/2026"
+        },
         {
           "title": "¡Nuevo carrusel de marcas con las que he trabajado!",
           "text": "La sección \"Marcas con las que he trabajado\" ahora se muestra en un carrusel automático, con controles para pausarlo y reanudarlo. La lista reúne únicamente marcas con las que he trabajado.",

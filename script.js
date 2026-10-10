@@ -47,6 +47,7 @@ const MINIMAL_TRANSLATIONS = {
         "curriculo": {
             "experiencia": {
                 "brand_button": "Marcas que trabalhei",
+                "brands_count": "+ {count} marcas",
                 "carousel_pause": "Pausar carrossel",
                 "carousel_play": "Reproduzir carrossel"
             }
@@ -482,24 +483,24 @@ function initParticles(themeIsLight = false) {
         particles: {
             number: { value: 50, density: { enable: true, value_area: 800 } },
             shape: { type: 'polygon', polygon: { sides: 6 } },
-            opacity: { value: 0.3, random: true, anim: { enable: true, speed: 0.3, opacity_min: 0.1, sync: false } },
-            size: { value: 4, random: true, anim: { enable: true, speed: 2, size_min: 1, sync: false } },
-            line_linked: { enable: true, distance: 150, width: 1 },
-            move: { enable: true, speed: 1, direction: 'none', random: true, straight: false, out_mode: 'out', bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
+            opacity: { value: 0.82, random: true, anim: { enable: true, speed: 0.65, opacity_min: 0.3, sync: false } },
+            size: { value: 5, random: true, anim: { enable: true, speed: 2, size_min: 1.5, sync: false } },
+            line_linked: { enable: true, distance: 150, width: 1.5 },
+            move: { enable: true, speed: 1.45, direction: 'none', random: true, straight: false, out_mode: 'out', bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
         },
         interactivity: { detect_on: 'canvas', events: { onhover: { enable: false }, onclick: { enable: false }, resize: true } },
         retina_detect: true
     };
 
     if (themeIsLight) {
-        config.particles.color = { value: '#10b981' };
+        config.particles.color = { value: '#3b82f6' };
         config.particles.opacity.value = 0.90;
         config.particles.opacity.anim.speed = 0.90;
-        config.particles.line_linked.color = '#10b981';
+        config.particles.line_linked.color = '#3b82f6';
         config.particles.line_linked.opacity = 0.90;
     } else {
-        config.particles.color = { value: '#10b981' };
-        config.particles.line_linked.color = '#10b981';
+        config.particles.color = { value: '#3b82f6' };
+        config.particles.line_linked.color = '#3b82f6';
         config.particles.line_linked.opacity = 0.90;
     }
 
@@ -820,7 +821,7 @@ const Renderer = {
                     <div class="marcas-trabalhadas">
                         <div class="marcas-header">
                             <span class="marcas-label"><i class="fas fa-tags"></i> ${I18n.t('sections.curriculo.experiencia.brand_button')}</span>
-                            <span class="marcas-periodo">${companyPeriod}</span>
+                            <span class="marcas-count">${I18n.t('sections.curriculo.experiencia.brands_count', { count: brands.length })}</span>
                         </div>
                         <div class="marcas-carousel" aria-label="Marcas que trabalhei">
                             <div class="marcas-track">
@@ -844,7 +845,8 @@ const Renderer = {
                     </div>
                 ` : ''}
 
-                ${positions.map((pos, idx) => {
+                <div class="experiencia-cargos">
+                    ${positions.map((pos, idx) => {
                 if (!pos || typeof pos !== 'object') return '';
                 let posPeriod = pos.period || '';
                 if (company.includes('Vanelise')) {
@@ -861,6 +863,7 @@ const Renderer = {
                         </ul>
                     </div>
                 `}).join('')}
+                </div>
             </div>
         `}).join('');
     },
@@ -877,17 +880,39 @@ const Renderer = {
 
         const shuffledTecnicas = shuffleArray([...tecnicas.items]);
         const shuffledInterpessoais = shuffleArray([...interpessoais.items]);
+        const initialTechnicalSkills = shuffledTecnicas.slice(0, 14);
+        const remainingTechnicalSkills = shuffledTecnicas.slice(14);
 
         container.innerHTML = `
-            <div class="habilidades-categoria">
+            <div class="habilidades-categoria habilidades-tecnicas">
                 <h4 class="habilidades-categoria-title"><i class="fas fa-code"></i> ${tecnicas.title || ''}</h4>
-                <div class="habilidades-lista">${shuffledTecnicas.map(item => `<span class="habilidade-tag">${item}</span>`).join('')}</div>
+                <div class="habilidades-lista" id="habilidades-tecnicas-lista">
+                    ${initialTechnicalSkills.map(item => `<span class="habilidade-tag">${item}</span>`).join('')}
+                    ${remainingTechnicalSkills.map(item => `<span class="habilidade-tag" hidden>${item}</span>`).join('')}
+                </div>
+                ${remainingTechnicalSkills.length ? `
+                    <div class="habilidades-load-more-wrap">
+                        <button type="button" class="btn btn-secondary habilidades-load-more" aria-controls="habilidades-tecnicas-lista" aria-expanded="false">
+                            <i class="fas fa-plus" aria-hidden="true"></i>
+                            <span data-i18n="sections.projetos.load_more">${I18n.t('sections.projetos.load_more')}</span>
+                        </button>
+                    </div>
+                ` : ''}
             </div>
             <div class="habilidades-categoria">
                 <h4 class="habilidades-categoria-title"><i class="fas fa-users"></i> ${interpessoais.title || ''}</h4>
                 <div class="habilidades-lista">${shuffledInterpessoais.map(item => `<span class="habilidade-tag">${item}</span>`).join('')}</div>
             </div>
         `;
+
+        const loadMoreButton = container.querySelector('.habilidades-load-more');
+        loadMoreButton?.addEventListener('click', () => {
+            container.querySelectorAll('.habilidades-tecnicas .habilidade-tag[hidden]').forEach(skill => {
+                skill.hidden = false;
+            });
+            loadMoreButton.setAttribute('aria-expanded', 'true');
+            loadMoreButton.parentElement.remove();
+        });
     },
 
     generateProjectsSchema() {
@@ -1083,7 +1108,7 @@ class ProjectsSearch {
         this.loadMoreContainer = document.getElementById('projetos-load-more-container');
         this.allProjectsData = [];
         this.currentCategory = 'todos';
-        this.itemsPerPage = 9;
+        this.itemsPerPage = 8;
         this.currentVisible = this.itemsPerPage;
         this.filteredProjects = [];
         this.loadMoreBtn = null;
@@ -1458,8 +1483,80 @@ function shuffleTechnologiesIcons() {
     });
 }
 
+function initTechnologiesLoadMore() {
+    const containers = document.querySelectorAll('.tecnologia-icons');
+    containers.forEach((container, index) => {
+        const icons = Array.from(container.querySelectorAll('.tecnologia-icon'));
+        if (icons.length <= 9) return;
+
+        container.id ||= `tecnologia-icons-${index + 1}`;
+        const hiddenIcons = icons.slice(9);
+        hiddenIcons.forEach(icon => { icon.hidden = true; });
+
+        const control = document.createElement('div');
+        control.className = 'tecnologia-load-more';
+
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'btn btn-secondary';
+        button.setAttribute('aria-controls', container.id);
+        button.setAttribute('aria-expanded', 'false');
+        button.innerHTML = `<i class="fas fa-plus" aria-hidden="true"></i> <span data-i18n="sections.projetos.load_more">${I18n.t('sections.projetos.load_more')}</span>`;
+        button.addEventListener('click', () => {
+            hiddenIcons.forEach(icon => { icon.hidden = false; });
+            button.setAttribute('aria-expanded', 'true');
+            control.remove();
+        });
+
+        control.appendChild(button);
+        container.parentElement.appendChild(control);
+    });
+}
+
 // ==================== FUNÇÃO PARA INICIALIZAR A SEÇÃO DE DOAÇÕES ====================
 function initDoacoes() {
+    const donationTabs = document.querySelector('.doacoes-tabs');
+    if (donationTabs && !donationTabs._tabsInitialized) {
+        const tabs = Array.from(donationTabs.querySelectorAll('[role="tab"]'));
+        const panels = Array.from(donationTabs.querySelectorAll('[role="tabpanel"]'));
+
+        const activateTab = (selectedTab) => {
+            tabs.forEach(tab => {
+                const selected = tab === selectedTab;
+                tab.setAttribute('aria-selected', String(selected));
+                tab.tabIndex = selected ? 0 : -1;
+            });
+
+            panels.forEach(panel => {
+                panel.hidden = panel.getAttribute('aria-labelledby') !== selectedTab.id;
+            });
+        };
+
+        donationTabs.addEventListener('click', event => {
+            const tab = event.target.closest('[role="tab"]');
+            if (tab) activateTab(tab);
+        });
+
+        donationTabs.addEventListener('keydown', event => {
+            const currentTab = event.target.closest('[role="tab"]');
+            if (!currentTab) return;
+
+            const currentIndex = tabs.indexOf(currentTab);
+            let nextIndex;
+            if (event.key === 'ArrowRight') nextIndex = (currentIndex + 1) % tabs.length;
+            else if (event.key === 'ArrowLeft') nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+            else if (event.key === 'Home') nextIndex = 0;
+            else if (event.key === 'End') nextIndex = tabs.length - 1;
+            else return;
+
+            event.preventDefault();
+            tabs[nextIndex].focus();
+            activateTab(tabs[nextIndex]);
+        });
+
+        donationTabs._tabsInitialized = true;
+    }
+
     const qrcodeDiv = document.getElementById('qrcode');
     if (qrcodeDiv) {
         qrcodeDiv.innerHTML = '';
@@ -1467,8 +1564,8 @@ function initDoacoes() {
             const pixPayload = "00020126580014BR.GOV.BCB.PIX0136c348f1e6-72fa-4988-a2e9-3ac7d539de845204000053039865802BR5915Leandro Stanger6009SAO PAULO62140510tNIDka78Nd6304D2D3";
             new QRCode(qrcodeDiv, {
                 text: pixPayload,
-                width: 200,
-                height: 200,
+                width: 100,
+                height: 100,
                 colorDark: document.documentElement.classList.contains('light-theme') ? '#000000' : '#ffffff',
                 colorLight: document.documentElement.classList.contains('light-theme') ? '#ffffff' : '#000000',
                 correctLevel: QRCode.CorrectLevel.H
@@ -1592,7 +1689,7 @@ function initDoacoes() {
 
     if (cryptoContainer && !cryptoContainer._paginationInitialized) {
         const cryptoItems = Array.from(cryptoContainer.querySelectorAll(':scope > .crypto-item'));
-        const pageSize = 9;
+        const pageSize = 10;
         let visibleCount = Math.min(pageSize, cryptoItems.length);
 
         cryptoItems.forEach((item, index) => {
@@ -1626,21 +1723,6 @@ function initDoacoes() {
 
     const cryptoContainerQR = document.querySelector('.doacoes-crypto');
     if (cryptoContainerQR) {
-        cryptoContainerQR.querySelectorAll('.crypto-qr').forEach(qrDiv => {
-            qrDiv.innerHTML = '';
-            const address = qrDiv.dataset.address;
-            if (address && typeof QRCode !== 'undefined') {
-                new QRCode(qrDiv, {
-                    text: address,
-                    width: 100,
-                    height: 100,
-                    colorDark: document.documentElement.classList.contains('light-theme') ? '#000000' : '#ffffff',
-                    colorLight: document.documentElement.classList.contains('light-theme') ? '#ffffff' : '#000000',
-                    correctLevel: QRCode.CorrectLevel.H
-                });
-            }
-        });
-
         if (!cryptoContainerQR._hasCopyListener) {
             cryptoContainerQR.addEventListener('click', async (e) => {
                 const copyButton = e.target.closest('.btn-copy-crypto');
@@ -1752,6 +1834,7 @@ document.addEventListener('htmx:afterSwap', function(evt) {
 
         await I18n.loadTranslations(AppState.currentLang);
 
+        initTechnologiesLoadMore();
         updateCurrentYear();
         initTypewriter();
         setupLanguageSelector();

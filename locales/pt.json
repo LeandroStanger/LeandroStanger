@@ -128,6 +128,7 @@
       "experiencia": {
         "title": "Experiência Profissional",
         "brand_button": "Marcas que trabalhei",
+        "brands_count": "+ {count} marcas",
         "carousel_pause": "Pausar carrossel",
         "carousel_play": "Reproduzir carrossel",
         "items": [
@@ -693,7 +694,7 @@
         "description": "Se preferir doar em dólar, você pode me apoiar no Ko-fi. É rápido e fácil!"
       },
       "transferencia": {
-        "title": "Transferência ou depósito bancário",
+        "title": "Transferência ou débito bancário",
         "bankLabel": "Banco:",
         "agencyLabel": "Agência:",
         "accountLabel": "Conta Corrente:",
@@ -721,6 +722,11 @@
       "title": "Feed de Atualizações",
       "subtitle": "Últimas novidades e posts",
       "items": [
+        {
+          "title": "Nova versão V2 do site no ar!",
+          "text": "A versão 2 traz um portfólio mais organizado, com experiências profissionais em cards por cargo, listas expansíveis de tecnologias e habilidades e melhorias na seção de doações.",
+          "date": "Publicado em: 10/10/2026"
+        },
         {
           "title": "Novo carrossel de marcas trabalhadas!",
           "text": "A seção \"Marcas que trabalhei\" agora é exibida em um carrossel automático, com controles para pausar e retomar. A lista reúne apenas marcas com as quais trabalhei.",

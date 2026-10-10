@@ -128,6 +128,7 @@
       "experiencia": {
         "title": "Expérience Professionnelle",
         "brand_button": "Marques avec lesquelles j'ai travaillé",
+        "brands_count": "+ {count} marques",
         "carousel_pause": "Mettre en pause le carrousel",
         "carousel_play": "Reprendre le carrousel",
         "items": [
@@ -721,6 +722,11 @@
       "title": "Flux de mises à jour",
       "subtitle": "Dernières nouvelles et articles",
       "items": [
+        {
+          "title": "La version 2 du site est disponible !",
+          "text": "La version 2 propose un portfolio mieux organisé, avec les expériences professionnelles présentées par poste, des listes extensibles de technologies et de compétences, ainsi que des améliorations de la section des dons.",
+          "date": "Publié le : 10/10/2026"
+        },
         {
           "title": "Nouveau carrousel des marques avec lesquelles j'ai travaillé !",
           "text": "La section \"Marques avec lesquelles j'ai travaillé\" est maintenant affichée dans un carrousel automatique, avec des commandes pour le mettre en pause et le reprendre. La liste ne contient que les marques avec lesquelles j'ai travaillé.",

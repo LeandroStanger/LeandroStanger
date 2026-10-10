@@ -128,6 +128,7 @@
       "experiencia": {
         "title": "Berufserfahrung",
         "brand_button": "Marken, mit denen ich gearbeitet habe",
+        "brands_count": "+ {count} Marken",
         "carousel_pause": "Karussell pausieren",
         "carousel_play": "Karussell abspielen",
         "items": [
@@ -721,6 +722,11 @@
       "title": "Feed-Updates",
       "subtitle": "Neueste Nachrichten und Beiträge",
       "items": [
+        {
+          "title": "Website-Version 2 ist da!",
+          "text": "Version 2 bietet ein übersichtlicheres Portfolio mit Berufserfahrungen in Karten pro Position, erweiterbaren Listen für Technologien und Fähigkeiten sowie Verbesserungen im Spendenbereich.",
+          "date": "Veröffentlicht am: 10.10.2026"
+        },
         {
           "title": "Neues Karussell mit Marken, mit denen ich gearbeitet habe!",
           "text": "Der Abschnitt \"Marken, mit denen ich gearbeitet habe\" wird jetzt in einem automatischen Karussell mit Steuerelementen zum Pausieren und Fortsetzen angezeigt. Die Liste enthält nur Marken, mit denen ich gearbeitet habe.",

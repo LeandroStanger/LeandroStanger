@@ -128,6 +128,7 @@
       "experiencia": {
         "title": "Esperienza Professionale",
         "brand_button": "Marchi con cui ho lavorato",
+        "brands_count": "+ {count} marchi",
         "carousel_pause": "Metti in pausa il carosello",
         "carousel_play": "Riprendi il carosello",
         "items": [
@@ -721,6 +722,11 @@
       "title": "Feed degli Aggiornamenti",
       "subtitle": "Ultime notizie e post",
       "items": [
+        {
+          "title": "È arrivata la versione 2 del sito!",
+          "text": "La versione 2 offre un portfolio più organizzato, con esperienze professionali suddivise in schede per ruolo, elenchi espandibili di tecnologie e competenze e miglioramenti alla sezione delle donazioni.",
+          "date": "Pubblicato il: 10/10/2026"
+        },
         {
           "title": "Nuovo carosello dei marchi con cui ho lavorato!",
           "text": "La sezione \"Marchi con cui ho lavorato\" ora è mostrata in un carosello automatico, con comandi per metterlo in pausa e riprenderlo. L'elenco include solo i marchi con cui ho lavorato.",

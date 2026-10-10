@@ -128,6 +128,7 @@
       "experiencia": {
         "title": "Professional Experience",
         "brand_button": "Brands I've worked with",
+        "brands_count": "+ {count} brands",
         "carousel_pause": "Pause carousel",
         "carousel_play": "Play carousel",
         "items": [
@@ -721,6 +722,11 @@
       "title": "Feed Updates",
       "subtitle": "Latest news and posts",
       "items": [
+        {
+          "title": "Website version 2 is here!",
+          "text": "Version 2 brings a more organized portfolio, with professional experience grouped into role cards, expandable technology and skills lists, and improvements to the donations section.",
+          "date": "Published on: 10/10/2026"
+        },
         {
           "title": "New carousel of brands I've worked with!",
           "text": "The \"Brands I've worked with\" section is now displayed as an automatic carousel, with controls to pause and resume it. The list includes only brands I've worked with.",
