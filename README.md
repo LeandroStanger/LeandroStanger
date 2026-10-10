@@ -1,10 +1,10 @@
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=10b981&height=120&section=header"/>
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=2563eb&height=120&section=header"/>
 
-[![Typing SVG](https://typingsvg.vercel.app/api/svg?width=1000&height=80&pause=10000&backgroundOpacity=0&border=false&cursorStyle=block&deletionBehavior=stay&lines=%5B%7B%22text%22%3A%22Leandro+Stanger+-+Desenvolvedor+Full-Stack%21%22%2C%22font%22%3A%22Consolas%22%2C%22color%22%3A%22%2310b981%22%2C%22fontSize%22%3A38%2C%22typingSpeed%22%3A0.3333333333333333%2C%22fontWeight%22%3A%22500%22%7D%5D)](https://github.com/whiteSHADOW1234/TypingSVG)
+[![Typing SVG](https://typingsvg.vercel.app/api/svg?width=1000&height=80&pause=10000&backgroundOpacity=0&border=false&cursorStyle=block&deletionBehavior=stay&lines=%5B%7B%22text%22%3A%22Leandro+Stanger+-+Desenvolvedor+Full-Stack%21%22%2C%22font%22%3A%22Consolas%22%2C%22color%22%3A%22%232563eb%22%2C%22fontSize%22%3A38%2C%22typingSpeed%22%3A0.3333333333333333%2C%22fontWeight%22%3A%22500%22%7D%5D)](https://github.com/whiteSHADOW1234/TypingSVG)
 
 <div align="center">
   
-[![GitHub Pages](https://img.shields.io/badge/Portfólio_Online-10b981?style=for-the-badge&logo=opsgenie&logoColor=10b981&labelColor=000000)](https://leandrostanger.github.io/LeandroStanger/)
+[![GitHub Pages](https://img.shields.io/badge/Portfólio_Online-2563eb?style=for-the-badge&logo=opsgenie&logoColor=2563eb&labelColor=000000)](https://leandrostanger.github.io/LeandroStanger/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=logmein&logoColor=0077B5&labelColor=000000)](https://linkedin.com/in/leandrostanger1)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=000000)](https://github.com/LeandroStanger)
 </div>
@@ -51,27 +51,27 @@ class Tecnologias {
 ## Projetos em Destaque
 
 ### [Gerenciador de Lista](https://github.com/LeandroStanger/GerenciadorDeLista)
-[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=reacthookform&logoColor=97ca00)](https://leandrostanger.github.io/GerenciadorDeLista/)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=reacthookform&logoColor=2563eb)](https://leandrostanger.github.io/GerenciadorDeLista/)
 Sistema para gerenciamento de listas de pessoas com armazenamento local.
 
 ### [Sistema de Login](https://github.com/LeandroStanger/SistemaDeLogin)
-[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=verizon&logoColor=97ca00)](https://leandrostanger.github.io/SistemaDeLogin/)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=verizon&logoColor=2563eb)](https://leandrostanger.github.io/SistemaDeLogin/)
 Sistema completo de autenticação com validação e registro de usuários.
 
 ### [Cidades com Altas Temperaturas](https://github.com/LeandroStanger/CidadesComAltasTemperaturas)
-[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=accuweather&logoColor=97ca00)](https://leandrostanger.github.io/CidadesComAltasTemperaturas/)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=accuweather&logoColor=2563eb)](https://leandrostanger.github.io/CidadesComAltasTemperaturas/)
 Aplicação com dados climáticos fictícios de cidades quentes.
 
 ### [Corrida de Carro](https://github.com/LeandroStanger/CorridaDeCarro)
-[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=starship&logoColor=97ca00)](https://leandrostanger.github.io/CorridaDeCarro/)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=starship&logoColor=2563eb)](https://leandrostanger.github.io/CorridaDeCarro/)
 Simulador de apostas em corridas com escolha de números.
 
 ### [Formulário de Feedback](https://github.com/LeandroStanger/FormularioDeFeedback)
-[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=googleforms&logoColor=97ca00)](https://leandrostanger.github.io/FormularioDeFeedback/)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=googleforms&logoColor=2563eb)](https://leandrostanger.github.io/FormularioDeFeedback/)
 Formulário interativo para coleta de feedback com validação.
 
 ### [Animais no Zoológico](https://github.com/LeandroStanger/AnimaisNoZoologico)
-[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=animalplanet&logoColor=97ca00)](https://leandrostanger.github.io/AnimaisNoZoologico/)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=animalplanet&logoColor=2563eb)](https://leandrostanger.github.io/AnimaisNoZoologico/)
 Site educativo sobre animais com dados inventados para demonstração.
 
 <div align="right">
@@ -166,8 +166,8 @@ Coleção de meus primeiros projetos de programação, demonstrando minha evolu�
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=LeandroStanger&theme=vue-dark&hide_border=true&locale=pt_BR&date_format=j%2Fn%5B%2FY%5D)](https://github.com/LeandroStanger)
 
-[![GitHub Stats](https://helio-github-stats.vercel.app/api?username=LeandroStanger&custom_title=GitHub+Stats&theme=dark&title_color=10b981&text_color=ffffff&icon_color=10b981&ring_color=10b981&border_color=e4e2e2&hide_border=true&locale=pt-br&border_radius=4.5&card_width=466&hide_title=false&hide_rank=false&rank_icon=default&show_icons=true&include_all_commits=true&line_height=25&text_bold=true&disable_animations=false&number_format=short&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)](https://github.com/LeandroStanger)
-[![Linguagens mais usadas](https://helio-github-stats.vercel.app/api/top-langs?username=LeandroStanger&layout=pie&stats_format=percentages&&theme=dark&title_color=10b981&text_color=ffffff&icon_color=10b981&ring_color=10b981&border_color=e4e2e2&hide_border=true&border_radius=4.5&card_width=245&locale=pt-br&custom_title=Linguagens+mais+usadas)](https://github.com/LeandroStanger)
+[![GitHub Stats](https://helio-github-stats.vercel.app/api?username=LeandroStanger&custom_title=GitHub+Stats&theme=dark&title_color=2563eb&text_color=ffffff&icon_color=2563eb&ring_color=2563eb&border_color=e4e2e2&hide_border=true&locale=pt-br&border_radius=4.5&card_width=466&hide_title=false&hide_rank=false&rank_icon=default&show_icons=true&include_all_commits=true&line_height=25&text_bold=true&disable_animations=false&number_format=short&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)](https://github.com/LeandroStanger)
+[![Linguagens mais usadas](https://helio-github-stats.vercel.app/api/top-langs?username=LeandroStanger&layout=pie&stats_format=percentages&&theme=dark&title_color=2563eb&text_color=ffffff&icon_color=2563eb&ring_color=2563eb&border_color=e4e2e2&hide_border=true&border_radius=4.5&card_width=245&locale=pt-br&custom_title=Linguagens+mais+usadas)](https://github.com/LeandroStanger)
 </div>
 
 ## Portfólio Completo
@@ -180,7 +180,7 @@ Coleção de meus primeiros projetos de programação, demonstrando minha evolu�
 Busco uma posição na área de TI como Desenvolvedor ou Analista de Banco de Dados, onde possa aplicar meus conhecimentos em manutenção de computadores e redes, além de continuar desenvolvendo minhas habilidades em suporte técnico, administração de sistemas, desenvolvimento de software e gerenciamento de bancos de dados. 
 <div align="center">
   
-[![Currículo](https://img.shields.io/badge/Currículo-10b981?style=for-the-badge&logo=googleforms&logoColor=10b981&labelColor=000000)](https://leandrostanger.github.io/LeandroStanger/#curriculo)
+[![Currículo](https://img.shields.io/badge/Currículo-2563eb?style=for-the-badge&logo=googleforms&logoColor=2563eb&labelColor=000000)](https://leandrostanger.github.io/LeandroStanger/#curriculo)
 </div>
 
 ## Contato
@@ -209,4 +209,4 @@ Sua contribuição voluntária ajuda diretamente na continuidade dos meus estudo
 [![Visitor Count](https://komarev.com/ghpvc/?username=leandrostanger&color=blueviolet&style=for-the-badge)](https://leandrostanger.github.io/LeandroStanger)
 
 </div>
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=10b981&height=120&section=footer"/>
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=2563eb&height=120&section=footer"/>
