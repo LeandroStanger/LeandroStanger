@@ -50,30 +50,29 @@ class Tecnologias {
 
 ## Projetos em Destaque
 
-### [Gerenciador de Lista](https://github.com/LeandroStanger/GerenciadorDeLista)
-[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=reacthookform&logoColor=2563eb)](https://leandrostanger.github.io/GerenciadorDeLista/)
-Sistema para gerenciamento de listas de pessoas com armazenamento local.
+### [UniversidadeLivre](https://github.com/LeandroStanger/UniversidadeLivre)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=bookstack&logoColor=2563eb)](https://github.com/LeandroStanger/UniversidadeLivre)
+Plataforma institucional da Universidade Livre, oferecendo informações sobre cursos de graduação (com ênfase em Matemática), programas de pós-graduação, corpo docente, pesquisa e extensão. Desenvolvido com design responsivo para desktop e dispositivos móveis.
+
+### [Leandro Stanger Soluções em Informática](https://github.com/LeandroStanger/LeandroStanger-Solucoes-em-Informatica)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=homeassistantcommunitystore&logoColor=2563eb)](https://github.com/LeandroStanger/LeandroStanger-Solucoes-em-Informatica)
+Site institucional da Leandro Stanger Soluções em Informática, empresa especializada em assistência técnica profissional. O projeto apresenta os serviços oferecidos, com valores e descrições detalhadas, além de facilitar o contato direto via WhatsApp para agendamentos e orçamentos.
+
+### [Calculadora](https://github.com/LeandroStanger/Calculadora)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=glance&logoColor=2563eb)](https://github.com/LeandroStanger/Calculadora)
+Uma calculadora web funcional com interface limpa e intuitiva, capaz de realizar operações matemáticas básicas.
+
+### [Sorteio de Números](https://github.com/LeandroStanger/SorteioDeNumeros)
+[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=openjsfoundation&logoColor=2563eb)](https://github.com/LeandroStanger/SorteioDeNumeros)
+Uma aplicação web simples e interativa para realizar sorteios aleatórios de números dentro de um intervalo definido pelo usuário.
 
 ### [Sistema de Login](https://github.com/LeandroStanger/SistemaDeLogin)
 [![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=verizon&logoColor=2563eb)](https://leandrostanger.github.io/SistemaDeLogin/)
-Sistema completo de autenticação com validação e registro de usuários.
-
-### [Cidades com Altas Temperaturas](https://github.com/LeandroStanger/CidadesComAltasTemperaturas)
-[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=accuweather&logoColor=2563eb)](https://leandrostanger.github.io/CidadesComAltasTemperaturas/)
-Aplicação com dados climáticos fictícios de cidades quentes.
-
-### [Corrida de Carro](https://github.com/LeandroStanger/CorridaDeCarro)
-[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=starship&logoColor=2563eb)](https://leandrostanger.github.io/CorridaDeCarro/)
-Simulador de apostas em corridas com escolha de números.
+Um sistema de login moderno e responsivo, desenvolvido com HTML, CSS e JavaScript, para controle de acesso em aplicações web.
 
 ### [Formulário de Feedback](https://github.com/LeandroStanger/FormularioDeFeedback)
 [![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=googleforms&logoColor=2563eb)](https://leandrostanger.github.io/FormularioDeFeedback/)
-Formulário interativo para coleta de feedback com validação.
-
-### [Animais no Zoológico](https://github.com/LeandroStanger/AnimaisNoZoologico)
-[![Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=animalplanet&logoColor=2563eb)](https://leandrostanger.github.io/AnimaisNoZoologico/)
-Site educativo sobre animais com dados inventados para demonstração.
-
+Um formulário de feedback interativo e responsivo, desenvolvido para coletar opiniões e avaliações de usuários de forma eficiente e amigável.
 <div align="right">
 
 [![Ver todos projetos](https://img.shields.io/badge/Ver_todos_os_projetos-FFE500?style=for-the-badge&logo=cobalt&logoColor=FFE500&labelColor=000000)](https://leandrostanger.github.io/LeandroStanger/#projetos)
