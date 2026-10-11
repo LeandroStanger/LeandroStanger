@@ -12,6 +12,19 @@
   },
   "scroll": "スクロール",
   "ongoing": "進行中",
+  "share": {
+    "button": "共有",
+    "native": "その他の共有方法...",
+    "copy": "リンクをコピー",
+    "copied": "リンクをコピーしました",
+    "copy_error": "リンクをコピーできませんでした",
+    "share_error": "共有できませんでした",
+    "whatsapp": "WhatsApp",
+    "linkedin": "LinkedIn",
+    "facebook": "Facebook",
+    "x": "X",
+    "email": "メール"
+  },
   "sections": {
     "sobre": {
       "number": "01",

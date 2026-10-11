@@ -12,6 +12,19 @@
   },
   "scroll": "滚动",
   "ongoing": "进行中",
+  "share": {
+    "button": "分享",
+    "native": "更多选项...",
+    "copy": "复制链接",
+    "copied": "链接已复制",
+    "copy_error": "无法复制链接",
+    "share_error": "无法分享",
+    "whatsapp": "WhatsApp",
+    "linkedin": "LinkedIn",
+    "facebook": "Facebook",
+    "x": "X",
+    "email": "电子邮件"
+  },
   "sections": {
     "sobre": {
       "number": "01",

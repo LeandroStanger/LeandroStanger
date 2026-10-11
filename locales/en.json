@@ -12,6 +12,19 @@
   },
   "scroll": "Scroll",
   "ongoing": "in progress",
+  "share": {
+    "button": "Share",
+    "native": "More options...",
+    "copy": "Copy link",
+    "copied": "Link copied",
+    "copy_error": "Could not copy the link",
+    "share_error": "Could not share",
+    "whatsapp": "WhatsApp",
+    "linkedin": "LinkedIn",
+    "facebook": "Facebook",
+    "x": "X",
+    "email": "Email"
+  },
   "sections": {
     "sobre": {
       "number": "01",

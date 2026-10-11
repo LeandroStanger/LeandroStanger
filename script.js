@@ -43,6 +43,19 @@ const MINIMAL_TRANSLATIONS = {
     },
     "scroll": "Scroll",
     "ongoing": "em andamento",
+    "share": {
+        "button": "Compartilhar",
+        "native": "Mais opções...",
+        "copy": "Copiar link",
+        "copied": "Link copiado",
+        "copy_error": "Não foi possível copiar o link",
+        "share_error": "Não foi possível compartilhar",
+        "whatsapp": "WhatsApp",
+        "linkedin": "LinkedIn",
+        "facebook": "Facebook",
+        "x": "X",
+        "email": "E-mail"
+    },
     "sections": {
         "curriculo": {
             "experiencia": {
@@ -163,6 +176,14 @@ const I18n = {
 
         document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
             el.placeholder = this.t(el.getAttribute('data-i18n-placeholder'));
+        });
+
+        document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+            el.setAttribute('aria-label', this.t(el.getAttribute('data-i18n-aria-label')));
+        });
+
+        document.querySelectorAll('[data-i18n-title]').forEach(el => {
+            el.title = this.t(el.getAttribute('data-i18n-title'));
         });
 
         document.title = this.t('site.title');
@@ -1435,6 +1456,168 @@ function initBackToTop() {
     });
 }
 
+function initShareWidget() {
+    const widget = document.getElementById('share-widget');
+    const toggle = document.getElementById('share-toggle');
+    const menu = document.getElementById('share-menu');
+    const nativeButton = document.getElementById('share-native');
+    const copyButton = document.getElementById('share-copy');
+    const status = document.getElementById('share-status');
+    const currentSection = document.getElementById('share-current-section');
+    const sections = ['sobre', 'curriculo', 'tecnologias', 'projetos', 'contato', 'doacoes', 'feed']
+        .map(id => document.getElementById(id))
+        .filter(Boolean);
+    if (!widget || !toggle || !menu || !sections.length) return;
+
+    let activeTrigger = null;
+
+    sections.forEach(section => {
+        const title = section.querySelector('.section-title');
+        if (!title || section.querySelector('[data-share-section]')) return;
+
+        const row = document.createElement('div');
+        row.className = 'section-title-row';
+        const button = document.createElement('button');
+        button.className = 'section-share-button';
+        button.type = 'button';
+        button.dataset.shareSection = section.id;
+        button.dataset.i18nAriaLabel = 'share.button';
+        button.dataset.i18nTitle = 'share.button';
+        button.setAttribute('aria-label', I18n.t('share.button'));
+        button.title = I18n.t('share.button');
+        const icon = document.createElement('i');
+        icon.className = 'fas fa-share-nodes';
+        icon.setAttribute('aria-hidden', 'true');
+        const label = document.createElement('span');
+        label.dataset.i18n = 'share.button';
+        label.textContent = I18n.t('share.button');
+        button.append(icon, label);
+        title.parentNode.insertBefore(row, title);
+        row.append(title, button);
+    });
+
+    nativeButton.hidden = typeof navigator.share !== 'function';
+
+    const updateShareTargets = (sectionId) => {
+        const threshold = window.innerHeight * 0.4;
+        const visibleSection = sections.filter(section => section.getBoundingClientRect().top <= threshold).at(-1);
+        const activeSection = sections.find(section => section.id === sectionId) || visibleSection || sections[0];
+        const title = activeSection.querySelector('h2')?.innerText.trim() || document.title;
+        const url = new URL(window.location.href);
+        url.hash = activeSection.id;
+        const shareUrl = url.toString();
+        const text = `${title} | ${document.title}`;
+
+        currentSection.textContent = title;
+        document.getElementById('share-whatsapp').href = `https://wa.me/?text=${encodeURIComponent(`${text} ${shareUrl}`)}`;
+        document.getElementById('share-linkedin').href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`;
+        document.getElementById('share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+        document.getElementById('share-x').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(shareUrl)}`;
+        document.getElementById('share-email').href = `mailto:?subject=${encodeURIComponent(text)}&body=${encodeURIComponent(shareUrl)}`;
+        copyButton.dataset.shareUrl = shareUrl;
+        nativeButton.dataset.shareUrl = shareUrl;
+        nativeButton.dataset.shareTitle = title;
+    };
+
+    const closeMenu = () => {
+        menu.hidden = true;
+        toggle.setAttribute('aria-expanded', 'false');
+        activeTrigger?.setAttribute('aria-expanded', 'false');
+        activeTrigger = null;
+    };
+
+    const positionMenu = trigger => {
+        const triggerRect = trigger.getBoundingClientRect();
+        const menuHeight = menu.offsetHeight;
+        const menuWidth = menu.offsetWidth;
+        const belowTop = triggerRect.bottom + 8;
+        const top = belowTop + menuHeight <= window.innerHeight - 8
+            ? belowTop
+            : Math.max(8, triggerRect.top - menuHeight - 8);
+        const right = Math.min(
+            Math.max(8, window.innerWidth - triggerRect.right),
+            window.innerWidth - menuWidth - 8
+        );
+        menu.style.top = `${top}px`;
+        menu.style.right = `${right}px`;
+    };
+
+    const openMenu = (trigger, sectionId) => {
+        if (!menu.hidden && activeTrigger === trigger) {
+            closeMenu();
+            return;
+        }
+
+        updateShareTargets(sectionId);
+        activeTrigger?.setAttribute('aria-expanded', 'false');
+        activeTrigger = trigger;
+        activeTrigger.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-expanded', String(trigger === toggle));
+        menu.hidden = false;
+        positionMenu(trigger);
+    };
+
+    toggle.addEventListener('click', () => openMenu(toggle));
+    document.querySelectorAll('[data-share-section]').forEach(button => {
+        button.setAttribute('aria-expanded', 'false');
+        button.addEventListener('click', () => openMenu(button, button.dataset.shareSection));
+    });
+
+    copyButton.addEventListener('click', async () => {
+        const shareUrl = copyButton.dataset.shareUrl;
+        try {
+            if (navigator.clipboard?.writeText) {
+                await navigator.clipboard.writeText(shareUrl);
+            } else {
+                const input = document.createElement('textarea');
+                input.value = shareUrl;
+                input.setAttribute('readonly', '');
+                input.style.position = 'fixed';
+                input.style.opacity = '0';
+                document.body.appendChild(input);
+                input.select();
+                const copied = document.execCommand('copy');
+                input.remove();
+                if (!copied) throw new Error('Falha ao copiar link');
+            }
+            status.textContent = I18n.t('share.copied');
+        } catch (error) {
+            status.textContent = I18n.t('share.copy_error');
+        }
+    });
+
+    nativeButton.addEventListener('click', async () => {
+        try {
+            await navigator.share({
+                title: nativeButton.dataset.shareTitle,
+                text: document.title,
+                url: nativeButton.dataset.shareUrl
+            });
+            closeMenu();
+        } catch (error) {
+            if (error.name !== 'AbortError') status.textContent = I18n.t('share.share_error');
+        }
+    });
+
+    document.addEventListener('click', event => {
+        if (!widget.contains(event.target) && !event.target.closest?.('[data-share-section]')) closeMenu();
+    });
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && !menu.hidden) {
+            const trigger = activeTrigger || toggle;
+            closeMenu();
+            trigger.focus();
+        }
+    });
+    const refreshShareTargets = () => {
+        updateShareTargets(activeTrigger?.dataset.shareSection);
+        if (!menu.hidden && activeTrigger) positionMenu(activeTrigger);
+    };
+    window.addEventListener('scroll', refreshShareTargets, { passive: true });
+    window.addEventListener('resize', refreshShareTargets);
+    updateShareTargets();
+}
+
 function setupLanguageSelector() {
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', () => I18n.setLanguage(btn.dataset.lang));
@@ -1861,6 +2044,7 @@ document.addEventListener('htmx:afterSwap', function(evt) {
         setupLanguageSelector();
         initSmoothScroll();
         initBackToTop();
+        initShareWidget();
         initDownloadCurriculo();
         initDoacoes();
 

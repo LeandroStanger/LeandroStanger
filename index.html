@@ -115,6 +115,44 @@
 </head>
 
 <body>
+    <aside class="share-widget" id="share-widget">
+        <button class="share-toggle" id="share-toggle" type="button" aria-expanded="false" aria-controls="share-menu">
+            <i class="fas fa-share-nodes" aria-hidden="true"></i>
+            <span data-i18n="share.button">Compartilhar</span>
+        </button>
+        <div class="share-menu" id="share-menu" hidden>
+            <p class="share-current-section" id="share-current-section"></p>
+            <button class="share-menu-item" id="share-native" type="button" hidden>
+                <i class="fas fa-arrow-up-from-bracket" aria-hidden="true"></i>
+                <span data-i18n="share.native">Mais opções...</span>
+            </button>
+            <button class="share-menu-item" id="share-copy" type="button">
+                <i class="fas fa-link" aria-hidden="true"></i>
+                <span data-i18n="share.copy">Copiar link</span>
+            </button>
+            <a class="share-menu-item" id="share-whatsapp" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                <span data-i18n="share.whatsapp">WhatsApp</span>
+            </a>
+            <a class="share-menu-item" id="share-linkedin" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                <span data-i18n="share.linkedin">LinkedIn</span>
+            </a>
+            <a class="share-menu-item" id="share-facebook" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                <span data-i18n="share.facebook">Facebook</span>
+            </a>
+            <a class="share-menu-item" id="share-x" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-x-twitter" aria-hidden="true"></i>
+                <span data-i18n="share.x">X</span>
+            </a>
+            <a class="share-menu-item" id="share-email">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <span data-i18n="share.email">E-mail</span>
+            </a>
+            <p class="share-status" id="share-status" role="status" aria-live="polite"></p>
+        </div>
+    </aside>
     <div id="translation-loader" role="status" aria-live="polite">
         <span class="translation-loader-spinner" aria-hidden="true"></span>
         <p>Carregando tradução...</p>

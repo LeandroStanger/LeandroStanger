@@ -12,6 +12,19 @@
   },
   "scroll": "스크롤",
   "ongoing": "진행 중",
+  "share": {
+    "button": "공유",
+    "native": "더 많은 옵션...",
+    "copy": "링크 복사",
+    "copied": "링크가 복사되었습니다",
+    "copy_error": "링크를 복사할 수 없습니다",
+    "share_error": "공유할 수 없습니다",
+    "whatsapp": "WhatsApp",
+    "linkedin": "LinkedIn",
+    "facebook": "Facebook",
+    "x": "X",
+    "email": "이메일"
+  },
   "sections": {
     "sobre": {
       "number": "01",
