@@ -1467,7 +1467,7 @@ function initShareWidget() {
     const sections = ['sobre', 'curriculo', 'tecnologias', 'projetos', 'contato', 'doacoes', 'feed']
         .map(id => document.getElementById(id))
         .filter(Boolean);
-    if (!widget || !toggle || !menu || !sections.length) return;
+    if (!widget || !menu || !sections.length) return;
 
     let activeTrigger = null;
 
@@ -1521,7 +1521,7 @@ function initShareWidget() {
 
     const closeMenu = () => {
         menu.hidden = true;
-        toggle.setAttribute('aria-expanded', 'false');
+        toggle?.setAttribute('aria-expanded', 'false');
         activeTrigger?.setAttribute('aria-expanded', 'false');
         activeTrigger = null;
     };
@@ -1552,12 +1552,12 @@ function initShareWidget() {
         activeTrigger?.setAttribute('aria-expanded', 'false');
         activeTrigger = trigger;
         activeTrigger.setAttribute('aria-expanded', 'true');
-        toggle.setAttribute('aria-expanded', String(trigger === toggle));
+        toggle?.setAttribute('aria-expanded', String(trigger === toggle));
         menu.hidden = false;
         positionMenu(trigger);
     };
 
-    toggle.addEventListener('click', () => openMenu(toggle));
+    toggle?.addEventListener('click', () => openMenu(toggle));
     document.querySelectorAll('[data-share-section]').forEach(button => {
         button.setAttribute('aria-expanded', 'false');
         button.addEventListener('click', () => openMenu(button, button.dataset.shareSection));
@@ -1606,7 +1606,7 @@ function initShareWidget() {
         if (event.key === 'Escape' && !menu.hidden) {
             const trigger = activeTrigger || toggle;
             closeMenu();
-            trigger.focus();
+            trigger?.focus();
         }
     });
     const refreshShareTargets = () => {
