@@ -306,12 +306,11 @@
                         <div class="habilidades-grid" id="habilidades-grid"></div>
                     </article>
                     <div class="curriculo-actions">
-                        <a href="https://raw.githubusercontent.com/LeandroStanger/LeandroStanger/main/curriculo/Curriculo%20Leandro%20Stanger.pdf"
-                            target="_blank" rel="noopener noreferrer" class="btn btn-download" id="download-curriculo"
+                        <button type="button" class="btn btn-download" id="download-curriculo"
                             aria-label="Baixar currículo completo em PDF">
                             <i class="fas fa-download" aria-hidden="true"></i>
                             <span data-i18n="sections.curriculo.download">Baixar Currículo Completo (PDF)</span>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1296,6 +1295,26 @@
         </div>
     </div>
 
+    <div id="curriculo-preview-modal" class="curriculo-preview-modal" hidden>
+        <div class="curriculo-preview-backdrop" data-close-curriculo></div>
+        <div class="curriculo-preview-panel" role="dialog" aria-modal="true" aria-labelledby="curriculo-preview-title">
+            <div class="curriculo-preview-header">
+                <div>
+                    <p class="curriculo-preview-kicker">Pré-visualização</p>
+                    <h3 id="curriculo-preview-title">Currículo profissional</h3>
+                </div>
+                <div class="curriculo-preview-actions">
+                    <button type="button" class="btn btn-secondary" id="close-curriculo-preview">Fechar</button>
+                    <button type="button" class="btn btn-download" id="download-curriculo-pdf">
+                        <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                        <span>Baixar PDF</span>
+                    </button>
+                </div>
+            </div>
+            <iframe id="curriculo-preview-frame" title="Pré-visualização do currículo em PDF"></iframe>
+        </div>
+    </div>
+
     <footer class="main-footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
@@ -1329,6 +1348,8 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 

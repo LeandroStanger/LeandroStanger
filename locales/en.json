@@ -736,6 +736,11 @@
       "subtitle": "Latest news and posts",
       "items": [
         {
+          "title": "Version 2.3: résumé preview and PDF generator!",
+          "text": "Click “Download résumé” to preview the résumé and generate a PDF file for download.",
+          "date": "Published on: 10/14/2026"
+        },
+        {
           "title": "Website version 2 is here!",
           "text": "Version 2 brings a more organized portfolio, with professional experience grouped into role cards, expandable technology and skills lists, and improvements to the donations section.",
           "date": "Published on: 10/10/2026"

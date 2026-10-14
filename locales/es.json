@@ -736,6 +736,11 @@
       "subtitle": "Últimas noticias y publicaciones",
       "items": [
         {
+          "title": "Versión 2.3: ¡vista previa y generador de PDF para el currículum!",
+          "text": "Haz clic en “Descargar currículum” para ver una vista previa y generar el archivo PDF para descargar.",
+          "date": "Publicado el: 14/10/2026"
+        },
+        {
           "title": "¡Ya está aquí la versión 2 del sitio!",
           "text": "La versión 2 ofrece un portafolio más organizado, con la experiencia profesional separada en tarjetas por puesto, listas desplegables de tecnologías y habilidades, y mejoras en la sección de donaciones.",
           "date": "Publicado el: 10/10/2026"
