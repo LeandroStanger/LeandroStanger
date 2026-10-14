@@ -736,6 +736,11 @@
       "subtitle": "Dernières nouvelles et articles",
       "items": [
         {
+          "title": "Version V2.3.4 : fermeture contrôlée de l’aperçu du CV",
+          "text": "L’aperçu du CV se ferme désormais uniquement avec le bouton « Fermer ». Cliquer sur les coins ou l’arrière-plan ne ferme plus la fenêtre.",
+          "date": "Publié le : 14/10/2026"
+        },
+        {
           "title": "Version 2.3.3 : coins arrondis pour l’en-tête du CV",
           "text": "Les coins de l’en-tête du CV sont désormais arrondis dans l’aperçu et le PDF pour une apparence plus cohérente.",
           "date": "Publié le : 14/10/2026"

@@ -736,6 +736,11 @@
       "subtitle": "Últimas noticias y publicaciones",
       "items": [
         {
+          "title": "Versión V2.3.4: cierre controlado de la vista previa del currículum",
+          "text": "La vista previa del currículum ahora solo se cierra con el botón «Cerrar». Hacer clic en las esquinas o en el fondo ya no cierra la ventana.",
+          "date": "Publicado el: 14/10/2026"
+        },
+        {
           "title": "Versión 2.3.3: esquinas redondeadas en el encabezado del currículum",
           "text": "Redondeamos las esquinas del encabezado del currículum en la vista previa y en el PDF para lograr un diseño más uniforme.",
           "date": "Publicado el: 14/10/2026"

@@ -736,6 +736,11 @@
       "subtitle": "Ultime notizie e post",
       "items": [
         {
+          "title": "Versione V2.3.4: chiusura controllata dell’anteprima del CV",
+          "text": "L’anteprima del CV ora si chiude solo con il pulsante “Chiudi”. Fare clic sugli angoli o sullo sfondo non chiude più la finestra.",
+          "date": "Pubblicato il: 14/10/2026"
+        },
+        {
           "title": "Versione 2.3.3: angoli arrotondati nell'intestazione del CV",
           "text": "Abbiamo arrotondato gli angoli dell'intestazione del CV nell'anteprima e nel PDF per un aspetto più uniforme.",
           "date": "Pubblicato il: 14/10/2026"

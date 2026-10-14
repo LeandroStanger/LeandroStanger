@@ -736,6 +736,11 @@
       "subtitle": "Neueste Nachrichten und Beiträge",
       "items": [
         {
+          "title": "Version V2.3.4: Kontrolliertes Schließen der Lebenslauf-Vorschau",
+          "text": "Die Lebenslauf-Vorschau lässt sich jetzt nur noch über die Schaltfläche „Schließen“ schließen. Ein Klick auf die Ecken oder den Hintergrund schließt das Fenster nicht mehr.",
+          "date": "Veröffentlicht am: 14.10.2026"
+        },
+        {
           "title": "Version 2.3.3: abgerundete Ecken im Lebenslauf-Kopfbereich",
           "text": "Die Ecken des Kopfbereichs sind jetzt in der Vorschau und im PDF abgerundet, damit das Design einheitlicher wirkt.",
           "date": "Veröffentlicht am: 14.10.2026"

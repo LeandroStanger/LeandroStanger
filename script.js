@@ -88,6 +88,11 @@ const MINIMAL_TRANSLATIONS = {
             "subtitle": "Últimas novidades",
             "items": [
                 {
+                    "title": "Versão V2.3.4: fechamento controlado da prévia do currículo",
+                    "text": "A pré-visualização do currículo agora só fecha pelo botão “Fechar”. Clicar nos cantos ou no fundo não encerra mais a janela.",
+                    "date": "Publicado em: 14/10/2026"
+                },
+                {
                     "title": "Versão V2.3.3: cabeçalho do currículo com cantos arredondados",
                     "text": "Arredondamos os cantos do cabeçalho do currículo na prévia e no PDF para deixar o visual mais consistente.",
                     "date": "Publicado em: 14/10/2026"
@@ -2265,9 +2270,8 @@ async function initDownloadCurriculo() {
     const modal = document.getElementById('curriculo-preview-modal');
     const closeBtn = document.getElementById('close-curriculo-preview');
     const downloadPdfBtn = document.getElementById('download-curriculo-pdf');
-    const backdrop = document.querySelector('[data-close-curriculo]');
 
-    if (!downloadBtn || !modal || !closeBtn || !downloadPdfBtn || !backdrop) return;
+    if (!downloadBtn || !modal || !closeBtn || !downloadPdfBtn) return;
 
     downloadBtn.addEventListener('click', (event) => {
         event.preventDefault();
@@ -2275,10 +2279,6 @@ async function initDownloadCurriculo() {
     });
 
     closeBtn.addEventListener('click', closeCurriculoPreview);
-    backdrop.addEventListener('click', closeCurriculoPreview);
-    modal.addEventListener('click', (event) => {
-        if (event.target === modal) closeCurriculoPreview();
-    });
 
     downloadPdfBtn.addEventListener('click', async () => {
         downloadPdfBtn.disabled = true;

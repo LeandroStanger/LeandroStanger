@@ -736,6 +736,11 @@
       "subtitle": "Latest news and posts",
       "items": [
         {
+          "title": "Version V2.3.4: controlled résumé preview closing",
+          "text": "The résumé preview now closes only with the “Close” button. Clicking the corners or backdrop no longer closes the window.",
+          "date": "Published on: 10/14/2026"
+        },
+        {
           "title": "Version 2.3.3: rounded résumé header corners",
           "text": "Rounded the résumé header corners in the preview and PDF for a more consistent appearance.",
           "date": "Published on: 10/14/2026"
