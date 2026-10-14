@@ -88,6 +88,11 @@ const MINIMAL_TRANSLATIONS = {
             "subtitle": "Últimas novidades",
             "items": [
                 {
+                    "title": "Correções da versão V2.3.1: PDF padronizado em todos os dispositivos",
+                    "text": "Corrigimos a geração do currículo em PDF para manter o mesmo layout no desktop e no celular. O arquivo agora é gerado em uma única página, com tamanho e proporções consistentes.",
+                    "date": "Publicado em: 14/10/2026"
+                },
+                {
                     "title": "Nova versão V2.3: gerador de currículo com prévia e PDF!",
                     "text": "Ao clicar em “Baixar currículo”, você pode conferir uma prévia do currículo e gerar o arquivo PDF para download.",
                     "date": "Publicado em: 14/10/2026"
@@ -1974,6 +1979,40 @@ function buildCurriculoPreviewMarkup(data = CURRICULO_DATA) {
                         grid-row: auto;
                     }
                 }
+                body.pdf-export {
+                    width: 1100px;
+                    padding: 0;
+                }
+                body.pdf-export .cv-page {
+                    width: 1100px;
+                    max-width: none;
+                }
+                body.pdf-export .cv-header,
+                body.pdf-export .cv-body {
+                    padding-left: 36px;
+                    padding-right: 36px;
+                }
+                body.pdf-export .cv-contact-list {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+                body.pdf-export .cv-body {
+                    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+                }
+                body.pdf-export .cv-section:first-child {
+                    grid-column: 1 / -1;
+                }
+                body.pdf-export .cv-section:nth-child(2) {
+                    grid-column: 1;
+                    grid-row: 2;
+                }
+                body.pdf-export .cv-section:nth-child(3) {
+                    grid-column: 2;
+                    grid-row: 2;
+                }
+                body.pdf-export .cv-section:nth-child(4) {
+                    grid-column: 1 / -1;
+                    grid-row: 3;
+                }
             </style>
         </head>
         <body>
@@ -2072,9 +2111,14 @@ async function generateCurriculoPdf() {
 
     const previousScrollX = previewWindow.scrollX;
     const previousScrollY = previewWindow.scrollY;
-    previewWindow.scrollTo(0, 0);
+    const previousIframeWidth = iframe.style.width;
+    const alreadyExporting = previewDocument.body.classList.contains('pdf-export');
 
     try {
+        iframe.style.width = '794px';
+        previewDocument.body.classList.add('pdf-export');
+        previewWindow.scrollTo(0, 0);
+
         await new Promise(resolve => {
             previewWindow.requestAnimationFrame(() => {
                 previewWindow.requestAnimationFrame(resolve);
@@ -2128,46 +2172,43 @@ async function generateCurriculoPdf() {
             throw new Error('A biblioteca jsPDF não foi carregada.');
         }
 
+        const pageWidth = 210;
+        const margin = 4;
+        const contentWidth = pageWidth - margin * 2;
+        const scale = contentWidth / canvas.width;
+        const imageHeight = canvas.height * scale;
+        const pageHeight = imageHeight + margin * 2;
         const pdf = new JsPDF({
             unit: 'mm',
-            format: 'a4',
+            format: [pageWidth, pageHeight],
             orientation: 'portrait',
             compress: true
         });
-        const pageWidth = pdf.internal.pageSize.getWidth();
-        const pageHeight = pdf.internal.pageSize.getHeight();
-        const margin = 4;
-        const scale = Math.min(
-            (pageWidth - margin * 2) / canvas.width,
-            (pageHeight - margin * 2) / canvas.height
-        );
-        const imageWidth = canvas.width * scale;
-        const imageHeight = canvas.height * scale;
 
         pdf.addImage(
             canvas.toDataURL('image/jpeg', 0.98),
             'JPEG',
-            (pageWidth - imageWidth) / 2,
-            (pageHeight - imageHeight) / 2,
-            imageWidth,
+            margin,
+            margin,
+            contentWidth,
             imageHeight,
             'CURRICULO',
             'FAST'
         );
-        const imageX = (pageWidth - imageWidth) / 2;
-        const imageY = (pageHeight - imageHeight) / 2;
         pdfLinks.forEach(({ url, bounds }) => {
             pdf.link(
-                imageX + (bounds.left - pageBounds.left) * imageWidth / pageBounds.width,
-                imageY + (bounds.top - pageBounds.top) * imageHeight / pageBounds.height,
-                bounds.width * imageWidth / pageBounds.width,
-                bounds.height * imageHeight / pageBounds.height,
+                margin + (bounds.left - pageBounds.left) * canvas.width / pageBounds.width * scale,
+                margin + (bounds.top - pageBounds.top) * canvas.height / pageBounds.height * scale,
+                bounds.width * canvas.width / pageBounds.width * scale,
+                bounds.height * canvas.height / pageBounds.height * scale,
                 { url, border: [0, 0, 0] }
             );
         });
         pdf.save('Curriculo_Leandro_Stanger.pdf');
     } finally {
         previewWindow.scrollTo(previousScrollX, previousScrollY);
+        iframe.style.width = previousIframeWidth;
+        if (!alreadyExporting) previewDocument.body.classList.remove('pdf-export');
     }
 }
 

@@ -736,6 +736,11 @@
       "subtitle": "Latest news and posts",
       "items": [
         {
+          "title": "Version 2.3.1 fixes: consistent PDFs across devices",
+          "text": "Fixed résumé PDF generation to keep the same layout on desktop and mobile. The file is now generated as a single page with consistent dimensions and proportions.",
+          "date": "Published on: 10/14/2026"
+        },
+        {
           "title": "Version 2.3: résumé preview and PDF generator!",
           "text": "Click “Download résumé” to preview the résumé and generate a PDF file for download.",
           "date": "Published on: 10/14/2026"

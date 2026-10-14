@@ -736,6 +736,11 @@
       "subtitle": "Neueste Nachrichten und Beiträge",
       "items": [
         {
+          "title": "Version 2.3.1: PDF-Korrekturen für einheitliche Ergebnisse auf allen Geräten",
+          "text": "Die PDF-Erstellung des Lebenslaufs wurde korrigiert, damit das Layout auf Desktop und Mobilgeräten gleich bleibt. Die Datei wird jetzt als einzelne Seite mit einheitlichen Abmessungen und Proportionen erstellt.",
+          "date": "Veröffentlicht am: 14.10.2026"
+        },
+        {
           "title": "Version 2.3: Lebenslauf-Vorschau und PDF-Generator!",
           "text": "Klicken Sie auf „Lebenslauf herunterladen“, um eine Vorschau anzuzeigen und die PDF-Datei zum Herunterladen zu erstellen.",
           "date": "Veröffentlicht am: 14.10.2026"

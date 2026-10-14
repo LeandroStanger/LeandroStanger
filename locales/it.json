@@ -736,6 +736,11 @@
       "subtitle": "Ultime notizie e post",
       "items": [
         {
+          "title": "Correzioni della versione 2.3.1: PDF uniforme su tutti i dispositivi",
+          "text": "È stata corretta la generazione del CV in PDF per mantenere lo stesso layout su desktop e dispositivi mobili. Il file viene ora creato in un'unica pagina, con dimensioni e proporzioni uniformi.",
+          "date": "Pubblicato il: 14/10/2026"
+        },
+        {
           "title": "Versione 2.3: anteprima del CV e generatore PDF!",
           "text": "Fai clic su “Scarica CV” per visualizzare l'anteprima e generare il file PDF da scaricare.",
           "date": "Pubblicato il: 14/10/2026"

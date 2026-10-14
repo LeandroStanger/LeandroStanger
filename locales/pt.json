@@ -736,6 +736,11 @@
       "subtitle": "Últimas novidades e posts",
       "items": [
         {
+          "title": "Correções da versão V2.3.1: PDF padronizado em todos os dispositivos",
+          "text": "Corrigimos a geração do currículo em PDF para manter o mesmo layout no desktop e no celular. O arquivo agora é gerado em uma única página, com tamanho e proporções consistentes.",
+          "date": "Publicado em: 14/10/2026"
+        },
+        {
           "title": "Nova versão V2.3: gerador de currículo com prévia e PDF!",
           "text": "Ao clicar em “Baixar currículo”, você pode conferir uma prévia do currículo e gerar o arquivo PDF para download.",
           "date": "Publicado em: 14/10/2026"

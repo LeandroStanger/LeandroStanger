@@ -736,6 +736,11 @@
       "subtitle": "Últimas noticias y publicaciones",
       "items": [
         {
+          "title": "Correcciones de la versión 2.3.1: PDF uniforme en todos los dispositivos",
+          "text": "Corregimos la generación del currículum en PDF para mantener el mismo diseño en computadoras y móviles. El archivo ahora se genera en una sola página, con tamaño y proporciones uniformes.",
+          "date": "Publicado el: 14/10/2026"
+        },
+        {
           "title": "Versión 2.3: ¡vista previa y generador de PDF para el currículum!",
           "text": "Haz clic en “Descargar currículum” para ver una vista previa y generar el archivo PDF para descargar.",
           "date": "Publicado el: 14/10/2026"
