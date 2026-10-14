@@ -736,6 +736,11 @@
       "subtitle": "Últimas noticias y publicaciones",
       "items": [
         {
+          "title": "Versión 2.3.2: foto en el currículum y corrección de la generación del PDF",
+          "text": "Añadimos la foto de perfil al currículum y corregimos el error que impedía generar el PDF con el botón de descarga.",
+          "date": "Publicado el: 14/10/2026"
+        },
+        {
           "title": "Correcciones de la versión 2.3.1: PDF uniforme en todos los dispositivos",
           "text": "Corregimos la generación del currículum en PDF para mantener el mismo diseño en computadoras y móviles. El archivo ahora se genera en una sola página, con tamaño y proporciones uniformes.",
           "date": "Publicado el: 14/10/2026"

@@ -88,6 +88,11 @@ const MINIMAL_TRANSLATIONS = {
             "subtitle": "Últimas novidades",
             "items": [
                 {
+                    "title": "Versão V2.3.2: foto no currículo e correção da geração do PDF",
+                    "text": "Adicionamos a foto de perfil ao currículo e corrigimos o erro que impedia a geração do PDF pelo botão de download.",
+                    "date": "Publicado em: 14/10/2026"
+                },
+                {
                     "title": "Correções da versão V2.3.1: PDF padronizado em todos os dispositivos",
                     "text": "Corrigimos a geração do currículo em PDF para manter o mesmo layout no desktop e no celular. O arquivo agora é gerado em uma única página, com tamanho e proporções consistentes.",
                     "date": "Publicado em: 14/10/2026"
@@ -1833,13 +1838,29 @@ function buildCurriculoPreviewMarkup(data = CURRICULO_DATA) {
                     overflow: hidden;
                 }
                 .cv-header {
+                    display: grid;
+                    grid-template-columns: minmax(0, 1fr) 112px;
+                    align-items: center;
+                    gap: 24px;
                     padding: 32px 36px 20px;
                     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
                     color: #fff;
                 }
+                .cv-header-content {
+                    min-width: 0;
+                }
                 .cv-header h1 {
                     margin: 0 0 8px;
                     font-size: 2.1rem;
+                }
+                .cv-photo {
+                    display: block;
+                    width: 112px;
+                    height: 136px;
+                    border: 2px solid rgba(255,255,255,0.7);
+                    border-radius: 10px;
+                    object-fit: cover;
+                    object-position: center;
                 }
                 .cv-contact-list {
                     display: grid;
@@ -1969,6 +1990,8 @@ function buildCurriculoPreviewMarkup(data = CURRICULO_DATA) {
                 @media (max-width: 640px) {
                     body { padding: 14px; }
                     .cv-header, .cv-body { padding-left: 18px; padding-right: 18px; }
+                    .cv-header { grid-template-columns: minmax(0, 1fr) 84px; gap: 14px; }
+                    .cv-photo { width: 84px; height: 104px; }
                     .cv-contact-list { grid-template-columns: 1fr; }
                     .cv-body { grid-template-columns: 1fr; }
                     .cv-section:first-child,
@@ -2018,10 +2041,14 @@ function buildCurriculoPreviewMarkup(data = CURRICULO_DATA) {
         <body>
             <article class="cv-page">
                 <header class="cv-header">
-                    <h1>${escapeHtml(personal.name)}</h1>
-                    <div class="cv-contact-list">
-                        ${contactsMarkup.map(item => `<div>${item}</div>`).join('')}
+                    <div class="cv-header-content">
+                        <h1>${escapeHtml(personal.name)}</h1>
+                        <div class="cv-contact-list">
+                            ${contactsMarkup.map(item => `<div>${item}</div>`).join('')}
+                        </div>
                     </div>
+                    <img class="cv-photo" src="${escapeHtml(new URL('img/perfil.jpg', document.baseURI).href)}"
+                        alt="Foto de perfil de ${escapeHtml(personal.name)}">
                 </header>
                 <main class="cv-body">
                     <section class="cv-section">
@@ -2086,6 +2113,21 @@ async function generateCurriculoPdf() {
     }
 
     await previewDocument.fonts.ready;
+    await Promise.all(Array.from(resumePage.querySelectorAll('img'), image => new Promise((resolve, reject) => {
+        if (image.complete) {
+            if (image.naturalWidth > 0) {
+                resolve();
+            } else {
+                reject(new Error('Não foi possível carregar a foto do currículo.'));
+            }
+            return;
+        }
+
+        image.addEventListener('load', resolve, { once: true });
+        image.addEventListener('error', () => {
+            reject(new Error('Não foi possível carregar a foto do currículo.'));
+        }, { once: true });
+    })));
 
     if (typeof previewWindow.html2pdf !== 'function') {
         const bundleScript = Array.from(document.scripts)

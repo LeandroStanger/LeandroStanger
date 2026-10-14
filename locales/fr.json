@@ -736,6 +736,11 @@
       "subtitle": "Dernières nouvelles et articles",
       "items": [
         {
+          "title": "Version 2.3.2 : photo sur le CV et correction de la génération du PDF",
+          "text": "La photo de profil a été ajoutée au CV et l’erreur qui empêchait la génération du PDF avec le bouton de téléchargement a été corrigée.",
+          "date": "Publié le : 14/10/2026"
+        },
+        {
           "title": "Corrections de la version 2.3.1 : PDF uniforme sur tous les appareils",
           "text": "La génération du CV en PDF a été corrigée afin de conserver la même mise en page sur ordinateur et sur mobile. Le fichier tient désormais sur une seule page, avec des dimensions et des proportions cohérentes.",
           "date": "Publié le : 14/10/2026"

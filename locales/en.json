@@ -736,6 +736,11 @@
       "subtitle": "Latest news and posts",
       "items": [
         {
+          "title": "Version 2.3.2: résumé photo and PDF generation fix",
+          "text": "Added the profile photo to the résumé and fixed the error that prevented the PDF from being generated with the download button.",
+          "date": "Published on: 10/14/2026"
+        },
+        {
           "title": "Version 2.3.1 fixes: consistent PDFs across devices",
           "text": "Fixed résumé PDF generation to keep the same layout on desktop and mobile. The file is now generated as a single page with consistent dimensions and proportions.",
           "date": "Published on: 10/14/2026"
