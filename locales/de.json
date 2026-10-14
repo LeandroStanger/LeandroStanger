@@ -736,6 +736,11 @@
       "subtitle": "Neueste Nachrichten und Beiträge",
       "items": [
         {
+          "title": "Version 2.3: Lebenslauf-Vorschau und PDF-Generator!",
+          "text": "Klicken Sie auf „Lebenslauf herunterladen“, um eine Vorschau anzuzeigen und die PDF-Datei zum Herunterladen zu erstellen.",
+          "date": "Veröffentlicht am: 14.10.2026"
+        },
+        {
           "title": "Website-Version 2 ist da!",
           "text": "Version 2 bietet ein übersichtlicheres Portfolio mit Berufserfahrungen in Karten pro Position, erweiterbaren Listen für Technologien und Fähigkeiten sowie Verbesserungen im Spendenbereich.",
           "date": "Veröffentlicht am: 10.10.2026"

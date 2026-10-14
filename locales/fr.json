@@ -736,6 +736,11 @@
       "subtitle": "Dernières nouvelles et articles",
       "items": [
         {
+          "title": "Version 2.3 : aperçu du CV et générateur PDF !",
+          "text": "Cliquez sur « Télécharger le CV » pour afficher un aperçu et générer le fichier PDF à télécharger.",
+          "date": "Publié le : 14/10/2026"
+        },
+        {
           "title": "La version 2 du site est disponible !",
           "text": "La version 2 propose un portfolio mieux organisé, avec les expériences professionnelles présentées par poste, des listes extensibles de technologies et de compétences, ainsi que des améliorations de la section des dons.",
           "date": "Publié le : 10/10/2026"

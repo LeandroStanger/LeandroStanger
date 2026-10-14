@@ -736,6 +736,11 @@
       "subtitle": "Ultime notizie e post",
       "items": [
         {
+          "title": "Versione 2.3: anteprima del CV e generatore PDF!",
+          "text": "Fai clic su “Scarica CV” per visualizzare l'anteprima e generare il file PDF da scaricare.",
+          "date": "Pubblicato il: 14/10/2026"
+        },
+        {
           "title": "È arrivata la versione 2 del sito!",
           "text": "La versione 2 offre un portfolio più organizzato, con esperienze professionali suddivise in schede per ruolo, elenchi espandibili di tecnologie e competenze e miglioramenti alla sezione delle donazioni.",
           "date": "Pubblicato il: 10/10/2026"

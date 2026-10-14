@@ -88,6 +88,11 @@ const MINIMAL_TRANSLATIONS = {
             "subtitle": "Últimas novidades",
             "items": [
                 {
+                    "title": "Nova versão V2.3: gerador de currículo com prévia e PDF!",
+                    "text": "Ao clicar em “Baixar currículo”, você pode conferir uma prévia do currículo e gerar o arquivo PDF para download.",
+                    "date": "Publicado em: 14/10/2026"
+                },
+                {
                     "title": "Novo carrossel de marcas trabalhadas!",
                     "text": "A seção \"Marcas que trabalhei\" agora é exibida em um carrossel automático, com controles para pausar e retomar. A lista reúne apenas marcas com as quais trabalhei.",
                     "date": "Publicado em: 07/10/2026"
@@ -1624,36 +1629,577 @@ function setupLanguageSelector() {
     });
 }
 
+const CURRICULO_DATA = {
+    personal: {
+        name: 'Leandro Stanger',
+        email: 'leandrostanger@aol.com',
+        phone: '(48) 99644-6508',
+        address: 'Nossa Senhora de Caravaggio - Nova Veneza/SC',
+        availability: 'Imediata — Presencial (região) ou Remoto',
+        linkedin: 'linkedin.com/in/leandrostanger1',
+        github: 'github.com/LeandroStanger',
+        portfolio: 'https://leandrostanger.github.io/LeandroStanger/'
+    },
+    summary: 'Profissional em transição para Tecnologia da Informação com formação em Engenharia de Computação e comprovada experiência em suporte técnico, manutenção de computadores e redes. Atuação autônoma desde 2014 em diagnóstico e solução de problemas de hardware e software. Conhecimentos em desenvolvimento web, SQL e administração de sistemas. Disponível imediatamente para atuar presencialmente na região ou remoto.',
+    experience: [
+        {
+            title: 'Auxiliar de Expedição Nível 2 (Tecido Plano)',
+            company: 'Confecções Vanelise',
+            period: 'Janeiro de 2020 – Atual',
+            highlights: [
+                'Recebimento, triagem e organização de paletes e materiais de tecido plano',
+                'Controle de estoque e abastecimento de insumos para a linha de produção',
+                'Organização e gestão de peças para revisão e reparo',
+                'Apoio na expedição e logística interna de materiais'
+            ]
+        },
+        {
+            title: 'Manutenção de Computadores',
+            company: 'Autônomo',
+            period: 'Janeiro de 2014 – Atual',
+            highlights: [
+                'Formatação, substituição de componentes e atualização de software',
+                'Suporte técnico remoto e presencial, com atendimento direto ao cliente',
+                'Diagnóstico e solução de problemas em hardware e software'
+            ]
+        }
+    ],
+    education: [
+        { title: 'Graduação em Engenharia de Computação', institution: 'Unopar', period: 'Em andamento (início: fev/2025)' },
+        { title: 'Técnico em Manutenção e Suporte em Informática', institution: 'AMPLI', period: 'Fev/2024 a Jun/2025' },
+        { title: 'Curso de Montagem e Manutenção de Computadores e Redes', institution: 'YesBras Escolas do Brasil', period: 'Abr/2016 a Out/2016' },
+        { title: 'Ensino Médio Completo', institution: 'SESI', period: '2015 a Out/2017' },
+        { title: 'Curso APP – Administrativo Pessoal e Profissional', institution: 'Escola de Informática Unisoft', period: 'Set/2014 a Set/2015' },
+        { title: 'Curso QIT – Qualificação em Informática e Tecnologia', institution: 'Escola de Informática Unisoft', period: 'Set/2013 a Set/2014' }
+    ],
+    skills: {
+        technical: [
+            'Manutenção de hardware e software de computadores',
+            'Linux (nível intermediário)',
+            'Ubuntu Server, CentOS',
+            'Docker, Podman, WinBoat, VirtualBox, Shell Script',
+            'JavaScript, HTML, CSS',
+            'PHP',
+            'Node.js, C, Java',
+            'SQL e modelagem de banco de dados',
+            'Azure Data Studio, SQL Server, Databricks, MySQL, MariaDB, SQLite',
+            'Pacote Microsoft Office (Excel, Word, PowerPoint)',
+            'Git e controle de versão',
+            'Web Scraping'
+        ],
+        soft: [
+            'Pontualidade',
+            'Responsabilidade',
+            'Atendimento ao cliente',
+            'Trabalho em equipe',
+            'Organização',
+            'Resolução de problemas'
+        ]
+    }
+};
+
+function escapeHtml(value = '') {
+    return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+}
+
+function splitSkillValue(value) {
+    const parts = [];
+    let current = '';
+    let parenthesisDepth = 0;
+
+    for (const char of String(value)) {
+        if (char === '(') {
+            parenthesisDepth += 1;
+            current += char;
+            continue;
+        }
+
+        if (char === ')') {
+            parenthesisDepth = Math.max(0, parenthesisDepth - 1);
+            current += char;
+            continue;
+        }
+
+        if (char === ',' && parenthesisDepth === 0) {
+            const trimmed = current.trim();
+            if (trimmed) parts.push(trimmed);
+            current = '';
+            continue;
+        }
+
+        current += char;
+    }
+
+    const lastTrimmed = current.trim();
+    if (lastTrimmed) parts.push(lastTrimmed);
+
+    return parts;
+}
+
+function splitSkillCards(skillList = []) {
+    return skillList
+        .flatMap(skill => splitSkillValue(skill))
+        .filter((item, index, arr) => arr.indexOf(item) === index);
+}
+
+function buildCurriculoPreviewMarkup(data = CURRICULO_DATA) {
+    const { personal, summary, education, experience, skills } = data;
+
+    const contactsMarkup = [
+        `E-mail: ${escapeHtml(personal.email)}`,
+        `WhatsApp: ${escapeHtml(personal.phone)}`,
+        `Endereço: ${escapeHtml(personal.address)}`,
+        `Disponibilidade: ${escapeHtml(personal.availability)}`,
+        `LinkedIn: <a class="cv-contact-link" data-pdf-link href="${escapeHtml(`https://${personal.linkedin}`)}" target="_blank" rel="noopener noreferrer">${escapeHtml(personal.linkedin)}</a>`,
+        `GitHub: <a class="cv-contact-link" data-pdf-link href="${escapeHtml(`https://${personal.github}`)}" target="_blank" rel="noopener noreferrer">${escapeHtml(personal.github)}</a>`
+    ];
+
+    const educationMarkup = education.map(item => `
+        <li>
+            <div class="cv-meta">${escapeHtml(item.period)}</div>
+            <h4>${escapeHtml(item.title)}</h4>
+            <p>${escapeHtml(item.institution)}</p>
+        </li>
+    `).join('');
+
+    const experienceMarkup = experience.map(item => `
+        <li>
+            <div class="cv-meta">${escapeHtml(item.period)}</div>
+            <h4>${escapeHtml(item.title)}</h4>
+            <p>${escapeHtml(item.company)}</p>
+            <ul class="cv-highlights">
+                ${item.highlights.map(highlight => `<li>${escapeHtml(highlight)}</li>`).join('')}
+            </ul>
+        </li>
+    `).join('');
+
+    const technicalCards = splitSkillCards(skills.technical);
+    const softCards = splitSkillCards(skills.soft);
+
+    const technicalMarkup = technicalCards.map(skill => `<article class="cv-skill-card">${escapeHtml(skill)}</article>`).join('');
+    const softMarkup = softCards.map(skill => `<article class="cv-skill-card cv-skill-card-alt">${escapeHtml(skill)}</article>`).join('');
+
+    return `<!DOCTYPE html>
+    <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>${escapeHtml(personal.name)} - Currículo</title>
+            <style>
+                :root {
+                    --bg: #f8fafc;
+                    --panel: #ffffff;
+                    --primary: #0f172a;
+                    --primary-soft: #1e293b;
+                    --accent: #10b981;
+                    --muted: #475569;
+                    --line: #e2e8f0;
+                    --tag: #ecfeff;
+                    --tag-alt: #f1f5f9;
+                }
+                * { box-sizing: border-box; }
+                @page {
+                    size: A4 portrait;
+                    margin: 0;
+                }
+                html, body {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                }
+                body {
+                    display: flex;
+                    justify-content: center;
+                    font-family: Arial, Helvetica, sans-serif;
+                    background: var(--bg);
+                    color: var(--primary);
+                }
+                .cv-page {
+                    background: var(--panel);
+                    width: 100%;
+                    min-height: 210mm;
+                    max-width: 100%;
+                    margin: 0;
+                    overflow: hidden;
+                }
+                .cv-header {
+                    padding: 32px 36px 20px;
+                    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+                    color: #fff;
+                }
+                .cv-header h1 {
+                    margin: 0 0 8px;
+                    font-size: 2.1rem;
+                }
+                .cv-contact-list {
+                    display: grid;
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                    gap: 6px 16px;
+                    margin-top: 12px;
+                    font-size: 0.82rem;
+                    color: rgba(255,255,255,0.82);
+                    line-height: 1.5;
+                }
+                .cv-contact-link {
+                    display: inline-block;
+                    color: inherit;
+                    line-height: 1;
+                    padding-bottom: 1px;
+                    border-bottom: 1px solid rgba(255,255,255,0.5);
+                    text-decoration: none;
+                }
+                .cv-body {
+                    display: grid;
+                    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+                    align-items: start;
+                    gap: 0 28px;
+                    padding: 28px 36px 36px;
+                }
+                .cv-section {
+                    margin-bottom: 20px;
+                }
+                .cv-section:first-child {
+                    grid-column: 1 / -1;
+                }
+                .cv-section:nth-child(2) {
+                    grid-column: 1;
+                    grid-row: 2;
+                }
+                .cv-section:nth-child(3) {
+                    grid-column: 2;
+                }
+                .cv-section:nth-child(3) {
+                    grid-row: 2;
+                }
+                .cv-section:nth-child(4) {
+                    grid-column: 1 / -1;
+                    grid-row: 3;
+                }
+                .cv-section-title {
+                    margin: 0 0 14px;
+                    font-size: 1.18rem;
+                    color: var(--primary);
+                    letter-spacing: 0.02em;
+                    border-bottom: 2px solid rgba(16, 185, 129, 0.5);
+                    padding-bottom: 8px;
+                }
+                .cv-summary {
+                    margin: 0;
+                    font-size: 0.98rem;
+                    line-height: 1.7;
+                    color: var(--primary-soft);
+                }
+                ul.cv-list, .cv-highlights {
+                    margin: 0;
+                    padding-left: 18px;
+                }
+                .cv-list li, .cv-highlights li {
+                    margin-bottom: 10px;
+                    color: var(--primary-soft);
+                    line-height: 1.6;
+                }
+                .cv-meta {
+                    color: var(--accent);
+                    font-size: 0.78rem;
+                    font-weight: 700;
+                    letter-spacing: 0.02em;
+                    text-transform: uppercase;
+                    margin-bottom: 8px;
+                }
+                .cv-list h4, .cv-highlights h4 {
+                    margin: 0 0 4px;
+                    font-size: 1rem;
+                }
+                .cv-list p {
+                    margin: 0 0 8px;
+                    color: var(--muted);
+                }
+                .cv-skill-group {
+                    margin-top: 18px;
+                }
+                .cv-skill-title {
+                    margin: 0 0 12px;
+                    font-size: 1rem;
+                    color: var(--primary);
+                }
+                .cv-skill-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                    gap: 10px;
+                }
+                .cv-skill-card {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-height: 38px;
+                    padding: 8px 10px;
+                    border-radius: 12px;
+                    background: linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(59, 130, 246, 0.14) 100%);
+                    border: 1px solid rgba(16, 185, 129, 0.35);
+                    color: #0f172a;
+                    font-size: 0.72rem;
+                    font-weight: 700;
+                    text-align: center;
+                    line-height: 1.35;
+                    white-space: normal;
+                    overflow-wrap: anywhere;
+                    word-break: break-word;
+                    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.08);
+                    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+                }
+                .cv-skill-card:hover {
+                    transform: translateY(-2px);
+                    border-color: rgba(16, 185, 129, 0.8);
+                    box-shadow: 0 14px 24px rgba(16, 185, 129, 0.16);
+                }
+                .cv-skill-card-alt {
+                    background: linear-gradient(135deg, rgba(59, 130, 246, 0.12) 0%, rgba(14, 165, 233, 0.08) 100%);
+                    border-color: rgba(59, 130, 246, 0.3);
+                }
+                @media (max-width: 640px) {
+                    body { padding: 14px; }
+                    .cv-header, .cv-body { padding-left: 18px; padding-right: 18px; }
+                    .cv-contact-list { grid-template-columns: 1fr; }
+                    .cv-body { grid-template-columns: 1fr; }
+                    .cv-section:first-child,
+                    .cv-section:nth-child(2),
+                    .cv-section:nth-child(3),
+                    .cv-section:nth-child(4) {
+                        grid-column: 1;
+                        grid-row: auto;
+                    }
+                }
+            </style>
+        </head>
+        <body>
+            <article class="cv-page">
+                <header class="cv-header">
+                    <h1>${escapeHtml(personal.name)}</h1>
+                    <div class="cv-contact-list">
+                        ${contactsMarkup.map(item => `<div>${item}</div>`).join('')}
+                    </div>
+                </header>
+                <main class="cv-body">
+                    <section class="cv-section">
+                        <h2 class="cv-section-title">Resumo profissional</h2>
+                        <p class="cv-summary">${escapeHtml(summary)}</p>
+                    </section>
+
+                    <section class="cv-section">
+                        <h2 class="cv-section-title">Experiência profissional</h2>
+                        <ul class="cv-list">${experienceMarkup}</ul>
+                    </section>
+
+                    <section class="cv-section">
+                        <h2 class="cv-section-title">Formação acadêmica</h2>
+                        <ul class="cv-list">${educationMarkup}</ul>
+                    </section>
+
+                    <section class="cv-section">
+                        <h2 class="cv-section-title">Competências</h2>
+                        <div class="cv-skill-group">
+                            <h3 class="cv-skill-title">Técnicas</h3>
+                            <div class="cv-skill-grid">${technicalMarkup}</div>
+                        </div>
+                        <div class="cv-skill-group">
+                            <h3 class="cv-skill-title">Comportamentais</h3>
+                            <div class="cv-skill-grid">${softMarkup}</div>
+                        </div>
+                    </section>
+                </main>
+            </article>
+        </body>
+    </html>`;
+}
+
+function openCurriculoPreview() {
+    const modal = document.getElementById('curriculo-preview-modal');
+    const iframe = document.getElementById('curriculo-preview-frame');
+    if (!modal || !iframe) return;
+
+    iframe.srcdoc = buildCurriculoPreviewMarkup(CURRICULO_DATA);
+    modal.hidden = false;
+    modal.classList.add('is-open');
+    document.body.classList.add('modal-open');
+}
+
+function closeCurriculoPreview() {
+    const modal = document.getElementById('curriculo-preview-modal');
+    if (!modal) return;
+
+    modal.classList.remove('is-open');
+    modal.hidden = true;
+    document.body.classList.remove('modal-open');
+}
+
+async function generateCurriculoPdf() {
+    const iframe = document.getElementById('curriculo-preview-frame');
+    const previewDocument = iframe?.contentDocument;
+    const previewWindow = iframe?.contentWindow;
+    const resumePage = previewDocument?.querySelector('.cv-page');
+    if (!previewDocument || !previewWindow || !resumePage) {
+        throw new Error('A pré-visualização do currículo ainda não está pronta.');
+    }
+
+    await previewDocument.fonts.ready;
+
+    if (typeof previewWindow.html2pdf !== 'function') {
+        const bundleScript = Array.from(document.scripts)
+            .find(script => script.src.includes('html2pdf.js'));
+        if (!bundleScript) {
+            throw new Error('A biblioteca de geração do PDF não foi encontrada.');
+        }
+
+        await new Promise((resolve, reject) => {
+            const script = previewDocument.createElement('script');
+            script.src = bundleScript.src;
+            script.addEventListener('load', resolve, { once: true });
+            script.addEventListener('error', () => {
+                reject(new Error('Não foi possível carregar a biblioteca de geração do PDF.'));
+            }, { once: true });
+            previewDocument.head.appendChild(script);
+        });
+    }
+
+    if (typeof previewWindow.html2pdf !== 'function') {
+        throw new Error('A biblioteca de geração do PDF não foi carregada na pré-visualização.');
+    }
+
+    const previousScrollX = previewWindow.scrollX;
+    const previousScrollY = previewWindow.scrollY;
+    previewWindow.scrollTo(0, 0);
+
+    try {
+        await new Promise(resolve => {
+            previewWindow.requestAnimationFrame(() => {
+                previewWindow.requestAnimationFrame(resolve);
+            });
+        });
+
+        const pageBounds = resumePage.getBoundingClientRect();
+        if (!pageBounds.width || !pageBounds.height) {
+            throw new Error('A pré-visualização do currículo não possui dimensões válidas.');
+        }
+
+        const pdfLinks = Array.from(resumePage.querySelectorAll('[data-pdf-link]'))
+            .map(link => ({
+                url: link.href,
+                bounds: link.getBoundingClientRect()
+            }));
+
+        const canvas = await previewWindow.html2pdf()
+            .set({
+                margin: 0,
+                html2canvas: {
+                    scale: 2,
+                    useCORS: true,
+                    backgroundColor: '#ffffff',
+                    logging: false,
+                    windowWidth: Math.ceil(pageBounds.width),
+                    windowHeight: Math.ceil(pageBounds.height),
+                    scrollX: 0,
+                    scrollY: 0
+                },
+                jsPDF: {
+                    unit: 'mm',
+                    format: [
+                        pageBounds.width * 25.4 / 96,
+                        pageBounds.height * 25.4 / 96
+                    ],
+                    orientation: 'portrait',
+                    compress: true
+                }
+            })
+            .from(resumePage)
+            .toCanvas()
+            .get('canvas');
+
+        if (!canvas.width || !canvas.height) {
+            throw new Error('Não foi possível capturar a pré-visualização do currículo.');
+        }
+
+        const JsPDF = window.jspdf?.jsPDF;
+        if (typeof JsPDF !== 'function') {
+            throw new Error('A biblioteca jsPDF não foi carregada.');
+        }
+
+        const pdf = new JsPDF({
+            unit: 'mm',
+            format: 'a4',
+            orientation: 'portrait',
+            compress: true
+        });
+        const pageWidth = pdf.internal.pageSize.getWidth();
+        const pageHeight = pdf.internal.pageSize.getHeight();
+        const margin = 4;
+        const scale = Math.min(
+            (pageWidth - margin * 2) / canvas.width,
+            (pageHeight - margin * 2) / canvas.height
+        );
+        const imageWidth = canvas.width * scale;
+        const imageHeight = canvas.height * scale;
+
+        pdf.addImage(
+            canvas.toDataURL('image/jpeg', 0.98),
+            'JPEG',
+            (pageWidth - imageWidth) / 2,
+            (pageHeight - imageHeight) / 2,
+            imageWidth,
+            imageHeight,
+            'CURRICULO',
+            'FAST'
+        );
+        const imageX = (pageWidth - imageWidth) / 2;
+        const imageY = (pageHeight - imageHeight) / 2;
+        pdfLinks.forEach(({ url, bounds }) => {
+            pdf.link(
+                imageX + (bounds.left - pageBounds.left) * imageWidth / pageBounds.width,
+                imageY + (bounds.top - pageBounds.top) * imageHeight / pageBounds.height,
+                bounds.width * imageWidth / pageBounds.width,
+                bounds.height * imageHeight / pageBounds.height,
+                { url, border: [0, 0, 0] }
+            );
+        });
+        pdf.save('Curriculo_Leandro_Stanger.pdf');
+    } finally {
+        previewWindow.scrollTo(previousScrollX, previousScrollY);
+    }
+}
+
 async function initDownloadCurriculo() {
     const downloadBtn = document.getElementById('download-curriculo');
-    if (!downloadBtn) return;
+    const modal = document.getElementById('curriculo-preview-modal');
+    const closeBtn = document.getElementById('close-curriculo-preview');
+    const downloadPdfBtn = document.getElementById('download-curriculo-pdf');
+    const backdrop = document.querySelector('[data-close-curriculo]');
 
-    downloadBtn.addEventListener('click', async (e) => {
-        e.preventDefault();
+    if (!downloadBtn || !modal || !closeBtn || !downloadPdfBtn || !backdrop) return;
 
-        const url = downloadBtn.href;
-        const fileName = 'Curriculo_Leandro_Stanger.pdf';
+    downloadBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        openCurriculoPreview();
+    });
 
+    closeBtn.addEventListener('click', closeCurriculoPreview);
+    backdrop.addEventListener('click', closeCurriculoPreview);
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) closeCurriculoPreview();
+    });
+
+    downloadPdfBtn.addEventListener('click', async () => {
+        downloadPdfBtn.disabled = true;
         try {
-            const response = await fetch(url, {
-                mode: 'cors',
-                headers: { 'Accept': 'application/pdf' }
-            });
-
-            if (!response.ok) throw new Error('Erro ao baixar o arquivo');
-
-            const blob = await response.blob();
-            const blobUrl = window.URL.createObjectURL(blob);
-            const link = document.createElement('a');
-            link.href = blobUrl;
-            link.download = fileName;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            window.URL.revokeObjectURL(blobUrl);
+            await generateCurriculoPdf();
         } catch (error) {
-            console.error('Falha no download:', error);
-            window.open(url, '_blank');
+            console.error('Erro ao gerar o PDF do currículo:', error);
+            alert('Não foi possível gerar o PDF. Verifique sua conexão e tente novamente.');
+        } finally {
+            downloadPdfBtn.disabled = false;
         }
     });
 }
