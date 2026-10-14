@@ -736,6 +736,11 @@
       "subtitle": "Ultime notizie e post",
       "items": [
         {
+          "title": "Versione 2.3.3: angoli arrotondati nell'intestazione del CV",
+          "text": "Abbiamo arrotondato gli angoli dell'intestazione del CV nell'anteprima e nel PDF per un aspetto più uniforme.",
+          "date": "Pubblicato il: 14/10/2026"
+        },
+        {
           "title": "Versione 2.3.2: foto nel CV e correzione della generazione PDF",
           "text": "Abbiamo aggiunto la foto del profilo al CV e corretto l'errore che impediva di generare il PDF con il pulsante di download.",
           "date": "Pubblicato il: 14/10/2026"

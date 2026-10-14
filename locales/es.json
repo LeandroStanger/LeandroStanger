@@ -736,6 +736,11 @@
       "subtitle": "Últimas noticias y publicaciones",
       "items": [
         {
+          "title": "Versión 2.3.3: esquinas redondeadas en el encabezado del currículum",
+          "text": "Redondeamos las esquinas del encabezado del currículum en la vista previa y en el PDF para lograr un diseño más uniforme.",
+          "date": "Publicado el: 14/10/2026"
+        },
+        {
           "title": "Versión 2.3.2: foto en el currículum y corrección de la generación del PDF",
           "text": "Añadimos la foto de perfil al currículum y corregimos el error que impedía generar el PDF con el botón de descarga.",
           "date": "Publicado el: 14/10/2026"

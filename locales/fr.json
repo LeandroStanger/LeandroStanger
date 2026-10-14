@@ -736,6 +736,11 @@
       "subtitle": "Dernières nouvelles et articles",
       "items": [
         {
+          "title": "Version 2.3.3 : coins arrondis pour l’en-tête du CV",
+          "text": "Les coins de l’en-tête du CV sont désormais arrondis dans l’aperçu et le PDF pour une apparence plus cohérente.",
+          "date": "Publié le : 14/10/2026"
+        },
+        {
           "title": "Version 2.3.2 : photo sur le CV et correction de la génération du PDF",
           "text": "La photo de profil a été ajoutée au CV et l’erreur qui empêchait la génération du PDF avec le bouton de téléchargement a été corrigée.",
           "date": "Publié le : 14/10/2026"

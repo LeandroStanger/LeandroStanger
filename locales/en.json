@@ -736,6 +736,11 @@
       "subtitle": "Latest news and posts",
       "items": [
         {
+          "title": "Version 2.3.3: rounded résumé header corners",
+          "text": "Rounded the résumé header corners in the preview and PDF for a more consistent appearance.",
+          "date": "Published on: 10/14/2026"
+        },
+        {
           "title": "Version 2.3.2: résumé photo and PDF generation fix",
           "text": "Added the profile photo to the résumé and fixed the error that prevented the PDF from being generated with the download button.",
           "date": "Published on: 10/14/2026"

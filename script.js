@@ -88,6 +88,11 @@ const MINIMAL_TRANSLATIONS = {
             "subtitle": "Últimas novidades",
             "items": [
                 {
+                    "title": "Versão V2.3.3: cabeçalho do currículo com cantos arredondados",
+                    "text": "Arredondamos os cantos do cabeçalho do currículo na prévia e no PDF para deixar o visual mais consistente.",
+                    "date": "Publicado em: 14/10/2026"
+                },
+                {
                     "title": "Versão V2.3.2: foto no currículo e correção da geração do PDF",
                     "text": "Adicionamos a foto de perfil ao currículo e corrigimos o erro que impedia a geração do PDF pelo botão de download.",
                     "date": "Publicado em: 14/10/2026"
@@ -1844,6 +1849,7 @@ function buildCurriculoPreviewMarkup(data = CURRICULO_DATA) {
                     gap: 24px;
                     padding: 32px 36px 20px;
                     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+                    border-radius: 16px;
                     color: #fff;
                 }
                 .cv-header-content {

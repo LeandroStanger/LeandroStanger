@@ -736,6 +736,11 @@
       "subtitle": "Neueste Nachrichten und Beiträge",
       "items": [
         {
+          "title": "Version 2.3.3: abgerundete Ecken im Lebenslauf-Kopfbereich",
+          "text": "Die Ecken des Kopfbereichs sind jetzt in der Vorschau und im PDF abgerundet, damit das Design einheitlicher wirkt.",
+          "date": "Veröffentlicht am: 14.10.2026"
+        },
+        {
           "title": "Version 2.3.2: Foto im Lebenslauf und Korrektur der PDF-Erstellung",
           "text": "Das Profilfoto wurde dem Lebenslauf hinzugefügt und der Fehler behoben, der die PDF-Erstellung über die Download-Schaltfläche verhinderte.",
           "date": "Veröffentlicht am: 14.10.2026"
