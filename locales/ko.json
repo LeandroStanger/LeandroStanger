@@ -675,6 +675,8 @@
         "linkedin_desc": "전문적으로 연결하기",
         "github": "GitHub",
         "github_desc": "프로젝트 보기",
+        "huggingface": "Hugging Face",
+        "huggingface_desc": "AI 모델과 프로젝트 보기",
         "instagram": "Instagram",
         "instagram_desc": "Instagram에서 팔로우",
         "telegram": "Telegram",

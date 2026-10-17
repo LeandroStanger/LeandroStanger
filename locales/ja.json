@@ -675,6 +675,8 @@
         "linkedin_desc": "プロフェッショナルに繋がる",
         "github": "GitHub",
         "github_desc": "プロジェクトを見る",
+        "huggingface": "Hugging Face",
+        "huggingface_desc": "AIモデルとプロジェクトを見る",
         "instagram": "Instagram",
         "instagram_desc": "Instagramでフォロー",
         "telegram": "Telegram",

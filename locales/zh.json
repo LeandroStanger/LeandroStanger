@@ -675,6 +675,8 @@
         "linkedin_desc": "职业社交",
         "github": "GitHub",
         "github_desc": "查看我的项目",
+        "huggingface": "Hugging Face",
+        "huggingface_desc": "查看我的 AI 模型和项目",
         "instagram": "Instagram",
         "instagram_desc": "在Instagram上关注我",
         "telegram": "Telegram",

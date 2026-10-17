@@ -675,6 +675,8 @@
         "linkedin_desc": "Conéctate profesionalmente",
         "github": "GitHub",
         "github_desc": "Mira mis proyectos",
+        "huggingface": "Hugging Face",
+        "huggingface_desc": "Explora mis modelos y proyectos de IA",
         "instagram": "Instagram",
         "instagram_desc": "Sígueme en Instagram",
         "telegram": "Telegram",
