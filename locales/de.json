@@ -86,7 +86,7 @@
             "title": "Bachelor in Computertechnik",
             "institution": "Unopar",
             "progress": {
-              "completed": 17,
+              "completed": 19,
               "total": 53,
               "label": "{completed} von {total} Fächern abgeschlossen",
               "semesterText": "4. Semester — In Bearbeitung"

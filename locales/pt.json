@@ -86,7 +86,7 @@
             "title": "Graduação em Engenharia de Computação",
             "institution": "Unopar",
             "progress": {
-              "completed": 17,
+              "completed": 19,
               "total": 53,
               "label": "{completed} de {total} disciplinas concluídas",
               "semesterText": "4º Semestre — Em andamento"
