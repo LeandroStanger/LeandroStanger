@@ -738,6 +738,11 @@
       "subtitle": "Ultime notizie e post",
       "items": [
         {
+          "title": "Versione V2.3.9: annuncio di assistenza remota e miglioramenti visivi",
+          "text": "Abbiamo aggiunto al carosello un annuncio per l’assistenza remota, con un link diretto alla pagina del servizio. Abbiamo inoltre modificato i colori del pulsante di contatto e del carosello dei marchi nel tema chiaro per migliorare il contrasto.",
+          "date": "Pubblicato il: 26/10/2026"
+        },
+        {
           "title": "Versione V2.3.4: chiusura controllata dell’anteprima del CV",
           "text": "L’anteprima del CV ora si chiude solo con il pulsante “Chiudi”. Fare clic sugli angoli o sullo sfondo non chiude più la finestra.",
           "date": "Pubblicato il: 14/10/2026"

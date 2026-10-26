@@ -738,6 +738,11 @@
       "subtitle": "Latest news and posts",
       "items": [
         {
+          "title": "Version V2.3.9: remote support ad and visual improvements",
+          "text": "Added a remote support ad to the carousel, linking directly to the service page. Also adjusted the contact button and brand carousel colors in the light theme to improve contrast.",
+          "date": "Published on: 10/26/2026"
+        },
+        {
           "title": "Version V2.3.4: controlled résumé preview closing",
           "text": "The résumé preview now closes only with the “Close” button. Clicking the corners or backdrop no longer closes the window.",
           "date": "Published on: 10/14/2026"

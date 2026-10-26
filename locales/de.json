@@ -738,6 +738,11 @@
       "subtitle": "Neueste Nachrichten und Beiträge",
       "items": [
         {
+          "title": "Version V2.3.9: Fernsupport-Anzeige und visuelle Verbesserungen",
+          "text": "Der Anzeigenkarussell wurde um eine Fernsupport-Anzeige mit direktem Link zur Serviceseite erweitert. Außerdem wurden die Farben der Kontaktschaltfläche und des Markenkarussells im hellen Design für einen besseren Kontrast angepasst.",
+          "date": "Veröffentlicht am: 26.10.2026"
+        },
+        {
           "title": "Version V2.3.4: Kontrolliertes Schließen der Lebenslauf-Vorschau",
           "text": "Die Lebenslauf-Vorschau lässt sich jetzt nur noch über die Schaltfläche „Schließen“ schließen. Ein Klick auf die Ecken oder den Hintergrund schließt das Fenster nicht mehr.",
           "date": "Veröffentlicht am: 14.10.2026"

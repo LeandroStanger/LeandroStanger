@@ -738,6 +738,11 @@
       "subtitle": "Últimas novidades e posts",
       "items": [
         {
+          "title": "Versão V2.3.9: anúncio de suporte remoto e ajustes visuais",
+          "text": "Adicionamos ao carrossel o anúncio de suporte remoto, com link direto para a página do serviço. Também ajustamos as cores do botão “Entrar em Contato” e do carrossel de marcas no tema claro para melhorar o contraste.",
+          "date": "Publicado em: 26/10/2026"
+        },
+        {
           "title": "Versão V2.3.4: fechamento controlado da prévia do currículo",
           "text": "A pré-visualização do currículo agora só fecha pelo botão “Fechar”. Clicar nos cantos ou no fundo não encerra mais a janela.",
           "date": "Publicado em: 14/10/2026"

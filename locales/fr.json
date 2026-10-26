@@ -738,6 +738,11 @@
       "subtitle": "Dernières nouvelles et articles",
       "items": [
         {
+          "title": "Version V2.3.9 : publicité pour l’assistance à distance et améliorations visuelles",
+          "text": "Une publicité pour l’assistance à distance a été ajoutée au carrousel, avec un lien direct vers la page du service. Les couleurs du bouton de contact et du carrousel de marques ont également été ajustées dans le thème clair pour améliorer le contraste.",
+          "date": "Publié le : 26/10/2026"
+        },
+        {
           "title": "Version V2.3.4 : fermeture contrôlée de l’aperçu du CV",
           "text": "L’aperçu du CV se ferme désormais uniquement avec le bouton « Fermer ». Cliquer sur les coins ou l’arrière-plan ne ferme plus la fenêtre.",
           "date": "Publié le : 14/10/2026"

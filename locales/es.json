@@ -738,6 +738,11 @@
       "subtitle": "Últimas noticias y publicaciones",
       "items": [
         {
+          "title": "Versión V2.3.9: anuncio de soporte remoto y mejoras visuales",
+          "text": "Añadimos al carrusel un anuncio de soporte remoto con enlace directo a la página del servicio. También ajustamos los colores del botón de contacto y del carrusel de marcas en el tema claro para mejorar el contraste.",
+          "date": "Publicado el: 26/10/2026"
+        },
+        {
           "title": "Versión V2.3.4: cierre controlado de la vista previa del currículum",
           "text": "La vista previa del currículum ahora solo se cierra con el botón «Cerrar». Hacer clic en las esquinas o en el fondo ya no cierra la ventana.",
           "date": "Publicado el: 14/10/2026"
