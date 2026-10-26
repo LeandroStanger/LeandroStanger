@@ -394,6 +394,7 @@ function setupAd(adId, imagesArray) {
 
 // ==================== CONTROLE DE VISIBILIDADE DOS ANÚNCIOS E ROTAÇÃO ====================
 const anuncio1Images = [
+    { src: 'img/anuncio/anuncio11.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/suporte-remoto/suporte-remoto.html' },
     { src: 'img/anuncio/anuncio1.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#criacao-site' },
     { src: 'img/anuncio/anuncio2.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-standard' },
     { src: 'img/anuncio/anuncio3.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-gamer' },
