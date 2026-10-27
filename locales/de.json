@@ -146,7 +146,7 @@
         "carousel_play": "Karussell abspielen",
         "items": [
           {
-            "company": "Confecções Vanelise",
+            "company": "Confecções Vanelise Ltda.",
             "period": "",
             "brands": [
               {
@@ -241,6 +241,15 @@
               }
             ],
             "positions": [
+              {
+                "title": "Versandmitarbeiter (Flachgewebe | Uniformen)",
+                "period": "",
+                "responsibilities": [
+                  "Beförderung zum Versandmitarbeiter mit größerer Verantwortung für die Organisation des Versandbereichs",
+                  "Überwachung und Beaufsichtigung der Verladung von Bestellungen",
+                  "Fortgeschrittene Bestandsverwaltung des Kistenlagers"
+                ]
+              },
               {
                 "title": "Versandhelfer Stufe 2 (Flachgewebe | Uniformen)",
                 "period": "",
@@ -737,6 +746,11 @@
       "title": "Feed-Updates",
       "subtitle": "Neueste Nachrichten und Beiträge",
       "items": [
+        {
+          "title": "Version V2.10: Berufliches Update und Verbesserungen bei den Fähigkeiten",
+          "text": "Die Berufserfahrung wurde um die Beförderung zum Versandmitarbeiter bei Confecções Vanelise Ltda. ergänzt. Dazu gehören die Organisation des Versandbereichs, die Überwachung und Beaufsichtigung der Verladung von Bestellungen sowie die Bestandsverwaltung des Kistenlagers. Bei den technischen Fähigkeiten erscheint die Schaltfläche „Mehr laden“ nun nach bis zu vier vollständigen Zeilen.",
+          "date": "Veröffentlicht am: 27.10.2026"
+        },
         {
           "title": "Version V2.3.9: Fernsupport-Anzeige und visuelle Verbesserungen",
           "text": "Der Anzeigenkarussell wurde um eine Fernsupport-Anzeige mit direktem Link zur Serviceseite erweitert. Außerdem wurden die Farben der Kontaktschaltfläche und des Markenkarussells im hellen Design für einen besseren Kontrast angepasst.",

@@ -617,9 +617,13 @@ const ExperienceCalc = {
         const ongoing = I18n.t('ongoing');
         const now = new Date();
         if (type === 'cargo1') {
-            const start = new Date('2025-08-01');
+            const start = new Date('2026-09-30');
             const period = start > now ? { years: 0, months: 0 } : this.calculatePeriod(start);
-            return `ago de 2025 - ${ongoing} · (${this.formatPeriod(period, lang)})`;
+            return `30 set de 2026 - ${ongoing} · (${this.formatPeriod(period, lang)})`;
+        }
+        if (type === 'cargo1_nivel2') {
+            const period = this.calculatePeriod('2025-08-01', '2026-09-30');
+            return `ago de 2025 a 30 set de 2026 (${this.formatPeriod(period, lang)})`;
         }
         if (type === 'cargo1_anterior') {
             const period = this.calculatePeriod('2020-01-21', '2025-08-01');
@@ -647,6 +651,8 @@ function shuffleArray(array) {
 }
 
 // ==================== RENDERIZADORES DAS SEÇÕES ====================
+let habilidadesResizeHandler = null;
+
 const Renderer = {
     renderAll() {
         this._safeRender('Sobre', this.renderSobre);
@@ -904,7 +910,8 @@ const Renderer = {
                 let posPeriod = pos.period || '';
                 if (company.includes('Vanelise')) {
                     if (idx === 0) posPeriod = ExperienceCalc.getPeriodText('cargo1', lang);
-                    else if (idx === 1) posPeriod = ExperienceCalc.getPeriodText('cargo1_anterior', lang);
+                    else if (idx === 1) posPeriod = ExperienceCalc.getPeriodText('cargo1_nivel2', lang);
+                    else if (idx === 2) posPeriod = ExperienceCalc.getPeriodText('cargo1_anterior', lang);
                 }
                 const responsibilities = Array.isArray(pos.responsibilities) ? pos.responsibilities : [];
                 return `
@@ -933,24 +940,18 @@ const Renderer = {
 
         const shuffledTecnicas = shuffleArray([...tecnicas.items]);
         const shuffledInterpessoais = shuffleArray([...interpessoais.items]);
-        const initialTechnicalSkills = shuffledTecnicas.slice(0, 14);
-        const remainingTechnicalSkills = shuffledTecnicas.slice(14);
-
         container.innerHTML = `
             <div class="habilidades-categoria habilidades-tecnicas">
                 <h4 class="habilidades-categoria-title"><i class="fas fa-code"></i> ${tecnicas.title || ''}</h4>
                 <div class="habilidades-lista" id="habilidades-tecnicas-lista">
-                    ${initialTechnicalSkills.map(item => `<span class="habilidade-tag">${item}</span>`).join('')}
-                    ${remainingTechnicalSkills.map(item => `<span class="habilidade-tag" hidden>${item}</span>`).join('')}
+                    ${shuffledTecnicas.map(item => `<span class="habilidade-tag">${item}</span>`).join('')}
                 </div>
-                ${remainingTechnicalSkills.length ? `
-                    <div class="habilidades-load-more-wrap">
-                        <button type="button" class="btn btn-secondary habilidades-load-more" aria-controls="habilidades-tecnicas-lista" aria-expanded="false">
-                            <i class="fas fa-plus" aria-hidden="true"></i>
-                            <span data-i18n="sections.projetos.load_more">${I18n.t('sections.projetos.load_more')}</span>
-                        </button>
-                    </div>
-                ` : ''}
+                <div class="habilidades-load-more-wrap" hidden>
+                    <button type="button" class="btn btn-secondary habilidades-load-more" aria-controls="habilidades-tecnicas-lista" aria-expanded="false">
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                        <span data-i18n="sections.projetos.load_more">${I18n.t('sections.projetos.load_more')}</span>
+                    </button>
+                </div>
             </div>
             <div class="habilidades-categoria">
                 <h4 class="habilidades-categoria-title"><i class="fas fa-users"></i> ${interpessoais.title || ''}</h4>
@@ -958,13 +959,52 @@ const Renderer = {
             </div>
         `;
 
+        if (habilidadesResizeHandler) {
+            window.removeEventListener('resize', habilidadesResizeHandler);
+        }
+
+        const technicalSkills = Array.from(container.querySelectorAll('.habilidades-tecnicas .habilidade-tag'));
+        const loadMoreWrap = container.querySelector('.habilidades-load-more-wrap');
         const loadMoreButton = container.querySelector('.habilidades-load-more');
-        loadMoreButton?.addEventListener('click', () => {
-            container.querySelectorAll('.habilidades-tecnicas .habilidade-tag[hidden]').forEach(skill => {
+        let expanded = false;
+        const updateVisibleSkills = () => {
+            if (expanded) return;
+
+            technicalSkills.forEach(skill => {
+                skill.hidden = false;
+            });
+            const rowTops = [...new Set(technicalSkills.map(skill => skill.offsetTop))];
+            const fifthRowTop = rowTops[4];
+            const hasMoreSkills = fifthRowTop !== undefined;
+
+            if (hasMoreSkills) {
+                technicalSkills.forEach(skill => {
+                    skill.hidden = skill.offsetTop >= fifthRowTop;
+                });
+            }
+            loadMoreWrap.hidden = !hasMoreSkills;
+        };
+
+        updateVisibleSkills();
+        let resizeFrame = null;
+        habilidadesResizeHandler = () => {
+            if (resizeFrame !== null) return;
+            resizeFrame = requestAnimationFrame(() => {
+                resizeFrame = null;
+                updateVisibleSkills();
+            });
+        };
+        window.addEventListener('resize', habilidadesResizeHandler);
+
+        loadMoreButton.addEventListener('click', () => {
+            expanded = true;
+            technicalSkills.forEach(skill => {
                 skill.hidden = false;
             });
             loadMoreButton.setAttribute('aria-expanded', 'true');
-            loadMoreButton.parentElement.remove();
+            loadMoreWrap.remove();
+            window.removeEventListener('resize', habilidadesResizeHandler);
+            habilidadesResizeHandler = null;
         });
     },
 
@@ -1669,9 +1709,29 @@ const CURRICULO_DATA = {
     summary: 'Profissional em transição para Tecnologia da Informação com formação em Engenharia de Computação e comprovada experiência em suporte técnico, manutenção de computadores e redes. Atuação autônoma desde 2014 em diagnóstico e solução de problemas de hardware e software. Conhecimentos em desenvolvimento web, SQL e administração de sistemas. Disponível imediatamente para atuar presencialmente na região ou remoto.',
     experience: [
         {
-            title: 'Auxiliar de Expedição Nível 2 (Tecido Plano)',
-            company: 'Confecções Vanelise',
-            period: 'Janeiro de 2020 – Atual',
+            title: 'Operador de Expedição (Tecido Plano | Uniformes)',
+            company: 'Confecções Vanelise Ltda.',
+            period: '30 de setembro de 2026 – Atual',
+            highlights: [
+                'Promoção para Operador de Expedição, assumindo maiores responsabilidades pela organização do setor',
+                'Acompanhamento e supervisão do carregamento de pedidos',
+                'Gestão avançada do estoque da caixaria'
+            ]
+        },
+        {
+            title: 'Auxiliar de Expedição Nível 2 (Tecido Plano | Uniformes)',
+            company: 'Confecções Vanelise Ltda.',
+            period: 'Agosto de 2025 – Setembro de 2026',
+            highlights: [
+                'Treinamento de novos funcionários',
+                'Gestão avançada de estoque da caixaria',
+                'Controle de qualidade dos processos de expedição'
+            ]
+        },
+        {
+            title: 'Auxiliar de Expedição (Tecido Plano)',
+            company: 'Confecções Vanelise Ltda.',
+            period: 'Janeiro de 2020 – Agosto de 2025',
             highlights: [
                 'Recebimento, triagem e organização de paletes e materiais de tecido plano',
                 'Controle de estoque e abastecimento de insumos para a linha de produção',

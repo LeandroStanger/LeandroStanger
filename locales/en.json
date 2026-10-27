@@ -146,7 +146,7 @@
         "carousel_play": "Play carousel",
         "items": [
           {
-            "company": "Confecções Vanelise",
+            "company": "Confecções Vanelise Ltda.",
             "period": "",
             "brands": [
               {
@@ -241,6 +241,15 @@
               }
             ],
             "positions": [
+              {
+                "title": "Shipping Operator (Flat Fabric | Uniforms)",
+                "period": "",
+                "responsibilities": [
+                  "Promoted to Shipping Operator, taking on greater responsibility for organizing the shipping department",
+                  "Monitoring and supervising order loading",
+                  "Advanced inventory management of the boxing area"
+                ]
+              },
               {
                 "title": "Shipping Assistant Level 2 (Flat Fabric | Uniforms)",
                 "period": "",
@@ -737,6 +746,11 @@
       "title": "Feed Updates",
       "subtitle": "Latest news and posts",
       "items": [
+        {
+          "title": "Version V2.10: career update and skills improvements",
+          "text": "Updated the professional experience with a promotion to Shipping Operator at Confecções Vanelise Ltda., including responsibility for organizing the department, monitoring and supervising order loading, and managing boxing inventory. In technical skills, the “Load more” button now appears after up to four complete rows.",
+          "date": "Published on: 10/27/2026"
+        },
         {
           "title": "Version V2.3.9: remote support ad and visual improvements",
           "text": "Added a remote support ad to the carousel, linking directly to the service page. Also adjusted the contact button and brand carousel colors in the light theme to improve contrast.",

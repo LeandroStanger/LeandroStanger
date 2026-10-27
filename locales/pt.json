@@ -146,7 +146,7 @@
         "carousel_play": "Reproduzir carrossel",
         "items": [
           {
-            "company": "Confecções Vanelise",
+            "company": "Confecções Vanelise Ltda.",
             "period": "",
             "brands": [
               {
@@ -241,6 +241,15 @@
               }
             ],
             "positions": [
+              {
+                "title": "Operador de Expedição (Tecido Plano | Uniformes)",
+                "period": "",
+                "responsibilities": [
+                  "Promovido a Operador de Expedição, assumindo maiores responsabilidades pela organização do setor",
+                  "Acompanhamento e supervisão do carregamento de pedidos",
+                  "Gestão avançada do estoque da caixaria"
+                ]
+              },
               {
                 "title": "Auxiliar de Expedição Nível 2 (Tecido Plano | Uniformes)",
                 "period": "",
@@ -737,6 +746,11 @@
       "title": "Feed de Atualizações",
       "subtitle": "Últimas novidades e posts",
       "items": [
+        {
+          "title": "Versão V2.10: atualização profissional e melhorias nas habilidades",
+          "text": "Atualizamos a experiência profissional com a promoção a Operador de Expedição na Confecções Vanelise Ltda., incluindo as responsabilidades de organização do setor, acompanhamento e supervisão do carregamento de pedidos e gestão do estoque da caixaria. Na seção de habilidades técnicas, o botão “Ver mais” agora aparece após a exibição de até quatro linhas completas.",
+          "date": "Publicado em: 27/10/2026"
+        },
         {
           "title": "Versão V2.3.9: anúncio de suporte remoto e ajustes visuais",
           "text": "Adicionamos ao carrossel o anúncio de suporte remoto, com link direto para a página do serviço. Também ajustamos as cores do botão “Entrar em Contato” e do carrossel de marcas no tema claro para melhorar o contraste.",
