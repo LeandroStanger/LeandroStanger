@@ -146,7 +146,7 @@
         "carousel_play": "Riprendi il carosello",
         "items": [
           {
-            "company": "Confecções Vanelise",
+            "company": "Confecções Vanelise Ltda.",
             "period": "",
             "brands": [
               {
@@ -241,6 +241,15 @@
               }
             ],
             "positions": [
+              {
+                "title": "Operatore di Spedizione (Tessuto Piatto | Uniformi)",
+                "period": "",
+                "responsibilities": [
+                  "Promosso a operatore di spedizione, con maggiori responsabilità nell'organizzazione del reparto",
+                  "Monitoraggio e supervisione del caricamento degli ordini",
+                  "Gestione avanzata dell'inventario dell'area di imballaggio"
+                ]
+              },
               {
                 "title": "Assistente di Spedizione Livello 2 (Tessuto Piatto | Uniformi)",
                 "period": "",
@@ -737,6 +746,11 @@
       "title": "Feed degli Aggiornamenti",
       "subtitle": "Ultime notizie e post",
       "items": [
+        {
+          "title": "Versione V2.10: aggiornamento professionale e miglioramenti alle competenze",
+          "text": "Abbiamo aggiornato l’esperienza professionale con la promozione a operatore di spedizione presso Confecções Vanelise Ltda., includendo l’organizzazione del reparto, il monitoraggio e la supervisione del carico degli ordini e la gestione dell’inventario dell’area di imballaggio. Nelle competenze tecniche, il pulsante “Carica altro” appare ora dopo un massimo di quattro righe complete.",
+          "date": "Pubblicato il: 27/10/2026"
+        },
         {
           "title": "Versione V2.3.9: annuncio di assistenza remota e miglioramenti visivi",
           "text": "Abbiamo aggiunto al carosello un annuncio per l’assistenza remota, con un link diretto alla pagina del servizio. Abbiamo inoltre modificato i colori del pulsante di contatto e del carosello dei marchi nel tema chiaro per migliorare il contrasto.",

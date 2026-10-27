@@ -146,7 +146,7 @@
         "carousel_play": "Reanudar carrusel",
         "items": [
           {
-            "company": "Confecções Vanelise",
+            "company": "Confecções Vanelise Ltda.",
             "period": "",
             "brands": [
               {
@@ -241,6 +241,15 @@
               }
             ],
             "positions": [
+              {
+                "title": "Operador de Expedición (Tejido Plano | Uniformes)",
+                "period": "",
+                "responsibilities": [
+                  "Promovido a Operador de Expedición, asumiendo mayores responsabilidades en la organización del sector",
+                  "Seguimiento y supervisión de la carga de pedidos",
+                  "Gestión avanzada del inventario del área de cajas"
+                ]
+              },
               {
                 "title": "Auxiliar de Expedición Nivel 2 (Tejido Plano | Uniformes)",
                 "period": "",
@@ -737,6 +746,11 @@
       "title": "Feed de Actualizaciones",
       "subtitle": "Últimas noticias y publicaciones",
       "items": [
+        {
+          "title": "Versión V2.10: actualización profesional y mejoras en habilidades",
+          "text": "Actualizamos la experiencia profesional con el ascenso a Operador de Expedición en Confecções Vanelise Ltda., incluyendo responsabilidades de organización del sector, seguimiento y supervisión de la carga de pedidos y gestión del inventario del área de cajas. En las habilidades técnicas, el botón «Ver más» aparece ahora después de mostrar hasta cuatro filas completas.",
+          "date": "Publicado el: 27/10/2026"
+        },
         {
           "title": "Versión V2.3.9: anuncio de soporte remoto y mejoras visuales",
           "text": "Añadimos al carrusel un anuncio de soporte remoto con enlace directo a la página del servicio. También ajustamos los colores del botón de contacto y del carrusel de marcas en el tema claro para mejorar el contraste.",

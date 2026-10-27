@@ -146,7 +146,7 @@
         "carousel_play": "Reprendre le carrousel",
         "items": [
           {
-            "company": "Confecções Vanelise",
+            "company": "Confecções Vanelise Ltda.",
             "period": "",
             "brands": [
               {
@@ -241,6 +241,15 @@
               }
             ],
             "positions": [
+              {
+                "title": "Opérateur d'Expédition (Tissu Plat | Uniformes)",
+                "period": "",
+                "responsibilities": [
+                  "Promu opérateur d'expédition, avec davantage de responsabilités dans l'organisation du service",
+                  "Suivi et supervision du chargement des commandes",
+                  "Gestion avancée des stocks de la zone de caisses"
+                ]
+              },
               {
                 "title": "Assistant d'Expédition Niveau 2 (Tissu Plat | Uniformes)",
                 "period": "",
@@ -737,6 +746,11 @@
       "title": "Flux de mises à jour",
       "subtitle": "Dernières nouvelles et articles",
       "items": [
+        {
+          "title": "Version V2.10 : évolution professionnelle et améliorations des compétences",
+          "text": "L’expérience professionnelle a été mise à jour avec la promotion au poste d’opérateur d’expédition chez Confecções Vanelise Ltda., incluant l’organisation du service, le suivi et la supervision du chargement des commandes ainsi que la gestion des stocks de caisses. Dans les compétences techniques, le bouton « Voir plus » apparaît désormais après l’affichage de quatre lignes complètes au maximum.",
+          "date": "Publié le : 27/10/2026"
+        },
         {
           "title": "Version V2.3.9 : publicité pour l’assistance à distance et améliorations visuelles",
           "text": "Une publicité pour l’assistance à distance a été ajoutée au carrousel, avec un lien direct vers la page du service. Les couleurs du bouton de contact et du carrousel de marques ont également été ajustées dans le thème clair pour améliorer le contraste.",

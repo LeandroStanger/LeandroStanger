@@ -1768,6 +1768,10 @@ html.light-theme .marca-item span {
     margin-top: var(--space-4);
 }
 
+.habilidades-load-more-wrap[hidden] {
+    display: none;
+}
+
 .curriculo-actions {
     grid-column: 1 / -1;
     display: flex;
