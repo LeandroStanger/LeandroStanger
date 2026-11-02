@@ -404,7 +404,8 @@ const anuncio1Images = [
     { src: 'img/anuncio/anuncio2.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-standard' },
     { src: 'img/anuncio/anuncio3.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-gamer' },
     { src: 'img/anuncio/anuncio4.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-pro' },
-    { src: 'img/anuncio/anuncio5.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-premium' }
+    { src: 'img/anuncio/anuncio5.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-premium' },
+    { src: 'img/anuncio/anuncio13.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' }
 ];
 
 const anuncio2Images = [
@@ -412,7 +413,8 @@ const anuncio2Images = [
     { src: 'img/anuncio/anuncio7.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-educacional' },
     { src: 'img/anuncio/anuncio8.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-go' },
     { src: 'img/anuncio/anuncio9.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#recuperacao' },
-    { src: 'img/anuncio/anuncio10.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#limpeza' }
+    { src: 'img/anuncio/anuncio10.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#limpeza' },
+    { src: 'img/anuncio/anuncio12.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/aulas-particulares/aula-particular.html' }
 ];
 
 let rotacaoTimeout1 = null;
