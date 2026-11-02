@@ -2303,10 +2303,32 @@ body.modal-open {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-8);
-    align-items: start;
+    align-items: stretch;
 }
 
-@media (min-width: 768px) { .contato-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 768px) {
+    .contato-grid { grid-template-columns: 1fr 1fr; }
+    .contato-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .contato-info .form {
+        flex: 1;
+        min-height: 0;
+    }
+    .form .form-message-group {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        min-height: 0;
+    }
+    .form .form-message-group textarea {
+        flex: 1;
+        height: auto;
+        min-height: 160px;
+        max-height: none;
+    }
+}
 
 .contato-info-title {
     font-size: var(--text-2xl);
@@ -2489,6 +2511,8 @@ body.modal-open {
     text-align: center;
     transition: all var(--transition-normal);
 }
+
+.form-status:empty { display: none; }
 
 .form-status.success {
     background: rgba(37,99,235,0.1);
