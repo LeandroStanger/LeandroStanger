@@ -676,7 +676,7 @@
         "message_placeholder": "Écrivez votre message ici...",
         "send": "Envoyer le message",
         "sending": "Envoi...",
-        "success": "✅ Message envoyé avec succès ! Je vous recontacterai bientôt.",
+        "success": "Message envoyé avec succès ! Je vous recontacterai bientôt.",
         "error": "❌ Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer."
       },
       "links": {
@@ -746,6 +746,11 @@
       "title": "Flux de mises à jour",
       "subtitle": "Dernières nouvelles et articles",
       "items": [
+        {
+          "title": "Version V2.11 : améliorations des publicités et du formulaire de contact",
+          "text": "Les publicités 21 à 24 ont été ajoutées et la taille de la deuxième publicité a été ajustée pour correspondre à la première. Le formulaire de contact envoie désormais les messages sans quitter le site, affiche une confirmation sur la page et vérifie que l’adresse e-mail a un format valide. La couleur de fond des champs remplis automatiquement a également été harmonisée et l’emoji de réussite remplacé par une icône.",
+          "date": "Publié le : 04/11/2026"
+        },
         {
           "title": "Version V2.10 : évolution professionnelle et améliorations des compétences",
           "text": "L’expérience professionnelle a été mise à jour avec la promotion au poste d’opérateur d’expédition chez Confecções Vanelise Ltda., incluant l’organisation du service, le suivi et la supervision du chargement des commandes ainsi que la gestion des stocks de caisses. Dans les compétences techniques, le bouton « Voir plus » apparaît désormais après l’affichage de quatre lignes complètes au maximum.",

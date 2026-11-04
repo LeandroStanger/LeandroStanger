@@ -676,7 +676,7 @@
         "message_placeholder": "Scrivi il tuo messaggio qui...",
         "send": "Invia Messaggio",
         "sending": "Invio...",
-        "success": "✅ Messaggio inviato con successo! Ti contatterò presto.",
+        "success": "Messaggio inviato con successo! Ti contatterò presto.",
         "error": "❌ Si è verificato un errore durante l'invio del messaggio. Per favore, riprova."
       },
       "links": {
@@ -746,6 +746,11 @@
       "title": "Feed degli Aggiornamenti",
       "subtitle": "Ultime notizie e post",
       "items": [
+        {
+          "title": "Versione V2.11: miglioramenti agli annunci e al modulo di contatto",
+          "text": "Abbiamo aggiunto gli annunci dal 21 al 24 e adattato le dimensioni del secondo annuncio a quelle del primo. Ora il modulo di contatto invia i messaggi senza uscire dal sito, mostra la conferma sulla pagina e verifica che l’indirizzo e-mail abbia un formato valido. Abbiamo inoltre uniformato il colore di sfondo dei campi compilati automaticamente e sostituito l’emoji di conferma con un’icona.",
+          "date": "Pubblicato il: 04/11/2026"
+        },
         {
           "title": "Versione V2.10: aggiornamento professionale e miglioramenti alle competenze",
           "text": "Abbiamo aggiornato l’esperienza professionale con la promozione a operatore di spedizione presso Confecções Vanelise Ltda., includendo l’organizzazione del reparto, il monitoraggio e la supervisione del carico degli ordini e la gestione dell’inventario dell’area di imballaggio. Nelle competenze tecniche, il pulsante “Carica altro” appare ora dopo un massimo di quattro righe complete.",

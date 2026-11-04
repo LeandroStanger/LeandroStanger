@@ -821,6 +821,7 @@ html.light-theme .section-label { color: rgba(0,0,0,0.03); }
 
 .anuncio-link {
     display: block;
+    width: 100%;
     max-width: 100%;
     border-radius: var(--radius-lg);
     overflow: hidden;
@@ -2457,6 +2458,17 @@ body.modal-open {
     border-color: var(--color-primary);
     box-shadow: 0 0 0 3px var(--color-primary-soft);
     background: var(--color-dark-800);
+}
+
+.form input:-webkit-autofill,
+.form input:-webkit-autofill:hover,
+.form input:-webkit-autofill:focus,
+.form textarea:-webkit-autofill,
+.form textarea:-webkit-autofill:hover,
+.form textarea:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--color-light);
+    -webkit-box-shadow: 0 0 0 1000px var(--color-dark-800) inset;
+    transition: background-color 9999s ease-out 0s;
 }
 
 .form input::placeholder, .form textarea::placeholder {

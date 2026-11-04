@@ -676,7 +676,7 @@
         "message_placeholder": "Schreiben Sie Ihre Nachricht hier...",
         "send": "Nachricht senden",
         "sending": "Senden...",
-        "success": "✅ Nachricht erfolgreich gesendet! Ich melde mich in Kürze.",
+        "success": "Nachricht erfolgreich gesendet! Ich melde mich in Kürze.",
         "error": "❌ Beim Senden der Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
       },
       "links": {
@@ -746,6 +746,11 @@
       "title": "Feed-Updates",
       "subtitle": "Neueste Nachrichten und Beiträge",
       "items": [
+        {
+          "title": "Version V2.11: Verbesserungen bei Anzeigen und Kontaktformular",
+          "text": "Die Anzeigen 21 bis 24 wurden hinzugefügt und die zweite Anzeige an die Größe der ersten angepasst. Das Kontaktformular sendet Nachrichten jetzt, ohne die Website zu verlassen, zeigt die Bestätigung direkt auf der Seite an und prüft das E-Mail-Format. Außerdem wurde die Hintergrundfarbe automatisch ausgefüllter Felder vereinheitlicht und das Erfolgs-Emoji durch ein Symbol ersetzt.",
+          "date": "Veröffentlicht am: 04.11.2026"
+        },
         {
           "title": "Version V2.10: Berufliches Update und Verbesserungen bei den Fähigkeiten",
           "text": "Die Berufserfahrung wurde um die Beförderung zum Versandmitarbeiter bei Confecções Vanelise Ltda. ergänzt. Dazu gehören die Organisation des Versandbereichs, die Überwachung und Beaufsichtigung der Verladung von Bestellungen sowie die Bestandsverwaltung des Kistenlagers. Bei den technischen Fähigkeiten erscheint die Schaltfläche „Mehr laden“ nun nach bis zu vier vollständigen Zeilen.",

@@ -676,7 +676,7 @@
         "message_placeholder": "Type your message here...",
         "send": "Send Message",
         "sending": "Sending...",
-        "success": "✅ Message sent successfully! I'll get back to you soon.",
+        "success": "Message sent successfully! I'll get back to you soon.",
         "error": "❌ An error occurred while sending the message. Please try again."
       },
       "links": {
@@ -746,6 +746,11 @@
       "title": "Feed Updates",
       "subtitle": "Latest news and posts",
       "items": [
+        {
+          "title": "Version V2.11: ad and contact form improvements",
+          "text": "Added ads 21 through 24 and matched the size of the second ad to the first. The contact form now submits messages without leaving the site, displays confirmation on the page, and checks that the email address has a valid format. Also standardized the background color of autofilled fields and replaced the success emoji with an icon.",
+          "date": "Published on: 11/04/2026"
+        },
         {
           "title": "Version V2.10: career update and skills improvements",
           "text": "Updated the professional experience with a promotion to Shipping Operator at Confecções Vanelise Ltda., including responsibility for organizing the department, monitoring and supervising order loading, and managing boxing inventory. In technical skills, the “Load more” button now appears after up to four complete rows.",

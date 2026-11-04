@@ -676,7 +676,7 @@
         "message_placeholder": "Digite sua mensagem aqui...",
         "send": "Enviar Mensagem",
         "sending": "Enviando...",
-        "success": "✅ Mensagem enviada com sucesso! Entrarei em contato em breve.",
+        "success": "Mensagem enviada com sucesso! Entrarei em contato em breve.",
         "error": "❌ Ocorreu um erro ao enviar a mensagem. Tente novamente."
       },
       "links": {
@@ -746,6 +746,11 @@
       "title": "Feed de Atualizações",
       "subtitle": "Últimas novidades e posts",
       "items": [
+        {
+          "title": "Versão V2.11: melhorias nos anúncios e no formulário de contato",
+          "text": "Adicionamos os novos anúncios 21 a 24 e ajustamos o tamanho do segundo anúncio para corresponder ao primeiro. O formulário de contato agora envia a mensagem sem sair do site, mostra a confirmação na própria página e verifica se o e-mail está em um formato válido. Também padronizamos a cor dos campos preenchidos automaticamente e substituímos o emoji de sucesso por um ícone.",
+          "date": "Publicado em: 04/11/2026"
+        },
         {
           "title": "Versão V2.10: atualização profissional e melhorias nas habilidades",
           "text": "Atualizamos a experiência profissional com a promoção a Operador de Expedição na Confecções Vanelise Ltda., incluindo as responsabilidades de organização do setor, acompanhamento e supervisão do carregamento de pedidos e gestão do estoque da caixaria. Na seção de habilidades técnicas, o botão “Ver mais” agora aparece após a exibição de até quatro linhas completas.",

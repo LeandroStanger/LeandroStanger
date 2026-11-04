@@ -647,8 +647,7 @@
                             </h3>
                             <p class="contato-info-text" data-i18n="sections.contato.intro">Preencha o formulário abaixo
                                 e entrarei em contato o mais breve possível.</p>
-                            <form class="form" hx-post="https://formspree.io/f/xjgevgvg" hx-target="#form-status"
-                                hx-swap="innerHTML" hx-indicator="#submit-btn" hx-on::after-request="this.reset()">
+                            <form class="form" action="https://postbag.dev/s/fm_43g6khqv2qmc" method="POST">
                                 <div class="form-input-group">
                                     <label for="name" class="form-label"
                                         data-i18n="sections.contato.form.name_label">Nome</label>
@@ -670,14 +669,14 @@
                                         rows="4" class="input" required
                                         data-i18n-placeholder="sections.contato.form.message_placeholder"></textarea>
                                 </div>
+                                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
+                                    style="position:absolute;left:-10000px" aria-hidden="true">
                                 <button type="submit" id="submit-btn" class="btn btn-primary">
                                     <i class="fas fa-paper-plane" aria-hidden="true"></i>
                                     <span data-i18n="sections.contato.form.send">Enviar Mensagem</span>
-                                    <span class="htmx-indicator" style="display:none;">
-                                        <i class="fas fa-spinner fa-spin"></i> Enviando...
-                                    </span>
                                 </button>
-                                <div id="form-status" class="form-status"></div>
+                                <div id="form-status" class="form-status" role="status" aria-live="polite"
+                                    aria-atomic="true"></div>
                             </form>
                         </div>
                         <div class="contato-links" role="list">

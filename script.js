@@ -408,7 +408,9 @@ const anuncio1Images = [
     { src: 'img/anuncio/anuncio13.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' },
     { src: 'img/anuncio/anuncio15.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' },
     { src: 'img/anuncio/anuncio17.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' },
-    { src: 'img/anuncio/anuncio19.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' }
+    { src: 'img/anuncio/anuncio19.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' },
+    { src: 'img/anuncio/anuncio21.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' },
+    { src: 'img/anuncio/anuncio23.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' }
 ];
 
 const anuncio2Images = [
@@ -421,7 +423,9 @@ const anuncio2Images = [
     { src: 'img/anuncio/anuncio14.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' },
     { src: 'img/anuncio/anuncio16.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' },
     { src: 'img/anuncio/anuncio18.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' },
-    { src: 'img/anuncio/anuncio20.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' }
+    { src: 'img/anuncio/anuncio20.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' },
+    { src: 'img/anuncio/anuncio22.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' },
+    { src: 'img/anuncio/anuncio24.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' }
 ];
 
 let rotacaoTimeout1 = null;
@@ -2407,6 +2411,50 @@ function initTechnologiesLoadMore() {
     });
 }
 
+function initContactForm() {
+    const form = document.querySelector('.contato-info .form');
+    const status = document.getElementById('form-status');
+    const emailInput = form?.querySelector('input[type="email"]');
+    const submitButton = form?.querySelector('button[type="submit"]');
+    if (!form || !status || !emailInput || !submitButton) return;
+
+    form.addEventListener('submit', async event => {
+        event.preventDefault();
+        if (!emailInput.checkValidity()) {
+            emailInput.reportValidity();
+            return;
+        }
+
+        status.className = 'form-status';
+        status.textContent = I18n.t('sections.contato.form.sending');
+        submitButton.disabled = true;
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: new URLSearchParams(new FormData(form)),
+                mode: 'no-cors'
+            });
+            if (!response.ok && response.type !== 'opaque' && response.type !== 'opaqueredirect') {
+                throw new Error(`HTTP ${response.status}`);
+            }
+
+            status.classList.add('success');
+            const successIcon = document.createElement('i');
+            successIcon.className = 'fas fa-check-circle';
+            successIcon.setAttribute('aria-hidden', 'true');
+            status.replaceChildren(successIcon, document.createTextNode(` ${I18n.t('sections.contato.form.success')}`));
+            form.reset();
+        } catch (error) {
+            console.error('Erro ao enviar formulário de contato:', error);
+            status.classList.add('error');
+            status.textContent = I18n.t('sections.contato.form.error');
+        } finally {
+            submitButton.disabled = false;
+        }
+    });
+}
+
 // ==================== FUNÇÃO PARA INICIALIZAR A SEÇÃO DE DOAÇÕES ====================
 function initDoacoes() {
     const donationTabs = document.querySelector('.doacoes-tabs');
@@ -2756,6 +2804,7 @@ document.addEventListener('htmx:afterSwap', function(evt) {
         initBackToTop();
         initShareWidget();
         initDownloadCurriculo();
+        initContactForm();
         initDoacoes();
 
         const modal = document.getElementById('modal-marcas');
