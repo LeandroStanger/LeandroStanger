@@ -747,6 +747,11 @@
       "subtitle": "Últimas noticias y publicaciones",
       "items": [
         {
+          "title": "Versión V2.11.1: contacto por WhatsApp con el anuncio y el tema identificados",
+          "text": "Al hacer clic en cualquier anuncio, el usuario ahora es dirigido a WhatsApp con un mensaje preparado que identifica el número del anuncio, la imagen mostrada y el tema del servicio. El mensaje se actualiza automáticamente al cambiar las imágenes e incluye un espacio para indicar el nombre.",
+          "date": "Publicado el: 08/11/2026"
+        },
+        {
           "title": "Versión V2.11: mejoras en los anuncios y el formulario de contacto",
           "text": "Añadimos los anuncios 21 a 24 y ajustamos el tamaño del segundo anuncio para que coincida con el primero. El formulario de contacto ahora envía mensajes sin salir del sitio, muestra la confirmación en la página y comprueba que el correo electrónico tenga un formato válido. También unificamos el color de fondo de los campos autocompletados y sustituimos el emoji de éxito por un icono.",
           "date": "Publicado el: 04/11/2026"

@@ -747,6 +747,11 @@
       "subtitle": "Neueste Nachrichten und Beiträge",
       "items": [
         {
+          "title": "Version V2.11.1: WhatsApp-Kontakt mit Anzeige und Thema",
+          "text": "Beim Klick auf eine Anzeige werden Nutzer jetzt zu WhatsApp weitergeleitet. Eine vorausgefüllte Nachricht nennt die Anzeigennummer, das angezeigte Bild und das Thema der Dienstleistung. Beim Bildwechsel wird die Nachricht automatisch angepasst und enthält ein Feld für den Namen.",
+          "date": "Veröffentlicht am: 08.11.2026"
+        },
+        {
           "title": "Version V2.11: Verbesserungen bei Anzeigen und Kontaktformular",
           "text": "Die Anzeigen 21 bis 24 wurden hinzugefügt und die zweite Anzeige an die Größe der ersten angepasst. Das Kontaktformular sendet Nachrichten jetzt, ohne die Website zu verlassen, zeigt die Bestätigung direkt auf der Seite an und prüft das E-Mail-Format. Außerdem wurde die Hintergrundfarbe automatisch ausgefüllter Felder vereinheitlicht und das Erfolgs-Emoji durch ein Symbol ersetzt.",
           "date": "Veröffentlicht am: 04.11.2026"

@@ -747,6 +747,11 @@
       "subtitle": "Ultime notizie e post",
       "items": [
         {
+          "title": "Versione V2.11.1: contatto WhatsApp con annuncio e argomento identificati",
+          "text": "Facendo clic su un annuncio, l’utente viene ora indirizzato a WhatsApp con un messaggio precompilato che indica il numero dell’annuncio, l’immagine visualizzata e l’argomento del servizio. Il messaggio si aggiorna automaticamente quando cambiano le immagini e include uno spazio per inserire il nome.",
+          "date": "Pubblicato il: 08/11/2026"
+        },
+        {
           "title": "Versione V2.11: miglioramenti agli annunci e al modulo di contatto",
           "text": "Abbiamo aggiunto gli annunci dal 21 al 24 e adattato le dimensioni del secondo annuncio a quelle del primo. Ora il modulo di contatto invia i messaggi senza uscire dal sito, mostra la conferma sulla pagina e verifica che l’indirizzo e-mail abbia un formato valido. Abbiamo inoltre uniformato il colore di sfondo dei campi compilati automaticamente e sostituito l’emoji di conferma con un’icona.",
           "date": "Pubblicato il: 04/11/2026"

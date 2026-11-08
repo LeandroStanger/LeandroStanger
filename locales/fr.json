@@ -747,6 +747,11 @@
       "subtitle": "Dernières nouvelles et articles",
       "items": [
         {
+          "title": "Version V2.11.1 : contact WhatsApp avec identification de la publicité et du sujet",
+          "text": "En cliquant sur une publicité, l’utilisateur est désormais redirigé vers WhatsApp avec un message prérempli indiquant le numéro de la publicité, l’image affichée et le sujet du service. Le message est automatiquement mis à jour lorsque les images changent et prévoit un espace pour indiquer le nom.",
+          "date": "Publié le : 08/11/2026"
+        },
+        {
           "title": "Version V2.11 : améliorations des publicités et du formulaire de contact",
           "text": "Les publicités 21 à 24 ont été ajoutées et la taille de la deuxième publicité a été ajustée pour correspondre à la première. Le formulaire de contact envoie désormais les messages sans quitter le site, affiche une confirmation sur la page et vérifie que l’adresse e-mail a un format valide. La couleur de fond des champs remplis automatiquement a également été harmonisée et l’emoji de réussite remplacé par une icône.",
           "date": "Publié le : 04/11/2026"

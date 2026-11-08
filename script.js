@@ -271,6 +271,10 @@ function updateAd(adId, newIndex) {
     const total = state.images.length;
 
     state.currentIndex = newIndex;
+    const currentImage = state.images[newIndex];
+    if (linkElement) {
+        linkElement.href = getAdWhatsappLink(adId, currentImage);
+    }
 
     clearTimeout(state.swapTimer);
     if (state.progressFrame !== null) cancelAnimationFrame(state.progressFrame);
@@ -280,13 +284,10 @@ function updateAd(adId, newIndex) {
     imgElement.style.opacity = '0';
     state.swapTimer = setTimeout(() => {
         const currentIndex = state.currentIndex;
-        const currentImage = state.images[currentIndex];
-        imgElement.src = currentImage.src;
-        const imageNumber = currentImage.src.match(/anuncio(\d+)\.png$/)?.[1];
+        const image = state.images[currentIndex];
+        imgElement.src = image.src;
+        const imageNumber = image.src.match(/anuncio(\d+)\.png$/)?.[1];
         imgElement.alt = `Anúncio ${imageNumber || currentIndex + 1}`;
-        if (linkElement) {
-            linkElement.href = currentImage.link || '#';
-        }
         imgElement.onload = () => {
             if (state.currentIndex === currentIndex) imgElement.style.opacity = '1';
         };
@@ -378,7 +379,7 @@ function setupAd(adId, imagesArray) {
         imgElement.style.opacity = '1';
     }
     if (linkElement) {
-        linkElement.href = imagesArray[randomIndex].link || '#';
+        linkElement.href = getAdWhatsappLink(adId, imagesArray[randomIndex]);
     }
     state.currentIndex = randomIndex;
     updateAd(adId, randomIndex);
@@ -399,34 +400,41 @@ function setupAd(adId, imagesArray) {
 
 // ==================== CONTROLE DE VISIBILIDADE DOS ANÚNCIOS E ROTAÇÃO ====================
 const anuncio1Images = [
-    { src: 'img/anuncio/anuncio11.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/suporte-remoto/suporte-remoto.html' },
-    { src: 'img/anuncio/anuncio1.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#criacao-site' },
-    { src: 'img/anuncio/anuncio2.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-standard' },
-    { src: 'img/anuncio/anuncio3.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-gamer' },
-    { src: 'img/anuncio/anuncio4.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-pro' },
-    { src: 'img/anuncio/anuncio5.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-premium' },
-    { src: 'img/anuncio/anuncio13.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' },
-    { src: 'img/anuncio/anuncio15.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' },
-    { src: 'img/anuncio/anuncio17.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' },
-    { src: 'img/anuncio/anuncio19.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' },
-    { src: 'img/anuncio/anuncio21.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' },
-    { src: 'img/anuncio/anuncio23.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' }
+    { src: 'img/anuncio/anuncio11.png', subject: 'suporte técnico remoto' },
+    { src: 'img/anuncio/anuncio1.png', subject: 'criação de site' },
+    { src: 'img/anuncio/anuncio2.png', subject: 'formatação standard' },
+    { src: 'img/anuncio/anuncio3.png', subject: 'formatação gamer' },
+    { src: 'img/anuncio/anuncio4.png', subject: 'formatação pro' },
+    { src: 'img/anuncio/anuncio5.png', subject: 'formatação premium' },
+    { src: 'img/anuncio/anuncio13.png', subject: 'otimização e melhoria de desempenho do computador' },
+    { src: 'img/anuncio/anuncio15.png', subject: 'reparação e manutenção do sistema' },
+    { src: 'img/anuncio/anuncio17.png', subject: 'configuração de serviços de e-mail' },
+    { src: 'img/anuncio/anuncio19.png', subject: 'instalação de antivírus Kaspersky' },
+    { src: 'img/anuncio/anuncio21.png', subject: 'instalação de placa de vídeo' },
+    { src: 'img/anuncio/anuncio23.png', subject: 'instalação de HD, SSD ou NVMe' }
 ];
 
 const anuncio2Images = [
-    { src: 'img/anuncio/anuncio6.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-enterprise' },
-    { src: 'img/anuncio/anuncio7.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-educacional' },
-    { src: 'img/anuncio/anuncio8.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#formatacao-go' },
-    { src: 'img/anuncio/anuncio9.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#recuperacao' },
-    { src: 'img/anuncio/anuncio10.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/#limpeza' },
-    { src: 'img/anuncio/anuncio12.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/aulas-particulares/aula-particular.html' },
-    { src: 'img/anuncio/anuncio14.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' },
-    { src: 'img/anuncio/anuncio16.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' },
-    { src: 'img/anuncio/anuncio18.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' },
-    { src: 'img/anuncio/anuncio20.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' },
-    { src: 'img/anuncio/anuncio22.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' },
-    { src: 'img/anuncio/anuncio24.png', link: 'https://leandrostanger.github.io/LeandroStanger-Solucoes-em-Informatica/index.html#contato' }
+    { src: 'img/anuncio/anuncio6.png', subject: 'formatação enterprise' },
+    { src: 'img/anuncio/anuncio7.png', subject: 'formatação educacional' },
+    { src: 'img/anuncio/anuncio8.png', subject: 'formatação GO' },
+    { src: 'img/anuncio/anuncio9.png', subject: 'recuperação de dados' },
+    { src: 'img/anuncio/anuncio10.png', subject: 'limpeza e manutenção preventiva do computador' },
+    { src: 'img/anuncio/anuncio12.png', subject: 'aulas particulares de informática' },
+    { src: 'img/anuncio/anuncio14.png', subject: 'remoção de vírus e malwares' },
+    { src: 'img/anuncio/anuncio16.png', subject: 'instalação de softwares' },
+    { src: 'img/anuncio/anuncio18.png', subject: 'instalação e ativação do Microsoft Office' },
+    { src: 'img/anuncio/anuncio20.png', subject: 'instalação e configuração de impressora' },
+    { src: 'img/anuncio/anuncio22.png', subject: 'instalação de memória RAM' },
+    { src: 'img/anuncio/anuncio24.png', subject: 'troca de tela de notebook' }
 ];
+
+function getAdWhatsappLink(adId, ad) {
+    const adNumber = adId.replace('anuncio', '');
+    const imageNumber = ad.src.match(/anuncio(\d+)\.png$/)[1];
+    const message = `Olá! Vi o Anúncio ${adNumber} (imagem ${imageNumber}) no site e tenho interesse em ${ad.subject}. Meu nome é: `;
+    return `https://wa.me/5548996446508?text=${encodeURIComponent(message)}`;
+}
 
 let rotacaoTimeout1 = null;
 let rotacaoTimeout2 = null;
