@@ -1902,14 +1902,13 @@ body.modal-open {
 /* ===== TECNOLOGIAS ===== */
 .tecnologias-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--space-4);
 }
 
-@media (min-width: 640px) { .tecnologias-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .tecnologias-grid { grid-template-columns: repeat(3, 1fr); } }
-
 .tecnologia-categoria {
+    width: min(100%, 900px);
+    margin-inline: auto;
     background: var(--color-dark-900);
     border: 1px solid var(--color-dark-700);
     border-radius: var(--radius-lg);
@@ -1933,16 +1932,24 @@ body.modal-open {
 .tecnologia-categoria-title {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: var(--space-3);
     font-size: var(--text-lg);
     color: var(--color-primary-light);
 }
 
 .tecnologia-icons {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    display: flex;
+    justify-content: safe center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
     gap: var(--space-3);
-    justify-items: center;
+    padding-bottom: var(--space-1);
+}
+
+.tecnologia-icons::-webkit-scrollbar {
+    display: none;
 }
 
 .tecnologia-icon[hidden] {
@@ -1960,7 +1967,9 @@ body.modal-open {
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
                 background 0.3s ease,
                 box-shadow 0.3s ease;
-    width: 100%;
+    width: 84px;
+    min-width: 84px;
+    flex: 0 0 84px;
 }
 
 .tecnologia-icon:hover {
@@ -1985,6 +1994,43 @@ body.modal-open {
     font-weight: 500;
     text-align: center;
     word-break: break-word;
+}
+
+.tecnologia-carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-2);
+}
+
+.tecnologia-carousel-toggle {
+    display: inline-grid;
+    place-items: center;
+    width: 1.125rem;
+    height: 1.125rem;
+    flex: 0 0 auto;
+    border: 1px solid rgba(37,99,235, 0.45);
+    border-radius: var(--radius-md);
+    background: rgba(37,99,235, 0.1);
+    color: var(--color-primary-light);
+    cursor: pointer;
+}
+
+.tecnologia-carousel-toggle i {
+    font-size: 0.625rem;
+}
+
+.tecnologia-carousel-toggle:hover {
+    background: rgba(37,99,235, 0.2);
+}
+
+.tecnologia-carousel-toggle:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.tecnologia-carousel-toggle:focus-visible {
+    outline: 1px solid var(--color-primary-light);
+    outline-offset: 1px;
 }
 
 /* ===== PROJETOS ===== */
@@ -4179,6 +4225,16 @@ html.light-theme .tecnologia-icon {
 
 html.light-theme .tecnologia-icon:hover {
     background: var(--color-primary-soft);
+}
+
+html.light-theme .tecnologia-carousel-toggle {
+    border-color: rgba(37, 99, 235, 0.35);
+    background: var(--color-primary-soft);
+    color: var(--color-primary-dark);
+}
+
+html.light-theme .tecnologia-carousel-toggle:hover {
+    background: rgba(37, 99, 235, 0.16);
 }
 
 html.light-theme a {
