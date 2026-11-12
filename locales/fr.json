@@ -151,92 +151,92 @@
             "brands": [
               {
                 "name": "Renner",
-                "logo": "img/marcas/renner.png",
+                "logo": "img/marcas/renner.webp",
                 "url": "https://www.lojasrenner.com.br/"
               },
               {
                 "name": "Hering",
-                "logo": "img/marcas/hering.png",
+                "logo": "img/marcas/hering.webp",
                 "url": "https://www.hering.com.br/"
               },
               {
                 "name": "Farm",
-                "logo": "img/marcas/farm.png",
+                "logo": "img/marcas/farm.webp",
                 "url": "https://www.farmrio.com.br/"
               },
               {
                 "name": "Youcom",
-                "logo": "img/marcas/youcom.png",
+                "logo": "img/marcas/youcom.webp",
                 "url": "https://www.youcom.com.br/"
               },
               {
                 "name": "Havan",
-                "logo": "img/marcas/havan.png",
+                "logo": "img/marcas/havan.webp",
                 "url": "https://www.havan.com.br/"
               },
               {
                 "name": "Uniforme Anjo Tintas",
-                "logo": "img/marcas/anjo-tintas.png",
+                "logo": "img/marcas/anjo-tintas.webp",
                 "url": "https://www.anjo.com.br/"
               },
               {
                 "name": "Ashua",
-                "logo": "img/marcas/ashua.png",
+                "logo": "img/marcas/ashua.webp",
                 "url": "https://www.lojasrenner.com.br/ashua"
               },
               {
                 "name": "Insider",
-                "logo": "img/marcas/insider.png",
+                "logo": "img/marcas/insider.webp",
                 "url": "https://www.insiderstore.com.br/"
               },
               {
                 "name": "Marisa",
-                "logo": "img/marcas/marisa.png",
+                "logo": "img/marcas/marisa.webp",
                 "url": "https://www.marisa.com.br/"
               },
               {
                 "name": "C&A",
-                "logo": "img/marcas/C&A.png",
+                "logo": "img/marcas/C&A.webp",
                 "url": "https://www.cea.com.br/"
               },
               {
                 "name": "Gang",
-                "logo": "img/marcas/gang.png",
+                "logo": "img/marcas/gang.webp",
                 "url": "https://www.gang.com.br/"
               },
               {
                 "name": "Riachuelo",
-                "logo": "img/marcas/riachuelo.png",
+                "logo": "img/marcas/riachuelo.webp",
                 "url": "https://www.riachuelo.com.br/"
               },
               {
                 "name": "Valentys Uniformes",
-                "logo": "img/marcas/valentyns.png",
+                "logo": "img/marcas/valentyns.webp",
                 "url": "https://valentys.com.br/"
               },
               {
                 "name": "Uniforme Farmácia Super Popular",
-                "logo": "img/marcas/Farmácia Super Popular.png",
+                "logo": "img/marcas/Farmácia Super Popular.webp",
                 "url": "https://www.facebook.com/farmarcon"
               },
               {
                 "name": "Uniforme Master Farma",
-                "logo": "img/marcas/Master Farma.png",
+                "logo": "img/marcas/Master Farma.webp",
                 "url": "https://www.masterfarma.com.br/"
               },
               {
                 "name": "Uniforme Elis Brasil",
-                "logo": "img/marcas/Elis.png",
+                "logo": "img/marcas/Elis.webp",
                 "url": "https://br.elis.com/pt"
               },
               {
                 "name": "Lez a Lez",
-                "logo": "img/marcas/lez-a-lez.png",
+                "logo": "img/marcas/lez-a-lez.webp",
                 "url": "https://www.lezalez.com/"
               },
               {
                 "name": "Natalia Grando",
-                "logo": "img/marcas/Natalia Grando.png",
+                "logo": "img/marcas/Natalia Grando.webp",
                 "url": "https://nataliagrando.com.br/"
               }
             ],
@@ -746,6 +746,11 @@
       "title": "Flux de mises à jour",
       "subtitle": "Dernières nouvelles et articles",
       "items": [
+        {
+          "title": "Version V2.12 : carrousels sans doublons et images WebP",
+          "text": "Les carrousels technologiques ne répètent plus les icônes et restent immobiles lorsque tous les éléments tiennent dans la zone. GridCraft et WordCraft ont été ajoutés aux outils. Les images PNG/JPG du site ont été converties en WebP, leurs références mises à jour et leur poids total réduit d’environ 56,5 Mo à 11,1 Mo.",
+          "date": "Publié le : 11/11/2026"
+        },
         {
           "title": "Version V2.11.1 : contact WhatsApp avec identification de la publicité et du sujet",
           "text": "En cliquant sur une publicité, l’utilisateur est désormais redirigé vers WhatsApp avec un message prérempli indiquant le numéro de la publicité, l’image affichée et le sujet du service. Le message est automatiquement mis à jour lorsque les images changent et prévoit un espace pour indiquer le nom.",

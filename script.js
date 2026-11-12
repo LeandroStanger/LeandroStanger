@@ -88,6 +88,11 @@ const MINIMAL_TRANSLATIONS = {
             "subtitle": "Últimas novidades",
             "items": [
                 {
+                    "title": "Versão V2.12: carrosséis sem duplicações e imagens WebP",
+                    "text": "Os carrosséis de tecnologias agora não repetem ícones e ficam parados quando todos os itens cabem. Adicionamos GridCraft e WordCraft à categoria Ferramentas. Convertemos as imagens PNG/JPG do site para WebP, atualizamos os caminhos e reduzimos o tamanho total das imagens de aproximadamente 56,5 MB para 11,1 MB.",
+                    "date": "Publicado em: 11/11/2026"
+                },
+                {
                     "title": "Versão V2.3.9: anúncio de suporte remoto e ajustes visuais",
                     "text": "Adicionamos ao carrossel o anúncio de suporte remoto, com link direto para a página do serviço. Também ajustamos as cores do botão “Entrar em Contato” e do carrossel de marcas no tema claro para melhorar o contraste.",
                     "date": "Publicado em: 26/10/2026"
@@ -156,7 +161,7 @@ const I18n = {
         }
 
         try {
-            const response = await fetch(`locales/${lang}.json`);
+            const response = await fetch(`locales/${lang}.json?v=2.12`);
             if (!response.ok) throw new Error(`HTTP ${response.status}`);
             const data = await response.json();
             if (data && typeof data === 'object') {
@@ -286,7 +291,7 @@ function updateAd(adId, newIndex) {
         const currentIndex = state.currentIndex;
         const image = state.images[currentIndex];
         imgElement.src = image.src;
-        const imageNumber = image.src.match(/anuncio(\d+)\.png$/)?.[1];
+        const imageNumber = image.src.match(/anuncio(\d+)\.webp$/)?.[1];
         imgElement.alt = `Anúncio ${imageNumber || currentIndex + 1}`;
         imgElement.onload = () => {
             if (state.currentIndex === currentIndex) imgElement.style.opacity = '1';
@@ -374,7 +379,7 @@ function setupAd(adId, imagesArray) {
     const linkElement = document.getElementById(adId + '-link');
     if (imgElement) {
         imgElement.src = imagesArray[randomIndex].src;
-        const imageNumber = imagesArray[randomIndex].src.match(/anuncio(\d+)\.png$/)?.[1];
+        const imageNumber = imagesArray[randomIndex].src.match(/anuncio(\d+)\.webp$/)?.[1];
         imgElement.alt = `Anúncio ${imageNumber || randomIndex + 1}`;
         imgElement.style.opacity = '1';
     }
@@ -400,38 +405,42 @@ function setupAd(adId, imagesArray) {
 
 // ==================== CONTROLE DE VISIBILIDADE DOS ANÚNCIOS E ROTAÇÃO ====================
 const anuncio1Images = [
-    { src: 'img/anuncio/anuncio11.png', subject: 'suporte técnico remoto' },
-    { src: 'img/anuncio/anuncio1.png', subject: 'criação de site' },
-    { src: 'img/anuncio/anuncio2.png', subject: 'formatação standard' },
-    { src: 'img/anuncio/anuncio3.png', subject: 'formatação gamer' },
-    { src: 'img/anuncio/anuncio4.png', subject: 'formatação pro' },
-    { src: 'img/anuncio/anuncio5.png', subject: 'formatação premium' },
-    { src: 'img/anuncio/anuncio13.png', subject: 'otimização e melhoria de desempenho do computador' },
-    { src: 'img/anuncio/anuncio15.png', subject: 'reparação e manutenção do sistema' },
-    { src: 'img/anuncio/anuncio17.png', subject: 'configuração de serviços de e-mail' },
-    { src: 'img/anuncio/anuncio19.png', subject: 'instalação de antivírus Kaspersky' },
-    { src: 'img/anuncio/anuncio21.png', subject: 'instalação de placa de vídeo' },
-    { src: 'img/anuncio/anuncio23.png', subject: 'instalação de HD, SSD ou NVMe' }
+    { src: 'img/anuncio/anuncio11.webp', subject: 'suporte técnico remoto' },
+    { src: 'img/anuncio/anuncio1.webp', subject: 'criação de site' },
+    { src: 'img/anuncio/anuncio2.webp', subject: 'formatação standard' },
+    { src: 'img/anuncio/anuncio3.webp', subject: 'formatação gamer' },
+    { src: 'img/anuncio/anuncio4.webp', subject: 'formatação pro' },
+    { src: 'img/anuncio/anuncio5.webp', subject: 'formatação premium' },
+    { src: 'img/anuncio/anuncio13.webp', subject: 'otimização e melhoria de desempenho do computador' },
+    { src: 'img/anuncio/anuncio15.webp', subject: 'reparação e manutenção do sistema' },
+    { src: 'img/anuncio/anuncio17.webp', subject: 'configuração de serviços de e-mail' },
+    { src: 'img/anuncio/anuncio19.webp', subject: 'instalação de antivírus Kaspersky' },
+    { src: 'img/anuncio/anuncio21.webp', subject: 'instalação de placa de vídeo' },
+    { src: 'img/anuncio/anuncio23.webp', subject: 'instalação de HD, SSD ou NVMe' }
 ];
 
 const anuncio2Images = [
-    { src: 'img/anuncio/anuncio6.png', subject: 'formatação enterprise' },
-    { src: 'img/anuncio/anuncio7.png', subject: 'formatação educacional' },
-    { src: 'img/anuncio/anuncio8.png', subject: 'formatação GO' },
-    { src: 'img/anuncio/anuncio9.png', subject: 'recuperação de dados' },
-    { src: 'img/anuncio/anuncio10.png', subject: 'limpeza e manutenção preventiva do computador' },
-    { src: 'img/anuncio/anuncio12.png', subject: 'aulas particulares de informática' },
-    { src: 'img/anuncio/anuncio14.png', subject: 'remoção de vírus e malwares' },
-    { src: 'img/anuncio/anuncio16.png', subject: 'instalação de softwares' },
-    { src: 'img/anuncio/anuncio18.png', subject: 'instalação e ativação do Microsoft Office' },
-    { src: 'img/anuncio/anuncio20.png', subject: 'instalação e configuração de impressora' },
-    { src: 'img/anuncio/anuncio22.png', subject: 'instalação de memória RAM' },
-    { src: 'img/anuncio/anuncio24.png', subject: 'troca de tela de notebook' }
+    { src: 'img/anuncio/anuncio6.webp', subject: 'formatação enterprise' },
+    { src: 'img/anuncio/anuncio7.webp', subject: 'formatação educacional' },
+    { src: 'img/anuncio/anuncio8.webp', subject: 'formatação GO' },
+    { src: 'img/anuncio/anuncio9.webp', subject: 'recuperação de dados' },
+    { src: 'img/anuncio/anuncio10.webp', subject: 'limpeza e manutenção preventiva do computador' },
+    { src: 'img/anuncio/anuncio12.webp', subject: 'aulas particulares de informática' },
+    { src: 'img/anuncio/anuncio14.webp', subject: 'remoção de vírus e malwares' },
+    { src: 'img/anuncio/anuncio16.webp', subject: 'instalação de softwares' },
+    { src: 'img/anuncio/anuncio18.webp', subject: 'instalação e ativação do Microsoft Office' },
+    { src: 'img/anuncio/anuncio20.webp', subject: 'instalação e configuração de impressora' },
+    { src: 'img/anuncio/anuncio22.webp', subject: 'instalação de memória RAM' },
+    { src: 'img/anuncio/anuncio24.webp', subject: 'troca de tela de notebook' }
 ];
 
 function getAdWhatsappLink(adId, ad) {
     const adNumber = adId.replace('anuncio', '');
-    const imageNumber = ad.src.match(/anuncio(\d+)\.png$/)[1];
+    const imageNumberMatch = ad.src.match(/anuncio(\d+)\.webp$/);
+    if (!imageNumberMatch) {
+        throw new Error(`Caminho de imagem de anúncio inválido: ${ad.src}`);
+    }
+    const imageNumber = imageNumberMatch[1];
     const message = `Olá! Vi o Anúncio ${adNumber} (imagem ${imageNumber}) no site e tenho interesse em ${ad.subject}. Meu nome é: `;
     return `https://wa.me/5548996446508?text=${encodeURIComponent(message)}`;
 }
@@ -682,6 +691,7 @@ const Renderer = {
         this._safeRender('Experiência', this.renderExperiencia);
         this._safeRender('Habilidades', this.renderHabilidades);
         this.initBrandCarousels();
+        this.updateTechnologyCarouselLabels();
         document.dispatchEvent(new CustomEvent('renderer:done'));
         ScrollAnimations.refresh();
         this.generateProjectsSchema();
@@ -749,6 +759,85 @@ const Renderer = {
             if (toggleButton) {
                 toggleButton.addEventListener('click', () => setPlaybackState(!carousel._brandPlaying));
             }
+        });
+    },
+
+    updateTechnologyCarouselLabels() {
+        const labels = {
+            pause: I18n.t('sections.curriculo.experiencia.carousel_pause'),
+            play: I18n.t('sections.curriculo.experiencia.carousel_play')
+        };
+
+        document.querySelectorAll('.tecnologia-categoria').forEach(category => {
+            const carousel = category.querySelector('.tecnologia-icons');
+            const button = category.querySelector('.tecnologia-carousel-toggle');
+            if (!carousel?._technologyInitialized || !button) return;
+
+            const label = carousel._technologyPlaying ? labels.pause : labels.play;
+            button.setAttribute('aria-label', label);
+            button.title = label;
+        });
+    },
+
+    initTechnologyCarousels() {
+        const labels = {
+            pause: I18n.t('sections.curriculo.experiencia.carousel_pause'),
+            play: I18n.t('sections.curriculo.experiencia.carousel_play')
+        };
+
+        document.querySelectorAll('.tecnologia-categoria').forEach(category => {
+            const carousel = category.querySelector('.tecnologia-icons');
+            const toggleButton = category.querySelector('.tecnologia-carousel-toggle');
+            if (!carousel || !toggleButton || carousel._technologyInitialized) return;
+
+            const originalItems = Array.from(carousel.children);
+            if (originalItems.length === 0) return;
+
+            carousel._technologyInitialized = true;
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            let direction = 1;
+
+            const speed = 0.35 + Math.random() * 0.5;
+            const setPlaybackState = isPlaying => {
+                if (carousel._technologyInterval) {
+                    clearInterval(carousel._technologyInterval);
+                    carousel._technologyInterval = null;
+                }
+                const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+                isPlaying = isPlaying && maxScroll > 1;
+                carousel._technologyPlaying = isPlaying;
+                toggleButton.disabled = maxScroll <= 1;
+
+                if (isPlaying) {
+                    carousel._technologyInterval = setInterval(() => {
+                        const currentMaxScroll = carousel.scrollWidth - carousel.clientWidth;
+                        if (currentMaxScroll <= 1) {
+                            setPlaybackState(false);
+                            return;
+                        }
+
+                        const nextScroll = carousel.scrollLeft + speed * direction;
+                        if (nextScroll >= currentMaxScroll) {
+                            carousel.scrollLeft = currentMaxScroll;
+                            direction = -1;
+                        } else if (nextScroll <= 0) {
+                            carousel.scrollLeft = 0;
+                            direction = 1;
+                        } else {
+                            carousel.scrollLeft = nextScroll;
+                        }
+                    }, 18);
+                }
+
+                const icon = toggleButton.querySelector('i');
+                if (icon) icon.className = isPlaying ? 'fas fa-pause' : 'fas fa-play';
+                const label = isPlaying ? labels.pause : labels.play;
+                toggleButton.setAttribute('aria-label', label);
+                toggleButton.title = label;
+            };
+
+            setPlaybackState(!prefersReducedMotion);
+            toggleButton.addEventListener('click', () => setPlaybackState(!carousel._technologyPlaying));
         });
     },
 
@@ -910,7 +999,7 @@ const Renderer = {
                                     const hasLink = url && url !== '#';
                                     return `
                                         <a href="${url}" target="_blank" rel="noopener noreferrer" class="marca-item" aria-label="${brand.name}">
-                                            <img src="${brand.logo || 'img/placeholder.png'}" alt="${brand.name}" class="marca-logo" loading="lazy" onerror="this.onerror=null; this.src='img/placeholder.png';">
+                                            <img src="${brand.logo || ''}" alt="${brand.name}" class="marca-logo" loading="lazy" onerror="this.onerror=null; this.remove();">
                                             <span>${brand.name}</span>
                                         </a>
                                     `;
@@ -1192,7 +1281,7 @@ function openBrandsModal(brands) {
                 return `
                     <li class="brand-item">
                         <a href="${url}" target="_blank" rel="noopener noreferrer" class="brand-link">
-                            <img src="${brand.logo || 'img/placeholder.png'}" alt="${brand.name}" class="brand-logo" loading="lazy" onerror="this.onerror=null; this.src='img/placeholder.png';">
+                            <img src="${brand.logo || ''}" alt="${brand.name}" class="brand-logo" loading="lazy" onerror="this.onerror=null; this.remove();">
                             <span>${brand.name}</span>
                         </a>
                     </li>
@@ -1200,7 +1289,7 @@ function openBrandsModal(brands) {
             } else {
                 return `
                     <li class="brand-item">
-                        <img src="${brand.logo || 'img/placeholder.png'}" alt="${brand.name}" class="brand-logo" loading="lazy" onerror="this.onerror=null; this.src='img/placeholder.png';">
+                        <img src="${brand.logo || ''}" alt="${brand.name}" class="brand-logo" loading="lazy" onerror="this.onerror=null; this.remove();">
                         <span>${brand.name}</span>
                     </li>
                 `;
@@ -2145,7 +2234,7 @@ function buildCurriculoPreviewMarkup(data = CURRICULO_DATA) {
                             ${contactsMarkup.map(item => `<div>${item}</div>`).join('')}
                         </div>
                     </div>
-                    <img class="cv-photo" src="${escapeHtml(new URL('img/perfil.jpg', document.baseURI).href)}"
+                    <img class="cv-photo" src="${escapeHtml(new URL('img/perfil.webp', document.baseURI).href)}"
                         alt="Foto de perfil de ${escapeHtml(personal.name)}">
                 </header>
                 <main class="cv-body">
@@ -2386,36 +2475,6 @@ function shuffleTechnologiesIcons() {
         const icons = Array.from(container.children);
         shuffleArray(icons);
         icons.forEach(icon => container.appendChild(icon));
-    });
-}
-
-function initTechnologiesLoadMore() {
-    const containers = document.querySelectorAll('.tecnologia-icons');
-    containers.forEach((container, index) => {
-        const icons = Array.from(container.querySelectorAll('.tecnologia-icon'));
-        if (icons.length <= 9) return;
-
-        container.id ||= `tecnologia-icons-${index + 1}`;
-        const hiddenIcons = icons.slice(9);
-        hiddenIcons.forEach(icon => { icon.hidden = true; });
-
-        const control = document.createElement('div');
-        control.className = 'tecnologia-load-more';
-
-        const button = document.createElement('button');
-        button.type = 'button';
-        button.className = 'btn btn-secondary';
-        button.setAttribute('aria-controls', container.id);
-        button.setAttribute('aria-expanded', 'false');
-        button.innerHTML = `<i class="fas fa-plus" aria-hidden="true"></i> <span data-i18n="sections.projetos.load_more">${I18n.t('sections.projetos.load_more')}</span>`;
-        button.addEventListener('click', () => {
-            hiddenIcons.forEach(icon => { icon.hidden = false; });
-            button.setAttribute('aria-expanded', 'true');
-            control.remove();
-        });
-
-        control.appendChild(button);
-        container.parentElement.appendChild(control);
     });
 }
 
@@ -2804,7 +2863,6 @@ document.addEventListener('htmx:afterSwap', function(evt) {
         document.documentElement.classList.remove('translation-loading');
         document.getElementById('translation-loader')?.setAttribute('hidden', '');
 
-        initTechnologiesLoadMore();
         updateCurrentYear();
         initTypewriter();
         setupLanguageSelector();
@@ -2851,6 +2909,7 @@ document.addEventListener('htmx:afterSwap', function(evt) {
         I18n.updateActiveButton();
 
         shuffleTechnologiesIcons();
+        Renderer.initTechnologyCarousels();
 
         toggleAdsVisibility();
 
