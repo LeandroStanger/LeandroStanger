@@ -416,7 +416,8 @@ const anuncio1Images = [
     { src: 'img/anuncio/anuncio17.webp', subject: 'configuração de serviços de e-mail' },
     { src: 'img/anuncio/anuncio19.webp', subject: 'instalação de antivírus Kaspersky' },
     { src: 'img/anuncio/anuncio21.webp', subject: 'instalação de placa de vídeo' },
-    { src: 'img/anuncio/anuncio23.webp', subject: 'instalação de HD, SSD ou NVMe' }
+    { src: 'img/anuncio/anuncio23.webp', subject: 'instalação de HD, SSD ou NVMe' },
+    { src: 'img/anuncio/anuncio27.webp', subject: 'formatação Linux Desktop Standard e Standard Plus' }
 ];
 
 const anuncio2Images = [
@@ -431,7 +432,8 @@ const anuncio2Images = [
     { src: 'img/anuncio/anuncio18.webp', subject: 'instalação e ativação do Microsoft Office' },
     { src: 'img/anuncio/anuncio20.webp', subject: 'instalação e configuração de impressora' },
     { src: 'img/anuncio/anuncio22.webp', subject: 'instalação de memória RAM' },
-    { src: 'img/anuncio/anuncio24.webp', subject: 'troca de tela de notebook' }
+    { src: 'img/anuncio/anuncio24.webp', subject: 'troca de tela de notebook' },
+    { src: 'img/anuncio/anuncio26.webp', subject: 'formatação Windows Standard e Standard Plus com pacote de jogos' }
 ];
 
 function getAdWhatsappLink(adId, ad) {
